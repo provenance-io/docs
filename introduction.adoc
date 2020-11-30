@@ -1,0 +1,10 @@
+== Introduction
+
+Provenance is a public-but-permissioned distributed stakeholder blockchain.
+It utilizes an enhanced version of Hyperledger Fabric as the underlying foundation for memorializing contract executions.
+Members are entities or individuals that are permissioned to interact with Provenance.
+Members are comprised of many types, including affiliates and nodes.
+Affiliates are the entities that are allowed to execute contracts and submit transactions to Provenance.
+Affiliates are uniquely identified by a public/private key pair registered in Provenance which is used to sign transactions.
+Nodes, also referred to as stakeholders, are responsible for endorsing and committing transactions submitted by affiliates to the blockchain.
+
