@@ -1,5 +1,5 @@
 ---
-description: Provenance is amaze
+description: Provenance is amazing
 ---
 
 # Welcome
