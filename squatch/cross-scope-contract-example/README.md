@@ -1,0 +1,2 @@
+# Cross Scope Contract Example
+
