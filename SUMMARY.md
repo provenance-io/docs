@@ -8,7 +8,7 @@
 * [Explorer](blockchain/explorer.md)
 * [Cryptography](blockchain/cryptography.md)
 * [Governance](blockchain/governance.md)
-* [Hash \(2.0\)](blockchain/hash-2.0.md)
+* [Hash](blockchain/hash-2.0.md)
 * [Staking](blockchain/staking.md)
 * [Voting](blockchain/voting.md)
 * [Network](blockchain/network.md)
