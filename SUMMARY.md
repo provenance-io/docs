@@ -54,12 +54,12 @@
 * [Fees](integrating/fees.md)
 * [Omnibus](integrating/omnibus.md)
 
-## Figure Applications
+## Provenance Apps <a id="provenance-applications"></a>
 
-* [Portfolio Manager/Market Place](figure-applications/portfolio-manager-market-place.md)
-* [Adnales](figure-applications/adnales.md)
-* [Figure Pay](figure-applications/figure-pay.md)
-* [eVault](figure-applications/evault.md)
+* [Portfolio Manager/Market Place](provenance-applications/portfolio-manager-market-place.md)
+* [Adnales](provenance-applications/adnales.md)
+* [Figure Pay](provenance-applications/figure-pay.md)
+* [eVault](provenance-applications/evault.md)
 
 ## Contributing
 
