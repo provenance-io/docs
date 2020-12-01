@@ -24,7 +24,7 @@
 * [ProvWASM \(Smart Contracts\)](modules/provwasm-smart-contracts.md)
 * [provenanced](modules/provenance-app.md)
 
-## Contract Execution Environment <a id="p8e"></a>
+## Contract Execution Environment \(P8e\) <a id="p8e"></a>
 
 * [Overview](p8e/overview.md)
 * [Components](p8e/components-1/README.md)
