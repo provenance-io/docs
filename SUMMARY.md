@@ -93,7 +93,7 @@
 
 ## License
 
-* [Untitled](license/untitled.md)
+* [Apache 2.0](license/untitled.md)
 
 ## Glossary
 
