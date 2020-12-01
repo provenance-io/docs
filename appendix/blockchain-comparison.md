@@ -35,7 +35,7 @@ The nature of Ethereum and its control over the Quorum project has resulted in b
 
 ### Review
 
-The Quorum blockchain project is an interesting approach to solving the needs of a distributed financial ledger. The effort involved in creating a full private transaction system for smart contracts is commendable and well constructed. Unfortunately thisproject is hampered by its roots on the public Ethereum project which drives requirements towards the public blockchain and has few resources in design or maintenance towards supporting the private network needs and requirements.
+The Quorum blockchain project is an interesting approach to solving the needs of a distributed financial ledger. The effort involved in creating a full private transaction system for smart contracts is commendable and well constructed. Unfortunately this project is hampered by its roots on the public Ethereum project which drives requirements towards the public blockchain and has few resources in design or maintenance towards supporting the private network needs and requirements.
 
 ## CORDA / R3
 
@@ -43,13 +43,13 @@ If Quorum is an example of leveraging a powerful open-source blockchain and bend
 
 ### Determinism
 
-As Corda is not a distributed blockchain it cannot rely upon multiple parties to perform parallel executions of smart contracts to ensure consistency. Corda attempts to ensure determinism through a special limited JVM. \[8, p44\] This approach strikes a balance between flexible implementation and constraints to ensure reliable deterministic smart contract execution. In contrast Hyperledger Fabric relies on Kernel level process isolation in the form of containersto provide a much stronger guarantee of separation than the JVM. The container isolation combined with distributed parallel execution achieves determinism guarantees without resorting to limiting development to programs that run on a special limited JVM.
+As Corda is not a distributed blockchain it cannot rely upon multiple parties to perform parallel executions of smart contracts to ensure consistency. Corda attempts to ensure determinism through a special limited JVM. \[8, p44\] This approach strikes a balance between flexible implementation and constraints to ensure reliable deterministic smart contract execution. In contrast Hyperledger Fabric relies on Kernel level process isolation in the form of containers to provide a much stronger guarantee of separation than the JVM. The container isolation combined with distributed parallel execution achieves determinism guarantees without resorting to limiting development to programs that run on a special limited JVM.
 
 The Corda consensus model is implemented through Notaries with two different levels of transaction safety. At the lowest level a Notary simply determines that the input states for a transaction have not been previously used \(aka double spend in a UTXO\). A higher level of safety can be achieved with a ‘validating notary’ with the forfeit of transaction privacy. \[9\]
 
 ### System Architecture
 
-With the Corda architecture starting from a single entity and progressing towards collaboration it is not surprising thatdesign constraints associated with multiple parties and scalable cloud infrastructure have a lower priority. For components of the system that perform scalable conflict resolution \(within the notaries\) the distributed consensus algorithms remain experimental and not suitable for production use. \[10\] The implementation of the Corda node itself lacks fault tolerance and high availability features \[11\] which have remained on the long term planning roadmap as future items.
+With the Corda architecture starting from a single entity and progressing towards collaboration it is not surprising that design constraints associated with multiple parties and scalable cloud infrastructure have a lower priority. For components of the system that perform scalable conflict resolution \(within the notaries\) the distributed consensus algorithms remain experimental and not suitable for production use. \[10\] The implementation of the Corda node itself lacks fault tolerance and high availability features \[11\] which have remained on the long term planning roadmap as future items.
 
 When building a distributed application it is important to adopt many patterns and practices from the start to ensure a successful overall system. \[12\] Currently Corda lacks a standard cloud native deployment configuration. A cloud native application architecture must account for unreliable instances that can come or go at any time leading to a stronger focus on consistency and reliability engineering. If Corda deployments targeted a standard cloud native platform such as Kubernetes then testing against the constraints of a system running in the cloud would take a higher priority. Presently these issues \[11\] must be resolved entirely by the implementer of the system until such time as the Corda project matures and implements these pieces of their roadmap.
 
@@ -59,7 +59,7 @@ Corda represents a unique approach to solving the ledger problem by building man
 
 ## HYPERLEDGER FABRIC
 
-The Hyperledger group was founded in 2016 under the Linux Foundation with a number of industry partners. \[13\] \[14\] As part ofHyperledger, Fabric is developed to serve as a flexible enterprise blockchain platform for many different uses including supply chain and financial systems. As part of supporting diverse use cases, Fabric is focused on a flexible and configurable platform for building permissioned distributed ledgers. Hyperledger Fabric uses a unique approach of ‘execute, order, validate’ to validate transactions which allows for multiple parties to execute a contract to ensure determinism and to increase performance by distributing execution.
+The Hyperledger group was founded in 2016 under the Linux Foundation with a number of industry partners. \[13\] \[14\] As part of Hyperledger, Fabric is developed to serve as a flexible enterprise blockchain platform for many different uses including supply chain and financial systems. As part of supporting diverse use cases, Fabric is focused on a flexible and configurable platform for building permissioned distributed ledgers. Hyperledger Fabric uses a unique approach of ‘execute, order, validate’ to validate transactions which allows for multiple parties to execute a contract to ensure determinism and to increase performance by distributing execution.
 
 ### Flexible Architecture
 
@@ -93,7 +93,7 @@ The Provenance Blockchain platform has been developed with a strong focus on rel
 
 ## STELLAR
 
-While the Provenance Platform, Ethereum/Quorum, and Corda/R3 are all focused on building a general-purposeplatform for smart contract execution there are other blockchains that focus on only part of the ecosystem. Stellar is one example of a single purpose blockchain focused on value exchange using a custom token known as Lumen \(XLM\).
+While the Provenance Platform, Ethereum/Quorum, and Corda/R3 are all focused on building a general-purpose platform for smart contract execution there are other blockchains that focus on only part of the ecosystem. Stellar is one example of a single purpose blockchain focused on value exchange using a custom token known as Lumen \(XLM\).
 
 ### Assets and Tokens
 
@@ -105,7 +105,7 @@ Stellar supports a limited form of smart contract that allows value to be progra
 
 ## Inherited Blockchain
 
-Another popular way of extending limited ‘token focused’ blockchains is through the use of metadata or memo fields to contain references to an external chain and thus inherit the security benefits of the parent chain. The Bitcoin network has a special transaction field called OP\_RETURN which has been leveraged to build highly secure Proof of ‘Proof of Work’ chain \[22\]. Unfortunately,the Stellar blockchain has a limit of 32 bytes of metadata on a given transaction whichrenders the approaches used for Bitcoin impossible.
+Another popular way of extending limited ‘token focused’ blockchains is through the use of metadata or memo fields to contain references to an external chain and thus inherit the security benefits of the parent chain. The Bitcoin network has a special transaction field called OP\_RETURN which has been leveraged to build highly secure Proof of ‘Proof of Work’ chain \[22\]. Unfortunately, the Stellar blockchain has a limit of 32 bytes of metadata on a given transaction which renders the approaches used for Bitcoin impossible.
 
 ### Review
 
@@ -117,7 +117,7 @@ Unfortunately due to limits in the design of Stellar the capabilities beyond an 
 
 Provenance includes a core built on strong open source technologies combined with engineering expertise to extends these capabilities far beyond the sum of their parts. The unique extensions and combination of tools yield a best of breed financial services blockchain platform. Individually the major blockchain projects mentioned in this paper have a limited capability for maintaining themselves in isolation or in some cases for small network deployments.
 
-Public blockchains or projects heavily derived from these such as Quorum are constrained by a conflicting set of goals between the primary public uses and the derivative private blockchain. Alternative projects similar to Corda that build up a solution focused on the individual users leave hard problems of global consensus, networking, and cloud reliability engineering for future resolution or users to solve themselves. Incontrast the Provenance platform builds on the flexibility of the Hyperledger Fabric platform with carefully engineered extensions to offer a global platform for financial blockchain services. Provenance continues to invest in the platform to ensure long term reliability and capability for current and future financial applications.
+Public blockchains or projects heavily derived from these such as Quorum are constrained by a conflicting set of goals between the primary public uses and the derivative private blockchain. Alternative projects similar to Corda that build up a solution focused on the individual users leave hard problems of global consensus, networking, and cloud reliability engineering for future resolution or users to solve themselves. In contrast the Provenance platform builds on the flexibility of the Hyperledger Fabric platform with carefully engineered extensions to offer a global platform for financial blockchain services. Provenance continues to invest in the platform to ensure long term reliability and capability for current and future financial applications.
 
 1. Quorum Whitepaper; [https://github.com/jpmorganchase/quorum/blob/master/docs/Quorum%20Whitepaper%20v0.2.pdf](https://github.com/jpmorganchase/quorum/blob/master/docs/Quorum%20Whitepaper%20v0.2.pdf)
 2. Quorum Privacy Manager Design; [https://goquorum.readthedocs.io/en/latest/\#design](https://goquorum.readthedocs.io/en/latest/#design)
