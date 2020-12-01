@@ -1,2 +1,4 @@
 # Index Engine
 
+When transactions are successfully memorialized on the blockchain, the Event Pump emits block events. The Index Engine is responsible for listening for and consuming these events. Using information contained in these events, the engine queries the object store to retrieve asset data. The transaction structure is defined using a Protobuf, which includes previously identified data fields that are required to be indexed for future use. The indexable fields are extracted and saved to the index data store. Once saved, the index engine submits a message to the Provenance mailbox. Affiliates participating in the transaction can pick up these messages for insight to transaction statuses. The index data store facilitates querying information from the affiliate’s Encrypted Object Store and also the blockchain.
+
