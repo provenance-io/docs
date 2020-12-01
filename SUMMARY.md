@@ -22,7 +22,7 @@
 * [Name Module](modules/name-module.md)
 * [Metadata Module](modules/metadata-module.md)
 * [ProvWASM \(Smart Contracts\)](modules/provwasm-smart-contracts.md)
-* [Provenance App](modules/provenance-app.md)
+* [provenanced](modules/provenance-app.md)
 
 ## Contract Execution Environment <a id="p8e"></a>
 
