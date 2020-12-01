@@ -12,7 +12,7 @@ This section primarily focuses on how to execute the example contracts. The next
 
 To verify identity and to encrypt data, a public/private key pair is used. Generate the key pair. For this example, Provenance can generate these on your behalf. Once the keys have been generated, they need to be provided to Provenance where they will be registered against the test system.
 
-```text
+```kotlin
         ProvenanceKeyGenerator.generateKeyPair().let {
             it.private.toHex().also(::println)
             it.public.toHex().also(::println)
@@ -40,7 +40,7 @@ Classes need to be created to execute the contracts. For this example, separate 
 
 An example contract execution class is provided. When creating the ContractManager, the primary\_key\_text is the key previously registered against the system. Ensure there is a watcher configured to listen for responses which will log the resulting UUID for future use.
 
-```text
+```kotlin
 package example
 
 import io.p8e.ContractManager
@@ -84,7 +84,7 @@ API_URL=grpcs://test.figure.com
 
 As an alternate to using an environment variable, the API URL can be passed in as a parameter when the ContractManager is created.
 
-```text
+```kotlin
 private val contractManager = ContractManager.create("<private_key_text>".toJavaPrivateKey(), "grpcs://test.figure.com")
 ```
 
@@ -106,7 +106,7 @@ Similar to the class to execute the initial contract, create a new class to exec
 
 Create the ContractManager using the same private key as the first step. Ensure there are watchers also configured to listen for responses from this contract.
 
-```text
+```kotlin
 package example
 
 import io.p8e.ContractManager
@@ -151,7 +151,7 @@ Execute the class once it’s created. Since this is again a single contract, no
 
 This step will demonstrate how to retrieve information from the blockchain as well as the actual asset data from the encrypted object store. Create another new class to retrieve the data using the scope UUID output from the first contract. This example uses the ContractManager to retrieve the information and log the output.
 
-```text
+```kotlin
 package example
 
 import io.p8e.ContractManager

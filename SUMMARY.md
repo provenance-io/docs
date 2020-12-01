@@ -39,18 +39,9 @@
 * [Hello World Example](p8e/hello-world-example.md)
 * [Building New Contracts](p8e/building-new-contracts.md)
 * [Data Retrieval](p8e/data-retrieval.md)
-* [Multi-Step Contract Example](p8e/multi-step-contract-example/README.md)
-  * [Transaction Flow](p8e/multi-step-contract-example/transaction-flow.md)
-  * [Multi-Step Contract](p8e/multi-step-contract-example/multi-step-contract.md)
-  * [Multi-Step Contract Watchers](p8e/multi-step-contract-example/multi-step-contract-watchers.md)
-  * [Multi-Step Contract Execution](p8e/multi-step-contract-example/multi-step-contract-execution.md)
-* [Multi-Contract Example](p8e/multi-contract-example/README.md)
-  * [Contracts](p8e/multi-contract-example/contracts.md)
-  * [Contract Watchers](p8e/multi-contract-example/contract-watchers.md)
-  * [Contract Execution](p8e/multi-contract-example/contract-execution.md)
-* [Cross Scope Contract Example](p8e/cross-scope-contract-example/README.md)
-  * [Cross Scope Contract](p8e/cross-scope-contract-example/cross-scope-contract.md)
-  * [Cross Scope Contract Execution](p8e/cross-scope-contract-example/cross-scope-contract-execution.md)
+* [Multi-Step Contract Example](p8e/multi-step-contract-example.md)
+* [Multi-Contract Example](p8e/multi-contract-example.md)
+* [Cross Scope Contract Example](p8e/cross-scope-contract-example.md)
 
 ## Integrating
 

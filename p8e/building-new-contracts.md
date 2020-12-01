@@ -18,31 +18,31 @@ Only the hashed results of contract execution are memorialized to the blockchain
 
 Parameters required by contracts that have previously been saved to the blockchain are class parameters with the Fact annotation. Facts are used when modifying previously saved data or when new data needs to reference existing data. Fact names are required to be unique for each contract.
 
-```text
+```kotlin
 class <ContractClass>(@Fact(name = <Name>) name: <Protobuf>): P8eContract()
 ```
 
 Participants involved in transactions are identified by providing a list of PartyType to the Participants annotation. PartyType values are predefined in Provenance and include owners, originators, custodians, servicers, etc. All participants must be included in the Participants annotation in order to participate in the transaction. The participants included all need to agree on the contract before it will be saved to the blockchain.
 
-```text
+```kotlin
 @Participants(roles = [<PartyType>, <PartyType>])
 ```
 
 Contracts can be comprised of many functions. The participant responsible for submitting the results to the blockchain is required for each function and is identified using the Function annotation. The responsible participant compiles the hashed execution results from all participants and sends the information to Provenance where the nodes endorse and memorialize the transaction to the blockchain. This functionality is provided by the SDK. All functions with the Function annotation must be executed before the output will be memorialized to the blockchain.
 
-```text
+```kotlin
 @Function(invokedBy = <PartyTypeInitiatingTransaction>)
 ```
 
 The hashed execution results of each function with a Function annotation are saved to the blockchain with a label identified by the Fact annotation. Fact names are required to be unique for each contract.
 
-```text
+```kotlin
 @Fact(name = <BlockchainDataLabel>)
 ```
 
 Parameters to functions are required to be annotated with either the Input or the Fact annotation. Proposed parameters are those that have not yet been saved to the blockchain. As previously explained, facts have already been memorialized to the blockchain. Input names are required to be unique for each contract.
 
-```text
+```kotlin
 fun name(@Input(name = <InputDataName>) name: <Protobuf> )
 ```
 
@@ -50,7 +50,7 @@ fun name(@Input(name = <InputDataName>) name: <Protobuf> )
 
 Contracts can also inherit from other contracts, provided the base contract still extends the P8eContract abstract class. The following example demonstrates how a contract extends the HelloWorld contract.
 
-```text
+```kotlin
 @Participants(roles = [OWNER])
 open class HelloWorldDerivedContract(): HelloWorldContract() {
     @Function(invokedBy = OWNER)
@@ -84,7 +84,7 @@ Before contracts can be executed, watchers have to be configured and running to 
 
 Watchers are configured and started using a ContractManager instance.
 
-```text
+```kotlin
 contractManager.watchBuilder(<SmartContractClass>::class.java).watch()
 ```
 
@@ -92,7 +92,7 @@ Starting watchers for a given contract manager/contract starts a bidirectional s
 
 Default implementations are provided by the SDK for each type. The defaults simply log a message and acknowledge receipt of the message by returning true from the watcher. The defaults can be overridden by providing a new function when the watcher is configured.
 
-```text
+```kotlin
 contractManager.watchBuilder(<SmartContractClass>::class.java)
     .request{
         // TODO add request watcher logic
@@ -117,7 +117,7 @@ contractManager.watchBuilder(<SmartContractClass>::class.java)
 
 The default request watcher does not include functionality to execute contracts. This functionality was intentionally omitted to ensure contracts are executed intentionally. When the request watcher is overridden, the functionality must include logic to execute the contract. A helper is also provided to allow contracts to be automatically executed without overriding the request watcher.
 
-```text
+```kotlin
 contractManager.watchBuilder(<SmartContractClass>::class.java)
     .executeRequests()
     .watch()
@@ -125,7 +125,7 @@ contractManager.watchBuilder(<SmartContractClass>::class.java)
 
 If the watchers get disconnected, the default watcher simply outputs an error message to the log. If this happens, the watchers need to be restarted. This default watcher can be overridden with custom functionality and a helper is provided to enable reconnecting.
 
-```text
+```kotlin
 contractManager.watchBuilder(<SmartContractClass>::class.java)
     .disconnect {
         // TODO add disconnect watcher logic
@@ -142,56 +142,56 @@ The initiator is required to run watchers for contracts they invoke using the sa
 
 To initiate a contract, a ContractManager is created using the primary key of the participant initiating the transaction.
 
-```text
+```kotlin
 private val contractManager = ContractManager.create("<private_key_text>".toJavaPrivateKey(), "<api_url>")
 ```
 
 Using the ContractManager, a new contract is created with the class name of the contract.
 
-```text
+```kotlin
 var contract = contractManager.newContract(<SmartContractClass>::class.java)
 ```
 
 Creating a new contract with just the contract class will cause a new scope UUID to be generated. The scope UUID can also be set by the affiliate initiating the contract. Provenance validates the UUID to prevent duplicates. If the UUID set by the affiliate has already been used and memorialized to the blockchain, the contract will fail during execution.
 
-```text
+```kotlin
 var contract = contractManager.newContract(<SmartContractClass>::class.java, <Scope UUID>)
 ```
 
 Required parameters are defined in the contracts by either the Fact or Input annotations. Fact by definition is a fact that has previously been memorialized to the blockchain. The easiest way to satisfy required Fact parameters is to include the scope in the constructor when new contracts are instantiated. The SDK provides a client where the scope can be retrieved using the scope UUID of when the fact was first saved to the blockchain.
 
-```text
+```kotlin
 val wrapper = contractManager.indexClient.findLatestScopeByUuid(<UUID>)
 var contract = contractManager.newContract(<SmartContractClass>::class.java, wrapper.scope)
 ```
 
 Proposed facts, identified using the Input annotation, are satisfied using the addProposedFact function of the contract.
 
-```text
+```kotlin
 contract.addProposedFact(<FactName>, <value>)
 ```
 
 Using the contract created with the contract class, a parameter for each participant in the transaction is passed in using the satisfyParticipant function.
 
-```text
+```kotlin
 contract.satisfyParticipant(<PartyType>, "<party’s public key>".toJavaPublicKey())
 ```
 
 An alternate to identifying the participant for the party initiating the contract is to provide the invoker’s role to the newContract constructor.
 
-```text
+```kotlin
 var contract = contractManager.newContract(<SmartContractClass>::class.java, <PartyType>)
 ```
 
 By default contracts will remain in a pending state until all participants involved in the transaction execute the contract. To handle scenarios where an affiliate isn’t listening for a contract or chooses not to execute a contract, an expiration can be set on the contract when it is executed. This is accomplished by sending in the date-time of when the contract should expire into the setExpiration function.
 
-```text
+```kotlin
 contract.setExpiration(<OffsetDateTime>)
 ```
 
 Once all the parameters have been set, the contract can be executed.
 
-```text
+```kotlin
 contractManager.execute(contract)
 ```
 
@@ -215,7 +215,7 @@ Contract can only be canceled by the contract invoker.
 
 The primary use case for rejecting contracts is in the request handlers for the affiliates participating in the contract. The contract can be interrogated and if an affiliate determines they don’t agree to the contract, they can reject it instead of executing it.
 
-```text
+```kotlin
 contractManager.watchBuilder(HelloWorldContract::class.java)
     .request{
         var executeContract = true
@@ -234,7 +234,7 @@ contractManager.watchBuilder(HelloWorldContract::class.java)
 
 Contracts can be rejected/canceled via a ContractManager by passing either an Execution UUID or Contract instance to the reject/cancel function.
 
-```text
+```kotlin
 // cancel contract using Execution UUID
 contractManager.cancel(UUID.fromString(executionUuid), "Optional canceled message.")
 
@@ -245,7 +245,7 @@ contractManager.cancel(contract, "Optional canceled message.")
 
 Contracts can also be rejected/canceled directly through the Contract via the helper functions.
 
-```text
+```kotlin
 // cancel contract using Contract instance
 val contract = contractManager.loadContract(<ContractClass>, UUID.fromString(executionUuid))
 contract.cancel("Optional canceled message.")
@@ -272,13 +272,13 @@ ERROR
 
 The enum also contains a brief description for each status. A helper function is provided to retrieve the description for a given status.
 
-```text
+```kotlin
 Status.CREATED.getDescription()
 ```
 
 Helper functions are also provided to retrieve the status for a given contract. The ContractManager can be used to retrieve the status based on an Execution UUID or a Contract instance. The status can also be retrieved directly from a Contract instance.
 
-```text
+```kotlin
 val contract = contractManager.loadContract(<ContractClass>, <Execution UUID>)
 
 //retrieve the status from the ContractManager using the Execution UUID

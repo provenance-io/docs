@@ -17,7 +17,7 @@ Provenance’s Hello World example is designed to demonstrate the process of inp
 
 The data format of information exchanged in Provenance is defined using Protocol Buffers \(Protobuf\). For the Hello World example, the following Name Protobuf is used:
 
-```text
+```kotlin
 message ExampleName {
     UUID uuid = 1;
     string first_name = 2 [(index) = { index: ALWAYS}];
@@ -33,7 +33,7 @@ message ExampleName {
 
 The Hello World contracts \(HelloWorld.kt\) are single party agreements by an owner, as identified by the Participants annotation. The contracts extend the P8eContract class, which is a requirement of all contracts. The contracts must be initiated by an owner, as identified by the Function annotation. The contracts will fail if a different participant attempts to initiate them. The hashed execution results of the contracts will be memorialized to the blockchain with a label defined by the Fact annotation. The contracts are expecting a Name Protobuf to be input in a parameter named “name”, as identified by the Input annotation. The logic of the first contract takes the input pre-populated Name Protobuf, concatenates “-hello” to the first name and “-world” to the last name, and outputs a Name Protobuf with the updated values.
 
-```text
+```kotlin
 @Participants(roles = [OWNER])
 open class HelloWorldContract(): P8eContract() {
     @Function(invokedBy = OWNER)
@@ -60,7 +60,7 @@ public static class HelloWorldJavaContract extends P8eContract {
 
 The logic of the second contract takes the name information from the first contract, concatenates “-modified” to the first name and “-updated” to the last name, and outputs a Name Protobuf with the updated values.
 
-```text
+```kotlin
 @Participants(roles = [OWNER])
 open class HelloWorldModifyContract(@Fact(name = "name") val currentName: ExampleName) : P8eContract() {
     @Function(invokedBy = OWNER)
@@ -95,7 +95,7 @@ public static class HelloWorldModifyJavaContract extends P8eContract {
 
 The processes created in the previous section are used to execute the Hello World contracts. Since the owner is initiating the transaction, a ContractManager is created using the owner’s private key.
 
-```text
+```kotlin
 private val contractManager = ContractManager.create("<private_key_text>".toJavaPrivateKey(), "<api_url>")
 
 ContractManager contractManager = ContractManager.Companion.create(PK.PrivateKey.parseFrom(Hex.decode("<private_key_text>")),"<api_url>");
@@ -103,7 +103,7 @@ ContractManager contractManager = ContractManager.Companion.create(PK.PrivateKey
 
 When the HelloWorld class is instantiated, there are watchers created using the ContractManager to listen for messages in the Provenance mailbox from the HelloWorldContract. One listens for response messages sent when the contract completes. In this example, when a message is received, the UUID saved to the blockchain is logged. Another listens for errors and logs details about the error.
 
-```text
+```kotlin
 init {
     contractManager.watchBuilder(HelloWorldContract::class.java).watch()
 }
@@ -113,7 +113,7 @@ contractManager.watchBuilder(HelloWorldJavaContract).watch();
 
 Using the ContractManager, a new contract is created with the HelloWorldContract class. Data is passed to the contract parameter by using the addProposedFact function. Once the parameters have been set, the contract can be executed.
 
-```text
+```kotlin
 contractManager.newContract(HelloWorldContract::class.java, OWNER).apply {
     addProposedFact("name", ExampleName.newBuilder()
                                        .setFirstName("Hello")
@@ -134,7 +134,7 @@ contractManager.execute(contract);
 
 Similar to the first contract execution, when the HelloWorldModify class is instantiated there are watchers created to listen for messages in the Provenance mailbox from the HelloWorldModifyContract. One listens for response messages sent when the contract completes. When a message is received, the UUID of the updated record is logged. Another listens for errors and logs details about the error.
 
-```text
+```kotlin
 init {
     contractManager.watchBuilder(HelloWorldModifyContract::class.java).watch()
 }
@@ -144,7 +144,7 @@ contractManager.watchBuilder(HelloWorldModifyJavaContract.class).watch();
 
 Using the ContractManager, a new contract is created with the HelloWorldModify contract class. Data is passed to the contract parameter by using the addProposedFact function. Once the parameters have been set, the contract can be executed.
 
-```text
+```kotlin
 val data = contractManager.hydrate(<UUID>, HelloWorldData::class.java)
 contractManager.newContract(HelloWorldModifyContract::class.java, data.scope, OWNER).apply {
     addProposedFact("name", ExampleName.newBuilder()
