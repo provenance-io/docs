@@ -32,7 +32,7 @@ The provenance network requires that all active validators sign a minimum of XXX
 
 #### Proper signing and endorsement
 
-A validator node must only sign valid blocks and must not issue more than one signature per block.  These constraints are vital to the overall security of the network.
+A validator node must only sign valid blocks and must not issue more than one signature per block.  These constraints are vital to the overall security of the network. [https://blog.cosmos.network/the-4-classes-of-faults-on-mainnet-bfabfbd2726c](https://blog.cosmos.network/the-4-classes-of-faults-on-mainnet-bfabfbd2726c)
 
 #### Penalties
 
