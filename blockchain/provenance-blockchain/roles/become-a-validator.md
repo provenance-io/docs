@@ -17,8 +17,8 @@ Validators participate in the security and control of the network and are able t
 Hosting a Provenance validator has some requirements since stakeholders will likely not want to delegate their stake to a validator that isn't reliable and secure. Here are some guidelines to consider when determining whether hosting a validator is beneficial for your use case:
 
 * Reliable, highly available, and secure computing infrastructure with excellent network connectivity
-* Minimum Self-Delegation \(hash\)
-* Minimum level of staking delegation \(the top 50 validator nodes within the network by total stake are selected as the active set of validators\)
+* Minimum Self-Delegation \(Hash™\) - To host a validator you have to ensure you have the minimum amount of Hash™ to delegate. 
+* Minimum level of staking delegation - the top 50 validator nodes within the network by total stake are selected as the active set of validators
 * Commitment to maintaining a current release of the blockchain software and perform software upgrades as required
 * Commitment to vote on governance proposals
 
