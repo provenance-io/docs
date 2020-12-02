@@ -1,0 +1,4 @@
+# Validators
+
+Nodes host, through a 3rd party cloud service provider, hashed representations of all documents, data, transactions and smart contracts \(for validating documents, data and transactions\) that are added to the blockchain. Nodes are paid Hash for this service.  Nodes put up a stake of Hash to ensure good behavior \(e.g., that they do not try to hack the smart contracts or alter the blockchain\).  Nodes do not validate transactions themselves and are not privy to the documents, data and smart contracts that govern the transactions.  Instead, they serve as an immutable and authoritative registry of the hashed output of these objects, allowing third party transaction participants to authenticate the accuracy of the documents, data and smart contracts they use to execute transactions.
+

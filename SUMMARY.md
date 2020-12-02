@@ -1,10 +1,17 @@
 # Table of contents
 
-* [Welcome](README.md)
+* [The Power of Blockchain](README.md)
 
 ## Blockchain
 
-* [Provenance Blockchain](blockchain/provenance-blockchain.md)
+* [Provenance](blockchain/provenance-blockchain/README.md)
+  * [Roles](blockchain/provenance-blockchain/roles/README.md)
+    * [Foundation](blockchain/provenance-blockchain/roles/foundation.md)
+    * [Participants](blockchain/provenance-blockchain/roles/participants.md)
+    * [Validators](blockchain/provenance-blockchain/roles/validators.md)
+    * [Delegators](blockchain/provenance-blockchain/roles/delegators.md)
+    * [Stakeholders](blockchain/provenance-blockchain/roles/stakeholders.md)
+  * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
 * [Explorer](blockchain/explorer.md)
 * [Cryptography](blockchain/cryptography.md)
 * [Governance](blockchain/governance.md)
