@@ -88,7 +88,7 @@
 
 ## FAQ
 
-* [Untitled](faq/untitled.md)
+* [Contact](faq/contact.md)
 
 ## Appendix
 
