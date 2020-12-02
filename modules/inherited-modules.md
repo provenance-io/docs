@@ -1,3 +1,7 @@
+---
+description: Modules inherited from the community
+---
+
 # Inherited Modules
 
 ### Bank 
