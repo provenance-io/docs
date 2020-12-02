@@ -20,7 +20,6 @@
 * [Hash](blockchain/hash-2.0.md)
 * [Staking](blockchain/staking.md)
 * [Voting](blockchain/voting.md)
-* [Architecture Overview](blockchain/architecture-overview.md)
 
 ## Modules
 
