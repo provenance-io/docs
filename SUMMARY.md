@@ -36,7 +36,8 @@
 
 * [Overview](p8e/overview.md)
 * [Components](p8e/components-1/README.md)
-  * [Encrypted Object Store](p8e/components-1/encrypted-object-store.md)
+  * [Encrypted Object Store](p8e/components-1/encrypted-object-store/README.md)
+    * [DIME \(Encryption Envelope Specification\)](p8e/components-1/encrypted-object-store/dime-encryption-envelope-specification.md)
   * [Index Engine](p8e/components-1/index-engine.md)
   * [P8e API](p8e/components-1/api.md)
   * [P8e UI](p8e/components-1/p8e-ui.md)
