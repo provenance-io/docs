@@ -10,6 +10,7 @@
     * [Participants](blockchain/provenance-blockchain/roles/participants.md)
     * [Delegators](blockchain/provenance-blockchain/roles/delegators.md)
     * [Validators](blockchain/provenance-blockchain/roles/become-a-validator.md)
+    * [Network](blockchain/provenance-blockchain/roles/network.md)
   * [Mission](blockchain/provenance-blockchain/mission.md)
   * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
   * [Legal Standing](blockchain/provenance-blockchain/legal-standing.md)
