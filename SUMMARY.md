@@ -5,6 +5,7 @@
 ## Blockchain
 
 * [Provenance](blockchain/provenance-blockchain/README.md)
+  * [Legal Standing](blockchain/provenance-blockchain/legal-standing.md)
   * [Roles](blockchain/provenance-blockchain/roles/README.md)
     * [Foundation](blockchain/provenance-blockchain/roles/foundation.md)
     * [Participants](blockchain/provenance-blockchain/roles/participants.md)
