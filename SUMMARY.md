@@ -14,6 +14,7 @@
   * [Mission](blockchain/provenance-blockchain/mission.md)
   * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
   * [Legal Standing](blockchain/provenance-blockchain/legal-standing.md)
+* [Validators](blockchain/become-a-validator.md)
 * [Explorer](blockchain/explorer.md)
 * [Cryptography](blockchain/cryptography.md)
 * [Governance](blockchain/governance.md)
@@ -75,7 +76,6 @@
 ## Contributing
 
 * [ADR](contributing/adr.md)
-* [Become a Validator](contributing/become-a-validator.md)
 * [Documentation Standards](contributing/documentation-standards.md)
 
 ## License
