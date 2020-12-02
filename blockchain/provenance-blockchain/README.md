@@ -10,5 +10,5 @@ Provenance introduces a blockchain platform designed and developed to support th
 
 While initially focused on asset originators, buy-side and sell-side firms and their investors, Provenance is accessible to anyone \(entity or individual\).  Provenance embodies the attributes of blockchain \(distributed, immutable and trustless\) with the features necessary to impact financial services \(ledger, registry and exchange\). 
 
-Provenance has five major roles:  the foundation, participants, stakeholders, validators and delegators. Participants are comprised of originators, investors, servicers, omnibus banks, fund managers, and of course Provenance is extensible for developers to build new use cases.  
+Provenance has four major roles:  the foundation, participants, validators and delegators. Participants are comprised of originators, investors, servicers, omnibus banks, fund managers, and of course Provenance is extensible for developers to build new use cases.  
 
