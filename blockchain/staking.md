@@ -1,6 +1,8 @@
 # Staking
 
-* WTF is staking?
+Hash™ holders have a 
+
+* * WTF is staking?
 * Why would I want to stake hash?
 * Who holds my hash when it’s bonded?
 * Is there risk in staking?
