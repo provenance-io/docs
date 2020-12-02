@@ -140,5 +140,3 @@ A separate message from the payload blocks containing Data Encryption Keys that 
 ]
 ```
 
-![](../../../.gitbook/assets/image-95-.png)
-
