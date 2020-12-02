@@ -11,6 +11,7 @@
     * [Validators](blockchain/provenance-blockchain/roles/validators.md)
     * [Delegators](blockchain/provenance-blockchain/roles/delegators.md)
     * [Stakeholders](blockchain/provenance-blockchain/roles/stakeholders.md)
+  * [Mission](blockchain/provenance-blockchain/mission.md)
   * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
   * [Legal Standing](blockchain/provenance-blockchain/legal-standing.md)
 * [Explorer](blockchain/explorer.md)
