@@ -85,7 +85,7 @@
 
 ## Glossary
 
-* [Untitled](glossary/untitled.md)
+* [Definitions](glossary/untitled.md)
 
 ## FAQ
 
