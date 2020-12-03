@@ -61,6 +61,7 @@
 * [Provenance](integrating/provenance.md)
 * [Assets](integrating/assets.md)
 * [SDK](integrating/sdk.md)
+* [Wallets](integrating/wallets.md)
 * [Accounts](integrating/accounts.md)
 * [Markers](integrating/markers.md)
 * [Fees](integrating/fees.md)
