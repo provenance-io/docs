@@ -1,6 +1,6 @@
 # Staking
 
-To understand staking it's important to understand the difference between stake on the utility token staked on the Provenance network.
+To understand staking it's important to understand the difference between Hash ownership and Hash staked on the Provenance network.
 
 **Hash**™ - Utility token used by provenance for staking and transaction fee payment. 
 
