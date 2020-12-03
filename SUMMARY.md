@@ -39,6 +39,7 @@
     * [Encryption Scheme](p8e/components-1/encrypted-object-store/encryption-scheme.md)
     * [DIME \(Encryption Envelope Specification\)](p8e/components-1/encrypted-object-store/dime-encryption-envelope-specification.md)
   * [P8e API](p8e/components-1/api/README.md)
+    * [Reapers](p8e/components-1/api/reapers.md)
     * [Authentication](p8e/components-1/api/authentication.md)
     * [Contract Life Cycle](p8e/components-1/api/contract-life-cycle.md)
     * [Index Engine](p8e/components-1/api/index-engine.md)
