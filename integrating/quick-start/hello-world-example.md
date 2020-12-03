@@ -1,4 +1,4 @@
-# Hello World Example
+# Explanation
 
 Provenance’s Hello World example is designed to demonstrate the process of inputting name information, manipulating the information in a contracts, achieving agreement between multiple participants, memorializing the results to the blockchain, retrieving notifications when the process completes, and retrieving information from the blockchain and encrypted object store.
 

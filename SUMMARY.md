@@ -47,18 +47,15 @@
 * [Integration](p8e/untitled/README.md)
   * [3rd Party Digital Signatures](p8e/untitled/3rd-party-digital-signatures.md)
 * [Archive](p8e/archive/README.md)
-  * [Cross Scope Contract Example](p8e/archive/cross-scope-contract-example.md)
-  * [Multi-Contract Example](p8e/archive/multi-contract-example.md)
-  * [Multi-Step Contract Example](p8e/archive/multi-step-contract-example.md)
   * [Data Retrieval](p8e/archive/data-retrieval.md)
   * [Building New Contracts](p8e/archive/building-new-contracts.md)
-  * [Hello World Example](p8e/archive/hello-world-example.md)
   * [Client Side Contracts](p8e/archive/client-side-contracts/README.md)
     * [Client Contract Defintion](p8e/archive/client-side-contracts/client-contract-defintion.md)
 
 ## Integrating
 
-* [Quick Start](integrating/quick-start.md)
+* [Quick Start](integrating/quick-start/README.md)
+  * [Explanation](integrating/quick-start/hello-world-example.md)
 * [Provenance](integrating/provenance.md)
 * [Assets](integrating/assets.md)
 * [SDK](integrating/sdk.md)
@@ -94,4 +91,8 @@
 ## Appendix
 
 * [Blockchain Comparison](appendix/blockchain-comparison.md)
+* [Contract Execution Examples](appendix/contract-execution-examples/README.md)
+  * [Cross Scope Contract Example](appendix/contract-execution-examples/cross-scope-contract-example.md)
+  * [Multi-Contract Example](appendix/contract-execution-examples/multi-contract-example.md)
+  * [Multi-Step Contract Example](appendix/contract-execution-examples/multi-step-contract-example.md)
 
