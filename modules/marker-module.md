@@ -58,7 +58,7 @@ When a `marker` is created the address that submits the transaction is bound as 
 | Activate | n/a | For a `finalized` status marker, activates configuration \(manager only\) |
 | Cancel | `delete` | Move a `finalized`, `active`, or `proposed` marker to a cancelled state |
 | Delete | `delete` | Destroys a `canceled` state marker |
-| Transfer | `transfer` | For active markers of denominations that are not `send_enabled`, transfer authority allows the coins to be sent between accounts when the send transaction includes a signature from the account holding this permission using the marker module's send function. This permission only applies to markers with a type of LOCKED.  **Note: only `coin` of the `marker` denom may be transfered using this capability** |
+| Transfer | `transfer` | For active markers of denominations that are not `send_enabled`, transfer authority allows the coins to be sent between accounts when the send transaction includes a signature from the account holding this permission using the marker module's send function. This permission only applies to markers with a type of RESTRICTED.  **Note: only `coin` of the `marker` denom may be transfered using this capability** |
 
 ```bash
 # Grant 'mint' is one of [mint,burn,deposit,withdraw,delete,grant,transfer]
@@ -121,5 +121,5 @@ Certain types of tokens require that holders meet certain criteria in order to p
 
 When used in this configuration, the marker module's `transfer` permission allows an address possessing it to directly exchange value using the marker module send function.  This permission can be granted to a smart contract address for example to provide strict controls on the transfer of value of the marker's denominated coins between accounts.
 
-**Warning**: The `transfer` permission is very powerful and provides behavior that user's may not expect as coin's of the marker denomination they hold may be removed from their account directly without their signature when this permission is enabled.  Due to the potential for abuse this permission may only be assigned to accounts on a marker of type LOCKEDCOIN.  Further the type of a marker is fixed when it is created and may not be changed.
+**Warning**: The `transfer` permission is very powerful and provides behavior that user's may not expect as coin's of the marker denomination they hold may be removed from their account directly without their signature when this permission is enabled.  Due to the potential for abuse this permission may only be assigned to accounts on a marker of type RESTRICTED.  Further the type of a marker is fixed when it is created and may not be changed.
 
