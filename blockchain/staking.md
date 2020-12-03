@@ -1,21 +1,46 @@
 # Staking
 
-Hash™ holders have a 
+To understand staking it's important to understand the difference between stake on the utility token staked on the Provenance network.
 
-* * WTF is staking?
-* Why would I want to stake hash?
-* Who holds my hash when it’s bonded?
-* Is there risk in staking?
+**Hash**™ - Utility token used by provenance for staking and transaction fee payment. 
 
-Decent explanation of Staking/bonding. Not ours!
+**Stake** - Hash that has been delegated to a validator to share in the risks and rewards of the network. 
 
-So when you want to stake your ATOMs, you need to choose a validator to delegate them to. This is called “bonding”—it means that you’ve dedicated your ATOM to a particular node who votes to produce the next block in the blockchain \(that node is a validator—important to note that all validators are nodes, but not all nodes are validators\).
+Hash will become stake at the point in time that it is delegated to a validator to be used as voting power on the network. 
 
-In exchange for their work in maintaining the network, validators will take a commission of the staking rewards generated with each block \(so far it seems anywhere from 0% up to 20%\). A validator can choose how much they wish to take as a commission when setting up their validator.
+**Delegation** - staking Hash with a validator to be used by that validator as voting power. Staking and delegation differ because you can stake a validator directly without delegating to an already established entity hosting Provenance. For most holders of Hash delegation is an easy and relatively safe method of sharing in the ownership of the network.
 
-If you no longer want to delegate your ATOM to a particular validator \(or any\), and let’s say you want to sell them or send them to an exchange or another address, you need to unbond them. That simply means that you withdraw them from the validator. But as you withdraw them from the validator, they have to be held for a period of 21 days. During this time, they are “frozen” as in you can’t withdrawal them from your current address, or move them anywhere.
+_See_ [_Voting_](voting.md) _for more information on how to vote on_ [_Governance_](governance.md) _proposals._
 
-When you stake your ATOM, it runs a bit of a risk, because in order to keep validators accountable, the system will punish them if they are disconnected from the network for a certain period of time, or if they try to double spend/sign \(i.e. try to hack the chain\). When this happens, the system takes and burns a percentage of the ATOM delegated to it, up to 5%.
+**Bonded** - The state of your Hash at the time when it is delegated to a validator. All bonded Hash is required to go through a 21 day unbonding period that locks the usage of the portion of Hash that has been removed from delegation. During this lock-up period:
 
-So if you’re delegating to a validator who gets punished, you can take up to a 5% haircut on your staked ATOM—and possibly more. This is a way to keep delegators \(stakers\) active in monitoring their validators and holding them accountable.
+* you won't share in the risks or rewards of the network
+* your Hash won't be available for transacting
+* your Hash will be safe from malfeasance by a bad acting validator.
+
+**Re-delegation** - It is important to note that you are able to re-delegate your Hash to a different validator immediately, without incurring the 21 day unbonding period. This is incredibly important because it allows the Hash holder to secure their Hash with a trusted validator if the current one has been deemed untrusted.
+
+### Rewards
+
+#### Commission
+
+It's important to note that validators are able to set a commission percentage that directly impacts the amount of rewards you are able to collect from delegating to that validator. 
+
+#### Voting
+
+Once you have staked Hash you are able to vote on Governance proposals that ultimately determine the direction of the network's development, usage, security, etc... It can't be stressed enough how important staking Hash is to the Provenance network. This is the true power of a proof-of-stake blockchain and allows the the network to operate independent of any controlling entity.
+
+#### Fee Distributions
+
+Staked Hash entitles you to a portion of the fees collected by the network. It is important to delegate to a secure validator and note the commission rate that the validator charges since it will directly impact the amount of rewards that you are able collect. See [Distribution](distribution.md) for more information on how fees are collected and distributed.
+
+### Risks
+
+#### Unbonding
+
+Bonded Hash can't be immediately transacted due to the unbonding period. When Hash is unbonded from a validator it is held by the network until the unbonding period \(21 days\) has completed. Hash can be re-delegated to a different validator immediately to mitigate the risk of a bad-actor validator causing slashing of your stake.
+
+#### Slashing
+
+In order to keep validators accountable for running the blockchain securely the network will slash stake in certain scenarios. It is good to note that validators share in this risk because they too have Hash staked on Provenance. 
 

@@ -18,6 +18,7 @@
 * [Cryptography](blockchain/cryptography.md)
 * [Governance](blockchain/governance.md)
 * [Hash](blockchain/hash-2.0.md)
+* [Distribution](blockchain/distribution.md)
 * [Staking](blockchain/staking.md)
 * [Voting](blockchain/voting.md)
 
