@@ -99,3 +99,11 @@
   * [Multi-Contract Example](appendix/contract-execution-examples/multi-contract-example.md)
   * [Multi-Step Contract Example](appendix/contract-execution-examples/multi-step-contract-example.md)
 
+---
+
+* [Use Cases](use-cases/README.md)
+  * [Data Movement](use-cases/data-movement.md)
+  * [Off-Boarding Loans](use-cases/off-boarding-loans.md)
+  * [External System Integration](use-cases/external-system-integration.md)
+  * [Servicer Conversion](use-cases/servicer-conversion.md)
+
