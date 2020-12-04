@@ -36,11 +36,11 @@ contractManager.newContract(HelloWorldContract::class.java, UUID.randomUUID().to
         .setFirstName("John").setLastName("Doe").build())
     satisfyParticipant(OWNER, publicKey.toJavaPublicKey())
     execute()
-        .accepted { contract ->
+        .accepted { contract: Contract<HelloWorldContract> ->
             // do something with accepted Contract<T> object
             true
         }
-        .error { err ->
+        .error { error: ContractScope.EnvelopeError ->
             // handle the EnvelopeError as needed
             true
         }
