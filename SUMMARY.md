@@ -29,7 +29,7 @@
 * [Marker Module](modules/marker-module.md)
 * [Name Module](modules/name-module.md)
 * [Metadata Module](modules/metadata-module.md)
-* [ProvWASM \(Smart Contracts\)](modules/provwasm-smart-contracts.md)
+* [Smart Contracts \(ProvWasm\)](modules/provwasm-smart-contracts.md)
 * [provenanced](modules/provenance-app.md)
 
 ## Contract Execution Environment \(P8e\) <a id="p8e"></a>
