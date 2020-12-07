@@ -69,7 +69,7 @@ This is the state you have been waiting for, the contract has completely execute
 
 ### Error
 
-As its name would imply, there was an error at some stage of contract execution, this event allows you to see what the error was and handle it appropriately.
+As its name would imply, there was an error at some stage of contract execution, this event allows you to see what the error was and handle it appropriately. Any events that have errored will go through a retry process before ultimately erroring the contract completely. 
 
 
 
