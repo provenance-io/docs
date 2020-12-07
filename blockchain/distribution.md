@@ -32,28 +32,28 @@ Fees are charged for gas consumption on each transaction initiated on Provenance
 
 ### Operation Gas Estimates
 
-| Operation |  |  | Low | High |
-| :--- | :--- | :--- | :--- | :--- |
-| transfer coins |  |  | 70000 | 70000 |
-| name\_bound |  |  | 64000 | 64000 |
-| account\_attribute\_added |  |  | 70000 | 70000 |
-| account\_attribute\_deleted |  |  | 55000 | 55000 |
-| contract spec loaded |  |  | 2800000 | 3600000 |
-| scope created |  |  | 233000 | 1000000 |
-| scope updated |  |  | 90000 | 110000 |
-| scope change owner |  |  | 75000 | 75000 |
-| marker created |  |  | 75000 | 75000 |
-| marker supply |  |  | 60000 | 60000 |
-| marker permissions |  |  | 60000 | 60000 |
-| marker finalize |  |  | 60000 | 60000 |
-| marker activate |  |  | 100000 | 100000 |
-| marker mint |  |  | 85000 | 90000 |
-| marker burn |  |  | 85000 | 90000 |
-| bilateral exchange |  |  | 105000 | 105000 |
-| multilateral exchange |  |  | 105000 | 1050000 |
-| smart contract create \(Require governance vote\) |  |  | 6320000 | 20000000 |
-| smart contract init |  |  | 1000000 | 1000000 |
-| smart contract exec |  |  | 140000 | 140000 |
+| Operation | Low | High |
+| :--- | :--- | :--- |
+| transfer coins | 70000 | 70000 |
+| name\_bound | 64000 | 64000 |
+| account\_attribute\_added | 70000 | 70000 |
+| account\_attribute\_deleted | 55000 | 55000 |
+| contract spec loaded | 2800000 | 3600000 |
+| scope created | 233000 | 1000000 |
+| scope updated | 90000 | 110000 |
+| scope change owner | 75000 | 75000 |
+| marker created | 75000 | 75000 |
+| marker supply | 60000 | 60000 |
+| marker permissions | 60000 | 60000 |
+| marker finalize | 60000 | 60000 |
+| marker activate | 100000 | 100000 |
+| marker mint | 85000 | 90000 |
+| marker burn | 85000 | 90000 |
+| bilateral exchange | 105000 | 105000 |
+| multilateral exchange | 105000 | 1050000 |
+| smart contract create \(Require governance vote\) | 6320000 | 20000000 |
+| smart contract init | 1000000 | 1000000 |
+| smart contract exec | 140000 | 140000 |
 
 ### Example Distribution
 
