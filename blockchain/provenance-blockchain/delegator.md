@@ -1,4 +1,4 @@
-# Delegators
+# Delegator
 
 To understand delegation it's important to understand the difference between Hash ownership and Hash staked on the Provenance network.
 

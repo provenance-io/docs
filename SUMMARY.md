@@ -7,9 +7,9 @@
 * [Provenance](blockchain/provenance-blockchain/README.md)
   * [Foundation](blockchain/provenance-blockchain/foundation.md)
   * [Participants](blockchain/provenance-blockchain/participants.md)
-  * [Validators](blockchain/provenance-blockchain/become-a-validator/README.md)
-    * [Network](blockchain/provenance-blockchain/become-a-validator/network.md)
-  * [Delegators](blockchain/provenance-blockchain/staking.md)
+  * [Validator](blockchain/provenance-blockchain/validator/README.md)
+    * [Network](blockchain/provenance-blockchain/validator/network.md)
+  * [Delegator](blockchain/provenance-blockchain/delegator.md)
   * [Mission](blockchain/provenance-blockchain/mission.md)
   * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
   * [Legal Standing](blockchain/provenance-blockchain/legal-standing.md)
@@ -32,7 +32,7 @@
 
 ## Contract Execution Environment \(P8e\) <a id="p8e"></a>
 
-* [Overview](p8e/overview.md)
+* [Client Execution Environment](p8e/overview.md)
 * [Components](p8e/components-1/README.md)
   * [Encrypted Object Store](p8e/components-1/encrypted-object-store/README.md)
     * [Encryption Scheme](p8e/components-1/encrypted-object-store/encryption-scheme.md)
