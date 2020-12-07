@@ -58,7 +58,7 @@ Fees are the total amount of Hash collected for consumed gas during the processi
 
 ## Distribution
 
-All fees that are collected by the validator network are distributed to rewarding Provenance participants for providing value in the various [Roles](provenance-blockchain/roles/).
+All fees that are collected by the validator network are distributed to rewarding Provenance participants for providing value in the various [Roles]().
 
 ### Fee Distribution Hierarchy
 

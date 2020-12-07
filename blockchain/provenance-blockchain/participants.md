@@ -9,7 +9,7 @@ Provenance has a group of leading financial institutions participating across fu
 * Validators/Delegators. Buy-side, sell-side firms, other financial services companies and 3rd party validators who independently host the blockchain.
 * Omnibus Banks who provide a bridge between fiat and Provenance.
 
-Participants are informed via [Explorer](../../explorer.md) of which firms are validators today, and any changes in validators should they occur.   
+Participants are informed via [Explorer](../explorer.md) of which firms are validators today, and any changes in validators should they occur.   
 
 
 

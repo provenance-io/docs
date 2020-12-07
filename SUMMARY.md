@@ -5,12 +5,11 @@
 ## Blockchain
 
 * [Provenance](blockchain/provenance-blockchain/README.md)
-  * [Roles](blockchain/provenance-blockchain/roles/README.md)
-    * [Foundation](blockchain/provenance-blockchain/roles/foundation.md)
-    * [Participants](blockchain/provenance-blockchain/roles/participants.md)
-    * [Validators](blockchain/provenance-blockchain/roles/become-a-validator/README.md)
-      * [Network](blockchain/provenance-blockchain/roles/become-a-validator/network.md)
-    * [Delegators](blockchain/provenance-blockchain/roles/staking.md)
+  * [Foundation](blockchain/provenance-blockchain/foundation.md)
+  * [Participants](blockchain/provenance-blockchain/participants.md)
+  * [Validators](blockchain/provenance-blockchain/become-a-validator/README.md)
+    * [Network](blockchain/provenance-blockchain/become-a-validator/network.md)
+  * [Delegators](blockchain/provenance-blockchain/staking.md)
   * [Mission](blockchain/provenance-blockchain/mission.md)
   * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
   * [Legal Standing](blockchain/provenance-blockchain/legal-standing.md)
