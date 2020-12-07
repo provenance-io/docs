@@ -6,7 +6,8 @@
 
 * [Provenance](blockchain/provenance-blockchain/README.md)
   * [Foundation](blockchain/provenance-blockchain/foundation.md)
-  * [Participants](blockchain/provenance-blockchain/participants.md)
+  * [Participants](blockchain/provenance-blockchain/participants/README.md)
+    * [Omnibus Banks](blockchain/provenance-blockchain/participants/omnibus-banks.md)
   * [Validator](blockchain/provenance-blockchain/validator/README.md)
     * [Network](blockchain/provenance-blockchain/validator/network.md)
   * [Delegator](blockchain/provenance-blockchain/delegator.md)
