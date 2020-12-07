@@ -4,31 +4,24 @@ description: >-
   participants.
 ---
 
-# Distribution/Fees
+# Fees/Distribution
 
-## Overview 
+## What is gas? 
 
-Fees are charged for gas consumption on each transaction initiated on Provenance. Gas is a unit of consumption that is calculated by the amount of computing resources used to commit a transaction to the blockchain. 
+Gas is a consumable that is used to power the Provenance blockchain. Each execution of the blockchain requires enough gas to complete the requires reads, writes, and computation encompassed by the submitted transaction\(s\). When using gas you need to know two things:
 
-### Fee Distribution Hierarchy
+* How much gas do I need to process my transaction? 
+* What is the current price of gas?
 
-* Community - pool of Hash that can be used to enhance and maintain Provenance
-* Block Proposer - an additional bonus given to the validator that proposed the block
-* Validator Commission - percentage of the fee that is taken as commission by a validator
-* Delegators 
+Before each transaction invoked on Provenance an estimate of the amount gas you need is made. The estimated gas needed is the maximum you'll pay for the given transaction. Over estimating will lead to purchasing more gas than needed and under estimating will cause the submitted transaction to fail due to running out of gas. 
 
-#### Modifying Fees
+### Meter 
 
-**Community** and **Block Proposer** fees are set by governance proposals allowing Hash holders to vote to adjust these fee percentages as necessary. Validator commissions are set by validators directly allowing them to charge up to 100% of the fees received during distribution. Any validator choosing to charge a 100% commission is highly unlikely to receive delegate Hash. Delegators can choose validators that have a lower commission to optimize the amount of fees collected from the network. 
+When a transaction starts processing the meter is set at to the estimated amount of gas and the measurement of usage decreases the amount of available gas for the transaction based on network usage. If the transaction completes without running out the meter it will be committed to the blockchain. If the meter arrives at zero before the transaction is complete the blockchain will reject the transaction and the gas has been consumed. In this case it is beneficial to be slightly higher on gas estimates to avoid paying for a transaction that is rejected.
 
-### Current Fees
+### Price
 
-| Type | Percentage |
-| :--- | :--- |
-| Community | 5% |
-| Block Proposer | 1% to 6% |
-| Validator Commission | 5% to 100% |
-| Delegators | Remaining |
+Gas is purchased with Hash, the Provenance utility token. 
 
 ### Operation Gas Estimates
 
@@ -55,7 +48,37 @@ Fees are charged for gas consumption on each transaction initiated on Provenance
 | smart contract init | 1000000 | 1000000 |
 | smart contract exec | 140000 | 140000 |
 
-### Example Distribution
+## Fees 
+
+Fees are the total amount of Hash collected for consumed gas during the processing and minting of a block on Provenance. 
+
+#### Modifying Fees
+
+**Community** and **Block Proposer** fees are set by governance proposals allowing Hash holders to vote to adjust these fee percentages as necessary. Validator commissions are set by validators directly allowing them to charge up to 100% of the fees received during distribution. Any validator choosing to charge a 100% commission is highly unlikely to receive delegate Hash. Delegators can choose validators that have a lower commission to optimize the amount of fees collected from the network. 
+
+## Distribution
+
+All fees that are collected by the validator network are distributed to rewarding Provenance participants for providing value in the various [Roles](provenance-blockchain/roles/).
+
+### Fee Distribution Hierarchy
+
+* Community - pool of Hash that can be used to enhance and maintain Provenance
+* Block Proposer - an additional bonus given to the validator that proposed the block
+* Validator Commission - percentage of the fee that is taken as commission by a validator
+* Delegators 
+
+### Current Fees
+
+| Type | Percentage |
+| :--- | :--- |
+| Community | 5% |
+| Block Proposer | 1% to 6% |
+| Validator Commission | 5% to 100% |
+| Delegators | Remaining |
+
+### **Example 1**
+
+Here is an example distribution of Hash collected during a transaction. 
 
 **Validators:**
 
