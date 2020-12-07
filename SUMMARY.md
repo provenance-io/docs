@@ -10,7 +10,7 @@
     * [Participants](blockchain/provenance-blockchain/roles/participants.md)
     * [Validators](blockchain/provenance-blockchain/roles/become-a-validator/README.md)
       * [Network](blockchain/provenance-blockchain/roles/become-a-validator/network.md)
-    * [Delegators](blockchain/provenance-blockchain/roles/delegators.md)
+    * [Delegators](blockchain/provenance-blockchain/roles/staking.md)
   * [Mission](blockchain/provenance-blockchain/mission.md)
   * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
   * [Legal Standing](blockchain/provenance-blockchain/legal-standing.md)
@@ -19,7 +19,6 @@
 * [Governance](blockchain/governance.md)
 * [Hash](blockchain/hash-2.0.md)
 * [Fees/Distribution](blockchain/distribution.md)
-* [Staking](blockchain/staking.md)
 * [Voting](blockchain/voting.md)
 
 ## Modules

@@ -1,6 +1,6 @@
-# Staking
+# Delegators
 
-To understand staking it's important to understand the difference between Hash ownership and Hash staked on the Provenance network.
+To understand delegation it's important to understand the difference between Hash ownership and Hash staked on the Provenance network.
 
 **Hash**™ - Utility token used by provenance for staking and transaction fee payment. 
 
@@ -10,7 +10,7 @@ Hash will become stake at the point in time that it is delegated to a validator 
 
 **Delegation** - staking Hash with a validator to be used by that validator as voting power. Staking and delegation differ because you can stake a validator directly without delegating to an already established entity hosting Provenance. For most holders of Hash delegation is an easy and relatively safe method of sharing in the ownership of the network.
 
-_See_ [_Voting_](voting.md) _for more information on how to vote on_ [_Governance_](governance.md) _proposals._
+_See_ [_Voting_](../../voting.md) _for more information on how to vote on_ [_Governance_](../../governance.md) _proposals._
 
 **Bonded** - The state of your Hash at the time when it is delegated to a validator. All bonded Hash is required to go through a 21 day unbonding period that locks the usage of the portion of Hash that has been removed from delegation. During this lock-up period:
 
@@ -34,7 +34,7 @@ Once you have staked Hash you are able to vote on Governance proposals that ulti
 
 #### Fee Distributions
 
-Staked Hash entitles you to a portion of the fees collected by the network. It is important to delegate to a secure validator and note the commission rate that the validator charges since it will directly impact the amount of rewards that you are able collect. See [Distribution](distribution.md) for more information on how fees are collected and distributed.
+Staked Hash entitles you to a portion of the fees collected by the network. It is important to delegate to a secure validator and note the commission rate that the validator charges since it will directly impact the amount of rewards that you are able collect. See [Distribution](../../distribution.md) for more information on how fees are collected and distributed.
 
 ### Risks
 
