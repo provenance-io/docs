@@ -24,7 +24,7 @@ Validators participate in the security and control of the network and are able t
 
 #### Commissions
 
-Each Provenance validator can set a commission rate to charge on fees collected. 
+Each Provenance validator can set a commission rate to charge on fees collected. This directly allows validators to charge up to 100% of the fees received during distribution. However, any validator choosing to charge a 100% commission is highly unlikely to receive delegate Hash. 
 
 #### Bonus Proposer Awards
 
@@ -36,7 +36,7 @@ Voting within the Provenance ecosystem allows Hash holders to direct the develop
 
 #### Gas Price
 
-Validators can choose the minimum gas price that they will accept in order to process a proposed transaction. This allows validators to organically modify the cost to use the network based on 2/3s majority.
+Based on 2/3s majority, validators can choose the minimum gas price that they will accept in order to process a proposed transaction. This allows validators to organically modify the cost to use the network.
 
 ### Potential Risks of Hosting a Validator
 
