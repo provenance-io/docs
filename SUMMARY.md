@@ -104,7 +104,6 @@
 
 * [Use Cases](use-cases/README.md)
   * [Data Movement](use-cases/data-movement.md)
-  * [Off-Boarding Loans](use-cases/off-boarding-loans.md)
   * [External System Integration](use-cases/external-system-integration.md)
   * [Servicer Conversion](use-cases/servicer-conversion.md)
 
