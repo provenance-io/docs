@@ -66,6 +66,7 @@
 * [Markers](integrating/markers.md)
 * [Fees](integrating/fees.md)
 * [Omnibus](integrating/omnibus.md)
+* [Error Codes](integrating/error-codes.md)
 
 ## Provenance Apps <a id="provenance-applications"></a>
 
