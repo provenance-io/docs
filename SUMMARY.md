@@ -16,7 +16,7 @@
   * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
   * [Legal Standing](blockchain/provenance-blockchain/legal-standing.md)
 * [Explorer](blockchain/explorer.md)
-* [Cryptography](blockchain/cryptography.md)
+* [HD Wallets & General chain cryptography](blockchain/cryptography.md)
 * [Governance](blockchain/governance.md)
 * [Hash](blockchain/hash-2.0.md)
 * [Fees/Distribution](blockchain/distribution.md)
