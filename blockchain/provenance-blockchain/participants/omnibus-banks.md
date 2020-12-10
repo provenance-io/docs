@@ -1,7 +1,5 @@
 # Omnibus Banks
 
-### 
-
 The omnibus bank plays a critical role in the Provenance ecosystem, providing a bridge between Provenance blockchain and fiat currency.  
 
 
@@ -12,23 +10,23 @@ The primary role of the omnibus bank is to hold fiat deposits and correspondingl
 Assume a fund is buying a pool of loans that are registered on Provenance.  That fund enters into a sale agreement with the seller and wires the transaction amount \(with an identifier\) to an omnibus bank.    
 
 
-![](https://docs.google.com/drawings/u/0/d/sA7v3GySypCWB8E_aSyiXGg/image?w=387&h=158&rev=207&ac=1&parent=1lpx6RArx9WXNzk5jVSbPAbcadNhgnvlo9AF02A_3EHQ)
+![](../../../.gitbook/assets/omnibus-bank-and-stablecoin.png)
 
 The omnibus bank uses the API call to Provenance to create stablecoin in an equal amount to the wire received and deposit the stablecoin into the fund’s wallet on Provenance \(signified by the identifier in the wire\).   
   
 
 
-![](https://docs.google.com/drawings/u/0/d/sbT_DZsD81saQ57NESxBLsg/image?w=376&h=104&rev=148&ac=1&parent=1lpx6RArx9WXNzk5jVSbPAbcadNhgnvlo9AF02A_3EHQ)
+![](../../../.gitbook/assets/omnibus-bank-and-stablecoin-1-.png)
 
 Provenance then transfers the agreed amount of stablecoin from the fund’s wallet to the seller’s wallet and transfers ownership of the loans to the fund at the same time.  This a T+0 transaction with no counterparty or settlement risk.  
 
 
-![](https://docs.google.com/drawings/u/0/d/sHyOEDrgDqNw5A_pIBz0Oqg/image?w=387&h=202&rev=229&ac=1&parent=1lpx6RArx9WXNzk5jVSbPAbcadNhgnvlo9AF02A_3EHQ)
+![](../../../.gitbook/assets/omnibus-bank-and-stablecoin-2-%20%281%29.png)
 
 Wallet owners on Provenance can redeem their stablecoin from the omnibus bank at any time.  In doing so, the omnibus bank destroys \(burns\) the stablecoin and transfers the corresponding amount of fiat to the redeemer's target fiat account.    
 
 
-![](https://docs.google.com/drawings/u/0/d/sYxndxCeZup-yIgrdLq8Gnw/image?w=376&h=150&rev=124&ac=1&parent=1lpx6RArx9WXNzk5jVSbPAbcadNhgnvlo9AF02A_3EHQ)
+![](../../../.gitbook/assets/omnibus-bank-and-stablecoin-3-.png)
 
 #### Stablecoin Properties  
 
