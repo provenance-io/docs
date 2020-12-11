@@ -83,7 +83,7 @@ m / 44' / 505' /  0' /  0  /  0
                       ****
 ```
 
-The wallet chain identifier. Provenance uses the constant `0` to represent and external chain and constant `1` for internal chain \(also known as change addresses\). `Change` addresses are used in bitcoin for the UTXO output from a transaction that is retained by the sender. Most blockchains outside of bitcoin \(and even many bitcoin wallets\) only use `0` for this value.
+The wallet chain identifier. Provenance uses the constant `0` to represent external chain and constant `1` for internal chain \(also known as change addresses\). `Change` addresses are used in bitcoin for the UTXO output from a transaction that is retained by the sender. Most blockchains outside of bitcoin \(and even many bitcoin wallets\) only use `0` for this value.
 
 External chain is used for addresses that are meant to be visible outside of the wallet \(e.g. for receiving payments\).
 
