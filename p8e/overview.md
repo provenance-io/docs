@@ -4,6 +4,10 @@ P8e was designed to directly integrate with the Provenance Metadata Module to si
 
 Assets can be directly defined against the Metadata module, but the execution environment assists in the complex hashing of data, maintenance of immutable objects, and signature orchestration between multiple parties.
 
+## Client Contracts
+
+Client side contracts differ from Smart Contracts in that they keep your data private between parties off chain and allow a structure to record agreed upon state data to the blockchain. Smart contracts in comparison are running on the blockchain and require the validators to have access to the data which isn’t a great solution for most consumer based transactions due to data privacy laws.
+
 ## **Transaction Flow**
 
 The following diagram outlines the flow of data for typical transactions proposed to Provenance.

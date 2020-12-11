@@ -1,2 +1,0 @@
-# Client Contract Defintion
-

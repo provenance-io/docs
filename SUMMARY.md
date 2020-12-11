@@ -51,8 +51,6 @@
 * [Archive](p8e/archive/README.md)
   * [Data Retrieval](p8e/archive/data-retrieval.md)
   * [Building New Contracts](p8e/archive/building-new-contracts.md)
-  * [Client Side Contracts](p8e/archive/client-side-contracts/README.md)
-    * [Client Contract Defintion](p8e/archive/client-side-contracts/client-contract-defintion.md)
 
 ## Integrating
 
