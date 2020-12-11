@@ -71,7 +71,7 @@
 ## Provenance Apps <a id="provenance-applications"></a>
 
 * [Portfolio Manager](provenance-applications/portfolio-manager-market-place.md)
-* [Marketplace/Digital Funds Services](provenance-applications/marketplace-digital-funds-services.md)
+* [Marketplace](provenance-applications/marketplace-digital-funds-services.md)
 * [Adnales](provenance-applications/adnales.md)
 * [Figure Pay](provenance-applications/figure-pay.md)
 * [eVault](provenance-applications/evault.md)

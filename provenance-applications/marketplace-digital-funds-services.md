@@ -1,4 +1,4 @@
-# Marketplace/Digital Funds Services
+# Marketplace
 
 {% embed url="https://www.figure.com/loan-marketplace-for-investors/" %}
 
