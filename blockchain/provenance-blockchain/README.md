@@ -1,7 +1,5 @@
 ---
-description: >-
-  Blockchain platform for registry, custody, and transacting of financial
-  assets.
+description: 'Blockchain platform for ledger, registry, and exchange of financial assets.'
 ---
 
 # Provenance
