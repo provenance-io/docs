@@ -38,7 +38,7 @@ Voting within the Provenance ecosystem allows Hash holders to direct the develop
 
 Based on 2/3s majority, validators can choose the minimum gas price that they will accept in order to process a proposed transaction. This allows validators to organically modify the cost to use the network.
 
-### Potential Risks of Hosting a Validator
+### Responsibilities in Hosting a Validator
 
 Validators can earn rewards for assuming partial responsibility for the network, but this responsibility comes with some risks that should be considered before deciding to participate as a validator on the network. 
 
