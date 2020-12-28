@@ -10,7 +10,7 @@ description: >-
 
 Provenance uses Hierarchical Deterministic Wallets \(or “HD Wallets”\) as defined in the BIP32 specification: [https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
 
-There are two posible types of BIP32 derivation, hardened or non-hardened keys.
+There are two possible types of BIP32 derivation, hardened or non-hardened keys.
 
 ### Hardened vs. Non-hardened <a id="Hardened-vs-Non-hardened"></a>
 
