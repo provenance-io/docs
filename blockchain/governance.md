@@ -16,7 +16,7 @@
 * **Instantiate Contract** - instantiate a smart contract
 * **Migrate Contract** - migrate a smart contract to a new code version
 * **Update Admin** - set a new admin for a smart contract
-* **Clear Admin** - remove admin from a smartcontract to prevent further migrations
+* **Clear Admin** - remove admin from a smart contract to prevent further migrations
 
 ### Proposal Statuses <a id="Proposal-Statuses"></a>
 
@@ -92,7 +92,7 @@ These settings control the penalties assessed as a fraction of the delegated sta
 
 * Minimum signed blocks per Window
 * Window Size
-* Double Sign Penality Fraction
+* Double Sign Penalty Fraction
 * Downtime Penalty Fraction
 
 ### Staking <a id="Staking"></a>
