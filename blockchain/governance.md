@@ -107,15 +107,15 @@ These settings control which currency is used for staking in the network as well
 
 ### Transfer \(IBC\) <a id="Transfer-IBC"></a>
 
-Controls if coins can flow into the network or out of the network over IBC. For control of specific coins the transfer parameters on the bank module are used to overide the global settings defined here.
+Controls if coins can flow into the network or out of the network over IBC. For control of specific coins the transfer parameters on the bank module are used to override the global settings defined here.
 
 * Send Enabled – sets global send enable for all denominations over IBC
-* Recieve Enabled – sets the global recieve enabled for all denominations over IBC.
+* Receive Enabled – sets the global receive enabled for all denominations over IBC.
 
 ### Smart Contracts <a id="Smart-Contracts"></a>
 
 There are a few parameters that can be set related to smart contracts running on the blockchain. These settings are support through a standard parameter change proposal and are in addition to the other governance proposals that are specific to the smart contracts module.
 
-* Code Upload Acces - who can upload a smart contract binary: Nobody, Everybody, OnlyAddress
+* Code Upload Access - who can upload a smart contract binary: Nobody, Everybody, OnlyAddress
 * Instantiate Default Permission - platform default, who can instantiate a wasm binary when the code owner has not set it
 
