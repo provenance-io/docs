@@ -111,13 +111,13 @@ While the specific rules for the `hash` stake token on the Provenance Blockchain
 
 ### Asset Pool
 
-The deposit and withdraw permissions on a marker are used by the Metadata module to implement asset pools.  A colleciton of scope's can be made that reference a marker address and leverage the permission controls to limit who can add or remove scopes from the collection.  This approach allows a strongly controlled list of assets to be associated with a marker in order to represent a pool.
+The deposit and withdraw permissions on a marker are used by the Metadata module to implement asset pools.  A collection of scope's can be made that reference a marker address and leverage the permission controls to limit who can add or remove scopes from the collection.  This approach allows a strongly controlled list of assets to be associated with a marker in order to represent a pool.
 
 The marker module further provides a helpful set of query functions against the Metadata module in order to return a list of scoped assets assigned to the marker.  Complex ownership structures can be created using these concepts.
 
 ### Securities and KYC/AML
 
-Certain types of tokens require that holders meet certain criteria in order to possess the asset.  Typically these restrictions are associated with securities and accredited investors however other applications that require validating the recieving accounts also exist.  For these applications the marker module can be used along with a `send_enabled: false` configuration on the denomination to prevent users from directly transfering value between addresses.
+Certain types of tokens require that holders meet certain criteria in order to possess the asset.  Typically these restrictions are associated with securities and accredited investors however other applications that require validating the receiving accounts also exist.  For these applications the marker module can be used along with a `send_enabled: false` configuration on the denomination to prevent users from directly transferring value between addresses.
 
 When used in this configuration, the marker module's `transfer` permission allows an address possessing it to directly exchange value using the marker module send function.  This permission can be granted to a smart contract address for example to provide strict controls on the transfer of value of the marker's denominated coins between accounts.
 
