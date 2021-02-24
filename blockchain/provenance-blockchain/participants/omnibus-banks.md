@@ -21,7 +21,7 @@ The omnibus bank uses the API call to Provenance to create stablecoin in an equa
 Provenance then transfers the agreed amount of stablecoin from the fund’s wallet to the seller’s wallet and transfers ownership of the loans to the fund at the same time.  This a T+0 transaction with no counterparty or settlement risk.  
 
 
-![](../../../.gitbook/assets/omnibus-bank-and-stablecoin-2-%20%281%29.png)
+![](../../../.gitbook/assets/omnibus-bank-and-stablecoin-2-%20%281%29%20%281%29.png)
 
 Wallet owners on Provenance can redeem their stablecoin from the omnibus bank at any time.  In doing so, the omnibus bank destroys \(burns\) the stablecoin and transfers the corresponding amount of fiat to the redeemer's target fiat account.    
 
