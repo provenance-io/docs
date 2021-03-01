@@ -8,7 +8,7 @@ To understand delegation it's important to understand the difference between Has
 
 Hash will become stake at the point in time that it is delegated to a validator to be used as voting power on the network. 
 
-**Delegation** - staking Hash with a validator to be used by that validator as voting power. Staking and delegation differ because you can stake a validator directly without delegating to an already established entity hosting Provenance. For most holders of Hash delegation is an easy and relatively safe method of sharing in the ownership of the network.
+**Delegation** - staking Hash with a validator to be used by that validator as voting power. For most holders of Hash delegation is an easy and relatively safe method of sharing in the ownership of the network.
 
 _See_ [_Voting_](../voting.md) _for more information on how to vote on_ [_Governance_](../governance.md) _proposals._
 
