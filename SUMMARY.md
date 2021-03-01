@@ -1,6 +1,10 @@
 # Table of contents
 
-* [The Power of Blockchain](README.md)
+* [The Provenance Blockchain](README.md)
+* [Introduction](introduction/README.md)
+  * [Financial Services Blockchain](introduction/financial-services-blockchain.md)
+  * [Application Architecture](introduction/application-architecture.md)
+  * [Major Components](introduction/major-components.md)
 
 ## Blockchain
 
