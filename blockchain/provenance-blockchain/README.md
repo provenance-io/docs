@@ -4,6 +4,8 @@ description: 'Blockchain platform for ledger, registry, and exchange of financia
 
 # Provenance
 
+> TODO: I wonder if this content, being very "blockchain for financial services" as opposed to technical in nature should be renamed `Provenance Ecosystem`? And follow Core Concepts?  Or follow/be part of Introduction?
+
 Provenance introduces a blockchain platform designed and developed to support the needs of the financial services industry, providing **ledger**, **registry**, and **exchange** across financial assets and markets. Validators and stakeholders of Hash™ are comprised of large financial institutions, technical leaders, and individuals, providing the foundation of security and stability of the Provenance network. Provenance facilitates the establishment of an ecosystem that has garnered participation across all areas of finance including but not limited to asset originators, fund managers, servicers, banks and of course Provenance is extensible for developers to build new use cases.  
 
 ### Blockchain
