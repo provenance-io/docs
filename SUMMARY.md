@@ -11,7 +11,7 @@
   * [Query Lifecycle](basics/query-lifecycle.md)
   * [Accounts](basics/accounts.md)
   * [Gas and Fees](basics/gas-and-fees.md)
-* [Core Concepts](core-concepts.md)
+* [Track Kickoff](core-concepts.md)
 * [Running a Node](running-a-node.md)
 
 ## Blockchain

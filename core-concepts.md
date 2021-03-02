@@ -1,4 +1,27 @@
-# Core Concepts
+# Track Kickoff
+
+Thought: the documentation will tell a different story depending on which `track` the reader wishes to follow.  The tracks would depend on _how_ the Provenance ecosystem will be used:
+
+* Asset Origination: an external organization \(i.e. Figure Lending\) that wishes to onboard their assets and sell them on a marketplace.  This track leverages CEE, Markers, and Exchange.
+  * Creates value and exchanges value
+  * Business application developer-centric
+* Asset Investments: an external organization that purchases assets on a marketplace.  This track leverages Markers, Exchange, and bi-lateral SC
+  * Exchanges value
+  * Business application developer-centric
+* Asset Sharing \(Custody?\): an external organization that onboards assets and shares asset information with other organizations.
+  * Creates value \(intrinsic\)
+  * Business application developer-centric
+* Deposit and Transfer: an organization \(i.e. Figure Pay\) uses Provenance and a fiat bridge to mint and transfer coin.  Markers.
+  * Ledgering
+  * Business application developer-centric
+* Token Trader/Investor/Speculator?
+* Validator: an organization stakes Hash as a validating node
+  * Operational
+* Delegator: an organization/entity stakes Hash to a Validator
+  * Operational
+* Blockchain Developer: an organization/entity contributes to the OSS product?
+
+
 
 Now we start getting into great detail, the best detail.
 
