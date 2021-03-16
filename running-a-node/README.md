@@ -3,7 +3,7 @@
 ### Prerequisites 
 
 * Linux or Mac OS
-* Go 1.5+ \([https://golang.org/doc/install](https://golang.org/doc/install)\)
+* Go 1.15+ \([https://golang.org/doc/install](https://golang.org/doc/install)\)
 * LevelDB \([https://github.com/google/leveldb](https://github.com/google/leveldb)\)
 
 All interaction with Provenance whether creating a node, querying, or invoking actions can be accomplished using the `provenanced` command. 
