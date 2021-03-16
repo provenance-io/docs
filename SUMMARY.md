@@ -18,8 +18,6 @@
     * [Configure as a Validator](running-a-node/running-a-node-1/configure-as-a-validator.md)
     * [Securing a Validator](running-a-node/running-a-node-1/securing-a-validator.md)
 * [Using Provenance](using-provenance.md)
-* [Validator](validator/README.md)
-  * [Network](validator/network.md)
 
 ## Blockchain
 
@@ -29,6 +27,8 @@
     * [Asset Originators](blockchain/provenance-blockchain/participants/asset-originators.md)
     * [Omnibus Banks](blockchain/provenance-blockchain/participants/omnibus-banks.md)
   * [Delegator](blockchain/provenance-blockchain/delegator.md)
+  * [Validator](blockchain/provenance-blockchain/validator/README.md)
+    * [Network](blockchain/provenance-blockchain/validator/network.md)
   * [Mission](blockchain/provenance-blockchain/mission.md)
   * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
   * [Legal Standing](blockchain/provenance-blockchain/legal-standing.md)
