@@ -8,14 +8,14 @@ Let's start by spinning up a full node to get a feel for how a node can be used 
 
 ### Quick Start
 
-The quickest way to start a node is to install the `provenanced` daemon process, initiliaze a local installation, download the genesis file, and start the `provenanced` node in the foreground:
+The quickest way to start a node is to install the `provenanced` daemon process, initiliaze a local installation, download the genesis file, and start the `provenanced` node in the foreground.  Be sure to change `choose-a-moniker` to a custom name for your node.
 
 ```text
 $ export PIO_HOME=~/.provenanced
-$ git checkout release/0.2.0
+$ git checkout tags/v0.2.0 -b v0.2.0
 $ make clean
 $ make install
-$ provenanced init chooseamoniker --chain-id pio-testnet-1 --testnet
+$ provenanced init choose-a-moniker --chain-id pio-testnet-1 --testnet
 $ wget https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json
 $ mv genesis.json $PIO_HOME/config
 $ provenanced start --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
