@@ -37,7 +37,7 @@ Nodes in the network include:
 * Query nodes used by business application middleware for efficient and fast state query.
 * Transactional nodes used by business application middleware for efficient transaction submission and event listening.
 * Archival nodes where the pruning strategy is set to maintain all historic states.
-* [Validators](../blockchain/provenance-blockchain/validator/) that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes.  Validators bond their own Hash and have Hash delegated, or staked to, them by Hash holders.  Validators have a stake in the network.
+* [Validators](../validator/) that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes.  Validators bond their own Hash and have Hash delegated, or staked to, them by Hash holders.  Validators have a stake in the network.
 * Sentry nodes for Validator DDoS mitigation.
 
 ### Cosmovisor
@@ -56,7 +56,7 @@ To interact with the `provenanced` daemon, and by extension the node, a keyring 
 
 ### Genesis
 
-Before running a node the chain is initialized via a genesis file.  A default Provenance genesis file is provided depending on the network in use \(mainnet versus testnet\).  Refer to [Running a Node](../running-a-node.md) for more information on establishing a genesis file.
+Before running a node the chain is initialized via a genesis file.  A default Provenance genesis file is provided depending on the network in use \(mainnet versus testnet\).  Refer to [Running a Node](../running-a-node/) for more information on establishing a genesis file.
 
 ### Interacting with a Node
 

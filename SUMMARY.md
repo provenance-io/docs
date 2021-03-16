@@ -12,7 +12,14 @@
   * [Accounts](basics/accounts.md)
   * [Gas and Fees](basics/gas-and-fees.md)
 * [Track Kickoff](core-concepts.md)
-* [Running a Node](running-a-node.md)
+* [Installing Provenance](running-a-node/README.md)
+  * [Running a Node](running-a-node/running-a-node-1/README.md)
+    * [Join Provenance Testnet](running-a-node/running-a-node-1/join-provenance-testnet.md)
+    * [Configure as a Validator](running-a-node/running-a-node-1/configure-as-a-validator.md)
+    * [Securing a Validator](running-a-node/running-a-node-1/securing-a-validator.md)
+* [Using Provenance](using-provenance.md)
+* [Validator](validator/README.md)
+  * [Network](validator/network.md)
 
 ## Blockchain
 
@@ -21,8 +28,6 @@
   * [Participants](blockchain/provenance-blockchain/participants/README.md)
     * [Asset Originators](blockchain/provenance-blockchain/participants/asset-originators.md)
     * [Omnibus Banks](blockchain/provenance-blockchain/participants/omnibus-banks.md)
-  * [Validator](blockchain/provenance-blockchain/validator/README.md)
-    * [Network](blockchain/provenance-blockchain/validator/network.md)
   * [Delegator](blockchain/provenance-blockchain/delegator.md)
   * [Mission](blockchain/provenance-blockchain/mission.md)
   * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
