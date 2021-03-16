@@ -1,6 +1,33 @@
+---
+description: Join a locally installed Provenance node to the testnet.
+---
+
 # Join Provenance Testnet
 
 Let's start by spinning up a full node to get a feel for how a node can be used to develop applications that integrate with Provenance.
+
+### Quick Start
+
+The quickest way to start a node is to install the `provenanced` daemon process, initiliaze a local installation, download the genesis file, and start the `provenanced` node in the foreground:
+
+```text
+$ export PIO_HOME=~/.provenanced
+$ git checkout release/0.2.0
+$ make clean
+$ make install
+$ provenanced init chooseamoniker --chain-id pio-testnet-1 --testnet
+$ wget https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json
+$ mv genesis.json $PIO_HOME/config
+$ provenanced start --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
+```
+
+> Provenance nodes take about 45 minutes to start up.  During startup the `provenanced` daemon will output state sync information such as:
+>
+> ```text
+> 2:20PM INF committed state app_hash=3AA9147C2DBAE3328BAF633B6F33B1FBB6557FE8D81ECBC769A5AFB8DDFE98E3 height=29475 module=state num_txs=0
+> ```
+
+### 
 
 ### Recommended System Configuration
 
