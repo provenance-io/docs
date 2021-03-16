@@ -96,9 +96,6 @@ CPU/Memory/Storage are determined based on how you intend to use Provenance and 
 
 | Node Type | CPU | Memory | Storage |
 | :--- | :--- | :--- | :--- |
-| Full | 4 vCPU | 8GB | 100GB |
-| Seed | 2 vCPU | 4GB | 100GB |
-| Sentry | 4vCPU | 8GB | 500GB |
 | Validator | 2vCPU | 8GB | 500GB |
 
 
