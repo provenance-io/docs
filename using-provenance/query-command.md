@@ -50,3 +50,9 @@ Available Commands:
 ~$ provenanced  -t q block | jq ".block.last_commit.height"
 ```
 
+#### Account Balances
+
+```text
+~$ provenanced -t q bank balances tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt
+```
+

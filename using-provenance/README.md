@@ -66,9 +66,43 @@ Commands used throughout these examples will use some consistent flags that are 
 `--node tcp://localhost:26657` this is the default node location and port but can be specified
 {% endhint %}
 
-### Creating a Key Chain
+### Creating a Key\(s\)
 
 All interactions with Provenance are secured with a public/private key pair that will act as your account\(s\) on the blockchain. 
+
+```text
+~$ provenanced keys add <name_of_key> -t --hd-path "44'/1'/0'/0/0"  -i
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+fancy solar describe long tag soul gold boost vacuum baby famous narrow drink final smoke region pulse wrap expire fabric pause giant merit bird
+```
+
+{% hint style="info" %}
+When generating a new key it is important to store the generated mnemonic in a safe location to be used in the event that the key needs to be restored.
+{% endhint %}
+
+### Restoring a Key
+
+This command will prompt you for a mnemonic to restore the key at a specific bip39 path.
+
+```text
+~$ provenanced keys add <name_of_key> --hd-path "44'/1'/0'/0/0"  -i -t
+> Enter your bip39 mnemonic, or hit enter to generate one.
+fancy solar describe long tag soul gold boost vacuum baby famous narrow drink final smoke region pulse wrap expire fabric pause giant merit bird
+
+> Enter your bip39 passphrase. This is combined with the mnemonic to derive the seed. Most users should just hit enter to use the default, ""
+
+
+- name: <name_of_key>
+  type: local
+  address: tp1gn8jlv9krqe23ql3ltq0ajcwwf7dyaq6uuludl
+  pubkey: tppub1addwnpepqd4tpv506lhl3j8hux0ss8km84gwmgapjtuea9wzt8z8n9eqjrjxg897tw0
+  mnemonic: ""
+  threshold: 0
+  pubkeys: []
+```
 
 ### Getting Hash 
 
