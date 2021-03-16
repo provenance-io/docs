@@ -8,23 +8,35 @@
 
 All interaction with Provenance whether creating a node, querying, or invoking actions can be accomplished using the `provenanced` command. 
 
-#### Install
+{% hint style="info" %}
+See the [Provenance testnet repository](https://github.com/provenance-io/testnet) for latest version information
+{% endhint %}
+
+Installing `provenanced` is done directly from the source code located on the [Provenance Github](https://github.com/provenance-io/provenance).
 
 ```text
-$ git clone -b v0.2.1 https://github.com/provenance-io/provenance
+$ git clone -b <version> https://github.com/provenance-io/provenance
 $ cd provenance && make install
 ```
 
-#### Verify
+To verify that the command has been successfully installed we can check the version that has been installed.
 
 ```text
 $ provenanced version
-v0.2.1
+<version>
 ```
 
-###  Next
 
-Now that Provenance is installed you can [access an already existing node](../using-provenance.md) or [create a new node](running-a-node-1/).
+
+### Next
+
+Now that `provenanced` you should start by running a node on the network that will allow access to Provenance. 
+
+{% page-ref page="running-a-node-1/" %}
+
+If you already have a node running, let's start using Provenance.
+
+{% page-ref page="../using-provenance/" %}
 
 
 

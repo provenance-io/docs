@@ -17,7 +17,8 @@
     * [Join Provenance Testnet](running-a-node/running-a-node-1/join-provenance-testnet.md)
     * [Configure as a Validator](running-a-node/running-a-node-1/configure-as-a-validator.md)
     * [Securing a Validator](running-a-node/running-a-node-1/securing-a-validator.md)
-* [Using Provenance](using-provenance.md)
+* [Using Provenanced](using-provenance/README.md)
+  * [Query Command](using-provenance/query-command.md)
 
 ## Blockchain
 
