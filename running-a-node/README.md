@@ -8,13 +8,19 @@
 
 All interaction with Provenance whether creating a node, querying, or invoking actions can be accomplished using the `provenanced` command. 
 
+#### Install
+
 ```text
-git clone -b v0.2.1 https://github.com/provenance-io/provenance
-cd provenance
-make install
+$ git clone -b v0.2.1 https://github.com/provenance-io/provenance
+$ cd provenance && make install
 ```
 
+#### Verify
 
+```text
+$ provenanced version
+v0.2.1
+```
 
 ###  Next
 
