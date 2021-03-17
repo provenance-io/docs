@@ -8,7 +8,7 @@ Start a Provenance[ full node ](https://docs.tendermint.com/master/nodes/#node-t
 
 ## Quick Start
 
-The quickest way to start a node is to install the `provenanced` daemon process, initiliaze a local installation, download the genesis file, and start the `provenanced` node in the foreground.  Be sure to change`choose-a-moniker` to a custom name for your node.
+The quickest way to start a node is to install the `provenanced` daemon process, initialize a local installation, download the genesis file, and start the `provenanced` node in the foreground.  Be sure to change`choose-a-moniker` to a custom name for your node.
 
 #### Start a Node in Foreground
 
@@ -250,7 +250,7 @@ CPU/Memory/Storage are determined based on how you intend to use Provenance and 
 | :--- | :--- | :--- |
 | 4 vCPU | 8GB | 500GB |
 
-### Next
+## Next
 
 Configuring the node for your use case \(Validator, Archival, Query...\)
 

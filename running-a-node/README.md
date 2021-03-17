@@ -12,12 +12,16 @@ All interaction with Provenance whether creating a node, querying, or invoking a
 See the [Provenance testnet repository](https://github.com/provenance-io/testnet) for latest version information
 {% endhint %}
 
+### Install
+
 Installing `provenanced` is done directly from the source code located on the [Provenance Github](https://github.com/provenance-io/provenance).
 
 ```text
 $ git clone -b <version> https://github.com/provenance-io/provenance
 $ cd provenance && make install
 ```
+
+### Verify
 
 To verify that the command has been successfully installed we can check the version that has been installed.
 
@@ -28,7 +32,7 @@ $ provenanced version
 
 ## Next
 
-Now that `provenanced` is installed, let's start by running a node on the network that will allow access to Provenance testnet. 
+Now that `provenanced` is installed, let's start by introducing the types of nodes participating on the network that provide the foundation for transacting on Provenance.
 
 {% page-ref page="running-a-node-1/" %}
 

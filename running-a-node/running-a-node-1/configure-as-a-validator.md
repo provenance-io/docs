@@ -6,6 +6,10 @@ Validators perform the critical function of proposing and validating transaction
 
 This quick start assumes that you have already completed the necessary steps to join a full node to the Provenance network and are ready to designate the node as a validator. 
 
+{% hint style="warning" %}
+To configure a validator you need to acquire Hash to grant the newly created validator voting power on the network. 
+{% endhint %}
+
 Each Tendermint node has a public key that identifies it to other participants on the network. In order to configure the full node created in [Join Provenance Testnet](join-provenance-testnet.md), we need to find the public key that identifies. Tendermint provides a simple way to display the key for use.
 
 #### Finding Node Public Key
@@ -20,12 +24,12 @@ The following command has a lot of detail that should be reviewed closely.
 
 | Parameter | Description |
 | :--- | :--- |
-| chain-id |  |
-| home |  |
-| moniker |  |
-| pubkey |  |
-| amount |  |
-| from |  |
+| chain-id | cha |
+| home | home directory containing the blockchain data for the node |
+| moniker | the name of your validator that should be shown to other participants on the network |
+| pubkey | Public key determined using the tendermint show-validator command |
+| amount | amount of Hash to delegate as voting power on the network |
+| from | the account that holds the Hash to be delegated |
 | fees |  |
 | commission-rate |  |
 | commission-max-rate |  |
