@@ -38,7 +38,8 @@
 * [Governance](blockchain/governance.md)
 * [Hash](blockchain/hash-2.0.md)
 * [Fees/Distribution](blockchain/distribution.md)
-* [Voting](blockchain/voting.md)
+* [Voting](blockchain/voting/README.md)
+  * [Software Upgrade Proposal](blockchain/voting/software-upgrade-proposal.md)
 
 ## Modules
 
