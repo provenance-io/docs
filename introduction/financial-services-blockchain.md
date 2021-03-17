@@ -14,7 +14,7 @@ Provenance reduces third party intermediation and internal staffing costs, promo
 
 ### Distributed Trust
 
-Provenance has three key attributes: **Distributed Information, Immutable History and Trustless Data**. Information cannot be held in one location. Distributed content provides defense against hackers and eliminates agency problems that can lead to malfeasance, supporting enforceable digital contracts. Data must not be changed. Immutable information is critical in establishing asset provenance. And information must be true. Having to rep and warranty data—analogous to “trust me”—undermines the system and introduces risk to those who provide these attestations.
+Provenance has three key attributes: **Distributed Information, Immutable History and Trustless Data**. Information cannot be held in one location. Distributed content provides defense against hackers, eliminates agency problems that can lead to malfeasance, and helps supporting enforceable digital contracts. Data written on the ledger, must not be changed. Immutable information is critical in establishing asset provenance. And information must be true. Having to rep and warranty data—analogous to “trust me”—undermines the system and introduces risk to those who provide these attestations.
 
 These attributes are necessary, but not sufficient, to eliminate rent-seeking and bring incremental value to financial markets. To transform financial services, Provenance performs 3 key functions: ledger, registry and exchange.
 
@@ -26,7 +26,7 @@ These attributes are necessary, but not sufficient, to eliminate rent-seeking an
 
 Numerous financial marketplaces leverage Provenance to connect buyers and sellers of digital assets.  Marketplaces are like a town full of stores. Each store has products for primary and secondary offerings. Some stores require accreditation to enter and transact. For example, Figure’s Passport solution [leverages the Provenance Name Module](../modules/name-module.md) for accreditation. Marketplaces build on Provenance support loans, loan participation and private funds. Soon these marketplaces will support a full range of securities, from asset-backed securities to private equity.
 
-Marketplaces leveraging Provenance allows two counterparties to trade bilaterally, settling real-time without counterparty or settlement risk using the Provenance [Account](../modules/inherited-modules.md), [Marker](../modules/marker-module.md), and [Bank](../modules/inherited-modules.md) Modules. Complex ownership, exchange, and settlement functions can be expressed using [Provenance Smart Contracts](../modules/provwasm-smart-contracts.md).  Together, these Provenance features allow unprecedented access, ease and transparency to asset and fund interest buyers and sellers.  
+Marketplaces leveraging Provenance allow two counter-parties to trade bilaterally, settling real-time without counter-party or settlement risk using the Provenance [Account](../modules/inherited-modules.md), [Marker](../modules/marker-module.md), and [Bank](../modules/inherited-modules.md) Modules. Complex ownership, exchange, and settlement functions can be expressed using [Provenance Smart Contracts](../modules/provwasm-smart-contracts.md).  Together, these Provenance features allow unprecedented access, ease and transparency to asset and fund interest buyers and sellers.  
 
 ### Digital Fund Services
 

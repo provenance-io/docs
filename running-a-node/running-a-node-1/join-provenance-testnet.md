@@ -4,7 +4,7 @@ description: Join a locally installed Provenance node to the testnet.
 
 # Joining Testnet
 
-Start a Provenance[ full node ](https://docs.tendermint.com/master/nodes/#node-types)to understand how nodes are used by applications that integrate with Provenance.
+Start a Provenance[ full node ](https://docs.tendermint.com/master/nodes/#node-types)to understand how nodes are used by applications that integrate with the Provenance ecosystem.
 
 ## Quick Start
 
@@ -31,7 +31,7 @@ mv genesis.json $PIO_HOME/config
 provenanced start --testnet --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
 ```
 
-> Provenance nodes take about 45 minutes to start up.  During startup, the `provenanced` daemon will output state sync information such as:
+> Note that initially, a Provenance node may take about 1-2 hours to start up as it has to sync up with all the old transactions on the blockchain.  During startup, the `provenanced` daemon will output state sync information such as:
 >
 > ```text
 > 2:20PM INF committed state app_hash=3AA9147C2DBAE3328BAF633B6F33B1FBB6557FE8D81ECBC769A5AFB8DDFE98E3 height=29475 module=state num_txs=0
@@ -41,7 +41,7 @@ provenanced start --testnet --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2
 The crisis module halts the blockchain under the circumstance that a blockchain [invariant](https://github.com/cosmos/cosmos-sdk/blob/master/docs/building-modules/invariants.md) is broken. Invariants can be registered with the application during the application initialization process.  During sync, it makes sense to disable this module so the `--x-crisis-skip-assert-invariants` is specified.
 {% endhint %}
 
-Once the node has synced it is joined to the Provenance testnet.  At this point, the local `provenanced` process is a testnet node suitable for learning the `provenanced` CLI, querying the blockchain, signing and submitting transactions, and developing applications that connect to mainnet. However, there are configuration options to the testnet node that are more suitable as a long-running process.
+Once the node has synced it is joined to the Provenance testnet.  Note after the sync is completed, the information sent to the screen are associated with the live blockchain transactions. At this point, the local `provenanced` process is a testnet node suitable for learning the `provenanced` CLI, querying the blockchain, signing and submitting transactions, and developing applications that connect to mainnet. However, there are configuration options to the testnet node that are more suitable as a long-running process.
 
 ## Setting Up a New Node
 
@@ -60,6 +60,7 @@ If the Quick Start was followed, it will have saved the configuration and start 
 ```bash
 rm -rf ~/.provenanced
 export PIO_HOME=~/.provenanced
+mkdir -p $PIO_HOME/config
 ```
 
 ### Download and Install Provenance
@@ -105,12 +106,6 @@ Before starting the `provenanced` node, a genesis file must be established.  Thi
 
 ```bash
 curl https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json > genesis.json
-```
-
-Next move the `genesis.json` file to `$PIO_HOME/config`
-
-```bash
-mv genesis.json $PIO_HOME/config
 ```
 
 ### Manually Configure config.toml Settings
@@ -187,8 +182,6 @@ Instead of manually configuring the `$PIO_HOME/config/config.toml` file as shown
 curl https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/config.toml > config.toml
 mv config.toml $PIO_HOME/config
 ```
-
-#### Update Provenance testnet config.toml Moniker
 
 Edit the `$PIO_HOME/config/config.toml` and update the `moniker` to use the moniker set in the [Initialize Provenance Node](join-provenance-testnet.md#initialize-provenance-node) section.
 

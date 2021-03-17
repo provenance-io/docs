@@ -12,7 +12,7 @@ Nodes on the Provenance blockchain network are simply servers started by the `pr
 
 ### Seed Node
 
-A seed node is configured to provide an IP/port address book for other nodes to initially find and connect to peers. This node acts as a pivot point for connections to sentinel nodes on the network. 
+A seed node is configured to provide an IP/port address book for other nodes to initially find and connect to peers. This node acts as a service directory for connections to sentinel nodes on the network. 
 
 ### Sentry Node
 
@@ -20,7 +20,7 @@ A sentry node is configured to provide data and connectivity to the mesh network
 
 ### Validator Node
 
-A validator node is configured to participate in the consensus algorithm and is responsible for signing and proposing blocks to commit to the blockchain. 
+A validator node is configured to participate in the consensus algorithm and is responsible for signing and proposing blocks to commit to the blockchain. It also holds Hash as stake, and receives Hash for its services.
 
 ### More Information
 

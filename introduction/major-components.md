@@ -18,11 +18,11 @@ Provenance distinguishes three types of applications based on these core concept
 
 #### On-Chain
 
-Any client application that uses the Provenance blockchain, is configured with the proper key/addresses and modules, and uses Hash 2.0 tokens, can transact directly on-chain.  Applications interact directly with the core [Provenance Modules](../modules/inherited-modules.md) and a Provenance Node.  Applications may implement and leverage custom Smart Contracts specific to the business application use case.
+Any client application that is configured with the proper key/addresses and modules, and uses Hash 2.0 tokens for service payments, can transact directly on-chain within the Provenance ecosystem.  Applications interact directly with the core [Provenance Modules](../modules/inherited-modules.md) and a Provenance Node.  Applications may implement and leverage custom Smart Contracts specific to the business application use case.
 
 #### Side-Chain
 
-Using the client-side [Contract Execution Environment](../p8e/overview.md), Provenance includes functionality to encrypt and store confidential documents, and securely and selectively share those with other clients. This functionality allows for off-chain transactions that optionally can complement the on-chain ones.  The Contract Execution Environment is a client hosted solution \(or, optionally, hosted by a trusted service provider\) that also interacts with a Provenance Node.
+Using the client-side [Contract Execution Environment](../p8e/overview.md), Provenance includes functionality to encrypt and store confidential documents, and securely and selectively share those with other clients.  Note that the on-chain immutability is extended to the off-chain documents when the on-chain contract refers to those documents by their hash-id, i.e. the cryptographic hash of the document’s content. This functionality allows for off-chain transactions that optionally can complement the on-chain ones.  The Contract Execution Environment is a client hosted solution \(or, optionally, hosted by a trusted service provider\) that also interacts with a Provenance Node.
 
 #### Hybrid
 
@@ -37,7 +37,7 @@ Nodes in the network include:
 * Query nodes used by business application middleware for efficient and fast state query.
 * Transactional nodes used by business application middleware for efficient transaction submission and event listening.
 * Archival nodes where the pruning strategy is set to maintain all historic states.
-* [Validators](../blockchain/provenance-blockchain/validator/) that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes.  Validators bond their own Hash and have Hash delegated, or staked to, them by Hash holders.  Validators have a stake in the network.
+* [Validators](../blockchain/provenance-blockchain/validator/) that are responsible for committing new blocks in the blockchain for which they are rewarded with gas fees, i.e. Hash. These validators participate in the consensus protocol by broadcasting votes.  Validators bond their own Hash and have Hash delegated, or staked to, them by Hash holders.  Validators have a stake in the network.
 * Sentry nodes for Validator DDoS mitigation.
 
 ### Cosmovisor
@@ -60,7 +60,7 @@ Before running a node the chain is initialized via a genesis file.  A default Pr
 
 ### Interacting with a Node
 
-There are multiple ways to interact with a node: using the CLI, using gRPC or using the REST endpoints.  With a running node, the `provenanced` daemon process can be used as a CLI.  The CLI provides functionality for signing and submitting transactions, querying, key and key ring management, as well as Module interaction.  [Refer to the Cosmos Interacint with the Node documentation for more information.](https://docs.cosmos.network/master/run-node/interact-node.html)
+There are multiple ways to interact with a node: using the CLI, using gRPC or using the REST endpoints.  With a running node, the `provenanced` daemon process can be used as a CLI.  The CLI provides functionality for signing and submitting transactions, querying, key and key ring management, as well as Module interaction.  [Refer to the Cosmos Interacting with the Node documentation for more information.](https://docs.cosmos.network/master/run-node/interact-node.html)
 
 ## Smart Contracts
 
@@ -88,11 +88,11 @@ Assets can be directly defined against the Metadata module, but the execution en
 
 ### Client Contracts
 
-Client side contracts differ from Smart Contracts in that they keep your data private between parties off chain and allow a structure to record agreed upon state data to the blockchain. Smart contracts in comparison are running on the blockchain and require the validators to have access to the data which isn’t a great solution for most consumer based transactions due to data privacy laws.
+Client side contracts differ from Smart Contracts in that they keep your data private between parties off-chain and thus facilitate a structure to record agreed-upon state-data to the blockchain. Smart contracts in comparison are running on the blockchain and require the validators to have access to the data which complicates many consumer based transactions due to data privacy laws.
 
 ### Transaction Flow
 
-Entities and organizations utilize the Contract Execution Environment to submit contracts to create single or multi-party agreements.  Entities use key pairs consisting of a public and private key.  Entities are known to each other using public keys and share data with each other using public keys.  Contracts and asset data are forwarded to all entities participating in the contract by public key identifier.  Entities provide an implementation of an Encrypted Object Store where encrypted data related to their public key is stored.  Contract execution uses data from the entity EOS and the results of the contract executions are returned to the submitting entity's execution environment.  Contract execution results are cryptographically hashed and submitted to the Provenance blockchain \(via the Metadata module\) where they are validated and committed to the chain.  Provenance emits events notifying entities the contract has been committed on the blockchain.  An index, local to the entity, is updated with the new contract information. This information is used later for searching and querying the data.
+Entities and organizations utilize the Contract Execution Environment to submit contracts to create single or multi-party agreements.  Entities use key pairs consisting of a public and private key.  Entities are known to each other using public keys and share data with each other using public keys.  Contracts and asset data are forwarded to all entities participating in the contract by public key identifier.  Entities provide an implementation of an Encrypted Object Store where encrypted data related to their public key is stored.  Contract execution uses data from the entity EOS and the results of the contract executions are returned to the submitting entity's execution environment.  The hash-ids of the Contract execution results, i.e. the cryptograph hash of its content, are submitted to the Provenance blockchain \(via the Metadata module\) where they are validated and committed to the chain.  Provenance emits events notifying entities the contract has been committed on the blockchain.  An index, local to the entity, is updated with the new contract information. This information is used later for searching and querying the data.
 
 Refer to the [Contract Execution Environment](../p8e/overview.md) for information and tutorials.
 
