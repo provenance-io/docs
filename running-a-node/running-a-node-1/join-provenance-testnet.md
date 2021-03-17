@@ -22,7 +22,7 @@ make install
 provenanced -t init choose-a-moniker --chain-id pio-testnet-1
 wget https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json
 mv genesis.json $PIO_HOME/config
-provenanced start --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
+provenanced start --testnet --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
 ```
 
 > Provenance nodes take about 45 minutes to start up.  During startup the `provenanced` daemon will output state sync information such as:
