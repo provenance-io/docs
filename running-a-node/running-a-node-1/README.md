@@ -26,7 +26,3 @@ A validator node is configured to participate in the consensus algorithm and is 
 
 [Tendermint](https://tendermint.com/) is an excellent resource for information regarding node configuration and details. For a detailed overview of the different types of nodes supported, see [Tendermint Node Types](https://docs.tendermint.com/master/nodes/).
 
-## Next
-
-Most network participants will need a specialized sentinel node configuration that provides API-level access to Provenance. Use `provenanced` configured as a full sentinel node and [join testnet](join-provenance-testnet.md).
-

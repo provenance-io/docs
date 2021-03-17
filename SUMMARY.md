@@ -15,7 +15,6 @@
 * [Installing Provenance](running-a-node/README.md)
   * [Running a Node](running-a-node/running-a-node-1/README.md)
     * [Joining Testnet](running-a-node/running-a-node-1/join-provenance-testnet.md)
-    * [Securing a Validator](running-a-node/running-a-node-1/securing-a-validator.md)
     * [Become a Validator](running-a-node/running-a-node-1/become-a-validator.md)
     * [Configure a Sentry](running-a-node/running-a-node-1/configure-a-sentry.md)
 * [Using Provenanced](using-provenance/README.md)

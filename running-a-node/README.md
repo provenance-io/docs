@@ -27,8 +27,8 @@ See the [Provenance testnet repository](https://github.com/provenance-io/testnet
 Installing `provenanced` is done directly from the source code by cloning the version indicated for the testnet from the  [Provenance Github](https://github.com/provenance-io/provenance) repo, then make&install:
 
 ```text
-$ git clone -b <version> https://github.com/provenance-io/provenance
-$ cd provenance && make install
+git clone -b <version> https://github.com/provenance-io/provenance
+cd provenance && make install
 ```
 
 {% hint style="info" %}
@@ -39,18 +39,20 @@ $ cd provenance && make install
 
 Check the version number to verify that the command has been successfully installed. 
 
-```text
-$ provenanced version
-<version>
+```bash
+provenanced version --long
 ```
 
-## Next
-
-After `provenanced` is installed, introduce the types of nodes participating on the network that will provide the foundation for transacting on Provenance.
+```text
+name: Provenance
+server_name: provenanced
+version: 0.2.0
+commit: 75fef3a701af3787a56d4c8c6b40f67b95b79eb6
+```
 
 {% page-ref page="running-a-node-1/" %}
 
-If there is a node running, you may start using Provenance.
-
 {% page-ref page="../using-provenance/" %}
+
+
 
