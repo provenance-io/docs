@@ -26,11 +26,9 @@ $ provenanced version
 <version>
 ```
 
+## Next
 
-
-### Next
-
-Now that `provenanced` you should start by running a node on the network that will allow access to Provenance. 
+Now that `provenanced` is installed, let's start by running a node on the network that will allow access to Provenance testnet. 
 
 {% page-ref page="running-a-node-1/" %}
 
