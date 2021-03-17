@@ -6,16 +6,16 @@
 * Go 1.15+ \([https://golang.org/doc/install](https://golang.org/doc/install)\)
 * LevelDB 1.23 \([https://github.com/google/leveldb](https://github.com/google/leveldb)\)
 
-Note that new go executables are installed at "$GOPATH/bin", where the environment variable GOPATH defaults to "~/go" when not set. Remember to add either "$GOPATH/bin" or "~/go/bin" to your PATH when GOPATH is either set or not.
+**Note:** New go executables are installed at "$GOPATH/bin" where the environment variable GOPATH defaults to "~/go" when not set. Remember to add either "$GOPATH/bin" or "~/go/bin" to your PATH when GOPATH is either set or not.
 
-Note that on MacOS, LevelDB can be installed with "brew install leveldb"
+On MacOS, LevelDB can be installed with "brew install leveldb".
 
 ### 'provenanced' Install
 
-All interaction with Provenance whether creating a node, querying, or invoking actions can be accomplished using the `provenanced` command. 
+All interaction \(whether creating a node, querying, or invoking actions\) with Provenance can be accomplished using the `provenanced` command. 
 
 {% hint style="info" %}
-See the [Provenance testnet repository](https://github.com/provenance-io/testnet) for latest "Software Version" information of `pio-testnet-1`
+See the [Provenance testnet repository](https://github.com/provenance-io/testnet) for the latest "Software Version" information of `pio-testnet-1`
 {% endhint %}
 
 ### Installing
@@ -33,7 +33,7 @@ $ cd provenance && make install
 
 ### Verify
 
-To verify that the command has been successfully installed we can check the version that has been installed.
+Check the version number to verify that the command has been successfully installed. 
 
 ```text
 $ provenanced version
@@ -42,11 +42,11 @@ $ provenanced version
 
 ## Next
 
-Now that `provenanced` is installed, let's start by introducing the types of nodes participating on the network that provide the foundation for transacting on Provenance.
+After `provenanced` is installed, introduce the types of nodes participating on the network that will provide the foundation for transacting on Provenance.
 
 {% page-ref page="running-a-node-1/" %}
 
-If you already have a node running, let's start using Provenance.
+If there is a node running, you may start using Provenance.
 
 {% page-ref page="../using-provenance/" %}
 
