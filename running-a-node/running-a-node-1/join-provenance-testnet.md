@@ -248,7 +248,7 @@ CPU/Memory/Storage are determined based on how you intend to use Provenance and 
 
 | CPU | Memory | Storage |
 | :--- | :--- | :--- |
-| 4 vCPU | 8GB | 100GB |
+| 4 vCPU | 8GB | 500GB |
 
 ### Next
 
