@@ -6,6 +6,12 @@
 * Go 1.15+ \([https://golang.org/doc/install](https://golang.org/doc/install)\)
 * LevelDB 1.23 \([https://github.com/google/leveldb](https://github.com/google/leveldb)\)
 
+Note that new go executables are installed at "$GOPATH/bin", where the environment variable GOPATH defaults to "~/go" when not set. Remember to add either "$GOPATH/bin" or "~/go/bin" to your PATH when GOPATH is either set or not.
+
+Note that on MacOS, LevelDB can be installed with "brew install leveldb"
+
+### 'provenanced' Install
+
 All interaction with Provenance whether creating a node, querying, or invoking actions can be accomplished using the `provenanced` command. 
 
 {% hint style="info" %}
