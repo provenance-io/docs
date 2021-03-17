@@ -10,6 +10,17 @@ Software upgrade proposals will occur when major upgrades are required on the pr
 
 Once a new release for the provenance binary has been created, a software upgrade proposal can be run. The proposal should have a name, title, a description of the changes, a url of the plan with the necessary binaries, upgrade block height, required deposit, and chain-id
 
+| Parameter | Description |
+| :--- | :--- |
+| home | home directory containing the blockchain data for the node |
+| title | Title of Software Upgrade |
+| description | Short description of what the upgrade is for |
+| upgrade-info | url that points to the json upgrade plan |
+| from | the account that holds the Hash to be delegated |
+| upgrade-height | blockchain height of where the software upgrade should take place |
+| deposit | required amount of nhash needed to create the proposal |
+| chain-id | name of the network you are connected to |
+
 ```text
 export PIO_HOME=~/.provenanced
 provenanced tx gov submit-proposal software-upgrade test1 \
