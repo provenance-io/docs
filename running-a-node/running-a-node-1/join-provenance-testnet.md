@@ -250,7 +250,3 @@ cosmovisor start --testnet --home $PIO_HOME
 
 A node process should now be running in the foreground.  It is an exercise for the reader to integrate the `provenanced` \(again, wrapped by `cosmovisor`\) with a service manager like `systemd` or `launchd`.
 
-{% hint style="info" %}
-CPU/Memory/Storage are determined based on how you intend to use Provenance and how the node is configured \(type\) and data retention periods. These are general use numbers and can be adjusted based on desired performance. 
-{% endhint %}
-
