@@ -8,7 +8,7 @@ description: >-
 
 Validators are the most important nodes in the network. As such it requires a level of security that will ensure they are not only highly available but protected at every level. The following will go through the recommend network architecture to ensure the provenance network validators are protected. This has been patterned after the official [Tendermint Documentation](https://docs.tendermint.com/master/nodes/validators.html) where additional information can be found.
 
-### Recommended Network Architecture
+## Recommended Network Architecture
 
 ![](../../.gitbook/assets/securing-provenanced-validator-2-%20%281%29.png)
 
@@ -28,7 +28,7 @@ The RPC port is the application port which uses tcp port 26657. This should only
 
 It is recommended that each of these nodes be placed in specific zones or private networks and leverage network firewalls to limit access. For example, the Public Sentry nodes should leverage a public ip and access to these nodes will be open to the public. Private Sentry nodes should leverage private ip's or whitelist access with public ip's from the public sentry nodes. Validators should always leverage private ip addresses to ensure they are protected.
 
-### Sentry Nodes \(Public and Private\)
+## Sentry Nodes \(Public and Private\)
 
 In order to best protect the validator node it should be on its own network front ended by nodes called sentry's. This is done to prevent network attacks being launched directly against a validator network such as DDoS, or attempted brute force, etc. A sentry node is simply a full node that connects to the provenance blockchain and relays the chain to the validator. This ensures that the validator network information remains hidden and is not accessible over the public internet.
 
@@ -64,7 +64,7 @@ CPU/Memory/Storage are determined based on how you intend to use Provenance and 
 | :--- | :--- | :--- | :--- |
 | Public Sentry/Private Sentry | 4 vCPU | 8GB | 500GB |
 
-### Validator Configuration & Security
+## Validator Configuration & Security
 
 The validator node requires the highest level of security as it contains the key that will be authorized to sign blocks on the provenance network. If a bad actor were to get a hold of this key they could connect to the chain impersonating that same validator and cause a double signing incident which would result in a validator being jailed and then slashed. For this reason access to this node should be limited to only those that absolutely require it. All access should be monitored and recorded via a monitoring solution. 
 
