@@ -96,13 +96,66 @@ The validator node requires the highest level of security as it contains the key
 
 The following configuration parameters are found in the config.toml file.
 
-| Configuration | Setting |
-| :--- | :--- |
-| pex | false |
-| persistent-peers | private sentry nodes |
-| private-peer-ids | none |
-| unconditional-peer-ids | sentry node ids |
-| addr-book-strict | false |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Configuration</th>
+      <th style="text-align:left">Setting</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">pex</td>
+      <td style="text-align:left">
+        <p>false</p>
+        <ul>
+          <li>This turns the peer exchange reactor on or off for a node.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">persistent-peers</td>
+      <td style="text-align:left">
+        <p>private sentry node ids</p>
+        <ul>
+          <li>a comma separated list of <code>nodeID@ip:port</code> values that define
+            a list of peers that are expected to be online at all times</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">private-peer-ids</td>
+      <td style="text-align:left">
+        <p>none</p>
+        <ul>
+          <li>Comma separated list of peer IDs to keep private (will not be gossiped
+            to other peers)</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">unconditional-peer-ids</td>
+      <td style="text-align:left">
+        <p>private sentry node ids</p>
+        <ul>
+          <li>List of node IDs, to which a connection will be (re)established ignoring
+            any existing limits</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">addr-book-strict</td>
+      <td style="text-align:left">
+        <p>false</p>
+        <ul>
+          <li>By default nodes with a routable address will be considered for connection.
+            If this setting is turned off (false), non-routable IP addresses, like
+            addresses in a private network can be added to the address book.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Key Management - HSM
 
