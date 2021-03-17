@@ -20,7 +20,7 @@ The provenance network leverages two different ports by default the P2P port and
 
 **P2P**
 
-The persistent peer port \(P2P\) uses tcp port 26656 and is required for nodes to connect to the network and to each other. As such firewall rules should be created that limit access to this port . All nodes will require this port to 
+The persistent peer port \(P2P\) uses tcp port 26656 and is required for nodes to connect to the network and to each other. As such firewall rules should be created that limit access to this port . 
 
 **RPC**
 
@@ -32,7 +32,7 @@ It is recommended that each of these nodes be placed in specific zones or privat
 
 In order to best protect the validator node it should be on its own network front ended by nodes called sentry's. This is done to prevent network attacks being launched directly against a validator network such as DDoS, or attempted brute force, etc. A sentry node is simply a full node that connects to the provenance blockchain and relays the chain to the validator. This ensures that the validator network information remains hidden and is not accessible over the public internet.
 
-For the provenance network we recommend two sets of sentry nodes. Both are essentially a simple full node with some additional configuration. It is recommended that at least two of each type of sentry node is created to ensure high availability. Additionally by creating these nodes in separate regions/data centers is also recommended.
+For the provenance network we recommend two sets of sentry nodes. Both are essentially a simple full node with some additional configuration. It is recommended that at least two of each type of sentry node is created to ensure high availability. Additionally creating these nodes in separate regions/data centers is also recommended.
 
 **Public Sentry Nodes**
 
@@ -40,7 +40,7 @@ These nodes are accessible over the public internet and allow others to leverage
 
 **Private Sentry Nodes**
 
-These nodes are the last line of network protection for the validator nodes. They will connect to the public sentry's in order to continue to relay the provenance network but additionally can be used to connect to specific partners. As an example if you would like to partner with Company X you could allow them to connect directly to this layer and whitelist their access via firewall rules. These nodes additionally would require you to add the validator node ids to the  **private\_peer**_**\_**_**ids** in the config.toml file. This will ensure they will not be gossiped on the network. Additional recommended configuration is listed below.
+These nodes are the last line of network protection for the validator nodes. They will connect to the public sentry's in order to continue to relay the provenance network but additionally can be used to connect to specific partners. As an example, if you would like to partner with Company X, you could allow them to connect directly to this layer and whitelist their access via firewall rules. These nodes additionally would require you to add the validator node ids to the  **private\_peer**_**\_**_**ids** in the config.toml file. This will ensure they will not be gossiped on the network. Additional recommended configuration is listed below.
 
 **Sentry Node Configuration**
 
