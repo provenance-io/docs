@@ -4,15 +4,17 @@ Validators perform the critical function of proposing and validating transaction
 
 ### Quick Start
 
-This quick start assumes that you have already completed the necessary steps to join a full node to the Provenance network and are ready to designate the node as a validator. 
+This quick start assumes that the necessary steps to join a full node to the Provenance network have already been completed and the node is ready to be designated as a validator. 
 
 {% hint style="warning" %}
-To configure a validator you need to acquire Hash to grant the newly created validator voting power on the network. 
+To configure a validator, Hash needs to grant the newly created validator voting power on the network. 
 {% endhint %}
 
-Each Tendermint node has a public key that identifies it to other participants on the network. In order to configure the full node created in [Join Provenance Testnet](join-provenance-testnet.md), we need to find the public key that identifies. Tendermint provides a simple way to display the key for use.
+Each Tendermint node has a public key that identifies it to other participants on the network. To configure the full node created in [Join Provenance Testnet](join-provenance-testnet.md), find the public key that it identifies. Tendermint provides a simple way to display the key for use.
 
 #### Finding Node Public Key
+
+Use the following to find a node's public key.
 
 ```text
 ~$ provenanced -t --home tmp/data tendermint show-validator
@@ -20,13 +22,13 @@ Each Tendermint node has a public key that identifies it to other participants o
 
 #### Staking Hash to Become a Validator
 
-The following command has a lot of detail that should be reviewed closely. 
+The following command has detail that should be closely reviewed. 
 
 | Parameter | Description |
 | :--- | :--- |
 | chain-id | cha |
 | home | home directory containing the blockchain data for the node |
-| moniker | the name of your validator that should be shown to other participants on the network |
+| moniker | the name of a validator that should be shown to other participants on the network |
 | pubkey | Public key determined using the tendermint show-validator command |
 | amount | amount of Hash to delegate as voting power on the network |
 | from | the account that holds the Hash to be delegated |
