@@ -1,12 +1,12 @@
 ---
 description: >-
-  The following will document provides recommendations to best secure your
-  validator on the provenance network
+  The following provides recommendations to best secure a validator on the
+  provenance network
 ---
 
 # Securing a Validator
 
-Validators are the most important nodes in the network. As such it requires a level of security that will ensure they are not only highly available but protected at every level. The following will go through the recommend network architecture to ensure the provenance network validators are protected. This has been patterned after the official [Tendermint Documentation](https://docs.tendermint.com/master/nodes/validators.html) where additional information can be found.
+Validators are the most important nodes in the network. They require a level of security that ensures that they are highly available and protected at every level. The following will review the recommended network architecture to ensure the provenance network validators are protected. This review is patterned after the official [Tendermint Documentation](https://docs.tendermint.com/master/nodes/validators.html) where additional information may be found.
 
 ## Recommended Network Architecture
 
