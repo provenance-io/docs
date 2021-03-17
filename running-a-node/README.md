@@ -4,22 +4,26 @@
 
 * Linux or Mac OS
 * Go 1.15+ \([https://golang.org/doc/install](https://golang.org/doc/install)\)
-* LevelDB \([https://github.com/google/leveldb](https://github.com/google/leveldb)\)
+* LevelDB 1.23 \([https://github.com/google/leveldb](https://github.com/google/leveldb)\)
 
 All interaction with Provenance whether creating a node, querying, or invoking actions can be accomplished using the `provenanced` command. 
 
 {% hint style="info" %}
-See the [Provenance testnet repository](https://github.com/provenance-io/testnet) for latest version information
+See the [Provenance testnet repository](https://github.com/provenance-io/testnet) for latest "Software Version" information of "pio-testnet-1" 
 {% endhint %}
 
-### Install
+### Installing
 
-Installing `provenanced` is done directly from the source code located on the [Provenance Github](https://github.com/provenance-io/provenance).
+Installing `provenanced` is done directly from the source code by cloning the version indicated for the testnet from the  [Provenance Github](https://github.com/provenance-io/provenance) repo, then make&install:
 
 ```text
 $ git clone -b <version> https://github.com/provenance-io/provenance
 $ cd provenance && make install
 ```
+
+{% hint style="info" %}
+`<version> is prefixed with 'v' when cloning version branches (eg. v0.2.0)`
+{% endhint %}
 
 ### Verify
 
