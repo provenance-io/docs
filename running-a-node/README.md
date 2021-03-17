@@ -44,23 +44,3 @@ If you already have a node running, let's start using Provenance.
 
 {% page-ref page="../using-provenance/" %}
 
-
-
-
-
-
-
-Here we discuss how to set up and run a node.
-
-Would include Full Node, query Node, Delegating
-
-Model after the Gaia testnet docs here:
-
-### 
-
-{% embed url="https://hub.cosmos.network/main/gaia-tutorials/what-is-gaia.html" %}
-
-Node upgrade processes and Cosmovisor
-
-
-
