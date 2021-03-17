@@ -8,15 +8,15 @@ Start a Provenance[ full node ](https://docs.tendermint.com/master/nodes/#node-t
 
 ## Quick Start
 
-The quickest way to start a node is to install the `provenanced` daemon process, initiliaze a local installation, download the genesis file, and start the `provenanced` node in the foreground.  Be sure to change`choose-a-moniker` to a custom name for your node.
+The quickest way to start a node is to install the `provenanced` daemon process, initialize a local installation, download the genesis file, and start the `provenanced` node in the foreground.  Be sure to change`choose-a-moniker` to a custom name for the new node.
 
 {% hint style="info" %}
-While using the quick start method provides a quick and easy way to start a testnet node it does place the burden of keeping Provenance up to date on the reader.  The recommended approach is to use Cosmovisor to manage the Provenance node as described in the next section.
+While using the quick-start method provides a quick and easy way to start a testnet node,  it does place the burden of keeping Provenance up to date on the reader.  The recommended approach is to use Cosmovisor to manage the Provenance node as described in the next section.
 {% endhint %}
 
-The quickest way to start a node is to install the `provenanced` daemon process, initialize a local installation, download the genesis file, and start the `provenanced` node in the foreground.  Be sure to change`choose-a-moniker` to a custom name for your node.
-
 #### Start a Node in Foreground
+
+Use the following to start up a Provenance node in the foreground.
 
 ```text
 export PIO_HOME=~/.provenanced
@@ -31,31 +31,31 @@ mv genesis.json $PIO_HOME/config
 provenanced start --testnet --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
 ```
 
-> Provenance nodes take about 45 minutes to start up.  During startup the `provenanced` daemon will output state sync information such as:
+> Provenance nodes take about 45 minutes to start up.  During startup, the `provenanced` daemon will output state sync information such as:
 >
 > ```text
 > 2:20PM INF committed state app_hash=3AA9147C2DBAE3328BAF633B6F33B1FBB6557FE8D81ECBC769A5AFB8DDFE98E3 height=29475 module=state num_txs=0
 > ```
 
 {% hint style="info" %}
-The crisis module halts the blockchain under the circumstance that a blockchain [invariant](https://github.com/cosmos/cosmos-sdk/blob/master/docs/building-modules/invariants.md) is broken. Invariants can be registered with the application during the application initialization process.  During sync it makes sense to disable this module so the `--x-crisis-skip-assert-invariants` is specified.
+The crisis module halts the blockchain under the circumstance that a blockchain [invariant](https://github.com/cosmos/cosmos-sdk/blob/master/docs/building-modules/invariants.md) is broken. Invariants can be registered with the application during the application initialization process.  During sync, it makes sense to disable this module so the `--x-crisis-skip-assert-invariants` is specified.
 {% endhint %}
 
-Once the node has synced it is joined to the Provenance testnet.  At this point, the local `provenanced` process is a testnet node suitable for learning the `provenanced` CLI, querying the blockchain, signing and submitting transactions, and developing applications that connect to mainnet. However, there are configurations options to your testnet node more suitable as a long-running process.
+Once the node has synced it is joined to the Provenance testnet.  At this point, the local `provenanced` process is a testnet node suitable for learning the `provenanced` CLI, querying the blockchain, signing and submitting transactions, and developing applications that connect to mainnet. However, there are configuration options to the testnet node that are more suitable as a long-running process.
 
 ## Setting Up a New Node
 
-Unlike the Quick Start instructions, this section will describe setting up a brand new full node from scratch with [Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html) and better configuration options.  This section effectively configures and starts a Provenance full node.
+Unlike the Quick Start instructions, this section describes setting up a new full node from scratch with [Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html) and better configuration options.  This section effectively configures and starts a Provenance full node.
 
 Before starting this section, be sure the prerequisites have been installed as described in [Installing Provenance](../#prerequisites).
 
 {% hint style="info" %}
-See the [testnet repo](https://github.com/provenance-io/testnet) for latest genesis/config files and version information.  The node started in this section is chain id `pio-testnet-1` provenance release 0.2.0 \([https://github.com/provenance-io/provenance/releases/tag/v0.2.0](https://github.com/provenance-io/provenance/releases/tag/v0.2.0)\)
+See the [testnet repo](https://github.com/provenance-io/testnet) for the latest genesis/config files and version information.  The node started in this section is chain id `pio-testnet-1` provenance release 0.2.0 \([https://github.com/provenance-io/provenance/releases/tag/v0.2.0](https://github.com/provenance-io/provenance/releases/tag/v0.2.0)\)
 {% endhint %}
 
 ### Cleaning up Existing testnet Node
 
-If the Quick Start was followed, it will have saved configuration and start to the `$PIO_HOME` directory.  When setting up a new node, start from a fresh state by cleaning up artifacts and setting the `$PIO_HOME` environment variable:
+If the Quick Start was followed, it will have saved the configuration and start to the `$PIO_HOME` directory.  When setting up a new node, use the following to start from a fresh state by cleaning up artifacts and setting the `$PIO_HOME` environment variable.
 
 ```bash
 rm -rf ~/.provenanced
@@ -64,21 +64,21 @@ export PIO_HOME=~/.provenanced
 
 ### Download and Install Provenance
 
-Use `git` to download the `0.2.0` version of Provenance:
+Use `git` to download the `0.2.0` version of Provenance.
 
 ```bash
 git clone -b v0.2.0 https://github.com/provenance-io/provenance.git
 cd provenance
 ```
 
-Build the `provenanced` process:
+Build the `provenanced` process.
 
 ```bash
 make clean
 make install
 ```
 
-Confirm the `provenanced` version:
+Confirm the `provenanced` version.
 
 ```bash
 provenanced version --long
@@ -93,7 +93,7 @@ go: go version go1.15.5 darwin/amd64
 
 ### Initialize Provenance Node
 
-Next, initialize the node to create the base config files at `$PIO_HOME`.  Choose a moniker for your node - simply a name containing only ASCII characters.  You can edit this `moniker` later in the `$PIO_HOME/config/config.toml` file.
+Next, initialize the node to create the base config files at `$PIO_HOME`.  Choose a moniker, simply a name containing only ASCII characters, for the node. This `moniker` may be edited later in the `$PIO_HOME/config/config.toml` file.
 
 ```bash
 provenanced init <your_custom_moniker> --testnet
@@ -101,13 +101,13 @@ provenanced init <your_custom_moniker> --testnet
 
 ### Download and Install testnet Genesis File
 
-Before starting the `provenanced` node a genesis file must be established.  This can be downloaded from the Provenance testnet site using `wget`:
+Before starting the `provenanced` node, a genesis file must be established.  This may be downloaded from the Provenance testnet site using `wget`.
 
 ```bash
 wget https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json
 ```
 
-Then move the `genesis.json` file to `$PIO_HOME/config`:
+Next move the `genesis.json` file to `$PIO_HOME/config`
 
 ```bash
 mv genesis.json $PIO_HOME/config
@@ -117,13 +117,13 @@ mv genesis.json $PIO_HOME/config
 
 > Provenance provides a base `config.toml` file that can be used instead of following these steps in this section.  Jump to
 
-The `$PIO_HOME/config/config.toml` contains important node settings like [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend.  This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node.  The [Configure as a Validator](configure-as-a-validator.md) section will describe [validator node](../../blockchain/provenance-blockchain/validator/) specific settings.
+The `$PIO_HOME/config/config.toml` contains important node settings including [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend.  This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node.  The [Configure as a Validator](configure-as-a-validator.md) section will describe [validator node](../../blockchain/provenance-blockchain/validator/)-specific settings.
 
 #### Configure Seed Nodes
 
-Your node needs to know how to find peers on testnet. This is done by setting seed nodes in the `$PIO_HOME/config/config.toml`file.  The seed nodes are available at the Provenance testnet repo, depending on version.  Since we're using the `pio-testnet-1` chain in this document, [the seed nodes are available here](https://github.com/provenance-io/testnet#pio-testnet-1).
+Nodes need to know how to find peers on testnet. This is done by setting seed nodes in the `$PIO_HOME/config/config.toml`file.  Depending on the version, the seed nodes are available in the Provenance testnet repo. Because the `pio-testnet-1` chain is used in this document, [the seed nodes are available here](https://github.com/provenance-io/testnet#pio-testnet-1).
 
-Open the `$PIO_HOME/config/config.toml` file and edit the `seeds` configuration setting using the [seed nodes from the Provenance testnet repo](https://github.com/provenance-io/testnet#pio-testnet-1):
+Open the `$PIO_HOME/config/config.toml` file and edit the `seeds` configuration setting using the [seed nodes from the Provenance testnet repo](https://github.com/provenance-io/testnet#pio-testnet-1).
 
 ```bash
 # Comma separated list of seed nodes to connect to 
@@ -134,7 +134,7 @@ seeds = "2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d0
 
 As listed in the [prerequisites section](../#prerequisites), `leveldb` is the recommended node backend database.  
 
-Open the `$PIO_HOME/config/config.toml` file and edit the `db_backend` configuration setting to use `leveldb`:
+Open the `$PIO_HOME/config/config.toml` file and edit the `db_backend` configuration setting to use `leveldb`.
 
 ```bash
 # Database backend: goleveldb | cleveldb | boltdb | rocksdb | badgerdb
@@ -170,7 +170,7 @@ log_level = "error"
 
 #### Configure Instrumentation
 
-Change the instrumentation `namespace` option to `provenance` in the `$PIO_HOME/config/config.toml` file:
+Change the instrumentation `namespace` option to `provenance` in the `$PIO_HOME/config/config.toml` file.
 
 ```bash
 # Instrumentation namespace
@@ -190,7 +190,7 @@ mv config.toml $PIO_HOME/config
 
 #### Update Provenance testnet config.toml Moniker
 
-Edit the `$PIO_HOME/config/config.toml` and update the `moniker` to use the moniker set in the [Initialize Provenance Node](join-provenance-testnet.md#initialize-provenance-node) section:
+Edit the `$PIO_HOME/config/config.toml` and update the `moniker` to use the moniker set in the [Initialize Provenance Node](join-provenance-testnet.md#initialize-provenance-node) section.
 
 ```bash
 # A custom human readable name for this node
@@ -209,12 +209,12 @@ The `go get` commands in this section **will not work** if you are still in the 
 go get github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
 ```
 
-`cosmovisor` reads its configuration from environment variables:
+`cosmovisor` reads its configuration from environment variables.
 
 * `DAEMON_HOME` is the location where upgrade binaries should be kept.  Use `$PIO_HOME.` 
 * `DAEMON_NAME` is the name of the Provenance binary, or, `provenanced`.
 * `DAEMON_ALLOW_DOWNLOAD_BINARIES` \(_optional_\) if set to `true` will enable auto-downloading of new binaries.
-* `DAEMON_RESTART_AFTER_UPGRADE` \(_optional_\) if set to `true` it will restart the sub-process with the same command line arguments and flags \(but new binary\) after a successful upgrade. 
+* `DAEMON_RESTART_AFTER_UPGRADE` \(_optional_\) if set to `true` will restart the sub-process with the same command line arguments and flags \(but new binary\) after a successful upgrade. 
 
 ```bash
 export DAEMON_NAME="provenanced"
@@ -225,7 +225,7 @@ export DAEMON_RESTART_AFTER_UPGRADE="true"
 
 #### Create cosmovisor Directories
 
-Cosmovisor requires directories for genesis and wrapping the `provenanced` daemon process.  Create directories and symlinks:
+Cosmovisor requires directories for genesis and wrapping the `provenanced` daemon process.  To create directories and symlinks, use the following.
 
 ```bash
 mkdir -p $PIO_HOME/cosmovisor/genesis/bin
@@ -233,7 +233,7 @@ mkdir -p $PIO_HOME/cosmovisor/upgrades
 ln -sf $PIO_HOME/cosmovisor/genesis/bin $PIO_HOME/cosmovisor/genesis/current
 ```
 
-Create a symlink to the `provenanced` daemon in the `cosmovisor` genesis directory:
+To create a symlink to the `provenanced` daemon in the `cosmovisor` genesis directory, use the following.
 
 ```bash
 cp $(which provenanced) $PIO_HOME/cosmovisor/genesis/bin 
@@ -242,18 +242,18 @@ ln -sf $PIO_HOME/cosmovisor/genesis/bin/provenanced $(which provenanced)
 
 ### Start Node using Cosmovisor
 
-Once `cosmovisor` has been installed and configured, it effectively wraps the `provenanced` daemon process.  Thus, to start the Provenanced node use the `cosmovisor` process:
+Once `cosmovisor` has been installed and configured, it effectively wraps up the `provenanced` daemon process.  To start the Provenanced node, use the following `cosmovisor` process.
 
 ```bash
 cosmovisor start --testnet --home $PIO_HOME
 ```
 
-A node process is now running in the foreground.  It is an exercise for the reader to integrate the `provenanced` \(again, wrapped by `cosmovisor`\) with a service manager like `systemd` or `launchd`.
+A node process should now be running in the foreground.  It is an exercise for the reader to integrate the `provenanced` \(again, wrapped by `cosmovisor`\) with a service manager like `systemd` or `launchd`.
 
 ### Recommended System Configuration
 
 {% hint style="info" %}
-CPU/Memory/Storage are determined based on how you intend to use Provenance and how the node is configured \(type\) and data retention periods. These are general use numbers and can be adjusted based on desired performance. 
+CPU/Memory/Storage is determined by how you intend to use Provenance and how the node is configured \(type\) and data retention periods. These are general use numbers and may be adjusted based on the desired performance. 
 {% endhint %}
 
 | CPU | Memory | Storage |
