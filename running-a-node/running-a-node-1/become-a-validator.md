@@ -29,12 +29,12 @@ The following command has a lot of detail that should be closely reviewed.
 | moniker | the name of your validator that should be shown to other participants on the network |
 | pubkey | Public key determined using the tendermint show-validator command |
 | amount | amount of Hash to delegate as voting power on the network |
-| from | the account that holds the Hash to be delegated |
-| fees |  |
-| commission-rate |  |
-| commission-max-rate |  |
-| commission-max-change-rate |  |
-| min-self-delegation |  |
+| from | account that holds the Hash to be delegated |
+| fees | amount of nhash to pay in fees |
+| commission-rate | commission rate charged by the validator |
+| commission-max-rate | max commission rate charged by the validator |
+| commission-max-change-rate | max change in commission rate allowed |
+| min-self-delegation | minimum amount of Hash the validator will delegate while the node is operating |
 | broadcast-mode | wait until the block containing the transaction is committed |
 
 ```text
