@@ -8,6 +8,10 @@ Start a Provenance[ full node ](https://docs.tendermint.com/master/nodes/#node-t
 
 ## Quick Start
 
+{% hint style="info" %}
+While using the quick start method provides a quick and easy way to start a testnet node it does place the burden of keeping Provenance up to date on the reader.  The recommended approach is to use Cosmovisor to manage the Provenance node as described in the next section.
+{% endhint %}
+
 The quickest way to start a node is to install the `provenanced` daemon process, initialize a local installation, download the genesis file, and start the `provenanced` node in the foreground.  Be sure to change`choose-a-moniker` to a custom name for your node.
 
 #### Start a Node in Foreground
@@ -30,6 +34,10 @@ provenanced start --testnet --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2
 > ```text
 > 2:20PM INF committed state app_hash=3AA9147C2DBAE3328BAF633B6F33B1FBB6557FE8D81ECBC769A5AFB8DDFE98E3 height=29475 module=state num_txs=0
 > ```
+
+{% hint style="info" %}
+The crisis module halts the blockchain under the circumstance that a blockchain [invariant](https://github.com/cosmos/cosmos-sdk/blob/master/docs/building-modules/invariants.md) is broken. Invariants can be registered with the application during the application initialization process.  During sync it makes sense to disable this module so the `--x-crisis-skip-assert-invariants` is specified.
+{% endhint %}
 
 Once the node has synced it is joined to the Provenance testnet.  At this point, the local `provenanced` process is a testnet node suitable for learning the `provenanced` CLI, querying the blockchain, signing and submitting transactions, and developing applications that connect to mainnet. However, there are configurations options to your testnet node more suitable as a long-running process.
 
