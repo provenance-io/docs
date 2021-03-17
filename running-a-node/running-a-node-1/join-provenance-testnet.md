@@ -26,7 +26,7 @@ git checkout tags/v0.2.0 -b v0.2.0
 make clean
 make install
 provenanced -t init choose-a-moniker --chain-id pio-testnet-1
-wget https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json
+curl https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json > genesis.json
 mv genesis.json $PIO_HOME/config
 provenanced start --testnet --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
 ```
@@ -101,10 +101,10 @@ provenanced init <your_custom_moniker> --testnet
 
 ### Download and Install testnet Genesis File
 
-Before starting the `provenanced` node, a genesis file must be established.  This may be downloaded from the Provenance testnet site using `wget`.
+Before starting the `provenanced` node, a genesis file must be established.  This may be downloaded from the Provenance testnet site using `curl`.
 
 ```bash
-wget https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json
+curl https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json > genesis.json
 ```
 
 Next move the `genesis.json` file to `$PIO_HOME/config`
@@ -115,7 +115,7 @@ mv genesis.json $PIO_HOME/config
 
 ### Manually Configure config.toml Settings
 
-> Provenance provides a base `config.toml` file that can be used instead of following these steps in this section.  Jump to
+> Provenance provides a base `config.toml` file that can be used instead of following these steps in this section.  [Refer to the "Using Provenance testnet config.toml" section for more information.](join-provenance-testnet.md#using-provenance-testnet-config-toml)
 
 The `$PIO_HOME/config/config.toml` contains important node settings including [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend.  This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node.  The [Configure as a Validator]() section will describe [validator node](../../blockchain/provenance-blockchain/validator/)-specific settings.
 
@@ -184,7 +184,7 @@ Instead of manually configuring the `$PIO_HOME/config/config.toml` file as shown
 #### Download and Install testnet config.toml
 
 ```bash
-wget https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/config.toml
+curl https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/config.toml > config.toml
 mv config.toml $PIO_HOME/config
 ```
 
