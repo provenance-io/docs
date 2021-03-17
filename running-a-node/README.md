@@ -15,7 +15,7 @@ Note that on MacOS, LevelDB can be installed with "brew install leveldb"
 All interaction with Provenance whether creating a node, querying, or invoking actions can be accomplished using the `provenanced` command. 
 
 {% hint style="info" %}
-See the [Provenance testnet repository](https://github.com/provenance-io/testnet) for latest "Software Version" information of "pio-testnet-1" 
+See the [Provenance testnet repository](https://github.com/provenance-io/testnet) for latest "Software Version" information of `pio-testnet-1`
 {% endhint %}
 
 ### Installing
