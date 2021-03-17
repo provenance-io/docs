@@ -24,7 +24,7 @@ The following command has a lot of detail that should be closely reviewed.
 
 | Parameter | Description |
 | :--- | :--- |
-| chain-id | cha |
+| chain-id | the name of the network you're connecting to |
 | home | home directory containing the blockchain data for the node |
 | moniker | the name of your validator that should be shown to other participants on the network |
 | pubkey | Public key determined using the tendermint show-validator command |
