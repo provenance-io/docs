@@ -12,7 +12,7 @@ To configure a validator you need to acquire Hash to grant the newly created val
 
 ### Finding Node Public Key
 
-Each node has a public key that identifies it to other participants on the network. In order to configure the full node created in [Join Provenance Testnet](join-provenance-testnet.md), we need to find the public key that identifies. Tendermint, the underlying consensus algorithm, provides a simple way to display the key for use.
+Each node has a public key that identifies it to other participants on the network. To configure the full node created in [Join Provenance Testnet](join-provenance-testnet.md),  find the public key that identifies the node. Tendermint, the underlying consensus algorithm, provides a simple way to display the key for use.
 
 ```text
 ~$ provenanced -t --home tmp/data tendermint show-validator
@@ -20,7 +20,7 @@ Each node has a public key that identifies it to other participants on the netwo
 
 ### Staking Hash to Become a Validator
 
-The following command has a lot of detail that should be reviewed closely. 
+The following command has a lot of detail that should be closely reviewed. 
 
 | Parameter | Description |
 | :--- | :--- |
@@ -57,7 +57,7 @@ tx staking create-validator \
 
 ## Security
 
-Validators are the most important nodes in the network. As such it requires a level of security that will ensure they are not only highly available but protected at every level. The following will go through the recommend network architecture to ensure the provenance network validators are protected. This has been patterned after the official [Tendermint Documentation](https://docs.tendermint.com/master/nodes/validators.html).
+Validators are the most important nodes in the network. They require a level of security that ensures they are highly available and protected at every level. The following reviews the recommended network architecture to ensure the provenance network validators are protected. This is patterned after the official [Tendermint Documentation](https://docs.tendermint.com/master/nodes/validators.html).
 
 ### Network Architecture
 
@@ -69,32 +69,32 @@ A multi-tier network architecture is recommended to secure validators. Each tier
 | :--- | :--- |
 | Public Sentry | Public Sentry nodes are available to the world and provide a proxy for the network. |
 | Private Sentry | Private Sentry nodes provide an interconnect layer that can be used to provide more direct integration with large foundational Provenance systems. |
-| Valdator | The core of the Provenance blockchain that should be isolated from all public facing networks. |
+| Validator | The core of the Provenance blockchain that should be isolated from all public-facing networks. |
 | KMS | A remote signing platform that secures access to encryption keys. |
 
 ![Recommended Network Architecture](../../.gitbook/assets/securing-provenanced-validator-2-%20%281%29.png)
 
-The above network diagram is the recommended architecture to follow when building out your provenance nodes and validator. This can be done in a cloud environment such as AWS, GCP, Azure, within an on premise data center. or a combination of both. The idea of this infrastructure will be further detailed below but conceptually it is required to protect the validator by leveraging multiple layers of network security. 
+The Recommended Network Architecture diagram is the architecture to follow when building out provenance nodes and validators. This may be done in a cloud environment \(i.e. AWS, GCP, Azure\), within an on-premise data center, or a combination of both. The idea of this infrastructure will be further detailed below but conceptually it is required to protect the validator by leveraging multiple layers of network security. 
 
 ### Network Security \(Firewall\)
 
-The provenance network leverages two different ports by default the P2P port and the RPC port and should be considered when opening necessary firewall rules.
+The Provenance network leverages two different ports \(P2P and RPC\) by default and should be considered when opening necessary firewall rules.
 
-**P2P**
+#### **P2P**
 
-The persistent peer port \(P2P\) uses tcp port 26656 and is required for nodes to connect to the network and to each other. As such firewall rules should be created that limit access to this port . 
+The persistent peer port \(P2P\) uses TCP port 26656 and is required for nodes to connect to the network and to each other. As such, firewall rules should be created that limit access to this port. 
 
-**RPC**
+#### **RPC**
 
-The RPC port is the application port which uses tcp port 26657. This should only be made available to sources that you trust. If you would like to allow more public access such as querying the status of the network of specific api endpoints we recommend using NGINX's reverse-proxy to limit that access.
+The RPC port is the application port that uses TCP port 26657. This port should only be made available to trusted sources. If more public access such as querying the status of the network of specific API endpoints is needed, use NGINX's reverse-proxy to limit that access.
 
-It is recommended that each of these nodes be placed in specific zones or private networks and leverage network firewalls to limit access. For example, the [Public Sentry](configure-a-sentry.md#public-sentry-nodes) nodes should leverage a public ip and access to these nodes will be open to the public. [Private Sentry](configure-a-sentry.md#private-sentry-nodes) nodes should leverage private ip's or whitelist access with public ip's from the public sentry nodes. Validators should always leverage private ip addresses to ensure they are protected.
+It is recommended that each of these nodes be placed in specific zones or private networks and leverage network firewalls to limit access. For example, the [Public Sentry](configure-a-sentry.md#public-sentry-nodes) nodes should leverage a public IP and access to these nodes will be open to the public. [Private Sentry](configure-a-sentry.md#private-sentry-nodes) nodes should leverage private IPs or whitelist access with public IPs from the public sentry nodes. Validators should always leverage private IP addresses to ensure they are protected.
 
 ## Configuration
 
-The validator node requires the highest level of security as it contains the key that will be authorized to sign blocks on the provenance network. If a bad actor were to get a hold of this key they could connect to the chain impersonating that same validator and cause a double signing incident which would result in a validator being jailed and then slashed. For this reason access to this node should be limited to only those that absolutely require it. All access should be monitored and recorded via a monitoring solution. 
+The validator node requires the highest level of security as it contains the key that will be authorized to sign blocks on the Provenance network. If a bad actor gets this key,  he could connect to the chain and impersonate that same validator, thereby causing a double signing incident which would result in a validator being jailed and slashed. For this reason, access to this node should be limited to those who absolutely require access. All access should be monitored and recorded via a monitoring solution. 
 
-The following configuration parameters are found in the config.toml file
+The following configuration parameters are found in the config.toml file.
 
 | Configuration | Setting |
 | :--- | :--- |
@@ -106,14 +106,14 @@ The following configuration parameters are found in the config.toml file
 
 ## Key Management - HSM
 
-There are multiple solutions available that could be used to provide this security. One solution readily available is [Tendermint KMS](https://github.com/iqlusioninc/tmkms) which is actively being maintained and supports multiple Hardware Security Modules. 
+There are multiple solutions available that could be used to provide this network security. One solution readily available is [Tendermint KMS](https://github.com/iqlusioninc/tmkms) which is actively maintained and supports multiple Hardware Security Modules. 
 
-The validator consensus key used to sign blocks on the provenance network must be protected. By default this key is in plain text on the node and anyone with access would be able to obtain it. It is recommended to leverage a remote signer KMS combined with an HSM to ensure the absolute security of the validator key. Due to the strong recommendation of leveraging an HSM, this solution should be built on premise in a Secured Data Center. This would include leveraging network firewalls, secured servers, network switches, and limited access to these devices by necessary personnel.
+The validator consensus key used to sign blocks on the Provenance network must be protected. By default, this key is in plain text on the node and anyone with access would be able to obtain it. A remote signer KMS combined with an HSM to ensure the absolute security of the validator key should be leveraged. Due to the strong recommendation of leveraging an HSM, this solution should be built on-site in a Secured Data Center. This would include leveraging network firewalls, secured servers, network switches, and limited access to these devices by necessary personnel.
 
 ## Recommended Hardware Configuration
 
 {% hint style="info" %}
-CPU/Memory/Storage are determined based on how you intend to use Provenance and how the node is configured \(type\) and data retention periods. These are general use numbers and can be adjusted based on desired performance. 
+CPU/Memory/Storage is determined by how Provenance will be used and how the node is configured \(type\) and data retention periods. These are general use numbers and may be adjusted based on the desired performance. 
 {% endhint %}
 
 | Node Type | CPU | Memory | Storage |
