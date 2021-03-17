@@ -2,7 +2,7 @@
 description: Join a locally installed Provenance node to the testnet.
 ---
 
-# Join Provenance Testnet
+# Joining Testnet
 
 Start a Provenance[ full node ](https://docs.tendermint.com/master/nodes/#node-types)to understand how nodes are used by applications that integrate with Provenance.
 
@@ -117,7 +117,7 @@ mv genesis.json $PIO_HOME/config
 
 > Provenance provides a base `config.toml` file that can be used instead of following these steps in this section.  Jump to
 
-The `$PIO_HOME/config/config.toml` contains important node settings including [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend.  This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node.  The [Configure as a Validator](configure-as-a-validator.md) section will describe [validator node](../../blockchain/provenance-blockchain/validator/)-specific settings.
+The `$PIO_HOME/config/config.toml` contains important node settings including [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend.  This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node.  The [Configure as a Validator]() section will describe [validator node](../../blockchain/provenance-blockchain/validator/)-specific settings.
 
 #### Configure Seed Nodes
 
@@ -250,19 +250,7 @@ cosmovisor start --testnet --home $PIO_HOME
 
 A node process should now be running in the foreground.  It is an exercise for the reader to integrate the `provenanced` \(again, wrapped by `cosmovisor`\) with a service manager like `systemd` or `launchd`.
 
-### Recommended System Configuration
-
 {% hint style="info" %}
-CPU/Memory/Storage is determined by how you intend to use Provenance and how the node is configured \(type\) and data retention periods. These are general use numbers and may be adjusted based on the desired performance. 
+CPU/Memory/Storage are determined based on how you intend to use Provenance and how the node is configured \(type\) and data retention periods. These are general use numbers and can be adjusted based on desired performance. 
 {% endhint %}
-
-| CPU | Memory | Storage |
-| :--- | :--- | :--- |
-| 4 vCPU | 8GB | 500GB |
-
-## Next
-
-Configuring the node for your use case \(Validator, Archival, Query...\)
-
-
 

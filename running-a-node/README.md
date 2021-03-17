@@ -6,9 +6,13 @@
 * Go 1.15+ \([https://golang.org/doc/install](https://golang.org/doc/install)\)
 * LevelDB 1.23 \([https://github.com/google/leveldb](https://github.com/google/leveldb)\)
 
-**Note:** New go executables are installed at "$GOPATH/bin" where the environment variable GOPATH defaults to "~/go" when not set. Remember to add either "$GOPATH/bin" or "~/go/bin" to your PATH when GOPATH is either set or not.
+{% hint style="info" %}
+New go executables are installed at "$GOPATH/bin" where the environment variable GOPATH defaults to "~/go" when not set. Remember to add either "$GOPATH/bin" or "~/go/bin" to your PATH when GOPATH is either set or not.
+{% endhint %}
 
-On MacOS, LevelDB can be installed with "brew install leveldb".
+{% hint style="success" %}
+On MacOS, LevelDB can be installed with `brew install leveldb`.
+{% endhint %}
 
 ### 'provenanced' Install
 
