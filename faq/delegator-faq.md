@@ -38,7 +38,7 @@ Being a delegator is not a passive task. Here are the main directives of a deleg
 
 Validators and delegators earn revenue in exchange for their services. This revenue is given in two forms.
 
-* **Block provisions \(Hash\):** They are paid in newly created Hash. Block provisions exist to incentivize Hash holders to stake. The yearly inflation rate is calculated to target 2/3 bonded stake. If the total bonded stake in the network is less than 2/3 of the total Hash supply, inflation increases until it reaches 20%. If the total bonded stake is more than 2/3 of the Hash supply, inflation decreases until it reaches 7%. This means that if total bonded stake stays less than 2/3 of the total Hash supply for a prolonged period of time, unbonded Hash holders can expect their Hash value to deflate by 20% \(compounded\) per year.
+* **Block provisions \(**Hash**\):** They are paid in Hash. Block provisions exist to incentivize Hash holders to stake. The yearly inflation rate is calculated to target 2/3 bonded stake. If the total bonded stake in the network is less than 2/3 of the total Hash supply, inflation increases until it reaches 20%. If the total bonded stake is more than 2/3 of the Hash supply, inflation decreases until it reaches 7%. This means that if total bonded stake stays less than 2/3 of the total Hash supply for a prolonged period of time, unbonded Hash holders can expect their Hash value to deflate by 20% \(compounded\) per year.
 * **Transaction fees \(various tokens\):** Each transfer on Provenance comes with transaction fees. These fees can be paid in any currency that is whitelisted by Provenance's governance. Fees are distributed to bonded Hash holders in proportion to their stake. The first whitelisted token at launch is the HASH.
 
 ## Validator Commission
@@ -52,11 +52,11 @@ We consider a validator whose stake \(i.e. self-delegated stake + delegated stak
 
 This amounts to a total of 1000 Hash to be distributed among all staking pools.
 
-Our validator's staking pool represents 10% of the total stake, which means the pool obtains 100 Hash and 10 Photons. Now let us look at the internal distribution of revenue:
+Our validator's staking pool represents 10% of the total stake, which means the pool obtains 100 Hash. Now let us look at the internal distribution of revenue:
 
 * Commission = `10% * 80% * 100` Hash = 8 Hash
-* Validator's revenue = `20% * 100` Hash + Commission = 28 Hash
-* Delegators' total revenue = `80% * 100` Hash - Commission = 72 Hash
+* Validator's revenue = `(20% * 100` Hash\) + Commission = 28 Hash
+* Delegators' total revenue = `(80% * 100` Hash\) - Commission = 72 Hash
 
 Then, each delegator in the staking pool can claim their portion of the delegators' total revenue.
 
@@ -68,7 +68,7 @@ There is one main slashing condition.
 
 * **Double signing:** If someone reports that a validator signed two different blocks with the same chain ID at the same height, this validator will get slashed.
 
-This is why Hash holders should perform careful due diligence on validators before delegating. It is also important that delegators actively monitor the activity of their validators. If a validator behaves suspiciously or is too often offline, delegators can choose to unbond from them or switch to another validator. **Delegators can also mitigate risk by distributing their stake across multiple validators.**
+This is why Hash holders should perform careful due diligence on validators before delegating. It is also important that delegators actively monitor the activity of their validators. If a validator behaves suspiciously or is too often offline, delegators can choose to unbond from them or switch to another validator. \*\*Delegators can also mitigate risk by distributing their stake across multiple validators.\*\*
 
 ## 
 
