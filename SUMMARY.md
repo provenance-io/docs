@@ -11,7 +11,6 @@
   * [Query Lifecycle](basics/query-lifecycle.md)
   * [Accounts](basics/accounts.md)
   * [Gas and Fees](basics/gas-and-fees.md)
-* [Track Kickoff](core-concepts.md)
 * [Installing Provenance](running-a-node/README.md)
   * [Running a Node](running-a-node/running-a-node-1/README.md)
     * [Joining Testnet](running-a-node/running-a-node-1/join-provenance-testnet.md)

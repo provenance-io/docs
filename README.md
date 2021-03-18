@@ -14,7 +14,15 @@ Read about the Provenance blockchain and financial services:
 
 {% page-ref page="introduction/" %}
 
-Learn about Provenance blockchain tech:
+Start with the basics of the Provenance network:
+
+{% page-ref page="basics/" %}
+
+Install Provenance and start running a node:
+
+{% page-ref page="running-a-node/" %}
+
+Get in-depth with Provenance blockchain tech:
 
 Discover the benefits of the Provenance client-side Contract Execution Environment:
 

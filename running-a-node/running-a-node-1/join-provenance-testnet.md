@@ -108,6 +108,12 @@ Before starting the `provenanced` node, a genesis file must be established.  Thi
 curl https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json > genesis.json
 ```
 
+Copy the `genesis.json` file to the Provenance home configuration directory:
+
+```bash
+mv genesis.json $PIO_HOME/config
+```
+
 ### Manually Configure config.toml Settings
 
 > Provenance provides a base `config.toml` file that can be used instead of following these steps in this section.  [Refer to the "Using Provenance testnet config.toml" section for more information.](join-provenance-testnet.md#using-provenance-testnet-config-toml)
@@ -194,13 +200,63 @@ moniker = "pio-testnet2"
 
 `cosmovisor` is a small process manager around Cosmos SDK binaries that monitors the governance module for chain upgrade proposals. Approved proposals will then be run to download the new Provenance code, stop the Provenance node, run the migration script, replace the node binary, and start with the new genesis file.
 
+#### Download and Install Cosmovisor using `go get`
+
 {% hint style="danger" %}
-The `go get` commands in this section **will not work** if you are still in the `provenance` directory created during the github clone.  Change to or create a different directory before running `go get`
+The `go get` commands in this section **will not work** if you are still in the `provenance` directory created during the github clone.  Change to or create a different directory before running `go get.`
+
+Some MacOS users have experienced issues with using `go get` to install `cosmovisor` when using `go` version `1.5.x`.  Refer to the Build Cosmovisor from Source section if the `go get` steps do not work.
 {% endhint %}
 
 ```bash
 go get github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
 ```
+
+#### Build Cosmovisor from Source \(Optional\)
+
+{% hint style="info" %}
+Building `cosmovisor` from source is only necessary if the `go get` installation steps did not work.  
+
+Skip this section if `cosmovisor` has been installed using `go get` in the previous section.
+{% endhint %}
+
+Create a new directory to install cosmovisor:
+
+```bash
+mkdir -p $PIO_HOME/cosmovisor/install
+```
+
+Make the current working directory the new `$PIO_HOME/cosmovisor/install` directory:
+
+```bash
+cd $PIO_HOME/cosmovisor/install
+```
+
+The Cosmos SDK GitHub repo contains the `cosmovisor` build, clone the repo:
+
+```bash
+git clone https://github.com/cosmos/cosmos-sdk.git
+```
+
+Change to the `cosmovisor` build directory:
+
+```bash
+cd cosmos-sdk/cosmovisor
+```
+
+Make `cosmovisor`
+
+```bash
+make cosmovisor
+```
+
+Copy the `cosmovisor` binary to the `$GOPATH`
+
+```bash
+cp cosmovisor $GOPATH/bin/cosmovisor
+```
+
+#### Export Cosmovisor Environment Variables
 
 `cosmovisor` reads its configuration from environment variables.
 
@@ -238,7 +294,7 @@ ln -sf $PIO_HOME/cosmovisor/genesis/bin/provenanced $(which provenanced)
 Once `cosmovisor` has been installed and configured, it effectively wraps up the `provenanced` daemon process.  To start the Provenanced node, use the following `cosmovisor` process.
 
 ```bash
-cosmovisor start --testnet --home $PIO_HOME
+cosmovisor start --testnet --home $PIO_HOME --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
 ```
 
 A node process should now be running in the foreground.  It is an exercise for the reader to integrate the `provenanced` \(again, wrapped by `cosmovisor`\) with a service manager like `systemd` or `launchd`.
