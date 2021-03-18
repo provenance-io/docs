@@ -8,11 +8,11 @@ description: Frequently asked questions about validators.
 
 ### What is a validator?
 
-The Provenance blockchain is a distributed, proof-of-stake blockchain designed for the financial service industries and is based on the Cosmos SDK and [Tendermint \(opens new window\)](https://tendermint.com/docs/introduction/what-is-tendermint.html), which relies on a set of validators to secure the network. The role of validators is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by their private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
+The Provenance blockchain is a distributed, proof-of-stake blockchain designed for the financial service industries and is based on the Cosmos SDK and [Tendermint \(opens new window\)](https://tendermint.com/docs/introduction/what-is-tendermint.html), which relies on a set of validators to secure the network. The role of a validator is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by its private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
 ### What is 'staking'?
 
-Provenance is a public Proof-Of-Stake \(PoS\) blockchain, meaning that the weight of validators is determined by the amount of staking tokens \(Hash\) bonded as collateral. These Hash can be self-delegated directly by the validator or delegated to them by other Hash holders.
+Provenance is a public Proof-Of-Stake \(PoS\) blockchain, meaning that the weight of validators is determined by the amount of staking tokens \(Hash\) bonded as collateral. These Hash-tokens can be self-delegated directly by the validator or delegated to them by other Hash holders.
 
 Any user in the system can declare their intention to become a validator by sending a `create-validator` transaction. From there, they become validator candidates.
 
@@ -85,7 +85,7 @@ Self-delegation is the delegation from a validator to himself. This amount can b
 
 ### Is there a minimum amount of Hash that must be delegated to be an active \(=bonded\) validator?
 
-The minimum is `1 atom`.
+The minimum is `1` Hash.
 
 ### How will delegators choose their validators?
 
@@ -121,7 +121,7 @@ Validators play a special role in the governance system. Being the pillars of th
 
 ### What does staking imply?
 
-Staking Hash can be thought of as a safety deposit on validation activities. When a validator or a delegator wants to retrieve part or all of their deposit, they send an `unbonding` transaction. Then, Hash undergo a **three-week unbonding period** during which they are liable to be slashed for potential misbehaviors committed by the validator before the unbonding process started.
+Staking Hash can be thought of as a safety deposit on validation activities. When a validator or a delegator wants to retrieve part or all of their deposit, they send an `unbonding` transaction. Then, Hash undergo a **3 weeks unbonding period** during which they are liable to be slashed for potential misbehaviors committed by the validator before the unbonding process started.
 
 Validators, and by association delegators, receive block rewards, fees, and have the right to participate in governance. If a validator misbehaves, a certain portion of their total stake is slashed. This means that every delegator that bonded Hash to this validator gets penalized in proportion to their bonded stake. Delegators are therefore incentivized to delegate to validators that they anticipate will function safely.
 
@@ -146,7 +146,7 @@ Yes, they will. If governance decides so, validators of Provenance may be requir
 Each member of a validator's staking pool earns different types of revenue:
 
 * **Block rewards:** Native tokens of applications run by validators \(e.g. Hash on the Provenance blockchain\) are inflated to produce block provisions. These provisions exist to incentivize Hash holders to bond their stake, as non-bonded Hash will be diluted over time.
-* **Transaction fees:** The Provenance blockchain maintains a whitelist of tokens that are accepted as fee payments. The initial fee token is the `hash`.
+* **Transaction fees:** The Provenance blockchain maintains a whitelist of tokens that are accepted as fee payment. The initial fee token is the `hash`.
 
 This total revenue is divided among validators' staking pools according to each validator's weight. Then, within each validator's staking pool the revenue is divided among delegators in proportion to each delegator's stake. A commission on delegators' revenue is applied by the validator before it is distributed.
 
@@ -162,13 +162,13 @@ Revenue received by a validator's pool is split between the validator and their 
 
 ### How are block rewards distributed?
 
-Block rewards are distributed proportionally to all validators relative to their voting power. This means that even though each validator gains atoms with each reward, all validators will maintain equal weight over time.
+Block rewards are distributed proportionally to all validators relative to their voting power. This means that even though each validator gains Hash with each reward, all validators will maintain equal weight over time.
 
 Let us take an example where we have 10 validators with equal voting power and a commission rate of 1%. Let us also assume that the reward for a block is 1000 Hash and that each validator has 20% of self-bonded Hash. These tokens do not go directly to the proposer. Instead, they are evenly spread among validators. So now each validator's pool has 100 Hash. These 100 Hash will be distributed according to each participant's stake:
 
-* Commission: `100*80%*1% = 0.8 Hash`
-* Validator gets: `100\*20% + Commission = 20.8 Hash`
-* All delegators get: `100\*80% - Commission = 79.2 Hash`
+* Commission: `100*80%*1% = 0.8` Hash
+* Validator gets: `100\*20% + Commission = 20.8` Hash
+* All delegators get: `100\*80% - Commission = 79.2` Hash
 
 Then, each delegator can claim their part of the 79.2 Hash in proportion to their stake in the validator's staking pool.
 
@@ -180,9 +180,9 @@ When a validator is selected to propose the next block, they must include at lea
 
 Let's take a concrete example to illustrate the aforementioned concept. In this example, there are 10 validators with equal stakes. Each of them applies a 1% commission rate and has 20% of self-delegated Hash. Now comes a successful block that collects a total of 1025.51020408 Hash in fees.
 
-First, a 2% tax is applied. The corresponding Hash goes to the reserve pool. Reserve pool funds can be allocated through governance to fund bounties and upgrades.
+First, a 2% tax is applied. The corresponding Hash go to the reserve pool. Reserve pool funds can be allocated through governance to fund bounties and upgrades.
 
-* `2% * 1025.51020408 = 20.51020408` Hash goes to the reserve pool.
+* `2% * 1025.51020408 = 20.51020408` Hash go to the reserve pool.
 
 1005 Hash now remain. Let's assume that the proposer included 100% of the signatures in its block. It thus obtains the full bonus of 5%.
 
