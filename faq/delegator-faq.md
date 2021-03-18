@@ -50,7 +50,7 @@ We consider a validator whose stake \(i.e. self-delegated stake + delegated stak
 * 990 Hash in block provisions
 * 10 Hash in transaction fees.
 
-This amounts to a total of 1000 Hash and 100 Photons to be distributed among all staking pools.
+This amounts to a total of 1000 Hash to be distributed among all staking pools.
 
 Our validator's staking pool represents 10% of the total stake, which means the pool obtains 100 Hash and 10 Photons. Now let us look at the internal distribution of revenue:
 
