@@ -1,3 +1,7 @@
+---
+description: Install the `provenanced` executable for both client and server operations.
+---
+
 # Installing Provenance
 
 Provenance is wrapped into a single executable named `provenanced`. All interaction \(whether creating a node, querying, or invoking actions\) with Provenance can be accomplished using the `provenanced` command. This document explains the basic installation of the command and verification that it has been installed correctly. 
@@ -30,7 +34,7 @@ cd provenance && make install
 ```
 
 {% hint style="info" %}
-`<version> is prefixed with 'v' when cloning version branches (eg. v0.2.0)`
+`<version> is prefixed with 'v' when cloning version branches (eg. v0.2.1)`
 {% endhint %}
 
 ### Verify

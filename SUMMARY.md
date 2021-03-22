@@ -6,7 +6,7 @@
   * [Application Architecture](introduction/application-architecture.md)
   * [Major Components](introduction/major-components.md)
 * [Basics](basics/README.md)
-  * [Anatomy of a Provenance Application](basics/anatomy-of-a-provenance-application.md)
+  * [Anatomy of the Provenance Application](basics/anatomy-of-a-provenance-application.md)
   * [Transaction Lifecycle](basics/transaction-lifecycle.md)
   * [Query Lifecycle](basics/query-lifecycle.md)
   * [Accounts](basics/accounts.md)
