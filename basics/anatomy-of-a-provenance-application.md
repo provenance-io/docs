@@ -18,7 +18,7 @@ The Provenance core application-specific blockchain is effectively encompassed b
 
 As shown in the Provenance Node Components diagram, the Provenance application-specific blockchain is composed of multiple components all running on a single binary \(`provenanced`\) on a machine \(node\):
 
-![Provenance Node Components](../.gitbook/assets/image%20%289%29.png)
+![Provenance Node Components](../.gitbook/assets/image%20%2812%29.png)
 
 #### Core State Machine Components
 
