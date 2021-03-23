@@ -12,34 +12,13 @@ The Provenance SDK \(build upon the Cosmos SDK\) enables developers to build mod
 
 While the Cosmos SDK documentation does a good job explaining the concepts of an application-specific blockchain, it is helpful to drill down into the core concepts and get hands-on.  That's what this section aims to do.
 
-### Install the Node Client
-
-{% hint style="info" %}
-We'll be using the `provenanced` application to connect to the Provenance testnet in this section.  Follow the installation instructions in the [Installing Provenance section](../running-a-node/) before continuing with this section.
-{% endhint %}
-
-Before continuing with this section, confirm the `provenanced` binary is correctly installed:
-
-```text
-provenanced version
-```
-
-This command will output the `provenanced` version: 
-
-```bash
-$ provenanced version
-0.2.0
-```
-
-If the `provenanced` does not work, refer to [Installing Provenance](../running-a-node/).
-
 ### Core Application
 
 The Provenance core application-specific blockchain is effectively encompassed by the `provenanced` binary - which is both a client and a daemon process.  It is the core process of the Provenance blockchain.  Participants in the network run this process to host a node \(initialize their state-machine\), connect with other nodes, and update their state-machine as new blocks come in.  
 
 As shown in the Provenance Node Components diagram, the Provenance application-specific blockchain is composed of multiple components all running on a single binary \(`provenanced`\) on a machine \(node\):
 
-![Provenance Node Components](../.gitbook/assets/image%20%288%29.png)
+![Provenance Node Components](../.gitbook/assets/image%20%289%29.png)
 
 #### Core State Machine Components
 
