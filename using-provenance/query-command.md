@@ -1,7 +1,11 @@
 # Query Command
 
 {% hint style="info" %}
-See [Using Provenanced](./) for basic information about the `provenanced` command.
+See [Using Provenanced](./) for basic information about the `provenanced` command
+{% endhint %}
+
+{% hint style="info" %}
+This section uses the `provenanced` application to connect to the Provenance testnet.  Follow the installation instructions in the [Installing Provenance section](../running-a-node/) before continuing with this section.
 {% endhint %}
 
 ## Query Command
@@ -46,13 +50,24 @@ Available Commands:
 
 #### Current Block Height
 
+Query the block height using a remote public node:
+
 ```text
-~$ provenanced  -t q block | jq ".block.last_commit.height"
+provenanced --testnet q block \
+    --node=tcp://rpc-0.test.provenance.io:26657 \
+| jq ".block.last_commit.height"
 ```
 
 #### Account Balances
 
+Query account balance using a remote public node:
+
 ```text
-~$ provenanced -t q bank balances tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt
+provenanced --testnet q bank balances tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt \
+ --node=tcp://rpc-0.test.provenance.io:26657
 ```
+
+{% hint style="info" %}
+The `--node=tcp://rpc-0.test.provenance.io:26657` flag is not necessary when running against a locally installed i
+{% endhint %}
 

@@ -18,6 +18,7 @@
     * [Configure a Sentry](running-a-node/running-a-node-1/configure-a-sentry.md)
 * [Using Provenanced](using-provenance/README.md)
   * [Query Command](using-provenance/query-command.md)
+  * [Tx Command](using-provenance/tx-command.md)
 
 ## Blockchain
 
