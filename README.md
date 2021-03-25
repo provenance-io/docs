@@ -12,17 +12,17 @@ description: >-
 
 Read about the Provenance blockchain and financial services:
 
-{% page-ref page="introduction/" %}
+{% page-ref page="blockchain/introduction/" %}
 
 Start with the basics of the Provenance network:
 
-{% page-ref page="basics/" %}
+{% page-ref page="blockchain/basics/" %}
 
 Install Provenance and start running a node:
 
-{% page-ref page="running-a-node/" %}
+{% page-ref page="blockchain/running-a-node/" %}
 
-Get in-depth with Provenance blockchain tech:
+Learn about the operational components of the Provenance blockchain:
 
 Discover the benefits of the Provenance client-side Contract Execution Environment:
 

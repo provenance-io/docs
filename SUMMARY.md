@@ -1,45 +1,46 @@
 # Table of contents
 
 * [The Provenance Blockchain](README.md)
-* [Introduction](introduction/README.md)
-  * [Financial Services Blockchain](introduction/financial-services-blockchain.md)
-  * [Application Architecture](introduction/application-architecture.md)
-  * [Major Components](introduction/major-components.md)
-* [Basics](basics/README.md)
-  * [Anatomy of the Provenance Application](basics/anatomy-of-a-provenance-application.md)
-  * [Transaction Lifecycle](basics/transaction-lifecycle.md)
-  * [Query Lifecycle](basics/query-lifecycle.md)
-  * [Accounts](basics/accounts.md)
-  * [Gas and Fees](basics/gas-and-fees.md)
-* [Installing Provenance](running-a-node/README.md)
-  * [Running a Node](running-a-node/running-a-node-1/README.md)
-    * [Joining Testnet](running-a-node/running-a-node-1/join-provenance-testnet.md)
-    * [Become a Validator](running-a-node/running-a-node-1/become-a-validator.md)
-    * [Configure a Sentry](running-a-node/running-a-node-1/configure-a-sentry.md)
-* [Using Provenanced](using-provenance/README.md)
-  * [Query Command](using-provenance/query-command.md)
-  * [Tx Command](using-provenance/tx-command.md)
 
 ## Blockchain
 
-* [Provenance](blockchain/provenance-blockchain/README.md)
-  * [Foundation](blockchain/provenance-blockchain/foundation.md)
-  * [Participants](blockchain/provenance-blockchain/participants/README.md)
-    * [Asset Originators](blockchain/provenance-blockchain/participants/asset-originators.md)
-    * [Omnibus Banks](blockchain/provenance-blockchain/participants/omnibus-banks.md)
-  * [Delegator](blockchain/provenance-blockchain/delegator.md)
-  * [Validator](blockchain/provenance-blockchain/validator/README.md)
-    * [Network](blockchain/provenance-blockchain/validator/network.md)
-  * [Mission](blockchain/provenance-blockchain/mission.md)
-  * [Value Proposition](blockchain/provenance-blockchain/value-proposition.md)
-  * [Legal Standing](blockchain/provenance-blockchain/legal-standing.md)
-* [Explorer](blockchain/explorer.md)
-* [HD Wallets & General chain cryptography](blockchain/cryptography.md)
-* [Governance](blockchain/governance.md)
-* [Hash](blockchain/hash-2.0.md)
-* [Fees/Distribution](blockchain/distribution.md)
-* [Voting](blockchain/voting/README.md)
-  * [Software Upgrade Proposal](blockchain/voting/software-upgrade-proposal.md)
+* [Introduction](blockchain/introduction/README.md)
+  * [Financial Services Blockchain](blockchain/introduction/financial-services-blockchain.md)
+  * [Application Architecture](blockchain/introduction/application-architecture.md)
+  * [Major Components](blockchain/introduction/major-components.md)
+* [Basics](blockchain/basics/README.md)
+  * [Anatomy of the Provenance Application](blockchain/basics/anatomy-of-a-provenance-application.md)
+  * [Transaction Lifecycle](blockchain/basics/transaction-lifecycle.md)
+  * [Query Lifecycle](blockchain/basics/query-lifecycle.md)
+  * [Accounts](blockchain/basics/accounts.md)
+  * [Gas and Fees](blockchain/basics/gas-and-fees.md)
+* [Installing Provenance](blockchain/running-a-node/README.md)
+  * [Running a Node](blockchain/running-a-node/running-a-node-1/README.md)
+    * [Joining Testnet](blockchain/running-a-node/running-a-node-1/join-provenance-testnet.md)
+    * [Become a Validator](blockchain/running-a-node/running-a-node-1/become-a-validator.md)
+    * [Configure a Sentry](blockchain/running-a-node/running-a-node-1/configure-a-sentry.md)
+* [Using Provenanced](blockchain/using-provenance/README.md)
+  * [Query Command](blockchain/using-provenance/query-command.md)
+  * [Tx Command](blockchain/using-provenance/tx-command.md)
+
+## Operations
+
+* [Provenance](operations/provenance-blockchain/README.md)
+  * [Foundation](operations/provenance-blockchain/foundation.md)
+  * [Participants](operations/provenance-blockchain/participants/README.md)
+    * [Asset Originators](operations/provenance-blockchain/participants/asset-originators.md)
+    * [Omnibus Banks](operations/provenance-blockchain/participants/omnibus-banks.md)
+  * [Delegator](operations/provenance-blockchain/delegator.md)
+  * [Validator](operations/provenance-blockchain/validator/README.md)
+    * [Network](operations/provenance-blockchain/validator/network.md)
+  * [Mission](operations/provenance-blockchain/mission.md)
+  * [Value Proposition](operations/provenance-blockchain/value-proposition.md)
+  * [Legal Standing](operations/provenance-blockchain/legal-standing.md)
+* [Governance](operations/governance.md)
+* [Hash](operations/hash-2.0.md)
+* [Fees/Distribution](operations/distribution.md)
+* [Voting](operations/voting/README.md)
+  * [Software Upgrade Proposal](operations/voting/software-upgrade-proposal.md)
 
 ## Modules
 
@@ -49,7 +50,6 @@
 * [Name Module](modules/name-module.md)
 * [Metadata Module](modules/metadata-module.md)
 * [Smart Contracts \(ProvWasm\)](modules/provwasm-smart-contracts.md)
-* [provenanced](modules/provenance-app.md)
 
 ## Contract Execution Environment \(P8e\) <a id="p8e"></a>
 
@@ -85,7 +85,7 @@
 * [Omnibus](integrating/omnibus.md)
 * [Error Codes](integrating/error-codes.md)
 
-## Provenance Apps <a id="provenance-applications"></a>
+## Apps Built on Provenance <a id="provenance-applications"></a>
 
 * [Portfolio Manager](provenance-applications/portfolio-manager-market-place.md)
 * [Marketplace](provenance-applications/marketplace-digital-funds-services.md)
