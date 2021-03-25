@@ -65,7 +65,7 @@ Commands used throughout these examples will use some consistent flags that are 
 
 `--chain-id pio-testnet-1` assumes that we are connected to the Provenance testnet 
 
-`--node tcp://localhost:26657` this is the default node location and port.  In the examples below, we'll connect to a remote node without starting a local node.  The remote node is a public testnet node hosted at `rpc-0.test.provenance.io.`
+`--node tcp://localhost:26657` this is the default node location and port.  In the examples below, we'll connect to a remote node without starting a local node.  The remote node is a public testnet node hosted at `rpc-0.test.provenance.io:26657.`
 {% endhint %}
 
 The `provenanced` binary provides a command-line interface to create and query transactions.  To create a transaction requires just a few items: 
