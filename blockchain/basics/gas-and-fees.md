@@ -17,25 +17,29 @@ On Provenance, [`gas` is a special unit that is used to track the consumption of
 * Make sure blocks are not consuming too many resources and will be finalized. This is implemented by default via the [block gas meter](https://docs.cosmos.network/master/basics/accounts.html#block-gas-meter).
 * Prevent spam and abuse from end-users. `gas` consumed during [`message`](https://docs.cosmos.network/master/building-modules/messages-and-queries.html#messages) execution is typically priced, resulting in a `fee` \(`fees = gas * gas-prices`\). `fees` generally have to be paid by the sender of the `message`.
 
-## Gas Calculations
+## Gas Flow
 
-First, some terms:
+When an end-user account submits a transaction request, they must indicate 2 of the 3 following parameters \(the third one being implicit\): `fees`, `gas` and `gas-prices`. This signals how much they are willing to pay for nodes to execute their transaction.
 
-**`gas`** an integer unit, based on transaction type and payload size, that is calculated for each transaction request
+Provenance will verify that the gas prices provided with the transaction is greater than the node's `min-gas-prices` \(as a reminder, gas-prices can be deducted from the following equation: `fees = gas * gas-prices`\). `min-gas-prices` is a parameter local to each full-node and used to discard transactions that do not provide a minimum amount of fees. This ensures that the blockchain is not spammed with garbage transactions.
 
-**`gas-prices`** a decimal unit, local to a node, that indicates the price per `gas` unit.  For example, `0.1nhash` per `gas` unit.
+Provenance will use the transaction request gas parameters to determine if the transaction can be submitted.
 
-**`fees`** the cost to execute a transaction request where `fees = gas * gas-prices`. 
+![Conceptual Gas Flow](../../.gitbook/assets/image%20%2813%29.png)
 
-$$
-fees = gas * gas prices
-$$
+The Conceptual Gas Flow diagram illustrates the transaction request gas calculations and the affect gas calculations have on the transaction request and the end-user account.
 
-Nodes set their own minimum gas prices.  When an account submits a transactions it spec/ifies that gas fees it is willing to pay.  So, for example, let's say we're submitting a transaction to `Node A`.  `Node A` has set their `gas-prices` to `0.025nhash`.  Given a transaction that requires 20,000 `gas` units, we will end up paying `fees` equal to `20,000 * 0.025nhash` or `500nhash`.
-
-Provenance will verify that the gas prices provided with the transaction is greater than the node's `min-gas-prices` \(as a reminder, gas-prices can be deducted from the following equation: `fees = gas * gas-prices`\). `min-gas-prices` is a parameter local to each full-node and used to discard transactions that do not provide a minimum amount of fees. This ensure that the blockchain is not spammed with garbage transactions.
-
-When the end-user account generates a transaction, they must indicate 2 of the 3 following parameters \(the third one being implicit\): `fees`, `gas` and `gas-prices`. This signals how much they are willing to pay for nodes to execute their transaction.
+* A **Transaction Request** is a transaction built and signed by the end-user account.  The Transaction Request contains:
+  * A **Gas** limit to use for the transaction
+  * The maximum **Gas Price** the requestor is willing to pay.
+  * A **Requested Fee** is calculated as **`Gas * Gas Price`**.
+* The Transaction Request is submitted to a node, which in turn may submit it to other nodes until it reaches a validator node.  Each validator node sets their own **Minimum Gas Price.** 
+* Provenance will validate that the requested **Gas Price** is &gt;= **Minimum Gas Prices** for all nodes involved.
+  * If the requested **Gas Price** is too low, the transaction is rejected and an error is sent back to the requestor.
+* Based on the transaction type and size, a **Gas Needed** amount is calculated by Provenance.
+* Provenance calculates a **Required Fee** as `Gas Needed * Minimum Gas Price`.
+* If the **Requested Fee** is &gt;= **Required Fee** the **Requested Fee** is deducted from the requestor's account and the transaction is submitted.
+* If the **Requested Fee** is &lt; **Required Fee** the **Requested Fee** is deducted from the requestor's account, the transaction is marked as error, and an error is returned to the requestor.
 
 ### Gas Examples
 
@@ -74,6 +78,26 @@ provenanced --testnet query bank balances tp1hn42260zk29s8kfqy55pfzv0e2frvykvl88
 balances:
 - amount: "1000000000"
   denom: nhash
+```
+
+Next, let's estimate the `gas` requirements for a `1nhash` Hash transfer transaction from our account:
+
+```bash
+provenanced --testnet tx bank send tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6 tp1qgjnuqnrqwhg2kfl0dk9rhkcga5lehns2hdycm 1nhash \
+  --chain-id pio-testnet-1 \
+  --gas 65000 \
+  --gas-prices 1nhash \
+  --dry-run
+```
+
+```bash
+gas estimate: 66347
+```
+
+Now, let's set our transaction request gas parameters at that gas estimate:
+
+```bash
+
 ```
 
 
