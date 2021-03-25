@@ -4,19 +4,31 @@ description: Understanding the Provenance accounts system.
 
 # Accounts
 
+## Account Definition
+
 On Provenance an [account](https://docs.cosmos.network/v0.41/basics/accounts.html) designates a pair of _public key_ `PubKey` and _private key_ `PrivKey`. The `PubKey` is used to generate an `address` which is used to identify users \(among other parties\) on the blockchain. `Addresses` are also associated with [`message`s](https://docs.cosmos.network/master/building-modules/messages-and-queries.html#messages) to identify the sender of the `message`. The `PrivKey` is used to generate [digital signatures](https://docs.cosmos.network/master/basics/query-lifecycle.html#signatures) to prove that an `address`associated with the `PrivKey` approved of a given `message`.
 
+### Addresses <a id="addresses"></a>
+
+`Addresses` and `PubKey`s are both public information that identifies actors on the blockchain. `Account` is used to store authentication information. 
+
+Each account is identified using an `address` which is a sequence of bytes derived from a public key. In Provenance, 3 types of addresses that specify a context where an account is used:
+
+* `AccAddress` identifies users \(the sender of a `message`\).
+* `ValAddress` identifies validator operators.
+* `ConsAddress` identifies validator nodes that are participating in consensus. Validator nodes are derived using the EC **`ed25519`** curve wherease users use the `secp256k1` curve.
+
+Addresses and public keys are formatted using [Bech32](https://en.bitcoin.it/wiki/Bech32) and implemented as a string value. The Bech32 method is the only supported format to use when interacting with the blockchain. The Bech32 human-readable part \(Bech32 prefix\) is used to denote an address type.
+
 {% hint style="info" %}
-In it's simplest form, a Provenance account is simply a Bech32 `address` derived from the public key in a key pair where the address holds Hash.  
-
-The `address` associated to a key pair is a [Bech32](https://en.bitcoin.it/wiki/Bech32) address which is an encoded value of the public key portion of our key pair.  Provenance testnet Bech32 addresses begin with `tp` whereas mainnet addresses begin with `pb`.  
-
-_**A key pair that exists outside of Provenance \(say in a wallet\) is not a Provenance account until Hash has been transferred to the key pair address**_, either by a direct transfer or purchased on an exchange, on the Provenance blockchain.
-
-Refer to the [Using Provenanced](../using-provenance/) section for example of generating key pairs and corresponding addresses.
+Provenance testnet Bech32 addresses begin with `tp` whereas mainnet addresses begin with `pb`.  
 {% endhint %}
 
-For example, using `provenanced` we can generate a local key pair and store it in the default Keyring:
+{% hint style="info" %}
+_**A key pair and it's corresponding Bec32 address that exists outside of Provenance \(say in a wallet\) is not a Provenance account until Hash has been transferred to the Bech32 address.**_
+{% endhint %}
+
+For example, using `provenanced` we can generate a local key pair and store it in the default [Keyring](https://docs.cosmos.network/master/basics/accounts.html#keyring):
 
 ```bash
 provenanced --testnet keys add my_test_key  
@@ -65,11 +77,15 @@ pub_key: null
 sequence: "0"
 ```
 
+### Authentication
+
+The principal way of authenticating a user is done using [digital signatures](https://en.wikipedia.org/wiki/Digital_signature). Users sign transactions using their own private key. Signature verification is done with the associated public key. For on-chain signature verification purposes, the public key is stored in an `Account` object \(alongside other data required for a proper transaction validation\) as shown in the previous section.
+
 ## HD Wallet
 
-As demonstrated in the previous section, a single key pair can be used to generate at Bech32 address that can then be used to create a Provenance account.  Using a single key pair isn't ideal because it requires the user to generate and save the physical key pair.  Instead, blockchains recommend an HD Wallet solution that automatically generates a hierarchical tree-like structure of private/public addresses \(or keys\), thereby addressing the problem of the user having to generate them on their own.
+As demonstrated in the previous section, a single key pair can be used to generate a Bech32 address that can then be used to create a Provenance account.  Using a single key pair isn't ideal because it requires the user to generate and save the physical key pair.  Instead, blockchains recommend an HD Wallet solution that automatically generates a hierarchical tree-like structure of private/public addresses \(or keys\), thereby addressing the problem of the user having to generate them on their own.
 
-HD Wallets, or Hierarchical Deterministic wallets, are used to generate addresses from a single master seed \(hence the name hierarchical\).  HD Wallets use a variant of the standard multi-word master seed key, and each time this seed is extended at the end by a counter value which makes it possible to automatically derive an unlimited number of new addresses.
+HD Wallets, or Hierarchical Deterministic wallets, are used to generate addresses from a single master seed \(hence the name hierarchical\).  A seed is usually created from a 12- or 24-word mnemonic. A single seed can derive any number of `PrivKey`s using a one-way cryptographic function. Then, a `PubKey` can be derived from the `PrivKey`. Naturally, the mnemonic is the most sensitive information, as private keys can always be re-generated if the mnemonic is preserved. 
 
 HD Wallets require a single backup that enables the user to fully restore the data at any time in the future. This is because of the wallet’s ability to drive all the private keys of the tree using [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki). This is a transfer protocol that enables parent keys to create child keys in a hierarchy.
 
