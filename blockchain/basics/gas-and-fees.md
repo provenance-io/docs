@@ -18,7 +18,7 @@ Fees limit the growth of the state stored by every full node and allow for gener
 
 Fees are determined by the gas limits and gas prices transactions provide, where`fees = ceil(gasLimit * gasPrices)`. Transactions incur gas costs for all state reads/writes, signature verification, as well as costs proportional to the transaction size \(this is known as `gas needed`\). Node operators set minimum gas prices when starting their nodes. If a minimum gas price is not set Provenanced defaults to `0.025nhash`.
 
-When adding transactions to the [mempool or gossipping transactions](transaction-lifecycle.md), validators check if the transaction's gas prices, which are determined by the provided fees, meet the validator's minimum gas prices.
+When adding transactions to the [mempool or gossipping transactions](transaction-lifecycle.md), nodes check if the transaction's gas prices, which are determined by the provided fees, meet the node's minimum gas prices.
 
 Thus, on Provenance, [`gas` is a special unit that is used to track the consumption of resources ](https://docs.cosmos.network/master/basics/gas-fees.html)during transaction execution to ensure:
 
@@ -206,4 +206,16 @@ pagination:
   next_key: null
   total: "0"
 ```
+
+## Why are Accounts Charged a Fee When a Transaction Runs Out of Gas?
+
+In the previous section, the account was charged a fee even though there was not enough gas to cover the gas needed.  Here's why - the active validator begins a new block by selecting a transaction from the mempool and then:
+
+* Checks to see that the signature is valid and that the account has enough funds to cover the transaction. 
+  * It also verifies the sequence number is correct \(no other transactions have been processed ahead of this one\).
+* Debits the amount of fees assigned to the transaction.
+* Runs the transaction and all the messages inside inside it.
+* If any message fails the transaction fails and is recorded as a failed transaction \(note the gas fee was already removed from senders account\).
+* If all messages in the transaction succeed, the successful transaction is recorded in the block and all state changes are accepted for the proposed block.
+* When the block is ready/cut is goes through consensus for commitment. When enough votes are received from other validator nodes the block is passed and the next validator takes over based on the calculations within the block on validator priority.
 
