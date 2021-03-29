@@ -22,13 +22,17 @@ Install Provenance and start running a node:
 
 {% page-ref page="blockchain/running-a-node/" %}
 
-Learn about the operational components of the Provenance blockchain:
+Explore the Provenance ecosystem:
+
+Learn how to use the Provenance modules and how they empower blockchain-based business like NFT and DeFi:
 
 Discover the benefits of the Provenance client-side Contract Execution Environment:
 
 {% page-ref page="p8e/overview.md" %}
 
 Get started integrating with Provenance:
+
+Follow real-world use cases and applications built on Provenance:
 
 
 

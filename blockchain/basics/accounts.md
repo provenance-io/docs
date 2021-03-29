@@ -93,9 +93,33 @@ So, when you have to restore an HD Wallet, the system automatically drives all t
 
 The secret key is easier to remember as well, so users don’t risk losing access to their funds. It’s also a more convenient solution, as you don’t have to store the secret key for each address that you’ve generated, only for the seed key.  [Several HD Wallets exists for Cosmos-based networks](https://cosmos.network/ecosystem/wallets) \(which Provenance is\).
 
+HD Wallet addresses follow a "hierarchical" format:
+
+![](../../.gitbook/assets/wallets.png)
+
+The wallet will have a **Master Node** or root. This is the master extended key. Each child extended key is derived from the parent extended key. The next level is **Purpose** which is a constant set to `44'` indicating that the subtree of this node is used according to this specification. The next level is **Coin Type** which is also a constant set to `505'` signifying Provenance's registered coin type. The next level is **Account** which is equivalent to a Custodial Wallet. Accounts are generated from the root account. **Scope** is used to distinguish between internal and external addresses. The last node is where **accounts** are identified by addresses within a wallet. Addresses consist of the following four parts:
+
+1. human readable prefix
+2. separator
+3. address
+4. checksum for integrity
+
+Given our address in the previous example:
+
+```bash
+tp1tkn2dwfkx7pmjr2rtgqhtrudsv7h8w2tj6eesv
+```
+
+* the prefix on testnet is `tp` \(note: the prefix on mainnet is `pb`\)
+* the separator is `1`
+* the address is `tkn2dwfkx7pmjr2rtgqhtrudsv7h8w2t`
+* the checksum is `j6eesv`
+
+Refer to [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki), [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki), and [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) for more in depth explanations of wallets.
+
 ### Key Derivation Details
 
-The [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki), [BIP43](https://github.com/bitcoin/bips/blob/master/bip-0043.mediawiki), and [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) specifications define a standard for path notation for building the HD Wallet address hierarchy. Hardened derivation at a particular level is indicated by an apostrophe. For example, the following example of hardened derivation is used for the first three levels, while for the last two levels non-hardened derivation is used \(typically\):
+As discussed in the previous section the [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki), [BIP43](https://github.com/bitcoin/bips/blob/master/bip-0043.mediawiki), and [BIP44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) specifications define a standard for path notation for building the HD Wallet address hierarchy. Hardened derivation at a particular level is indicated by an apostrophe. For example, the following example of hardened derivation is used for the first three levels, while for the last two levels non-hardened derivation is used \(typically\):
 
 `m / 44' / 505' / 0' / 0 / 0`
 

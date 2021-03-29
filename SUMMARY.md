@@ -74,14 +74,8 @@
 
 * [Quick Start](integrating/quick-start/README.md)
   * [Explanation](integrating/quick-start/hello-world-example.md)
-* [Provenance](integrating/provenance.md)
 * [Assets](integrating/assets.md)
 * [SDK](integrating/sdk.md)
-* [Wallets](integrating/wallets.md)
-* [Accounts](integrating/accounts.md)
-* [Markers](integrating/markers.md)
-* [Fees](integrating/fees.md)
-* [Omnibus](integrating/omnibus.md)
 * [Error Codes](integrating/error-codes.md)
 
 ## Apps Built on Provenance <a id="provenance-applications"></a>
@@ -91,6 +85,7 @@
 * [Adnales](provenance-applications/adnales.md)
 * [Figure Pay](provenance-applications/figure-pay.md)
 * [eVault](provenance-applications/evault.md)
+* [Omnibus](provenance-applications/omnibus.md)
 
 ## Contributing
 
