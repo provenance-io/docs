@@ -6,5 +6,5 @@
 * What actors participate within the system?
 * All nodes are equal, but eventually specialize to spread the load on the network.
 
-![Example Network Diagram for a validator node](../../../.gitbook/assets/mediamodifier_cropped_image.png)
+![Example Network Diagram for a validator node](../../.gitbook/assets/mediamodifier_cropped_image.png)
 

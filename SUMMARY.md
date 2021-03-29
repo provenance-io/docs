@@ -23,24 +23,23 @@
   * [Query Command](blockchain/using-provenance/query-command.md)
   * [Tx Command](blockchain/using-provenance/tx-command.md)
 
-## Operations
+## Ecosystem
 
-* [Provenance](operations/provenance-blockchain/README.md)
-  * [Foundation](operations/provenance-blockchain/foundation.md)
-  * [Participants](operations/provenance-blockchain/participants/README.md)
-    * [Asset Originators](operations/provenance-blockchain/participants/asset-originators.md)
-    * [Omnibus Banks](operations/provenance-blockchain/participants/omnibus-banks.md)
-  * [Delegator](operations/provenance-blockchain/delegator.md)
-  * [Validator](operations/provenance-blockchain/validator/README.md)
-    * [Network](operations/provenance-blockchain/validator/network.md)
-  * [Mission](operations/provenance-blockchain/mission.md)
-  * [Value Proposition](operations/provenance-blockchain/value-proposition.md)
-  * [Legal Standing](operations/provenance-blockchain/legal-standing.md)
-* [Governance](operations/governance.md)
-* [Hash](operations/hash-2.0.md)
-* [Fees/Distribution](operations/distribution.md)
-* [Voting](operations/voting/README.md)
-  * [Software Upgrade Proposal](operations/voting/software-upgrade-proposal.md)
+* [Foundation](ecosystem/foundation.md)
+* [Participants](ecosystem/participants/README.md)
+  * [Asset Originators](ecosystem/participants/asset-originators.md)
+  * [Omnibus Banks](ecosystem/participants/omnibus-banks.md)
+* [Delegator](ecosystem/delegator.md)
+* [Validator](ecosystem/validator/README.md)
+  * [Network](ecosystem/validator/network.md)
+* [Mission](ecosystem/mission.md)
+* [Value Proposition](ecosystem/value-proposition.md)
+* [Legal Standing](ecosystem/legal-standing.md)
+* [Governance](ecosystem/governance.md)
+* [Hash](ecosystem/hash-2.0.md)
+* [Fees/Distribution](ecosystem/distribution.md)
+* [Voting](ecosystem/voting/README.md)
+  * [Software Upgrade Proposal](ecosystem/voting/software-upgrade-proposal.md)
 
 ## Modules
 
