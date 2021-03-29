@@ -33,12 +33,11 @@
   * [Asset Originators](ecosystem/participants/asset-originators.md)
   * [Omnibus Banks](ecosystem/participants/omnibus-banks.md)
 * [Delegator](ecosystem/delegator.md)
-* [Validator](ecosystem/validator/README.md)
-  * [Network](ecosystem/validator/network.md)
-* [Governance](ecosystem/governance.md)
+* [Validator](ecosystem/validator.md)
+* [Governance](ecosystem/governance/README.md)
+  * [Voting](ecosystem/governance/voting/README.md)
+    * [Software Upgrade Proposal](ecosystem/governance/voting/software-upgrade-proposal.md)
 * [Fees/Distribution](ecosystem/distribution.md)
-* [Voting](ecosystem/voting/README.md)
-  * [Software Upgrade Proposal](ecosystem/voting/software-upgrade-proposal.md)
 * [Legal Standing](ecosystem/legal-standing.md)
 
 ## Modules

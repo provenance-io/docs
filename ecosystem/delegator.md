@@ -10,7 +10,7 @@ Hash will become stake at the point in time that it is delegated to a validator 
 
 **Delegation** - staking Hash with a validator to be used by that validator as voting power. For most holders of Hash delegation is an easy and relatively safe method of sharing in the ownership of the network.
 
-_See_ [_Voting_](voting/) _for more information on how to vote on_ [_Governance_](governance.md) _proposals._
+_See_ [_Voting_](governance/voting/) _for more information on how to vote on_ [_Governance_](governance/) _proposals._
 
 **Bonded** - The state of your Hash at the time when it is delegated to a validator. All bonded Hash is required to go through a 21 day unbonding period that locks the usage of the portion of Hash that has been removed from delegation. During this lock-up period:
 

@@ -1,7 +1,3 @@
----
-description: might need to be Proposals
----
-
 # Voting
 
 Proposals are initiatives put to vote by stake holders to perform actions using a consensus of votes. This process is called governance. The proposals themselves may be simple statements \(text proposals\) or initiatives to change configuration parameters \(configuration change proposals\), software upgrades, and more.

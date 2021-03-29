@@ -56,6 +56,22 @@ Fees are the total amount of Hash collected for consumed gas during the processi
 
 All fees that are collected by the validator network are distributed to rewarding Provenance participants for providing value in the various [Roles]().
 
+### Voting Validators
+
+All validators that vote on the proposed block are assigned a portion of the fees. Each validator receives a portion equivalent to their percentage of the overall voting power minus the Community Tax.
+
+### Proposing Validator Bonus
+
+A node that is part of the active validator set will eventually be selected to handle proposing a new block to the chain. During this process the validator is responsible for collecting transactions and cutting a proposed block for other validators to vote on. As a reward for performing these functions the proposing validator is allocated an additional share of the fees that is calculated based on the \[base\_reward + bonus\_amount\*validators\_overall\_percentage\_of\_voting\_power\].
+
+### Delegates
+
+The validator's pool of fees is further broken down during distribution with a percentage reserved for the validator node operator \(the commission\), and the remaining amount distributed among all stakeholders according to their delegation percentage of the overall amount assigned to the validator. This means that if an account has delegated 25% of the total stake \(aka the voting power for the validator\) then they are entitled to 25% of the fees awarded to the validator for cutting a block \(less commission\).
+
+### Stake At Risk
+
+Delegation of stake against a validator node is considered "at risk" meaning that if a validator performs a network fault the stake assigned to the validator node will be slashed \(meaning a percentage is forfeit\). This currently can happen in two ways. The first is if a validator node is a member of the active set of validators and the node fails to sign enough blocks within a given window \(for example of the server is offline\). This will result in a minor penalty and the removal of the validator node from the active set. A more serious error is the double signing infraction. This occurs if the validator submits more than one signature for a block. When this infraction is detected the validator is assessed a very serious penalty and banned from the network. This is because this behavior has very severe consequences for the network stability.
+
 ### Fee Distribution Hierarchy
 
 * Community - pool of Hash that can be used to enhance and maintain Provenance
