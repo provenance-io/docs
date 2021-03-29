@@ -209,7 +209,7 @@ Some MacOS users have experienced issues with using `go get` to install `cosmovi
 {% endhint %}
 
 ```bash
-go get github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
+go get github.com/provenance-io/cosmovisor/cmd/cosmovisor
 ```
 
 #### Build Cosmovisor from Source \(Optional\)
@@ -235,13 +235,13 @@ cd $PIO_HOME/cosmovisor/install
 The Cosmos SDK GitHub repo contains the `cosmovisor` build, clone the repo:
 
 ```bash
-git clone https://github.com/cosmos/cosmos-sdk.git
+git clone https://github.com/provenance-io/cosmovisor.git
 ```
 
 Change to the `cosmovisor` build directory:
 
 ```bash
-cd cosmos-sdk/cosmovisor
+cd cosmovisor
 ```
 
 Make `cosmovisor`
