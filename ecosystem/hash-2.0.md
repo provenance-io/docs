@@ -20,9 +20,7 @@ Digital equity takes on no idiosyncratic risk of the firm, yields on the first d
 
 ‌Given the simplicity of digital equity, the market capitalization of Hash is simply the present value of the fees paid to access Provenance that is realized by Hash holders. Such fees are a percentage \(35-40%\) of the economic value captured by Provenance members from using the blockchain. For example, if Provenance was solely used for securitization and captured 100% of the securitization market, the amount paid each year to use Provenance would be $25 billion \(83 bps fee capture x $3 trillion in annual production.\). Ignoring the small amounts paid to nodes and the administrator and using a 20% discount rate and treating the fees as a perpetuity, the market capitalization of Hash \(i.e., the present value of fees\) if Provenance was used only for securitization would be $125 billion.
 
-‌
-
-The market capitalization of Hash could rise as new use cases \(addressable market\) are identified and de-risked. Figure has identified over $90 billion in value today that Provenance can deliver to financial markets, and that number grows daily as more use cases are identified. Figure is working to identify new use cases and de-risk them through real-world adoption. Figure anticipates other members will participate in this function by utilizing Provenance in ways that demonstrate enhanced value to the ecosystem.
+‌The market capitalization of Hash could rise as new use cases \(addressable market\) are identified and de-risked. Figure has identified over $90 billion in value today that Provenance can deliver to financial markets, and that number grows daily as more use cases are identified. Figure is working to identify new use cases and de-risk them through real-world adoption. Figure anticipates other members will participate in this function by utilizing Provenance in ways that demonstrate enhanced value to the ecosystem.
 
 ### ‌Initial Hash Allocation
 
