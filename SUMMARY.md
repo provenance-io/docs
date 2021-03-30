@@ -45,10 +45,10 @@
 ## Modules
 
 * [Inherited Modules](modules/inherited-modules.md)
-* [Account](modules/account.md)
-* [Marker Module](modules/marker-module.md)
-* [Name Module](modules/name-module.md)
-* [Metadata Module](modules/metadata-module.md)
+* [Metadata](modules/metadata-module.md)
+* [Marker](modules/marker-module.md)
+* [Attribute](modules/account.md)
+* [Name](modules/name-module.md)
 * [Smart Contracts \(ProvWasm\)](modules/provwasm-smart-contracts.md)
 
 ## Contract Execution Environment \(P8e\) <a id="p8e"></a>

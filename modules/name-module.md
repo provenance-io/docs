@@ -4,7 +4,7 @@ description: >-
   associated with blockchain addresses.
 ---
 
-# Name Module
+# Name
 
 ## Overview
 

@@ -1,11 +1,11 @@
 ---
 description: >-
-  The Marker Module provides an ownership structure for managing tokenized value
+  The Marker module provides an ownership structure for managing tokenized value
   backed by assets or other tokenized units of value denominated as unit(s) of
   coin.
 ---
 
-# Marker Module
+# Marker
 
 ## Overview
 

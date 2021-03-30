@@ -1,4 +1,10 @@
-# Metadata Module
+---
+description: >-
+  The Metadata module provides an on-chain storage and assertion facility for
+  side-chained data including asses-of-value and NFTs.
+---
+
+# Metadata
 
 ## Overview
 
