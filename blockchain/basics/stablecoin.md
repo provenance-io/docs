@@ -4,13 +4,9 @@
 
 Stablecoins provide a bridge between fiat and digital currency that is used as the basis for transactions of value on Provenance. Each new stablecoin is represented on the blockchain as a marker managed by the issuer. A coin should be redeemable as fiat through the original issuer over banking rails.
 
-### Prerequisites <a id="Prerequisites"></a>
-
-{% page-ref page="../running-a-node/" %}
-
-{% page-ref page="../running-a-node/running-a-node-1/" %}
-
-{% page-ref page="../running-a-node/running-a-node-1/join-provenance-testnet.md" %}
+{% hint style="info" %}
+To follow along with this section refer to [Installing Provenance](../running-a-node/) to install the `provenanced` binary.
+{% endhint %}
 
 ### Creating a Key <a id="Creating-a-Key"></a>
 
