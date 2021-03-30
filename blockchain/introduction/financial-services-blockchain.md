@@ -10,11 +10,11 @@ description: >-
 
 Many intermediaries argue that their services are necessary for the market to function. Who else will safeguard investors if not a trusted third party?  But such an argument is a false dichotomy as it presumes trust is necessary.
 
-Provenance reduces third party intermediation and internal staffing costs, promotes greater transparency and liquidity and allows for new kinds of financial engineering and business opportunities. The goal is that any firm using Provenance benefits from the blockchain, and pays ⅓ of that benefit back in fiat currency back to Provenance.
+Provenance reduces third party intermediation and internal staffing costs, promotes greater transparency and liquidity, and allows for new kinds of financial engineering and business opportunities. The goal is that any firm using Provenance benefits from the blockchain, and pays ⅓ of that benefit back in fiat currency back to Provenance.
 
 ### Distributed Trust
 
-Provenance has three key attributes: **Distributed Information, Immutable History and Trustless Data**. Information cannot be held in one location. Distributed content provides defense against hackers, eliminates agency problems that can lead to malfeasance, and helps supporting enforceable digital contracts. Data written on the ledger, must not be changed. Immutable information is critical in establishing asset provenance. And information must be true. Having to rep and warranty data—analogous to “trust me”—undermines the system and introduces risk to those who provide these attestations.
+Provenance has three key attributes: **Distributed Information, Immutable History, and Trustless Data**. Information cannot be held in one location. Distributed content provides defense against hackers, eliminates agency problems that can lead to malfeasance, and helps support enforceable digital contracts. Data written on the ledger must not be changed. Immutable information is critical in establishing asset provenance and information must be true. Having to rep and warranty data—analogous to “trust me”—undermines the system and introduces risk to those who provide these attestations.
 
 These attributes are necessary, but not sufficient, to eliminate rent-seeking and bring incremental value to financial markets. To transform financial services, Provenance performs 3 key functions: ledger, registry and exchange.
 

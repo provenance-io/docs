@@ -18,7 +18,7 @@ Provenance distinguishes three types of applications based on these core concept
 
 #### On-Chain
 
-Any client application that is configured with the proper key/addresses and modules, and uses Hash 2.0 tokens for service payments, can transact directly on-chain within the Provenance ecosystem.  Applications interact directly with the core [Provenance Modules](../../modules/inherited-modules.md) and a Provenance Node.  Applications may implement and leverage custom Smart Contracts specific to the business application use case.
+Any client application that is configured with the proper key/addresses and modules, and uses Hash tokens for service payments, can transact directly on-chain within the Provenance ecosystem.  Applications interact directly with the core [Provenance Modules](../../modules/inherited-modules.md) and a [Provenance Node](../running-a-node/running-a-node-1/).  Applications may implement and leverage custom [Smart Contracts ](../../modules/provwasm-smart-contracts.md)specific to the business application use case.
 
 #### Side-Chain
 
@@ -37,22 +37,22 @@ Nodes in the network include:
 * Query nodes used by business application middleware for efficient and fast state query.
 * Transactional nodes used by business application middleware for efficient transaction submission and event listening.
 * Archival nodes where the pruning strategy is set to maintain all historic states.
-* [Validators](../../ecosystem/validator.md) that are responsible for committing new blocks in the blockchain for which they are rewarded with gas fees, i.e. Hash. These validators participate in the consensus protocol by broadcasting votes.  Validators bond their own Hash and have Hash delegated, or staked to, them by Hash holders.  Validators have a stake in the network.
+* [Validators](../../ecosystem/validator.md) that are responsible for committing new blocks in the blockchain for which they are rewarded with gas fees \(i.e. Hash\). These validators participate in the consensus protocol by broadcasting votes.  Validators bond their own Hash and have Hash delegated, or staked to them by Hash holders.  Validators have a stake in the network.
 * Sentry nodes for Validator DDoS mitigation.
 
 ### Cosmovisor
 
-[Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html) is a small process manager around the Provenance daemon process \(`provenanced`\) that monitors the governance module for upgrade proposals. Approved upgrade proposals can be run manually or automatically to download the new code, stop the node, run the migration script, replace the node binary, and start with the a genesis file.
+[Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html) is a small process manager around the Provenance daemon process \(`provenanced`\) that monitors the [governance module](../../ecosystem/governance/) for [upgrade](../../ecosystem/governance/voting/software-upgrade-proposal.md) proposals. Approved upgrade proposals can be run manually or automatically to download the new code, stop the node, run the migration script, replace the node binary, and start with the a genesis file.
 
 ### Modules
 
-[Modules](https://docs.cosmos.network/v0.41/building-modules/intro.html) define the Provenance blockchain logic. Provenance is composed of modules from the Cosmos SDK and custom modules to support value markers and the client-side Contract Execution Environment.  Modules provide core functionality blockchain applications needs like a [boilerplate implementation of the ABCI](https://docs.cosmos.network/v0.41/core/baseapp.html) to communicate with the underlying consensus engine, a [multistore](https://docs.cosmos.network/v0.41/core/store.html#multistore) to persist state, a [server](https://docs.cosmos.network/v0.41/core/node.html) to form a full-node and [interfaces](https://docs.cosmos.network/v0.41/interfaces/interfaces-intro.html) to handle queries.  Modules implement the bulk of the logic of financial service applications and  the core does the wiring and enables modules to be composed together. 
+[Modules](https://docs.cosmos.network/v0.41/building-modules/intro.html) define the Provenance blockchain logic. Provenance is composed of modules from the Cosmos SDK and custom modules to support value markers and the client-side Contract Execution Environment.  Modules provide core functionality blockchain applications need like a [boilerplate implementation of the ABCI](https://docs.cosmos.network/v0.41/core/baseapp.html) to communicate with the underlying consensus engine, a [multistore](https://docs.cosmos.network/v0.41/core/store.html#multistore) to persist state, a [server](https://docs.cosmos.network/v0.41/core/node.html) to form a full-node and [interfaces](https://docs.cosmos.network/v0.41/interfaces/interfaces-intro.html) to handle queries.  Modules implement the bulk of the logic of financial service applications and  the core does the wiring and enables modules to be composed together. 
 
 Modules can be seen as little state-machines within the state-machine. They generally define a subset of the state using one or more key-value stores and message types.
 
 ### Key Ring
 
-To interact with the `provenanced` daemon, and by extension the node, a keyring that holds the private/public key pairs used to interact with a node must be established. For example, a validator key needs to be set up before running the blockchain node so that blocks can be correctly signed. The private key can be stored in different locations, called "backends", such as a file or the operating system's own key storage.  [Refer to the Cosmos keyring documentation for more information.](https://docs.cosmos.network/master/run-node/keyring.html)
+To interact with the `provenanced` daemon, and by extension the node, a keyring that holds the private/public key pairs used to interact with a node must be established. For example, a validator key needs to be set up before running the blockchain node so that blocks can be correctly signed. The private key can be stored in different locations, called "backends", such as a file, an [HSM](https://en.wikipedia.org/wiki/Hardware_security_module), or the operating system's own key storage.  [Refer to the Cosmos keyring documentation for more information.](https://docs.cosmos.network/master/run-node/keyring.html)
 
 ### Genesis
 
@@ -60,7 +60,7 @@ Before running a node the chain is initialized via a genesis file.  A default Pr
 
 ### Interacting with a Node
 
-There are multiple ways to interact with a node: using the CLI, using gRPC or using the REST endpoints.  With a running node, the `provenanced` daemon process can be used as a CLI.  The CLI provides functionality for signing and submitting transactions, querying, key and key ring management, as well as Module interaction.  [Refer to the Cosmos Interacting with the Node documentation for more information.](https://docs.cosmos.network/master/run-node/interact-node.html)
+There are multiple ways to interact with a node: using the CLI, using gRPC, or using the REST endpoints.  With a running node, the `provenanced` daemon process can be used as a CLI.  The CLI provides functionality for signing and submitting transactions, querying, key and key ring management, as well as Module interaction.  [Refer to the Cosmos Interacting with the Node documentation for more information.](https://docs.cosmos.network/master/run-node/interact-node.html)
 
 ## Smart Contracts
 
@@ -82,13 +82,13 @@ Provenance Smart Contract are able to leverage Provenance Modules.  This allows 
 
 ## Contract Execution Environment
 
-The Provenance client-side Contract Execution Environment \(p8e\) to directly integrate with the [Provenance Metadata Module](../../modules/metadata-module.md) to simplify generating signed records of an asset’s provenance as either a single party or in conjunction with multiple interacting parties. At its core, P8e is a gRPC API that is invoked using a Kotlin SDK. The API processes data through a deterministic client side process that can be shared with other parties to transform data into a hashable format.
+The Provenance client-side Contract Execution Environment \(P8e\) directly integrates with the [Provenance Metadata Module](../../modules/metadata-module.md) to simplify generating signed records of an asset’s provenance as either a single party or in conjunction with multiple interacting parties. At its core, P8e is a gRPC API that is invoked using a Kotlin SDK. The API processes data through a deterministic client side process that can be shared with other parties to transform data into a hashable format.
 
 Assets can be directly defined against the Metadata module, but the execution environment assists in the complex hashing of data, maintenance of immutable objects, and signature orchestration between multiple parties.
 
 ### Client Contracts
 
-Client side contracts differ from Smart Contracts in that they keep your data private between parties off-chain and thus facilitate a structure to record agreed-upon state-data to the blockchain. Smart contracts in comparison are running on the blockchain and require the validators to have access to the data which complicates many consumer based transactions due to data privacy laws.
+Client side contracts differ from Smart Contracts in that they keep data private between parties off-chain and thus facilitate a structure to record agreed-upon state-data to the blockchain. Smart contracts in comparison are running on the blockchain and require the validators to have access to the data which complicates many consumer based transactions due to data privacy laws.
 
 ### Transaction Flow
 

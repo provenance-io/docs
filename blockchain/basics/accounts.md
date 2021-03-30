@@ -4,7 +4,7 @@ description: Understanding the Provenance accounts system.
 
 # Accounts
 
-## Account Definition
+## Overview
 
 On Provenance an [account](https://docs.cosmos.network/v0.41/basics/accounts.html) designates a pair of _public key_ `PubKey` and _private key_ `PrivKey`. The `PubKey` is used to generate an `address` which is used to identify users \(among other parties\) on the blockchain. `Addresses` are also associated with [`message`s](https://docs.cosmos.network/master/building-modules/messages-and-queries.html#messages) to identify the sender of the `message`. The `PrivKey` is used to generate [digital signatures](https://docs.cosmos.network/master/basics/query-lifecycle.html#signatures) to prove that an `address`associated with the `PrivKey` approved of a given `message`.
 
@@ -12,11 +12,11 @@ On Provenance an [account](https://docs.cosmos.network/v0.41/basics/accounts.htm
 
 `Addresses` and `PubKey`s are both public information that identifies actors on the blockchain. `Account` is used to store authentication information. 
 
-Each account is identified using an `address` which is a sequence of bytes derived from a public key. In Provenance, 3 types of addresses that specify a context where an account is used:
+Each account is identified using an `address` which is a sequence of bytes derived from a public key. In Provenance, 3 types of addresses specify a context where an account is used:
 
 * `AccAddress` identifies users \(the sender of a `message`\).
 * `ValAddress` identifies validator operators.
-* `ConsAddress` identifies validator nodes that are participating in consensus. Validator nodes are derived using the EC **`ed25519`** curve wherease users use the `secp256k1` curve.
+* `ConsAddress` identifies validator nodes that are participating in consensus. Validator nodes are derived using the EC `ed25519` curve wherease users use the `secp256k1` curve.
 
 Addresses and public keys are formatted using [Bech32](https://en.bitcoin.it/wiki/Bech32) and implemented as a string value. The Bech32 method is the only supported format to use when interacting with the blockchain. The Bech32 human-readable part \(Bech32 prefix\) is used to denote an address type.
 
@@ -87,21 +87,21 @@ The principal way of authenticating a user is done using [digital signatures](ht
 
 ## HD Wallet
 
-As demonstrated in the previous section, a single key pair can be used to generate a Bech32 address that can then be used to create a Provenance account.  Using a single key pair isn't ideal because it requires the user to generate and save the physical key pair.  Instead, blockchains recommend an HD Wallet solution that automatically generates a hierarchical tree-like structure of private/public addresses \(or keys\), thereby addressing the problem of the user having to generate them on their own.
+As demonstrated in the previous section, a single key pair can be used to generate a Bech32 address that can then be used to create a Provenance account.  Using a single key pair isn't ideal because it requires the user to generate and save the physical key pair.  Instead, most blockchains utilize an HD Wallet solution that automatically generates a hierarchical tree-like structure of private/public addresses \(or keys\), thereby addressing the problem of the user having to generate them on their own.
 
-HD Wallets, or Hierarchical Deterministic wallets, are used to generate addresses from a single master seed \(hence the name hierarchical\).  A seed is usually created from a 12- or 24-word mnemonic. A single seed can derive any number of `PrivKey`s using a one-way cryptographic function. Then, a `PubKey` can be derived from the `PrivKey`. Naturally, the mnemonic is the most sensitive information, as private keys can always be re-generated if the mnemonic is preserved. 
+HD Wallets, or Hierarchical Deterministic wallets, are used to generate addresses from a single master seed \(hence the name hierarchical\).  A seed is usually created from a 12 or 24 word mnemonic. A single seed can derive any number of `PrivKey`s using a one-way cryptographic function. Then, a `PubKey` can be derived from the `PrivKey`. Naturally, the mnemonic is the most sensitive information, as private keys can always be re-generated if the mnemonic is known. 
 
-HD Wallets require a single backup that enables the user to fully restore the data at any time in the future. This is because of the wallet’s ability to drive all the private keys of the tree using [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki). This is a transfer protocol that enables parent keys to create child keys in a hierarchy.
+HD Wallets utilize a single backup that enables the user to fully restore the data at any time in the future. This is because of the wallet’s ability to drive all the private keys of the tree using [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki). This is a transfer protocol that enables parent keys to create child keys in a hierarchy.
 
-So, when you have to restore an HD Wallet, the system automatically drives all the private keys of the tree using the same initial algorithm.
+So, when you have to restore an HD Wallet, the system automatically drives all the private keys of the tree using the same initial algorithm and the same private keys emerge.
 
-The secret key is easier to remember as well, so users don’t risk losing access to their funds. It’s also a more convenient solution, as you don’t have to store the secret key for each address that you’ve generated, only for the seed key.  [Several HD Wallets exists for Cosmos-based networks](https://cosmos.network/ecosystem/wallets) \(which Provenance is\).
+The secret key is easier to remember as well, so users don’t risk losing access to their funds. It’s also a more convenient solution as you don’t have to store the secret key for each address that you’ve generated, only for the seed key.  [Several HD Wallets exists for Cosmos-based networks](https://cosmos.network/ecosystem/wallets) \(which Provenance is\).
 
 HD Wallet addresses follow a "hierarchical" format:
 
 ![](../../.gitbook/assets/wallets.png)
 
-The wallet will have a **Master Node** or root. This is the master extended key. Each child extended key is derived from the parent extended key. The next level is **Purpose** which is a constant set to `44'` indicating that the subtree of this node is used according to this specification. The next level is **Coin Type** which is also a constant set to `505'` signifying Provenance's registered coin type. The next level is **Account** which is equivalent to a Custodial Wallet. Accounts are generated from the root account. **Scope** is used to distinguish between internal and external addresses. The last node is where **accounts** are identified by addresses within a wallet. Addresses consist of the following four parts:
+The wallet will have a **Master Node** or root. This is the master extended key. Each child extended key is derived from the parent extended key. The next level is **Purpose** which is a constant set to `44'` indicating that the subtree of this node is used according to this specification. The next level is **Coin Type** which is also a constant set to `505'` signifying [Provenance's registered coin type](https://github.com/satoshilabs/slips/blob/master/slip-0044.md). The next level is **Account** which is equivalent to a Custodial Wallet. Accounts are generated from the root account. **Scope** is used to distinguish between internal and external addresses. The last node is where **accounts** are identified by addresses within a wallet. Addresses consist of the following four parts:
 
 1. human readable prefix
 2. separator
@@ -135,7 +135,7 @@ With non-hardened keys, you can prove a child public key is linked to a parent p
 
 For security reasons, using hardened keys is safer, but there are use cases for using non-hardened keys. A parent extended public key together with a non-hardened child private key can expose the parent private key. This means that extended public keys must be treated more carefully than regular public keys. It is also the reason for the existence of hardened keys and why they are used for the account level in the tree. This way, a leak of account-specific \(or below\) private keys never risks compromising the master or other accounts.
 
-Knowing an extended public keys allows reconstruction of all descendant non-hardened public keys. Knowledge of a parent extended public key plus any non-hardened private key descending from it is equivalent to knowing the parent extended private key \(and thus every private and public key descending from it\). This means that extended public keys must be treated more carefully than regular public keys. It is also the reason for the existence of hardened keys, and why they are used for the account level in the tree. This way, a leak of account-specific \(or below\) private key never risks compromising the master or other accounts.
+Knowing an extended public keys allows reconstruction of all descendant non-hardened public keys. Knowledge of a parent extended public key plus any non-hardened private key descending from it is equivalent to knowing the parent extended private key \(and thus every private and public key descending from it\). 
 
 Hardened keys are useful whenever you don’t need the ability to give someone a master public key, and have them know all derivative addresses. Privacy is preserved with these types of keys because you cannot prove that a child public key is linked to a parent public key. Provenance user-facing wallets should use hardened keys on all paths.
 

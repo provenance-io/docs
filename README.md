@@ -22,6 +22,8 @@ Install Provenance and start running a node:
 
 {% page-ref page="blockchain/running-a-node/" %}
 
+{% page-ref page="blockchain/using-provenance/" %}
+
 Explore the Provenance ecosystem:
 
 Learn how to use the Provenance modules and how they empower blockchain-based business like NFT and DeFi:

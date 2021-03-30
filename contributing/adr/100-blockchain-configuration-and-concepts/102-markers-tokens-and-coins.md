@@ -222,7 +222,7 @@ An authorized address may "burn" the markers coin, removing it from the global s
 
 #### Exchange
 
-A token maybe be exchanged for coins in any other token through the exchange process. The details of the Exchange process are defined in a separate ADR \(TODO\).
+A token maybe be exchanged for coins in any other token through the exchange process. 
 
 ### Example Uses of Coins, Tokens, and Markers
 

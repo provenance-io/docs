@@ -22,6 +22,10 @@ Learn about what it means to have an `account` on the blockchain:
 
 {% page-ref page="accounts.md" %}
 
+Discover how stable coins are implemented using Provenance:
+
+{% page-ref page="stablecoin.md" %}
+
 Understand Gas and Fees used by the blockchain:
 
 {% page-ref page="gas-and-fees.md" %}
