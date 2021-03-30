@@ -83,12 +83,12 @@ Delegation of stake against a validator node is considered "at risk" meaning tha
 
 | Type | Percentage |
 | :--- | :--- |
-| Community | 5% |
+| Community | 2% |
 | Block Proposer | 1% to 6% |
 | Validator Commission | 5% to 100% |
 | Delegators | Remaining |
 
-### **Example 1**
+### **Example**
 
 Here is an example distribution of Hash collected during a transaction. 
 
