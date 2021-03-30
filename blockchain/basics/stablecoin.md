@@ -6,11 +6,11 @@ Stablecoins provide a bridge between fiat and digital currency that is used as t
 
 ### Prerequisites <a id="Prerequisites"></a>
 
-{% page-ref page="../../running-a-node/" %}
+{% page-ref page="../running-a-node/" %}
 
-{% page-ref page="../../running-a-node/running-a-node-1/" %}
+{% page-ref page="../running-a-node/running-a-node-1/" %}
 
-{% page-ref page="../../running-a-node/running-a-node-1/join-provenance-testnet.md" %}
+{% page-ref page="../running-a-node/running-a-node-1/join-provenance-testnet.md" %}
 
 ### Creating a Key <a id="Creating-a-Key"></a>
 
@@ -18,7 +18,7 @@ Stablecoins provide a bridge between fiat and digital currency that is used as t
 Securing encryption keys is outside the scope of this example. 
 {% endhint %}
 
-All stores of value on Provenance are secured by one or more encryption keys. Generated keys should be stored securely to protect against unauthorized use. See [Creating a Key](../#creating-a-key-s) for details on creating encryption keys.
+All stores of value on Provenance are secured by one or more encryption keys. Generated keys should be stored securely to protect against unauthorized use. See [Creating a Key](../using-provenance/#creating-a-key-s) for details on creating encryption keys.
 
 ### Creating a Coin <a id="Creating-a-New-Coin"></a>
 
