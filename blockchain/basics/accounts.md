@@ -28,6 +28,10 @@ Provenance testnet Bech32 addresses begin with `tp` whereas mainnet addresses be
 _**A key pair and it's corresponding Bec32 address that exists outside of Provenance \(say in a wallet\) is not a Provenance account until Hash has been transferred to the Bech32 address.**_
 {% endhint %}
 
+{% hint style="info" %}
+To follow along with this section refer to [Installing Provenance](../running-a-node/) to install the `provenanced` binary.
+{% endhint %}
+
 For example, using `provenanced` we can generate a local key pair and store it in the default [Keyring](https://docs.cosmos.network/master/basics/accounts.html#keyring):
 
 ```bash
