@@ -28,8 +28,8 @@
 ## Ecosystem
 
 * [Mission](ecosystem/mission.md)
-* [Provenance Foundation](ecosystem/foundation.md)
 * [Value Proposition](ecosystem/value-proposition.md)
+* [Provenance Foundation](ecosystem/foundation.md)
 * [Hash](ecosystem/hash-2.0.md)
 * [Participants](ecosystem/participants/README.md)
   * [Asset Originators](ecosystem/participants/asset-originators.md)
