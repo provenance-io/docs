@@ -27,7 +27,7 @@
 
 ## Ecosystem
 
-* [Foundation](ecosystem/foundation.md)
+* [Provenance Foundation](ecosystem/foundation.md)
 * [Mission](ecosystem/mission.md)
 * [Value Proposition](ecosystem/value-proposition.md)
 * [Hash](ecosystem/hash-2.0.md)
