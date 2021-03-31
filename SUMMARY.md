@@ -13,7 +13,7 @@
   * [Transaction Lifecycle](blockchain/basics/transaction-lifecycle.md)
   * [Query Lifecycle](blockchain/basics/query-lifecycle.md)
   * [Accounts](blockchain/basics/accounts.md)
-  * [Stablecoin](blockchain/basics/stablecoin.md)
+  * [Coin](blockchain/basics/stablecoin.md)
   * [Gas and Fees](blockchain/basics/gas-and-fees.md)
 * [Installing Provenance](blockchain/running-a-node/README.md)
   * [Running a Node](blockchain/running-a-node/running-a-node-1/README.md)

@@ -1,34 +1,22 @@
 ---
-description: >-
-  High-level creation of a coin marker on Provenance from an omnibus bank
-  perspective.
+description: High-level creation of a coin marker on Provenance.
 ---
 
-# Stablecoin
+# Coin
 
 ## Overview
 
-Stablecoins provide a bridge between fiat and digital currency used as the basis for transactions of value on Provenance. Each new stablecoin is represented on the blockchain as a [marker ](../../modules/marker-module.md)managed by the issuer. Issuers of stablecoin manage fiat currency in a traditional banking account structure that handles the necessary BSA/AML obligations. Issuing institutions have complete control over the management of their coin and provide a redemption method where a holder can convert the digital holding to fiat over banking rails. 
+// TODO
 
-{% hint style="info" %}
-See [Omnibus Banks](../../ecosystem/participants/omnibus-banks.md) for more participant information.
-{% endhint %}
-
-## Creating a Stablecoin
+## Creating a Coin Marker
 
 {% hint style="info" %}
 To follow along with this section refer to [Installing Provenance](../running-a-node/) to install the `provenanced` binary.
 {% endhint %}
 
-### Creating the Key <a id="Creating-a-Key"></a>
-
-{% hint style="danger" %}
-Securing encryption keys is outside the scope of this example. 
-{% endhint %}
-
+{% hint style="info" %}
 All stores of value on Provenance are secured by one or more encryption keys. Generated keys should be stored securely to protect against unauthorized use. See [Creating a Key](../using-provenance/#creating-a-key-s) for details on creating encryption keys.
-
-### Creating the Marker <a id="Creating-a-New-Coin"></a>
+{% endhint %}
 
 There are multiple ways to configure a coin to suit a business use case. Here is an example that demonstrates a stablecoin that will be minted and burned to keep the supply in circulation 1:1 with the backing fiat held by the issuer. 
 
@@ -186,47 +174,13 @@ MARKER_STATUS_ACTIVE
 
 Now that we have a fully functioning stablecoin marker, let's continue and look at how we mint and burn token allowing a 1:1 bridge from fiat to digital currency.
 
-## Omnibus
+## Stablecoins
 
-A middle-tier component, that we'll simply call "omnibus," will be used to describe the software processes that would be used to integrate Provenance with a core banking system. Omnibus will bridge a core banking system API with Provenance to monitor for banking transactions that require minting of stablecoin and to monitor for blockchain transactions that require burning of stablecoin. 
+Stablecoins provide a bridge between fiat and digital currency used as the basis for transactions of value on Provenance. Each new stablecoin is represented on the blockchain as a [marker ](../../modules/marker-module.md)managed by the issuer. Issuers of stablecoin manage fiat currency in a traditional banking account structure that handles the necessary BSA/AML obligations. Issuing institutions have complete control over the management of their coin and provide a redemption method where a holder can convert the digital holding to fiat over banking rails. 
 
-### Fiat to Stablecoin \(Mint\)
-
-The process to convert fiat to stablecoin can be handled in several different ways. Here we'll look at a few that tend to be useful.  
-
-#### Receiving Wires
-
-Wiring of funds tends to be used for large transactions and it one of the simplest ways to identify received funds, but does tend to come with a high-probability for human error since the wire reference is hand entered on the transmission side of the wire. 
-
-![](https://i.imgur.com/JWTPqkr.png)
-
-#### Virtual Accounts
-
-Assigning a user an account/routing number can be a useful tool that makes converting deposits to stablecoin simple. In this use case the client simply sends funds via ACH to an account number at the institution. The account/routing number is 1:1 with a blockchain address and the omnibus facilitates the mapping, minting and transfer of stablecoin.
-
-![](https://i.imgur.com/iPz9GdT.png)
-
-#### ACH Pull
-
-In some cases it is necessary to allow a small scale user to initiate a pull of funds from their current brick and mortar account to be delivered to their blockchain address as stablecoin. This use case is by far the most complex since ACH has many clearing issues that an institution has to consider.
-
-![](https://i.imgur.com/7wbQjWU.png)
-
-### Stablecoin to Fiat \(Burn\) <a id="MintingBurningTransferring"></a>
-
-Once a blockchain address holds stablecoin, it is necessary to provide a process to convert it to fiat at some time in the future. To achieve this conversion the omnibus must understand where the outbound transfer of fiat will be sent and what reference to watch for on the blockchain when stablecoin is received for redemption. 
-
-#### Memo Field
-
-![](https://i.imgur.com/tZ7c5Np.png)
-
-
-
-## Verified Coins
-
-While coins in general can be created on Provenance by any entity not all coins are issued by trusted entities. Trusting the creator of the coin is important because the store of value is a bridge for t-0 settlement with fiat. While the coin denom\(name\) is secured on Provenance by an encryption key, it is necessary to know your counter party when using stablecoins to guarantee the validity of the entity backing the issued coin.
-
-Determining a method to verify trust lines between entities on the blockchain is an exercise that each entity should determine on their own, but using a trusted list of partner addresses can simplify choosing known good actors on the network. 
+{% hint style="info" %}
+See [Omnibus Banks](../../ecosystem/participants/omnibus-banks.md) for more participant information.
+{% endhint %}
 
 
 
