@@ -1,14 +1,26 @@
+---
+description: >-
+  High-level creation of a coin marker on Provenance from an omnibus bank
+  perspective.
+---
+
 # Stablecoin
 
-## Creation
+## Overview
 
-Stablecoins provide a bridge between fiat and digital currency that is used as the basis for transactions of value on Provenance. Each new stablecoin is represented on the blockchain as a marker managed by the issuer. A coin should be redeemable as fiat through the original issuer over banking rails.
+Stablecoins provide a bridge between fiat and digital currency used as the basis for transactions of value on Provenance. Each new stablecoin is represented on the blockchain as a [marker ](../../modules/marker-module.md)managed by the issuer. Issuers of stablecoin manage fiat currency in a traditional banking account structure that handles the necessary BSA/AML obligations. Issuing institutions have complete control over the management of their coin and provide a redemption method where a holder can convert the digital holding to fiat over banking rails. 
+
+{% hint style="info" %}
+See [Omnibus Banks](../../ecosystem/participants/omnibus-banks.md) for more participant information.
+{% endhint %}
+
+## Creating a Stablecoin
 
 {% hint style="info" %}
 To follow along with this section refer to [Installing Provenance](../running-a-node/) to install the `provenanced` binary.
 {% endhint %}
 
-### Creating a Key <a id="Creating-a-Key"></a>
+### Creating the Key <a id="Creating-a-Key"></a>
 
 {% hint style="danger" %}
 Securing encryption keys is outside the scope of this example. 
@@ -16,7 +28,7 @@ Securing encryption keys is outside the scope of this example.
 
 All stores of value on Provenance are secured by one or more encryption keys. Generated keys should be stored securely to protect against unauthorized use. See [Creating a Key](../using-provenance/#creating-a-key-s) for details on creating encryption keys.
 
-### Creating a Coin <a id="Creating-a-New-Coin"></a>
+### Creating the Marker <a id="Creating-a-New-Coin"></a>
 
 There are multiple ways to configure a coin to suit a business use case. Here is an example that demonstrates a stablecoin that will be minted and burned to keep the supply in circulation 1:1 with the backing fiat held by the issuer. 
 
@@ -54,7 +66,7 @@ marker:
 
 The marker is now in `PROPOSED` status and is ready for configuration.
 
-### Setting Permissions <a id="Setting-Permissions"></a>
+### Setting Marker Permissions <a id="Setting-Permissions"></a>
 
 Marker permissions allow multiple different encryption keys to interact with the underlying functionality it provides. The address used in this example is the same as the manager of the marker, making a single key the only permissioned user to mint/burn and grant/revoke permissions.  
 
@@ -207,4 +219,10 @@ Once a blockchain address holds stablecoin it is inevitable that they'll want to
 #### Memo Field
 
 ![](https://i.imgur.com/tZ7c5Np.png)
+
+
+
+## Verified Coins
+
+While coins in general can be created on Provenance by any entity not all coins are issued by trusted entities. Trusting the creator of the coin is important because the store of value is a bridge for t-0 settlement with fiat. While the coin denom\(name\) is secured on Provenance, it is necessary to know your counter party when using stablecoins. Because of this necessary trust line between participants of the ecosystem, it is encouraged to verify the issuer of the coin.
 

@@ -86,7 +86,6 @@
 * [Adnales](provenance-applications/adnales.md)
 * [Figure Pay](provenance-applications/figure-pay.md)
 * [eVault](provenance-applications/evault.md)
-* [Omnibus](provenance-applications/omnibus.md)
 
 ## Contributing
 
