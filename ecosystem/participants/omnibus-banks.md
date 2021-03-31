@@ -25,13 +25,13 @@ To support transaction flows, a bank will execute the following actions via API 
 
 To illustrate, we'll walk through detailed process flows for a US Omnibus Bank supporting Provenance’s initial use case: loan origination, servicing, and financing. While Provenance is actively engaged with other use cases, this example aims to demonstrate typical operating processes and workflows. Note also that the illustrated process should be broadly applicable to any asset-backed financing, subject to specific regulatory requirements by jurisdiction and asset class.
 
+### Issuing Stablecoin \(Minting\)
+
+// TODO
+
 ### Loan Funding
 
-Omnibus banks disburse funds to individual borrowers at direction of originator.
-
-![](https://lh3.googleusercontent.com/hVlhUCTzCrauFUkz9r3d1A9n2SWeteMfaB6dBaqv7zPtCJqK7iqyb79t8qspgLDZBAovAjpA9RUt8mPFZFLzrRO692x-dmajNvlgcU7sJSRtZIbYWis8cqAEMsWkY3Q5q1TUeJm2)
-
-The originator instructs Provenance to deliver cash movement instructions \(e.g. ACH\) which includes the disbursement amount and destination to the bank. The bank then processes the instructions. The bank sends the cash details to Provenance for the recording of the cash movement, and then the bank will release the funds to the borrower. The originator has visibility of all their transactions.
+An originator funds its loans at time of onboarding using stablecoin issued by an Omnibus Bank. When the Omnibus Bank receives funds from the originator, it mints a corresponding amount of stablecoin to an address representing the originator’s blockchain funding account. Loans are funded by transferring coin to Omnibus Bank's blockchain address with an identifier representing the borrower’s fiat bank information. Next, the Omnibus Bank will convert the borrower’s coin to fiat and send funds to the borrower’s bank account. The stablecoin used is burned in the process of conversion to fiat.
 
 ### **Ongoing Cash Payments**
 
