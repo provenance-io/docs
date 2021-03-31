@@ -15,7 +15,7 @@ To configure a validator you need to acquire Hash to grant the newly created val
 Each node has a public key that identifies it to other participants on the network. To configure the full node created in [Join Provenance Testnet](join-provenance-testnet.md),  find the public key that identifies the node. Tendermint, the underlying consensus algorithm, provides a simple way to display the key for use.
 
 ```text
-~$ provenanced -t --home tmp/data tendermint show-validator
+provenanced --testnet tendermint show-validator
 ```
 
 ### Staking Hash to Become a Validator
@@ -25,7 +25,7 @@ The following command has a lot of detail that should be closely reviewed.
 | Parameter | Description |
 | :--- | :--- |
 | chain-id | the name of the network you're connecting to |
-| home | home directory containing the blockchain data for the node |
+| home | home directory containing the blockchain data for the node - this was set to `$PIO_HOME` in the [Joining Testnet](join-provenance-testnet.md) section |
 | moniker | the name of your validator that should be shown to other participants on the network |
 | pubkey | Public key determined using the tendermint show-validator command |
 | amount | amount of Hash to delegate as voting power on the network |
@@ -38,7 +38,7 @@ The following command has a lot of detail that should be closely reviewed.
 | broadcast-mode | wait until the block containing the transaction is committed |
 
 ```text
-provenanced -t \
+provenanced --testnet \
    --keyring-dir <location_of_keyring> \
    --chain-id <chain_id> \
    --home <location_of_blockchain> \

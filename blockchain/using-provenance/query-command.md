@@ -1,7 +1,7 @@
 # Query Command
 
 {% hint style="info" %}
-See [Using Provenanced](./) for basic information about the `provenanced` command
+See [Using Provenanced](./) for basic information about the `provenanced` command.
 {% endhint %}
 
 {% hint style="info" %}
@@ -68,6 +68,6 @@ provenanced --testnet q bank balances tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt 
 ```
 
 {% hint style="info" %}
-The `--node=tcp://rpc-0.test.provenance.io:26657` flag is not necessary when running against a locally installed i
+The `--node=tcp://rpc-0.test.provenance.io:26657` flag is not necessary when running against a locally installed node.
 {% endhint %}
 

@@ -56,9 +56,3 @@ version: 0.2.0
 commit: 75fef3a701af3787a56d4c8c6b40f67b95b79eb6
 ```
 
-{% page-ref page="running-a-node-1/" %}
-
-{% page-ref page="../using-provenance/" %}
-
-
-

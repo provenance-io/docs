@@ -4,8 +4,6 @@ description: Using the `provenanced` binary as a blockchain client.
 
 # Using Provenanced
 
-
-
 {% hint style="info" %}
 To get started with Provenance you first need to install Provenance and have access to a Provenance node.
 
@@ -76,19 +74,16 @@ The `provenanced` binary provides a command-line interface to create and query t
 
 ### Creating a Key\(s\)
 
-All interactions with Provenance are secured with a public/private key pair that will act as your account\(s\) on the blockchain. We use the 44/1/0/0/0 BIP32 path as an example where "1" is a reference to Provenance testnet. 
+All interactions with Provenance are secured with a public/private key pair that will act as your account\(s\) on the blockchain. We use the `44`'`/1'/0'/0/0` BIP32 path as an example where "1" is a reference to Provenance testnet. 
 
 {% hint style="success" %}
-HD Wallet Pathing  \([BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)\) \([BIP44 Coin Types](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)\)
-
-Mainnet - 44/505   
-Testnet - 44/1 
+Refer to the [Accounts](../basics/accounts.md) section for more information[ HD Wallet ](../basics/accounts.md#hd-wallet)paths.
 {% endhint %}
 
 Create a key pair and store it in a local Keyring \(change `<name-of-key>` to a string value of your choosing\):
 
 ```text
-provenanced keys add <name_of_key> -t --hd-path "44'/1'/0'/0/0"  -i
+provenanced keys add <name_of_key> --testnet --hd-path "44'/1'/0'/0/0"  -i
 ```
 
 ```text
@@ -107,7 +102,7 @@ When generating a new key it is important to store the generated mnemonic in a s
 This command will prompt you for a mnemonic to restore the key at a specific path.
 
 ```text
-provenanced keys add <name_of_key> --hd-path "44'/1'/0'/0/0"  -i -t
+provenanced keys add <name_of_key> --hd-path "44'/1'/0'/0/0"  -i --testnet
 ```
 
 ```text
@@ -188,7 +183,7 @@ Example `provenanced` command that uses `jq` to parse the output.
 #### Before
 
 ```text
-provenanced  -t q block
+provenanced  --testnet q block
 ```
 
 ```text
@@ -198,7 +193,7 @@ provenanced  -t q block
 #### After
 
 ```text
-provenanced  -t q block | jq ".block.last_commit.height"
+provenanced  --testnet q block | jq ".block.last_commit.height"
 ```
 
 ```text

@@ -4,7 +4,7 @@
 
 The $300+ trillion in global financial markets incur hundreds of billions of dollars in audit, custody, trustee, reconciliation and administrative costs each year. Many of these markets suffer from significant friction, lack of transparency and limited liquidity. Figure Technologies, Inc. \(Figure ® \) has launched a production blockchain, Provenance™, to transform financial services. 
 
-Provenance will dramatically reduce costs, improve liquidity, reduce risk and open new financial markets. Provenance is a proof of stake blockchain based on three key concepts: 
+Provenance will dramatically reduce costs, improve liquidity, reduce risk and open new financial markets. Provenance is a proof-of-stake blockchain based on three key concepts: 
 
 * Distributed - No entity owns Provenance, and identical information is held across multiple stakeholders. 
 * Immutable - Information is time stamped and cannot be changed. 

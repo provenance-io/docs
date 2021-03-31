@@ -18,6 +18,10 @@ While using the quick-start method provides a quick and easy way to start a test
 
 Use the following to start up a Provenance node in the foreground.
 
+{% hint style="info" %}
+Refer to [https://github.com/provenance-io/testnet](https://github.com/provenance-io/testnet) for the latest testnet version.  As of this writing, it is `0.2.0` as reflected in the version tags below.
+{% endhint %}
+
 ```text
 export PIO_HOME=~/.provenanced
 git clone https://github.com/provenance-io/provenance.git
@@ -41,7 +45,7 @@ provenanced start --testnet --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2
 The crisis module halts the blockchain under the circumstance that a blockchain [invariant](https://github.com/cosmos/cosmos-sdk/blob/master/docs/building-modules/invariants.md) is broken. Invariants can be registered with the application during the application initialization process.  During sync, it makes sense to disable this module so the `--x-crisis-skip-assert-invariants` is specified.
 {% endhint %}
 
-Once the node has synced it is joined to the Provenance testnet.  Note after the sync is completed, the information sent to the screen are associated with the live blockchain transactions. At this point, the local `provenanced` process is a testnet node suitable for learning the `provenanced` CLI, querying the blockchain, signing and submitting transactions, and developing applications that connect to mainnet. However, there are configuration options to the testnet node that are more suitable as a long-running process.
+Once the node has synced it is joined to the Provenance testnet.  Note after the sync is completed, the information sent to the screen is associated with the live blockchain transactions. At this point, the local `provenanced` process is a testnet node suitable for learning the `provenanced` CLI, querying the blockchain, signing and submitting transactions, and developing applications that connect to mainnet. However, there are configuration options to the testnet node that are more suitable as a long-running process.
 
 ## Setting Up a New Node
 
@@ -55,7 +59,7 @@ See the [testnet repo](https://github.com/provenance-io/testnet) for the latest 
 
 ### Cleaning up Existing testnet Node
 
-If the Quick Start was followed, it will have saved the configuration and start to the `$PIO_HOME` directory.  When setting up a new node, use the following to start from a fresh state by cleaning up artifacts and setting the `$PIO_HOME` environment variable.
+If the Quick Start was followed, it will have saved the configuration and state to the `$PIO_HOME` directory.  When setting up a new node, use the following to start from a fresh state by cleaning up artifacts and setting the `$PIO_HOME` environment variable.
 
 ```bash
 rm -rf ~/.provenanced
@@ -65,7 +69,7 @@ mkdir -p $PIO_HOME/config
 
 ### Download and Install Provenance
 
-Use `git` to download the `0.2.0` version of Provenance.
+Use `git` to download the latest testnet version of Provenance \(`0.2.0` as of this writing\):
 
 ```bash
 git clone -b v0.2.0 https://github.com/provenance-io/provenance.git
@@ -108,7 +112,7 @@ Before starting the `provenanced` node, a genesis file must be established.  Thi
 curl https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json > genesis.json
 ```
 
-Copy the `genesis.json` file to the Provenance home configuration directory:
+Move the `genesis.json` file to the Provenance home configuration directory:
 
 ```bash
 mv genesis.json $PIO_HOME/config
@@ -118,7 +122,7 @@ mv genesis.json $PIO_HOME/config
 
 > Provenance provides a base `config.toml` file that can be used instead of following these steps in this section.  [Refer to the "Using Provenance testnet config.toml" section for more information.](join-provenance-testnet.md#using-provenance-testnet-config-toml)
 
-The `$PIO_HOME/config/config.toml` contains important node settings including [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend.  This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node.  The [Configure as a Validator]() section will describe [validator node](../../../ecosystem/validator.md)-specific settings.
+The `$PIO_HOME/config/config.toml` contains important node settings including [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend.  This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node.  The [Become a Validator](become-a-validator.md) section will describe [validator node](../../../ecosystem/validator.md)-specific settings.
 
 #### Configure Seed Nodes
 

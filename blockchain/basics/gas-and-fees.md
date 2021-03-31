@@ -29,7 +29,7 @@ Thus, on Provenance, [`gas` is a special unit that is used to track the consumpt
 
 When an end-user account submits a transaction request, they must indicate 2 of the 3 following parameters \(the third one being implicit\): `fees`, `gas` and `gas-prices`. This signals how much they are willing to pay for nodes to execute their transaction.
 
-Provenance will verify that the gas prices provided with the transaction is greater than the node\(s\) `min-gas-prices` \(as a reminder, gas-prices can be deducted from the following equation: `fees = gas * gas-prices`\). `min-gas-prices` is a parameter local to each full-node and used to discard transactions that do not provide a minimum amount of fees. This ensures that the blockchain is not spammed with garbage transactions.
+Provenance will verify that the gas prices provided with the transaction is greater than the node\(s\) `min-gas-prices` \(as a reminder, gas-prices can be calculated from the following equation: `fees = gas * gas-prices`\). `min-gas-prices` is a parameter local to each full-node and used to discard transactions that do not provide a minimum amount of fees. This ensures that the blockchain is not spammed with garbage transactions.
 
 ![Conceptual Gas Flow](../../.gitbook/assets/image%20%2813%29.png)
 
@@ -39,8 +39,8 @@ The Conceptual Gas Flow diagram illustrates the transaction request gas calculat
   * A **Gas** limit to use for the transaction
   * The maximum **Gas Price** the requestor is willing to pay.
   * A **Requested Fee** is calculated as **`Gas * Gas Price`**.
-* The Transaction Request is submitted to a node, which in turn may submit it to other nodes until it reaches a validator node.  Each validator node sets their own **Minimum Gas Price.** 
-* Provenance will validate that the requested **Gas Price** is &gt;= **Minimum Gas Prices** for all selected nodes involved.
+* The Transaction Request is submitted to a node, which in turn may submit it to other nodes until it reaches a validator node.  Each node sets their own **Minimum Gas Price.** 
+* Provenance will validate that the requested **Gas Price** &gt;= **Minimum Gas Prices** for all selected nodes involved.
   * If the requested **Gas Price** is too low, the transaction is rejected and an error is sent back to the requestor.
 * Based on the transaction type and size, a **Gas Needed** amount is calculated by Provenance.
 * Provenance calculates a **Required Fee** as `Gas Needed * Minimum Gas Price`.
@@ -189,7 +189,7 @@ provenanced --testnet tx bank send tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6 tp1
 }
 ```
 
-Notice that the `gas_wanted` is lower than the `gas_used` and as a result, the transaction returned an error.  Also notice that the `gas_used` price fluctuated from our original `gas estimate` - note that gas will fluctuate.
+Notice that the `gas_wanted` is lower than the `gas_used` and as a result, the transaction returned an error.  Also notice that the `gas_used` price fluctuated from our original `gas estimate` - required gas prices will fluctuate.
 
 Also notice that even though we received an error response, the transaction was submitted \(marked as error\) and our account was charged the a fee of `1,500` for the `gas_wanted` amount where `1,500(fee) = 60,000 (gas) * 0.025 (gas-price)`
 
