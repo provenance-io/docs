@@ -6,7 +6,52 @@ Omnibus Banks receive and disburse fiat currency \(cash\) to and from transactin
 
 The primary role of the omnibus bank is to hold fiat deposits and correspondingly mint and burn stablecoin on Provenance to match these fiat deposits.  Stablecoin is critical to support bilateral transactions on Provenance that are absent of counterparty and settlement risk.  Banks take ownership of and use an API to interface with Provenance.  Banks earn float on the fiat deposits underlying the stablecoin for the performance of the minting and burning functions.
 
-## Process Flow Example 
+The Bank is integrated with Provenance through traditional technical protocols, where Provenance has the ability to initiate stablecoin transactions, subject to fulfilling commercially negotiated conditions codified in smart contracts. The flow of funds and the transacting parties are no different from traditional, off-chain transactions, and the bank’s operational processes do not change. 
+
+Any transacting party on Provenance that has to transfer funds to another participant will have to open an account with the relevant/selected omnibus bank by use case and region.
+
+## Technical Requirements
+
+To support transaction flows, a bank will execute the following actions via API in real time:
+
+* Initiate wire transfers to 3rd parties
+* Monitor for and identify incoming wires
+* Process ACH transfers and receive acknowledgements
+* Report returned items \(insufficient funds, account not found...etc\)
+* Retrieve daily transaction history on sub-accounts
+* Create and destroy temporary \(“virtual”\) escrow accounts
+
+## Process Flow Examples
+
+To illustrate, we'll walk through detailed process flows for a US Omnibus Bank supporting Provenance’s initial use case: loan origination, servicing, and financing. While Provenance is actively engaged with other use cases, this example aims to demonstrate typical operating processes and workflows. Note also that the illustrated process should be broadly applicable to any asset-backed financing, subject to specific regulatory requirements by jurisdiction and asset class.
+
+### Loan Funding
+
+Omnibus banks disburse funds to individual borrowers at direction of originator.
+
+![](https://lh3.googleusercontent.com/hVlhUCTzCrauFUkz9r3d1A9n2SWeteMfaB6dBaqv7zPtCJqK7iqyb79t8qspgLDZBAovAjpA9RUt8mPFZFLzrRO692x-dmajNvlgcU7sJSRtZIbYWis8cqAEMsWkY3Q5q1TUeJm2)
+
+The originator instructs Provenance to deliver cash movement instructions \(e.g. ACH\) which includes the disbursement amount and destination to the bank. The bank then processes the instructions. The bank sends the cash details to Provenance for the recording of the cash movement, and then the bank will release the funds to the borrower. The originator has visibility of all their transactions.
+
+### **Ongoing Cash Payments**
+
+Omnibus banks push ACH requests to clearinghouse, receive payments back.
+
+![](https://lh3.googleusercontent.com/XzUtTuct0coFqZsZsocO38hGDu3n7QkwZMMRp5FC1PjEL7sCpNsFJzXtEADQbSY5f2Z4fqym8kAOVwRaI-FtecmEbcrwdCmOSA4toS3jCUkQxmCLOPyWVQgKYCRzmEH7qBKwyofc)
+
+The servicer sets up smart contracts in order for Provenance to automate the payment pulls from borrowers accounts. Provenance sends the bank the instructions to collect the payments, which results in the bank pushing the file to the ACH network, and receiving funds back into the account specified. The Bank informs Provenance of the cash in order to create the immutable record of the payments, and finally, the bank then moves the funds from the servicer’s receiving account to the accounts of the asset owner, or to any service providers. Again, Provenance provides visibility to the servicer, including both the money received and notices of decline.
+
+### **Bilateral Asset Sales**
+
+Omnibus banks transfer cash from buyer’s account to seller’s account.
+
+![](https://lh5.googleusercontent.com/MzPTL-OaGO_iKpy2jfPENZz6l6tcBw4vfruyBNaKgpkyuZRVrBLeRIsO0RP9_9_tFyFYK898vr3PO1cnOwYzMSDt1SQFyXR5FexX4X-HSAs9QT-5XhkRC90ONbU15XZsb3dFs1X6)
+
+Seller and buyer agree upon price and amount, and notify Provenance with a smart contract. Both the seller and buyer must approve the transaction for it to complete. Once the funds have been received, Provenance, using smart contracts, updates the asset registry on chain to reflect the buyer as the new owner, and directs the bank to transfer the funds from the escrow account  to the seller’s account. 
+
+If both buyer and seller have accounts at the same Omnibus bank, transfers are executed by an internal bank ledger transaction. If the seller has an account at a separate Omnibus bank, the movement of funds from the escrow to the Seller’s account will be executed by a wire transfer.
+
+### Loan Pool Purchase
 
 Assume a fund is buying a pool of loans that are registered on Provenance.  That fund enters into a sale agreement with the seller and wires the transaction amount \(with an identifier\) to an omnibus bank.    
 

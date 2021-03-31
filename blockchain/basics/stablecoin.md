@@ -190,7 +190,7 @@ Now that we have a fully functioning stablecoin marker, let's continue and look 
 
 A middle-tier component, that we'll simply call "omnibus," will be used to describe the software processes that would be used to integrate Provenance with a core banking system. Omnibus will bridge a core banking system API with Provenance to monitor for banking transactions that require minting of stablecoin and to monitor for blockchain transactions that require burning of stablecoin. 
 
-### Fiat to Stablecoin
+### Fiat to Stablecoin \(Mint\)
 
 The process to convert fiat to stablecoin can be handled in several different ways. Here we'll look at a few that tend to be useful.  
 
@@ -212,9 +212,9 @@ In some cases it is necessary to allow a small scale user to initiate a pull of 
 
 ![](https://i.imgur.com/7wbQjWU.png)
 
-### Stablecoin to Fiat <a id="MintingBurningTransferring"></a>
+### Stablecoin to Fiat \(Burn\) <a id="MintingBurningTransferring"></a>
 
-Once a blockchain address holds stablecoin it is inevitable that they'll want to convert it back to fiat at some time in the future. To achieve this conversion the omnibus must understand where the outbound transfer of fiat will be sent and what reference to watch for on the blockchain when stablecoin is received for redemption. 
+Once a blockchain address holds stablecoin, it is necessary to provide a process to convert it to fiat at some time in the future. To achieve this conversion the omnibus must understand where the outbound transfer of fiat will be sent and what reference to watch for on the blockchain when stablecoin is received for redemption. 
 
 #### Memo Field
 
@@ -224,5 +224,9 @@ Once a blockchain address holds stablecoin it is inevitable that they'll want to
 
 ## Verified Coins
 
-While coins in general can be created on Provenance by any entity not all coins are issued by trusted entities. Trusting the creator of the coin is important because the store of value is a bridge for t-0 settlement with fiat. While the coin denom\(name\) is secured on Provenance, it is necessary to know your counter party when using stablecoins. Because of this necessary trust line between participants of the ecosystem, it is encouraged to verify the issuer of the coin.
+While coins in general can be created on Provenance by any entity not all coins are issued by trusted entities. Trusting the creator of the coin is important because the store of value is a bridge for t-0 settlement with fiat. While the coin denom\(name\) is secured on Provenance by an encryption key, it is necessary to know your counter party when using stablecoins to guarantee the validity of the entity backing the issued coin.
+
+Determining a method to verify trust lines between entities on the blockchain is an exercise that each entity should determine on their own, but using a trusted list of partner addresses can simplify choosing known good actors on the network. 
+
+
 
