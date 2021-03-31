@@ -10,7 +10,7 @@ The Bank is integrated with Provenance through traditional technical protocols, 
 
 Any transacting party on Provenance that has to transfer funds to another participant will have to open an account with the relevant/selected omnibus bank by use case and region.
 
-## Technical Requirements
+## Operational Recommendations
 
 To support transaction flows, a bank will execute the following actions via API in real time:
 
@@ -74,7 +74,7 @@ Wallet owners on Provenance can redeem their stablecoin from the omnibus bank at
 
 ![](../../.gitbook/assets/omnibus-bank-and-stablecoin-3-.png)
 
-## Stablecoin Properties  
+## Stablecoin Context
 
 Every stablecoin has a “minter” - the bank that created the coin.  ~~Only nationally chartered banks with access to the fed settlement system will be allowed to be omnibus banks for stablecoin.~~      
 
