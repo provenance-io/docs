@@ -14,7 +14,7 @@ A Coin on Provenance is implemented as a [Marker](../../modules/marker-module.md
 To follow along with this section refer to [Installing Provenance](../running-a-node/) to install the `provenanced` binary as well as have an [encryption key created](../using-provenance/#creating-a-key-s).
 {% endhint %}
 
-There are multiple ways to configure a coin to suit a business use case. Here is an example that demonstrates a stablecoin that will be minted and burned to keep the supply in circulation 1:1 with the backing fiat held by the issuer. 
+There are multiple ways to configure a coin to suit a business use case. Here is an example that demonstrates how a coin is created, minted, burned and transacted is accomplished. 
 
 | Parameter | Description |
 | :--- | :--- |
@@ -23,17 +23,17 @@ There are multiple ways to configure a coin to suit a business use case. Here is
 | key\_name | name of the key from the key store that was previously created |
 
 {% hint style="info" %}
-`<initial_supply>` will be set to `0` and a denom name of `lrc` will be used for this example.
+`<initial_supply>` will be set to `0 as this coin will not have a fixed supply.`
 {% endhint %}
 
 ```bash
-provenanced --testnet --chain-id pio-testnet-1 tx marker new <initial_supply><denom_name> --type COIN --from <key_name> --fees 5000nhash
+provenanced --testnet --chain-id pio-testnet-1 tx marker new <initial_supply><denom> --type COIN --from <key_name> --fees 5000nhash
 ```
 
 #### Verifying
 
 ```text
-provenanced q marker get lrc
+provenanced q marker get <denom>
 ```
 
 ```text
@@ -46,7 +46,7 @@ marker:
     address: tp12tpv7m43vu7dkfnq648q2l65v3tk9x6mn0x2a8
     pub_key: null
     sequence: "0"
-  denom: lrc
+  denom: <denom>
   manager: tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt
   marker_type: MARKER_TYPE_COIN
   status: MARKER_STATUS_PROPOSED
@@ -73,7 +73,7 @@ Marker permissions allow multiple different encryption keys to interact with the
 Allow the grantee to grant privileges to other addresses.
 
 ```text
-provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt lrc admin --from <key_name>--fees 5000nhash 
+provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt <denom> admin --from <key_name>--fees 5000nhash 
 ```
 
 #### \`mint\`
@@ -81,7 +81,7 @@ provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafug
 Allow the grantee to mint additional tokens.
 
 ```text
-provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt lrc mint --from <key_name> --fees 5000nhash
+provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt <denom> mint --from <key_name> --fees 5000nhash
 ```
 
 #### \`burn\` 
@@ -89,7 +89,7 @@ provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafug
 Allow the grantee to burn tokens.
 
 ```text
-provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt lrc burn --from <key_name> --fees 5000nhash
+provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt <denom> burn --from <key_name> --fees 5000nhash
 ```
 
 #### \`withdraw\`
@@ -97,7 +97,7 @@ provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafug
 Allow the grantee to withdraw minted tokens that are stored in the marker's account. 
 
 ```text
-provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt lrc withdraw --from <key_name> --fees 5000nhash
+provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt <denom> withdraw --from <key_name> --fees 5000nhash
 ```
 
 ### Review, Finalize and Activate
@@ -105,7 +105,7 @@ provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafug
 Let's review the marker to ensure that the permissions have been set correctly before it is finalized.
 
 ```text
-provenanced q marker get lrc
+provenanced q marker get <denom>
 ```
 
 ```text
@@ -123,7 +123,7 @@ marker:
     address: tp12tpv7m43vu7dkfnq648q2l65v3tk9x6mn0x2a8
     pub_key: null
     sequence: "0"
-  denom: lrc
+  denom: <denom>
   manager: tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt
   marker_type: MARKER_TYPE_COIN
   status: MARKER_STATUS_PROPOSED
@@ -138,19 +138,19 @@ Note the permissions for the address allow `ADMIN, BURN, MINT`
 Finalizing the marker will cause the marker to begin enforcing the permissions granted. The manager will no longer be able to modify the marker without permissions after finalization.
 
 ```text
-provenanced --testnet --chain-id pio-testnet-1 tx marker finalize lrc --from <key_name> --fees 5000nhash
+provenanced --testnet --chain-id pio-testnet-1 tx marker finalize <denom> --from <key_name> --fees 5000nhash
 ```
 
 Activating the marker will ensure that the supply is updated according to the settings for total supply. 
 
 ```text
-provenanced --testnet --chain-id pio-testnet-1 tx marker activate lrc --from <key_name> --fees 5000nhash
+provenanced --testnet --chain-id pio-testnet-1 tx marker activate <denom> --from <key_name> --fees 5000nhash
 ```
 
 #### Verify Activation
 
 ```text
-provenanced q marker get lrc
+provenanced q marker get <denom>
 ```
 
 ```text
@@ -169,7 +169,7 @@ marker:
     address: tp12tpv7m43vu7dkfnq648q2l65v3tk9x6mn0x2a8
     pub_key: null
     sequence: "0"
-  denom: lrc
+  denom: <denom>
   manager: ""
   marker_type: MARKER_TYPE_COIN
   status: MARKER_STATUS_ACTIVE
@@ -197,7 +197,7 @@ access_control:
 
 * A marker has been created and now represents a stablecoin valued 1:1 with fiat inventoried by an institution. 
 * Permissions on the marker have been granted to a single encryption key that has permissions to grant/revoke access, mint/burn token. 
-* A denom of `lrc` has been established on Provenance which is the name reference for this coin. 
+* A `denom` has been established on Provenance as the name reference for this coin. 
 
 Now that we have a fully functioning coin, let's continue and look at how we mint, burn and transfer it. 
 
@@ -206,13 +206,13 @@ Now that we have a fully functioning coin, let's continue and look at how we min
 ### Minting
 
 ```text
-provenanced --testnet --chain-id pio-testnet-1 --from stakeholder1 --fees 5000nhash tx marker mint 500lrc
+provenanced --testnet --chain-id pio-testnet-1 --from stakeholder1 --fees 5000nhash tx marker mint 500provenanced --testnet --chain-id pio-testnet-1 --from stakeholder1 --fees 5000nhash tx marker mint 500<denom>
 ```
 
 ### Burning
 
 ```text
-provenanced --testnet --chain-id pio-testnet-1 --from stakeholder1 --fees 5000nhash tx marker burn 500lrc
+provenanced --testnet --chain-id pio-testnet-1 --from stakeholder1 --fees 5000nhash tx marker burn 500<denom>
 ```
 
 {% hint style="success" %}
@@ -227,7 +227,7 @@ provenanced --testnet --chain-id pio-testnet-1 q bank balances tp12tpv7m43vu7dkf
 ```text
 balances:
 - amount: "500"
-  denom: lrc
+  denom: <denom>
 ```
 {% endhint %}
 
@@ -246,7 +246,7 @@ Let's look at the current coin values held by the three addresses involved in th
 ```text
 balances:
 - amount: "500"
-  denom: lrc
+  denom: <denom>
 ```
 
 #### Address with Permissions to Withdraw `tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt`
@@ -254,7 +254,7 @@ balances:
 ```text
 balances:
 - amount: "0"
-  denom: lrc
+  denom: <denom>
 ```
 
 #### Recipient Address `tp1jdwgsdhdu692wsfreymglvz6aam59jh3uef4ve`
@@ -262,7 +262,7 @@ balances:
 ```text
 balances:
 - amount: "0"
-  denom: lrc
+  denom: <denom>
 ```
 
 {% hint style="info" %}
@@ -274,7 +274,7 @@ The balances that are `0` above are shown for example purposes only and will not
 As the address with permissions to withdraw from the marker, we can move coin that has been minted to any address on the Provenance blockchain. 
 
 ```text
- provenanced --testnet --chain-id pio-testnet-1 --fees 5000nhash --from <key_name> tx marker withdraw lrc 500lrc <recipient_address>
+ provenanced --testnet --chain-id pio-testnet-1 --fees 5000nhash --from <key_name> tx marker withdraw <denom> 500<denom> <recipient_address>
 ```
 
 Once the withdraw has been completed the balances of two accounts have been updated. 
@@ -286,7 +286,7 @@ Once the withdraw has been completed the balances of two accounts have been upda
 ```text
 balances:
 - amount: "0"
-  denom: lrc
+  denom: <denom>
 ```
 
 #### Recipient Address `tp1jdwgsdhdu692wsfreymglvz6aam59jh3uef4ve`
@@ -294,11 +294,11 @@ balances:
 ```text
 balances:
 - amount: "500"
-  denom: lrc
+  denom: <denom>
 ```
 
 {% hint style="info" %}
-The recipient has received 500lrc that was minted, withdrawn and transferred to their account. Note that the withdraw process includes the recipient as a part of the process. 
+The recipient has received 500`denom` that was minted, withdrawn and transferred to their account. Note that the withdraw process includes the recipient as a part of the process. 
 {% endhint %}
 
 ### Holders of Coin
@@ -316,7 +316,7 @@ balances:
 - address: tp1jdwgsdhdu692wsfreymglvz6aam59jh3uef4ve
   coins:
   - amount: "500"
-    denom: lrc
+    denom: <denom>
 ```
 
 ### Review
@@ -332,6 +332,4 @@ The coin created above can be used as a stablecoin to provide a bridge between f
 {% hint style="info" %}
 See [Omnibus Banks](../../ecosystem/participants/omnibus-banks.md) for more participant information.
 {% endhint %}
-
-
 
