@@ -81,6 +81,8 @@
 
 ## Apps Built on Provenance <a id="provenance-applications"></a>
 
+* [Apps Built On Provenance](provenance-applications/apps-powered-by-provenance.md)
+* [Loan Origination System \(LOS\)](provenance-applications/loan-origination-system-los.md)
 * [Portfolio Manager](provenance-applications/portfolio-manager-market-place.md)
 * [Marketplace](provenance-applications/marketplace-digital-funds-services.md)
 * [Adnales](provenance-applications/adnales.md)
