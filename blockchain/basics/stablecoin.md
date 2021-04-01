@@ -228,19 +228,106 @@ provenanced --testnet --chain-id pio-testnet-1 q bank balances tp12tpv7m43vu7dkf
 balances:
 - amount: "500"
   denom: lrc
-pagination:
-  next_key: null
-  total: "0"
 ```
 {% endhint %}
 
-### Transferring
+### Withdrawing \(Transfer\)
+
+Withdrawing from a marker involves three addresses: 
+
+1. Marker Address
+2. Address with Permissions to Withdraw _\(This is the address that signs for the transaction\)_
+3. Recipient Address
+
+Let's look at the current coin values held by the three addresses involved in the `withdraw` transaction. 
+
+#### Coin Marker `tp12tpv7m43vu7dkfnq648q2l65v3tk9x6mn0x2a8`
+
+```text
+balances:
+- amount: "500"
+  denom: lrc
+```
+
+#### Address with Permissions to Withdraw `tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt`
+
+```text
+balances:
+- amount: "0"
+  denom: lrc
+```
+
+#### Recipient Address `tp1jdwgsdhdu692wsfreymglvz6aam59jh3uef4ve`
+
+```text
+balances:
+- amount: "0"
+  denom: lrc
+```
+
+{% hint style="info" %}
+The balances that are `0` above are shown for example purposes only and will not be displayed in output from the provenanced command.
+{% endhint %}
+
+#### Executing the Withdraw
+
+As the address with permissions to withdraw from the marker, we can move coin that has been minted to any address on the Provenance blockchain. 
+
+```text
+ provenanced --testnet --chain-id pio-testnet-1 --fees 5000nhash --from <key_name> tx marker withdraw lrc 500lrc <recipient_address>
+```
+
+Once the withdraw has been completed the balances of two accounts have been updated. 
 
 
+
+#### Coin Marker `tp12tpv7m43vu7dkfnq648q2l65v3tk9x6mn0x2a8`
+
+```text
+balances:
+- amount: "0"
+  denom: lrc
+```
+
+#### Recipient Address `tp1jdwgsdhdu692wsfreymglvz6aam59jh3uef4ve`
+
+```text
+balances:
+- amount: "500"
+  denom: lrc
+```
+
+{% hint style="info" %}
+The recipient has received 500lrc that was minted, withdrawn and transferred to their account. Note that the withdraw process includes the recipient as a part of the process. 
+{% endhint %}
+
+### Holders of Coin
+
+A coin holder often wants to understand what addresses their coin is being held by. Provenance provides a simple way of perform this lookup.
+
+```text
+provenanced --testnet --chain-id pio-testnet-1 q marker holding <denom>
+```
+
+We can now see that the current holders of the coin we created, minted, and transferred are just the single recipient. 
+
+```text
+balances:
+- address: tp1jdwgsdhdu692wsfreymglvz6aam59jh3uef4ve
+  coins:
+  - amount: "500"
+    denom: lrc
+```
+
+### Review
+
+It is important to discern that addresses are identifiers that point to accounts on Provenance. Each account on Provenance can hold coins of various denominations and that [Markers](../../modules/marker-module.md) are a special account that has its own denomination, can hold coins \(like an account\), and can hold NFTs \(Scopes\) described later. 
+
+In this exercise a coin was created, tokens of that coin were minted, and then subsequently transferred to a recipients address. The tokens that were transferred are now held by the recipient and are no longer within the control of the marker, manager, addresses that have permissions on the marker. 
 
 ## Stablecoins
 
-Stablecoins provide a bridge between fiat and digital currency used as the basis for transactions of value on Provenance. Each new stablecoin is represented on the blockchain as a [marker ](../../modules/marker-module.md)managed by the issuer. Issuers of stablecoin manage fiat currency in a traditional banking account structure that handles the necessary BSA/AML obligations. Issuing institutions have complete control over the management of their coin and provide a redemption method where a holder can convert the digital holding to fiat over banking rails. 
+The coin created above can be used as a stablecoin to provide a bridge between fiat and digital currency as the basis for transactions of value on Provenance. Each new stablecoin is represented on the blockchain as a [marker ](../../modules/marker-module.md)managed by the issuer. Issuers of stablecoin manage fiat currency in a traditional banking account structure that handles the necessary BSA/AML obligations. Issuing institutions have complete control over the management of their coin and provide a redemption method where a holder can convert the digital holding to fiat over banking rails. 
 
 {% hint style="info" %}
 See [Omnibus Banks](../../ecosystem/participants/omnibus-banks.md) for more participant information.
