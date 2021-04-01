@@ -56,6 +56,14 @@ marker:
 
 The marker is now in `PROPOSED` status and is ready for configuration.
 
+{% hint style="success" %}
+Notice that the address for the marker is a newly created Provenance address that the utilized encryption key manages.
+
+**Marker Address** `tp12tpv7m43vu7dkfnq648q2l65v3tk9x6mn0x2a8`
+
+**Manager** **Address** `tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt`
+{% endhint %}
+
 ### Setting Marker Permissions <a id="Setting-Permissions"></a>
 
 Marker permissions allow multiple different encryption keys to interact with the underlying functionality it provides. The address used in this example is the same as the manager of the marker, making a single key the only permissioned user to mint/burn and grant/revoke permissions.  
@@ -82,6 +90,14 @@ Allow the grantee to burn tokens.
 
 ```text
 provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt lrc burn --from <key_name> --fees 5000nhash
+```
+
+#### \`withdraw\`
+
+Allow the grantee to withdraw minted tokens that are stored in the marker's account. 
+
+```text
+provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt lrc withdraw --from <key_name> --fees 5000nhash
 ```
 
 ### Review, Finalize and Activate
@@ -146,6 +162,7 @@ marker:
     - ACCESS_ADMIN
     - ACCESS_BURN
     - ACCESS_MINT
+    - ACCESS_WITHDRAW
   allow_governance_control: false
   base_account:
     account_number: "25"
@@ -172,6 +189,7 @@ access_control:
     - ACCESS_ADMIN
     - ACCESS_BURN
     - ACCESS_MINT
+    - ACCESS_WITHDRAW
 ```
 {% endhint %}
 
@@ -187,13 +205,38 @@ Now that we have a fully functioning coin, let's continue and look at how we min
 
 ### Minting
 
-### 
+```text
+provenanced --testnet --chain-id pio-testnet-1 --from stakeholder1 --fees 5000nhash tx marker mint 500lrc
+```
 
 ### Burning
 
+```text
+provenanced --testnet --chain-id pio-testnet-1 --from stakeholder1 --fees 5000nhash tx marker burn 500lrc
+```
 
+{% hint style="success" %}
+Verification of minting and burning needs to be accomplished by querying the **address of the marker** not the address that has permissions to mint and burn. 
+
+### Query
+
+```text
+provenanced --testnet --chain-id pio-testnet-1 q bank balances tp12tpv7m43vu7dkfnq648q2l65v3tk9x6mn0x2a8
+```
+
+```text
+balances:
+- amount: "500"
+  denom: lrc
+pagination:
+  next_key: null
+  total: "0"
+```
+{% endhint %}
 
 ### Transferring
+
+
 
 ## Stablecoins
 
