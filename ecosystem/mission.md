@@ -1,4 +1,4 @@
-# Mission
+# History
 
 **Blockchain has the potential to change the world of finance.** 
 
