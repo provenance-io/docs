@@ -1,4 +1,4 @@
-# Contract Execution Environment
+# Provenance \(P8e\) Contract Execution Environment
 
 P8e was designed to directly integrate with the Provenance Metadata Module to simplify generating signed records of an asset’s provenance as either a single party or in conjunction with multiple interacting parties. At its core, P8e is a GRPC API that is invoked using a Kotlin SDK. The API processes data through a deterministic client side process that can be shared with other parties to transform data into a hashable format.
 

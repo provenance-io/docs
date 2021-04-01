@@ -10,23 +10,23 @@ Provenance is a public blockchain network designed and developed to support [fin
 
 ### Financial Services Use Cases
 
-Provenance facilitates the establishment of an ecosystem that garners participation amongst finance functions including asset originators, fund managers, servicers, banks, and investors.
+Provenance facilitates the establishment of an ecosystem that garners participation amongst financial functions including asset originators, fund managers, servicers, banks, and investors.
 
 Provenance is an eco-friendly, public **proof-of-stake blockchain** that reduces unnecessary computational waste that encumbers proof-of-work blockchains in use today. 
 
-Assets are defined natively using the [Contract Execution Environment](../../p8e/overview.md) in conjunction with the [Metadata Module](../../modules/metadata-module.md) enabling organizations to quickly define asset classes, permission data to counter-parties, create mutually agreed-upon processes, define ownership structures, and exchange on third party marketplaces. 
+Assets are defined natively using the Provenance [Contract Execution Environment](../../p8e/overview.md) in conjunction with the [Metadata Module](../../modules/metadata-module.md) enabling organizations to quickly define asset classes, permission data to counter-parties, create mutually agreed-upon processes, define ownership structures, and exchange on third party marketplaces. 
 
 [Hash](../../ecosystem/hash-2.0.md) is the Provenance utility token to stake, govern, secure, and transact on the network. 
 
 Large financial institutions, investors, technical leaders, and individuals provide the foundation of security and stability of the Provenance network by staking [Hash](../../ecosystem/hash-2.0.md) as a network [Validator](../../ecosystem/validator.md) or [Delegator](../../ecosystem/delegator.md) for which they are rewarded with a fee.
 
-While Provenance facilitates the establishment of an ecosystem that has garnered participation across all areas of finance including, but not limited to, asset originators, fund managers, servicers, and banks Provenance is openly extensible for developers to build innovative applications that address new use cases. 
+While Provenance facilitates the establishment of an ecosystem that has garnered participation across all areas of finance including, but not limited to, asset originators, fund managers, servicers, and banks, Provenance is openly extensible for developers to build innovative applications that address new use cases. 
 
 Provenance is composed of three core concepts.
 
-* Modules that implement financial services business logic.  Modules are composed to realize complex financial services processes.
-* A smart contracting engine to develop and deploy contracts directly to the Provenance blockchain.
-* Off-chain client-side agreements using the Contract Execution Environment.
+* **Modules** that implement financial services business logic.  Modules are composed to realize complex financial services processes.
+* A **smart contracting engine** to develop and deploy contracts directly to the Provenance blockchain.
+* **Off-chain client-side agreements** using the Contract Execution Environment.
 
 Each of these core concepts has its own set of strengths allowing complete control of the consumer's private and confidential data.
 
