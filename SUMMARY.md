@@ -27,7 +27,7 @@
 
 ## Ecosystem
 
-* [Untitled](ecosystem/untitled.md)
+* [Mission](ecosystem/mission-1.md)
 * [History](ecosystem/mission.md)
 * [Value Proposition](ecosystem/value-proposition.md)
 * [Provenance Foundation](ecosystem/foundation.md)
