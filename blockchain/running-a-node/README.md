@@ -34,7 +34,7 @@ cd provenance && make install
 ```
 
 {% hint style="info" %}
-`<version> is prefixed with 'v' when cloning version branches (eg. v0.2.1)`
+`<version> is prefixed with 'v' when cloning version branches (eg. v0.2.0)`
 {% endhint %}
 
 ### Verify

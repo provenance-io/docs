@@ -14,7 +14,7 @@ A Coin on Provenance is implemented as a [Marker](../../modules/marker-module.md
 To follow along with this section refer to [Installing Provenance](../running-a-node/) to install the `provenanced` binary as well as have an [encryption key created](../using-provenance/#creating-a-key-s).
 {% endhint %}
 
-There are multiple ways to configure a coin to suit a business use case. Here is an example that demonstrates how a coin is created, minted, burned and transacted is accomplished. 
+There are multiple ways to configure a coin to suit a business use case. Here is an example that demonstrates how a coin is created, minted, burned and transacted. 
 
 | Parameter | Description |
 | :--- | :--- |
@@ -33,7 +33,7 @@ provenanced --testnet --chain-id pio-testnet-1 tx marker new <initial_supply><de
 #### Verifying
 
 ```text
-provenanced q marker get <denom>
+provenanced --testnet q marker get <denom>
 ```
 
 ```text
@@ -66,7 +66,7 @@ Notice that the address for the marker is a newly created Provenance address tha
 
 ### Setting Marker Permissions <a id="Setting-Permissions"></a>
 
-Marker permissions allow multiple different encryption keys to interact with the underlying functionality it provides. The address used in this example is the same as the manager of the marker, making a single key the only permissioned user to mint/burn and grant/revoke permissions.  
+Marker permissions allow multiple encryption keys to interact with the underlying functionality it provides. The address used in this example is the same as the manager of the marker, making a single key the only permissioned user to mint/burn and grant/revoke permissions.  
 
 #### \`admin\` 
 
@@ -206,13 +206,15 @@ Now that we have a fully functioning coin, let's continue and look at how we min
 ### Minting
 
 ```text
-provenanced --testnet --chain-id pio-testnet-1 --from stakeholder1 --fees 5000nhash tx marker mint 500provenanced --testnet --chain-id pio-testnet-1 --from stakeholder1 --fees 5000nhash tx marker mint 500<denom>
+provenanced --testnet --chain-id pio-testnet-1 \
+  --from stakeholder1 --fees 5000nhash tx marker mint 500<denom>
 ```
 
 ### Burning
 
 ```text
-provenanced --testnet --chain-id pio-testnet-1 --from stakeholder1 --fees 5000nhash tx marker burn 500<denom>
+provenanced --testnet --chain-id pio-testnet-1 \
+  --from stakeholder1 --fees 5000nhash tx marker burn 500<denom>
 ```
 
 {% hint style="success" %}
@@ -278,8 +280,6 @@ As the address with permissions to withdraw from the marker, we can move coin th
 ```
 
 Once the withdraw has been completed the balances of two accounts have been updated. 
-
-
 
 #### Coin Marker `tp12tpv7m43vu7dkfnq648q2l65v3tk9x6mn0x2a8`
 
