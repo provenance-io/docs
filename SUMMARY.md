@@ -22,8 +22,7 @@
     * [Configure a Sentry](blockchain/running-a-node/running-a-node-1/configure-a-sentry.md)
 * [Using Provenanced](blockchain/using-provenance/README.md)
   * [Query Command](blockchain/using-provenance/query-command.md)
-  * [Markers](blockchain/using-provenance/markers/README.md)
-    * [Tx Command](blockchain/using-provenance/markers/tx-command.md)
+  * [Tx Command](blockchain/using-provenance/tx-command.md)
 
 ## Ecosystem
 
