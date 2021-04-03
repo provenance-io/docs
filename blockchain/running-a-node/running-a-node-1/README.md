@@ -8,7 +8,7 @@ Nodes on the Provenance blockchain network are simply servers started by the `pr
 
 ## Node Configurations
 
-`provenanced` is an all-encompassing command that may operate as any type of node completely dependent on how it has been configured. When determining how a particular node should be configured, it is necessary to take a deeper look at Provenance and how it is structured. 
+`provenanced` is an all-encompassing command that may operate as any type of node, depending on how it has been configured. When determining how a particular node should be configured, it is necessary to take a deeper look at Provenance and how it is structured. 
 
 ### Seed Node
 

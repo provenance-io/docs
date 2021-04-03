@@ -16,7 +16,7 @@ Provenance is wrapped into a single executable named `provenanced`. All interact
 On MacOS, LevelDB can be installed with `brew install leveldb`.
 {% endhint %}
 
-### \`provenanced\` Install
+### `provenanced` Install
 
 All interaction \(whether creating a node, querying, or invoking actions\) with Provenance can be accomplished using the `provenanced` command. 
 

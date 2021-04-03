@@ -20,7 +20,7 @@ There are multiple ways to configure a coin to suit a business use case. Here is
 | :--- | :--- |
 | `initial_supply` | Initial supply of tokens as an integer |
 | `denom` | Name of the coin being created |
-| `key_name` | ame of the key from the key store that was previously created |
+| `key_name` | Name of the key from the key store that was previously created |
 
 {% hint style="info" %}
 `<initial_supply>` will be set to 0, indicating that this coin will not have a fixed supply.

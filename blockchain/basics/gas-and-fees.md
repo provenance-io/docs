@@ -16,7 +16,7 @@ For an in-depth understanding of the transaction lifecycle and how and when a Co
 
 Fees limit the growth of the state stored by every full node and allow for general purpose censorship of transactions of little economic value. Fees are best suited as an anti-spam mechanism where validators are disinterested in the use of the network and identities of users.
 
-Fees are determined by the gas limits and gas prices transactions provide, where`fees = ceil(gasLimit * gasPrices)`. Transactions incur gas costs for all state reads/writes, signature verification, as well as costs proportional to the transaction size \(this is known as `gas needed`\). Node operators set minimum gas prices when starting their nodes. If a minimum gas price is not set Provenanced defaults to `0.025nhash`.
+Fees are determined by the gas limits and gas prices transactions provide, where`fees = ceil(gasLimit * gasPrices)`. Transactions incur gas costs for all state reads/writes, signature verification, as well as costs proportional to the transaction size \(this is known as `gas needed`\). Node operators set minimum gas prices when starting their nodes. If a minimum gas price is not set, `provenanced` defaults to `0.025nhash`.
 
 When adding transactions to the [mempool or gossipping transactions](transaction-lifecycle.md), nodes check if the transaction's gas prices, which are determined by the provided fees, meet the node's minimum gas prices.
 
@@ -27,7 +27,7 @@ Thus, on Provenance, [`gas` is a special unit that is used to track the consumpt
 
 ## Gas Flow
 
-When an end-user account submits a transaction request, they must indicate 2 of the 3 following parameters \(the third one being implicit\): `fees`, `gas` and `gas-prices`. This signals how much they are willing to pay for nodes to execute their transaction.
+When an end-user account submits a transaction request, they must indicate two of the three following parameters \(the third one being implicit\): `fees`, `gas`, and `gas-prices`. This signals how much they are willing to pay for nodes to execute their transaction.
 
 Provenance will verify that the gas prices provided with the transaction is greater than the node\(s\) `min-gas-prices` \(as a reminder, gas-prices can be calculated from the following equation: `fees = gas * gas-prices`\). `min-gas-prices` is a parameter local to each full-node and used to discard transactions that do not provide a minimum amount of fees. This ensures that the blockchain is not spammed with garbage transactions.
 
@@ -104,7 +104,7 @@ balances:
 ```
 
 {% hint style="info" %}
-What is `nhash`?  `nhash` is the smallet unit of Hash, a nano-Hash, where 1 Hash = 1,000,000,000 `nhash`.   
+What is `nhash`?  `nhash` is the smallest unit of Hash, a nano-Hash, where 1 Hash = 1,000,000,000 `nhash`.   
 {% endhint %}
 
 Next, let's estimate the `gas` requirements for a `1nhash` Hash transfer transaction from our account:
