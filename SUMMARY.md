@@ -29,8 +29,12 @@
 * [Provenance](ecosystem/provenance/README.md)
   * [Value Proposition](ecosystem/provenance/value-proposition.md)
   * [History](ecosystem/provenance/mission.md)
+  * [Hash](ecosystem/provenance/hash-2.0.md)
+  * [Governance](ecosystem/provenance/governance/README.md)
+    * [Voting](ecosystem/provenance/governance/voting/README.md)
+      * [Software Upgrade Proposal](ecosystem/provenance/governance/voting/software-upgrade-proposal.md)
+  * [Fees/Distribution](ecosystem/provenance/distribution.md)
   * [Legal Standing](ecosystem/provenance/legal-standing.md)
-* [Provenance Foundation](ecosystem/foundation.md)
 * [The Foundation](ecosystem/the-p-foundation.md)
 * [The Community](ecosystem/the-p-community/README.md)
   * [Validator](ecosystem/the-p-community/validator.md)
@@ -40,11 +44,6 @@
     * [Omnibus Banks](ecosystem/the-p-community/participants/omnibus-banks.md)
 * [The Funding Program](ecosystem/the-p-funding-program.md)
 * [The Ecosystem](ecosystem/the-p-ecosystem.md)
-* [Hash](ecosystem/hash-2.0.md)
-* [Governance](ecosystem/governance/README.md)
-  * [Voting](ecosystem/governance/voting/README.md)
-    * [Software Upgrade Proposal](ecosystem/governance/voting/software-upgrade-proposal.md)
-* [Fees/Distribution](ecosystem/distribution.md)
 
 ## Modules
 
