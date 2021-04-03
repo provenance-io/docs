@@ -6,24 +6,24 @@ description: High-level creation of a coin marker on Provenance.
 
 ## Overview
 
-A Coin on Provenance is implemented as a [Marker](../../modules/marker-module.md). Each coin that is generated can be transferred freely between blockchain [accounts ](accounts.md)and represents a value exchange between parties. At its core this is an extremely simple structure that is meant to be used as a building block for a more complex use case, such as a [stablecoin](stablecoin.md#stablecoins).
+A Coin on Provenance is implemented as a [Marker](../../modules/marker-module.md). Each coin that is generated can be transferred freely between blockchain [accounts ](accounts.md)and represents a value exchange between parties. A coin marker is a simple structure that is meant to be used as a building block for a more complex use case, such as a [stablecoin](stablecoin.md#stablecoins).
 
 ## Creating a Coin
 
 {% hint style="info" %}
-To follow along with this section refer to [Installing Provenance](../running-a-node/) to install the `provenanced` binary and have an [encryption key created](../using-provenance/#creating-a-key-s).
+To follow along with this section, refer to [Installing Provenance](../running-a-node/) to install the `provenanced` binary and have an [encryption key created](../using-provenance/#creating-a-key-s).
 {% endhint %}
 
-There are multiple ways to configure a coin to suit a business use case. Here is an example that demonstrates how a coin is created, minted, burned and transacted. 
+There are multiple ways to configure a coin to suit a business use case. Here is an example that demonstrates how a coin is created, minted, burned, and transacted. 
 
 | Parameter | Description |
 | :--- | :--- |
-| `initial_supply` | initial supply of tokens as an integer |
-| `denom` | name of the coin being created |
-| `key_name` | name of the key from the key store that was previously created |
+| `initial_supply` | Initial supply of tokens as an integer |
+| `denom` | Name of the coin being created |
+| `key_name` | ame of the key from the key store that was previously created |
 
 {% hint style="info" %}
-`<initial_supply>` will be set to `0 as this coin will not have a fixed supply.`
+`<initial_supply>` will be set to 0, indicating that this coin will not have a fixed supply.
 {% endhint %}
 
 ```bash
@@ -68,7 +68,7 @@ Notice that the address for the marker is a newly created Provenance address tha
 
 Marker permissions allow multiple encryption keys to interact with the underlying functionality it provides. The address used in this example is the same as the manager of the marker, making a single key the only permissioned user to mint/burn and grant/revoke permissions.  
 
-#### \`admin\` 
+#### `admin` 
 
 Allow the grantee to grant privileges to other addresses.
 
@@ -76,7 +76,7 @@ Allow the grantee to grant privileges to other addresses.
 provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt <denom> admin --from <key_name>--fees 5000nhash 
 ```
 
-#### \`mint\`
+#### `mint`
 
 Allow the grantee to mint additional tokens.
 
@@ -84,7 +84,7 @@ Allow the grantee to mint additional tokens.
 provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt <denom> mint --from <key_name> --fees 5000nhash
 ```
 
-#### \`burn\` 
+#### `burn`
 
 Allow the grantee to burn tokens.
 
@@ -92,7 +92,7 @@ Allow the grantee to burn tokens.
 provenanced --testnet --chain-id pio-testnet-1 tx marker grant tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt <denom> burn --from <key_name> --fees 5000nhash
 ```
 
-#### \`withdraw\`
+#### `withdraw`
 
 Allow the grantee to withdraw minted tokens that are stored in the marker's account. 
 
@@ -195,11 +195,11 @@ access_control:
 
 ## Review
 
-* A marker has been created and now represents a stablecoin valued 1:1 with fiat inventoried by an institution. 
+* A marker has been created and now represents a new coin type.
 * Permissions on the marker have been granted to a single encryption key that has permissions to grant/revoke access, mint/burn token. 
 * A `denom` has been established on Provenance as the name reference for this coin. 
 
-Now that we have a fully functioning coin, let's continue and look at how we mint, burn and transfer it. 
+Now that we have a fully functioning coin, let's continue and look at how we mint, burn, and transfer it. 
 
 ## Basic Usage
 
@@ -321,7 +321,7 @@ balances:
 
 ### Review
 
-It is important to discern that addresses are identifiers that point to accounts on Provenance. Each account on Provenance can hold coins of various denominations and that [Markers](../../modules/marker-module.md) are a special account that has its own denomination, can hold coins \(like an account\), and can hold NFTs \(Scopes\) described later. 
+It is important to discern that addresses are identifiers that point to accounts on Provenance. Each [account](accounts.md) on Provenance can hold coins of various denominations, and [markers](../../modules/marker-module.md) are a special type of account that has its own denomination, can hold coins, and can hold NFTs \(Scopes\) described later. 
 
 In this exercise a coin was created, tokens of that coin were minted, and then subsequently transferred to a recipients address. The tokens that were transferred are now held by the recipient and are no longer within the control of the marker, manager, addresses that have permissions on the marker. 
 
