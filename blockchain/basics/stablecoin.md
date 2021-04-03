@@ -330,6 +330,6 @@ In this exercise a coin was created, tokens of that coin were minted, and then s
 The coin created above can be used as a stablecoin to provide a bridge between fiat and digital currency as the basis for transactions of value on Provenance. Each new stablecoin is represented on the blockchain as a [marker ](../../modules/marker-module.md)managed by the issuer. Issuers of stablecoin manage fiat currency in a traditional banking account structure that handles the necessary BSA/AML obligations. Issuing institutions have complete control over the management of their coin and provide a redemption method where a holder can convert the digital holding to fiat over banking rails. 
 
 {% hint style="info" %}
-See [Omnibus Banks](../../ecosystem/participants/omnibus-banks.md) for more participant information.
+See [Omnibus Banks](../../ecosystem/the-p-community/participants/omnibus-banks.md) for more participant information.
 {% endhint %}
 

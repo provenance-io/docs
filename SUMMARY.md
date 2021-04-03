@@ -1,14 +1,6 @@
 # Table of contents
 
 * [The Provenance Blockchain](README.md)
-* [Provenance](provenance.md)
-
-## Provenance <a id="provenance-collaboration"></a>
-
-* [The Foundation](provenance-collaboration/the-p-foundation.md)
-* [The Community](provenance-collaboration/the-p-community.md)
-* [The Funding Program](provenance-collaboration/the-p-funding-program.md)
-* [The Ecosystem](provenance-collaboration/the-p-ecosystem.md)
 
 ## Blockchain
 
@@ -34,21 +26,25 @@
 
 ## Ecosystem
 
-* [Mission](ecosystem/mission-1.md)
-* [History](ecosystem/mission.md)
-* [Value Proposition](ecosystem/value-proposition.md)
+* [Provenance](ecosystem/provenance/README.md)
+  * [Value Proposition](ecosystem/provenance/value-proposition.md)
+  * [History](ecosystem/provenance/mission.md)
+  * [Legal Standing](ecosystem/provenance/legal-standing.md)
 * [Provenance Foundation](ecosystem/foundation.md)
+* [The Foundation](ecosystem/the-p-foundation.md)
+* [The Community](ecosystem/the-p-community/README.md)
+  * [Validator](ecosystem/the-p-community/validator.md)
+  * [Delegator](ecosystem/the-p-community/delegator.md)
+  * [Participants](ecosystem/the-p-community/participants/README.md)
+    * [Asset Originators](ecosystem/the-p-community/participants/asset-originators.md)
+    * [Omnibus Banks](ecosystem/the-p-community/participants/omnibus-banks.md)
+* [The Funding Program](ecosystem/the-p-funding-program.md)
+* [The Ecosystem](ecosystem/the-p-ecosystem.md)
 * [Hash](ecosystem/hash-2.0.md)
-* [Participants](ecosystem/participants/README.md)
-  * [Asset Originators](ecosystem/participants/asset-originators.md)
-  * [Omnibus Banks](ecosystem/participants/omnibus-banks.md)
-* [Delegator](ecosystem/delegator.md)
-* [Validator](ecosystem/validator.md)
 * [Governance](ecosystem/governance/README.md)
   * [Voting](ecosystem/governance/voting/README.md)
     * [Software Upgrade Proposal](ecosystem/governance/voting/software-upgrade-proposal.md)
 * [Fees/Distribution](ecosystem/distribution.md)
-* [Legal Standing](ecosystem/legal-standing.md)
 
 ## Modules
 
