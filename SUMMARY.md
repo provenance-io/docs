@@ -26,7 +26,7 @@
 
 ## Ecosystem
 
-* [Provenance](ecosystem/provenance/README.md)
+* [About Provenance](ecosystem/provenance/README.md)
   * [Value Proposition](ecosystem/provenance/value-proposition.md)
   * [History](ecosystem/provenance/mission.md)
   * [Hash](ecosystem/provenance/hash-2.0.md)
