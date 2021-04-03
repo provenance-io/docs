@@ -42,7 +42,7 @@ Nodes in the network include:
 
 ### Cosmovisor
 
-[Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html) is a small process manager around the Provenance daemon process \(`provenanced`\) that monitors the [governance module](../../ecosystem/provenance/governance/) for [upgrade](../../ecosystem/provenance/governance/voting/software-upgrade-proposal.md) proposals. Approved upgrade proposals can be run manually or automatically to download the new code, stop the node, run the migration script, replace the node binary, and start with the a genesis file.
+[Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html) is a small process manager around the Provenance daemon process \(`provenanced`\) that monitors the [governance module](../../ecosystem/provenance/governance/) for [upgrade](../../ecosystem/provenance/governance/software-upgrade-proposal.md) proposals. Approved upgrade proposals can be run manually or automatically to download the new code, stop the node, run the migration script, replace the node binary, and start with the a genesis file.
 
 ### Modules
 

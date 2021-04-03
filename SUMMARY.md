@@ -2,6 +2,27 @@
 
 * [The Provenance Blockchain](README.md)
 
+## Ecosystem
+
+* [About Provenance](ecosystem/provenance/README.md)
+  * [Value Proposition](ecosystem/provenance/value-proposition.md)
+  * [History](ecosystem/provenance/mission.md)
+  * [Hash](ecosystem/provenance/hash-2.0.md)
+  * [Governance](ecosystem/provenance/governance/README.md)
+    * [Voting](ecosystem/provenance/governance/voting.md)
+    * [Software Upgrade Proposals](ecosystem/provenance/governance/software-upgrade-proposal.md)
+  * [Fees/Distribution](ecosystem/provenance/distribution.md)
+  * [Legal Standing](ecosystem/provenance/legal-standing.md)
+* [The Foundation](ecosystem/the-p-foundation.md)
+* [The Community](ecosystem/the-p-community/README.md)
+  * [Validator](ecosystem/the-p-community/validator.md)
+  * [Delegator](ecosystem/the-p-community/delegator.md)
+  * [Participants](ecosystem/the-p-community/participants/README.md)
+    * [Asset Originators](ecosystem/the-p-community/participants/asset-originators.md)
+    * [Omnibus Banks](ecosystem/the-p-community/participants/omnibus-banks.md)
+* [The Funding Program](ecosystem/the-p-funding-program.md)
+* [The Ecosystem](ecosystem/the-p-ecosystem.md)
+
 ## Blockchain
 
 * [Introduction](blockchain/introduction/README.md)
@@ -23,27 +44,6 @@
 * [Using Provenanced](blockchain/using-provenance/README.md)
   * [Query Command](blockchain/using-provenance/query-command.md)
   * [Tx Command](blockchain/using-provenance/tx-command.md)
-
-## Ecosystem
-
-* [About Provenance](ecosystem/provenance/README.md)
-  * [Value Proposition](ecosystem/provenance/value-proposition.md)
-  * [History](ecosystem/provenance/mission.md)
-  * [Hash](ecosystem/provenance/hash-2.0.md)
-  * [Governance](ecosystem/provenance/governance/README.md)
-    * [Voting](ecosystem/provenance/governance/voting/README.md)
-      * [Software Upgrade Proposal](ecosystem/provenance/governance/voting/software-upgrade-proposal.md)
-  * [Fees/Distribution](ecosystem/provenance/distribution.md)
-  * [Legal Standing](ecosystem/provenance/legal-standing.md)
-* [The Foundation](ecosystem/the-p-foundation.md)
-* [The Community](ecosystem/the-p-community/README.md)
-  * [Validator](ecosystem/the-p-community/validator.md)
-  * [Delegator](ecosystem/the-p-community/delegator.md)
-  * [Participants](ecosystem/the-p-community/participants/README.md)
-    * [Asset Originators](ecosystem/the-p-community/participants/asset-originators.md)
-    * [Omnibus Banks](ecosystem/the-p-community/participants/omnibus-banks.md)
-* [The Funding Program](ecosystem/the-p-funding-program.md)
-* [The Ecosystem](ecosystem/the-p-ecosystem.md)
 
 ## Modules
 

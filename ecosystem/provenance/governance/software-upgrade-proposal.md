@@ -2,7 +2,7 @@
 description: 'Information on how to propose, vote, and track a software upgrade proposal'
 ---
 
-# Software Upgrade Proposal
+# Software Upgrade Proposals
 
 Software upgrade proposals will occur when major upgrades are required on the provenance network. When this does occur a governance proposal will be made to request all validators vote on the new software upgrade. All software upgrades will be sourced from the [provenance-io/provenance](https://github.com/provenance-io/provenance) repository.
 
