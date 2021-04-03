@@ -6,7 +6,7 @@ description: High-level creation of a coin marker on Provenance.
 
 ## Overview
 
-A Coin on Provenance is implemented as a [Marker](../../modules/marker-module.md#coins). Each coin that is generated can be transferred freely between blockchain [accounts ](accounts.md)and represents a value exchange between parties. At it's core this is an extremely simple structure that is meant to be used as a building block for a more complex use case such as [stablecoin](stablecoin.md#stablecoins).
+A Coin on Provenance is implemented as a [Marker](../../modules/marker-module.md). Each coin that is generated can be transferred freely between blockchain [accounts ](accounts.md)and represents a value exchange between parties. At its core this is an extremely simple structure that is meant to be used as a building block for a more complex use case, such as a [stablecoin](stablecoin.md#stablecoins).
 
 ## Creating a Coin
 
@@ -18,9 +18,9 @@ There are multiple ways to configure a coin to suit a business use case. Here is
 
 | Parameter | Description |
 | :--- | :--- |
-| initial\_supply | initial supply of tokens as an integer |
-| denom | name of the coin being created |
-| key\_name | name of the key from the key store that was previously created |
+| `initial_supply` | initial supply of tokens as an integer |
+| `denom` | name of the coin being created |
+| `key_name` | name of the key from the key store that was previously created |
 
 {% hint style="info" %}
 `<initial_supply>` will be set to `0 as this coin will not have a fixed supply.`

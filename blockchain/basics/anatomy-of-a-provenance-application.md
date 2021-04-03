@@ -6,9 +6,9 @@ description: >-
 
 # Anatomy of the Provenance Application
 
-In it's simplest form, Provenance is an [application-specific blockchain](https://docs.cosmos.network/master/intro/why-app-specific.html) built on the [Cosmos SDK.](https://docs.cosmos.network/master/intro/overview.html)  Thus, the anatomy described in this section is a derivative of the [Cosmos SDK Anatomy of an SDK ](https://docs.cosmos.network/master/basics/app-anatomy.html)[Application](https://docs.cosmos.network/master/basics/app-anatomy.html) document.
+In it's simplest form, Provenance is an [application-specific blockchain](https://docs.cosmos.network/master/intro/why-app-specific.html) built on the [Cosmos SDK.](https://docs.cosmos.network/master/intro/overview.html)  Thus, the anatomy described in this section is a derivative of the Cosmos [Anatomy of an SDK Application](https://docs.cosmos.network/master/basics/app-anatomy.html) document.
 
-The Provenance SDK \(built upon the Cosmos SDK\) enables developers to build modules that implement the business logic of a financial services blockchain. In other words, SDK modules implement the bulk of the logic of the blockchain, while the core does the wiring and enables modules to be composed together. The end goal is to build a robust ecosystem of open-source SDK modules, making it increasingly easier to build complex blockchain applications.
+The Provenance SDK enables developers to build modules that implement the business logic of a financial services blockchain. In other words, SDK modules implement the bulk of the logic of the blockchain, while the core does the wiring and enables modules to be composed together. The end goal is to build a robust ecosystem of open-source SDK modules, making it increasingly easier to build complex blockchain applications.
 
 While the Cosmos SDK documentation does a good job explaining the concepts of an application-specific blockchain, it is helpful to drill down into the core concepts and get hands-on.  That's what this section aims to do.
 
@@ -39,7 +39,7 @@ The `provenanced` binary also communicates with and manages external \(to the bi
 
 #### External Application Interfaces
 
-External applications communicate with a `provenanced` node instance using `gRPC`.  The `gRPC` layer of the `provenanced` application exposes the Provenance modules to external applications.  Thus, the core blockchain modules that implement the business logic of the blockchain, are available via the `gRPC` interface.
+External applications communicate with a `provenanced` node instance using `gRPC`.  The `gRPC` layer of the `provenanced` application exposes the Provenance modules to external applications.  Thus, the core blockchain modules that implement the business logic of the blockchain are available via the `gRPC` interface.
 
 Where the `gRPC` interface provides access to the Provenance blockchain modules, the Event Manager dispatches blockchain transaction events.  External applications can subscribe to events like token or coin transfers, metadata updates, and governance proposals.
 

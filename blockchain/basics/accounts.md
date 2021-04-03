@@ -6,7 +6,7 @@ description: Understanding the Provenance accounts system.
 
 ## Overview
 
-On Provenance an [account](https://docs.cosmos.network/v0.41/basics/accounts.html) designates a pair of _public key_ `PubKey` and _private key_ `PrivKey`. The `PubKey` is used to generate an `address` which is used to identify users \(among other parties\) on the blockchain. `Addresses` are also associated with [`message`s](https://docs.cosmos.network/master/building-modules/messages-and-queries.html#messages) to identify the sender of the `message`. The `PrivKey` is used to generate [digital signatures](https://docs.cosmos.network/master/basics/query-lifecycle.html#signatures) to prove that an `address`associated with the `PrivKey` approved of a given `message`.
+On Provenance, an [account](https://docs.cosmos.network/v0.41/basics/accounts.html) designates a pair of _public key_ `PubKey` and _private key_ `PrivKey`. The `PubKey` is used to generate an `address` that is used to identify users \(among other parties\) on the blockchain. `Addresses` are also associated with `messages` to identify the sender of the `message`. The `PrivKey` is used to generate [digital signatures](https://docs.cosmos.network/master/basics/query-lifecycle.html#signatures) to prove that an `address`associated with the `PrivKey` approved of a given `message`.
 
 ### Addresses <a id="addresses"></a>
 
@@ -21,11 +21,11 @@ Each account is identified using an `address` which is a sequence of bytes deriv
 Addresses and public keys are formatted using [Bech32](https://en.bitcoin.it/wiki/Bech32) and implemented as a string value. The Bech32 method is the only supported format to use when interacting with the blockchain. The Bech32 human-readable part \(Bech32 prefix\) is used to denote an address type.
 
 {% hint style="info" %}
-Provenance testnet Bech32 addresses begin with `tp` whereas mainnet addresses begin with `pb`.  
+Provenance testnet Bech32 addresses begin wit **`tp`** whereas mainnet addresses begin with **`pb`**.  
 {% endhint %}
 
 {% hint style="info" %}
-_**A key pair and it's corresponding Bec32 address that exists outside of Provenance \(say in a wallet\) is not a Provenance account until Hash has been transferred to the Bech32 address.**_
+_**A key pair and it's corresponding Bec32 address that exist outside of Provenance \(say**_, _**in a wallet\) is not a Provenance account until Hash has been transferred to the Bech32 address.**_
 {% endhint %}
 
 {% hint style="info" %}
@@ -93,9 +93,9 @@ HD Wallets, or Hierarchical Deterministic wallets, are used to generate addresse
 
 HD Wallets utilize a single backup that enables the user to fully restore the data at any time in the future. This is because of the wallet’s ability to drive all the private keys of the tree using [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki). This is a transfer protocol that enables parent keys to create child keys in a hierarchy.
 
-So, when you have to restore an HD Wallet, the system automatically drives all the private keys of the tree using the same initial algorithm and the same private keys emerge.
+So, when you have to restore an HD Wallet, the system automatically derives all the private keys of the tree using the same initial algorithm and the same private keys emerge.
 
-The secret key is easier to remember as well, so users don’t risk losing access to their funds. It’s also a more convenient solution as you don’t have to store the secret key for each address that you’ve generated, only for the seed key.  [Several HD Wallets exists for Cosmos-based networks](https://cosmos.network/ecosystem/wallets) \(which Provenance is\).
+The secret key is easier to remember as well, so users don’t risk losing access to their funds. It’s also a more convenient solution as you don’t have to store the secret key for each address that you’ve generated, only for the seed key.  [Several HD Wallets exists for Cosmos-based networks](https://cosmos.network/ecosystem/wallets) \(as Provenance is\).
 
 HD Wallet addresses follow a "hierarchical" format:
 
@@ -127,7 +127,7 @@ As discussed in the previous section the [BIP32](https://github.com/bitcoin/bips
 
 `m / 44' / 505' / 0' / 0 / 0`
 
-There are two possible types of BIP32 derivation, hardened or non-hardened keys.
+There are two possible types of BIP32 derivation, hardened and non-hardened keys.
 
 ### Hardened vs. Non-hardened <a id="Hardened-vs-Non-hardened"></a>
 
@@ -215,5 +215,5 @@ Addresses are numbered from index 0 in sequentially increasing manner. This numb
 
 Unhardened derivation is used at this level. However, keys that Provenance custodies on behalf of Provenance Identities \(i.e. Users\) are hardened at this level.
 
-In Provenance, the Address Index is used as the key for things of value like coins, markers, names and tags.
+In Provenance, the Address Index is used as the key for items of value like coins, markers, names and tags.
 

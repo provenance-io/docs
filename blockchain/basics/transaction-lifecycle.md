@@ -12,7 +12,7 @@ When users want to interact with the blockchain and make state changes \(e.g. se
 
 The Transaction Submission Flow diagram illustrates how a user application transaction \(e.g. transferring coins\) flows within the blockchain:
 
-* User input is captured by a User Application.  The **User Application** is responsible for:
+* User input is captured by a User Application. The **User Application** is responsible for:
   * Building the appropriate blockchain `Tx Msg` transaction message 
   * Signing the `Tx Msg` using a key pair from a wallet or Key Management facility
   * Setting gas and fee parameters
@@ -34,9 +34,9 @@ The Transaction Submission Flow diagram illustrates how a user application trans
 
 The important components of this flow are:
 
-* Transactions are built and signed by a User Application before being submitted to a blockchain node.  _The \`provenanced\` binary can be considered a User Application when run via the command-line as a client._
+* Transactions are built and signed by a User Application before being submitted to a blockchain node.  _The `provenanced` binary can be considered a User Application when run via the command-line as a client._
 * The key pair and associated address used to sign and submit the transaction must hold Hash to pay the gas fees when submitting the transaction to the blockchain.
-* The Transaction moves throught multiple stages on the blockchain before it is committed in a block.  Each of these stages can fail and must be handled by the User Application.
+* The Transaction moves through multiple stages on the blockchain before it is committed in a block.  Each of these stages can fail and must be handled by the User Application.
 * The blockchain will broadcast events related to transaction processing that can be consumed by the User Application.
 
 {% hint style="info" %}
