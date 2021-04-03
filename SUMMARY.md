@@ -1,6 +1,28 @@
 # Table of contents
 
 * [The Provenance Blockchain](README.md)
+* [The Provenance Blockchain](the-provenance-blockchain.md)
+* [Provenance](provenance.md)
+
+## The P Foundation
+
+* [The  P Foundation](the-p-foundation/the-p-foundation.md)
+
+## The P Community
+
+* [The  P Community](the-p-community/the-p-community.md)
+
+## The P Funding Program
+
+* [The  P Funding Program](the-p-funding-program/the-p-funding-program.md)
+
+## The P Ecosystem
+
+* [The P Ecosystem](the-p-ecosystem/the-p-ecosystem.md)
+
+---
+
+* [Everything under here is "old"](everything-under-here-is-old.md)
 
 ## Blockchain
 

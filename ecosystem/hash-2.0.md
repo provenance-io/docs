@@ -1,6 +1,8 @@
 # Hash
 
-The primary purpose of Hash is as a governance and equity medium on the blockchain. Hash holders receive fees members pay to transact on Provenance, and vote on the Provenance administration board. Hash has a secondary function of being used for each node’s stake. Each node is required to put up a stake of Hash on which they earn a return for their services. The stake is set by the administrator and is subject to slashing in certain situations, such as downtime or double signing.
+The primary purpose of Hash is as a governance and equity medium on the blockchain. Hash has a secondary function of being used for each node’s stake. Each node is required to put up a stake of Hash on which they earn a return for their services. The stake is set by the administrator and is subject to slashing in certain situations, such as downtime or double signing.
+
+Hash holders who stake their Hash, receive fees clients pay to transact on Provenance, and become members of and get to vote on the Provenance Foundation's Governance board. The weight of a member's vote is proportional to their stake with a maximum weight that represents 50% of the vote.
 
 Provenance has a fixed token stock of 100 billion Hash. Hash cannot be created or destroyed. While the price of Hash will ultimately float, today each Hash holder sets a reserve price \(or declines to participate\) and fees paid to access Provenance go to the best offer\(s\) of Hash.
 
