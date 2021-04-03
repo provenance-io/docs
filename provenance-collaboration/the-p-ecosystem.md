@@ -4,7 +4,7 @@ description: >-
   P-enabled applications
 ---
 
-# The P Ecosystem
+# The Ecosystem
 
 ## **The** ![](https://lh4.googleusercontent.com/Q2iC7jKjyoZEeUi1EjeZEqRKF1pa_-cq6VEVwq2YrExrOXJVZScvN6tAIhTEKVs_p-F_SEX4-z5lyDIxRKH8qm2v8y64QfYb_2aIqK1-DXFgqDvCtrcxbpIAi6UA_rk_7_z3dzAd) **Open Source Repo**
 

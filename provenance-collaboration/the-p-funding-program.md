@@ -4,7 +4,7 @@ description: >-
   Infrastructure and a grants program for P Improvement Projects (PIPs).
 ---
 
-# The  P Funding Program
+# The Funding Program
 
 ## **The** ![](https://lh5.googleusercontent.com/KqnLo14ukZ8JhWvitqijs5IeTaFTD29sY80mRa6BRzfEEvZC5ZNPjOt1soy6KqCNqKvMGDFtFqTx_-CXQ54sZA_cJn5zJcqkekLwBRfqzQdgSBc3nL-orF2ESj5mBZ1lzqgF_Xly) **Utility-Token: Hash**
 

@@ -5,7 +5,7 @@ description: >-
   blockchain-based DeFi apps.
 ---
 
-# The  P Foundation
+# The Foundation
 
 ## **The** ![](https://lh3.googleusercontent.com/4PfoUGEiGWy4psIrXQ66shKmcBC5-cBJa_MsXueU1tDqKmgIXkZFYWRgYjQpBqk4dmHGIZDPElEQffcK-h1ISgQotuqrKsrf7L0QahDk5JdLaPiTLO9AWqvYMy9hY98eD8s5YWVK) **Mission**
 

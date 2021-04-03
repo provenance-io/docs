@@ -18,7 +18,7 @@ Learn more about our foundation that manages, supports, and funds an ecosystem f
 
 Our community consists of the collective users, developers, researchers, maintainers, clients, companies, organizations, investors, stakers, and delegators of anything P:
 
-{% page-ref page="the-p-community/the-p-community.md" %}
+{% page-ref page="provenance-collaboration/the-p-community.md" %}
 
 Our funding program to support the P Core Infrastructure and a grants program for P Improvement Projects \(PIPs\) is described here:
 

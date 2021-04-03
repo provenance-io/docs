@@ -4,7 +4,7 @@ description: >-
   companies, organizations, investors, stakers, and delegators of anything P.
 ---
 
-# The  P Community
+# The Community
 
 ## **The** ![](https://lh4.googleusercontent.com/-IZrIjZMRfH3tGhty3uyiwFufx6pRgO4zuRz1eAxnlKg0rdkq2nH14gs0QqzPkM37WWpcO9M8tuX7k5WVJhyHUtJ-MzDh91C7F_BDGvHjGDtJYCfr2KYql1b35R7pKVyUBFUhas5) **Use Cases**
 
