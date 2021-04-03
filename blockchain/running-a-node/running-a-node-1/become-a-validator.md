@@ -92,9 +92,9 @@ It is recommended that each of these nodes be placed in specific zones or privat
 
 ## Configuration
 
-The validator node requires the highest level of security as it contains the key that will be authorized to sign blocks on the Provenance network. If a bad actor gets this key,  he could connect to the chain and impersonate that same validator, thereby causing a double signing incident which would result in a validator being jailed and slashed. For this reason, access to this node should be limited to those who absolutely require access. All access should be monitored and recorded via a monitoring solution. 
+The validator node requires the highest level of security as it contains the key that will be authorized to sign blocks on the Provenance network. If a bad actor gets this key,  they could connect to the chain and impersonate that same validator, thereby causing a double signing incident which would result in a validator being jailed and slashed. For this reason, access to this node should be limited to those who absolutely require access. All access should be monitored and recorded via a monitoring solution. 
 
-The following configuration parameters are found in the config.toml file.
+The following configuration parameters are found in the `config.toml` file.
 
 <table>
   <thead>

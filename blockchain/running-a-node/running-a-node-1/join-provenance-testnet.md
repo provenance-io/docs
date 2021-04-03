@@ -11,7 +11,7 @@ Start a Provenance[ full node ](https://docs.tendermint.com/master/nodes/#node-t
 The quickest way to start a node is to install the `provenanced` daemon process, initialize a local installation, download the genesis file, and start the `provenanced` node in the foreground.  Be sure to change`choose-a-moniker` to a custom name for the new node.
 
 {% hint style="info" %}
-While using the quick-start method provides a quick and easy way to start a testnet node,  it does place the burden of keeping Provenance up to date on the reader.  The recommended approach is to use Cosmovisor to manage the Provenance node as described in the next section.
+While using the quick-start method provides a quick and easy way to start a testnet node,  it does place the burden of keeping Provenance software up-to-date on the reader.  The recommended approach is to use Cosmovisor to manage the Provenance node as described in the next section.
 {% endhint %}
 
 #### Start a Node in Foreground
