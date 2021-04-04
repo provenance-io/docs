@@ -4,7 +4,7 @@ description: Basic concepts provided by the Provenance application-specific bloc
 
 # Basics
 
-Provenance is a public blockchain network designed and developed to support [financial service industry](../introduction/financial-services-blockchain.md) needs by providing a **ledger**, **registry**, and **exchange** across multiple financial assets and markets. 
+Provenance is a public blockchain network designed and developed to support [financial service industry](../../ecosystem/financial-services-blockchain/) needs by providing a **ledger**, **registry**, and **exchange** across multiple financial assets and markets. 
 
 Learn about the core components of the Provenance blockchain application service:
 

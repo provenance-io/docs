@@ -4,15 +4,15 @@
 
 ## Ecosystem
 
-* [About Provenance](ecosystem/provenance/README.md)
-  * [Value Proposition](ecosystem/provenance/value-proposition.md)
-  * [History](ecosystem/provenance/mission.md)
-  * [Hash](ecosystem/provenance/hash-2.0.md)
-  * [Governance](ecosystem/provenance/governance/README.md)
-    * [Voting](ecosystem/provenance/governance/voting.md)
-    * [Software Upgrade Proposals](ecosystem/provenance/governance/software-upgrade-proposal.md)
-  * [Fees/Distribution](ecosystem/provenance/distribution.md)
-  * [Legal Standing](ecosystem/provenance/legal-standing.md)
+* [Provenance: Financial Services Blockchain](ecosystem/financial-services-blockchain/README.md)
+  * [Value Proposition](ecosystem/financial-services-blockchain/value-proposition.md)
+  * [History](ecosystem/financial-services-blockchain/mission.md)
+  * [Hash](ecosystem/financial-services-blockchain/hash-2.0.md)
+  * [Fees/Distribution](ecosystem/financial-services-blockchain/distribution.md)
+  * [Legal Standing](ecosystem/financial-services-blockchain/legal-standing.md)
+* [Governance](ecosystem/governance/README.md)
+  * [Voting](ecosystem/governance/voting.md)
+  * [Software Upgrade Proposals](ecosystem/governance/software-upgrade-proposal.md)
 * [The Foundation](ecosystem/the-p-foundation.md)
 * [The Community](ecosystem/the-p-community/README.md)
   * [Participants](ecosystem/the-p-community/participants.md)
@@ -26,7 +26,6 @@
 ## Blockchain
 
 * [Introduction](blockchain/introduction/README.md)
-  * [Financial Services Blockchain](blockchain/introduction/financial-services-blockchain.md)
   * [Application Architecture](blockchain/introduction/application-architecture.md)
   * [Major Components](blockchain/introduction/major-components.md)
 * [Basics](blockchain/basics/README.md)
