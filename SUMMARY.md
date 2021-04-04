@@ -71,11 +71,11 @@
 * [Usage](p8e/p8e-usage/README.md)
   * [Building New Contracts](p8e/p8e-usage/building-new-contracts.md)
   * [Data Retrieval](p8e/p8e-usage/data-retrieval.md)
+  * [Quick Start](p8e/p8e-usage/quick-start/README.md)
+    * [Explanation](p8e/p8e-usage/quick-start/hello-world-example.md)
 
 ## Integrating
 
-* [Quick Start](integrating/quick-start/README.md)
-  * [Explanation](integrating/quick-start/hello-world-example.md)
 * [Assets](integrating/assets.md)
 * [SDK](integrating/sdk.md)
 * [Error Codes](integrating/error-codes.md)

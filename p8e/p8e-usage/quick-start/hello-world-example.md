@@ -4,7 +4,7 @@ Provenance’s Hello World example is designed to demonstrate the process of inp
 
 ## Transaction Flow
 
-![](../../.gitbook/assets/hello-world-flow.png)
+![](../../../.gitbook/assets/hello-world-flow.png)
 
 1. The owner provides the input data to be submitted and uses the SDK to execute the HelloWorld contract.
 2. The data is encrypted and saved to the owner’s object store. Other participants would also be identified if the contract required them.
