@@ -1,2 +1,2 @@
-# Loan Origination System \(LOS\)
+# Figure LOS
 

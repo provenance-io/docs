@@ -1,4 +1,4 @@
-# Portfolio Manager
+# Figure Portfolio Manager
 
 **Loan Pool/BWIC**
 
