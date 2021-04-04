@@ -28,5 +28,5 @@ Anyone can propose a project for work that can benefit the community and/or enha
 
 Our ![](../../.gitbook/assets/image%20%2818%29.png) grants program is similar to the [Interchain Foundation funding program](https://interchain.io/funding/) and [Ethereum Foundation's grants](https://github.com/ethereum/ethereum-org/blob/master/subdomains/grants.md) programs.
 
-See the [Grants Program Details]() section for additional information.
+See the [Grants Program Details](grants-program-details.md) section for additional information.
 
