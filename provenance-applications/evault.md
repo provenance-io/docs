@@ -1,4 +1,4 @@
-# eVault
+# Figure eVault
 
 ## INTRODUCTION
 

@@ -80,13 +80,13 @@
 
 ## Apps Built on Provenance <a id="provenance-applications"></a>
 
-* [Apps Built On Provenance](provenance-applications/apps-powered-by-provenance.md)
+* [Apps Overview](provenance-applications/apps-powered-by-provenance.md)
 * [Figure LOS](provenance-applications/loan-origination-system-los.md)
 * [Figure Portfolio Manager](provenance-applications/portfolio-manager-market-place.md)
 * [Figure Marketplace](provenance-applications/marketplace-digital-funds-services.md)
 * [Adnales](provenance-applications/adnales.md)
 * [Figure Pay](provenance-applications/figure-pay.md)
-* [eVault](provenance-applications/evault.md)
+* [Figure eVault](provenance-applications/evault.md)
 
 ## Contributing
 
