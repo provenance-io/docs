@@ -60,7 +60,7 @@
   * [P8e Transition Flow](p8e/overview/p8e-transition-flow.md)
 * [Components](p8e/components-1/README.md)
   * [Encrypted Object Store](p8e/components-1/encrypted-object-store/README.md)
-    * [Encryption Scheme](p8e/components-1/encrypted-object-store/encryption-scheme.md)
+    * [EOS Encryption Scheme](p8e/components-1/encrypted-object-store/encryption-scheme.md)
     * [DIME \(Encryption Envelope Specification\)](p8e/components-1/encrypted-object-store/dime-encryption-envelope-specification.md)
   * [P8e API](p8e/components-1/api/README.md)
     * [Reapers](p8e/components-1/api/reapers.md)
@@ -68,12 +68,9 @@
     * [Contract Life Cycle](p8e/components-1/api/contract-life-cycle.md)
     * [Index Engine](p8e/components-1/api/index-engine.md)
   * [P8e UI](p8e/components-1/p8e-ui.md)
-* [Security](p8e/security.md)
-* [Integration](p8e/untitled/README.md)
-  * [3rd Party Digital Signatures](p8e/untitled/3rd-party-digital-signatures.md)
-* [Archive](p8e/archive/README.md)
-  * [Data Retrieval](p8e/archive/data-retrieval.md)
-  * [Building New Contracts](p8e/archive/building-new-contracts.md)
+* [Usage](p8e/p8e-usage/README.md)
+  * [Building New Contracts](p8e/p8e-usage/building-new-contracts.md)
+  * [Data Retrieval](p8e/p8e-usage/data-retrieval.md)
 
 ## Integrating
 
@@ -82,6 +79,7 @@
 * [Assets](integrating/assets.md)
 * [SDK](integrating/sdk.md)
 * [Error Codes](integrating/error-codes.md)
+* [3rd Party Digital Signatures](integrating/3rd-party-digital-signatures.md)
 
 ## Apps Built on Provenance <a id="provenance-applications"></a>
 

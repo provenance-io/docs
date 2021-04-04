@@ -1,4 +1,4 @@
-# Encryption Scheme
+# EOS Encryption Scheme
 
 Provenance uses Elliptic Curve Integrated Encryption Scheme \(ECIES\) to encrypt asset before it is stored in the Encrypted Object Store.  As its name properly indicates, ECIES is an integrated encryption scheme which uses the following functions:
 
