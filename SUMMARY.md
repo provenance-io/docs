@@ -56,7 +56,8 @@
 
 ## Contract Execution Environment \(P8e\) <a id="p8e"></a>
 
-* [Provenance \(P8e\) Contract Execution Environment](p8e/overview.md)
+* [P8e Contract Execution Environment](p8e/overview/README.md)
+  * [P8e Transition Flow](p8e/overview/p8e-transition-flow.md)
 * [Components](p8e/components-1/README.md)
   * [Encrypted Object Store](p8e/components-1/encrypted-object-store/README.md)
     * [Encryption Scheme](p8e/components-1/encrypted-object-store/encryption-scheme.md)

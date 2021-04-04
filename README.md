@@ -30,7 +30,7 @@ Learn how to use the Provenance modules and how they empower blockchain-based bu
 
 Discover the benefits of the Provenance client-side Contract Execution Environment:
 
-{% page-ref page="p8e/overview.md" %}
+{% page-ref page="p8e/overview/" %}
 
 Get started integrating with Provenance:
 
