@@ -36,7 +36,7 @@
   * [Accounts](blockchain/basics/accounts.md)
   * [Coin](blockchain/basics/stablecoin.md)
   * [Gas and Fees](blockchain/basics/gas-and-fees.md)
-* [Installing Provenance](blockchain/running-a-node/README.md)
+* [Installing Provenanced](blockchain/running-a-node/README.md)
   * [Running a Node](blockchain/running-a-node/running-a-node-1/README.md)
     * [Joining Testnet](blockchain/running-a-node/running-a-node-1/join-provenance-testnet.md)
     * [Become a Validator](blockchain/running-a-node/running-a-node-1/become-a-validator.md)

@@ -2,7 +2,7 @@
 description: Install the `provenanced` executable for both client and server operations.
 ---
 
-# Installing Provenance
+# Installing Provenanced
 
 Provenance is wrapped into a single executable named `provenanced`. All interaction \(whether creating a node, querying, or invoking actions\) with Provenance can be accomplished using the `provenanced` command. This document explains the basic installation of the command and verification that it has been installed correctly. 
 
