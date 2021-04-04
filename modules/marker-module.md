@@ -36,7 +36,7 @@ A Marker instance is a special type of account that contains a management struct
 
 ## Marker Functions
 
-* **Administration** - the marker module provides a granualar set of permissions that can be granted to other accounts to delegate their control or suppress it.  In addition the marker module exposes these administation functions to the governance module to allow proposal based control of all existing markers.
+* **Administration** - the marker module provides a granular set of permissions that can be granted to other accounts to delegate their control or suppress it.  In addition the marker module exposes these administration functions to the governance module to allow proposal based control of all existing markers.
 * **Supply** - each marker has a collection of supply management functions that can be used to increase, decrease, and enforce the total configured supply of a marker's token.
 * **Collateral and Escrow** - a marker instance supports holding coins like any other blockchain account and provides the ability to deposit and withdraw 
 
@@ -48,7 +48,7 @@ When a `marker` is created the address that submits the transaction is bound as 
 
 | Action | Permission | Notes |
 | :--- | :--- | :--- |
-| Create New Marker | _unrestriced, governance_  | Depending on the module configuration the system may allow any account with appropriate gas to create a marker or the process may be restricted to requiring a successful governance proposal |
+| Create New Marker | _unrestricted, governance_  | Depending on the module configuration the system may allow any account with appropriate gas to create a marker or the process may be restricted to requiring a successful governance proposal |
 | Grant Access | `grant` | Allows adding additional access grants to the marker.  Accounts with this permission are considered full administrators of the marker and may delegate  or remove access for accounts. |
 | Increase Supply | `mint` | Allows `mint` \(increase supply\) for an active status marker |
 | Decrease Supply | `burn` | Allows `burn` \(decrease supply\) for an active status marker |
@@ -71,7 +71,7 @@ provenanced tx marker \
 
 ### Token Supply
 
-Each marker instance is configured with a supply of coin.  The supply can range from `1..∞` bounded only by the maximum amounts supported by the sdk for storing coin values.  Depending on the type of marker a supply invariant will be enforced that will mint coin directly into the marker's account if an external burn is performed \(for example if a slashing penalty has been applied\).
+Each marker instance is configured with a supply of coin.  The supply can range from `1..∞` bounded only by the maximum amounts supported by the SDK for storing coin values.  Depending on the type of marker a supply invariant will be enforced that will mint coin directly into the marker's account if an external burn is performed \(for example if a slashing penalty has been applied\).
 
 A marker's supply may be administered directly or though governance proposals depending on the configured access using the `mint` and `burn` functions.
 
@@ -87,9 +87,9 @@ An authorized address may "burn" the markers coin, removing it from the global s
 
 A marker account may hold coin directly similar to any other blockchain account.  The coin's held within the marker may be administered by accounts holding the `deposit` and `withdraw` permissions or though the governance process.  
 
-Similar to other accounts any `send_enabled` coin may be sent to a marker account.  These amounts are subject to the same `deposit` and `withdraw` permissions regardless of their denominatoin.
+Similar to other accounts any `send_enabled` coin may be sent to a marker account.  These amounts are subject to the same `deposit` and `withdraw` permissions regardless of their denomination.
 
-The Metadata module extends this capability to provide pools of assets managed using these permissions such that a marker may represent a logical pool.  Through this concept a heirarchy of markers can be created that represents a complex ownership structure.
+The Metadata module extends this capability to provide pools of assets managed using these permissions such that a marker may represent a logical pool.  Through this concept a hierarchy of markers can be created that represents a complex ownership structure.
 
 ## Use Cases
 
