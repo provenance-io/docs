@@ -1,6 +1,6 @@
 # Asset Originators
 
-Provenance Blockchain acts as ledger, registry and exchange for digital assets. Asset originators register and custody loans and other digital assets on the Provenance Blockchain through the use of [client-side contracts](../../p8e/overview/) and stablecoin backed by an [Omnibus Bank](omnibus-banks.md). Provenance contracts take encrypted data from the originator and transform that information to encrypted data in the originator's own private [object store](../../p8e/components-1/encrypted-object-store/) with object hashes recorded on the blockchain. In addition to onboarding digital assets, originators may fund, finance, sell, and service assets on the blockchain. 
+Provenance Blockchain acts as ledger, registry and exchange for digital assets. Asset originators register and custody loans and other digital assets on the Provenance Blockchain through the use of [client-side contracts](../../p8e/overview/) and stablecoin backed by an [Omnibus Bank](omnibus-banks.md). Provenance contracts take encrypted data from the originator and transform that information to encrypted data in the originator's own private [object store](../../p8e/overview/encrypted-object-store/) with object hashes recorded on the blockchain. In addition to onboarding digital assets, originators may fund, finance, sell, and service assets on the blockchain. 
 
 ### Onboarding
 
