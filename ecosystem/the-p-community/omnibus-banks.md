@@ -2,7 +2,7 @@
 
 ## Overview
 
-The primary role of the omnibus bank is to hold fiat deposits and correspondingly mint and burn stablecoin on Provenance to match these fiat deposits.  Stablecoin is critical to support bilateral transactions on Provenance that are absent of counterparty and settlement risk.  Banks take ownership of and use an API to interface with Provenance.  Banks earn float on the fiat deposits underlying the stablecoin for the performance of the minting and burning functions.
+The primary role of the omnibus bank is to hold fiat deposits and correspondingly mint and burn stablecoin on the Provenance blockchain to match these fiat deposits.  Stablecoin is critical to support bilateral transactions on Provenance that are absent of counterparty and settlement risk.  Banks take ownership of and use an API to interface with Provenance.  Banks earn float on the fiat deposits underlying the stablecoin for the performance of the minting and burning functions.
 
 The Bank is integrated with Provenance through traditional technical protocols, where Provenance has the ability to initiate stablecoin transactions, subject to fulfilling commercially negotiated conditions codified in smart contracts. The flow of funds and the transacting parties are no different from traditional, off-chain transactions, and the bank’s operational processes do not change. 
 
@@ -96,7 +96,7 @@ Wallet owners on Provenance can redeem their stablecoin from the omnibus bank at
 
 ### Redeeming Stablecoin \(Burning\)
 
-Any stablecoin holder may redeem stablecoin at the Stablecoin Bank that minted the stablecoin for a corresponding amount of fiat.  Stablecoin should be readily attributable to the Stablecoin Bank that minted that particular stablecoin.
+Any stablecoin holder may redeem its stablecoin at the Stablecoin Bank that minted the stablecoin for a corresponding amount of fiat.  Stablecoin should be readily attributable to the Stablecoin Bank that minted that particular stablecoin.
 
 1. The user will send the stablecoin to the Stablecoin Bank’s Provenance account for redemption.
 2. Upon receipt of the stablecoin and in connection with the redemption request, the Stablecoin Bank withdraws the fiat from their account and will burn the received stablecoin to maintain the 1:1 relationship between minted stablecoin and fiat on deposit.

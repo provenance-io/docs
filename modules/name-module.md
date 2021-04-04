@@ -34,5 +34,5 @@ type NameRecord struct {
 
 ### Creation of Root Names
 
-As every name heirarchy depends on the name above it for permissioning and control, the root names present a problem with no parent to enforce their management.  Because of this inception problem root names must be created in the genesis of the blockchain or through a governance propoosal process.
+As every name hierarchy depends on the name above it for permissioning and control, the root names present a problem with no parent to enforce their management.  Because of this inception problem root names must be created in the genesis of the blockchain or through a governance proposal process.
 

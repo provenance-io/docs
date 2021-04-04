@@ -2,7 +2,7 @@
 
 Participants are individuals/entities that transact on Provenance to register, custody and trade assets. Any participant can become a [Validators](validator.md) or [Delegators](delegator.md). Participants pay transaction fees when executing transactions on Provenance. In addition the [Client Execution Environment](../../p8e/overview/) can assist in facilitating private conversations and processes between participants that are hashed prior to being included in the immutable record held by validators. 
 
-Participants who hold Hash™ can additionally participate by delegating their stake to validators to receive rewards. Any participant can buy or sell Hash™ directly by visiting any participating Hash™ exchange.
+Participants who hold Hash can additionally participate by delegating their stake to validators to receive rewards. Any participant can buy or sell Hash directly by visiting any participating Hash exchange.
 
 ## How is Provenance being used?
 

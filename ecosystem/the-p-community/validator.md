@@ -6,14 +6,14 @@ description: >-
 
 # Validator
 
-Validators perform the critical function of proposing and validating transactions on the Provenance network. A strong network of validators ensures Provenance security is maintained. Validators stake Hash™ to become part of the active validators on the network and are a foundational element for Hash™ holders that want to delegate their stake and share in rewards produced by the network's fee distribution framework. 
+Validators perform the critical function of proposing and validating transactions on the Provenance network. A strong network of validators ensures Provenance security is maintained. Validators stake Hash to become part of the active validators on the network and are a foundational element for Hash holders that want to delegate their stake and share in rewards produced by the network's fee distribution framework. 
 
 ### Requirements
 
 Hosting a Provenance validator has some requirements since stakeholders will likely not want to delegate their stake to a validator that isn't reliable and secure. Here are some guidelines to consider when determining whether hosting a validator is beneficial for your use case:
 
 * Reliable, highly available, and secure computing infrastructure with excellent network connectivity.
-* Minimum Self-Delegation \(Hash™\) - To host a validator you have to ensure you have the minimum amount of Hash™ to delegate. 
+* Minimum Self-Delegation \(Hash\) - To host a validator you have to ensure you have the minimum amount of Hash to delegate. 
 * Minimum level of staking delegation - the top 50 validator nodes within the network by total stake are selected as the active set of validators.
 * Commitment to maintaining a current release of the blockchain software and perform software upgrades as required.
 * Commitment to vote on governance proposals.
@@ -32,7 +32,7 @@ Active validators are each given a turn to propose a block to be committed using
 
 #### Voting 
 
-Voting within the Provenance ecosystem allows Hash holders to direct the development of the network. When governance proposals are being voted upon, validators will vote with the full weight of not only the validator's Hash, but the delegator's Hash as well, if those delegators haven't voted. Since delegators will not always vote for proposals on the network, this gives validator's more voting power to determine the direction of Provenance. 
+Voting within the Provenance ecosystem allows staked-Hash holders to direct the development of the network. When governance proposals are being voted upon, validators will vote with the full weight of not only the validator's staked Hash, but the delegator's staked Hash as well, if those delegators haven't voted. Since delegators will not always vote for proposals on the network, this gives validator's more voting power to determine the direction of Provenance. 
 
 #### Gas Price
 

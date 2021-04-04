@@ -1,5 +1,5 @@
 ---
-description: Web assembly smart contracts for the provenance blockchain.
+description: Web assembly (Wasm) smart contracts for the provenance blockchain.
 ---
 
 # Smart Contracts \(ProvWasm\)
@@ -43,7 +43,9 @@ To ensure the library code works correctly with the blockchain extensions, smart
 
 ## Status
 
+{% hint style="info" %}
 **Alpha: ProvWasm is experimental and not ready for production.**
+{% endhint %}
 
 There is currently no migration path for smart contracts deployed to the provenance networks, not even "dump state and restart" to move to future versions. Use at your own risk.
 

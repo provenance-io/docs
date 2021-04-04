@@ -4,7 +4,7 @@ To understand delegation it's important to understand the difference between Has
 
 **Hash** - Utility token used by provenance for staking and transaction fee payment. 
 
-**Stake** - Hash that has been delegated to a validator to share in the risks and rewards of the network. 
+**Stake** - Hash that has been delegated to a validator to share in the risks and rewards of participating in the PoS consensus mechanism in the blockchain network. 
 
 Hash will become stake at the point in time that it is delegated to a validator to be used as voting power on the network. 
 
@@ -20,7 +20,7 @@ _See_ [_Voting_](../governance/voting.md) _for more information on how to vote o
 
 **Re-delegation** - It is important to note that you are able to re-delegate your Hash to a different validator immediately, without incurring the 21 day unbonding period. This is incredibly important because it allows the Hash holder to secure their Hash with a trusted validator if the current one has been deemed untrusted.
 
-Redelegation is also the recommended way to move your stake from a validator that has or is going off line for extended maintenance to avoid an availability penalty being assessed against your stake.
+Re-delegation is also the recommended way to move your stake from a validator that has or is going off line for extended maintenance to avoid an availability penalty being assessed against your stake.
 
 ### Rewards
 

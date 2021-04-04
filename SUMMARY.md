@@ -13,14 +13,15 @@
 * [Governance](ecosystem/governance/README.md)
   * [Voting](ecosystem/governance/voting.md)
   * [Software Upgrade Proposals](ecosystem/governance/software-upgrade-proposal.md)
-* [The Foundation](ecosystem/the-p-foundation.md)
-* [The Community](ecosystem/the-p-community/README.md)
+* [The Provenance Foundation](ecosystem/the-p-foundation.md)
+* [The Provenance Community](ecosystem/the-p-community/README.md)
   * [Participants](ecosystem/the-p-community/participants.md)
   * [Validator](ecosystem/the-p-community/validator.md)
   * [Delegator](ecosystem/the-p-community/delegator.md)
   * [Asset Originators](ecosystem/the-p-community/asset-originators.md)
   * [Omnibus Banks](ecosystem/the-p-community/omnibus-banks.md)
-* [The Funding Program](ecosystem/the-p-funding-program.md)
+* [The Provenance Funding Program](ecosystem/the-p-funding-program/README.md)
+  * [Core Infrastructure Details](ecosystem/the-p-funding-program/core-infrastructure-details.md)
 * [The Ecosystem](ecosystem/the-p-ecosystem.md)
 
 ## Blockchain
