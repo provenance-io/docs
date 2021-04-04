@@ -18,7 +18,7 @@ The core infrastructure services, code and operations have guaranteed funding to
 
 The foundation works off an annual budget for core infrastructure support, and uses commercial contracts to pay entities for the associated work.
 
-See the [Core Infrastructure Details]() page for additional information. ****
+See the [Core Infrastructure Details](core-infrastructure-details.md) page for additional information. ****
 
 ## **The** ![](https://lh4.googleusercontent.com/qNn39oTBpMw9X2FPaoXmLzjHNSi0IbX4VuISR_7DhEz0RTNSK2Q28BWdvEfVW6Ln8X8HnLNoDlDfghWVPHZ8IR_oDqQPEI5kktOXTGpOJyYWhCCWJR9OfC2zqhIezHfVwEFKb0lL) **Grants Program**
 
