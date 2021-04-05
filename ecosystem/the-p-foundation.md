@@ -5,7 +5,7 @@ description: >-
   blockchain-based DeFi apps.
 ---
 
-# Provenance Foundation
+# Foundation
 
 ### **Provenance Foundation Mission**
 
