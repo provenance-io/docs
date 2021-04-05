@@ -10,7 +10,7 @@ Digital assets are "boarded to the blockchain" by the execution of contracts tha
 
 ### Asset Ownership
 
-Ownership of a digital asset on Provenance is defined by a [Marker](../../modules/marker-module.md) structure on chain. During the creation of a scope by the Contract Execution Environment, a default Marker is created to represent ownership of the asset by the asset creator. Provenance Blockchain distinguishes between the "data owner\(s\)" and the "value owner\(s\)" of any scope. Data owners have permission to read or read/write
+Ownership of a digital asset on Provenance is defined by a [Marker](../../modules/marker-module.md) structure on chain. During the creation of a scope by the Contract Execution Environment, a default Marker is created to represent ownership of the asset by the asset creator. Provenance Blockchain distinguishes between the "data owner\(s\)" and the "value owner\(s\)" of any scope. Data owners have permission to perform read/write operations on the scope. Value owners hold rights to the actual ownership of the asset and any value the digital asset holds. Data owners and value owners may or may not be the same entities. For example, a digital loan asset may have data owners including the originator and servicer while the value owner may be an investor who has purchased the loan.
 
 ### Funding
 
