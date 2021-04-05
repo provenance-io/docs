@@ -5,7 +5,6 @@
 ## Ecosystem
 
 * [Provenance: Financial Services Blockchain](ecosystem/financial-services-blockchain/README.md)
-  * [Value Proposition](ecosystem/financial-services-blockchain/value-proposition.md)
   * [History](ecosystem/financial-services-blockchain/mission.md)
   * [Hash](ecosystem/financial-services-blockchain/hash-2.0.md)
   * [Fees/Distribution](ecosystem/financial-services-blockchain/distribution.md)
