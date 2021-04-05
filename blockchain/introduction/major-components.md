@@ -37,7 +37,7 @@ Nodes in the network include:
 * Query nodes used by business application middleware for efficient and fast state query.
 * Transactional nodes used by business application middleware for efficient transaction submission and event listening.
 * Archival nodes where the pruning strategy is set to maintain all historic states.
-* [Validators](../../ecosystem/the-p-community/validator.md) that are responsible for committing new blocks in the blockchain for which they are rewarded with gas fees \(i.e. Hash\). These validators participate in the consensus protocol by broadcasting votes.  Validators bond their own Hash and have Hash delegated, or staked to them by Hash holders.  Validators have a stake in the network.
+* [Validators](../../ecosystem/community/validator.md) that are responsible for committing new blocks in the blockchain for which they are rewarded with gas fees \(i.e. Hash\). These validators participate in the consensus protocol by broadcasting votes.  Validators bond their own Hash and have Hash delegated, or staked to them by Hash holders.  Validators have a stake in the network.
 * Sentry nodes for Validator DDoS mitigation.
 
 ### Cosmovisor

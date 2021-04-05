@@ -122,7 +122,7 @@ mv genesis.json $PIO_HOME/config
 
 > Provenance provides a base `config.toml` file that can be used instead of following these steps in this section.  [Refer to the "Using Provenance testnet config.toml" section for more information.](join-provenance-testnet.md#using-provenance-testnet-config-toml)
 
-The `$PIO_HOME/config/config.toml` contains important node settings including [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend.  This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node.  The [Become a Validator](become-a-validator.md) section will describe [validator node](../../../ecosystem/the-p-community/validator.md)-specific settings.
+The `$PIO_HOME/config/config.toml` contains important node settings including [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend.  This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node.  The [Become a Validator](become-a-validator.md) section will describe [validator node](../../../ecosystem/community/validator.md)-specific settings.
 
 #### Configure Seed Nodes
 
