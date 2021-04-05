@@ -12,7 +12,7 @@ Digital assets are "boarded to the blockchain" by the execution of contracts tha
 
 Ownership of a digital asset on Provenance is defined by a [Marker](../../modules/marker-module.md) structure on chain. During the creation of a scope by the Contract Execution Environment, a default Marker is created to represent ownership of the asset by the asset creator. Provenance Blockchain distinguishes between the "data owner\(s\)" and the "value owner\(s\)" of any scope. Data owners have permission to perform read/write operations on the scope. Value owners hold rights to the actual ownership of the asset and any value the digital asset holds. Data owners and value owners may or may not be the same entities. For example, a digital loan asset may have data owners including the originator and servicer while the value owner may be an investor who has purchased the loan.
 
-### Funding
+### Value Operations
 
 Value-related operations for digital assets can be achieved using [coins](../../blockchain/basics/stablecoin.md). Figure, for example, funds its loans at time of boarding using stablecoin issued by an [Omnibus Bank](omnibus-banks.md). When the Omnibus Bank receives funds from the originator, it mints a corresponding amount of stablecoin using the [Marker Module](../../modules/marker-module.md) and an [account](../../blockchain/basics/accounts.md) representing the originator’s funding source. Loans are funded by transferring coin to the Omnibus Bank's blockchain address. When instructed by the originator, the Omnibus Bank will convert the borrower’s coin to fiat and send funds to the borrower’s bank account. The coin used is burned in the process of conversion to fiat.
 
