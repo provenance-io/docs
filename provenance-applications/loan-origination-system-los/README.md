@@ -8,7 +8,7 @@ description: Figure Loan Origination System
 
 The Figure Loan Origination System \(LOS\) is built on top of Provenance Blockchain, making use of Provenance modules, stablecoin, and the [Contract Execution Environment](../../p8e/overview/). Figure applications that consume loan data use the [Figure Loan Model](../../integrating/assets.md). The following sections describe how any loan originator may make use of Provenance using the Figure LOS as a reference implementation.
 
-For a general overview of how digital assets \(such as all-digital loans\) can be handled on Provenance, see [Asset Creators](../../ecosystem/community/asset-originators.md).
+For a general overview of how digital assets \(such as all-digital loans\) are handled on Provenance, see [Asset Creators](../../ecosystem/community/asset-originators.md).
 
 ### Loan Origination System
 
