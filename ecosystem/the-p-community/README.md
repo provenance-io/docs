@@ -1,4 +1,4 @@
-# The Provenance Community
+# Provenance Community
 
 The community is defined as the collective of users, developers, researchers, maintainers, clients, companies, organizations, investors, stakers, and delegators of anything ![](../../.gitbook/assets/image%20%2818%29.png).
 

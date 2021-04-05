@@ -2,7 +2,7 @@
 
 Provenance Blockchain acts as ledger, registry and exchange for digital assets. Asset originators register and custody loans and other digital assets on the Provenance Blockchain through the use of [client-side contracts](../../p8e/overview/) and stablecoin backed by an [Omnibus Bank](omnibus-banks.md). Provenance contracts take encrypted data from the originator and transform that information to encrypted data in the originator's own private [object store](../../p8e/overview/encrypted-object-store/) with object hashes recorded on the blockchain. In addition to onboarding digital assets, originators may fund, finance, sell, and service assets on the blockchain. 
 
-### Onboarding
+### Boarding Assets
 
 Digital assets are "onboarded to the blockchain" by the execution of contracts that the originator writes to take origination data, verify its completeness, and output data as recorded facts in an encrypted object store private to and hosted by the originator. The [Contract Execution Environment](../../p8e/overview/) records hashed representations of all documents, data, transactions and client-side contract executions \(for validating documents, data and transactions\) that are added to the blockchain. Modification or updates of the data only occur through further contract execution on the data, with checks on the input hash of data from the object store against the blockchain to ensure no external data modification has taken place. In this way, the truth of the data is verified without the need for trust in the individual originator's data store.
 

@@ -36,7 +36,7 @@ Voting within the Provenance ecosystem allows staked-Hash holders to direct the 
 
 #### Gas Price
 
-Based on 2/3s majority, validators can choose the minimum gas price that they will accept in order to process a proposed transaction. This allows validators to organically modify the cost to use the network.
+Validators can choose the minimum gas price that they will accept in order to process a proposed transaction. This allows validators to organically modify the cost to use the network.
 
 ### Responsibilities in Hosting a Validator
 
@@ -52,7 +52,7 @@ A validator node must only sign valid blocks and must not issue more than one si
 
 #### Penalties
 
-Active validators that fail to meet the minimum availability requirements or are otherwise flagged for inappropriate behavior are subject to having a portion of their bonded stake slashed/burned.  This penalty enforcement ranges from XX% to XX% and includes a permanent ban for the most severe behavior.  Delegators that pledge stake to the validator node will also be penalized which is additional incentive to validators to protect their networks to maintain the stability of Provenance.
+Active validators that fail to meet the minimum availability requirements or are otherwise flagged for inappropriate behavior are subject to having a portion of their bonded stake slashed/burned.  This penalty enforcement ranges from 1% to 20% and includes a permanent ban for the most severe behavior.  Delegators that pledge stake to the validator node will also be penalized which is additional incentive to validators to protect their networks to maintain the stability of Provenance.
 
 ### Considerations
 
