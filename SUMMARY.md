@@ -73,7 +73,7 @@
 
 ## Integrating
 
-* [Assets](integrating/assets.md)
+* [Figure Loan Model](integrating/assets.md)
 * [SDK](integrating/sdk.md)
 * [Error Codes](integrating/error-codes.md)
 * [3rd Party Digital Signatures](integrating/3rd-party-digital-signatures.md)

@@ -1,4 +1,4 @@
-# Assets
+# Figure Loan Model
 
 ## Loans
 
