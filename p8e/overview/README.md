@@ -1,5 +1,7 @@
 # P8e Contract Execution Environment
 
+### Overview
+
 The Provenance Contact Execution Environment \(nicknamed “P8e”\) is an optional layer on top of the Provenance Blockchain to allow single- and multi-party client-side contract execution while preserving data privacy. Provenance client-side contracts take encrypted data from the user \(client\) and transform the information into encrypted data in the user’s own private object store with object hashes recorded on the blockchain. 
 
 Components of the P8e environment include a client-side contract execution engine, a locally-hosted encrypted object store \(EOS\), an Elasticsearch-based index into the EOS, and a communication exchange for orchestrating multi-party contract execution with other parties’ own P8e environments. Each P8e instance communicates with a local blockchain node to submit transactions \(contract execution hash records\) to the Provenance Blockchain.
