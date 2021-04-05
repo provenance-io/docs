@@ -31,7 +31,7 @@ fun adjustGasEstimates(gasEstimate: GasEstimates): Pair<String, String> =
 
 
 
-Throughout the funding process, additional P8e contracts are in invoked to save funding-related metadata to the scope.
+Throughout the funding process, additional P8e contracts are invoked to save funding-related metadata to the scope.
 
 
 
