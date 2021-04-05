@@ -19,10 +19,9 @@
   * [Delegator](ecosystem/the-p-community/delegator.md)
   * [Asset Creators](ecosystem/the-p-community/asset-originators.md)
   * [Omnibus Banks](ecosystem/the-p-community/omnibus-banks.md)
-* [The Provenance Funding Program](ecosystem/the-p-funding-program/README.md)
+* [Provenance Funding Program](ecosystem/the-p-funding-program/README.md)
   * [Core Infrastructure Details](ecosystem/the-p-funding-program/core-infrastructure-details.md)
   * [Grants Program Details](ecosystem/the-p-funding-program/grants-program-details.md)
-* [The Provenance Ecosystem](ecosystem/the-p-ecosystem.md)
 
 ## Blockchain
 

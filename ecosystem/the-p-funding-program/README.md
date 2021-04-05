@@ -1,4 +1,4 @@
-# The Provenance Funding Program
+# Provenance Funding Program
 
 The Foundation is seeded with a generous fund to support the foundation's operation, the core infrastructure, and a grants program for Improvement Projects \(PIPs\). 
 
