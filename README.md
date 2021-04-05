@@ -4,7 +4,7 @@ description: >-
   service industries.
 ---
 
-# The Provenance Blockchain
+# Provenance Blockchain
 
 ## Getting Started
 

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [The Provenance Blockchain](README.md)
+* [Provenance Blockchain](README.md)
 
 ## Ecosystem
 
