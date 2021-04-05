@@ -53,7 +53,7 @@
 * [Name](modules/name-module.md)
 * [Smart Contracts \(ProvWasm\)](modules/provwasm-smart-contracts.md)
 
-## Contract Execution Environment \(P8e\) <a id="p8e"></a>
+## Contract Execution Environment <a id="p8e"></a>
 
 * [P8e Contract Execution Environment](p8e/overview/README.md)
   * [P8e Transition Flow](p8e/overview/p8e-transition-flow.md)
@@ -81,7 +81,9 @@
 ## Apps Built on Provenance <a id="provenance-applications"></a>
 
 * [Apps Overview](provenance-applications/apps-powered-by-provenance.md)
-* [Figure LOS](provenance-applications/loan-origination-system-los.md)
+* [Figure LOS](provenance-applications/loan-origination-system-los/README.md)
+  * [Funding](provenance-applications/loan-origination-system-los/funding.md)
+  * [Onboarding Contract](provenance-applications/loan-origination-system-los/onboarding-contract.md)
 * [Figure Portfolio Manager](provenance-applications/portfolio-manager-market-place.md)
 * [Figure Marketplace](provenance-applications/marketplace-digital-funds-services.md)
 * [Adnales](provenance-applications/adnales.md)
