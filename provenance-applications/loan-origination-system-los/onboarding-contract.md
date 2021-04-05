@@ -1,4 +1,4 @@
-# Onboarding Contract
+# Onboarding
 
 Please refer to the [Figure Loan Model](../../integrating/assets.md).
 

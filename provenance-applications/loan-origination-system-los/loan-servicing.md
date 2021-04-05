@@ -1,4 +1,4 @@
-# Loan Servicing
+# Onboard to Servicing
 
 After the Figure loan is onboarded, funded, and validated, the loan is onboarded to the Figure Servicing system. Loans are onboarded to the servicing platform by jointly executing a multi-party P8e contract with Figure Servicing. The LOS provides the loan data to the contract and identifies which servicer it is using by specifying the servicing application’s public key as the counter-party. The “assign-to-servicer” contract ensures that the requirements for servicing the loan are met. If the loan data is malformed in some way, the servicing application rejects the contract, and the onus is on the origination system to correct the issue.
 
