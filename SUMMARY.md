@@ -68,7 +68,7 @@
     * [DIME \(Encryption Envelope Specification\)](p8e/overview/encrypted-object-store/dime-encryption-envelope-specification.md)
   * [P8e UI](p8e/overview/p8e-ui.md)
 * [P8e Usage](p8e/p8e-usage/README.md)
-  * [Building New Contracts](p8e/p8e-usage/building-new-contracts.md)
+  * [Building New P8e Contracts](p8e/p8e-usage/building-new-contracts.md)
   * [Data Retrieval](p8e/p8e-usage/data-retrieval.md)
   * [Quick Start](p8e/p8e-usage/quick-start/README.md)
     * [Explanation](p8e/p8e-usage/quick-start/hello-world-example.md)

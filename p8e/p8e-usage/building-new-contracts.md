@@ -1,18 +1,10 @@
-# Building New Contracts
+# Building New P8e Contracts
 
-## Download the Repository
-
-Contracts and the data formats they use are located in the p8e-contract repository. To contribute to this repository by creating new contracts, you need to download a copy of the GitHub repository. Provenance will grant you access to this repository when you provide your GitHub account information.
-
-```text
-git clone https://github.com/FigureTechnologies/p8e-contract.git
-```
-
-## Contract Creation
+## P8e Contract Creation
 
 When preparing to create contracts, information about the transaction must be identified. This information includes the participants involved, the role of each participant \(i.e. who initiates the contract\), the input and output data formats, and the requirements of the contract \(i.e. validation requirements\).
 
-Every contract is required to extend the P8eContract abstract class. This class includes common functionality used by many contracts. This also facilitates identifying all contracts existing in the system.
+Every contract is required to extend the `P8eContract` abstract class. This class includes common functionality used by many contracts. This also facilitates identifying all contracts existing in the system.
 
 Only the hashed results of contract execution are memorialized to the blockchain. The only way to verify the hashed results originated from a given set of information is to run it through the contract and compare the hashed results. This validation process relies on all contracts to be deterministic, meaning the same inputs to to a contract are required to produce the same hashed results. For this reason, generating timestamps or random UUIDs in contracts should be avoided. Instead, this functionality should be handled outside of the contract and be passed in as an input parameter to the contract. The same applies for other things that affect determinism, such as floats, map ordering, and external calls.
 
