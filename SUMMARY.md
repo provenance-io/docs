@@ -70,7 +70,7 @@
   * [Data Retrieval](p8e/p8e-usage/data-retrieval.md)
   * [Quick Start](p8e/p8e-usage/quick-start/README.md)
     * [Explanation](p8e/p8e-usage/quick-start/hello-world-example.md)
-* [Contract Execution Examples](p8e/contract-execution-examples/README.md)
+* [P8e Examples](p8e/contract-execution-examples/README.md)
   * [Cross Scope Contract Example](p8e/contract-execution-examples/cross-scope-contract-example.md)
   * [Multi-Contract Example](p8e/contract-execution-examples/multi-contract-example.md)
   * [Multi-Step Contract Example](p8e/contract-execution-examples/multi-step-contract-example.md)
