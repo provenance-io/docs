@@ -20,5 +20,11 @@ Digital assets can be "onboarded to the blockchain" by the execution of client-s
 
 Client-side Provenance contracts can be crafted to require participation by multiple parties, such as an originator and an auditor. For example, an "onboard-to-servicer" contract could involve the originator and the servicer, both verifying the data is complete enough to be transferred to the servicer. All parties participating in a contract execution are able to read the data. Either party may reject the contract execution. If all parties are in agreement, the resulting data facts are copied to each participant's encrypted data store as part of the head state of the scope.
 
+### Gas
+
+While usage of the P8e execution environment itself does not incur any fees directly, P8e scope metadata is persisted to the blockchain through a transaction. This transaction will incur a gas fee \(paid in Hash\). The originator’s local instance of the execution environment must be configured with an appropriate Hash account containing sufficient Hash to cover the transaction fee per contract execution.     
+
+
+
 
 
