@@ -83,7 +83,6 @@
     * [3rd Party Digital Signatures](provenance-applications/loan-origination-system-los/loan-validation/3rd-party-digital-signatures.md)
   * [Onboard to Servicing](provenance-applications/loan-origination-system-los/loan-servicing.md)
   * [Data Sharing with Portfolio Manager](provenance-applications/loan-origination-system-los/data-sharing-with-portfolio-manager.md)
-* [Figure Marketplace](provenance-applications/marketplace-digital-funds-services.md)
 * [Figure eVault](provenance-applications/evault.md)
 
 ## Contributing
