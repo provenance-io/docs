@@ -86,7 +86,7 @@ Any stablecoin holder may redeem its stablecoin at the Stablecoin Bank that mint
 
 1. The user will send the stablecoin to the Stablecoin Bank’s Provenance account for redemption.
 2. Upon receipt of the stablecoin and in connection with the redemption request, the Stablecoin Bank withdraws the fiat from their account and will burn the received stablecoin to maintain the 1:1 relationship between minted stablecoin and fiat on deposit.
-3. The Stablecoin Bank will either deposit the corresponding fiat into the user’s account at the Stablecoin Bank, or will send those funds by wire or ACH to another financial institution at the request of the user.
+3. The Stablecoin Bank will either deposit the corresponding fiat into the user’s fiat account at the Stablecoin Bank, or will send those funds by wire or ACH to another financial institution at the request of the user.
 
 ## Reference Implementation
 
@@ -126,7 +126,7 @@ Once a blockchain address holds stablecoin, it is necessary to provide a process
 
 ### Verified Coins
 
-While coins in general can be created on Provenance by any entity not all coins are issued by trusted entities. Trusting the creator of the coin is important because the store of value is a bridge for t-0 settlement with fiat. While the coin denom\(name\) is secured on Provenance by an encryption key, it is necessary to know your counter party when using stablecoins to guarantee the validity of the entity backing the issued coin.
+While coins in general can be created on Provenance by any entity not all coins are issued by trusted entities. Trusting the creator of the coin is important because the store of value is a bridge for t-0 settlement with fiat. While the coin denom\(name\) is secured on Provenance by an encryption key, it is necessary to know the issuer\(s\) when accepting stablecoins as payment to guarantee the validity of the entity backing the issued coin.
 
 Determining a method to verify trust lines between entities on the blockchain is an exercise that each entity should determine on their own, but using a trusted list of partner addresses can simplify choosing known good actors on the network. 
 
