@@ -138,7 +138,6 @@ Determining a method to verify trust lines between entities on the blockchain is
 * In [Marine Bank](https://caselaw.findlaw.com/us-supreme-court/455/551.html), the Supreme Court found that a certificate of deposit that was issued by a federally-chartered bank was not a security, since the purchaser of that instrument was already protected by the federal banking laws governing the issuer bank, including deposit insurance \(and therefore had no risk of loss\).
 * A federal appeals court subsequently used the rationale of Marine Bank to reach the opposite result in [Gary Plastic](https://law.resource.org/pub/us/case/reporter/F2/756/756.F2d.230.84-7671.84-7541.252.365.html), finding that the federal banking laws did not eliminate risk \(including risk of loss\) to the purchaser of CDs that were created for and marketed by a broker-dealer.
 * Here, similar to Marine Bank, the issuer of the stablecoin would be a regulated bank, and the corresponding fiat on deposit would be federally insured.
-* Here, similar to Marine Bank, the issuer of the stablecoin would be a regulated bank, and the corresponding fiat on deposit would be federally insured.
 
 ## **FAQs**
 
