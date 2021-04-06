@@ -21,25 +21,19 @@ To support transaction flows, a bank will execute the following actions via API 
 
 ## Stablecoin Context
 
-Every stablecoin has a “minter” - the bank that created the coin.  ~~Only nationally chartered banks with access to the fed settlement system will be allowed to be omnibus banks for stablecoin.~~      
+Every stablecoin has a “minter” - the bank that created the coin.  Only nationally chartered banks with access to the fed settlement system will be recognized as omnibus banks for stablecoin.      
 
 
 Fiat deposits underlying the stablecoin are not committed to escrow; rather they are a fungible liability \(or sold asset, discussed below\), and the creditworthiness of the stablecoin is the creditworthiness of the omnibus bank “minter”.    
 
 
-Using the example above, if the fund had an account with the omnibus bank, the fund can simply wire the money to its own account and request it be converted to stablecoin via minting, with the fund wallet address in the wire.  On such action, the bank is essentially selling stablecoin to the fund, creating a stablecoin liability offset by the cash asset, where the cash is unencumbered.  However, banks might want to represent the stablecoin as a special deposit \(though still fungible to general liabilities\), requiring redemption of the stablecoin to access.  
-
-
-Should the fund not have an account with the omnibus bank, ~~PBI, Provenance Blockchain Inc., has a master account with each omnibus bank that approved parties can access to transact on Provenance.~~  In these situations, Figure - by agreement with PBI - is responsible for the BSA/AML of the counterparty.  The accounting for the bank is the same as in the example outlined above.  
+Using the example above, if the fund had an account with the omnibus bank, the fund can simply wire the money to its own account and request it be converted to stablecoin via minting, with the fund blockchain address in the wire.  On such action, the bank is essentially selling stablecoin to the fund, creating a stablecoin liability offset by the cash asset, where the cash is unencumbered.  However, banks might want to represent the stablecoin as a special deposit \(though still fungible to general liabilities\), requiring redemption of the stablecoin to access.  
 
 
 Omnibus banks should look at stablecoin as the equivalent to a short term debt issuance \(though redeemable any time and at zero coupon\), and thus eliminate the need for an explicit account.  Rather the omnibus bank would mint and destroy coins in the open market, on demand.  
 
 
 In situations where two parties transact on Provenance using an omnibus bank’s stablecoin, the omnibus bank is removed from such transaction and not responsible for BSA/AML on either party.  
-
-
-In addition to providing a bridge between blockchain and fiat, omnibus banks can perform other functions.  For example, Figure uses these banks to fund loans and receive payments on issued loans.  Figure Pay, another example, pays the omnibus bank supporting the platform fees for blockchain rail payments, bin sponsorship and integration into Fed settlement systems.  
 
 
 The benefit of a bank being an omnibus bank is the float from minting stable coin and any transaction fees, custody fees or other fees provided to individuals and institutions transacting on Provenance.  
@@ -50,26 +44,18 @@ To illustrate, we'll walk through detailed process flows for a US Omnibus Bank s
 
 ### Issuing Stablecoin \(Minting\)
 
-User must have a Provenance account \(an address on the network\) to hold stablecoin.  The keys associated with that account are stored in a wallet
+User must have a Provenance account \(an address on the blockchain\) to hold stablecoin.  The keys associated with that account are usually stored in a wallet
 
 The Stablecoin Bank has the BSA/AML obligation.  They may leverage a Passport, such as Figure’s Passport, in order to fulfill its BSA/AML obligation.
 
 1. User sends fiat to Stablecoin Bank to mint stablecoin.
 2. Upon receipt and verification of funds, Stablecoin Bank uses an API call to Provenance to mint a corresponding amount of stablecoin to the Stablecoin Bank’s Provenance account.  The stablecoin is a 1:1 digital representation of the corresponding fiat on deposit at Stablecoin Bank.  
 3. The Stablecoin Bank then moves the stablecoin to the account of the user who originally deposited the fiat.
-4. User may then transact using stablecoin on Figure and third-party applications built on Provenance, or may send that stablecoin to another user on the platform.
+4. User may then transact using stablecoin on third-party applications built on Provenance, or may send that stablecoin to another user on the platform.
 
 ### Funding an Asset
 
-An originator funds its loans at time of onboarding using stablecoin issued by an Omnibus Bank. When the Omnibus Bank receives funds from the originator, it mints a corresponding amount of stablecoin to an address representing the originator’s blockchain funding account. Loans are funded by transferring coin to Omnibus Bank's blockchain address with an identifier representing the borrower’s fiat bank information. Next, the Omnibus Bank will convert the borrower’s coin to fiat and send funds to the borrower’s bank account. The stablecoin used is burned in the process of conversion to fiat.
-
-### Collecting Payments
-
-Omnibus banks push ACH requests to clearinghouse, receive payments back.
-
-![](https://lh3.googleusercontent.com/XzUtTuct0coFqZsZsocO38hGDu3n7QkwZMMRp5FC1PjEL7sCpNsFJzXtEADQbSY5f2Z4fqym8kAOVwRaI-FtecmEbcrwdCmOSA4toS3jCUkQxmCLOPyWVQgKYCRzmEH7qBKwyofc)
-
-The servicer sets up smart contracts in order for Provenance to automate the payment pulls from borrowers accounts. Provenance sends the bank the instructions to collect the payments, which results in the bank pushing the file to the ACH network, and receiving funds back into the account specified. The Bank informs Provenance of the cash in order to create the immutable record of the payments, and finally, the bank then moves the funds from the servicer’s receiving account to the accounts of the asset owner, or to any service providers. Again, Provenance provides visibility to the servicer, including both the money received and notices of decline.
+Originators fund loans at time of onboarding using stablecoin issued by an Omnibus Bank. When the Omnibus Bank receives funds from the originator, it mints a corresponding amount of stablecoin to an address representing the originator’s blockchain funding account. Loans are funded by transferring coin to Omnibus Bank's blockchain address with an identifier representing the borrower’s fiat bank information. Next, the Omnibus Bank will convert the borrower’s coin to fiat and send funds to the borrower’s bank account. The stablecoin used is burned in the process of conversion to fiat.
 
 ### Bilateral Asset\(s\) Sale
 
@@ -78,18 +64,18 @@ Assume a fund is buying a pool of loans that are registered on Provenance.  That
 
 ![](../../.gitbook/assets/omnibus-bank-and-stablecoin.png)
 
-The omnibus bank uses the API call to Provenance to create stablecoin in an equal amount to the wire received and deposit the stablecoin into the fund’s wallet on Provenance \(signified by the identifier in the wire\).   
+The omnibus bank uses the API call to Provenance to create stablecoin in an equal amount to the wire received and deposit the stablecoin into the fund’s blockchain account on Provenance \(signified by the identifier in the wire\).   
   
 
 
 ![](../../.gitbook/assets/omnibus-bank-and-stablecoin-1-.png)
 
-Provenance then transfers the agreed amount of stablecoin from the fund’s wallet to the seller’s wallet and transfers ownership of the loans to the fund at the same time.  This a T+0 transaction with no counterparty or settlement risk.  
+Provenance then transfers the agreed amount of stablecoin from the fund’s blockchain account to the seller's blockchain and transfers ownership of the loans to the fund at the same time.  This a T+0 transaction with no counterparty or settlement risk.  
 
 
 ![](../../.gitbook/assets/omnibus-bank-and-stablecoin-2-%20%281%29%20%281%29.png)
 
-Wallet owners on Provenance can redeem their stablecoin from the omnibus bank at any time.  In doing so, the omnibus bank destroys \(burns\) the stablecoin and transfers the corresponding amount of fiat to the redeemer's target fiat account.    
+Account owners on Provenance can redeem their stablecoin from the omnibus bank at any time.  In doing so, the omnibus bank destroys \(burns\) the stablecoin and transfers the corresponding amount of fiat to the redeemer's target fiat account.    
 
 
 ![](../../.gitbook/assets/omnibus-bank-and-stablecoin-3-.png)
