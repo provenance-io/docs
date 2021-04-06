@@ -34,7 +34,7 @@ Once you have staked Hash you are able to vote on Governance proposals that ulti
 
 #### Fee Distributions
 
-Staked Hash entitles you to a portion of the fees collected by the network. It is important to delegate to a secure validator and note the commission rate that the validator charges since it will directly impact the amount of rewards that you are able collect. See [Distribution](../financial-services-blockchain/distribution.md) for more information on how fees are collected and distributed.
+Staked Hash entitles you to a portion of the fees collected by the network. Care should be taken to delegate to a secure validator and understanding the commission rate that the validator charges since it will directly impact the amount of rewards that you are able receive. See [Distribution](../financial-services-blockchain/distribution.md) for more information on how fees are collected and distributed.
 
 ### Risks
 
