@@ -44,7 +44,7 @@ Validators can earn rewards for assuming partial responsibility for the network,
 
 #### Uptime requirements
 
-The provenance network requires that all active validators sign a minimum of XXXX blocks out of the last 10,000.  This requirement enforces a basic level of availability.  Active validators that are not available to sign blocks slow down the overall network response times.
+The provenance network requires that all active validators sign a minimum amount of blocks out of the last 10,000.  This requirement enforces a basic level of availability.  Active validators that are not available to sign blocks slow down the overall network response times.
 
 #### Proper signing and endorsement
 
@@ -52,7 +52,7 @@ A validator node must only sign valid blocks and must not issue more than one si
 
 #### Penalties
 
-Active validators that fail to meet the minimum availability requirements or are otherwise flagged for inappropriate behavior are subject to having a portion of their bonded stake slashed/burned.  This penalty enforcement ranges from 1% to 20% and includes a permanent ban for the most severe behavior.  Delegators that pledge stake to the validator node will also be penalized which is additional incentive to validators to protect their networks to maintain the stability of Provenance.
+Active validators that fail to meet the minimum availability requirements or are otherwise flagged for inappropriate behavior are subject to having a portion of their bonded stake slashed/burned.  This penalty enforcement typically ranges from 1% to 20% based on configuration and includes a permanent ban for the most severe behavior.  Delegators that pledge stake to the validator node will also be penalized which is additional incentive to validators to protect their networks to maintain the stability of Provenance.
 
 ### Considerations
 
