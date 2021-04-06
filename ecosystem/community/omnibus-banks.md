@@ -17,7 +17,7 @@ To support transaction flows, a bank will execute the following actions via API 
 * Process ACH transfers and receive acknowledgements
 * Report returned items \(insufficient funds, account not found...etc\)
 * Retrieve daily transaction history on sub-accounts
-* Create and destroy temporary \(“virtual”\) escrow accounts
+* Create and destroy temporary \(“virtual”\) escrow accounts.
 
 ## Stablecoin Context
 
@@ -25,7 +25,7 @@ Every stablecoin has a “minter” - the bank that created the coin.  Only nati
 
 Fiat deposits underlying the stablecoin are not committed to escrow; rather they are a fungible liability \(or sold asset, discussed below\), and the creditworthiness of the stablecoin is the creditworthiness of the omnibus bank “minter”.  
 
-Using the example above, if a fund had an account with the omnibus bank, the fund can simply wire the money to its own account and request it be converted to stablecoin via minting, with the fund blockchain address in the wire.  On such action, the bank is essentially selling stablecoin to the fund, creating a stablecoin liability offset by the cash asset, where the cash is unencumbered.  However, banks might want to represent the stablecoin as a special deposit \(though still fungible to general liabilities\), requiring redemption of the stablecoin to access.
+For example, if a fund had an account with an omnibus bank, the fund can simply wire the money to its own account and request it be converted to stablecoin via minting, with the fund blockchain address in the wire.  On such action, the bank is essentially selling stablecoin to the fund, creating a stablecoin liability offset by the cash asset, where the cash is unencumbered.  However, banks might want to represent the stablecoin as a special deposit \(though still fungible to general liabilities\), requiring redemption of the stablecoin to access.
 
 Omnibus banks should look at stablecoin as the equivalent to a short term debt issuance \(though redeemable any time and at zero coupon\), and thus eliminate the need for an explicit account.  Rather the omnibus bank would mint and destroy coins in the open market, on demand.
 
@@ -45,8 +45,8 @@ The Stablecoin Bank has the BSA/AML obligation.  They may leverage a Passport, s
 
 1. User sends fiat to Stablecoin Bank to mint stablecoin.
 2. Upon receipt and verification of funds, Stablecoin Bank uses an API call to Provenance to mint a corresponding amount of stablecoin to the Stablecoin Bank’s Provenance account.  The stablecoin is a 1:1 digital representation of the corresponding fiat on deposit at Stablecoin Bank.  
-3. The Stablecoin Bank then moves the stablecoin to the account of the user who originally deposited the fiat.
-4. User may then transact using stablecoin on third-party applications built on Provenance, or may send that stablecoin to another user on the platform.
+3. The Stablecoin Bank then transfers the stablecoin to the account of the user who originally deposited the fiat.
+4. User may then transact using stablecoin on third-party applications built on Provenance to send that stablecoin to another user on the platform.
 
 ### Funding an Asset
 
@@ -65,7 +65,7 @@ The omnibus bank uses the API call to Provenance to create stablecoin in an equa
 
 ![](../../.gitbook/assets/omnibus-bank-and-stablecoin-1-.png)
 
-Provenance then transfers the agreed amount of stablecoin from the fund’s blockchain account to the seller's blockchain and transfers ownership of the loans to the fund at the same time.  This a T+0 transaction with no counterparty or settlement risk.  
+Provenance then transfers the agreed amount of stablecoin from the fund’s blockchain account to the seller's blockchain account and transfers ownership of the loans to the fund at the same time.  This a T+0 transaction with no counterparty or settlement risk.  
 
 
 ![](../../.gitbook/assets/omnibus-bank-and-stablecoin-2-%20%281%29%20%281%29.png)
@@ -80,8 +80,8 @@ Account owners on Provenance can redeem their stablecoin from the omnibus bank a
 Any stablecoin holder may redeem its stablecoin at the Stablecoin Bank that minted the stablecoin for a corresponding amount of fiat.  Stablecoin should be readily attributable to the Stablecoin Bank that minted that particular stablecoin.
 
 1. The user will send the stablecoin to the Stablecoin Bank’s Provenance account for redemption.
-2. Upon receipt of the stablecoin and in connection with the redemption request, the Stablecoin Bank withdraws the fiat from their account and will burn the received stablecoin to maintain the 1:1 relationship between minted stablecoin and fiat on deposit.
-3. The Stablecoin Bank will either deposit the corresponding fiat into the user’s fiat account at the Stablecoin Bank or will send those funds by wire or ACH to another financial institution at the request of the user.
+2. Upon receipt of the stablecoin, and in connection with the redemption request, the Stablecoin Bank withdraws the fiat from their account and will burn the received stablecoin to maintain the 1:1 relationship between minted stablecoin and fiat on deposit.
+3. The Stablecoin Bank will either deposit the corresponding fiat into the user’s fiat account at the Stablecoin Bank, or will send those funds by wire or ACH to another financial institution at the request of the user.
 
 ## Reference Implementation
 
@@ -93,7 +93,7 @@ The process to convert fiat to stablecoin can be handled in several different wa
 
 #### Receiving Wires
 
-Wiring of funds tends to be used for large transactions, and it one of the simplest ways to identify received funds, but does tend to come with a high-probability for human error since the wire reference is hand entered on the transmission side of the wire. 
+Wiring of funds tends to be used for large transactions and it is one of the simplest ways to identify received funds.  However, it tends to come with a high-probability for human error since the wire reference is hand entered on the transmission side of the wire. 
 
 ![](https://i.imgur.com/JWTPqkr.png)
 
@@ -121,7 +121,7 @@ Once a blockchain address holds stablecoin, it is necessary to provide a process
 
 ### Verified Coins
 
-While coins in general can be created on Provenance by any entity, not all coins are issued by trusted entities. Trusting the creator of the coin is important because the store of value is a bridge for t-0 settlement with fiat. While the coin denom \(name\) is secured on Provenance by an encryption key, it is necessary to know the issuer\(s\) when accepting stablecoins as payment to guarantee the validity of the entity backing the issued coin.
+While coins in general can be created on Provenance by any entity not all coins are issued by trusted entities. Trusting the creator of the coin is important because the store of value is a bridge for T-0 settlement with fiat. While the coin denom\(name\) is secured on Provenance by an encryption key, it is necessary to know the issuer\(s\) when accepting stablecoins as payment to guarantee the validity of the entity backing the issued coin.
 
 Determining a method to verify trust lines between entities on the blockchain is an exercise that each entity should determine on their own, but using a trusted list of partner addresses can simplify choosing known good actors on the network. 
 
@@ -158,6 +158,8 @@ _Passport is a Provenance-based Figure application that was developed to assist 
 ### **What fees are charged when creating and redeeming stablecoin?**
 
 In order to facilitate the adoption of stablecoin, we would prefer that Stablecoin Banks initially collect minimal fees in connection with stablecoin creation or redemption.  A Stablecoin Bank, however, would collect the float from minting stablecoin and could potentially collect fees related to minting, redeeming, or custodying stablecoin.
+
+In addition to Stablecoin Bank fee collection the Provenance blockchain charges transaction gas fees.  Each execution of a blockchain transaction requires enough gas to complete the requires reads, writes, and computation encompassed by the submitted transaction. For example, minting stablecoin will incur a gas fee that is paid, in Provenance Hash, by the Stablecoin Bank at the time of the transaction.  The Stablecoin Bank must hold enough Hash to transact on Provenance.
 
 ### **How would I account for stablecoin?**
 
