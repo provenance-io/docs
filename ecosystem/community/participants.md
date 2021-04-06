@@ -10,6 +10,7 @@ Provenance has a group of leading financial institutions participating across fu
 
 * Participants who put assets on Provenance.  Asset originators \(loans\), funds \(investments\).
 * Participants who purchase/finance assets on Provenance. Banks and funds.
+* Participants who securitize assets, and investors who purchase the bonds on Provenance.
 * Validators/Delegators. Buy-side, sell-side firms, other financial services companies and 3rd party validators who independently host the blockchain.
 * Omnibus Banks who provide a bridge between fiat and Provenance.
 
