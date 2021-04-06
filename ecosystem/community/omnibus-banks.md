@@ -25,7 +25,7 @@ Every stablecoin has a “minter” - the bank that created the coin.  Only nati
 
 Fiat deposits underlying the stablecoin are not committed to escrow; rather they are a fungible liability \(or sold asset, discussed below\), and the creditworthiness of the stablecoin is the creditworthiness of the omnibus bank “minter”.  
 
-Using the example above, if the fund had an account with the omnibus bank, the fund can simply wire the money to its own account and request it be converted to stablecoin via minting, with the fund blockchain address in the wire.  On such action, the bank is essentially selling stablecoin to the fund, creating a stablecoin liability offset by the cash asset, where the cash is unencumbered.  However, banks might want to represent the stablecoin as a special deposit \(though still fungible to general liabilities\), requiring redemption of the stablecoin to access.
+Using the example above, if a fund had an account with the omnibus bank, the fund can simply wire the money to its own account and request it be converted to stablecoin via minting, with the fund blockchain address in the wire.  On such action, the bank is essentially selling stablecoin to the fund, creating a stablecoin liability offset by the cash asset, where the cash is unencumbered.  However, banks might want to represent the stablecoin as a special deposit \(though still fungible to general liabilities\), requiring redemption of the stablecoin to access.
 
 Omnibus banks should look at stablecoin as the equivalent to a short term debt issuance \(though redeemable any time and at zero coupon\), and thus eliminate the need for an explicit account.  Rather the omnibus bank would mint and destroy coins in the open market, on demand.
 
@@ -81,7 +81,7 @@ Any stablecoin holder may redeem its stablecoin at the Stablecoin Bank that mint
 
 1. The user will send the stablecoin to the Stablecoin Bank’s Provenance account for redemption.
 2. Upon receipt of the stablecoin and in connection with the redemption request, the Stablecoin Bank withdraws the fiat from their account and will burn the received stablecoin to maintain the 1:1 relationship between minted stablecoin and fiat on deposit.
-3. The Stablecoin Bank will either deposit the corresponding fiat into the user’s fiat account at the Stablecoin Bank, or will send those funds by wire or ACH to another financial institution at the request of the user.
+3. The Stablecoin Bank will either deposit the corresponding fiat into the user’s fiat account at the Stablecoin Bank or will send those funds by wire or ACH to another financial institution at the request of the user.
 
 ## Reference Implementation
 
