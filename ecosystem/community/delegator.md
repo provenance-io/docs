@@ -26,7 +26,7 @@ Re-delegation is also the recommended way to move your stake from a validator th
 
 #### Commission
 
-It's important to note that validators are able to set a commission percentage that directly impacts the amount of rewards you are able to collect from delegating to that validator. 
+Validators are able to set a commission percentage that directly impacts the amount of rewards you are able to collect from delegating to that validator. 
 
 #### Voting
 
