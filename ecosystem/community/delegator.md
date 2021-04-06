@@ -4,7 +4,7 @@ To understand delegation it's important to understand the difference between Has
 
 **Hash** - Utility token used by provenance for staking and transaction fee payment. 
 
-**Stake** - Hash that has been delegated to a validator to share in the risks and rewards of participating in the PoS consensus mechanism in the blockchain network. 
+**Stake** - Hash that has been delegated to a validator to share in the risks and rewards of participating in the PoS consensus mechanism on the blockchain network. 
 
 Hash will become stake at the point in time that it is delegated to a validator to be used as voting power on the network. 
 
