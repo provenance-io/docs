@@ -2,7 +2,7 @@
 
 **Blockchain has the potential to change the world of finance.** 
 
-The $300+ trillion in global financial markets incur hundreds of billions of dollars in audit, custody, trustee, reconciliation and administrative costs each year. Many of these markets suffer from significant friction, lack of transparency and limited liquidity. Figure Technologies, Inc. \(Figure ® \) has launched a production blockchain in 2018, Provenance™, to transform financial services. 
+The $300+ trillion in global financial markets incur hundreds of billions of dollars in audit, custody, trustee, reconciliation and administrative costs each year. Many of these markets suffer from significant friction, lack of transparency and limited liquidity. Figure Technologies, Inc. \(Figure ® \) launched a production blockchain in 2018, Provenance™, to transform financial services. 
 
 Provenance dramatically reduces costs, improves liquidity, reduces risk and opens new financial markets. Provenance is a proof-of-stake blockchain based on three key concepts: 
 

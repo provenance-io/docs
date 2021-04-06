@@ -181,6 +181,6 @@ In order to facilitate the adoption of stablecoin, we would prefer that Stableco
 
 ### **How would I account for stablecoin?**
 
-A Stablecoin Bank could treat the stablecoin could be treated as either a sold asset or a fungible liability.  You should consult with your tax advisor to confirm.  
+A Stablecoin Bank could treat the stablecoin as either a sold asset or a fungible liability.  You should consult with your tax advisor to confirm.  
 
 
