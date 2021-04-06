@@ -5,8 +5,6 @@
 ## Ecosystem
 
 * [Provenance: Financial Services Blockchain](ecosystem/financial-services-blockchain/README.md)
-  * [History](ecosystem/financial-services-blockchain/mission.md)
-  * [Hash](ecosystem/financial-services-blockchain/hash-2.0.md)
   * [Fees/Distribution](ecosystem/financial-services-blockchain/distribution.md)
   * [Legal Standing](ecosystem/financial-services-blockchain/legal-standing.md)
 * [Governance](ecosystem/governance/README.md)
@@ -140,6 +138,8 @@
 
 ## Appendix
 
+* [History](appendix/mission.md)
+* [Hash](appendix/hash-2.0.md)
 * [Blockchain Comparison](appendix/blockchain-comparison.md)
 
 ---
