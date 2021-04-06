@@ -147,7 +147,7 @@ Stablecoin is a digital asset that is pegged to an external reference, such as a
 
 ### **What are the benefits of stablecoin?**
 
-Since stablecoins are blockchain-based, transactions that use stablecoin leverage the benefits of blockchain technology, including transaction immutability, finality, transparency and traceability.  Since a stablecoin is, by definition, designed to minimize price volatility, it provides certainty for use in transactions and therefore is a more effective medium of exchange than other types of digital assets.  Stablecoin is fully funded, and will move at the same time as the corresponding asset transfer for real-time settlement, thereby eliminating counterparty and settlement risk.
+Since stablecoins are blockchain-based, transactions that use stablecoin leverage the benefits of blockchain technology, including transaction immutability, finality, transparency, and traceability.  Since a stablecoin is, by definition designed to minimize price volatility, it provides certainty for use in transactions and therefore is a more effective medium of exchange than other types of digital assets.  Stablecoin is fully funded and will move at the same time as the corresponding asset transfer for real-time settlement, thereby eliminating counterparty and settlement risk.
 
 ### **As a regulated financial institution, I have certain regulatory obligations.  What is Passport, and how will it help me meet those obligations?**
 
@@ -157,7 +157,7 @@ _Passport is a Provenance-based Figure application that was developed to assist 
 
 ### **What fees are charged when creating and redeeming stablecoin?**
 
-In order to facilitate the adoption of stablecoin, we would prefer that Stablecoin Banks initially collect minimal fees in connection with stablecoin creation or redemption.  A Stablecoin Bank, however, would collect the float from minting stablecoin, and could potentially collect fees related to minting, redeeming, or custodying stablecoin.
+In order to facilitate the adoption of stablecoin, we would prefer that Stablecoin Banks initially collect minimal fees in connection with stablecoin creation or redemption.  A Stablecoin Bank, however, would collect the float from minting stablecoin and could potentially collect fees related to minting, redeeming, or custodying stablecoin.
 
 ### **How would I account for stablecoin?**
 
