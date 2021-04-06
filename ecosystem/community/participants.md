@@ -8,7 +8,7 @@ Participants who hold Hash can additionally participate by delegating their stak
 
 Provenance has a group of leading financial institutions participating across functions, including:
 
-* Participants who put assets on Provenance.  Asset originators \(loans\), funds \(investments\).
+* Participants who put assets on Provenance.  Asset originators \(e.g. loans\), funds \(investments\).
 * Participants who purchase/finance assets on Provenance. Banks and funds.
 * Participants who securitize assets, and investors who purchase the bonds on Provenance.
 * Validators/Delegators. Buy-side, sell-side firms, other financial services companies and 3rd party validators who independently host the blockchain.
