@@ -93,7 +93,7 @@ The process to convert fiat to stablecoin can be handled in several different wa
 
 #### Receiving Wires
 
-Wiring of funds tends to be used for large transactions and it one of the simplest ways to identify received funds, but does tend to come with a high-probability for human error since the wire reference is hand entered on the transmission side of the wire. 
+Wiring of funds tends to be used for large transactions, and it one of the simplest ways to identify received funds, but does tend to come with a high-probability for human error since the wire reference is hand entered on the transmission side of the wire. 
 
 ![](https://i.imgur.com/JWTPqkr.png)
 
@@ -105,7 +105,7 @@ Assigning a user an account/routing number can be a useful tool that makes conve
 
 #### ACH Pull
 
-In some cases it is necessary to allow a small scale user to initiate a pull of funds from their current brick and mortar account to be delivered to their blockchain address as stablecoin. This use case is by far the most complex since ACH has many clearing issues that an institution has to consider.
+In some cases it is necessary to allow a small scale user to initiate a pull of funds from their current brick-and-mortar account to be delivered to their blockchain address as stablecoin. This use case is by far the most complex since ACH has many clearing issues that an institution has to consider.
 
 ![](https://i.imgur.com/7wbQjWU.png)
 
@@ -121,7 +121,7 @@ Once a blockchain address holds stablecoin, it is necessary to provide a process
 
 ### Verified Coins
 
-While coins in general can be created on Provenance by any entity not all coins are issued by trusted entities. Trusting the creator of the coin is important because the store of value is a bridge for t-0 settlement with fiat. While the coin denom\(name\) is secured on Provenance by an encryption key, it is necessary to know the issuer\(s\) when accepting stablecoins as payment to guarantee the validity of the entity backing the issued coin.
+While coins in general can be created on Provenance by any entity, not all coins are issued by trusted entities. Trusting the creator of the coin is important because the store of value is a bridge for t-0 settlement with fiat. While the coin denom \(name\) is secured on Provenance by an encryption key, it is necessary to know the issuer\(s\) when accepting stablecoins as payment to guarantee the validity of the entity backing the issued coin.
 
 Determining a method to verify trust lines between entities on the blockchain is an exercise that each entity should determine on their own, but using a trusted list of partner addresses can simplify choosing known good actors on the network. 
 
