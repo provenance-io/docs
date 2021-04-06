@@ -2,7 +2,7 @@
 
 ## Overview <a id="Governance-Proposal-Types"></a>
 
-Provenance Blockchain includes an on-chain governance mechanism for managing software updates and improvements, as well as for governing the use of the Provenance community funds. Users holding staked Hash tokens can participate in voting on governance proposals.
+Provenance Blockchain includes an on-chain governance mechanism for managing software updates and improvements as well as for governing the use of the Provenance community funds. Users holding staked Hash tokens can participate in voting on governance proposals which drive the evolving configuration of the blockchain.
 
 ## Governance Proposal Types <a id="Governance-Proposal-Types"></a>
 
