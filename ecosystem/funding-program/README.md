@@ -10,7 +10,7 @@ The ![](../../.gitbook/assets/image%20%2818%29.png) native utility-token to pay 
 
 Smart-contract and Validator services on the ![](https://lh5.googleusercontent.com/AReNslD3Q7Z429WPitxtk0GCeWl3pzfjVkvlFIBttnZhiLNPO9REb8qXveVPsfcvLm3vi71zvRKPuS2dyykZYXVzmJF6GRAuN_hTO0xpTggV-GaZpW9c_R9PLlvAHMA4NR7EezHU)-blockchain network are paid for in Hash.    2% of that gas fee is levied to supports the ![](../../.gitbook/assets/image%20%2818%29.png)foundation.
 
-See the [Hash utility-token](../../appendix/hash-2.0.md) section for details. 
+See the [Hash utility-token]() section for details. 
 
 ## **The** ![](https://lh6.googleusercontent.com/SHUIJdNOhffjTlPSUYYT_QJyvkx9f3ADlDvHP5nYa7nfTtOB4JcMfsH5I1uhugoGBLRSTSLta0IYH3W_G6dS9ekVptSqA7xR17WRU3lteMq9YjJr_YTGFnQW7PF72E8grf3WP7Fe) **Core Infra Funding**
 

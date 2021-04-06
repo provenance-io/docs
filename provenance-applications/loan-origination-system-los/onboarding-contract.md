@@ -1,6 +1,6 @@
 # Onboarding
 
-Please refer to the [Figure Loan Model](../../integrating/assets.md).
+Please refer to the [Figure Loan Model](assets.md).
 
 Figure executes a loan onboarding contract for each loan. Every onboarding contract creates a new scope in the P8e EOS, with the loan UUID as the scope UUID. The onboarding contract also establishes the initial values for the facts in the scope. Not all facts will be established during this onboarding process; for example, the `validation_results` fact will be populated only after the initial run of a loan validation contract. Additionally, not all facts will be established for every loan type; for example, a HELOC loan scope will include the `lien_property` fact, but a personal loan will not.
 

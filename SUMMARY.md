@@ -66,33 +66,24 @@
 * [P8e Usage](p8e/p8e-usage/README.md)
   * [Building New P8e Contracts](p8e/p8e-usage/building-new-contracts.md)
   * [Data Retrieval](p8e/p8e-usage/data-retrieval.md)
+  * [Cross Scope Contract Example](p8e/p8e-usage/cross-scope-contract-example.md)
+  * [Multi-Contract Example](p8e/p8e-usage/multi-contract-example.md)
+  * [Multi-Step Contract Example](p8e/p8e-usage/multi-step-contract-example.md)
   * [Quick Start](p8e/p8e-usage/quick-start/README.md)
     * [Explanation](p8e/p8e-usage/quick-start/hello-world-example.md)
-* [P8e Examples](p8e/contract-execution-examples/README.md)
-  * [Cross Scope Contract Example](p8e/contract-execution-examples/cross-scope-contract-example.md)
-  * [Multi-Contract Example](p8e/contract-execution-examples/multi-contract-example.md)
-  * [Multi-Step Contract Example](p8e/contract-execution-examples/multi-step-contract-example.md)
-
-## Integrating
-
-* [Figure Loan Model](integrating/assets.md)
-* [SDK](integrating/sdk.md)
-* [Error Codes](integrating/error-codes.md)
-* [3rd Party Digital Signatures](integrating/3rd-party-digital-signatures.md)
 
 ## Apps Built on Provenance <a id="provenance-applications"></a>
 
 * [Apps Overview](provenance-applications/apps-powered-by-provenance.md)
 * [Figure LOS](provenance-applications/loan-origination-system-los/README.md)
+  * [Figure Loan Model](provenance-applications/loan-origination-system-los/assets.md)
   * [Onboarding](provenance-applications/loan-origination-system-los/onboarding-contract.md)
   * [Funding](provenance-applications/loan-origination-system-los/funding.md)
-  * [Validation](provenance-applications/loan-origination-system-los/loan-validation.md)
+  * [Validation](provenance-applications/loan-origination-system-los/loan-validation/README.md)
+    * [3rd Party Digital Signatures](provenance-applications/loan-origination-system-los/loan-validation/3rd-party-digital-signatures.md)
   * [Onboard to Servicing](provenance-applications/loan-origination-system-los/loan-servicing.md)
   * [Data Sharing with Portfolio Manager](provenance-applications/loan-origination-system-los/data-sharing-with-portfolio-manager.md)
-* [Figure Portfolio Manager](provenance-applications/portfolio-manager-market-place.md)
 * [Figure Marketplace](provenance-applications/marketplace-digital-funds-services.md)
-* [Adnales](provenance-applications/adnales.md)
-* [Figure Pay](provenance-applications/figure-pay.md)
 * [Figure eVault](provenance-applications/evault.md)
 
 ## Contributing
@@ -120,32 +111,17 @@
   * [600 Governance](contributing/adr/600-governance.md)
   * [700 Business Applications](contributing/adr/700-business-applications.md)
   * [800 System Migration](contributing/adr/800-system-migration.md)
-* [Documentation Standards](contributing/documentation-standards.md)
-
-## License
-
-* [Apache 2.0](license/untitled.md)
-
-## Glossary
-
-* [Definitions](glossary/untitled.md)
 
 ## FAQ
 
 * [Validator FAQ](faq/validator-faq.md)
 * [Delegator FAQ](faq/delegator-faq.md)
-* [Contact](faq/contact.md)
 
 ## Appendix
 
-* [History](appendix/mission.md)
-* [Hash](appendix/hash-2.0.md)
 * [Blockchain Comparison](appendix/blockchain-comparison.md)
 
----
+## License
 
-* [Use Cases](use-cases/README.md)
-  * [Data Movement](use-cases/data-movement.md)
-  * [External System Integration](use-cases/external-system-integration.md)
-  * [Servicer Conversion](use-cases/servicer-conversion.md)
+* [Apache 2.0](license/untitled.md)
 
