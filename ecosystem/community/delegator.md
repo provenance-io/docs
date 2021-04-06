@@ -18,7 +18,7 @@ _See_ [_Voting_](../governance/voting.md) _for more information on how to vote o
 * your Hash won't be available for transacting
 * your Hash will be safe from malfeasance by a bad acting validator.
 
-**Re-delegation** - It is important to note that you are able to re-delegate your Hash to a different validator immediately, without incurring the 21 day unbonding period. This is incredibly important because it allows the Hash holder to secure their Hash with a trusted validator if the current one has been deemed untrusted.
+**Re-delegation** - Re-delegation of Hash to a different validator occurs immediately, without incurring the 21 day unbonding period. This is incredibly important because it allows the Hash holder to secure their Hash with a trusted validator if the current one has been deemed untrusted.
 
 Re-delegation is also the recommended way to move your stake from a validator that has or is going off line for extended maintenance to avoid an availability penalty being assessed against your stake.
 
