@@ -75,6 +75,7 @@
 
 ## Integrating
 
+* [Asset Originator's Guide](integrating/asset-originators-guide.md)
 * [Figure Loan Model](integrating/assets.md)
 * [SDK](integrating/sdk.md)
 * [Error Codes](integrating/error-codes.md)
