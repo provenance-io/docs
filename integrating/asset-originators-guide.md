@@ -40,6 +40,12 @@ The development process for creating this loan boarding application will include
    6. To remove a loan from the system \(optional\)
 5. Developing an application to orchestrate the execution of the P8e contracts and upload loan documents \(e.g. PDF of the signing note\), and to use the Provenance SDK to manage the flow of stablecoin, asset ownership, and data sharing on the blockchain.
 
+A Provenance application has several options for interfacing with the blockchain during development and for production usage:
+
+1. [Run a blockchain localnet](../blockchain/using-provenance/) in situ for easy local development;
+2. Connect to the Provenance public [testnet](https://github.com/provenance-io/testnet);
+3. Connect to the public production Provenance [mainnet](https://github.com/provenance-io/mainnet).
+
 
 
 
