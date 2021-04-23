@@ -6,7 +6,6 @@
 
 * [Provenance: Financial Services Blockchain](ecosystem/financial-services-blockchain/README.md)
   * [Fees/Distribution](ecosystem/financial-services-blockchain/distribution.md)
-  * [Legal Standing](ecosystem/financial-services-blockchain/legal-standing.md)
 * [Governance](ecosystem/governance/README.md)
   * [Voting](ecosystem/governance/voting.md)
   * [Software Upgrade Proposals](ecosystem/governance/software-upgrade-proposal.md)
