@@ -112,6 +112,7 @@
 
 ## FAQ
 
+* [FAQ](faq/faq-1.md)
 * [Validator FAQ](faq/validator-faq.md)
 * [Delegator FAQ](faq/delegator-faq.md)
 
