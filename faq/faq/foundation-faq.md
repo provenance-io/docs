@@ -1,12 +1,26 @@
 # Foundation FAQ
 
-## Can I become who I want to be?
+## **Where is the foundation incorporated?**
 
-That's a tough question but thankfully, our team is on it. Please bear with us while we're investigating.
+**The Provenance foundation is incorporated as a non-profit in Delaware.**
 
-## Have you had a chance to answer the previous question?
+## **Who are the foundation’s members?** <a id="who-are-the-foundations-members"></a>
 
-Yes, after a few months we finally found the answer. Sadly, Mike is on vacations right now so I'm afraid we are not able to provide the answer at this point.
+**Any entity with staked Hash, is a member of the foundation.**
+
+## **Where can I find the bylaws?** <a id="where-can-i-find-the-bylaws"></a>
+
+**The foundation’s bylaws are here. \(ref?\)**
+
+## **How can I get in touch with the Provenance Foundation?** <a id="how-can-i-get-in-touch-with-the-provenance-foundation"></a>
+
+**Please email hello@provenance.io**
+
+## **What is the Provenance roadmap? \(\*\)** <a id="what-is-the-provenance-roadmap-what-are-the-phases-of-provenance"></a>
+
+## \*\*\*\* <a id="what-is-the-provenance-roadmap-what-are-the-phases-of-provenance"></a>
+
+
 
 
 

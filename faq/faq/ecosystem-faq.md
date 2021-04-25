@@ -5,20 +5,6 @@
 **When external documents are referred to by the cryptographic hash of their contents in on-chain, immutable transactions, it extends the immutability to that off-chain information. The hash value of a document’s content is used as a globally unique identifier \(URI\) or name \(URN\) for that content and is typified by ‘hash-id’.**  
 
 
-## **Does Provenance have a token?**
-
-**Yes, the Provenance blockchain network has the Hash utility-token that is used to pay for its services \(gas\), staking, and investment.**  
-
-**Note: Provenance’s Hash tokens are equivalent to but not the same as Cosmos-Hub’s Atoms.**
-
-## **What is the initial allocation of Hash?**
-
-**The Provenance Foundation received 1.25% of the total Hash allotment at its inception. The remaining percentage was distributed according to the results of the private and public fundraisers.**
-
-## **How many HASH have been minted?**
-
-**The number of Hash utility-tokens that have been minted is 100,000,000,000. This number is fixed and there will never be more than this number of Hash available.**
-
 ## **What’s the difference between Provenance, the Cosmos Network, and the Cosmos Hub?**
 
 **The Cosmos Network is a network of heterogeneous blockchains connected via the Cosmos Hub \(i.e. a router\) and a standard communication layer called the Inter-Blockchain Communication protocol \(i.e. TCP/IP\).**  
@@ -28,23 +14,6 @@
 
 
 **The Provenance blockchain is built with the CosmosSDK and therefore an application-specific Cosmos blockchain. Provenance’s blockchain is constructed with specific modules that enable the Provenance ecosystem to support sophisticated DeFi-applications. Provenance’s native utility-token is the Hash.** 
-
-## **What is the utility of Hash?**
-
-**Hash has three use cases: as a spam-prevention mechanism, as a staking token, and as a voting mechanism in governance.**  
-
-
-**As a spam prevention mechanism, Hash is used to pay fees for the Provenance blockchain services. Similar to Ethereum’s concept of “gas”, the fee may be proportional to the amount of computation required by the transaction. Fee distribution is done in-protocol and a protocol specification is described here. \(ref? - link to Cosmos’ gas/staking explanation\)**  
-
-
-**As staking tokens, Hash may be “bonded” to earn block rewards. The economic security of the Provenance network is a function of the amount of Hash staked. The more Hash that is collateralized, the more “skin” there is at stake and the higher the cost of attacking the network. Thus, the more Hash there are bonded, the greater the economic security of the network.**  
-
-
-**Hash stakers may govern the Provenance Foundation by voting on proposals with their staked Hash.**
-
-## **How do I get HASH?**
-
-**Hash is listed on multiple exchanges where it is publicly traded.**
 
 ## **Who is the team developing the Provenance Network?**
 
