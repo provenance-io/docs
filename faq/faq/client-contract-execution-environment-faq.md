@@ -1,4 +1,4 @@
-# Client Contract Execution Environment FAQ
+# Client Contract Execution Environment \(P8E\) FAQ
 
 ## **What is the Client Contract Execution Environment or CCEE or P8E?** <a id="what-is-the-client-contract-execution-environment-or-ccee-or-p-8-e"></a>
 
@@ -6,11 +6,13 @@
 
 **In addition, the CCEE includes facilities to easily refer to documents by their hash-id, and to encrypt and store those docs in an Encrypted Object Store \(EOS\). Those encrypted documents are indexed by their hash-id and optionally by selected document attribute values. The latter allows one to aggregate documents based on common attributes without revealing their sensitive content.**
 
-## **What is a hash-id** <a id="what-does-p-8-e-stand-for"></a>
-
-**When external documents are referred to by the cryptographic hash of their contents in on-chain, immutable transactions, it extends the immutability to that off-chain information. The hash value of a document’s content is used as a globally unique identifier \(URI\) or name \(URN\) for that content and is typified by ‘hash-id’.What does P8E stand for?**
+## **What does P8E stand for?**
 
 **P8E is the internal code name for Provenance’s Client Contract Execution Environment. The abbreviation is trivial for all those who worked on it, but to spell it out for the less fortunate: the word ProvenancE starts with a “P”, then “8” letters and ends with “E” - “P8E”.**
+
+## **What is a hash-id** <a id="what-does-p-8-e-stand-for"></a>
+
+**When external documents are referred to by the cryptographic hash of their contents in on-chain, immutable transactions, it extends the immutability to that off-chain information. The hash value of a document’s content is used as a globally unique identifier \(URI\) or name \(URN\) for that content and is typified by ‘hash-id’.**
 
 ## **What is the EOS or Encrypted Object Store?**
 
