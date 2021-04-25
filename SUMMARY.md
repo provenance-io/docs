@@ -113,12 +113,15 @@
 ## Provenance FAQ <a id="faq"></a>
 
 * [FAQ](faq/faq/README.md)
-  * [tmp](faq/faq/tmp.md)
   * [Foundation FAQ](faq/faq/foundation-faq.md)
+  * [Grants Program FAQ](faq/faq/grants-program-faq.md)
   * [Ecosystem FAQ](faq/faq/ecosystem-faq.md)
+  * [Blockchain FAQ](faq/faq/blockchain-faq.md)
   * [Hash Utility Token FAQ](faq/faq/hash-utility-token-faq.md)
   * [Validator FAQ](faq/faq/validator-faq.md)
   * [Delegator FAQ](faq/faq/delegator-faq.md)
+  * [Client Contract Execution Environment FAQ](faq/faq/client-contract-execution-environment-faq.md)
+  * [Smart-Contract FAQ](faq/faq/smart-contract-faq.md)
 
 ## Appendix
 

@@ -18,6 +18,16 @@
 
 ## **What is the Provenance roadmap? \(\*\)** <a id="what-is-the-provenance-roadmap-what-are-the-phases-of-provenance"></a>
 
+**???**
+
+## **How is the foundation funded?** <a id="how-is-the-foundation-funded"></a>
+
+**???**
+
+##  <a id="how-is-the-foundation-funded"></a>
+
+**…**
+
 ## \*\*\*\* <a id="what-is-the-provenance-roadmap-what-are-the-phases-of-provenance"></a>
 
 

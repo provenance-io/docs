@@ -28,5 +28,12 @@
 
 **Hash is listed on multiple exchanges where it is publicly traded.**
 
+## **What is the difference between Hash, Hash 2.0 and Hash 1.0, and Provenance, Provenance 2.0 and Provenance 1.0?**
 
+**Hash is short for Hash 2.0, and Provenance is short for Provenance 2.0. When Hash is referred to with a capital “H”, it’s the utility-token used to pay for the Provenance blockchain related services or the gas as it’s commonly called. Hash is equivalent to, but not the same as, the Atom tokens used for the CosmosHub services.  
+Provenance’s first generation blockchain service was based on HyperLedger and is referred to as Provenance 1.0. Hash 1.0 was the legacy currency used in that Provenance 1.0 blockchain. The terms Provenance 1.0 and Hash 1.0 will soon have only historical significance and probably will make its original developers a bit teary eyed.**
+
+\*\*\*\*
+
+\*\*\*\*
 
