@@ -110,12 +110,14 @@
   * [700 Business Applications](contributing/adr/700-business-applications.md)
   * [800 System Migration](contributing/adr/800-system-migration.md)
 
-## FAQ
+## Provenance FAQ <a id="faq"></a>
 
-* [FAQ](faq/faq-1.md)
-* [Ecosystem FAQ](faq/ecosystem-faq.md)
-* [Validator FAQ](faq/validator-faq.md)
-* [Delegator FAQ](faq/delegator-faq.md)
+* [FAQ](faq/faq/README.md)
+  * [Foundation FAQ](faq/faq/foundation-faq.md)
+  * [Ecosystem FAQ](faq/faq/ecosystem-faq.md)
+  * [Hash Utility Token FAQ](faq/faq/hash-utility-token-faq.md)
+  * [Validator FAQ](faq/faq/validator-faq.md)
+  * [Delegator FAQ](faq/faq/delegator-faq.md)
 
 ## Appendix
 

@@ -1,0 +1,2 @@
+# Hash Utility Token FAQ
+
