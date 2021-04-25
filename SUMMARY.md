@@ -112,7 +112,8 @@
 
 ## FAQ
 
-* [FAQ](faq/faq-1.md)
+* [FAQ](faq/faq-1/README.md)
+  * [Ecosystem FAQ](faq/faq-1/ecosystem-faq.md)
 * [Validator FAQ](faq/validator-faq.md)
 * [Delegator FAQ](faq/delegator-faq.md)
 
