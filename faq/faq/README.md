@@ -16,11 +16,11 @@ Everything you always wanted to know about Provenance, but were afraid to ask…
 
 ## [Delegator FAQ](delegator-faq.md)
 
-## Client Contract Execution Environment FAQ
+## [Client Contract Execution Environment FAQ](client-contract-execution-environment-faq.md)
 
-## Smart-Contract FAQ
+## [Smart-Contract FAQ](smart-contract-faq.md)
 
-## [tmp]()
+
 
 
 
