@@ -36,10 +36,7 @@ Being a delegator is not a passive task. Here are the main directives of a deleg
 
 ## Revenue
 
-Validators and delegators earn revenue in exchange for their services. This revenue is given in two forms.
-
-* **Block provisions \(**Hash**\):** They are paid in Hash. Block provisions exist to incentivize Hash holders to stake. The yearly inflation rate is calculated to target 2/3 bonded stake. If the total bonded stake in the network is less than 2/3 of the total Hash supply, inflation increases until it reaches 20%. If the total bonded stake is more than 2/3 of the Hash supply, inflation decreases until it reaches 7%. This means that if total bonded stake stays less than 2/3 of the total Hash supply for a prolonged period of time, unbonded Hash holders can expect their Hash value to deflate by 20% \(compounded\) per year.
-* **Transaction fees \(various tokens\):** Each transfer on Provenance comes with transaction fees. These fees can be paid in any currency that is whitelisted by Provenance's governance. Fees are distributed to bonded Hash holders in proportion to their stake. The first whitelisted token at launch is the HASH.
+Validators and delegators earn revenue in exchange for their services using transaction fees.  Every transaction on Provenance incurs a transaction fee \(refer to [Gas and Fees section](../../blockchain/basics/gas-and-fees.md)\). These fees can be paid in any currency that is whitelisted by Provenance's governance, with Hash being the current default currency. Collected transaction fees are pooled globally and distributed to bonded Hash holders in proportion to their stake.
 
 ## Validator Commission
 
