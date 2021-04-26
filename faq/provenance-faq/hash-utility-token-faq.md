@@ -10,7 +10,7 @@
 
 **The Provenance Foundation received 1.25% of the total Hash allotment at its inception. The remaining percentage was distributed according to the results of the private and public fundraisers.**
 
-## **How many HASH have been minted?** <a id="how-many-hash-have-been-minted"></a>
+## **How many Hash have been minted?** <a id="how-many-hash-have-been-minted"></a>
 
 **The number of Hash utility-tokens that have been minted is 100,000,000,000. This number is fixed and there will never be more than this number of Hash available.**
 
@@ -24,7 +24,7 @@
 
 **Hash stakers may govern the Provenance Foundation by voting on proposals with their staked Hash.**
 
-## **How do I get HASH?** <a id="how-do-i-get-hash"></a>
+## **How do I get Hash?** <a id="how-do-i-get-hash"></a>
 
 **Hash is listed on multiple exchanges where it is publicly traded.**
 
