@@ -71,7 +71,7 @@
   * [Quick Start](p8e/p8e-usage/quick-start/README.md)
     * [Explanation](p8e/p8e-usage/quick-start/hello-world-example.md)
 
-## Integrating <a id="integrating")</a>
+## Integrating <a id="integrating"></a>
 
 * [Asset Originator's Guide](integrating/asset-originators-guide.md))
 
