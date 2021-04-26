@@ -12,7 +12,7 @@
 
 ## **How many HASH have been minted?** <a id="how-many-hash-have-been-minted"></a>
 
-**The number of Hash utility-tokens that have been minted is 100,000,000,000. This number is fixed and there will never be more than this number of Hash available.**Can I become who I want to be?
+**The number of Hash utility-tokens that have been minted is 100,000,000,000. This number is fixed and there will never be more than this number of Hash available.**
 
 ## **What is the utility of Hash?** <a id="what-is-the-utility-of-hash"></a>
 
