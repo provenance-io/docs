@@ -1,4 +1,4 @@
-# FAQ
+# Provenance FAQ
 
 Everything you always wanted to know about Provenance, but were afraid to ask…
 

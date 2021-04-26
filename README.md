@@ -38,7 +38,7 @@ Follow real-world use cases and applications built on Provenance:
 
 Frequently Asked Question... and Answers:
 
-{% page-ref page="faq/faq/" %}
+{% page-ref page="faq/provenance-faq/" %}
 
 
 
