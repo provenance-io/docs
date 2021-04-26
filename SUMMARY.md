@@ -71,9 +71,9 @@
   * [Quick Start](p8e/p8e-usage/quick-start/README.md)
     * [Explanation](p8e/p8e-usage/quick-start/hello-world-example.md)
 
-## Integrating <a id="integrating"></a>
+## Integrating
 
-* [Asset Originator's Guide](integrating/asset-originators-guide.md))
+* [Asset Originator's Guide](integrating/asset-originators-guide.md)
 
 ## Apps Built on Provenance <a id="provenance-applications"></a>
 

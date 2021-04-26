@@ -21,7 +21,7 @@ These extensions are compiled into the blockchain at build time.
 
 ## Rust Bindings
 
-In order to provide a high quality smart contract developer experience, a Rust [library](https://github.com/FigureTechnologies/provwasm) was created to simplify calls to the provenance blockchain extensions.
+In order to provide a high quality smart contract developer experience, a Rust [library](https://github.com/provenance-io/provwasm) was created to simplify calls to the provenance blockchain extensions.
 
 The library can be broken down into the following components.
 

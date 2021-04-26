@@ -10,7 +10,7 @@ This guide uses loans as the example digital asset, but the process can be appli
 
 This guide walks through the steps necessary to create an application using Provenance Blockchain and the [P8e Contract Execution Environment ](../p8e/overview/)to load and fund digital assets on chain. In the example, digital loans are boarded to Provenance, funded with stablecoin, and listed on the Figure Portfolio Manager \(PM\).
 
-### Example Application
+## Example Application
 
 The application exists in the `Interface` layer of the [Application Architecture](../blockchain/introduction/application-architecture.md), and makes use of a [hybrid model ](../blockchain/introduction/major-components.md)of on-chain and off-chain \(client-side\) data.
 
@@ -24,11 +24,11 @@ In our example, the borrower applies \(and is approved\) for a loan through the 
 
 The guide will also outline the optional further steps of querying the loan data, updating or correcting data, and removing a loan from the system.
 
-### Development Process
+## Development Process
 
 The development process for creating this loan boarding application will include:
 
-1. Mapping the originator's loan data to the [Figure Loan Data Model](assets.md).
+1. Mapping the originator's loan data to the [Figure Loan Data Model](https://github.com/provenance-io/docs/tree/8cd22b3275410450484ff5db5dc973c6474eac77/integrating/assets.md).
 2. Setting up the P8e environment, including a local node of the blockchain \(see below\).
 3. If required, setting up an Omnibus Bank application to mint and burn stablecoin, as well as manage the associated fiat cash movement into and out of the system.
 4. Writing P8e contracts:
@@ -45,10 +45,4 @@ A Provenance application has several options for interfacing with the blockchain
 1. [Run a blockchain localnet](../blockchain/using-provenance/) in situ for easy local development;
 2. Connect to the Provenance public [testnet](https://github.com/provenance-io/testnet);
 3. Connect to the public production Provenance [mainnet](https://github.com/provenance-io/mainnet).
-
-
-
-
-
-
 
