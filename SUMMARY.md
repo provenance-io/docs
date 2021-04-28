@@ -129,7 +129,7 @@
 
 ## Appendix
 
-* [Blockchain Comparison](appendix/blockchain-comparison.md)
+* [History](appendix/blockchain-comparison.md)
 
 ## License
 
