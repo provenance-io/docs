@@ -75,6 +75,7 @@
 ## Integrating
 
 * [Asset Originator's Guide](integrating/asset-originators-guide/README.md)
+  * [Example Loan Contracts](integrating/asset-originators-guide/example-loan-contracts.md)
   * [Data Mapping](integrating/asset-originators-guide/data-mapping.md)
 
 ## Apps Built on Provenance <a id="provenance-applications"></a>
