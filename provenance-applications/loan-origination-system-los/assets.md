@@ -2,7 +2,7 @@
 
 ## Loans
 
-Figure loan data at origination is stored as a single scope in the P8e Encrypted Object Store. Servicing data is recorded in a separate scope\(s\). Data inputs and outputs of P8e contracts are defined using Google Protocol Buffers \(protobufs\). Each contract execution operates on a single loan scope, consisting of key-value pairs where the value object is a protobuf. All identifiers in the Figure loan data model are Universally Unique Identifiers \(UUIDs\).  The Figure loan scope model is also used by Figure Servicing and the [Figure Portfolio Manager](), allowing joint contract execution and data sharing between these applications.
+Figure loan data at origination is stored as a single scope in the P8e Encrypted Object Store. Servicing data is recorded in a separate scope\(s\). Data inputs and outputs of P8e contracts are defined using [Google Protocol Buffers](https://developers.google.com/protocol-buffers) \(protobufs\). Each contract execution operates on a single loan scope, consisting of key-value pairs where the value object is a protobuf. All identifiers in the Figure loan data model are Universally Unique Identifiers \(UUIDs\).  The Figure loan scope model is also used by Figure Servicing and the Figure Portfolio Manager, allowing joint contract execution and data sharing between these applications.
 
 | Fact Name | Value Data Type | Description |
 | :--- | :--- | :--- |
