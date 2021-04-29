@@ -121,6 +121,14 @@ Upon execution of this contract:
 * A [Provenance Scope](https://github.com/provenance-io/provenance/blob/main/proto/provenance/metadata/v1/scope.proto) object is established on the blockchain. The originator is designated as the value owner of the asset in the scope.
 * A [Provenance MarkerAccount](https://github.com/provenance-io/provenance/blob/main/proto/provenance/marker/v1/marker.proto) object is established on the blockchain.
 
+#### Example P8e Scope:
+
+{% code title="// Fetching the scope through the P8e contract manager" %}
+```kotlin
+contractManager.indexClient.findLatestScopeByUuid(scopeUuid)
+```
+{% endcode %}
+
 {% code title="// Truncated example of P8e Scope" %}
 ```javascript
 {
