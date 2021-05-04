@@ -64,6 +64,7 @@
   * [P8e UI](p8e/overview/p8e-ui.md)
 * [P8e Usage](p8e/p8e-usage/README.md)
   * [P8e Setup](p8e/p8e-usage/p8e-setup.md)
+  * [Specifications](p8e/p8e-usage/specifications.md)
   * [Building New P8e Contracts](p8e/p8e-usage/building-new-contracts.md)
   * [Data Retrieval](p8e/p8e-usage/data-retrieval.md)
   * [Cross Scope Contract Example](p8e/p8e-usage/cross-scope-contract-example.md)

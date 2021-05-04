@@ -1,6 +1,6 @@
 # Contract Life Cycle
 
-Contracts are executed through a series of life cycle events that are intercepted by client software. These events \(except for the initial 'Accepted' event\) are handled by passing callback functions or handler objects via the contract watchBuilder as in the following example \(note the return `true` to indicate successful processing of each event\)
+Contracts are executed through a series of life cycle events that are intercepted by client software. These events \(except for the initial 'Accepted' event\) are handled by passing callback functions or handler objects via the contract watchBuilder as in the following example \(note the return `true` to indicate successful processing of each event\). In cases where `false` is returned, or a networking problem causes the acknowledgment to not reach the p8e backend, the event will be redelivered after a retry delay elapses.
 
 ```kotlin
 contractManager.watchBuilder(HelloWorldContract::class.java)
@@ -12,13 +12,9 @@ contractManager.watchBuilder(HelloWorldContract::class.java)
             // handle incoming contract request
             true
         }
-        .error { error: ContractScope.EnvelopeError ->
+        .error { error: ContractError<HelloWorldContract> ->
             // handle errors
             true
-        }
-        .disconnect {
-            Thread.sleep(10000)
-            it.reconnect()
         }.watch()
 ```
 
@@ -28,7 +24,7 @@ contractManager.watchBuilder(HelloWorldContract::class.java)
 
 Upon calling the `execute()` method on a contract, the envelope is either initially accepted into the system, or rejected with an error. This is the only 'event' in the lifecycle that happens synchronously, not asynchronously.
 
-You can handle this event with the accepted and error handlers as shown below. These are similar to the event listeners in the watch builder, but will be executed synchronously.
+The return type of `execute()` is a functional `Either<P8eError, Contract<T>>`and has the typical bifunctor interface. One such example of operating on the result is shown below.
 
 ```kotlin
 contractManager.newContract(HelloWorldContract::class.java, UUID.randomUUID().toProtoUuidProv()).apply {
@@ -36,13 +32,11 @@ contractManager.newContract(HelloWorldContract::class.java, UUID.randomUUID().to
         .setFirstName("John").setLastName("Doe").build())
     satisfyParticipant(OWNER, publicKey.toJavaPublicKey())
     execute()
-        .accepted { contract: Contract<HelloWorldContract> ->
+        .map { contract: Contract<HelloWorldContract> ->
             // do something with accepted Contract<T> object
-            true
         }
-        .error { error: ContractScope.EnvelopeError ->
+        .mapLeft { error: P8eError ->
             // handle the EnvelopeError as needed
-            true
         }
 }
 ```
