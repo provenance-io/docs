@@ -53,18 +53,6 @@ open class HelloWorldDerivedContract(): HelloWorldContract() {
 
 When this contract is executed, name is required to be supplied to fulfill the name function in the superclass. Address is also required to be supplied to fulfill the address function in the subclass.
 
-## Deploy Contract/Submit for Review
-
-New contracts or changes to existing contracts should be made in a branch of p8e-contract. Once the changes are ready for testing, the branch will be pushed to the GitHub repository. Branches with names beginning with “feature/” will automatically be deployed to the sandbox environment. When the changes are ready for review, a pull request needs to be created.
-
-## Update Dependencies
-
-The following three dependencies are required for processes to execute contracts:
-
-1. p8e-sdk - contains the components required to submit contracts and communicate with the Provenance Protocol and underlying blockchain network.
-2. p8e-contract - contains the contracts available for use within Provenance. Historical versions of the contracts are kept and can be used by changing the version number.
-3. p8e-proto - Provenance uses Protobufs to define input and output to contracts. p8e-proto contains the Protobuf definitions supported by Provenance. Similar to contracts, historical versions are kept and can be used by changing the version number.
-
 ## Contract Watchers
 
 Before contracts can be executed, watchers have to be configured and running to listen to messages from contract execution. There are four types of watchers to handle contract messages.
