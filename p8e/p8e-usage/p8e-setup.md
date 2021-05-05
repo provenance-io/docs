@@ -30,8 +30,8 @@ cd $BASE_CODE_DIR
 git clone git@github.com:provenance-io/p8e-gradle-plugin.git
 
 # requires java 11
-cd p8e-gradle-plugin/example-java
 # requires GITHUB_ACTOR and GITHUB_TOKEN to be set - https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#authenticating-to-github-packages
+cd p8e-gradle-plugin/example-java
 ./gradlew clean build
 source $BASE_CODE_DIR/p8e-docker-compose/env/host/env
 ./gradlew p8eClean p8eBootstrap --info
