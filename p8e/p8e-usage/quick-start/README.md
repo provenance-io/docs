@@ -1,6 +1,10 @@
 # Quick Start
 
-The quickest and easiest way to get started executing contracts and memorializing transactions to the blockchain is to utilize Provenance’s sandbox environment. A basic Hello World contract has been deployed to the sandbox. This contract facilitates a single party agreement by an owner. You will be acting as the owner in this example and will provide a name to be memorialized to the blockchain. There are three parts to this example:
+The quickest and easiest way to get started executing contracts and memorializing transactions to the blockchain is to utilize the local setup instructions [here](../p8e-setup.md#local).
+
+Since you made it to this section, you are now ready to build and execute contracts of your own! The docker compose environment you brought up as part of the above provides some utilities that will make local development easier. `p8e-docker-compose/env/host/env` can be sourced to give you access to `PRIVATE_KEY` and `API_URL` that can be used to instantiate the p8e-sdk client.
+
+A basic Hello World contract can be executed after the conclusion of this walkthrough. This contract facilitates a single party agreement by an owner. You will be acting as the owner in this example and will provide a name to be memorialized to the blockchain. There are three parts to this example:
 
 1. Execute a contract to memorialize a fact to the blockchain that name information has been added.
 2. Execute a contract to update the name information that was memorialized to the blockchain in step 1.
@@ -8,26 +12,13 @@ The quickest and easiest way to get started executing contracts and memorializin
 
 This section primarily focuses on how to execute the example contracts. The next section \(Hello World Example\) will explain the example in further detail.
 
-## Register Public/Private Keys
-
-To verify identity and to encrypt data, a public/private key pair is used. Generate the key pair. For this example, Provenance can generate these on your behalf. Once the keys have been generated, they need to be provided to Provenance where they will be registered against the test system.
-
-```kotlin
-        ProvenanceKeyGenerator.generateKeyPair().let {
-            it.private.toHex().also(::println)
-            it.public.toHex().also(::println)
-        }
-```
-
 ## Prepare Project
 
-Create a new project which will be used to execute the contracts. Once the new project is created, dependencies for p8e-sdk, p8e-contract, and p8e-contract-proto need to be added. For example, if using Gradle the following dependencies need to be added to the gradle.build.
+Create a new project which will be used to execute the contracts. Once the new project is created, dependencies for p8e-sdk, and optionally your published contract and proto dependencies, need to be added. An example project can be found [here](https://github.com/provenance-io/p8e-gradle-plugin/tree/main/example-kotlin). That particular example has contract and proto subprojects that get published to P8e instead of external dependencies. The following dependency is the minimal requirement.
 
 ```text
 dependencies {
-    implementation("io.p8e:p8e-sdk:master-+")
-    implementation("io.p8e.contracts:p8e-contract:master-+")
-    implementation("io.p8e.contracts:p8e-contract-proto:master-+")
+    implementation("io.p8e:p8e-sdk:<latest version>")
 }
 ```
 
