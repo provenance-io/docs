@@ -14,7 +14,9 @@ This section primarily focuses on how to execute the example contracts. The next
 
 ## Prepare Project
 
-Create a new project which will be used to execute the contracts. Once the new project is created, dependencies for p8e-sdk, and optionally your published contract and proto dependencies, need to be added. An example project can be found [here](https://github.com/provenance-io/p8e-gradle-plugin/tree/main/example-kotlin). That particular example has contract and proto subprojects that get published to P8e instead of external dependencies. The following dependency is the minimal requirement.
+Create a new project which will be used to execute the contracts. Once the new project is created, dependencies for p8e-sdk, and optionally your published contract and proto dependencies, need to be added. An example project can be found [here](https://github.com/provenance-io/p8e-gradle-plugin/tree/main/example-kotlin). That particular example has contract and proto subprojects that get published to P8e instead of external dependencies. The following dependency is the minimal requirement. The latest releases and pre-releases can be found [here](https://github.com/provenance-io/p8e/releases).
+
+**NOTE:** P8e is currently published to the Github Apache Maven registry. Follow the instructions [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#authenticating-to-github-packages) for   authenticating to Github Packages.
 
 ```text
 dependencies {
