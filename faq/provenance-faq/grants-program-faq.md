@@ -12,5 +12,3 @@ The exact review process is still TBD.
 
 The grants are not limited to US-only organizations.
 
-
-

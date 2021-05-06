@@ -18,9 +18,3 @@ When external documents are referred to by the cryptographic hash of their conte
 
 For many financial applications, many of the relevant documents, data and contracts are confidential and private. To facilitate that requirement, the Provenance ecosystem includes services that make it easy to refer to confidential documents by its hash-id, and encrypt and store those documents in a database where they are indexed by their hash-id. The encryption-key is specific for the owner or client of that document. When a contract requires the exchange of such a document, the service will re-encrypt the document with a key associated with the business partner receiving that document.
 
-
-
-
-
-
-

@@ -12,8 +12,6 @@ Delegators share the revenue of their validators, but they also share the risks.
 
 To become delegators, Hash holders need to send a "Delegate transaction" where they specify how many Hash they want to bond and to which validator. A list of validator candidates will be displayed in Provenance explorers. Later, if a delegator wants to unbond part or all of their stake, they need to send an "Unbond transaction". From there, the delegator will have to wait three weeks to retrieve their Hash. Delegators can also send a "Rebond Transaction" to switch from one validator to another, without having to go through the three weeks waiting period.
 
-
-
 ## Choosing a validator
 
 To choose their validators, delegators have access to a range of information directly in [Lunie](https://lunie.io/) \(opens new window\)or other Provenance block explorers.
@@ -36,7 +34,7 @@ Being a delegator is not a passive task. Here are the main directives of a deleg
 
 ## Revenue
 
-Validators and delegators earn revenue in exchange for their services using transaction fees.  Every transaction on Provenance incurs a transaction fee \(refer to [Gas and Fees section](../../blockchain/basics/gas-and-fees.md)\). These fees can be paid in any currency that is whitelisted by Provenance's governance, with Hash being the current default currency. Collected transaction fees are pooled globally and distributed to bonded Hash holders in proportion to their stake.
+Validators and delegators earn revenue in exchange for their services using transaction fees. Every transaction on Provenance incurs a transaction fee \(refer to [Gas and Fees section](../../blockchain/basics/gas-and-fees.md)\). These fees can be paid in any currency that is whitelisted by Provenance's governance, with Hash being the current default currency. Collected transaction fees are pooled globally and distributed to bonded Hash holders in proportion to their stake.
 
 ## Validator Commission
 
@@ -66,8 +64,4 @@ There is one main slashing condition.
 * Double signing: If someone reports that a validator signed two different blocks with the same chain ID at the same height, this validator will get slashed.
 
 This is why Hash holders should perform careful due diligence on validators before delegating. It is also important that delegators actively monitor the activity of their validators. If a validator behaves suspiciously or is too often offline, delegators can choose to unbond from them or switch to another validator. \*\*Delegators can also mitigate risk by distributing their stake across multiple validators.\*\*
-
-## 
-
-
 

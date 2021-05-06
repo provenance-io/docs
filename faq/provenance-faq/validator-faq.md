@@ -40,9 +40,9 @@ Any participant in the network can signal that they want to become a validator b
 
 * **Validator's `PubKey`:** The private key associated with this Tendermint `PubKey` is used to sign _pre-votes_ and _pre-commits_.
 * **Validator's Address:** Application-level address. This is the address used to identify your validator publicly. The private key associated with this address is used to delegate, unbond, claim rewards, and participate in governance.
-* **Validator's name \(moniker\)
-* **Validator's website \(Optional\)
-* **Validator's description \(Optional\)
+* \*\*Validator's name \(moniker\)
+* \*\*Validator's website \(Optional\)
+* \*\*Validator's description \(Optional\)
 * **Initial commission rate**: The commission rate on block rewards and fees charged to delegators.
 * **Maximum commission:** The maximum commission rate which this validator can charge. This parameter cannot be changed after `create-validator` is processed.
 * **Commission max change rate:** The maximum daily increase of the validator commission. This parameter cannot be changed after `create-validator` is processed.
@@ -58,7 +58,7 @@ Out of all validator candidates that signaled themselves, the 125 with the most 
 
 The Testnet is a great environment to test your validator setup before launch.
 
-We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. 
+We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator.
 
 ### What are the different types of keys?
 
@@ -96,7 +96,7 @@ Delegators are free to choose validators according to their own subjective crite
 * Commission rate: Commission applied on revenue by validators before it is distributed to their delegators.
 * Track record: Delegators will likely look at the track record of the validators they plan to delegate to. This includes seniority, past votes on proposals, historical average uptime, and how often the node was compromised.
 
-Apart from these criteria, there will be a possibility for validators to signal a website address to complete their resume. Validators will need to build a reputation one way or another to attract delegators. For example, it would be good practice for validators to have their setup audited by third parties. Note: The Tendermint team will not approve or conduct any audits themselves. 
+Apart from these criteria, there will be a possibility for validators to signal a website address to complete their resume. Validators will need to build a reputation one way or another to attract delegators. For example, it would be good practice for validators to have their setup audited by third parties. Note: The Tendermint team will not approve or conduct any audits themselves.
 
 ## Responsibilities
 
@@ -276,8 +276,5 @@ Validator nodes should only connect to full-nodes they trust because they operat
 
 Sentry nodes can be quickly spun up or change their IP addresses. Because the links to the sentry nodes are in private IP space, an internet-based attack cannot disturb them directly. This will ensure validator block proposals and votes always make it to the rest of the network.
 
-It is expected that good operating procedures on the part of validators will completely mitigate these threats.  
-
-
-
+It is expected that good operating procedures on the part of validators will completely mitigate these threats.
 
