@@ -40,9 +40,9 @@ Any participant in the network can signal that they want to become a validator b
 
 * **Validator's `PubKey`:** The private key associated with this Tendermint `PubKey` is used to sign _pre-votes_ and _pre-commits_.
 * **Validator's Address:** Application-level address. This is the address used to identify your validator publicly. The private key associated with this address is used to delegate, unbond, claim rewards, and participate in governance.
-* **Validator's name \(moniker\)**
-* **Validator's website \(Optional\)**
-* **Validator's description \(Optional\)**
+* **Validator's name \(moniker\)
+* **Validator's website \(Optional\)
+* **Validator's description \(Optional\)
 * **Initial commission rate**: The commission rate on block rewards and fees charged to delegators.
 * **Maximum commission:** The maximum commission rate which this validator can charge. This parameter cannot be changed after `create-validator` is processed.
 * **Commission max change rate:** The maximum daily increase of the validator commission. This parameter cannot be changed after `create-validator` is processed.

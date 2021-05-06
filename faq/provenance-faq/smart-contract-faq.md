@@ -2,7 +2,7 @@
 
 ## **Does the Provenance blockchain support smart-contracts?** <a id="does-the-provenance-blockchain-support-smart-contracts"></a>
 
-**Yes, the Provenance blockchain includes ProvWasm, an enhanced version of the CosmWasm smart-contract module. It allows smart-contract authors to use the Rust language to code their smart-contract, which subsequently gets compiled to Wasm and executed. For details see here. \(ref?\)**
+Yes, the Provenance blockchain includes ProvWasm, an enhanced version of the CosmWasm smart-contract module. It allows smart-contract authors to use the Rust language to code their smart-contract, which subsequently gets compiled to Wasm and executed. For details see here. \(ref?\)
 
 ## **What kind smart-contracts does Provenance support?** <a id="what-kind-smart-contracts-does-provenance-support"></a>
 
