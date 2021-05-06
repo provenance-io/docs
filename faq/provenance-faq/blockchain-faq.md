@@ -6,11 +6,11 @@ The Cosmos Network is a network of heterogeneous blockchains connected via the C
 
 The Cosmos Hub was one of the first blockchains to be launched on the Cosmos Network. It acts as a router that facilitates token transactions between future Cosmos blockchains. To ensure security and to prevent double spending, the Cosmos Hub keeps track of the state of all connected blockchains. Its native utility-token is the ATOM.
 
-The Provenance blockchain is built with the CosmosSDK and therefore an application-specific Cosmos blockchain. Provenance’s blockchain is constructed with specific modules that enable the Provenance ecosystem to support sophisticated DeFi-applications. Provenance’s native utility-token is the Hash.
+The Provenance blockchain is built with the Cosmos SDK and is therefore an application-specific Cosmos blockchain. Provenance’s blockchain is constructed with specific modules that enable the Provenance ecosystem to support sophisticated DeFi-applications. Provenance’s native utility token is called Hash.
 
 ## On what consensus algorithm does Provenance run? <a id="on-what-consensus-algorithm-does-provenance-run"></a>
 
-Tendermint is the consensus engine that powers Cosmos BPoS \(Bonded Proof of Stake\) and therefore the Provenance blockchain network. \(ref?\)
+The Provenance blockchain uses Tendermint consensus algorithm and BPoS \(Bonded Proof of Stake\) to secure transactions.
 
 ## Can I store big files on the blockchain? <a id="how-can-i-store-big-files-on-the-blockchain"></a>
 
@@ -26,11 +26,11 @@ No. Ethereum is a different blockchain technology.
 
 ## Is Provenance based on Cosmos/Tendermint? <a id="is-provenance-based-on-cosmos-tendermint"></a>
 
-Yes.The Provenance blockchain network is built with the Cosmos SDK and therefore fully compatible with Cosmos/Tendermint interfaces, RPCs, protocols, and consensus mechanism.
+Yes.The Provenance blockchain network is built with the Cosmos SDK and therefore fully implements the Cosmos/Tendermint interfaces, RPCs, protocols, and consensus mechanism.
 
 ## What makes a Provenance blockchain instance? <a id="what-makes-a-provenance-blockchain-instance"></a>
 
-provenanced is the name of the Provenance SDK application for the Provenance blockchain network, a Cosmos Zone. It is both the Provenance Daemon and command-line interface \(CLI\). It runs a full-node of the provenance application. provenanced is built on the Cosmos SDK using the following modules:
+`provenanced` is the name of the Provenance blockchain network. It is both the Provenance Daemon and command-line interface \(CLI\). It runs a full node of the Provenance application. `provenanced` is built on the Cosmos SDK using the following modules:
 
 x/auth: Accounts and signatures.
 
@@ -70,11 +70,11 @@ x/marker: Value and ownership structures.
 
 x/metadata: NFT and asset-backed contract agreements.
 
-x/name: Human readable address cross-reference.
+x/name: Human readable address c\`ross-reference.
 
 x/wasm: Smart Contracts.
 
-Note: the list of those modules may change with every new release. For an up to date list refer to the Github repo code: “[https://github.com/provenance-io/provenance/blob/main/app/app.go](https://github.com/provenance-io/provenance/blob/main/app/app.go)”
+Note: the list of those modules may change with future releases. For an up-to-date list refer to the following: [https://github.com/provenance-io/provenance/blob/main/app/app.go](https://github.com/provenance-io/provenance/blob/main/app/app.go)
 
-In addition to the modules, so-called genesis.json and config.toml configuration files are required in which Hash is defined as the gas-currency and the service rates are set, and where references to seed-node are used to sync the blockchain state with other provenance-blockchain instances.
+In addition to the modules, so-called `genesis.json` and `config.toml` configuration files are required in which service rates are set and where references to seed-node are used to sync the blockchain state with other Provenance blockchain instances.
 
