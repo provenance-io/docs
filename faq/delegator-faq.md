@@ -14,7 +14,7 @@ To become delegators, Hash holders need to send a "Delegate transaction" where t
 
 ## Choosing a validator
 
-To choose their validators, delegators have access to a range of information directly in [Lunie](https://lunie.io/) or other Provenance block explorers.
+To choose their validators, delegators have access to a range of information directly in any Provenance block explorers.
 
 * Validator's moniker: Name of the validator candidate.
 * Validator's description: Description provided by the validator operator. 
