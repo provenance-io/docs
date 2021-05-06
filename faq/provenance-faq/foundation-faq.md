@@ -1,22 +1,22 @@
 # Foundation FAQ
 
-## Where is the foundation incorporated?
+## Where is the Foundation incorporated?
 
 The Provenance Foundation is incorporated as a non-profit in Delaware.
 
-## Who are the foundation’s members? <a id="who-are-the-foundations-members"></a>
+## Who are the Foundation’s members? <a id="who-are-the-foundations-members"></a>
 
-Any entity with staked Hash is a member of the foundation.
+Any entity with staked Hash is a member of the Foundation.
 
 ## How is the Foundation funded? <a id="how-is-the-foundation-funded"></a>
 
-The foundation is seeded with an initial allotment of ?? Hash tokens.
+The Foundation is seeded with an initial allotment of 1.3b Hash tokens.
 
-In addition, 2% of the gas in Hash is directed towards the foundation.
+In addition, 2% of the gas in Hash is directed towards the Foundation.
 
 ## How can I get in touch with the Provenance Foundation? <a id="how-can-i-get-in-touch-with-the-provenance-foundation"></a>
 
-Please email [hello@provenance.io](mailto:hello@provenance.io)
+Please email [support@provenance.io](mailto:support@provenance.io)
 
 
 
