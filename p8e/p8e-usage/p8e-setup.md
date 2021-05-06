@@ -24,6 +24,8 @@ git clone git@github.com:provenance-io/p8e-docker-compose.git
 
 cd p8e-docker-compose
 ./bin/update && ./bin/one-time-setup.sh
+# the below commit is required until v1.3.0 is released
+cd provenance && git checkout 46a3b7125891558c5df7b4a222475100915fb10c && cd ..
 ./bin/start
 
 cd $BASE_CODE_DIR
