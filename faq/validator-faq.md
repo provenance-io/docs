@@ -26,11 +26,11 @@ Of course, it is possible and encouraged for users to run full-nodes even if the
 
 ### What is a delegator?
 
-Delegators are Hash holders who cannot, or do not want to run a validator themselves. Hash holders can delegate Hash to a validator and obtain a part of their revenue in exchange \(for more detail on how revenue is distributed, see [**What is the incentive to stake?**](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0aRTobUfao5rV4u9G/faq/validator-faq/@drafts#what-is-the-incentive-to-stake) and [**What are validators commission?**](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0aRTobUfao5rV4u9G/faq/validator-faq/@drafts#what-are-validators-commission) sections below\).
+Delegators are Hash holders who cannot, or do not want to run a validator themselves. Hash holders can delegate Hash to a validator and obtain a part of their revenue in exchange \(for more detail on how revenue is distributed, see [What is the incentive to stake?](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0aRTobUfao5rV4u9G/faq/validator-faq/@drafts#what-is-the-incentive-to-stake) and [What are validators commission?](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0aRTobUfao5rV4u9G/faq/validator-faq/@drafts#what-are-validators-commission) sections below\).
 
 Because they share revenue with their validators, delegators also share risks. Should a validator misbehave, each of their delegators will be partially slashed in proportion to their delegated stake. This is why delegators should perform due diligence on validators before delegating, as well as spreading their stake over multiple validators.
 
-Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance. For more, read the [**Delegator FAQ**](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0aRTobUfao5rV4u9G/faq/delegator-faq/@drafts) \(opens new window\).
+Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance. For more, read the [Delegator FAQ](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0aRTobUfao5rV4u9G/faq/delegator-faq/@drafts) \(opens new window\).
 
 ## Becoming a Validator
 
@@ -40,9 +40,9 @@ Any participant in the network can signal that they want to become a validator b
 
 * **Validator's `PubKey`:** The private key associated with this Tendermint `PubKey` is used to sign _pre-votes_ and _pre-commits_.
 * **Validator's Address:** Application-level address. This is the address used to identify your validator publicly. The private key associated with this address is used to delegate, unbond, claim rewards, and participate in governance.
-* **Validator's name \(moniker\)**
-* **Validator's website \(Optional\)**
-* **Validator's description \(Optional\)**
+* \*\*Validator's name \(moniker\)
+* \*\*Validator's website \(Optional\)
+* \*\*Validator's description \(Optional\)
 * **Initial commission rate**: The commission rate on block rewards and fees charged to delegators.
 * **Maximum commission:** The maximum commission rate which this validator can charge. This parameter cannot be changed after `create-validator` is processed.
 * **Commission max change rate:** The maximum daily increase of the validator commission. This parameter cannot be changed after `create-validator` is processed.
@@ -50,7 +50,7 @@ Any participant in the network can signal that they want to become a validator b
 
 Once a validator is created, Hash holders can delegate Hash to them, effectively adding stake to their pool. The total stake of an address is the combination of Hash bonded by delegators and Hash self-bonded by the entity which designated themselves.
 
-Out of all validator candidates that signaled themselves, the 125 with the most total stake are the ones who are designated as validators. They become **validators** If a validator's total stake falls below the top 125 then that validator loses their validator privileges: they don't participate in consensus and generate rewards anymore. Over time, the maximum number of validators may be increased via on-chain governance proposal.
+Out of all validator candidates that signaled themselves, the 125 with the most total stake are the ones who are designated as validators. They become validators If a validator's total stake falls below the top 125 then that validator loses their validator privileges: they don't participate in consensus and generate rewards anymore. Over time, the maximum number of validators may be increased via on-chain governance proposal.
 
 ## Testnet
 
@@ -58,16 +58,16 @@ Out of all validator candidates that signaled themselves, the 125 with the most 
 
 The Testnet is a great environment to test your validator setup before launch.
 
-We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. 
+We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator.
 
 ### What are the different types of keys?
 
 In short, there are two types of keys:
 
-* **Tendermint Key**: This is a unique key used to sign consensus votes.
+* Tendermint Key: This is a unique key used to sign consensus votes.
   * It is associated with a public key `cosmosvalconspub` \(Get this value with `gaiad tendermint show-validator`\)
   * It is generated when the node is created with gaiad init.
-* **Application key**: This key is created from `gaiad` and used to sign transactions. Application keys are associated with a public key prefixed by `cosmospub` and an address prefixed by `cosmos`. Both are derived from account keys generated by `gaiad keys add`.
+* Application key: This key is created from `gaiad` and used to sign transactions. Application keys are associated with a public key prefixed by `cosmospub` and an address prefixed by `cosmos`. Both are derived from account keys generated by `gaiad keys add`.
 
 Note: A validator's operator key is directly tied to an application key, but uses reserved prefixes solely for this purpose: `cosmosvaloper` and `cosmosvaloperpub`
 
@@ -91,12 +91,12 @@ The minimum is `1` Hash.
 
 Delegators are free to choose validators according to their own subjective criteria. This said, criteria anticipated to be important include:
 
-* **Amount of self-delegated Hash:** Number of Hash a validator self-delegated to themselves. A validator with a higher amount of self-delegated Hash has more skin in the game, making them more liable for their actions.
-* **Amount of delegated Hash:** Total number of Hash delegated to a validator. A high voting power shows that the community trusts this validator, but it also means that this validator is a bigger target for hackers. Bigger validators also decrease the decentralization of the network.
-* **Commission rate:** Commission applied on revenue by validators before it is distributed to their delegators.
-* **Track record:** Delegators will likely look at the track record of the validators they plan to delegate to. This includes seniority, past votes on proposals, historical average uptime, and how often the node was compromised.
+* Amount of self-delegated Hash: Number of Hash a validator self-delegated to themselves. A validator with a higher amount of self-delegated Hash has more skin in the game, making them more liable for their actions.
+* Amount of delegated Hash: Total number of Hash delegated to a validator. A high voting power shows that the community trusts this validator, but it also means that this validator is a bigger target for hackers. Bigger validators also decrease the decentralization of the network.
+* Commission rate: Commission applied on revenue by validators before it is distributed to their delegators.
+* Track record: Delegators will likely look at the track record of the validators they plan to delegate to. This includes seniority, past votes on proposals, historical average uptime, and how often the node was compromised.
 
-Apart from these criteria, there will be a possibility for validators to signal a website address to complete their resume. Validators will need to build a reputation one way or another to attract delegators. For example, it would be good practice for validators to have their setup audited by third parties. **Note:** The Tendermint team will not approve or conduct any audits themselves. 
+Apart from these criteria, there will be a possibility for validators to signal a website address to complete their resume. Validators will need to build a reputation one way or another to attract delegators. For example, it would be good practice for validators to have their setup audited by third parties. Note: The Tendermint team will not approve or conduct any audits themselves.
 
 ## Responsibilities
 
@@ -108,8 +108,8 @@ No, they do not. Each delegator will value validators based on their own criteri
 
 Validators have two main responsibilities:
 
-* **Be able to constantly run a correct version of the software:** Validators need to make sure that their servers are always online and their private keys are not compromised.
-* **Actively participate in governance:** Validators are required to vote on every proposal.
+* Be able to constantly run a correct version of the software: Validators need to make sure that their servers are always online and their private keys are not compromised.
+* Actively participate in governance: Validators are required to vote on every proposal.
 
 Additionally, validators are expected to be active members of the community. They should always be up-to-date with the current state of the ecosystem so that they can easily adapt to any change.
 
@@ -121,13 +121,13 @@ Validators play a special role in the governance system. Being the pillars of th
 
 ### What does staking imply?
 
-Staking Hash can be thought of as a safety deposit on validation activities. When a validator or a delegator wants to retrieve part or all of their deposit, they send an `unbonding` transaction. Then, Hash undergo a **3 weeks unbonding period** during which they are liable to be slashed for potential misbehaviors committed by the validator before the unbonding process started.
+Staking Hash can be thought of as a safety deposit on validation activities. When a validator or a delegator wants to retrieve part or all of their deposit, they send an `unbonding` transaction. Then, Hash undergo a 3 weeks unbonding period during which they are liable to be slashed for potential misbehaviors committed by the validator before the unbonding process started.
 
 Validators, and by association delegators, receive block rewards, fees, and have the right to participate in governance. If a validator misbehaves, a certain portion of their total stake is slashed. This means that every delegator that bonded Hash to this validator gets penalized in proportion to their bonded stake. Delegators are therefore incentivized to delegate to validators that they anticipate will function safely.
 
 ### Can a validator run away with their delegators' Hash?
 
-By delegating to a validator, a user delegates voting power. The more voting power a validator has, the more weight they have in the consensus and governance processes. This does not mean that the validator has custody of their delegators' Hash. **By no means can a validator run away with its delegator's funds**.
+By delegating to a validator, a user delegates voting power. The more voting power a validator has, the more weight they have in the consensus and governance processes. This does not mean that the validator has custody of their delegators' Hash. By no means can a validator run away with its delegator's funds.
 
 Even though delegated funds cannot be stolen by their validators, delegators are still liable if their validators misbehave.
 
@@ -145,8 +145,8 @@ Yes, they will. If governance decides so, validators of Provenance may be requir
 
 Each member of a validator's staking pool earns different types of revenue:
 
-* **Block rewards:** Native tokens of applications run by validators \(e.g. Hash on the Provenance blockchain\) are inflated to produce block provisions. These provisions exist to incentivize Hash holders to bond their stake, as non-bonded Hash will be diluted over time.
-* **Transaction fees:** The Provenance blockchain maintains a whitelist of tokens that are accepted as fee payment. The initial fee token is the `hash`.
+* Block rewards: Native tokens of applications run by validators \(e.g. Hash on the Provenance blockchain\) are inflated to produce block provisions. These provisions exist to incentivize Hash holders to bond their stake, as non-bonded Hash will be diluted over time.
+* Transaction fees: The Provenance blockchain maintains a whitelist of tokens that are accepted as fee payment. The initial fee token is the `hash`.
 
 This total revenue is divided among validators' staking pools according to each validator's weight. Then, within each validator's staking pool the revenue is divided among delegators in proportion to each delegator's stake. A commission on delegators' revenue is applied by the validator before it is distributed.
 
@@ -205,8 +205,8 @@ We have to solve this simple equation to find the reward R for each validator:
 
 If a validator misbehaves, their delegated stake will be partially slashed. There are currently two faults that can result in slashing of funds for a validator and their delegators:
 
-* **Double signing:** If someone reports on chain A that a validator signed two blocks at the same height on chain A and chain B, and if chain A and chain B share a common ancestor, then this validator will get slashed by 5% on chain A.
-* **Downtime:** If a validator misses more than 95% of the last 10.000 blocks, they will get slashed by 0.01%.
+* Double signing: If someone reports on chain A that a validator signed two blocks at the same height on chain A and chain B, and if chain A and chain B share a common ancestor, then this validator will get slashed by 5% on chain A.
+* Downtime: If a validator misses more than 95% of the last 10.000 blocks, they will get slashed by 0.01%.
 
 ### Do validators need to self-delegate Hash?
 
@@ -218,8 +218,8 @@ In order for delegators to have some guarantee about how much skin-in-the-game t
 
 For now, the community is expected to behave in a smart and self-preserving way. When a mining pool in Bitcoin gets too much mining power the community usually stops contributing to that pool. The Provenance blockchain will rely on the same effect initially. Other mechanisms are in place to smooth this process as much as possible:
 
-* **Penalty-free re-delegation:** This is to allow delegators to easily switch from one validator to another, in order to reduce validator stickiness.
-* **UI warning:** Wallets can implement warnings that will be displayed to users if they want to delegate to a validator that already has a significant amount of staking power.
+* Penalty-free re-delegation: This is to allow delegators to easily switch from one validator to another, in order to reduce validator stickiness.
+* UI warning: Wallets can implement warnings that will be displayed to users if they want to delegate to a validator that already has a significant amount of staking power.
 
 ## Technical Requirements
 
@@ -276,8 +276,5 @@ Validator nodes should only connect to full-nodes they trust because they operat
 
 Sentry nodes can be quickly spun up or change their IP addresses. Because the links to the sentry nodes are in private IP space, an internet-based attack cannot disturb them directly. This will ensure validator block proposals and votes always make it to the rest of the network.
 
-It is expected that good operating procedures on the part of validators will completely mitigate these threats.  
-
-
-
+It is expected that good operating procedures on the part of validators will completely mitigate these threats.
 

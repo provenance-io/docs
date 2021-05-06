@@ -120,16 +120,15 @@
 
 ## Provenance FAQ <a id="faq"></a>
 
-* [Provenance FAQ](faq/provenance-faq/README.md)
-  * [Foundation FAQ](faq/provenance-faq/foundation-faq.md)
-  * [Grants Program FAQ](faq/provenance-faq/grants-program-faq.md)
-  * [Ecosystem FAQ](faq/provenance-faq/ecosystem-faq.md)
-  * [Blockchain FAQ](faq/provenance-faq/blockchain-faq.md)
-  * [Hash Utility Token FAQ](faq/provenance-faq/hash-utility-token-faq.md)
-  * [Validator FAQ](faq/provenance-faq/validator-faq.md)
-  * [Delegator FAQ](faq/provenance-faq/delegator-faq.md)
-  * [Client Contract Execution Environment \(P8e\) FAQ](faq/provenance-faq/client-contract-execution-environment-faq.md)
-  * [Smart Contract FAQ](faq/provenance-faq/smart-contract-faq.md)
+* [Foundation FAQ](faq/foundation-faq.md)
+* [Grants Program FAQ](faq/grants-program-faq.md)
+* [Ecosystem FAQ](faq/ecosystem-faq.md)
+* [Blockchain FAQ](faq/blockchain-faq.md)
+* [Hash Utility Token FAQ](faq/hash-utility-token-faq.md)
+* [Validator FAQ](faq/validator-faq.md)
+* [Delegator FAQ](faq/delegator-faq.md)
+* [Client Contract Execution Environment \(P8e\) FAQ](faq/client-contract-execution-environment-faq.md)
+* [Smart Contract FAQ](faq/smart-contract-faq.md)
 
 ## Appendix
 
