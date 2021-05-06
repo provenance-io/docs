@@ -16,7 +16,7 @@ The number of Hash utility-tokens that have been minted is 100,000,000,000. This
 
 Hash has three use cases: as a spam-prevention mechanism, as a staking token, and as a voting mechanism in governance.
 
-As a spam-prevention mechanism, Hash is used to pay fees for the Provenance blockchain transactions. Similar to Ethereum’s concept of “gas”, the fee may be proportional to the amount of computation required by the transaction.
+As a spam-prevention mechanism, Hash is used to pay fees for validating Provenance blockchain transactions. Similar to Ethereum’s concept of “gas”, the fee may be proportional to the amount of computation required by the transaction.
 
 As staking tokens, Hash may be “bonded” to earn block rewards. The economic security of the Provenance network is a function of the amount of Hash staked. The more Hash that is collateralized, the more “skin” there is at stake and the higher the cost of attacking the network. Thus, the more Hash there are bonded, the greater the economic security of the network.
 
@@ -30,8 +30,4 @@ Hash is listed on multiple exchanges where it is publicly traded.
 
 Hash is short for Hash 2.0, and Provenance is short for Provenance 2.0. When Hash is referred to with a capital “H”, it’s the utility-token used to pay for the Provenance blockchain related services or the gas as it’s commonly called. Hash is equivalent to, but not the same as, the Atom tokens used for the CosmosHub services.  
 Provenance’s first generation blockchain service was based on HyperLedger and is referred to as Provenance 1.0. Hash 1.0 was the legacy currency used in that Provenance 1.0 blockchain. The terms Provenance 1.0 and Hash 1.0 will soon have only historical significance and probably will make its original developers a bit teary eyed.
-
-\*\*\*\*
-
-\*\*\*\*
 

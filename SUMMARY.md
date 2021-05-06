@@ -128,7 +128,7 @@
   * [Hash Utility Token FAQ](faq/provenance-faq/hash-utility-token-faq.md)
   * [Validator FAQ](faq/provenance-faq/validator-faq.md)
   * [Delegator FAQ](faq/provenance-faq/delegator-faq.md)
-  * [Client Contract Execution Environment \(P8E\) FAQ](faq/provenance-faq/client-contract-execution-environment-faq.md)
+  * [Client Contract Execution Environment \(P8e\) FAQ](faq/provenance-faq/client-contract-execution-environment-faq.md)
   * [Smart-Contract FAQ](faq/provenance-faq/smart-contract-faq.md)
 
 ## Appendix
