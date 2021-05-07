@@ -49,7 +49,7 @@ open class HelloWorldScopeSpecification() : P8eScopeSpecification()
 
 Scope specifications serve the following purposes and only act as displayable metadata.
 
-* Validation - When a contract is executed, P8e will validate that the provided contract can operate on the scope as defined by the contract specification and scope specification mappings. The blockchain mimics this same validation. Scope specification parties are parties that must be involved on all contracts associated with this scope. This means that in practice the parties involved in the scope specification are often a subset of parties of the encompassing contracts. For instance, if a scope has `OWNER` party on one contract and `[OWNER, ORIGINATOR]` on another contract, the scope specification only only include the `OWNER` party. 
+* Validation - When a contract is executed, P8e will validate that the provided contract can operate on the scope as defined by the contract specification and scope specification mappings. The blockchain mimics this same validation. Scope specification parties must be involved on all contracts associated with this scope. This means that in practice the parties involved in the scope specification are often a subset of parties of the encompassing contracts. For instance, if a scope has `OWNER` party on one contract and `[OWNER, ORIGINATOR]` on another contract, the scope specification only only include the `OWNER` party. 
 * Display - The [provenance explorer](https://explorer.provenance.io/dashboard) uses the fields of the scope specifications for display purposes.
 
 ## Publishing to P8e
