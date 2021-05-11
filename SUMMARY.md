@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Provenance Blockchain](README.md)
+* [Token Economics](token-economics.md)
 
 ## Ecosystem
 
