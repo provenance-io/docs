@@ -31,14 +31,14 @@ Provenance blockchain uses the Tendermint consensus mechanism. This relies on a 
 * Vote on blockchain network governance proposals
 * Add blocks to the chain
 
-There are a known and limited number of validators in the Active Set - $$ N_{V} $$</sub>.  **This set is viewable** **at explorer.provenance.io. The size of the active set is determined by community governance vote.  The $$ N_{V} $$$$ _{} $$ largest validators by staked token weight are those included in the Active Set. 
+There are a known and limited number of validators in the Active Set, $$N_{V}$$.  **This set is viewable** **at explorer.provenance.io. The size of the active set is determined by community governance vote.  The $$ N_{V} $$ largest validators by staked token weight are those included in the Active Set. 
 
 
 ## Staking Hash
 
 The Provenance blockchain network is a public Proof-Of-Stake \(PoS\) blockchain, meaning that the weight of validators is determined by the amount of staking tokens \(Hash\) bonded to them as collateral. These Hash can be self-delegated directly by the validator or delegated to them by other Hash holders. Hash holders can select any number of validators to delegate some or all of their Hash stake to. Any Hash holder can declare their intention to become a validator by sending a create-validator transaction to the network. From there, they become validator candidates.
 
-The weight (i.e. voting power) of a validator determines whether or not they are an active validator. Only the top $$ N_{V} $$$$ _{} $$ validators with the most voting power will be active validators - those in the Active Set.  Only validators in the Active Set, and by association those who delegated to them, receive rewards and have the right to participate in governance. 
+The weight (i.e. voting power) of a validator determines whether or not they are an active validator. Only the top $$ N_{V} $$ validators with the most voting power will be active validators - those in the Active Set.  Only validators in the Active Set, and by association those who delegated to them, receive rewards and have the right to participate in governance. 
 
 When a validator or a delegator wants to remove part or all of their deposit from the staking pool \(i.e. no longer stake that Hash\), they send an unbonding transaction to the Provenance Blockchain. Their Hash undergoes a three week unbonding period during which the owner of the Hash still earns transaction fees, can participate in governance votes and is still liable to being slashed for potential misbehaviors committed by the validator before the unbonding process started.
 
@@ -65,12 +65,12 @@ A validator earns transaction fees in Hash tokens. The total fee for each transa
 
 Revenue received by a validator's pool is split between the validator and their delegators. The validator can apply a commission on the part of the revenue that goes to their delegators. This commission is set as a percentage. Each validator is free to set their initial commission, maximum daily commission change rate and maximum commission. The Provenance blockchain network enforces the parameters that each validator sets. Only the commission rate can change after the validator is established.
 
-The commission-rate value $$ C_{i} $$$$ _{} $$:
+The commission-rate value $$ C_{i} $$:
 
 
 
-*   Must be between 0 and the validator's commission-max-rate $$ C_{i} $$,max$$ _{} $$ 
-*   Must not exceed the validator's commission-max-change-rate $$ C_{i} $$,max-change$$ _{} $$ which is maximum percent change rate **per day**. In other words, a validator can only change its commission once per day and within commission-max-change-rate bounds.
+*   Must be between 0 and the validator's commission-max-rate $$ C_{imax} $$ 
+*   Must not exceed the validator's commission-max-change-rate $$ C_{i,max-change} $$ which is maximum percent change rate **per day**. In other words, a validator can only change its commission once per day and within commission-max-change-rate bounds.
 *   Can be 100%, which implies that that validator is not welcoming outside delegators since it pockets all rewards based on its bonded stake.
 
 ### Validator earned fees
