@@ -4,7 +4,10 @@ description: An overview of validator rewards for the Provenance Blockchain
 
 # Token Economics
 
-Here is some inline math: $$a \ne 0$$
+
+test 1: $$N_{V}$$ text
+
+test 2: $$ N_{V} $$ text
 
 This document provides an overview of validator rewards for the Provenance Blockchain.  More information about Provenance Blockchain can be found [here](https://docs.provenance.io/).
 
