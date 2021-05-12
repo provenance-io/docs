@@ -1,6 +1,8 @@
 # Token Economics
 # Provenance Token Economics
 
+Here is some inline math: $$a \ne 0$$
+
 This document provides an overview of validator rewards for the Provenance Blockchain.  More information about Provenance Blockchain can be found [here](https://docs.provenance.io/).
 
 Provenance is a public **proof-of-stake blockchain **network designed and developed to support financial service industry needs by providing a **ledger**, **registry**, and **exchange** across multiple financial assets and markets. **Hash** is the Provenance utility token to stake, govern, secure, and transact on the network.
