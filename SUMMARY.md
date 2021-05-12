@@ -1,11 +1,11 @@
 # Table of contents
 
 * [Provenance Blockchain](README.md)
-* [Token Economics](token-economics.md)
 
 ## Ecosystem
 
 * [Provenance: Financial Services Blockchain](ecosystem/financial-services-blockchain/README.md)
+  * [Token Economics](ecosystem/financial-services-blockchain/token-economics.md)
   * [Fees/Distribution](ecosystem/financial-services-blockchain/distribution.md)
 * [Governance](ecosystem/governance/README.md)
   * [Voting](ecosystem/governance/voting.md)
