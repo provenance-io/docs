@@ -21,7 +21,7 @@ To support transaction flows, a bank will execute the following actions via API 
 
 ## Stablecoin Context
 
-Every stablecoin has a “minter” - the bank that created the coin.  Only nationally chartered banks with access to the fed settlement system will be recognized as omnibus banks for stablecoin.    
+Every stablecoin has a “minter” - the bank that created the coin.   
 
 Fiat deposits underlying the stablecoin are not committed to escrow; rather they are a fungible liability \(or sold asset, discussed below\), and the creditworthiness of the stablecoin is the creditworthiness of the omnibus bank “minter”.  
 
