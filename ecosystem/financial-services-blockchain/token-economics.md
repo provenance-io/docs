@@ -89,7 +89,7 @@ First, 2% of the fee goes to the Provenance Foundation’s community pool. The c
 
 1005 Hash now remain. Assume that the proposer included 100% of the precommitters’ signatures in its block. The proposer thus obtains the full bonus of 5%. The reward R for each validator in the Active Set is determined by this simple equation:
 
-* `9*R + R + R`\*`5% = 1005 ⇔ R = 1005/10.05 = 100`
+* `9*R + R + R*5% = 1005 ⇔ R = 1005/10.05 = 100`
 
 For the proposer validator:
 
