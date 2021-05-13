@@ -8,16 +8,16 @@ description: >-
 
 ## What is gas? 
 
-Gas is a consumable that is used to power the Provenance blockchain. Each execution of the blockchain requires enough gas to complete the requires reads, writes, and computation encompassed by the submitted transaction\(s\). When using gas you need to know two things:
+Gas is a consumable that is used to power the Provenance blockchain. Each execution of the blockchain requires enough gas to complete the required reads, writes, and computation encompassed by the submitted transaction\(s\). When using gas you need to know two things:
 
 * How much gas do I need to process my transaction? 
 * What is the current price of gas?
 
-Before each transaction invoked on Provenance an estimate of the amount gas you need is made. The estimated gas needed is the maximum you'll pay for the given transaction. Over estimating will lead to purchasing more gas than needed and under estimating will cause the submitted transaction to fail due to running out of gas. 
+Before each transaction invoked on Provenance, an estimate of the amount of gas you need is made. The estimated gas needed is the maximum you'll pay for the given transaction. Over estimating will lead to purchasing more gas than needed and under estimating will cause the submitted transaction to fail due to running out of gas. 
 
 ### Meter 
 
-When a transaction starts processing the meter is set at to the estimated amount of gas and the measurement of usage decreases the amount of available gas for the transaction based on network usage. If the transaction completes without running out the meter it will be committed to the blockchain. If the meter arrives at zero before the transaction is complete the blockchain will reject the transaction and the gas has been consumed. In this case it is beneficial to be slightly higher on gas estimates to avoid paying for a transaction that is rejected.
+When a transaction starts processing, the meter is set at the estimated amount of gas and the measurement of usage decreases the amount of available gas for the transaction based on blockchain-network usage. If the transaction completes without running out the meter, it will be committed to the blockchain. If the meter arrives at zero before the transaction is complete, the blockchain will reject the transaction and the gas has been consumed. In this case it is beneficial to be slightly higher on gas estimates to avoid paying for a transaction that is rejected.
 
 ### Price
 
@@ -49,103 +49,103 @@ Note: gas prices are normally denoted in nHash \( 1Hash = 1,000,000,000 nHash\).
     </tr>
     <tr>
       <td style="text-align:left">transfer coins</td>
-      <td style="text-align:left">70000</td>
-      <td style="text-align:left">70000</td>
+      <td style="text-align:left">70,000</td>
+      <td style="text-align:left">70,000</td>
     </tr>
     <tr>
       <td style="text-align:left">name_bound</td>
-      <td style="text-align:left">64000</td>
-      <td style="text-align:left">64000</td>
+      <td style="text-align:left">64,000</td>
+      <td style="text-align:left">64,000</td>
     </tr>
     <tr>
       <td style="text-align:left">account_attribute_added</td>
-      <td style="text-align:left">70000</td>
-      <td style="text-align:left">70000</td>
+      <td style="text-align:left">70,000</td>
+      <td style="text-align:left">70,000</td>
     </tr>
     <tr>
       <td style="text-align:left">account_attribute_deleted</td>
-      <td style="text-align:left">55000</td>
-      <td style="text-align:left">55000</td>
+      <td style="text-align:left">55,000</td>
+      <td style="text-align:left">55,000</td>
     </tr>
     <tr>
       <td style="text-align:left">contract spec loaded</td>
-      <td style="text-align:left">2800000</td>
-      <td style="text-align:left">3600000</td>
+      <td style="text-align:left">2,800,000</td>
+      <td style="text-align:left">3,600,000</td>
     </tr>
     <tr>
       <td style="text-align:left">scope created</td>
-      <td style="text-align:left">233000</td>
-      <td style="text-align:left">1000000</td>
+      <td style="text-align:left">233,000</td>
+      <td style="text-align:left">1,000,000</td>
     </tr>
     <tr>
       <td style="text-align:left">scope updated</td>
-      <td style="text-align:left">90000</td>
-      <td style="text-align:left">110000</td>
+      <td style="text-align:left">90,000</td>
+      <td style="text-align:left">110,000</td>
     </tr>
     <tr>
       <td style="text-align:left">scope change owner</td>
-      <td style="text-align:left">75000</td>
-      <td style="text-align:left">75000</td>
+      <td style="text-align:left">75,000</td>
+      <td style="text-align:left">75,000</td>
     </tr>
     <tr>
       <td style="text-align:left">marker created</td>
-      <td style="text-align:left">75000</td>
-      <td style="text-align:left">75000</td>
+      <td style="text-align:left">75,000</td>
+      <td style="text-align:left">75,000</td>
     </tr>
     <tr>
       <td style="text-align:left">marker supply</td>
-      <td style="text-align:left">60000</td>
-      <td style="text-align:left">60000</td>
+      <td style="text-align:left">60,000</td>
+      <td style="text-align:left">60,000</td>
     </tr>
     <tr>
       <td style="text-align:left">marker permissions</td>
-      <td style="text-align:left">60000</td>
-      <td style="text-align:left">60000</td>
+      <td style="text-align:left">60,000</td>
+      <td style="text-align:left">60,000</td>
     </tr>
     <tr>
       <td style="text-align:left">marker finalize</td>
-      <td style="text-align:left">60000</td>
-      <td style="text-align:left">60000</td>
+      <td style="text-align:left">60,000</td>
+      <td style="text-align:left">60,000</td>
     </tr>
     <tr>
       <td style="text-align:left">marker activate</td>
-      <td style="text-align:left">100000</td>
-      <td style="text-align:left">100000</td>
+      <td style="text-align:left">100,000</td>
+      <td style="text-align:left">100,000</td>
     </tr>
     <tr>
       <td style="text-align:left">marker mint</td>
-      <td style="text-align:left">85000</td>
-      <td style="text-align:left">90000</td>
+      <td style="text-align:left">85,000</td>
+      <td style="text-align:left">90,000</td>
     </tr>
     <tr>
       <td style="text-align:left">marker burn</td>
-      <td style="text-align:left">85000</td>
-      <td style="text-align:left">90000</td>
+      <td style="text-align:left">85,000</td>
+      <td style="text-align:left">90,000</td>
     </tr>
     <tr>
       <td style="text-align:left">bilateral exchange</td>
-      <td style="text-align:left">105000</td>
-      <td style="text-align:left">105000</td>
+      <td style="text-align:left">105,000</td>
+      <td style="text-align:left">105,000</td>
     </tr>
     <tr>
       <td style="text-align:left">multilateral exchange</td>
-      <td style="text-align:left">105000</td>
-      <td style="text-align:left">1050000</td>
+      <td style="text-align:left">105,000</td>
+      <td style="text-align:left">1,050,000</td>
     </tr>
     <tr>
       <td style="text-align:left">smart contract create (Require governance vote)</td>
-      <td style="text-align:left">6320000</td>
-      <td style="text-align:left">20000000</td>
+      <td style="text-align:left">6,320,000</td>
+      <td style="text-align:left">20,000,000</td>
     </tr>
     <tr>
       <td style="text-align:left">smart contract init</td>
-      <td style="text-align:left">1000000</td>
-      <td style="text-align:left">1000000</td>
+      <td style="text-align:left">1,000,000</td>
+      <td style="text-align:left">1,000,000</td>
     </tr>
     <tr>
       <td style="text-align:left">smart contract exec</td>
-      <td style="text-align:left">140000</td>
-      <td style="text-align:left">140000</td>
+      <td style="text-align:left">140,000</td>
+      <td style="text-align:left">140,000</td>
     </tr>
   </tbody>
 </table>
