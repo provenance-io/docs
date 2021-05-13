@@ -23,30 +23,132 @@ When a transaction starts processing the meter is set at to the estimated amount
 
 Gas is purchased with Hash, the Provenance utility token. 
 
+Note: gas prices are normally denoted in nHash \( 1Hash = 1,000,000,000 nHash\).
+
 ### Operation Gas Estimates
 
-| Operation | Low | High |
-| :--- | :--- | :--- |
-| transfer coins | 70000 | 70000 |
-| name\_bound | 64000 | 64000 |
-| account\_attribute\_added | 70000 | 70000 |
-| account\_attribute\_deleted | 55000 | 55000 |
-| contract spec loaded | 2800000 | 3600000 |
-| scope created | 233000 | 1000000 |
-| scope updated | 90000 | 110000 |
-| scope change owner | 75000 | 75000 |
-| marker created | 75000 | 75000 |
-| marker supply | 60000 | 60000 |
-| marker permissions | 60000 | 60000 |
-| marker finalize | 60000 | 60000 |
-| marker activate | 100000 | 100000 |
-| marker mint | 85000 | 90000 |
-| marker burn | 85000 | 90000 |
-| bilateral exchange | 105000 | 105000 |
-| multilateral exchange | 105000 | 1050000 |
-| smart contract create \(Require governance vote\) | 6320000 | 20000000 |
-| smart contract init | 1000000 | 1000000 |
-| smart contract exec | 140000 | 140000 |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Operation</th>
+      <th style="text-align:left">
+        <p>Low</p>
+        <p>[nHash]</p>
+      </th>
+      <th style="text-align:left">
+        <p>High</p>
+        <p>[nHash]</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">transfer coins</td>
+      <td style="text-align:left">70000</td>
+      <td style="text-align:left">70000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">name_bound</td>
+      <td style="text-align:left">64000</td>
+      <td style="text-align:left">64000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">account_attribute_added</td>
+      <td style="text-align:left">70000</td>
+      <td style="text-align:left">70000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">account_attribute_deleted</td>
+      <td style="text-align:left">55000</td>
+      <td style="text-align:left">55000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">contract spec loaded</td>
+      <td style="text-align:left">2800000</td>
+      <td style="text-align:left">3600000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">scope created</td>
+      <td style="text-align:left">233000</td>
+      <td style="text-align:left">1000000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">scope updated</td>
+      <td style="text-align:left">90000</td>
+      <td style="text-align:left">110000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">scope change owner</td>
+      <td style="text-align:left">75000</td>
+      <td style="text-align:left">75000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">marker created</td>
+      <td style="text-align:left">75000</td>
+      <td style="text-align:left">75000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">marker supply</td>
+      <td style="text-align:left">60000</td>
+      <td style="text-align:left">60000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">marker permissions</td>
+      <td style="text-align:left">60000</td>
+      <td style="text-align:left">60000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">marker finalize</td>
+      <td style="text-align:left">60000</td>
+      <td style="text-align:left">60000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">marker activate</td>
+      <td style="text-align:left">100000</td>
+      <td style="text-align:left">100000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">marker mint</td>
+      <td style="text-align:left">85000</td>
+      <td style="text-align:left">90000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">marker burn</td>
+      <td style="text-align:left">85000</td>
+      <td style="text-align:left">90000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">bilateral exchange</td>
+      <td style="text-align:left">105000</td>
+      <td style="text-align:left">105000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">multilateral exchange</td>
+      <td style="text-align:left">105000</td>
+      <td style="text-align:left">1050000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">smart contract create (Require governance vote)</td>
+      <td style="text-align:left">6320000</td>
+      <td style="text-align:left">20000000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">smart contract init</td>
+      <td style="text-align:left">1000000</td>
+      <td style="text-align:left">1000000</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">smart contract exec</td>
+      <td style="text-align:left">140000</td>
+      <td style="text-align:left">140000</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Fees 
 
