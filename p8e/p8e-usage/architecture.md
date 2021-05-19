@@ -2,11 +2,26 @@
 
 ## Diagrams
 
-![Single object store node diagram](../../.gitbook/assets/single-node-object-store.png)
+![Single node object store diagram](../../.gitbook/assets/single-node-object-store.png)
 
-#### Single object store environment
+#### Single node object store environment
 
+The single object store environment works in cases where you are only executing single party contracts or multi-party contracts where all parties exist within your p8e environment. The only service that needs to be exposed outside of your private network is the Provenance node. The minimum Provenance node egress is tcp:26656 in order to reach public Provenance peers.
 
+Default port mappings \(NOTE: these are all configurable and can be changed\):
+
+* P8e Webservice
+  * ingress - http:8090
+* P8e API
+  * ingress - tcp:8080
+* Object Store
+  * ingress - tcp:80
+* Provenance Node
+  * internet egress - tcp:26656
+  * egress - tcp:26656
+  * ingress - tcp:26656-26657, tcp:9090, tcp:1317
+
+#### Multi-node object store environment
 
 Placeholder - insert multi-node object store diagram
 
