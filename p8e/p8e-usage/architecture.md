@@ -1,6 +1,14 @@
 # Architecture
 
-## Physical
+## Diagrams
+
+![Single object store node diagram](../../.gitbook/assets/single-node-object-store.png)
+
+#### Single object store environment
+
+
+
+Placeholder - insert multi-node object store diagram
 
 ## Logical Description
 

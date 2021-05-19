@@ -54,7 +54,6 @@
 ## Contract Execution Environment <a id="p8e"></a>
 
 * [P8e Contract Execution Environment](p8e/overview/README.md)
-  * [Architecture](p8e/overview/architecture.md)
   * [P8e Transition Flow](p8e/overview/p8e-transition-flow.md)
   * [P8e API](p8e/overview/api/README.md)
     * [Authentication](p8e/overview/api/authentication.md)
@@ -66,6 +65,7 @@
   * [P8e UI](p8e/overview/p8e-ui.md)
 * [P8e Usage](p8e/p8e-usage/README.md)
   * [P8e Setup](p8e/p8e-usage/p8e-setup.md)
+  * [Architecture](p8e/p8e-usage/architecture.md)
   * [Specifications](p8e/p8e-usage/specifications.md)
   * [Building New P8e Contracts](p8e/p8e-usage/building-new-contracts.md)
   * [Data Retrieval](p8e/p8e-usage/data-retrieval.md)
