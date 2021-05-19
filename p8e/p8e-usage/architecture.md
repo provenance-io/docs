@@ -18,7 +18,6 @@ Default port mappings \(NOTE: these are all configurable and can be changed\):
   * ingress - tcp:80
 * Provenance Node
   * internet egress - tcp:26656
-  * egress - tcp:26656
   * ingress - tcp:26656-26657, tcp:9090, tcp:1317
 
 #### Multi-node object store environment
