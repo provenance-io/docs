@@ -63,5 +63,59 @@ There is one main slashing condition.
 
 * Double signing: If someone reports that a validator signed two different blocks with the same chain ID at the same height, this validator will get slashed.
 
-This is why Hash holders should perform careful due diligence on validators before delegating. It is also important that delegators actively monitor the activity of their validators. If a validator behaves suspiciously or is too often offline, delegators can choose to unbond from them or switch to another validator. \*\*Delegators can also mitigate risk by distributing their stake across multiple validators.\*\*
+This is why Hash holders should perform careful due diligence on validators before delegating. It is also important that delegators actively monitor the activity of their validators. If a validator behaves suspiciously or is too often offline, delegators can choose to unbond from them or switch to another validator.  Delegators can also mitigate risk by distributing their stake across multiple validators.
+
+## How To Stake Your Hash 
+
+{% hint style="info" %}
+Please take a moment to thoroughly understand [how delegation and staking work](delegator-faq.md#what-is-a-delegator) along with the [risks](delegator-faq.md#risks) outlined in the previous section.
+{% endhint %}
+
+### Staking Using the Provenance Explorer
+
+The easiest way to stake your Hash to a [Validator](validator-faq.md) is by using the [Provenance Explorer.](https://explorer.provenance.io)
+
+#### Connect Your Wallet to Explorer
+
+If you have a Provenance or Figure Wallet, navigate to the Provenance Explorer and click the "Connect Wallet" key in the upper right hand corner and select your wallet type:
+
+![Select a Wallet Type to Connect](../.gitbook/assets/image%20%2822%29.png)
+
+Once your wallet is connected, the Explorer will show the wallet address is in use and the Key will change to a User profile icon:
+
+![](../.gitbook/assets/image%20%287%29.png)
+
+With your wallet connected, click the **Staking** menu option to display the list of Validators:
+
+![Available Validators List](../.gitbook/assets/image%20%2817%29.png)
+
+The Validator list shows the Validators that are available to Delegate to.  Clicking the `Moniker` or `Address` column for the Validator will show details about the Validator.  These details are important when considering a Validator as they demonstrate the Validator's shares, commissions, and delegators:
+
+![](../.gitbook/assets/image%20%2820%29.png)
+
+From the Validator List, click the **Delegate** button next to the Validator you wish to stake with:
+
+![Click Delegate to Stake Hash with Selected Validator](../.gitbook/assets/image%20%2819%29.png)
+
+Explorer will display important information about the selected Validator and provide an input to enter the amount of Hash you wish to delegate:
+
+![](../.gitbook/assets/image%20%2812%29.png)
+
+Once the **Delegate** button is clicked, Explorer will prompt you sign the transaction with your wallet.  Once signed and submitted, the delegation will show in the Provenance Validators List:
+
+![](../.gitbook/assets/image%20%2821%29.png)
+
+### How to Manage Your Delegations from Explorer
+
+Once you have delegated Hash to a Validator you can undelegate or redelegate your Hash.  When you undelegate, your Hash will not be available for 21 days.  You can redelegate to a different Validator at any time.
+
+From the **Staking** menu the My Validators list shows the Validators you have delegated to.  Click the **Manage** button to adjust your delegations:
+
+![](../.gitbook/assets/image%20%288%29.png)
+
+
+
+
+
+
 
