@@ -11,7 +11,6 @@ The following are the services that make up a fully functional P8e environment:
 * elasticsearch
 * p8e-webservice \(optional\)
 * p8e-ui \(optional\)
-* redis \(required for p8e-webservice, otherwise optional\)
 * obect-store-locator \(required only for external multi-party contract execution\)
 
 ## Local
