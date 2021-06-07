@@ -66,7 +66,3 @@ This ui provides the means to visually see contract execution. It is meant to be
 
 #### Object Store Replicator - TBD
 
-#### Redis
-
-The p8e web service requires redis for a small piece of functionality so redis is only required if you choose to run a p8e web service instance. It is planned to be removed in the future.
-
