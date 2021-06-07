@@ -2,7 +2,7 @@
 
 ## Diagrams
 
-![Single node object store diagram](../../.gitbook/assets/single-node-object-store.png)
+![Single node object store diagram](../../.gitbook/assets/single-node-object-store.jpeg)
 
 #### Single node object store environment
 
