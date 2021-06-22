@@ -41,6 +41,7 @@
 * [Using Provenanced](blockchain/using-provenance/README.md)
   * [Query Command](blockchain/using-provenance/query-command.md)
   * [Tx Command](blockchain/using-provenance/tx-command.md)
+* [Explorer](blockchain/explorer.md)
 
 ## Modules
 
