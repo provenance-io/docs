@@ -41,7 +41,19 @@
 * [Using Provenanced](blockchain/using-provenance/README.md)
   * [Query Command](blockchain/using-provenance/query-command.md)
   * [Tx Command](blockchain/using-provenance/tx-command.md)
-* [Explorer](blockchain/explorer.md)
+* [Explorer](blockchain/explorer/README.md)
+  * [UI Walkthrough](blockchain/explorer/ui-walkthrough/README.md)
+    * [Dashboard](blockchain/explorer/ui-walkthrough/dashboard.md)
+    * [Staking \(Validators\)](blockchain/explorer/ui-walkthrough/staking-validators.md)
+    * [Transactions](blockchain/explorer/ui-walkthrough/transactions.md)
+    * [Assets](blockchain/explorer/ui-walkthrough/assets.md)
+    * [Blocks](blockchain/explorer/ui-walkthrough/blocks.md)
+    * [Account \(Address\)](blockchain/explorer/ui-walkthrough/account-address.md)
+    * [Forthcoming](blockchain/explorer/ui-walkthrough/forthcoming/README.md)
+      * [Params](blockchain/explorer/ui-walkthrough/forthcoming/params.md)
+      * [NFTs](blockchain/explorer/ui-walkthrough/forthcoming/nfts.md)
+      * [IBC](blockchain/explorer/ui-walkthrough/forthcoming/ibc.md)
+      * [Governance](blockchain/explorer/ui-walkthrough/forthcoming/governance.md)
 
 ## Modules
 
