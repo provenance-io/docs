@@ -113,7 +113,9 @@ From the **Staking** menu the My Validators list shows the Validators you have d
 
 ![](../.gitbook/assets/image%20%288%29.png)
 
-
+{% hint style="info" %}
+Your rewards for a given validator are immediately claimed when you change your delegation against it, which is reflected in the transaction log.
+{% endhint %}
 
 
 
