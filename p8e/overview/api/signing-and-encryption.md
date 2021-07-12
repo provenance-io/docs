@@ -18,4 +18,4 @@ SmartKey (https://www.equinix.com/services/edge-services/smartkey) is a key cust
 
 ## Encryption
 
-P8E uses an ECIES public key authentication schema to encrypt and decrypt data, based on the affiliate's type, it would either retrieve the encryption key pair from either the P8e local database or from the specified key custody provider. There is only a minor deviation in computing the KDF involving the respective key custody provider's API, but will continue to decrypt at a common manner. 
+P8E uses an ECIES public key authentication schema to encrypt and decrypt data, based on the affiliate's type, it would either retrieve the encryption key pair from either the P8e local database or from the specified key custody provider. There are only minor deviation in computing the KDF involving the respective key custody provider's API, but will continue to decrypt at a common manner, using the HKDF-SHA256 derivation function. 
