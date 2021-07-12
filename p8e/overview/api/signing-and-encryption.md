@@ -4,7 +4,7 @@ Signing and Encryption is a critical part of P8e's way of managing data signing 
 
 ## Signing
 
-P8e provides a couple of implementations for signing base on the way the client decides to store their affiliate key pair. 
+Signing is based off of the way the client has decided to store their affiliate signing key pair. 
 
 ### Pen
 
