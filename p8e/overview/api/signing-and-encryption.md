@@ -1,6 +1,6 @@
 # Signing and Encryption
 
-Signing and Encryption is a critical part of P8e's way of managing data signing and transaction between the client's data, Object Store and the the Blockchain.
+Signing and Encryption is a critical part of P8e's way of managing data signing and transaction between the client's data, Object Store and the Blockchain. The current P8e architecture now allows for easier integration of any new key custody provider via a Factory and class implementation by implementing abstract methods from the interface base class.
 
 ## Signing
 
@@ -13,7 +13,7 @@ The Pen class uses the standard java security Signature implementation to sign d
 
 ### SmartKey
 
-SmartKey (https://www.equinix.com/services/edge-services/smartkey) is a 3rd party key custody service provider that stores an affiliate's private key within an HSM (Hardware Security Module). P8e leverages the signing API provided from SmartKey to sign data before being sent to Object Store and the data verification process uses the java security Signature amongst all key custody providers.
+SmartKey (https://www.equinix.com/services/edge-services/smartkey) is a key custody service provider that stores an affiliate's private key within an HSM (Hardware Security Module). P8e leverages the signing API provided from SmartKey to sign data before being sent to Object Store and the data verification process uses the java security Signature amongst all key custody providers.
 
 
 ## Encryption
