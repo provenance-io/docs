@@ -1,6 +1,6 @@
 # Signing and Encryption
 
-Signing and Encryption is a critical part of P8e's way of managing data signing and safe transactions between the client's data, Object Store and the Blockchain. The current P8e architecture now allows for easier integration of any new key custody provider via a Factory and class implementation by implementing abstract methods from the interface base class.
+Signing and Encryption is a critical part of P8e's way of managing data signing and safe data transactions between the client's data, Object Store and the Blockchain. The current P8e architecture now allows for easier integration of any new key custody provider via a Factory and class implementation by implementing abstract methods from the interface base class.
 
 ## Signing
 
