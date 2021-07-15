@@ -251,13 +251,13 @@ cd cosmovisor
 Make `cosmovisor`
 
 ```bash
-make cosmovisor
+make
 ```
 
 Copy the `cosmovisor` binary to the `$GOPATH`
 
 ```bash
-cp cosmovisor $GOPATH/bin/cosmovisor
+cp build/cosmovisor $GOPATH/bin/cosmovisor
 ```
 
 #### Export Cosmovisor Environment Variables
