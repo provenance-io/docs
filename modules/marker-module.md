@@ -127,13 +127,361 @@ When used in this configuration, the marker module's `transfer` permission allow
 
 The Provenance Blockchain provides the direct benefit of facilitating transfer of value between two parties without an intermediary. Provenance uses a simple construct called a marker to manage full and fractional asset ownership on the blockchain. Markers are defined using Protocol Buffers \(Protobuf\) and consist of the following structure.
 
-![](../.gitbook/assets/markers.png)
+```text
+type MarkerAccount struct { 
+// cosmos base_account including address and account number Address string AccountNumber uint64
+PubKey        *types.Any // NOTE: not used for marker, it is not possible to sign for a marker account directly
+Sequence      uint64     // NOTE: always zero on marker
 
-* **Address:** The address is analogous to a UUID. Addresses are contained within wallets. Marker ownership is determined based on the owner of the wallet containing the address.
-* **Type:** Each marker has an associated type that defines the behavior the marker exhibits \(i.e. Account, Loan Pool, Stock, Syndication, Participation, etc...\)
-* **Scopes:** Markers wrap assets that have been defined using the Provenance Contract Engine. Each scope UUID can only exist within a single marker on the blockchain.
-* **Shares:** Ownership of a marker can be fractionalized into shares. A good example is a loan participation marker that holds many scopes. We could issue 25 equal shares and then transfer them to another owner's wallet thus securing the new owner's ownership in the loan participation.
-* **Ownership:** Wallet markers can store ownership of other markers. The string in the ownership map is the address of the marker owned while the int64 is the number of shares held.
-* **State:** Transaction states are stored by the blockchain for processing purposes \(i.e. Proposed, Finalized, Cancelled, Destroyed\).
-* **Parent Address:** Can and should be null in most cases, but if present indicates the parent marker.
+// Address that owns the marker configuration.  This account must sign any requests
+// to change marker config (only valid for statuses prior to finalization)
+Manager string
+
+// Access control lists.  Account addresses are assigned control of the marker using these entries
+AccessControl []AccessGrant
+
+// Indicates the current status of this marker record. (Pending, Active, Cancelled, etc)
+Status MarkerStatus
+
+// value denomination.
+Denom string
+
+// the total supply expected for a marker.  This is the amount that is minted when a marker is created.  For
+// SupplyFixed markers this value will be enforced through an invariant that mints/burns from this account to
+// maintain a match between this value and the supply on the chain (maintained by bank module).  For all non-fixed
+// supply markers this value will be set to zero when the marker is activated.
+Supply Int
+
+// Marker type information.  The type of marker controls behavior of its account.
+MarkerType MarkerType
+
+// A fixed supply will mint additional coin automatically if the total supply decreases below a set value.  This
+// may occur if the coin is burned or an account holding the coin is slashed. (default: true)
+SupplyFixed bool
+
+// indicates that governance based control is allowed for this marker
+AllowGovernanceControl bool
+}
+```
+
+#### Marker Types
+
+There are currently two basic types of markers.
+
+* **Coin** - A marker with a type of coin represents a standard fungible token with zero or more coins in circulation
+* **Restricted Coin** - Restricted Coins work just like a regular coin with one important difference--the bank module "send\_enabled" status for the coin is set to false. This means that a user account that holds the coin can not send it to another account directly using the bank module. In order to facilitate exchange there must be an address set on the marker with the "Transfer" permission grant. This address must sign calls to the marker module to move these coins between accounts using the `transfer` method on the api.
+
+#### Access Grants
+
+Control of a marker account is configured through a list of access grants assigned to the marker when it is created or applied afterwards through the API calls to add or remove access.
+
+```text
+const (
+	// ACCESS_UNSPECIFIED defines a no-op vote option.
+	Access_Unknown Access = 0
+	// ACCESS_MINT is the ability to increase the supply of a marker
+	Access_Mint Access = 1
+	// ACCESS_BURN is the ability to decrease the supply of the marker using coin held by the marker.
+	Access_Burn Access = 2
+	// ACCESS_DEPOSIT is the ability to set a marker reference to this marker in the metadata/scopes module
+	Access_Deposit Access = 3
+	// ACCESS_WITHDRAW is the ability to remove marker references to this marker in from metadata/scopes or
+	// transfer coin from this marker account to another account.
+	Access_Withdraw Access = 4
+	// ACCESS_DELETE is the ability to move a proposed, finalized or active marker into the cancelled state. This
+	// access also allows cancelled markers to be marked for deletion
+	Access_Delete Access = 5
+	// ACCESS_ADMIN is the ability to add access grants for accounts to the list of marker permissions.
+	Access_Admin Access = 6
+	// ACCESS_TRANSFER is the ability to invoke a send operation using the marker module to facilitate exchange.
+	// This capability is useful when the marker denomination has "send enabled = false" preventing normal bank transfer
+	Access_Transfer Access = 7
+)
+
+// A structure associating a list of access permissions for a given account identified by is address
+type AccessGrant struct {
+	// A bech32 encoded address string of the account the permissions are assigned to
+	Address     string
+	 // An array of enum values as defined above
+	Permissions AccessList
+}
+```
+
+#### Marker Types
+
+There are currently two basic types of markers.
+
+* **Coin** - A marker with a type of coin represents a standard fungible token with zero or more coins in circulation
+* **Restricted Coin** - Restricted Coins work just like a regular coin with one important difference--the bank module "send\_enabled" status for the coin is set to false. This means that a user account that holds the coin can not send it to another account directly using the bank module. In order to facilitate exchange there must be an address set on the marker with the "Transfer" permission grant. This address must sign calls to the marker module to move these coins between accounts using the `transfer` method on the api.
+
+#### Access Grants
+
+Control of a marker account is configured through a list of access grants assigned to the marker when it is created or applied afterwards through the API calls to add or remove access.
+
+```text
+const (
+	// ACCESS_UNSPECIFIED defines a no-op vote option.
+	Access_Unknown Access = 0
+	// ACCESS_MINT is the ability to increase the supply of a marker
+	Access_Mint Access = 1
+	// ACCESS_BURN is the ability to decrease the supply of the marker using coin held by the marker.
+	Access_Burn Access = 2
+	// ACCESS_DEPOSIT is the ability to set a marker reference to this marker in the metadata/scopes module
+	Access_Deposit Access = 3
+	// ACCESS_WITHDRAW is the ability to remove marker references to this marker in from metadata/scopes or
+	// transfer coin from this marker account to another account.
+	Access_Withdraw Access = 4
+	// ACCESS_DELETE is the ability to move a proposed, finalized or active marker into the cancelled state. This
+	// access also allows cancelled markers to be marked for deletion
+	Access_Delete Access = 5
+	// ACCESS_ADMIN is the ability to add access grants for accounts to the list of marker permissions.
+	Access_Admin Access = 6
+	// ACCESS_TRANSFER is the ability to invoke a send operation using the marker module to facilitate exchange.
+	// This capability is useful when the marker denomination has "send enabled = false" preventing normal bank transfer
+	Access_Transfer Access = 7
+)
+
+// A structure associating a list of access permissions for a given account identified by is address
+type AccessGrant struct {
+	// A bech32 encoded address string of the account the permissions are assigned to
+	Address     string
+	 // An array of enum values as defined above
+	Permissions AccessList
+}
+```
+
+#### 
+
+#### Fixed Supply vs Floating
+
+A marker can be configured to have a fixed supply or one that is allowed to float. A marker will always mint an amount of coin indicated in its `supply` field when it is activated. For markers that have a fixed supply an invariant check is enforced that ensures the supply of the marker alway matches the configured value. For a floating supply no additional checks or adjustments are performed and the supply value is set to zero when activated.
+
+**When a Marker has a Fixed Supply that does not match target**
+
+Under certain conditions a marker may begin a block with a total supply in circulation less than its configured amount. When this occurs the marker will take action to correct the balance of coin supply.
+
+**A fixed supply marker will attempt to automatically correct a supply imbalance at the start of the next block**
+
+This means that if the supply in circulation exceeds the configured amount the attempted fix is to burn a required amount from the marker's account itself. If this fails an invariant will be broken and the chain will halt.
+
+If the requested supply is greater than the amount in circulation \(as occurs when a coin is burned in a slash\) the marker module will mint the difference between expected supply and circulation and place the created coin in the marker's account.
+
+A supply imbalance typically occurs during the genesis of a blockchain when a fixed supply for a marker is less than the initial balances assigned to accounts. It may also occur if the marker is associated with the bind denom of the chain and a slash penalty is assessed resulting in the burning of a portion of coins.
+
+
+
+## State Transitions
+
+This document describes the state transition operations pertaining markers:
+
+* [Undefined](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/02_state_transitions.md#undefined)
+* [Proposed](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/02_state_transitions.md#proposed)
+* [Finalized](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/02_state_transitions.md#finalized)
+* [Active](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/02_state_transitions.md#active)
+* [Cancelled](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/02_state_transitions.md#cancelled)
+* [Destroyed](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/02_state_transitions.md#destroyed)
+
+### Undefined
+
+The undefined status is not allowed and its use will be flagged as an error condition.
+
+### Proposed
+
+The proposed status is the initial state of a marker. A marker in the `proposed` status will accept changes to supply via the `mint`/`burn` methods, updates to the access list, and state transitions when called by the address set in the `manager` property.
+
+On Transition:
+
+* Proposed is the initial state of a marker by default. It is not possible to transition to this state from any other.
+
+Next Status:
+
+* **Finalized**
+* **Cancelled**
+
+### Finalized
+
+The finalized state of the marker is used to verify the readiness of a marker before activating it.
+
+Requirements:
+
+* Marker must exist
+* Caller address must match the `manager` address on the marker
+* Current status of marker must be `Proposed`
+* Supply of the marker must meet or exceed the amount of any existing coin in circulation on the network of the denom of the marker. \(This will only apply \)
+
+On Transition:
+
+* Marker status is set to `Finalized`
+* A marker finalize typed event is dispatched
+
+Next Status:
+
+* **Active**
+* **Cancelled**
+
+### Active
+
+An active marker is considered ready for use.
+
+On Transition:
+
+* Marker status is set to `Active`
+* Requested coin supply is minted and placed in the marker account
+* For markers with a `fixed_supply` the Invariant checks are performed in `begin_block`
+* Permissions as assigned in the access list are enforced for any management actions performed
+* The `manager` field is cleared. All management actions require explicit permission grants.
+* A marker activate typed event is dispatched
+
+Next Status:
+
+* **Cancelled**
+
+### Cancelled
+
+A cancelled marker will have no coin supply in circulation. Markers may remain in the Cancelled state long term to prevent their denom reuse by another future marker. If a marker is no longer needed at all then the **Destroyed** status maybe appropriate.
+
+Requirements:
+
+* Caller must have the `delete` permission assigned to their address or
+* Caller must be the manager of the marker \(applies only to proposed markers that are Cancelled\)
+* The supply of the coin in circulation outside of the marker account must be zero.
+
+On Transition:
+
+* Marker status is set to `Cancelled`
+* A marker Cancelled typed event is dispatched
+
+Next Status:
+
+* **Destroyed**
+
+### Destroyed
+
+A destroyed marker is denoted as available for subsequent removal from the state store by clean up processes. Markers in the destroyed status will be removed in the Begin Block ABCI handler at the beginning of the next block \(v1.3.0+\).
+
+On Transition:
+
+* All supply of the coin denom will be burned.
+* Marker status is set to `Destroyed`
+* Marker will ultimately be deleted from the KVStore during the next ABCI Begin Block \(v1.3.0+\)
+
+Next Status:
+
+* **None**
+
+\*\*\*\*
+
+## Governance Proposal Control
+
+The marker module supports an extensive amount of control over markers via governance proposal. This allows a marker to be defined where no single account is allowed to make modifications and yet it is still possible to issue change requests through passing a governance proposal.
+
+* [Add Marker Proposal](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/10_governance.md#add-marker-proposal)
+* [SupplyIncrease Proposal](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/10_governance.md#supplyincrease-proposal)
+* [SupplyDecrease Proposal](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/10_governance.md#supplydecrease-proposal)
+* [SetAdministrator Proposal](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/10_governance.md#setadministrator-proposal)
+* [RemoveAdministrator Proposal](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/10_governance.md#removeadministrator-proposal)
+* [ChangeStatus Proposal](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/10_governance.md#changestatus-proposal)
+* [WithdrawEscrow Proposal](https://github.com/provenance-io/provenance/blob/main/x/marker/spec/10_governance.md#withdrawescrow-proposal)
+
+### Add Marker Proposal
+
+AddMarkerProposal defines a governance proposal to create a new marker.
+
+In a typical add marker situation the `UnrestrictedDenomRegex` parameter would be used to enforce longer denom values \(preventing users from creating coins with well known symbols such as BTC, ETH, etc\). Markers added via governance proposal are only limited by the more generic Coin Validation Denom expression enforced by the bank module.
+
+A further difference from the standard add marker flow is that governance proposals to add a marker can directly set a marker to the `Active` status with the appropriate minting operations performed immediately.
+
++++ [https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto\#L15-L30](https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto#L15-L30)
+
+This request is expected to fail if:
+
+* The governance proposal format \(title, description, etc\) is invalid
+* The marker request contains an invalid denom value
+* The marker already exists
+* The amount of coin in circulation could not be set.
+  * There is already coin in circulation \[perhaps from genesis\] and the configured supply is less than this amount and it is not possible to burn sufficient coin to make the requested supply match actual supply
+* The mint operation fails for any reason \(see bank module\)
+
+### SupplyIncrease Proposal
+
+SupplyIncreaseProposal defines a governance proposal to administer a marker and increase total supply of the marker through minting coin and placing it within the marker or assigning it directly to an account.
+
++++ [https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto\#L34-L43](https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto#L34-L43)
+
+This request is expected to fail if:
+
+* The governance proposal format \(title, description, etc\) is invalid
+* The requested supply exceeds the configuration parameter for `MaxTotalSupply`
+
+### SupplyDecrease Proposal
+
+SupplyDecreaseProposal defines a governance proposal to administer a marker and decrease the total supply through burning coin held within the marker
+
++++ [https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto\#L47-L55](https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto#L47-L55)
+
+This request is expected to fail if:
+
+* The governance proposal format \(title, description, etc\) is invalid
+* Marker does not allow governance control \(`AllowGovernanceControl`\)
+* The marker account itself is not holding sufficient supply to cover the amount of coin requested to burn
+* The amount of resulting supply would be less than zero
+
+The chain will panic and halt if:
+
+* The bank burn operation fails for any reason \(see bank module\)
+
+### SetAdministrator Proposal
+
+SetAdministratorProposal defines a governance proposal to administer a marker and set administrators with specific access on the marker
+
++++ [https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto\#L59-L67](https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto#L59-L67)
+
+This request is expected to fail if:
+
+* The governance proposal format \(title, description, etc\) is invalid
+* The marker does not exist
+* Marker does not allow governance control \(`AllowGovernanceControl`\)
+* Any of the access grants are invalid
+
+### RemoveAdministrator Proposal
+
+RemoveAdministratorProposal defines a governance proposal to administer a marker and remove all permissions for a given address
+
++++ [https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto\#L71-L79](https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto#L71-L79)
+
+This request is expected to fail if:
+
+* The governance proposal format \(title, description, etc\) is invalid
+* The marker does not exist
+* Marker does not allow governance control \(`AllowGovernanceControl`\)
+* The address to be removed is not present
+
+### ChangeStatus Proposal
+
+ChangeStatusProposal defines a governance proposal to administer a marker to change its status
+
++++ [https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto\#L82-L90](https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto#L82-L90)
+
+This request is expected to fail if:
+
+* The governance proposal format \(title, description, etc\) is invalid
+* Marker does not allow governance control \(`AllowGovernanceControl`\)
+* The requested status is invalid
+* The new status is not a valid transition from the current status
+* For destroyed markers
+  * The supply of the marker is greater than zero and the amount held by the marker account does not equal this value resulting in the failure to burn all remaining supply.
+
+### WithdrawEscrow Proposal
+
+WithdrawEscrowProposal defines a governance proposal to withdraw escrow coins from a marker
+
++++ [https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto\#L93-L103](https://github.com/provenance-io/provenance/blob/2e713a82ac71747e99975a98e902efe01286f591/proto/provenance/marker/v1/proposals.proto#L93-L103)
+
+This request is expected to fail if:
+
+* The governance proposal format \(title, description, etc\) is invalid
+* Marker does not allow governance control \(`AllowGovernanceControl`\)
+* The marker account is not holding sufficient assets to cover the requested withdraw amounts.
+
+
 
