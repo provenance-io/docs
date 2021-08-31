@@ -74,7 +74,7 @@ The `provenanced` binary provides a command-line interface to create and query t
 
 ### Creating a Key\(s\)
 
-All interactions with Provenance are secured with a public/private key pair that will act as your account\(s\) on the blockchain. We use the `44`'`/1'/0'/0/0` BIP32 path as an example where "1" is a reference to Provenance testnet. 
+All interactions with Provenance are secured with a public/private key pair that will act as your account\(s\) on the blockchain. We use the `44'/1'/0'/0/0` BIP32 path as an example where the coin-type "1" is a reference to Provenance testnet. We use the `44'/505'/0'/0/0` BIP32 path as an example where coin-type "505" is a reference to the HASH token on Provenance mainnet. 
 
 {% hint style="success" %}
 Refer to the [Accounts](../basics/accounts.md) section for more information[ HD Wallet ](../basics/accounts.md#hd-wallet)paths.
@@ -83,7 +83,11 @@ Refer to the [Accounts](../basics/accounts.md) section for more information[ HD 
 Create a key pair and store it in a local Keyring \(change `<name-of-key>` to a string value of your choosing\):
 
 ```text
-provenanced keys add <name_of_key> --testnet --hd-path "44'/1'/0'/0/0"  -i
+# TESTNET (note: --hd-path "44'/1'/0'/0/0" can be used instead of coin type)
+provenanced keys add <name_of_key> --coin-type=1 --testnet  -i
+
+# MAINNET (note: the default coin type is 505 for mainnet so no extra parameters are required)
+provenanced keys add <name_of_key> -i
 ```
 
 ```text
@@ -102,7 +106,11 @@ When generating a new key it is important to store the generated mnemonic in a s
 This command will prompt you for a mnemonic to restore the key at a specific path.
 
 ```text
-provenanced keys add <name_of_key> --hd-path "44'/1'/0'/0/0"  -i --testnet
+# TESTNET
+provenanced keys add <name_of_key>  -i --testnet
+
+# MAINNET
+provenanced keys add <name_of_key>  -i
 ```
 
 ```text
@@ -111,12 +119,26 @@ fancy solar describe long tag soul gold boost vacuum baby famous narrow drink fi
 ```
 
 ```text
+# TESTNET
 > Enter your bip39 passphrase. This is combined with the mnemonic to derive the seed. Most users should just hit enter to use the default, ""
 
 - name: <name_of_key>
   type: local
   address: tp1gn8jlv9krqe23ql3ltq0ajcwwf7dyaq6uuludl
   pubkey: tppub1addwnpepqd4tpv506lhl3j8hux0ss8km84gwmgapjtuea9wzt8z8n9eqjrjxg897tw0
+  mnemonic: ""
+  threshold: 0
+  pubkeys: []
+```
+
+```text
+# MAINNET
+> Enter your bip39 passphrase. This is combined with the mnemonic to derive the seed. Most users should just hit enter to use the default, ""
+
+- name: <name_of_key>
+  type: local
+  address: pb1jd9yey59p6e70wp68ufltx8eh2xvxphqwhzcm9
+  pubkey: pbpub1addwnpepqfftn6g0p5hs94tp7f4h4d8tkpkjmx87nzxwmmclz89gfdtqfhstv9qd5s8
   mnemonic: ""
   threshold: 0
   pubkeys: []
