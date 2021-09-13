@@ -16,7 +16,6 @@
   * [Validator](ecosystem/community/validator.md)
   * [Delegator](ecosystem/community/delegator.md)
   * [Asset Creators](ecosystem/community/asset-originators.md)
-  * [Omnibus Banks](ecosystem/community/omnibus-banks.md)
 * [Funding Program](ecosystem/funding-program/README.md)
   * [Core Infrastructure Details](ecosystem/funding-program/core-infrastructure-details.md)
   * [Grants Program Details](ecosystem/funding-program/grants-program-details.md)
