@@ -2,7 +2,7 @@
 
 ## Diagrams
 
-![P8e Execution Environment](../../.gitbook/assets/single-node-object-store-2-.png)
+![P8e Execution Environment](../../.gitbook/assets/single-node-object-store-3-.png)
 
 #### Port Mappings
 
