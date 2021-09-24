@@ -72,7 +72,7 @@ A multi-tier network architecture is recommended to secure validators. Each tier
 | Validator | The core of the Provenance blockchain that should be isolated from all public-facing networks. |
 | KMS | Key Management Service - A remote signing platform that secures access to encryption keys. |
 
-![Recommended Network Architecture](../../../.gitbook/assets/securing-provenanced-validator-2-%20%282%29.png)
+![Recommended Network Architecture](../../../.gitbook/assets/securing-provenanced-validator-2-%20%282%29%20%282%29.png)
 
 The Recommended Network Architecture diagram is the architecture to follow when building out provenance nodes and validators. This may be done in a cloud environment \(e.g. AWS, GCP, or Azure\), within an on-premise data center, or a combination of both. The idea of this infrastructure will be further detailed below but conceptually it is required to protect the validator by leveraging multiple layers of network security. 
 

@@ -66,26 +66,19 @@
 ## Contract Execution Environment <a id="p8e"></a>
 
 * [P8e Contract Execution Environment](p8e/overview/README.md)
-  * [P8e Transition Flow](p8e/overview/p8e-transition-flow.md)
-  * [P8e API](p8e/overview/api/README.md)
-    * [Authentication](p8e/overview/api/authentication.md)
-    * [Contract Life Cycle](p8e/overview/api/contract-life-cycle.md)
-    * [Index Engine](p8e/overview/api/index-engine.md)
+  * [SDK](p8e/overview/api.md)
   * [Encrypted Object Store](p8e/overview/encrypted-object-store/README.md)
     * [EOS Encryption Scheme](p8e/overview/encrypted-object-store/encryption-scheme.md)
     * [DIME \(Encryption Envelope Specification\)](p8e/overview/encrypted-object-store/dime-encryption-envelope-specification.md)
-  * [P8e UI](p8e/overview/p8e-ui.md)
 * [P8e Usage](p8e/p8e-usage/README.md)
-  * [P8e Setup](p8e/p8e-usage/p8e-setup.md)
   * [Architecture](p8e/p8e-usage/architecture.md)
   * [Specifications](p8e/p8e-usage/specifications.md)
   * [Building New P8e Contracts](p8e/p8e-usage/building-new-contracts.md)
   * [Data Retrieval](p8e/p8e-usage/data-retrieval.md)
-  * [Cross Scope Contract Example](p8e/p8e-usage/cross-scope-contract-example.md)
-  * [Multi-Contract Example](p8e/p8e-usage/multi-contract-example.md)
-  * [Multi-Step Contract Example](p8e/p8e-usage/multi-step-contract-example.md)
-  * [Quick Start](p8e/p8e-usage/quick-start/README.md)
-    * [Explanation](p8e/p8e-usage/quick-start/hello-world-example.md)
+  * [Cross Scope \(Update\) Contract](p8e/p8e-usage/cross-scope-contract-example.md)
+  * [Multi-Party Contract](p8e/p8e-usage/multi-contract-example.md)
+  * [Multi-Step Contract](p8e/p8e-usage/multi-step-contract-example.md)
+  * [Next Steps](p8e/p8e-usage/next-steps.md)
 
 ## Integrating
 

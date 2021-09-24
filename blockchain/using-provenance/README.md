@@ -57,16 +57,16 @@ Use "provenanced [command] --help" for more information about a command.
 ```
 
 {% hint style="info" %}
-Commands used throughout these examples will use some consistent flags that are worth noting. 
+Commands used throughout these examples will use some consistent flags that are worth noting.
 
 `--testnet` to use testnet rather than mainnet
 
-`--chain-id pio-testnet-1` assumes that we are connected to the Provenance testnet 
+`--chain-id pio-testnet-1` assumes that we are connected to the Provenance testnet
 
-`--node tcp://localhost:26657` this is the default node location and port.  In the examples below, we'll connect to a remote node without starting a local node.  The remote node is a public testnet node hosted at `rpc-0.test.provenance.io:26657.`
+`--node tcp://localhost:26657` this is the default node location and port. In the examples below, we'll connect to a remote node without starting a local node. The remote node is a public testnet node hosted at `rpc-0.test.provenance.io:26657.`
 {% endhint %}
 
-The `provenanced` binary provides a command-line interface to create and query transactions.  To create a transaction requires just a few items: 
+The `provenanced` binary provides a command-line interface to create and query transactions. To create a transaction requires just a few items:
 
 * a key pair capable of signing the transaction
 * a key pair capable of paying the gas fee
@@ -74,7 +74,7 @@ The `provenanced` binary provides a command-line interface to create and query t
 
 ### Creating a Key\(s\)
 
-All interactions with Provenance are secured with a public/private key pair that will act as your account\(s\) on the blockchain. We use the `44'/1'/0'/0/0` BIP32 path as an example where the coin-type "1" is a reference to Provenance testnet. We use the `44'/505'/0'/0/0` BIP32 path as an example where coin-type "505" is a reference to the HASH token on Provenance mainnet. 
+All interactions with Provenance are secured with a public/private key pair that will act as your account\(s\) on the blockchain. We use the `44'/1'/0'/0/0` BIP32 path as an example where the coin-type "1" is a reference to Provenance testnet. We use the `44'/505'/0'/0/0` BIP32 path as an example where coin-type "505" is a reference to the HASH token on Provenance mainnet.
 
 {% hint style="success" %}
 Refer to the [Accounts](../basics/accounts.md) section for more information[ HD Wallet ](../basics/accounts.md#hd-wallet)paths.
@@ -144,14 +144,14 @@ fancy solar describe long tag soul gold boost vacuum baby famous narrow drink fi
   pubkeys: []
 ```
 
-### Getting Hash 
+### Getting Hash
 
 Hash is the digital currency used to transact on the Provenance blockchain. In order to execute any commands beyond basic queries against a node, you'll need Hash. On testnet receiving Hash is as easy as accessing the [Provenance Faucet](https://faucet.test.provenance.io/) and supplying your address. This small distribution of Hash on testnet allows you to develop against the public testnet as well as quickly get a feel for how the Provenance ecosystem operates.
 
 {% hint style="info" %}
-The address associated to your key pair is a [Bech32](https://en.bitcoin.it/wiki/Bech32) address which is an encoded value of the public key portion of our key pair.  Provenance testnet Bech32 addresses begin with `tp` whereas mainnet addresses begin with `pb`.  
+The address associated to your key pair is a [Bech32](https://en.bitcoin.it/wiki/Bech32) address which is an encoded value of the public key portion of our key pair. Provenance testnet Bech32 addresses begin with `tp` whereas mainnet addresses begin with `pb`.
 
-Once we transferred Hash to our Bech32 address, it became a [Provenance account](../basics/accounts.md). 
+Once we transferred Hash to our Bech32 address, it became a [Provenance account](../basics/accounts.md).
 {% endhint %}
 
 First, find the Bech32 address of the key created in the previous section:
@@ -176,7 +176,7 @@ Copy the key `address` and open the Provenance testnet Hash faucet [https://expl
 
 ![Use the testnet Faucet to get Hash](../../.gitbook/assets/image%20%2811%29.png)
 
-Your `address` will now have enough Hash to pay gas fees.  Confirm your key `address` has Hash:
+Your `address` will now have enough Hash to pay gas fees. Confirm your key `address` has Hash:
 
 ```bash
 provenanced --testnet q bank balances tp1cuknswnphchtkwe68t4nshcaj4l4azv9ml2qhs \
@@ -193,7 +193,7 @@ pagination:
 ```
 
 {% hint style="info" %}
-The `--node` flag allows us to connect our `provenanced` client to a node running remotely.  Thus, we're connecting to a public testnet node hosted at `rpc-0.test.provenance.io.`
+The `--node` flag allows us to connect our `provenanced` client to a node running remotely. Thus, we're connecting to a public testnet node hosted at `rpc-0.test.provenance.io.`
 {% endhint %}
 
 ### Using \`jq\` to Parse JSON Output
@@ -221,6 +221,4 @@ provenanced  --testnet q block | jq ".block.last_commit.height"
 ```text
 "25923"
 ```
-
-
 

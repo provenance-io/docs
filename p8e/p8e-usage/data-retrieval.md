@@ -1,128 +1,94 @@
 # Data Retrieval
 
-When transacting on Provenance, contract hashed execution results are memorialized to the blockchain. Asset data is saved in an encrypted object store hosted by each participant involved in a transaction.
+As previously mentioned, executed contracts will have their resulting hashes saved to EOS, and resulting scopes memorialized to Provenance. The mechanism used to convert Provenance scopes into their original data is referred to hydration within the SDK. This process is straightforward, it parses the protobuf datatypes and hashes from the Provenance scope and pulls the objects associated with those hashes from EOS. Assuming they have the correct permission to pull and decrypt those objects, the raw bytes can be converted into their associated datatype and returned.
 
-This section describes how data is retrieved from the blockchain and encrypted object store.
+A subset of a Provenance scope is provided to show the relationship between EOS and Provenance.
 
-Information is retrieved from the blockchain in a data structure referred to as a scope. A scope contains information about a contract execution including the parties involved in the transaction, the contract invoked, and the hashed execution results of the contract. The ContractManager provides a function to find the scope based on a UUID. The following example simply retrieves the information for a given UUID and logs the output.
+```yaml
+records:
+- record:
+    inputs:
+    - hash: s+siKv96ekn8y22I79zjWHIfJRmnZFC18q1rZ0vgvhM=
+      name: name
+      status: RECORD_INPUT_STATUS_PROPOSED
+      type_name: io.p8e.proto.example.HelloWorldExample$ExampleName
+    name: name
+    outputs:
+    - hash: vpb21hMS23JTPYqtW9BN3c5/DT1Z4bgRLFJFTnRQAc0=
+      status: RESULT_STATUS_PASS
+    process:
+      hash: Qc2bHdrg+3LxlItTZSbzhJnUn5Btha0LCXaiSk34Hhk=
+      method: name
+      name: io.p8e.proto.example.HelloWorldExample$ExampleName
+    session_id: session1q8dkpadudgr5fq5zaejt8c2w44l4s23wjztxqjg63qkfq7kzu7glzyuppf2
+    specification_id: recspec1qhvwfpz7d96gwrahg6qfdhx4kssg9g6n0lcdhnn7as6ad8ku8gvfu526tn4
+scope:
+  scope:
+    data_access: []
+    owners:
+    - address: tp1vz99nyd2er8myeugsr4xm5duwhulhp5arsr9wt
+      role: PARTY_TYPE_OWNER
+    scope_id: scope1qrdkpadudgr5fq5zaejt8c2w44ls30k6p6
+    specification_id: scopespec1qjkyp28sldx5r9ueaxqc5adrc5wszy6nsh
+    value_owner_address: ""
+sessions:
+- contract_spec_id_info:
+    contract_spec_addr: contractspec1q0vwfpz7d96gwrahg6qfdhx4kssq7kz46e
+    contract_spec_id: contractspec1q0vwfpz7d96gwrahg6qfdhx4kssq7kz46e
+    contract_spec_uuid: d8e4845e-6974-870f-b746-8096dcd5b420
+  session:
+    audit:
+      created_by: tp1vz99nyd2er8myeugsr4xm5duwhulhp5arsr9wt
+      created_date: "2021-09-10T17:29:48.987310700Z"
+      message: ""
+      updated_by: ""
+      updated_date: "0001-01-01T00:00:00Z"
+      version: 1
+    context: null
+    name: io.p8e.contracts.examplekotlin.HelloWorldContract
+    parties:
+    - address: tp1vz99nyd2er8myeugsr4xm5duwhulhp5arsr9wt
+      role: PARTY_TYPE_OWNER
+    session_id: session1q8dkpadudgr5fq5zaejt8c2w44l4s23wjztxqjg63qkfq7kzu7glzyuppf2
+    specification_id: contractspec1q0vwfpz7d96gwrahg6qfdhx4kssq7kz46e
+```
+
+The associated contract that would produce such a scope.
 
 ```kotlin
-val scopeWrapper = contractManager.indexClient
-                   .findLatestScopeByUuid(<scope UUID>)
-if (scopeWrapper?.scope?.recordGroupList.isNullOrEmpty()) {
-    log.info("No records found for the provided scope UUID")
-} else {
-    log.info(scopeWrapper?.scope.toString())
+@Participants(roles = [OWNER])
+@ScopeSpecification(names = ["io.p8e.contracts.examplekotlin.helloWorld"])
+open class HelloWorldContract(): P8eContract() {
+    @Function(invokedBy = OWNER)
+    @Record(name = "name")
+    open fun name(@Input(name = "name") name: ExampleName) =
+        name.toBuilder()
+            .setFirstName(name.firstName.plus("-hello"))
+            .setLastName(name.lastName.plus("-world"))
+            .build()
 }
+
+@ScopeSpecificationDefinition(
+    uuid = "<UUID>",
+    name = "io.p8e.contracts.examplekotlin.helloWorld",
+    description = "A generic scope that allows for a lot of example hello world contracts.",
+    partiesInvolved = [OWNER],
+)
+open class HelloWorldScopeSpecification() : P8eScopeSpecification()
 ```
 
-The ContractManager also provides a function to find scopes based on a list of UUIDs. The following example simply retrieves the information for each of the given UUIDs in the list and logs the output.
+Lastly, the associated protobuf definition.
 
-```kotlin
-val results = contractManager.indexClient.findLatestScopesByUuids(<scope UUID list>)
-if (results.scopesList.isNullOrEmpty())
-    log.info("No records found for the provided scope UUID list")
-else {
-    log.info("List size: ${results.scopesCount}")
-    results.scopesList.forEach { result ->
-        val data = contractManager.hydrate(result.scope.uuid.toUuidProv(), HelloWorldData::class.java)
-        log.info(data.scope.toString())
-        log.info(data.name.toString())
-    }
-}
-```
+```java
+option java_package = "io.p8e.proto.example";
+option java_outer_classname = "HelloWorldExample";
 
-There are a couple of ways information can be retrieved from the encrypted object store. For the first, a helper function \(hydrate\) is included in the ContractManager to assist in asset data retrieval. The hydrate function uses the provided UUID to retrieve the data and transform it to the provided predefined output format.
-
-```kotlin
-contractManager.hydrate(<scope UUID>, <Data Class Name>::class.java)
-```
-
-Output formats are defined using Kotlin data classes or POJO’s in Java. These classes are required to have at least one constructor where all parameters implement a Protobuf message and have a Fact annotation. Scope information can also be extracted by including the scope in the data class.
-
-The following is an example of a class used to extract name and scope information for a transaction memorialized to the blockchain by the Hello World contract.
-
-```kotlin
-data class HelloWorldData(@Fact(name = "name") val name: ExampleName,
-                          val scope: Scope) {}
-```
-
-The second way to retrieve information from the encrypted object store is by executing queries. An index is included with the SDK. Before information is saved to the encrypted object store, predefined fields are added to the index. These predefined fields are identified in the Protobufs and have index metadata information included. The following contains the name Protobuf used in the Hello World example.
-
-```kotlin
 message ExampleName {
-    UUID uuid = 1;
-    string first_name = 2 [(index) = { index: ALWAYS}];
-    string last_name = 3 [(index) = { index: ALWAYS}];
-    string middle_name = 4;
-    string prefix = 5;
-    string suffix = 6;
-    AuditFields audit_fields = 99;
-}
-```
-
-The information in the first\_name and last\_name fields will be included in the index. However, middle\_name, prefix, and suffix will not be included in the index. Only information included in the index can be utilized in a query. The four following different indexing options are currently supported:
-
-* NEVER - Never index the field.
-* ALWAYS - Always index the field.
-* INDEX\_DEFER\_PARENT - Index unless a Parent object states otherwise
-* NO\_INDEX\_DEFER\_PARENT - Don’t index unless a Parent object states otherwise
-
-Indexing is also supported at the message level instead of setting each field individually. In the following example, all fields will be indexed except for prefix since field descriptors override message descriptors.
-
-```kotlin
-message ExampleName {
-    UUID uuid = 1;
-    string first_name = 2;
-    string last_name = 3;
-    string middle_name = 4;
-    string prefix = 5 [(index) = { index: NEVER }];
-    string suffix = 6;
-    AuditFields audit_fields = 99;
-    option (message_index) = { index: ALWAYS };
-}
-```
-
-Queries are built by defining fields, comparators, and values.
-
-```kotlin
-"<path to field>" equal "value"
-```
-
-The &lt;path to field&gt; is where the field exists within the Protobuf definition, starting with the fact name. For example, to search by first name in the Hello World example the path would be "name.firstName". Compound statements can be defined using and/or to join conditions.
-
-```kotlin
-(("<path to field>" equal "value") or ("<path to field>" equal "value") and
- ("<path to field>" equal "value") or ("<path to field>" equal "value"))
-```
-
-Predefined operation types are provided and are based on whether the field is numerical or a string. The following operations are provided for numerical fields:
-
-* EQUAL
-* GREATER
-* GREATER\_EQUAL
-* LESS
-* LESS\_EQUAL
-
-The following operations are provided for string fields:
-
-* EQUAL
-* LIKE
-* REGEXP \(Regular Expressions\)
-
-Queries are executed using the ContractManager. The constructor for the Query class provides optional parameters for limiting the size of result list returned as well as for implementing paging. If the parameters are not provided, the size defaults to 100 and the from defaults to 0. The following example uses the first and last names in the Hello World example to search for results. For each result found, the scope UUID is used to hydrate a data class and log the output.
-
-```kotlin
-val results = contractManager.indexClient.query(Query(("name.firstName" equal "Hello")
-                                                  and ("name.lastName" equal "World"), 50, 0))
-if (results.scopesList.isEmpty()) {
-    log.info("No records found for the provided query params")
-} else {
-    results.scopesList.forEach { result ->
-        val data = contractManager.hydrate(result.scope.uuid.toUuidProv(), HelloWorldData::class.java)
-        log.info(data.scope.toString())
-        log.info(data.name.toString())
-    }
+    string first_name = 1;
+    string last_name = 2;
+    string middle_name = 3;
+    string prefix = 4;
+    string suffix = 5;
 }
 ```
 
