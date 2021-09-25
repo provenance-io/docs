@@ -2,9 +2,9 @@
 
 ### Overview
 
-The Provenance Contact Execution Environment \(nicknamed “P8e”\) is an optional layer on top of the Provenance Blockchain to allow single-party and multi-party client-side contract execution while preserving data privacy. Provenance client-side contracts take encrypted data from the user \(client\) and transform the information into encrypted data in the user’s own private object store with object hashes recorded on the blockchain. 
+The Provenance Contact Execution Environment \(nicknamed “P8e”\) is an optional layer on top of the Provenance Blockchain to allow single-party and multi-party client-side contract execution while preserving data privacy. Provenance client-side contracts take data from the user \(client\) and transform the information into encrypted data in the user’s own private object store with object hashes recorded on the blockchain. 
 
-Components of the P8e environment include a client-side contract execution engine, an encrypted object store \(EOS\) which can run in your infrastructure or purchased as a managed solution. The EOS doubles as  a communication exchange for orchestrating multi-party contract execution with other parties’ own P8e environments. Each P8e instance communicates with a local blockchain node to submit transactions \(contract execution hash records\) to the Provenance Blockchain.
+Components of the P8e environment include a client-side contract execution engine, an encrypted object store \(EOS\) which can be run in your infrastructure or be purchased as a managed solution. The EOS doubles as  a communication exchange for orchestrating multi-party contract execution with other parties’ own P8e environments.
 
 To make use of the existing P8e contract execution libraries, Contracts must be written in a JVM based language and make use of the annotation structure that currently exists. Likewise for contract execution. That being said, the collection of libraries published, or software development kit \(SDK\), could be mimicked in any language that supports gRPC clients.
 
