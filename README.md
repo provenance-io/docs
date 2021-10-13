@@ -12,31 +12,59 @@ description: >-
 
 Read about the Provenance blockchain and financial services:
 
-{% page-ref page="blockchain/introduction/" %}
+{% content-ref url="blockchain/introduction/" %}
+[introduction](blockchain/introduction/)
+{% endcontent-ref %}
 
 Start with the basics of the Provenance blockchain network:
 
-{% page-ref page="blockchain/basics/" %}
+{% content-ref url="blockchain/basics/" %}
+[basics](blockchain/basics/)
+{% endcontent-ref %}
 
 Install the Provenance blockchain application, and start running a node:
 
-{% page-ref page="blockchain/running-a-node/" %}
+{% content-ref url="blockchain/running-a-node/" %}
+[running-a-node](blockchain/running-a-node/)
+{% endcontent-ref %}
 
-{% page-ref page="blockchain/using-provenance/" %}
+{% content-ref url="blockchain/using-provenance/" %}
+[using-provenance](blockchain/using-provenance/)
+{% endcontent-ref %}
 
 Explore the Provenance ecosystem:
 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
 Learn how to use the Provenance modules and how they empower blockchain-based business like NFT and DeFi:
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
 Discover the benefits of the Provenance client-side Contract Execution Environment:
 
-{% page-ref page="p8e/overview/" %}
+{% content-ref url="p8e/overview/" %}
+[overview](p8e/overview/)
+{% endcontent-ref %}
 
 Get started integrating with Provenance:
 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
 Follow real-world use cases and applications built on Provenance:
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
 Frequently Asked Question... and Answers:
 
-
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
