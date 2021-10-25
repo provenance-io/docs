@@ -8,11 +8,11 @@ description: Frequently asked questions about validators.
 
 ### What is a validator?
 
-The Provenance blockchain is a distributed, proof-of-stake blockchain designed for the financial service industries and is based on the Cosmos SDK and [Tendermint \(opens new window\)](https://tendermint.com/docs/introduction/what-is-tendermint.html), which relies on a set of validators to secure the network. The role of a validator is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by its private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
+The Provenance Blockchain blockchain is a distributed, proof-of-stake blockchain designed for the financial service industries and is based on the Cosmos SDK and [Tendermint \(opens new window\)](https://tendermint.com/docs/introduction/what-is-tendermint.html), which relies on a set of validators to secure the network. The role of a validator is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by its private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
 ### What is 'staking'?
 
-Provenance is a public Proof-Of-Stake \(PoS\) blockchain, meaning that the weight of validators is determined by the amount of staking tokens \(Hash\) bonded as collateral. These Hash-tokens can be self-delegated directly by the validator or delegated to them by other Hash holders.
+Provenance Blockchain is a public Proof-Of-Stake \(PoS\) blockchain, meaning that the weight of validators is determined by the amount of staking tokens \(Hash\) bonded as collateral. These Hash-tokens can be self-delegated directly by the validator or delegated to them by other Hash holders.
 
 Any user in the system can declare their intention to become a validator by sending a `create-validator` transaction. From there, they become validator candidates.
 
@@ -115,7 +115,7 @@ Additionally, validators are expected to be active members of the community. The
 
 ### What does 'participate in governance' entail?
 
-Validators and delegators on the Provenance blockchain can vote on proposals to change operational parameters \(such as the block gas limit\), coordinate upgrades, or make a decision on any given matter.
+Validators and delegators on the Provenance Blockchain blockchain can vote on proposals to change operational parameters \(such as the block gas limit\), coordinate upgrades, or make a decision on any given matter.
 
 Validators play a special role in the governance system. Being the pillars of the system, they are required to vote on every proposal. It is especially important since delegators who do not vote will inherit the vote of their validator.
 
@@ -135,9 +135,9 @@ Even though delegated funds cannot be stolen by their validators, delegators are
 
 The validator that is selected to propose the next block is called the proposer. Each proposer is selected deterministically, and the frequency of being chosen is proportional to the voting power \(i.e. amount of bonded Hash\) of the validator. For example, if the total bonded stake across all validators is 100 Hash and a validator's total stake is 10 Hash, then this validator will proposer ~10% of the blocks.
 
-### Will validators ever be required to validate other zones in the Provenance ecosystem?
+### Will validators ever be required to validate other zones in the Provenance Blockchain ecosystem?
 
-Yes, they will. If governance decides so, validators of Provenance may be required to validate additional zones in the Provenance ecosystem.
+Yes, they will. If governance decides so, validators of Provenance Blockchain may be required to validate additional zones in the Provenance Blockchain ecosystem.
 
 ## Incentives
 
@@ -145,8 +145,8 @@ Yes, they will. If governance decides so, validators of Provenance may be requir
 
 Each member of a validator's staking pool earns different types of revenue:
 
-* Block rewards: Native tokens of applications run by validators \(e.g. Hash on the Provenance blockchain\) are inflated to produce block provisions. These provisions exist to incentivize Hash holders to bond their stake, as non-bonded Hash will be diluted over time.
-* Transaction fees: The Provenance blockchain maintains a whitelist of tokens that are accepted as fee payment. The initial fee token is the `hash`.
+* Block rewards: Native tokens of applications run by validators \(e.g. Hash on the Provenance Blockchain blockchain\) are inflated to produce block provisions. These provisions exist to incentivize Hash holders to bond their stake, as non-bonded Hash will be diluted over time.
+* Transaction fees: The Provenance Blockchain blockchain maintains a whitelist of tokens that are accepted as fee payment. The initial fee token is the `hash`.
 
 This total revenue is divided among validators' staking pools according to each validator's weight. Then, within each validator's staking pool the revenue is divided among delegators in proportion to each delegator's stake. A commission on delegators' revenue is applied by the validator before it is distributed.
 
@@ -158,7 +158,7 @@ Validators also play a major role in governance. If a delegator does not vote, t
 
 ### What are validators' commissions?
 
-Revenue received by a validator's pool is split between the validator and their delegators. The validator can apply a commission on the part of the revenue that goes to their delegators. This commission is set as a percentage. Each validator is free to set their initial commission, maximum daily commission change rate, and maximum commission. The Provenance blockchain enforces the parameter that each validator sets. Only the commission rate can change after the validator is created.
+Revenue received by a validator's pool is split between the validator and their delegators. The validator can apply a commission on the part of the revenue that goes to their delegators. This commission is set as a percentage. Each validator is free to set their initial commission, maximum daily commission change rate, and maximum commission. The Provenance Blockchain blockchain enforces the parameter that each validator sets. Only the commission rate can change after the validator is created.
 
 ### How are block rewards distributed?
 
@@ -216,7 +216,7 @@ In order for delegators to have some guarantee about how much skin-in-the-game t
 
 ### How to prevent the concentration of stake in the hands of a few top validators?
 
-For now, the community is expected to behave in a smart and self-preserving way. When a mining pool in Bitcoin gets too much mining power the community usually stops contributing to that pool. The Provenance blockchain will rely on the same effect initially. Other mechanisms are in place to smooth this process as much as possible:
+For now, the community is expected to behave in a smart and self-preserving way. When a mining pool in Bitcoin gets too much mining power the community usually stops contributing to that pool. The Provenance Blockchain blockchain will rely on the same effect initially. Other mechanisms are in place to smooth this process as much as possible:
 
 * Penalty-free re-delegation: This is to allow delegators to easily switch from one validator to another, in order to reduce validator stickiness.
 * UI warning: Wallets can implement warnings that will be displayed to users if they want to delegate to a validator that already has a significant amount of staking power.
@@ -231,11 +231,11 @@ We expect that a modest level of hardware specifications will be needed initiall
 
 ### What are software requirements?
 
-In addition to running a Provenance node, validators should develop monitoring, alerting, and management solutions.
+In addition to running a Provenance Blockchain node, validators should develop monitoring, alerting, and management solutions.
 
 ### What are bandwidth requirements?
 
-Provenance has the capacity for very high throughput relative to chains like Ethereum or Bitcoin.
+Provenance Blockchain has the capacity for very high throughput relative to chains like Ethereum or Bitcoin.
 
 We recommend that the data center nodes only connect to trusted full-nodes in the cloud or other validators that know each other socially. This relieves the data center node from the burden of mitigating denial-of-service attacks.
 

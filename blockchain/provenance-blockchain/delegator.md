@@ -1,6 +1,6 @@
 # Delegator
 
-To understand delegation it's important to understand the difference between Hash ownership and Hash staked on the Provenance network.
+To understand delegation it's important to understand the difference between Hash ownership and Hash staked on the Provenance Blockchain network.
 
 **Hash**™ - Utility token used by provenance for staking and transaction fee payment. 
 
@@ -30,7 +30,7 @@ It's important to note that validators are able to set a commission percentage t
 
 #### Voting
 
-Once you have staked Hash you are able to vote on Governance proposals that ultimately determine the direction of the network's development, usage, security, etc... It can't be stressed enough how important staking Hash is to the Provenance network. This is the true power of a proof-of-stake blockchain and allows the the network to operate independent of any controlling entity.
+Once you have staked Hash you are able to vote on Governance proposals that ultimately determine the direction of the network's development, usage, security, etc... It can't be stressed enough how important staking Hash is to the Provenance Blockchain network. This is the true power of a proof-of-stake blockchain and allows the the network to operate independent of any controlling entity.
 
 #### Fee Distributions
 

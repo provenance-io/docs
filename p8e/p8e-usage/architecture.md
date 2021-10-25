@@ -12,7 +12,7 @@ Default port mappings \(NOTE: these are all configurable and can be changed\):
 
 * Encrypted Object Store
   * ingress - tcp:80
-* Provenance Node
+* Provenance Blockchain Node
   * internet egress - tcp:26656
   * ingress - tcp:26656-26657, tcp:9090, tcp:1317
 
@@ -27,9 +27,9 @@ Object store can run in a few different configurations based on the needs of you
   * An  EOS for your own p8e execution environment
   * Replication feature enabled
 
-#### Provenance Node
+#### Provenance Blockchain Node
 
-A provenance node provides your P8e execution environment with a means to read events and send transactions to the distributed Provenance network. See [here](../../blockchain/running-a-node/running-a-node-1/) for setup.
+A provenance node provides your P8e execution environment with a means to read events and send transactions to the distributed Provenance Blockchain network. See [here](../../blockchain/running-a-node/running-a-node-1/) for setup.
 
 #### Postgres 13
 

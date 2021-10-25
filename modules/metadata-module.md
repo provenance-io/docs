@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-The [Provenance Contract Execution Environment](../p8e/overview/) \(nicknamed “P8e”\) is an optional layer on top of the Provenance Blockchain to allow single and multi-party client-side contract execution while preserving data privacy and confidentiality. Provenance client-side contracts take encrypted data from the user \(client\) and transform the information into encrypted data in the user’s own private object store with the object hash-ids recorded on the blockchain.
+The [Provenance Blockchain Contract Execution Environment](../p8e/overview/) \(nicknamed “P8e”\) is an optional layer on top of the Provenance Blockchain to allow single and multi-party client-side contract execution while preserving data privacy and confidentiality. Provenance Blockchain client-side contracts take encrypted data from the user \(client\) and transform the information into encrypted data in the user’s own private object store with the object hash-ids recorded on the blockchain.
 
 Components of the P8e environment include a client-side contract execution engine, a locally-hosted encrypted object store, an Elasticsearch-based index into the encrypted object store, and a communication exchange for orchestrating multi-party contract execution with other parties’ own P8e environments. Each P8e instance communicates with a blockchain node to submit transactions \(contract execution hash records\) to the Provenance Blockchain.
 

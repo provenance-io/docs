@@ -1,16 +1,16 @@
 ---
 description: >-
   Benefits, risks, and other considerations for network users that wish to
-  become a validating node on the Provenance network.
+  become a validating node on the Provenance Blockchain network.
 ---
 
 # Validator
 
-Validators perform the critical function of proposing and validating transactions on the Provenance network. A strong network of validators ensures Provenance security is maintained. Validators stake Hash to become part of the active validators on the network and are a foundational element for Hash holders that want to delegate their stake and share in rewards produced by the network's fee distribution framework. 
+Validators perform the critical function of proposing and validating transactions on the Provenance Blockchain network. A strong network of validators ensures Provenance Blockchain security is maintained. Validators stake Hash to become part of the active validators on the network and are a foundational element for Hash holders that want to delegate their stake and share in rewards produced by the network's fee distribution framework. 
 
 ### Requirements
 
-Hosting a Provenance validator has some requirements since stakeholders will likely not want to delegate their stake to a validator that isn't reliable and secure. Here are some guidelines to consider when determining whether hosting a validator is beneficial for your use case:
+Hosting a Provenance Blockchain validator has some requirements since stakeholders will likely not want to delegate their stake to a validator that isn't reliable and secure. Here are some guidelines to consider when determining whether hosting a validator is beneficial for your use case:
 
 * Reliable, highly available, and secure computing infrastructure with excellent network connectivity.
 * Minimum Self-Delegation \(Hash\) - To host a validator you have to ensure you have the minimum amount of Hash to delegate. 
@@ -24,7 +24,7 @@ Validators participate in the security and control of the network and are able t
 
 #### Commissions
 
-Each Provenance validator can set a commission rate to charge on fees collected. This directly allows validators to charge up to 100% of the fees received during distribution. However, any validator choosing to charge a 100% commission is highly unlikely to receive delegate Hash. 
+Each Provenance Blockchain validator can set a commission rate to charge on fees collected. This directly allows validators to charge up to 100% of the fees received during distribution. However, any validator choosing to charge a 100% commission is highly unlikely to receive delegate Hash. 
 
 #### Bonus Proposer Awards
 
@@ -32,7 +32,7 @@ Active validators are each given a turn to propose a block to be committed using
 
 #### Voting 
 
-Voting within the Provenance ecosystem allows staked-Hash holders to direct the development of the network. When governance proposals are being voted upon, validators will vote with the full weight of not only the validator's staked Hash, but the delegator's staked Hash as well, if those delegators haven't voted. Since delegators will not always vote for proposals on the network, this gives validator's more voting power to determine the direction of Provenance Blockchain. 
+Voting within the Provenance Blockchain ecosystem allows staked-Hash holders to direct the development of the network. When governance proposals are being voted upon, validators will vote with the full weight of not only the validator's staked Hash, but the delegator's staked Hash as well, if those delegators haven't voted. Since delegators will not always vote for proposals on the network, this gives validator's more voting power to determine the direction of Provenance Blockchain. 
 
 #### Gas Price
 

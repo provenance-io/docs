@@ -57,7 +57,7 @@ The following configuration parameters are found in the config.toml file
 ### Recommended System Configuration
 
 {% hint style="info" %}
-CPU/Memory/Storage are determined based on how you intend to use Provenance and how the node is configured \(type\) and data retention periods. These are general use numbers and can be adjusted based on desired performance. 
+CPU/Memory/Storage are determined based on how you intend to use Provenance Blockchain and how the node is configured \(type\) and data retention periods. These are general use numbers and can be adjusted based on desired performance. 
 {% endhint %}
 
 | Node Type | CPU | Memory | Storage |
@@ -89,7 +89,7 @@ There are multiple solutions available that could be used to provide this securi
 ### Recommended System Configuration
 
 {% hint style="info" %}
-CPU/Memory/Storage are determined based on how you intend to use Provenance and how the node is configured \(type\) and data retention periods. These are general use numbers and can be adjusted based on desired performance. 
+CPU/Memory/Storage are determined based on how you intend to use Provenance Blockchain and how the node is configured \(type\) and data retention periods. These are general use numbers and can be adjusted based on desired performance. 
 {% endhint %}
 
 | Node Type | CPU | Memory | Storage |

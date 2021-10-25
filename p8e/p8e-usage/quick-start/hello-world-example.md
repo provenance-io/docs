@@ -9,13 +9,13 @@ Provenance’s Hello World example is designed to demonstrate the process of inp
 1. The owner provides the input data to be submitted and uses the SDK to execute the HelloWorld contract.
 2. The data is encrypted and saved to the owner’s object store. Other participants would also be identified if the contract required them.
 3. The owner executes the HelloWorldContract.
-4. The owner sends the hashed execution results of the contracts to Provenance where Nodes endorse the transaction.
+4. The owner sends the hashed execution results of the contracts to Provenance Blockchain where Nodes endorse the transaction.
 5. Once the Nodes achieve consensus, a record of the transaction is memorialized \(written\) to the blockchain.
 6. The owner listens for events with details about the result of the transaction.
 
 ## Data Format
 
-The data format of information exchanged in Provenance is defined using Protocol Buffers \(Protobuf\). For the Hello World example, the following Name Protobuf is used:
+The data format of information exchanged in Provenance Blockchain is defined using Protocol Buffers \(Protobuf\). For the Hello World example, the following Name Protobuf is used:
 
 ```kotlin
 message ExampleName {
@@ -101,7 +101,7 @@ private val contractManager = ContractManager.create("<private_key_text>".toJava
 ContractManager contractManager = ContractManager.Companion.create(PK.PrivateKey.parseFrom(Hex.decode("<private_key_text>")),"<api_url>");
 ```
 
-When the HelloWorld class is instantiated, there are watchers created using the ContractManager to listen for messages in the Provenance mailbox from the HelloWorldContract. One listens for response messages sent when the contract completes. In this example, when a message is received, the UUID saved to the blockchain is logged. Another listens for errors and logs details about the error.
+When the HelloWorld class is instantiated, there are watchers created using the ContractManager to listen for messages in the Provenance Blockchain mailbox from the HelloWorldContract. One listens for response messages sent when the contract completes. In this example, when a message is received, the UUID saved to the blockchain is logged. Another listens for errors and logs details about the error.
 
 ```kotlin
 init {
@@ -132,7 +132,7 @@ contractManager.execute(contract);
 
 ## Modify Contract Execution
 
-Similar to the first contract execution, when the HelloWorldModify class is instantiated there are watchers created to listen for messages in the Provenance mailbox from the HelloWorldModifyContract. One listens for response messages sent when the contract completes. When a message is received, the UUID of the updated record is logged. Another listens for errors and logs details about the error.
+Similar to the first contract execution, when the HelloWorldModify class is instantiated there are watchers created to listen for messages in the Provenance Blockchain mailbox from the HelloWorldModifyContract. One listens for response messages sent when the contract completes. When a message is received, the UUID of the updated record is logged. Another listens for errors and logs details about the error.
 
 ```kotlin
 init {

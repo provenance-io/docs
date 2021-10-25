@@ -11,9 +11,9 @@ The following diagram outlines the flow of data for typical transactions propose
 5. The hashed results of the contract executions are returned to the submitting affiliate’s execution environment.
 6. All hashed execution results are sent to Provenance Blockchain.
 7. The hashed results are validated by the validators. If the majority agree, the transaction is proposed to the blockchain.
-8. Provenance emits events notifying affiliates the contract has been committed on the blockchain.
+8. Provenance Blockchain emits events notifying affiliates the contract has been committed on the blockchain.
 9. The index is updated with the new contract information. This information is used later for searching and querying the data.
 10. Affiliates acknowledge the completion event.
 
-For certain transactions, affiliates can also interact directly with Provenance without utilizing or even needing a Contract Execution Environment. For example, [markers](../../modules/marker-module.md) are managed by directly interacting with Provenance instead of executing contracts.
+For certain transactions, affiliates can also interact directly with Provenance Blockchain without utilizing or even needing a Contract Execution Environment. For example, [markers](../../modules/marker-module.md) are managed by directly interacting with Provenance Blockchain instead of executing contracts.
 

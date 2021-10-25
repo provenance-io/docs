@@ -8,7 +8,7 @@ description: >-
 
 ## What is gas? 
 
-Gas is a consumable that is used to power the Provenance blockchain. Each execution of the blockchain requires enough gas to complete the required reads, writes, and computation encompassed by the submitted transaction\(s\). When using gas you need to know two things:
+Gas is a consumable that is used to power the Provenance Blockchain blockchain. Each execution of the blockchain requires enough gas to complete the required reads, writes, and computation encompassed by the submitted transaction\(s\). When using gas you need to know two things:
 
 * How much gas do I need to process my transaction? 
 * What is the current price of gas?
@@ -21,7 +21,7 @@ When a transaction starts processing, the meter is set at the estimated amount o
 
 ### Price
 
-Gas is purchased with Hash, the Provenance utility token. 
+Gas is purchased with Hash, the Provenance Blockchain utility token. 
 
 Note: gas prices are normally denoted in nHash \( 1Hash = 1,000,000,000 nHash\).
 
@@ -156,7 +156,7 @@ Fees are the total amount of Hash collected for consumed gas during the processi
 
 ## Distribution
 
-All fees that are collected by the validator network are distributed to rewarding Provenance [participants](../community/participants.md) for providing value in the various roles.
+All fees that are collected by the validator network are distributed to rewarding Provenance Blockchain [participants](../community/participants.md) for providing value in the various roles.
 
 ### Voting Validators
 

@@ -6,11 +6,11 @@ description: Web assembly (Wasm) smart contracts for the Provenance Blockchain.
 
 ## Overview
 
-ProvWasm contains extensions for a third party blockchain module. These extensions, combined with a library, provide developers the ability to create web assembly smart contracts for the Provenance blockchain using the Rust programming language.
+ProvWasm contains extensions for a third party blockchain module. These extensions, combined with a library, provide developers the ability to create web assembly smart contracts for the Provenance Blockchain blockchain using the Rust programming language.
 
 ### Blockchain Extensions
 
-The CosmWasm VM only integrates with the `banking` and `staking` modules by default. However, it allows for adding custom encoders and queriers. A package was added in the Provenance blockchain that contain extensions for the following provenance modules:
+The CosmWasm VM only integrates with the `banking` and `staking` modules by default. However, it allows for adding custom encoders and queriers. A package was added in the Provenance Blockchain blockchain that contain extensions for the following provenance modules:
 
 * [Account](account.md)
 * [Marker](marker-module.md)

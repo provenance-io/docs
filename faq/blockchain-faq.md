@@ -6,31 +6,31 @@ The Cosmos Network is a network of heterogeneous blockchains connected via the C
 
 The Cosmos Hub was one of the first blockchains to be launched on the Cosmos Network. It acts as a router that facilitates token transactions between future Cosmos blockchains. To ensure security and to prevent double spending, the Cosmos Hub keeps track of the state of all connected blockchains. Its native utility-token is the ATOM.
 
-The Provenance blockchain is built with the Cosmos SDK and is therefore an application-specific Cosmos blockchain. Provenance’s blockchain is constructed with specific modules that enable the Provenance ecosystem to support sophisticated DeFi-applications. Provenance’s native utility token is called Hash.
+The Provenance Blockchain blockchain is built with the Cosmos SDK and is therefore an application-specific Cosmos blockchain. Provenance’s blockchain is constructed with specific modules that enable the Provenance Blockchain ecosystem to support sophisticated DeFi-applications. Provenance’s native utility token is called Hash.
 
-## On what consensus algorithm does Provenance run? <a id="on-what-consensus-algorithm-does-provenance-run"></a>
+## On what consensus algorithm does Provenance Blockchain run? <a id="on-what-consensus-algorithm-does-provenance-run"></a>
 
-The Provenance blockchain uses Tendermint consensus algorithm and BPoS \(Bonded Proof of Stake\) to secure transactions.
+The Provenance Blockchain blockchain uses Tendermint consensus algorithm and BPoS \(Bonded Proof of Stake\) to secure transactions.
 
 ## Can I store big files on the blockchain? <a id="how-can-i-store-big-files-on-the-blockchain"></a>
 
-The size of the blocks on the Provenance blockchain is limited to 22020096 bytes or about 20MB.
+The size of the blocks on the Provenance Blockchain blockchain is limited to 22020096 bytes or about 20MB.
 
-## Is Provenance based on Bitcoin? <a id="is-provenance-based-on-bitcoin"></a>
+## Is Provenance Blockchain based on Bitcoin? <a id="is-provenance-based-on-bitcoin"></a>
 
 No. Bitcoin is a different blockchain technology.
 
-## Is Provenance based on Ethereum 2.0? <a id="is-provenance-based-on-ethereum-2-0"></a>
+## Is Provenance Blockchain based on Ethereum 2.0? <a id="is-provenance-based-on-ethereum-2-0"></a>
 
 No. Ethereum is a different blockchain technology.
 
-## Is Provenance based on Cosmos/Tendermint? <a id="is-provenance-based-on-cosmos-tendermint"></a>
+## Is Provenance Blockchain based on Cosmos/Tendermint? <a id="is-provenance-based-on-cosmos-tendermint"></a>
 
-Yes.The Provenance blockchain network is built with the Cosmos SDK and therefore fully implements the Cosmos/Tendermint interfaces, RPCs, protocols, and consensus mechanism.
+Yes.The Provenance Blockchain blockchain network is built with the Cosmos SDK and therefore fully implements the Cosmos/Tendermint interfaces, RPCs, protocols, and consensus mechanism.
 
-## What makes a Provenance blockchain instance? <a id="what-makes-a-provenance-blockchain-instance"></a>
+## What makes a Provenance Blockchain blockchain instance? <a id="what-makes-a-provenance-blockchain-instance"></a>
 
-`provenanced` is the name of the Provenance blockchain network. It is both the Provenance Daemon and command-line interface \(CLI\). It runs a full node of the Provenance application. `provenanced` is built on the Cosmos SDK using the following modules:
+`provenanced` is the name of the Provenance Blockchain blockchain network. It is both the Provenance Blockchain Daemon and command-line interface \(CLI\). It runs a full node of the Provenance Blockchain application. `provenanced` is built on the Cosmos SDK using the following modules:
 
 x/auth: Accounts and signatures.
 
@@ -62,7 +62,7 @@ x/staking: Staking logic.
 
 x/upgrade
 
-These Cosmos SDK modules are augmented by the following Provenance custom module implementations:
+These Cosmos SDK modules are augmented by the following Provenance Blockchain custom module implementations:
 
 x/attribute: Tagging addresses with information.
 
@@ -76,5 +76,5 @@ x/wasm: Smart Contracts.
 
 Note: the list of those modules may change with future releases. For an up-to-date list refer to the following: [https://github.com/provenance-io/provenance/blob/main/app/app.go](https://github.com/provenance-io/provenance/blob/main/app/app.go)
 
-In addition to the modules, so-called `genesis.json` and `config.toml` configuration files are required in which service rates are set and where references to seed-node are used to sync the blockchain state with other Provenance blockchain instances.
+In addition to the modules, so-called `genesis.json` and `config.toml` configuration files are required in which service rates are set and where references to seed-node are used to sync the blockchain state with other Provenance Blockchain blockchain instances.
 

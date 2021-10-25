@@ -116,8 +116,8 @@ open class OnboardLoanContract : P8eContract() {
 Upon execution of this contract:
 
 * A [P8e Scope](https://github.com/provenance-io/p8e/blob/main/simple-client/src/main/proto/contract/scope.proto#L33) object is established in the EOS, containing the full record of the execution of this Contract and the head state of the facts \(data output by this contract\) in the scope. 
-* A [Provenance Scope](https://github.com/provenance-io/provenance/blob/main/proto/provenance/metadata/v1/scope.proto) object is established on the blockchain. The originator is designated as the value owner of the asset in the scope.
-* A [Provenance MarkerAccount](https://github.com/provenance-io/provenance/blob/main/proto/provenance/marker/v1/marker.proto) object is established on the blockchain.
+* A [Provenance Blockchain Scope](https://github.com/provenance-io/provenance/blob/main/proto/provenance/metadata/v1/scope.proto) object is established on the blockchain. The originator is designated as the value owner of the asset in the scope.
+* A [Provenance Blockchain MarkerAccount](https://github.com/provenance-io/provenance/blob/main/proto/provenance/marker/v1/marker.proto) object is established on the blockchain.
 
 #### Example P8e Scope:
 

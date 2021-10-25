@@ -1,12 +1,12 @@
 ---
 description: >-
   Benefits, risks, and other considerations for network users that wish to
-  become a validating node on the Provenance network.
+  become a validating node on the Provenance Blockchain network.
 ---
 
 # Validators
 
-Validators perform the critical function of proposing and validating transactions on the Provenance network. A strong network of validators ensures Provenance security is maintained. Validators stake Hash™ to become part of the active validators on the network and are a foundational element for Hash™ holders that want to delegate their stake and share in rewards produced by the network's fee distribution framework. 
+Validators perform the critical function of proposing and validating transactions on the Provenance Blockchain network. A strong network of validators ensures Provenance Blockchain security is maintained. Validators stake Hash™ to become part of the active validators on the network and are a foundational element for Hash™ holders that want to delegate their stake and share in rewards produced by the network's fee distribution framework. 
 
 ### Benefits
 
@@ -14,7 +14,7 @@ Validators participate in the security and control of the network and are able t
 
 ### Requirements
 
-Hosting a Provenance validator has some requirements since stakeholders will likely not want to delegate their stake to a validator that isn't reliable and secure. Here are some guidelines to consider when determining whether hosting a validator is beneficial for your use case:
+Hosting a Provenance Blockchain validator has some requirements since stakeholders will likely not want to delegate their stake to a validator that isn't reliable and secure. Here are some guidelines to consider when determining whether hosting a validator is beneficial for your use case:
 
 * Reliable, highly available, and secure computing infrastructure with excellent network connectivity
 * Minimum Self-Delegation \(Hash™\) - To host a validator you have to ensure you have the minimum amount of Hash™ to delegate. 

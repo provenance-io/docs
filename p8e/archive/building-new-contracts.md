@@ -2,7 +2,7 @@
 
 ## Download the Repository
 
-Contracts and the data formats they use are located in the p8e-contract repository. To contribute to this repository by creating new contracts, you need to download a copy of the GitHub repository. Provenance will grant you access to this repository when you provide your GitHub account information.
+Contracts and the data formats they use are located in the p8e-contract repository. To contribute to this repository by creating new contracts, you need to download a copy of the GitHub repository. Provenance Blockchain will grant you access to this repository when you provide your GitHub account information.
 
 ```text
 git clone https://github.com/FigureTechnologies/p8e-contract.git
@@ -22,13 +22,13 @@ Parameters required by contracts that have previously been saved to the blockcha
 class <ContractClass>(@Fact(name = <Name>) name: <Protobuf>): P8eContract()
 ```
 
-Participants involved in transactions are identified by providing a list of PartyType to the Participants annotation. PartyType values are predefined in Provenance and include owners, originators, custodians, servicers, etc. All participants must be included in the Participants annotation in order to participate in the transaction. The participants included all need to agree on the contract before it will be saved to the blockchain.
+Participants involved in transactions are identified by providing a list of PartyType to the Participants annotation. PartyType values are predefined in Provenance Blockchain and include owners, originators, custodians, servicers, etc. All participants must be included in the Participants annotation in order to participate in the transaction. The participants included all need to agree on the contract before it will be saved to the blockchain.
 
 ```kotlin
 @Participants(roles = [<PartyType>, <PartyType>])
 ```
 
-Contracts can be comprised of many functions. The participant responsible for submitting the results to the blockchain is required for each function and is identified using the Function annotation. The responsible participant compiles the hashed execution results from all participants and sends the information to Provenance where the nodes endorse and memorialize the transaction to the blockchain. This functionality is provided by the SDK. All functions with the Function annotation must be executed before the output will be memorialized to the blockchain.
+Contracts can be comprised of many functions. The participant responsible for submitting the results to the blockchain is required for each function and is identified using the Function annotation. The responsible participant compiles the hashed execution results from all participants and sends the information to Provenance Blockchain where the nodes endorse and memorialize the transaction to the blockchain. This functionality is provided by the SDK. All functions with the Function annotation must be executed before the output will be memorialized to the blockchain.
 
 ```kotlin
 @Function(invokedBy = <PartyTypeInitiatingTransaction>)
@@ -69,9 +69,9 @@ New contracts or changes to existing contracts should be made in a branch of p8e
 
 The following three dependencies are required for processes to execute contracts:
 
-1. p8e-sdk - contains the components required to submit contracts and communicate with the Provenance Protocol and underlying blockchain network.
+1. p8e-sdk - contains the components required to submit contracts and communicate with the Provenance Blockchain Protocol and underlying blockchain network.
 2. p8e-contract - contains the contracts available for use within Provenance Blockchain. Historical versions of the contracts are kept and can be used by changing the version number.
-3. p8e-proto - Provenance uses Protobufs to define input and output to contracts. p8e-proto contains the Protobuf definitions supported by Provenance Blockchain. Similar to contracts, historical versions are kept and can be used by changing the version number.
+3. p8e-proto - Provenance Blockchain uses Protobufs to define input and output to contracts. p8e-proto contains the Protobuf definitions supported by Provenance Blockchain. Similar to contracts, historical versions are kept and can be used by changing the version number.
 
 ## Contract Watchers
 
@@ -152,7 +152,7 @@ Using the ContractManager, a new contract is created with the class name of the 
 var contract = contractManager.newContract(<SmartContractClass>::class.java)
 ```
 
-Creating a new contract with just the contract class will cause a new scope UUID to be generated. The scope UUID can also be set by the affiliate initiating the contract. Provenance validates the UUID to prevent duplicates. If the UUID set by the affiliate has already been used and memorialized to the blockchain, the contract will fail during execution.
+Creating a new contract with just the contract class will cause a new scope UUID to be generated. The scope UUID can also be set by the affiliate initiating the contract. Provenance Blockchain validates the UUID to prevent duplicates. If the UUID set by the affiliate has already been used and memorialized to the blockchain, the contract will fail during execution.
 
 ```kotlin
 var contract = contractManager.newContract(<SmartContractClass>::class.java, <Scope UUID>)

@@ -18,7 +18,7 @@ A gradle plugin is provided that manages the process of memorializing the declar
 
 #### Handling Execution Results
 
-After successful contract execution, the result will be a collection of Provenance protobuf messages. At this point all of the records have been encrypted and stored in EOS. At this stage messages can be memorialized to Provenance with the Provenance HTTP or gRPC interface. Optionally, the Provenance event stream may be read to asynchronously detect changes made to scopes previously submitted.
+After successful contract execution, the result will be a collection of Provenance Blockchain protobuf messages. At this point all of the records have been encrypted and stored in EOS. At this stage messages can be memorialized to Provenance Blockchain with the Provenance Blockchain HTTP or gRPC interface. Optionally, the Provenance Blockchain event stream may be read to asynchronously detect changes made to scopes previously submitted.
 
 #### Proto Indexer
 

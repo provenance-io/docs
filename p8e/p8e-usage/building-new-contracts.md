@@ -14,13 +14,13 @@ Parameters required by contracts that have previously been saved to the blockcha
 class <ContractClass>(@Record(name = <Name>) name: <Protobuf>): P8eContract()
 ```
 
-Participants involved in transactions are identified by providing a list of PartyType to the Participants annotation. PartyType values are predefined in Provenance and include owners, originators, custodians, servicers, etc. All participants must be included in the Participants annotation in order to participate in the transaction. The participants included all need to agree on the contract before it will be saved to the blockchain.
+Participants involved in transactions are identified by providing a list of PartyType to the Participants annotation. PartyType values are predefined in Provenance Blockchain and include owners, originators, custodians, servicers, etc. All participants must be included in the Participants annotation in order to participate in the transaction. The participants included all need to agree on the contract before it will be saved to the blockchain.
 
 ```kotlin
 @Participants(roles = [<PartyType>, <PartyType>])
 ```
 
-Contracts can be comprised of many functions. The participant responsible for submitting the results to the blockchain is required for each function and is identified using the Function annotation. The responsible participant compiles the hashed execution results from all participants and sends the information to Provenance where the nodes endorse and memorialize the transaction to the blockchain. This functionality is provided by the SDK. All functions with the Function annotation must be executed before the output will be memorialized to the blockchain.
+Contracts can be comprised of many functions. The participant responsible for submitting the results to the blockchain is required for each function and is identified using the Function annotation. The responsible participant compiles the hashed execution results from all participants and sends the information to Provenance Blockchain where the nodes endorse and memorialize the transaction to the blockchain. This functionality is provided by the SDK. All functions with the Function annotation must be executed before the output will be memorialized to the blockchain.
 
 ```kotlin
 @Function(invokedBy = <PartyTypeInitiatingTransaction>)
@@ -59,5 +59,5 @@ Once contracts are defined like was shown above, there's a bootstrapping phase t
 
 The plugin exposes mutiple tasks that can be used to check contract syntax, persist the contract specifications and JARs to Object Store, and memorializing the scope and contract specifications to Provenance Blockchain. That uberjar \(fully packaged Java JAR, including all dependencies\) is saved to Object Store so that the exact uberjar has the ability to be loaded into the Java memory class loader and executed by all contract participants.
 
-This is the first point at which a Provenance account would be needed. Due to transaction sequencing, it is **highly** recommended that a separate, standalone, Provenance account is used strictly for use with the plugin for bootstrapping. Any participants that need to have access to the contract specifications or JARs can be included as participants in the plugin configuration.
+This is the first point at which a Provenance Blockchain account would be needed. Due to transaction sequencing, it is **highly** recommended that a separate, standalone, Provenance Blockchain account is used strictly for use with the plugin for bootstrapping. Any participants that need to have access to the contract specifications or JARs can be included as participants in the plugin configuration.
 

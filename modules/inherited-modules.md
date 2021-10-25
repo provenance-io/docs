@@ -4,9 +4,9 @@ description: Modules inherited from the community
 
 # Inherited Modules
 
-The Cosmos SDK, on which the Provenance blockchain application is based, provides several core modules.  Those modules define most of the logic of blockchain applications. Developers compose modules together using the Cosmos SDK to build their custom application-specific blockchains - our Provenance blockchain is such an application-specific blockchain. 
+The Cosmos SDK, on which the Provenance Blockchain blockchain application is based, provides several core modules.  Those modules define most of the logic of blockchain applications. Developers compose modules together using the Cosmos SDK to build their custom application-specific blockchains - our Provenance Blockchain blockchain is such an application-specific blockchain. 
 
-The Provenance blockchain inherits the following core Cosmos SDK Modules:
+The Provenance Blockchain blockchain inherits the following core Cosmos SDK Modules:
 
 * [**Auth**](https://docs.cosmos.network/master/modules/auth/) - Authentication of accounts and transactions.
 * \*\*\*\*[**Bank**](https://docs.cosmos.network/master/modules/bank/) - Token transfer functionalities.

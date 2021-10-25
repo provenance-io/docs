@@ -6,7 +6,7 @@ description: Figure Loan Origination System
 
 ### Overview
 
-The Figure Loan Origination System \(LOS\) is built on top of Provenance Blockchain, making use of Provenance modules, stablecoin, and the [Contract Execution Environment](../../p8e/overview/). Figure applications that consume loan data use the [Figure Loan Model](assets.md). The following sections describe how any loan originator may make use of Provenance using the Figure LOS as a reference implementation.
+The Figure Loan Origination System \(LOS\) is built on top of Provenance Blockchain, making use of Provenance Blockchain modules, stablecoin, and the [Contract Execution Environment](../../p8e/overview/). Figure applications that consume loan data use the [Figure Loan Model](assets.md). The following sections describe how any loan originator may make use of Provenance Blockchain using the Figure LOS as a reference implementation.
 
 For a general overview of how digital assets \(such as all-digital loans\) are handled on Provenance Blockchain, see [Asset Creators](../../ecosystem/community/asset-originators.md).
 
@@ -16,9 +16,9 @@ Before onboarding a loan to the Provenance Blockchain, a loan originator creates
 
 ### Onboarding Loans to Provenance
 
-Digital assets can be "onboarded to the blockchain" by the execution of client-side contracts that the originator writes to consume origination data, verify its completeness, and output data as recorded facts in an encrypted object store private to and hosted by the originator. The Provenance Contract Execution Environment records hashed representations of all documents, data, transactions and client-side contracts to the blockchain. Modification or updates of the data  only occur through further contract execution on the scope, with checks on the input hash of data from the object store against the blockchain to ensure no external data modification has taken place. In this way, the truth of the data is verified without the need for trust in the individual originator's data store.
+Digital assets can be "onboarded to the blockchain" by the execution of client-side contracts that the originator writes to consume origination data, verify its completeness, and output data as recorded facts in an encrypted object store private to and hosted by the originator. The Provenance Blockchain Contract Execution Environment records hashed representations of all documents, data, transactions and client-side contracts to the blockchain. Modification or updates of the data  only occur through further contract execution on the scope, with checks on the input hash of data from the object store against the blockchain to ensure no external data modification has taken place. In this way, the truth of the data is verified without the need for trust in the individual originator's data store.
 
-Client-side Provenance contracts can be crafted to require participation by multiple parties, such as an originator and an auditor. For example, an "onboard-to-servicer" contract could involve the originator and the servicer, both verifying the data is complete enough to be transferred to the servicer. All parties participating in a contract execution are able to read the data. Either party may reject the contract execution. If all parties are in agreement, the resulting data facts are copied to each participant's encrypted data store as part of the head state of the scope.
+Client-side Provenance Blockchain contracts can be crafted to require participation by multiple parties, such as an originator and an auditor. For example, an "onboard-to-servicer" contract could involve the originator and the servicer, both verifying the data is complete enough to be transferred to the servicer. All parties participating in a contract execution are able to read the data. Either party may reject the contract execution. If all parties are in agreement, the resulting data facts are copied to each participant's encrypted data store as part of the head state of the scope.
 
 ### Gas
 

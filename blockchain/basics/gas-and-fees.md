@@ -1,13 +1,13 @@
 ---
-description: Provenance transaction gas and fees.
+description: Provenance Blockchain transaction gas and fees.
 ---
 
 # Gas and Fees
 
-Gas is a consumable that is used to power the Provenance blockchain. Each execution of the blockchain requires enough gas to complete the requires reads, writes, and computation encompassed by the submitted transaction\(s\).  
+Gas is a consumable that is used to power the Provenance Blockchain blockchain. Each execution of the blockchain requires enough gas to complete the requires reads, writes, and computation encompassed by the submitted transaction\(s\).  
 
 {% hint style="info" %}
-Refer to the [Fees/Distribution section](../../ecosystem/financial-services-blockchain/distribution.md) for information on how the Provenance fee economy operates.
+Refer to the [Fees/Distribution section](../../ecosystem/financial-services-blockchain/distribution.md) for information on how the Provenance Blockchain fee economy operates.
 {% endhint %}
 
 {% hint style="info" %}
@@ -29,7 +29,7 @@ Thus, on Provenance Blockchain, [`gas` is a special unit that is used to track t
 
 When an end-user account submits a transaction request, they must indicate two of the three following parameters \(the third one being implicit\): `fees`, `gas`, and `gas-prices`. This signals how much they are willing to pay for nodes to execute their transaction.
 
-Provenance will verify that the gas prices provided with the transaction is greater than the node\(s\) `min-gas-prices` \(as a reminder, gas-prices can be calculated from the following equation: `fees = gas * gas-prices`\). `min-gas-prices` is a parameter local to each full-node and used to discard transactions that do not provide a minimum amount of fees. This ensures that the blockchain is not spammed with garbage transactions.
+Provenance Blockchain will verify that the gas prices provided with the transaction is greater than the node\(s\) `min-gas-prices` \(as a reminder, gas-prices can be calculated from the following equation: `fees = gas * gas-prices`\). `min-gas-prices` is a parameter local to each full-node and used to discard transactions that do not provide a minimum amount of fees. This ensures that the blockchain is not spammed with garbage transactions.
 
 ![Conceptual Gas Flow](../../.gitbook/assets/image%20%2813%29.png)
 
@@ -40,10 +40,10 @@ The Conceptual Gas Flow diagram illustrates the transaction request gas calculat
   * The maximum **Gas Price** the requestor is willing to pay.
   * A **Requested Fee** is calculated as **`Gas * Gas Price`**.
 * The Transaction Request is submitted to a node, which in turn may submit it to other nodes until it reaches a validator node.  Each node sets their own **Minimum Gas Price.** 
-* Provenance will validate that the requested **Gas Price** &gt;= **Minimum Gas Prices** for all selected nodes involved.
+* Provenance Blockchain will validate that the requested **Gas Price** &gt;= **Minimum Gas Prices** for all selected nodes involved.
   * If the requested **Gas Price** is too low, the transaction is rejected and an error is sent back to the requestor.
 * Based on the transaction type and size, a **Gas Needed** amount is calculated by Provenance Blockchain.
-* Provenance calculates a **Required Fee** as `Gas Needed * Minimum Gas Price`.
+* Provenance Blockchain calculates a **Required Fee** as `Gas Needed * Minimum Gas Price`.
 * If the **Requested Fee** &gt;= **Required Fee** the **Requested Fee** is deducted from the requestor's account and the transaction is submitted.
 * If the **Requested Fee** &lt; **Required Fee** the **Requested Fee** is deducted from the requestor's account, the transaction is marked as error, and an error is returned to the requestor.
 
@@ -82,7 +82,7 @@ provenanced --testnet keys add gas_example
   pubkeys: []
 ```
 
-Now, let's use the [Provenance Faucet](https://explorer.test.provenance.io/faucet) to transfer Hash to our address:
+Now, let's use the [Provenance Blockchain Faucet](https://explorer.test.provenance.io/faucet) to transfer Hash to our address:
 
 ```bash
 curl 'https://test.provenance.io/blockchain/faucet/external'  \
@@ -90,7 +90,7 @@ curl 'https://test.provenance.io/blockchain/faucet/external'  \
 --data-binary '{"address":"tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6"}'
 ```
 
-And now, query our new Provenance account's Hash balance:
+And now, query our new Provenance Blockchain account's Hash balance:
 
 ```bash
 provenanced --testnet query bank balances tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6 \

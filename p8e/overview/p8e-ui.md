@@ -24,7 +24,7 @@ The same container specified above to run locally can be deployed and traffic ro
 
 ### Login
 
-Logging into the UI is accomplished via your Provenance account. Upon your first login to the p8e ui, you will be prompted to allow sharing data with p8e.
+Logging into the UI is accomplished via your Provenance Blockchain account. Upon your first login to the p8e ui, you will be prompted to allow sharing data with p8e.
 
 ### Key Management
 

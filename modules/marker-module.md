@@ -125,7 +125,7 @@ When used in this configuration, the marker module's `transfer` permission allow
 
 ### Marker Details
 
-The Provenance Blockchain provides the direct benefit of facilitating transfer of value between two parties without an intermediary. Provenance uses a simple construct called a marker to manage full and fractional asset ownership on the blockchain. Markers are defined using Protocol Buffers \(Protobuf\) and consist of the following structure.
+The Provenance Blockchain provides the direct benefit of facilitating transfer of value between two parties without an intermediary. Provenance Blockchain uses a simple construct called a marker to manage full and fractional asset ownership on the blockchain. Markers are defined using Protocol Buffers \(Protobuf\) and consist of the following structure.
 
 ```text
 type MarkerAccount struct { 

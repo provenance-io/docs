@@ -2,13 +2,13 @@
 
 ### Purpose <a id="DigitalSignature-Purpose"></a>
 
-Data providers for Provenance should be capable of providing digital signatures that allow for third-party validation and authentication. This allows entities other than the originators to confirm that the data used to underwrite the asset was generated from a trusted third party \(such as a Credit Bureau\) and remained unchanged to create the asset.
+Data providers for Provenance Blockchain should be capable of providing digital signatures that allow for third-party validation and authentication. This allows entities other than the originators to confirm that the data used to underwrite the asset was generated from a trusted third party \(such as a Credit Bureau\) and remained unchanged to create the asset.
 
 ### Method <a id="DigitalSignature-Method"></a>
 
 To meet the digital signature requirements, data providers must be capable of providing the following three pieces of information:
 
-1. The entity's certificate. This allows any other third party to confirm the information was signed using a private key specific to the data provider.  The entity will register their certificate with the Provenance Certificate Registry.  The certificate must include any required chain of trust to the certificate authority.  The public key should be ASN1 OID: prime256v1 and NIST CURVE: P-256.
+1. The entity's certificate. This allows any other third party to confirm the information was signed using a private key specific to the data provider.  The entity will register their certificate with the Provenance Blockchain Certificate Registry.  The certificate must include any required chain of trust to the certificate authority.  The public key should be ASN1 OID: prime256v1 and NIST CURVE: P-256.
 2. The **canonicalized** original data. This is the original data package sent, in a standard canonical form.
 3. The signature across the data. This is the outcome of the canonical original data sent through a checksum \(for example, SHA256\) and cryptographically signed with a private key.
 
@@ -46,7 +46,7 @@ The following flow demonstrates how Figure Lending will integrate digital signat
 
 ![](https://figure.atlassian.net/wiki/download/attachments/578781188/DigSigFlow.jpg?version=2&modificationDate=1573583401126&cacheVersion=1&api=v2)
 
-1. Data Provider registers their certificate with the Provenance Certificate Registry
+1. Data Provider registers their certificate with the Provenance Blockchain Certificate Registry
 2. Figure Service submits a request to the Data Provider as normal
 3. Data Provider processes the request as normal
    1. In addition to the default response, the Data Provider canonicalizes the default response data
@@ -58,10 +58,10 @@ The following flow demonstrates how Figure Lending will integrate digital signat
    1. Create a canonical version of the default response
    2. Combine canonical response and the signature into the Signature Packet
 7. Figure Service sends the Signature Packet to FIDO and publishes a Signature Message to the Signature Topic keyed by the loan application/packet UUID.
-8. Once a loan is ready for Provenance on-boarding, DORF will consume and aggregate Data Provider signatures related to the loan:
+8. Once a loan is ready for Provenance Blockchain on-boarding, DORF will consume and aggregate Data Provider signatures related to the loan:
    1. The Signature Packet is copied to Provenance Blockchain, similar to existing documents.
    2. The Signature Packet is added to the loan packet documents section with a reference to the document location and a vendor type.
-9. Signature validation is handled by Provenance post on-boarding.
+9. Signature validation is handled by Provenance Blockchain post on-boarding.
    1. Invalid signatures will not block the Figure Service flow in any manner.
    2. When invalid signatures are encountered, the Signature Validator process will be responsible for alerting and updating loan validation messages.
 

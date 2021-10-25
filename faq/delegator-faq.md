@@ -10,11 +10,11 @@ People that cannot or do not want to operate validator nodes can still participa
 
 Delegators share the revenue of their validators, but they also share the risks. In terms of revenue, validators and delegators differ in that validators can apply a commission on the revenue that goes to their delegator before it is distributed. This commission is known to delegators beforehand and can only change according to predefined constraints \(see the [section](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0u33Y0GlSHBhBNdTo/faq/delegator-faq/@drafts#validator-commission) below\). In terms of risk, delegators' Hash can be slashed if their validator misbehaves. For more, see the [Risks ](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0u33Y0GlSHBhBNdTo/faq/delegator-faq/@drafts#risks)section.
 
-To become delegators, Hash holders need to send a "Delegate transaction" where they specify how many Hash they want to bond and to which validator. A list of validator candidates will be displayed in Provenance explorers. Later, if a delegator wants to unbond part or all of their stake, they need to send an "Unbond transaction". From there, the delegator will have to wait three weeks to retrieve their Hash. Delegators can also send a "Rebond Transaction" to switch from one validator to another, without having to go through the three weeks waiting period.
+To become delegators, Hash holders need to send a "Delegate transaction" where they specify how many Hash they want to bond and to which validator. A list of validator candidates will be displayed in Provenance Blockchain explorers. Later, if a delegator wants to unbond part or all of their stake, they need to send an "Unbond transaction". From there, the delegator will have to wait three weeks to retrieve their Hash. Delegators can also send a "Rebond Transaction" to switch from one validator to another, without having to go through the three weeks waiting period.
 
 ## Choosing a validator
 
-To choose their validators, delegators have access to a range of information directly in any Provenance block explorer.
+To choose their validators, delegators have access to a range of information directly in any Provenance Blockchain block explorer.
 
 * Validator's moniker: Name of the validator candidate.
 * Validator's description: Description provided by the validator operator. 
@@ -34,7 +34,7 @@ Being a delegator is not a passive task. Here are the main directives of a deleg
 
 ## Revenue
 
-Validators and delegators earn revenue in exchange for their services using transaction fees. Every transaction on Provenance incurs a transaction fee \(refer to [Gas and Fees section](../blockchain/basics/gas-and-fees.md)\). These fees can be paid in any currency that is whitelisted by Provenance Blockchain's governance, with Hash being the current default currency. Collected transaction fees are pooled globally and distributed to bonded Hash holders in proportion to their stake.
+Validators and delegators earn revenue in exchange for their services using transaction fees. Every transaction on Provenance Blockchain incurs a transaction fee \(refer to [Gas and Fees section](../blockchain/basics/gas-and-fees.md)\). These fees can be paid in any currency that is whitelisted by Provenance Blockchain's governance, with Hash being the current default currency. Collected transaction fees are pooled globally and distributed to bonded Hash holders in proportion to their stake.
 
 ## Validator Commission
 
@@ -71,13 +71,13 @@ This is why Hash holders should perform careful due diligence on validators befo
 Please take a moment to thoroughly understand [how delegation and staking work](delegator-faq.md#what-is-a-delegator) along with the [risks](delegator-faq.md#risks) outlined in the previous section.
 {% endhint %}
 
-### Staking Using the Provenance Explorer
+### Staking Using the Provenance Blockchain Explorer
 
-The easiest way to stake your Hash to a [Validator](validator-faq.md) is by using the [Provenance Explorer.](https://explorer.provenance.io)
+The easiest way to stake your Hash to a [Validator](validator-faq.md) is by using the [Provenance Blockchain Explorer.](https://explorer.provenance.io)
 
 #### Connect Your Wallet to Explorer
 
-If you have a Provenance or Figure Wallet, navigate to the Provenance Explorer and click the "Connect Wallet" key in the upper right hand corner and select your wallet type:
+If you have a Provenance Blockchain or Figure Wallet, navigate to the Provenance Blockchain Explorer and click the "Connect Wallet" key in the upper right hand corner and select your wallet type:
 
 ![Select a Wallet Type to Connect](../.gitbook/assets/image%20%2822%29.png)
 
@@ -101,7 +101,7 @@ Explorer will display important information about the selected Validator and pro
 
 ![](../.gitbook/assets/image%20%2812%29.png)
 
-Once the **Delegate** button is clicked, Explorer will prompt you sign the transaction with your wallet.  Once signed and submitted, the delegation will show in the Provenance Validators List:
+Once the **Delegate** button is clicked, Explorer will prompt you sign the transaction with your wallet.  Once signed and submitted, the delegation will show in the Provenance Blockchain Validators List:
 
 ![](../.gitbook/assets/image%20%2821%29.png)
 

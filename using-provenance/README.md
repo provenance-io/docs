@@ -7,7 +7,7 @@ description: Using the `provenanced` binary as a blockchain client.
 
 
 {% hint style="info" %}
-To get started with Provenance you first need to install Provenance and have access to a Provenance node.
+To get started with Provenance Blockchain you first need to install Provenance Blockchain and have access to a Provenance Blockchain node.
 
 [See Installing Provenance](../running-a-node/) if you have not installed`provenanced.`
 
@@ -63,7 +63,7 @@ Commands used throughout these examples will use some consistent flags that are 
 
 `--testnet` to use testnet rather than mainnet
 
-`--chain-id pio-testnet-1` assumes that we are connected to the Provenance testnet 
+`--chain-id pio-testnet-1` assumes that we are connected to the Provenance Blockchain testnet 
 
 `--node tcp://localhost:26657` this is the default node location and port.  In the examples below, we'll connect to a remote node without starting a local node.  The remote node is a public testnet node hosted at `rpc-0.test.provenance.io:26657.`
 {% endhint %}
@@ -76,7 +76,7 @@ The `provenanced` binary provides a command-line interface to create and query t
 
 ### Creating a Key\(s\)
 
-All interactions with Provenance are secured with a public/private key pair that will act as your account\(s\) on the blockchain. 
+All interactions with Provenance Blockchain are secured with a public/private key pair that will act as your account\(s\) on the blockchain. 
 
 Create a key pair and store it in a local Keyring \(change `<name-of-key>` to a string value of your choosing\):
 
@@ -116,12 +116,12 @@ fancy solar describe long tag soul gold boost vacuum baby famous narrow drink fi
 
 ### Getting Hash 
 
-Hash is the digital currency used to transact on the Provenance blockchain. In order to execute any commands beyond basic queries against a node, you'll need Hash. On testnet receiving Hash is as easy as accessing the [Provenance Faucet](https://faucet.test.provenance.io/) and supplying your address. This small distribution of Hash on testnet allows you to develop against the public testnet as well as quickly get a feel for how the Provenance ecosystem operates.
+Hash is the digital currency used to transact on the Provenance Blockchain blockchain. In order to execute any commands beyond basic queries against a node, you'll need Hash. On testnet receiving Hash is as easy as accessing the [Provenance Blockchain Faucet](https://faucet.test.provenance.io/) and supplying your address. This small distribution of Hash on testnet allows you to develop against the public testnet as well as quickly get a feel for how the Provenance Blockchain ecosystem operates.
 
 {% hint style="info" %}
-The address associated to your key pair is a [Bech32](https://en.bitcoin.it/wiki/Bech32) address which is an encoded value of the public key portion of our key pair.  Provenance testnet Bech32 addresses begin with `tp` whereas mainnet addresses begin with `pb`.  
+The address associated to your key pair is a [Bech32](https://en.bitcoin.it/wiki/Bech32) address which is an encoded value of the public key portion of our key pair.  Provenance Blockchain testnet Bech32 addresses begin with `tp` whereas mainnet addresses begin with `pb`.  
 
-Once we transferred Hash to our Bech32 address, it became a [Provenance account](../basics/accounts.md). 
+Once we transferred Hash to our Bech32 address, it became a [Provenance Blockchain account](../basics/accounts.md). 
 {% endhint %}
 
 First, find the Bech32 address of the key created in the previous section:
@@ -142,7 +142,7 @@ The output will show the `address` of your key:
   pubkeys: []
 ```
 
-Copy the key `address` and open the Provenance testnet Hash faucet [https://explorer.test.provenance.io/faucet](https://explorer.test.provenance.io/faucet), paste the value, and press Get Tokens:
+Copy the key `address` and open the Provenance Blockchain testnet Hash faucet [https://explorer.test.provenance.io/faucet](https://explorer.test.provenance.io/faucet), paste the value, and press Get Tokens:
 
 ![Use the testnet Faucet to get Hash](../.gitbook/assets/image%20%2811%29.png)
 

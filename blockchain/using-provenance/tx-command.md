@@ -5,7 +5,7 @@ description: Submit transactions using the `provenanced` transaction command.
 # Tx Command
 
 {% hint style="info" %}
-This section uses the `provenanced` application to connect to the Provenance testnet.  Follow the installation instructions in the [Using Provenanced](./) section.
+This section uses the `provenanced` application to connect to the Provenance Blockchain testnet.  Follow the installation instructions in the [Using Provenanced](./) section.
 
 You will need a key pair stored in the local Keyring to run the transaction commands in this section.
 {% endhint %}
@@ -132,7 +132,7 @@ Once confirmed, the transaction will be signed using the private key portion of 
 ```
 
 {% hint style="info" %}
-Gas, gas, and more gas: notice that the transaction response includes `gas_wanted` and a `gas_used` values.  When we submitted our transaction we indicated we were willing to pay 65,000 units of gas \(`--gas 65000`\) at 1 nhash per unit \(`--gas-prices 1nhash`\).  The actual cost of the transaction was 61,579 units of gas at our 1 nhash per unit price.  Refer to the [Cosmos Introduction to Gas and Fees](https://docs.cosmos.network/master/basics/gas-fees.html) and the [Provenance Gas and Fees ](../basics/gas-and-fees.md)section.
+Gas, gas, and more gas: notice that the transaction response includes `gas_wanted` and a `gas_used` values.  When we submitted our transaction we indicated we were willing to pay 65,000 units of gas \(`--gas 65000`\) at 1 nhash per unit \(`--gas-prices 1nhash`\).  The actual cost of the transaction was 61,579 units of gas at our 1 nhash per unit price.  Refer to the [Cosmos Introduction to Gas and Fees](https://docs.cosmos.network/master/basics/gas-fees.html) and the [Provenance Blockchain Gas and Fees ](../basics/gas-and-fees.md)section.
 {% endhint %}
 
 Of note in the transaction response are:

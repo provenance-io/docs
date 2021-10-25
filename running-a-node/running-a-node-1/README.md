@@ -1,14 +1,14 @@
 ---
-description: 'Hosting a node on Provenance mainnet, testnet, or for local development.'
+description: 'Hosting a node on Provenance Blockchain mainnet, testnet, or for local development.'
 ---
 
 # Running a Node
 
-Nodes on the Provenance blockchain network are simply servers started by the `provenanced` executable with a specific configuration. There are several types of configurations \(seeding, data archival, validation, etc.\) that may be used to assist in application development. These configuration types may be helpful in deciding what type of node is best suited for the different use cases.
+Nodes on the Provenance Blockchain blockchain network are simply servers started by the `provenanced` executable with a specific configuration. There are several types of configurations \(seeding, data archival, validation, etc.\) that may be used to assist in application development. These configuration types may be helpful in deciding what type of node is best suited for the different use cases.
 
 ## Node Configurations
 
-`provenanced` is an all-encompassing command that may operate as any type of node completely dependent on how it has been configured. When determining how a particular node should be configured, it is necessary to take a deeper look at Provenance and how it is structured. 
+`provenanced` is an all-encompassing command that may operate as any type of node completely dependent on how it has been configured. When determining how a particular node should be configured, it is necessary to take a deeper look at Provenance Blockchain and how it is structured. 
 
 ### Seed Node
 
