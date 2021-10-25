@@ -4,9 +4,9 @@ description: An overview of validator rewards for the Provenance Blockchain
 
 # Token Economics
 
-Provenance is a public **proof-of-stake blockchain** network designed and developed to support financial service industry needs by providing a **ledger**, **registry**, and **exchange** across multiple financial assets and markets. **Hash** is the Provenance utility token to stake, govern, secure, and transact on the network.
+Provenance Blockchain is a public **proof-of-stake blockchain** network designed and developed to support financial service industry needs by providing a **ledger**, **registry**, and **exchange** across multiple financial assets and markets. **Hash** is the Provenance Blockchain utility token to stake, govern, secure, and transact on the network.
 
-Large financial institutions, investors, technical leaders, and individuals provide the foundation of security and stability of the Provenance network by staking Hash as a network validator or delegator for which they are rewarded with a fee. The amount of Hash staked towards a validator defines the frequency by which the validator may propose a new block and its weight in votes to commit a block \(and thus earn fees\). The n largest validators \(by weight of stake\) are defined as the Active Set of Validators where n is a number defined by the Hash community.
+Large financial institutions, investors, technical leaders, and individuals provide the foundation of security and stability of the Provenance Blockchain network by staking Hash as a network validator or delegator for which they are rewarded with a fee. The amount of Hash staked towards a validator defines the frequency by which the validator may propose a new block and its weight in votes to commit a block \(and thus earn fees\). The n largest validators \(by weight of stake\) are defined as the Active Set of Validators where n is a number defined by the Hash community.
 
 | Token Type | Hash |
 | :--- | :--- |
@@ -19,9 +19,9 @@ Large financial institutions, investors, technical leaders, and individuals prov
 | Initial Active Set Size | 20 Validators \(can be changed by governance vote\) |
 | Community pool | 2% of fees |
 
-## Provenance Consensus Method
+## Provenance Blockchain Consensus Method
 
-Provenance blockchain uses the Tendermint consensus mechanism. This relies on a set of validators that are responsible for committing new blocks to the chain. These Validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key. Validators:
+Provenance Blockchain uses the Tendermint consensus mechanism. This relies on a set of validators that are responsible for committing new blocks to the chain. These Validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key. Validators:
 
 * Are full blockchain nodes
 * Vote on blockchain network governance proposals
@@ -31,7 +31,7 @@ There are a known and limited number of validators in the Active Set,$$N_{V}$$. 
 
 ## Staking Hash
 
-The Provenance blockchain network is a public Proof-Of-Stake \(PoS\) blockchain, meaning that the weight of validators is determined by the amount of staking tokens \(Hash\) bonded to them as collateral. These Hash can be self-delegated directly by the validator or delegated to them by other Hash holders. Hash holders can select any number of validators to delegate some or all of their Hash to stake. Any Hash holder can declare their intention to become a validator by sending a create-validator transaction to the network. From there, they become validator candidates.
+The Provenance Blockchain network is a public Proof-Of-Stake \(PoS\) blockchain, meaning that the weight of validators is determined by the amount of staking tokens \(Hash\) bonded to them as collateral. These Hash can be self-delegated directly by the validator or delegated to them by other Hash holders. Hash holders can select any number of validators to delegate some or all of their Hash to stake. Any Hash holder can declare their intention to become a validator by sending a create-validator transaction to the network. From there, they become validator candidates.
 
 The weight \(i.e. voting power\) of a validator determines whether or not they are an active validator. Only the top $$N_{V}$$validators with the most voting power will be active validators - those in the Active Set. Only validators in the Active Set, and by association those who delegated to them, receive rewards and have the right to participate in governance.
 
@@ -39,7 +39,7 @@ When a validator or a delegator wants to remove part or all of their deposit fro
 
 If a delegator only wishes to move their stake between validators but not remove it from the staking pool they may issue a redelegation. A redelegation is an instant transfer in voting power from one validator to another that occurs at the submitted blockheight. Redelegations do not have any impact on the required 3 week unbonding period.
 
-### Provenance slashing policy
+### Provenance Blockchain slashing policy
 
 Staking Hash can be thought of as a security deposit on validation activities. If a validator misbehaves, their delegated stake will be partially slashed. This means that every delegator that bonded Hash to this validator gets penalized in proportion to their bonded stake. Delegators are therefore incentivized to delegate to validators that they anticipate will function safely.
 
@@ -58,7 +58,7 @@ A validator earns transaction fees in Hash tokens. The total fee for each transa
 
 ### Validator commission
 
-Revenue received by a validator's pool is split between the validator and their delegators. The validator can apply a commission on the part of the revenue that goes to their delegators. This commission is set as a percentage. Each validator is free to set their initial commission, maximum daily commission change rate and maximum commission. The Provenance blockchain network enforces the parameters that each validator sets. Only the commission rate can change after the validator is established.
+Revenue received by a validator's pool is split between the validator and their delegators. The validator can apply a commission on the part of the revenue that goes to their delegators. This commission is set as a percentage. Each validator is free to set their initial commission, maximum daily commission change rate and maximum commission. The Provenance Blockchain network enforces the parameters that each validator sets. Only the commission rate can change after the validator is established.
 
 The commission-rate value$$C_{i}$$:
 
@@ -83,7 +83,7 @@ To summarize earned fee rules:
 
 To better illustrate how validator rewards work, let us assume there are 10 validators in the Active Set and all have an equal stake. Each of the validators applies a 10% commission rate and has 20% of self-delegated Hash. Assume there is a successful block added to the chain and a total of 1025.51020408 Hash was collected in fees.
 
-First, 2% of the fee goes to the Provenance Foundation’s community pool. The community pool is used to fund the foundation’s day-to-day operations as well as the grant program.
+First, 2% of the fee goes to the Provenance Blockchain Foundation’s community pool. The community pool is used to fund the foundation’s day-to-day operations as well as the grant program.
 
 * `2% * 1025.51020408 = 20.51020408` Hash goes to the community pool.
 
@@ -117,7 +117,7 @@ The number of minted Hash remains constant, and no new Hash is minted as reward 
 
 ## Gas and transaction fees
 
-Transactions on the Provenance network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
+Transactions on the Provenance Blockchain network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
 
 * `fees = ceil(gas * gasPrices)`
 

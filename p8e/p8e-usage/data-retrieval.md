@@ -1,8 +1,8 @@
 # Data Retrieval
 
-As previously mentioned, executed contracts will have their resulting hashes saved to EOS, and resulting scopes memorialized to Provenance. The mechanism used to convert Provenance scopes into their original data is referred to hydration within the SDK. This process is straightforward, it parses the protobuf datatypes and hashes from the Provenance scope and pulls the objects associated with those hashes from EOS. Assuming they have the correct permission to pull and decrypt those objects, the raw bytes can be converted into their associated datatype and returned.
+As previously mentioned, executed contracts will have their resulting hashes saved to EOS, and resulting scopes memorialized to Provenance Blockchain. The mechanism used to convert Provenance Blockchain scopes into their original data is referred to hydration within the SDK. This process is straightforward, it parses the protobuf datatypes and hashes from the Provenance Blockchain scope and pulls the objects associated with those hashes from EOS. Assuming they have the correct permission to pull and decrypt those objects, the raw bytes can be converted into their associated datatype and returned.
 
-A subset of a Provenance scope is provided to show the relationship between EOS and Provenance.
+A subset of a Provenance Blockchain scope is provided to show the relationship between EOS and Provenance Blockchain.
 
 ```yaml
 records:

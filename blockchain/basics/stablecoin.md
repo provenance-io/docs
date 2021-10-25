@@ -1,12 +1,12 @@
 ---
-description: High-level creation of a coin marker on Provenance.
+description: High-level creation of a coin marker on Provenance Blockchain.
 ---
 
 # Coin
 
 ## Overview
 
-A Coin on Provenance is implemented as a [Marker](../../modules/marker-module.md). Each coin that is generated can be transferred freely between blockchain [accounts ](accounts.md)and represents a value exchange between parties. A coin marker is a simple structure that is meant to be used as a building block for a more complex use case, such as a [stablecoin](stablecoin.md#stablecoins).
+A Coin on Provenance Blockchain is implemented as a [Marker](../../modules/marker-module.md). Each coin that is generated can be transferred freely between blockchain [accounts ](accounts.md)and represents a value exchange between parties. A coin marker is a simple structure that is meant to be used as a building block for a more complex use case, such as a [stablecoin](stablecoin.md#stablecoins).
 
 ## Creating a Coin
 
@@ -57,7 +57,7 @@ marker:
 The marker is now in `PROPOSED` status and is ready for configuration.
 
 {% hint style="success" %}
-Notice that the address for the marker is a newly created Provenance address that the utilized encryption key manages.
+Notice that the address for the marker is a newly created Provenance Blockchain address that the utilized encryption key manages.
 
 **Marker Address** `tp12tpv7m43vu7dkfnq648q2l65v3tk9x6mn0x2a8`
 
@@ -197,7 +197,7 @@ access_control:
 
 * A marker has been created and now represents a new coin type.
 * Permissions on the marker have been granted to a single encryption key that has permissions to grant/revoke access, mint/burn token. 
-* A `denom` has been established on Provenance as the name reference for this coin. 
+* A `denom` has been established on Provenance Blockchain as the name reference for this coin. 
 
 Now that we have a fully functioning coin, let's continue and look at how we mint, burn, and transfer it. 
 
@@ -273,7 +273,7 @@ The balances that are `0` above are shown for example purposes only and will not
 
 #### Executing the Withdraw
 
-As the address with permissions to withdraw from the marker, we can move coin that has been minted to any address on the Provenance blockchain. 
+As the address with permissions to withdraw from the marker, we can move coin that has been minted to any address on the Provenance Blockchain. 
 
 ```text
  provenanced --testnet --chain-id pio-testnet-1 --fees 5000nhash --from <key_name> tx marker withdraw <denom> 500<denom> <recipient_address>
@@ -303,7 +303,7 @@ The recipient has received 500`denom` that was minted, withdrawn and transferred
 
 ### Holders of Coin
 
-A coin holder often wants to understand what addresses their coin is being held by. Provenance provides a simple way of perform this lookup.
+A coin holder often wants to understand what addresses their coin is being held by. Provenance Blockchain provides a simple way of perform this lookup.
 
 ```text
 provenanced --testnet --chain-id pio-testnet-1 q marker holding <denom>
@@ -321,13 +321,13 @@ balances:
 
 ### Review
 
-It is important to discern that addresses are identifiers that point to accounts on Provenance. Each [account](accounts.md) on Provenance can hold coins of various denominations, and [markers](../../modules/marker-module.md) are a special type of account that has its own denomination, can hold coins, and can hold NFTs \(Scopes\) described later. 
+It is important to discern that addresses are identifiers that point to accounts on Provenance Blockchain. Each [account](accounts.md) on Provenance Blockchain can hold coins of various denominations, and [markers](../../modules/marker-module.md) are a special type of account that has its own denomination, can hold coins, and can hold NFTs \(Scopes\) described later. 
 
 In this exercise a coin was created, tokens of that coin were minted, and then subsequently transferred to a recipients address. The tokens that were transferred are now held by the recipient and are no longer within the control of the marker, manager, addresses that have permissions on the marker. 
 
 ## Stablecoins
 
-The coin created above can be used as a stablecoin to provide a bridge between fiat and digital currency as the basis for transactions of value on Provenance. Each new stablecoin is represented on the blockchain as a [marker ](../../modules/marker-module.md)managed by the issuer. Issuers of stablecoin manage fiat currency in a traditional banking account structure that handles the necessary BSA/AML obligations. Issuing institutions have complete control over the management of their coin and provide a redemption method where a holder can convert the digital holding to fiat over banking rails. 
+The coin created above can be used as a stablecoin to provide a bridge between fiat and digital currency as the basis for transactions of value on Provenance Blockchain. Each new stablecoin is represented on the blockchain as a [marker ](../../modules/marker-module.md)managed by the issuer. Issuers of stablecoin manage fiat currency in a traditional banking account structure that handles the necessary BSA/AML obligations. Issuing institutions have complete control over the management of their coin and provide a redemption method where a holder can convert the digital holding to fiat over banking rails. 
 
 {% hint style="info" %}
 See [Omnibus Banks]() for more participant information.

@@ -1,18 +1,18 @@
 ---
-description: Understanding the Provenance accounts system.
+description: Understanding the Provenance Blockchain accounts system.
 ---
 
 # Accounts
 
 ## Account Definition
 
-On Provenance an [account](https://docs.cosmos.network/v0.41/basics/accounts.html) designates a pair of _public key_ `PubKey` and _private key_ `PrivKey`. The `PubKey` is used to generate an `address` which is used to identify users \(among other parties\) on the blockchain. `Addresses` are also associated with [`message`s](https://docs.cosmos.network/master/building-modules/messages-and-queries.html#messages) to identify the sender of the `message`. The `PrivKey` is used to generate [digital signatures](https://docs.cosmos.network/master/basics/query-lifecycle.html#signatures) to prove that an `address`associated with the `PrivKey` approved of a given `message`.
+On Provenance Blockchain an [account](https://docs.cosmos.network/v0.41/basics/accounts.html) designates a pair of _public key_ `PubKey` and _private key_ `PrivKey`. The `PubKey` is used to generate an `address` which is used to identify users \(among other parties\) on the blockchain. `Addresses` are also associated with [`message`s](https://docs.cosmos.network/master/building-modules/messages-and-queries.html#messages) to identify the sender of the `message`. The `PrivKey` is used to generate [digital signatures](https://docs.cosmos.network/master/basics/query-lifecycle.html#signatures) to prove that an `address`associated with the `PrivKey` approved of a given `message`.
 
 ### Addresses <a id="addresses"></a>
 
 `Addresses` and `PubKey`s are both public information that identifies actors on the blockchain. `Account` is used to store authentication information. 
 
-Each account is identified using an `address` which is a sequence of bytes derived from a public key. In Provenance, 3 types of addresses that specify a context where an account is used:
+Each account is identified using an `address` which is a sequence of bytes derived from a public key. In Provenance Blockchain, 3 types of addresses that specify a context where an account is used:
 
 * `AccAddress` identifies users \(the sender of a `message`\).
 * `ValAddress` identifies validator operators.
@@ -21,11 +21,11 @@ Each account is identified using an `address` which is a sequence of bytes deriv
 Addresses and public keys are formatted using [Bech32](https://en.bitcoin.it/wiki/Bech32) and implemented as a string value. The Bech32 method is the only supported format to use when interacting with the blockchain. The Bech32 human-readable part \(Bech32 prefix\) is used to denote an address type.
 
 {% hint style="info" %}
-Provenance testnet Bech32 addresses begin with `tp` whereas mainnet addresses begin with `pb`.  
+Provenance Blockchain testnet Bech32 addresses begin with `tp` whereas mainnet addresses begin with `pb`.  
 {% endhint %}
 
 {% hint style="info" %}
-_**A key pair and it's corresponding Bec32 address that exists outside of Provenance \(say in a wallet\) is not a Provenance account until Hash has been transferred to the Bech32 address.**_
+_**A key pair and it's corresponding Bec32 address that exists outside of Provenance Blockchain \(say in a wallet\) is not a Provenance Blockchain account until Hash has been transferred to the Bech32 address.**_
 {% endhint %}
 
 For example, using `provenanced` we can generate a local key pair and store it in the default [Keyring](https://docs.cosmos.network/master/basics/accounts.html#keyring):
@@ -43,7 +43,7 @@ provenanced --testnet keys add my_test_key
 
 ```
 
-At this point, the `address` `tp1tkn2dwfkx7pmjr2rtgqhtrudsv7h8w2tj6eesv` is **not** a Provenance account:
+At this point, the `address` `tp1tkn2dwfkx7pmjr2rtgqhtrudsv7h8w2tj6eesv` is **not** a Provenance Blockchain account:
 
 ```bash
 provenanced --testnet query auth account tp1tkn2dwfkx7pmjr2rtgqhtrudsv7h8w2tj6eesv \
@@ -54,7 +54,7 @@ provenanced --testnet query auth account tp1tkn2dwfkx7pmjr2rtgqhtrudsv7h8w2tj6ee
 Error: rpc error: code = NotFound desc = account tp1tkn2dwfkx7pmjr2rtgqhtrudsv7h8w2tj6eesv not found: key not found
 ```
 
-However, once we use the testnet Provenance Faucet to transfer Hash to our `address`, it becomes an account.  Post our `address` to the faucet:
+However, once we use the testnet Provenance Blockchain Faucet to transfer Hash to our `address`, it becomes an account.  Post our `address` to the faucet:
 
 ```bash
 curl 'https://test.provenance.io/blockchain/faucet/external'  \
@@ -83,7 +83,7 @@ The principal way of authenticating a user is done using [digital signatures](ht
 
 ## HD Wallet
 
-As demonstrated in the previous section, a single key pair can be used to generate a Bech32 address that can then be used to create a Provenance account.  Using a single key pair isn't ideal because it requires the user to generate and save the physical key pair.  Instead, blockchains recommend an HD Wallet solution that automatically generates a hierarchical tree-like structure of private/public addresses \(or keys\), thereby addressing the problem of the user having to generate them on their own.
+As demonstrated in the previous section, a single key pair can be used to generate a Bech32 address that can then be used to create a Provenance Blockchain account.  Using a single key pair isn't ideal because it requires the user to generate and save the physical key pair.  Instead, blockchains recommend an HD Wallet solution that automatically generates a hierarchical tree-like structure of private/public addresses \(or keys\), thereby addressing the problem of the user having to generate them on their own.
 
 HD Wallets, or Hierarchical Deterministic wallets, are used to generate addresses from a single master seed \(hence the name hierarchical\).  A seed is usually created from a 12- or 24-word mnemonic. A single seed can derive any number of `PrivKey`s using a one-way cryptographic function. Then, a `PubKey` can be derived from the `PrivKey`. Naturally, the mnemonic is the most sensitive information, as private keys can always be re-generated if the mnemonic is preserved. 
 
@@ -91,7 +91,7 @@ HD Wallets require a single backup that enables the user to fully restore the da
 
 So, when you have to restore an HD Wallet, the system automatically drives all the private keys of the tree using the same initial algorithm.
 
-The secret key is easier to remember as well, so users don’t risk losing access to their funds. It’s also a more convenient solution, as you don’t have to store the secret key for each address that you’ve generated, only for the seed key.  [Several HD Wallets exists for Cosmos-based networks](https://cosmos.network/ecosystem/wallets) \(which Provenance is\).
+The secret key is easier to remember as well, so users don’t risk losing access to their funds. It’s also a more convenient solution, as you don’t have to store the secret key for each address that you’ve generated, only for the seed key.  [Several HD Wallets exists for Cosmos-based networks](https://cosmos.network/ecosystem/wallets) \(which Provenance Blockchain is\).
 
 ### Key Derivation Details
 
@@ -109,13 +109,13 @@ For security reasons, using hardened keys is safer, but there are use cases for 
 
 Knowing an extended public keys allows reconstruction of all descendant non-hardened public keys. Knowledge of a parent extended public key plus any non-hardened private key descending from it is equivalent to knowing the parent extended private key \(and thus every private and public key descending from it\). This means that extended public keys must be treated more carefully than regular public keys. It is also the reason for the existence of hardened keys, and why they are used for the account level in the tree. This way, a leak of account-specific \(or below\) private key never risks compromising the master or other accounts.
 
-Hardened keys are useful whenever you don’t need the ability to give someone a master public key, and have them know all derivative addresses. Privacy is preserved with these types of keys because you cannot prove that a child public key is linked to a parent public key. Provenance user-facing wallets should use hardened keys on all paths.
+Hardened keys are useful whenever you don’t need the ability to give someone a master public key, and have them know all derivative addresses. Privacy is preserved with these types of keys because you cannot prove that a child public key is linked to a parent public key. Provenance Blockchain user-facing wallets should use hardened keys on all paths.
 
 Unhardened keys are useful for application service accounts like an escrowing service. With this type of service you want the ability to generate addresses that people pay and that the service can spend from. With an unhardened key there is no need to store private key information at the service yet there is still the ability to generate addresses. Thus there is no sensitive information held at the service. There is a loss of privacy in this model as one could prove a child public key is linked to a parent public key thereby identifying the service account.
 
 ### Path Derivation <a id="Path-Levels"></a>
 
-Provenance uses a Parameter path where `m/44'/505'/0'/0/0` == `m / purpose' / coinType' / account' / change / addressIndex`. It is within this path that hardened vs. non-hardened is realized.
+Provenance Blockchain uses a Parameter path where `m/44'/505'/0'/0/0` == `m / purpose' / coinType' / account' / change / addressIndex`. It is within this path that hardened vs. non-hardened is realized.
 
 #### Root <a id="Root"></a>
 
@@ -144,7 +144,7 @@ m / 44' / 505' /  0' /  0  /  0
          *****
 ```
 
-CointType is a constant set to `505'` for mainnet coins and `1'` for testnet coins. The Provenance mainnet coin type \(`505'`\) is registered here: [https://github.com/satoshilabs/slips/blob/master/slip-0044.md](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
+CointType is a constant set to `505'` for mainnet coins and `1'` for testnet coins. The Provenance Blockchain mainnet coin type \(`505'`\) is registered here: [https://github.com/satoshilabs/slips/blob/master/slip-0044.md](https://github.com/satoshilabs/slips/blob/master/slip-0044.md).
 
 Hardened derivation is used at this level.
 
@@ -168,13 +168,13 @@ m / 44' / 505' /  0' /  0  /  0
                       ****
 ```
 
-The wallet chain identifier. Provenance uses the constant `0` to represent external chain and constant `1` for internal chain \(also known as change addresses\). `Change` addresses are used in bitcoin for the UTXO output from a transaction that is retained by the sender. Most blockchains outside of bitcoin \(and even many bitcoin wallets\) only use `0` for this value.
+The wallet chain identifier. Provenance Blockchain uses the constant `0` to represent external chain and constant `1` for internal chain \(also known as change addresses\). `Change` addresses are used in bitcoin for the UTXO output from a transaction that is retained by the sender. Most blockchains outside of bitcoin \(and even many bitcoin wallets\) only use `0` for this value.
 
 External chain is used for addresses that are meant to be visible outside of the wallet \(e.g. for receiving payments\).
 
 Internal chain is used for addresses which are not meant to be visible outside of the wallet and is used for return transaction change.
 
-Non-hardened derivation should be used at this level. However, keys that Provenance custodies on behalf of Provenance Identities \(i.e. Users\) are hardened at this level.
+Non-hardened derivation should be used at this level. However, keys that Provenance Blockchain custodies on behalf of Provenance Blockchain Identities \(i.e. Users\) are hardened at this level.
 
 #### Address Index <a id="Address-Index"></a>
 
@@ -185,7 +185,7 @@ m / 44' / 505' /  0' /  0  /  0
 
 Addresses are numbered from index 0 in sequentially increasing manner. This number is used as child index in BIP32 derivation.
 
-Unhardened derivation is used at this level. However, keys that Provenance custodies on behalf of Provenance Identities \(i.e. Users\) are hardened at this level.
+Unhardened derivation is used at this level. However, keys that Provenance Blockchain custodies on behalf of Provenance Blockchain Identities \(i.e. Users\) are hardened at this level.
 
-In Provenance, the Address Index is used as the key for things of value like coins, markers, names and tags.
+In Provenance Blockchain, the Address Index is used as the key for things of value like coins, markers, names and tags.
 

@@ -1,16 +1,16 @@
 ---
-description: Web assembly (Wasm) smart contracts for the provenance blockchain.
+description: Web assembly (Wasm) smart contracts for the Provenance Blockchain.
 ---
 
 # Smart Contracts \(ProvWasm\)
 
 ## Overview
 
-ProvWasm contains extensions for a third party blockchain module. These extensions, combined with a library, provide developers the ability to create web assembly smart contracts for the Provenance blockchain using the Rust programming language.
+ProvWasm contains extensions for a third party blockchain module. These extensions, combined with a library, provide developers the ability to create web assembly smart contracts for the Provenance Blockchain using the Rust programming language.
 
 ### Blockchain Extensions
 
-The CosmWasm VM only integrates with the `banking` and `staking` modules by default. However, it allows for adding custom encoders and queriers. A package was added in the Provenance blockchain that contain extensions for the following provenance modules:
+The CosmWasm VM only integrates with the `banking` and `staking` modules by default. However, it allows for adding custom encoders and queriers. A package was added in the Provenance Blockchain that contain extensions for the following provenance modules:
 
 * [Account](account.md)
 * [Marker](marker-module.md)
@@ -21,7 +21,7 @@ These extensions are compiled into the blockchain at build time.
 
 ## Rust Bindings
 
-In order to provide a high quality smart contract developer experience, a Rust [library](https://github.com/provenance-io/provwasm) was created to simplify calls to the provenance blockchain extensions.
+In order to provide a high quality smart contract developer experience, a Rust [library](https://github.com/provenance-io/provwasm) was created to simplify calls to the Provenance Blockchain extensions.
 
 The library can be broken down into the following components.
 
@@ -35,7 +35,7 @@ A number of high-level functions and types were added to on top of the core para
 
 ### Mocks
 
-One of the benefits of ProvWasm is that it allows for robust unit testing of smart contracts before deployment to the provenance blockchain. Using the types described above, a mock environment can be created so unit tests can run as if they are executing against a running blockchain. This allows developers to ensure their contracts are correct before having to pay fees to deploy to a network.
+One of the benefits of ProvWasm is that it allows for robust unit testing of smart contracts before deployment to the Provenance Blockchain. Using the types described above, a mock environment can be created so unit tests can run as if they are executing against a running blockchain. This allows developers to ensure their contracts are correct before having to pay fees to deploy to a network.
 
 ### Integrations
 

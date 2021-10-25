@@ -8,12 +8,12 @@ description: >-
 
 ## What is gas? 
 
-Gas is a consumable that is used to power the Provenance blockchain. Each execution of the blockchain requires enough gas to complete the required reads, writes, and computation encompassed by the submitted transaction\(s\). When using gas you need to know two things:
+Gas is a consumable that is used to power the Provenance Blockchain. Each execution of the blockchain requires enough gas to complete the required reads, writes, and computation encompassed by the submitted transaction\(s\). When using gas you need to know two things:
 
 * How much gas do I need to process my transaction? 
 * What is the current price of gas?
 
-Before each transaction invoked on Provenance, an estimate of the amount of gas you need is made. The estimated gas needed is the maximum you'll pay for the given transaction. Over estimating will lead to purchasing more gas than needed and under estimating will cause the submitted transaction to fail due to running out of gas. 
+Before each transaction invoked on Provenance Blockchain, an estimate of the amount of gas you need is made. The estimated gas needed is the maximum you'll pay for the given transaction. Over estimating will lead to purchasing more gas than needed and under estimating will cause the submitted transaction to fail due to running out of gas. 
 
 ### Meter 
 
@@ -21,7 +21,7 @@ When a transaction starts processing, the meter is set at the estimated amount o
 
 ### Price
 
-Gas is purchased with Hash, the Provenance utility token. 
+Gas is purchased with Hash, the Provenance Blockchain utility token. 
 
 Note: gas prices are normally denoted in nHash \( 1Hash = 1,000,000,000 nHash\).
 
@@ -152,11 +152,11 @@ Note: gas prices are normally denoted in nHash \( 1Hash = 1,000,000,000 nHash\).
 
 ## Fees 
 
-Fees are the total amount of Hash collected for consumed gas during the processing and minting of a block on Provenance. **Community** and **Block Proposer** fees are set by governance proposals allowing Hash holders to vote to adjust these fee percentages as necessary. Delegators can choose validators that have a lower commission to optimize the amount of fees collected from the network. 
+Fees are the total amount of Hash collected for consumed gas during the processing and minting of a block on Provenance Blockchain. **Community** and **Block Proposer** fees are set by governance proposals allowing Hash holders to vote to adjust these fee percentages as necessary. Delegators can choose validators that have a lower commission to optimize the amount of fees collected from the network. 
 
 ## Distribution
 
-All fees that are collected by the validator network are distributed to rewarding Provenance [participants](../community/participants.md) for providing value in the various roles.
+All fees that are collected by the validator network are distributed to rewarding Provenance Blockchain [participants](../community/participants.md) for providing value in the various roles.
 
 ### Voting Validators
 

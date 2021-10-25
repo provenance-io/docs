@@ -26,7 +26,7 @@
   * [Application Architecture](blockchain/introduction/application-architecture.md)
   * [Major Components](blockchain/introduction/major-components.md)
 * [Basics](blockchain/basics/README.md)
-  * [Anatomy of the Provenance Application](blockchain/basics/anatomy-of-a-provenance-application.md)
+  * [Anatomy of the Provenance Blockchain Application](blockchain/basics/anatomy-of-a-provenance-application.md)
   * [Transaction Lifecycle](blockchain/basics/transaction-lifecycle.md)
   * [Query Lifecycle](blockchain/basics/query-lifecycle.md)
   * [Accounts](blockchain/basics/accounts.md)
@@ -86,7 +86,7 @@
   * [Data Mapping](integrating/asset-originators-guide/data-mapping.md)
   * [Onboard Loan Contract](integrating/asset-originators-guide/example-loan-contracts.md)
 
-## Apps Built on Provenance <a id="provenance-applications"></a>
+## Apps Built on Provenance Blockchain <a id="provenance-applications"></a>
 
 * [Apps Overview](provenance-applications/apps-powered-by-provenance.md)
 * [Figure LOS](provenance-applications/loan-origination-system-los/README.md)
@@ -125,7 +125,7 @@
   * [700 Business Applications](contributing/adr/700-business-applications.md)
   * [800 System Migration](contributing/adr/800-system-migration.md)
 
-## Provenance FAQ <a id="faq"></a>
+## Provenance Blockchain FAQ <a id="faq"></a>
 
 * [Foundation FAQ](faq/foundation-faq.md)
 * [Grants Program FAQ](faq/grants-program-faq.md)

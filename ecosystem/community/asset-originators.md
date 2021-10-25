@@ -2,7 +2,7 @@
 
 ### Overview
 
-Provenance Blockchain acts as ledger, registry and exchange for digital assets. Asset creators can register and custody digital assets on the Provenance Blockchain through the use of [client-side contracts](../../p8e/overview/). Asset value-related operations may be achieved by using a stablecoin backed by an [Omnibus Bank](). Provenance client-side contracts take encrypted data from the asset creator and transform that information to encrypted data in the creator's own private [object store](../../p8e/overview/encrypted-object-store/) with object hashes recorded on the blockchain through the [metadata](../../modules/metadata-module.md) module. In addition to boarding digital assets, asset creators may fund, finance, sell, and service assets on the blockchain. 
+Provenance Blockchain acts as ledger, registry and exchange for digital assets. Asset creators can register and custody digital assets on the Provenance Blockchain through the use of [client-side contracts](../../p8e/overview/). Asset value-related operations may be achieved by using a stablecoin backed by an [Omnibus Bank](). Provenance Blockchain client-side contracts take encrypted data from the asset creator and transform that information to encrypted data in the creator's own private [object store](../../p8e/overview/encrypted-object-store/) with object hashes recorded on the blockchain through the [metadata](../../modules/metadata-module.md) module. In addition to boarding digital assets, asset creators may fund, finance, sell, and service assets on the blockchain. 
 
 ### Boarding Assets
 
@@ -10,7 +10,7 @@ Digital assets are "boarded to the blockchain" by the execution of contracts tha
 
 ### Asset Ownership
 
-Ownership of a digital asset on Provenance is defined by a [Marker](../../modules/marker-module.md) structure on chain. During the creation of a scope by the Contract Execution Environment, a default address is created to represent ownership of the asset by the asset creator. Provenance Blockchain distinguishes between the "data owner\(s\)" and the "value owner\(s\)" of any scope. Data owners have permission to perform read/write operations on the scope. Value owners hold rights to the actual ownership of the asset and any value the digital asset holds. Data owners and value owners may or may not be the same entities. For example, a digital loan asset may have data owners including the originator and servicer while the value owner may be an investor who has purchased the loan.
+Ownership of a digital asset on Provenance Blockchain is defined by a [Marker](../../modules/marker-module.md) structure on chain. During the creation of a scope by the Contract Execution Environment, a default address is created to represent ownership of the asset by the asset creator. Provenance Blockchain distinguishes between the "data owner\(s\)" and the "value owner\(s\)" of any scope. Data owners have permission to perform read/write operations on the scope. Value owners hold rights to the actual ownership of the asset and any value the digital asset holds. Data owners and value owners may or may not be the same entities. For example, a digital loan asset may have data owners including the originator and servicer while the value owner may be an investor who has purchased the loan.
 
 ### Value Operations
 

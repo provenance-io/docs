@@ -18,7 +18,7 @@ One issue with a blockchain is that addresses are complex strings of characters 
 
 ### A Name Hierarchy
 
-Another challenge for users of a blockchain is establishing authority and delegating control. A specific example of this is the definition of the authoritative source of a piece of information. Where did this information come from? Who created it/vetted it? How can this control be distributed in such a way that the right people can control the information? A narrow aspect of this type of control can be satisfied through the creation of a hierarchical name system modeled after DNS. If the address `passport.pb` has been created and is owned by the Provenance Passport application, then `level-3.accredited.passport.pb` can be expected to be under the direct or delegated control of the passport application.
+Another challenge for users of a blockchain is establishing authority and delegating control. A specific example of this is the definition of the authoritative source of a piece of information. Where did this information come from? Who created it/vetted it? How can this control be distributed in such a way that the right people can control the information? A narrow aspect of this type of control can be satisfied through the creation of a hierarchical name system modeled after DNS. If the address `passport.pb` has been created and is owned by the Provenance Blockchain Passport application, then `level-3.accredited.passport.pb` can be expected to be under the direct or delegated control of the passport application.
 
 ### Delegating Control
 

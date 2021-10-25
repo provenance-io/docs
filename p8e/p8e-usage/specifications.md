@@ -1,7 +1,7 @@
 ---
 description: >-
   Before you are able to execute P8e contracts, you must first publish
-  specifications to Provenance. These specifications define the ruleset that
+  specifications to Provenance Blockchain. These specifications define the ruleset that
   govern contracts.
 ---
 
@@ -55,7 +55,7 @@ Scope specifications serve the following purposes and only act as displayable me
 
 ## Publishing
 
-Contract and scope specifications are declarative in nature. They are defined and published to Provenance out of band from the executable that will be creating and executing contracts. The [p8e-gradle-plugin](https://github.com/provenance-io/p8e-gradle-plugin)  is used to publish these specifications, as well as other supporting tasks \(the [README](https://github.com/provenance-io/p8e-gradle-plugin/blob/main/README.md) is a great source for plugin usage\).
+Contract and scope specifications are declarative in nature. They are defined and published to Provenance Blockchain out of band from the executable that will be creating and executing contracts. The [p8e-gradle-plugin](https://github.com/provenance-io/p8e-gradle-plugin)  is used to publish these specifications, as well as other supporting tasks \(the [README](https://github.com/provenance-io/p8e-gradle-plugin/blob/main/README.md) is a great source for plugin usage\).
 
 When a contract specification is published, it is dehydrated into a protobuf representation. This representation contains a hash of the uberjar that it was contained within. This means that whenever a contract specification directly changes, or a protobuf that the contract specification uses changes, both the hash of the uberjar and the hash of the contract specification change as well. Both the protobuf representation and the uberjar are persisted to the [EOS](../overview/encrypted-object-store/). P8e is able to load any historical state for a scope as it was at the time it was executed because the uberjar and contract specification can be pulled from EOS based on their hashes. P8e uses these same hashes to load the correct uberjar at runtime to execute the functions defined in the contract specification.
 

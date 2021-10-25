@@ -74,15 +74,15 @@ Validators [
 ]
 ```
 
-For the genesis validator set we will issue a single node per existing member node. Within the Provenance namespace we will run 3 nodes which will not be validators but will serve as interface points for internal and external blockchain applications to connect to. These nodes will bridge the internal validator network supported by Figure/Provenance with the external public network. It is acceptable for a validator to run their own configuration of a protected validator network separately.
+For the genesis validator set we will issue a single node per existing member node. Within the Provenance Blockchain namespace we will run 3 nodes which will not be validators but will serve as interface points for internal and external blockchain applications to connect to. These nodes will bridge the internal validator network supported by Figure/Provenance Blockchain with the external public network. It is acceptable for a validator to run their own configuration of a protected validator network separately.
 
 [Peer and Validator Networking](https://kb.certus.one/peers.html)
 
 ### Hash Auction \(Gas Fee Conversion\)
 
-Currently, accredited investors who are Provenance members can trade Hash directly with other members. Soon, these members are able to sell their Hash to the administrator as part of the Dutch Auction for fee distribution \(“the fee auction”\). Distributed fees are the primary driver of economic value of Hash.
+Currently, accredited investors who are Provenance Blockchain members can trade Hash directly with other members. Soon, these members are able to sell their Hash to the administrator as part of the Dutch Auction for fee distribution \(“the fee auction”\). Distributed fees are the primary driver of economic value of Hash.
 
-In the fee auction, members set a reserve price for their Hash. For example, they may opt to sell 100 Hash at $1/Hash, 200 at $2, etc. Members are not obligated to set reserve prices. When a member pays a transaction fee on Provenance, that fee is auctioned at the clearing reserve price. For example, if the fee was $1 and the best price for Hash is $1/Hash, that offer would get filled. The seller then gets the $1, and the Hash is distributed to the stakeholders, the administrator and the other Hash holders.
+In the fee auction, members set a reserve price for their Hash. For example, they may opt to sell 100 Hash at $1/Hash, 200 at $2, etc. Members are not obligated to set reserve prices. When a member pays a transaction fee on Provenance Blockchain, that fee is auctioned at the clearing reserve price. For example, if the fee was $1 and the best price for Hash is $1/Hash, that offer would get filled. The seller then gets the $1, and the Hash is distributed to the stakeholders, the administrator and the other Hash holders.
 
 If the best offer cannot clear the auction, then the next best offer is taken and so on until the fee clears. For example, assume the fee is $1, and there is an offer of 1 Hash for $0.50 and 1 Hash for $1 by two separate members. In this case, the first offer won’t clear at $0.50, so the price moves to $1. All three offers sell 0.33 Hash at $1/Hash.
 

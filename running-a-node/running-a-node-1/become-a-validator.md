@@ -1,10 +1,10 @@
 # Become a Validator
 
-Validators perform the critical function of proposing and validating transactions on the Provenance network. A strong network of validators ensures Provenance security is maintained. Validators stake Hash to become part of the active validators on the network and are a foundational element for Hash holders that want to delegate their stake and share in rewards produced by the network's fee distribution framework. 
+Validators perform the critical function of proposing and validating transactions on the Provenance Blockchain network. A strong network of validators ensures Provenance Blockchain security is maintained. Validators stake Hash to become part of the active validators on the network and are a foundational element for Hash holders that want to delegate their stake and share in rewards produced by the network's fee distribution framework. 
 
 ## Quick Start
 
-This quick start assumes that you have already completed the necessary steps to join a full node to the Provenance network and are ready to designate the node as a validator. 
+This quick start assumes that you have already completed the necessary steps to join a full node to the Provenance Blockchain network and are ready to designate the node as a validator. 
 
 {% hint style="warning" %}
 To configure a validator you need to acquire Hash to grant the newly created validator voting power on the network. 
@@ -12,7 +12,7 @@ To configure a validator you need to acquire Hash to grant the newly created val
 
 ### Finding Node Public Key
 
-Each node has a public key that identifies it to other participants on the network. To configure the full node created in [Join Provenance Testnet](join-provenance-testnet.md),  find the public key that identifies the node. Tendermint, the underlying consensus algorithm, provides a simple way to display the key for use.
+Each node has a public key that identifies it to other participants on the network. To configure the full node created in [Join Provenance Blockchain Testnet](join-provenance-testnet.md),  find the public key that identifies the node. Tendermint, the underlying consensus algorithm, provides a simple way to display the key for use.
 
 ```text
 ~$ provenanced -t --home tmp/data tendermint show-validator
@@ -68,8 +68,8 @@ A multi-tier network architecture is recommended to secure validators. Each tier
 | Tier | Description |
 | :--- | :--- |
 | Public Sentry | Public Sentry nodes are available to the world and provide a proxy for the network. |
-| Private Sentry | Private Sentry nodes provide an interconnect layer that can be used to provide more direct integration with large foundational Provenance systems. |
-| Validator | The core of the Provenance blockchain that should be isolated from all public-facing networks. |
+| Private Sentry | Private Sentry nodes provide an interconnect layer that can be used to provide more direct integration with large foundational Provenance Blockchain systems. |
+| Validator | The core of the Provenance Blockchain that should be isolated from all public-facing networks. |
 | KMS | Key Management Service - A remote signing platform that secures access to encryption keys. |
 
 ![Recommended Network Architecture](../../.gitbook/assets/securing-provenanced-validator-2-%20%281%29.png)
@@ -78,7 +78,7 @@ The Recommended Network Architecture diagram is the architecture to follow when 
 
 ### Network Security \(Firewall\)
 
-The Provenance network leverages two different ports \(P2P and RPC\) by default and should be considered when opening necessary firewall rules.
+The Provenance Blockchain network leverages two different ports \(P2P and RPC\) by default and should be considered when opening necessary firewall rules.
 
 #### **P2P**
 
@@ -92,7 +92,7 @@ It is recommended that each of these nodes be placed in specific zones or privat
 
 ## Configuration
 
-The validator node requires the highest level of security as it contains the key that will be authorized to sign blocks on the Provenance network. If a bad actor gets this key,  he could connect to the chain and impersonate that same validator, thereby causing a double signing incident which would result in a validator being jailed and slashed. For this reason, access to this node should be limited to those who absolutely require access. All access should be monitored and recorded via a monitoring solution. 
+The validator node requires the highest level of security as it contains the key that will be authorized to sign blocks on the Provenance Blockchain network. If a bad actor gets this key,  he could connect to the chain and impersonate that same validator, thereby causing a double signing incident which would result in a validator being jailed and slashed. For this reason, access to this node should be limited to those who absolutely require access. All access should be monitored and recorded via a monitoring solution. 
 
 The following configuration parameters are found in the config.toml file.
 
@@ -161,12 +161,12 @@ The following configuration parameters are found in the config.toml file.
 
 There are multiple solutions available that could be used to provide this network security. One solution readily available is [Tendermint KMS](https://github.com/iqlusioninc/tmkms) which is actively maintained and supports multiple Hardware Security Modules. 
 
-The validator consensus key used to sign blocks on the Provenance network must be protected. By default, this key is in plain text on the node and anyone with access would be able to obtain it. A remote signer KMS combined with an HSM to ensure the absolute security of the validator key should be leveraged. Due to the strong recommendation of leveraging an HSM, this solution should be built on-site in a Secured Data Center. This would include leveraging network firewalls, secured servers, network switches, and limited access to these devices by necessary personnel.
+The validator consensus key used to sign blocks on the Provenance Blockchain network must be protected. By default, this key is in plain text on the node and anyone with access would be able to obtain it. A remote signer KMS combined with an HSM to ensure the absolute security of the validator key should be leveraged. Due to the strong recommendation of leveraging an HSM, this solution should be built on-site in a Secured Data Center. This would include leveraging network firewalls, secured servers, network switches, and limited access to these devices by necessary personnel.
 
 ## Recommended Hardware Configuration
 
 {% hint style="info" %}
-CPU/Memory/Storage is determined by how Provenance will be used and how the node is configured \(type\) and data retention periods. These are general use numbers and may be adjusted based on the desired performance. 
+CPU/Memory/Storage is determined by how Provenance Blockchain will be used and how the node is configured \(type\) and data retention periods. These are general use numbers and may be adjusted based on the desired performance. 
 {% endhint %}
 
 | Node Type | CPU | Memory | Storage |

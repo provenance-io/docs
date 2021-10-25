@@ -1,6 +1,6 @@
 # FAQ
 
-Everything you always wanted to know about Provenance, but were afraid to ask…
+Everything you always wanted to know about Provenance Blockchain, but were afraid to ask…
 
 ## [Ecosystem FAQ](ecosystem-faq.md)
 

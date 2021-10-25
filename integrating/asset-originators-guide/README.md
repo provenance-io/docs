@@ -8,13 +8,13 @@ description: A suggested process for getting started with loading assets onto Pr
 This guide uses loans as the example digital asset, but the process can be applied to any type of asset.
 {% endhint %}
 
-This guide walks through the steps necessary to create an application using Provenance Blockchain and the [P8e Contract Execution Environment ](../../p8e/overview/)to load and fund digital assets on chain. In the example, digital loans are boarded to Provenance, funded with stablecoin, and listed on the Figure Portfolio Manager \(PM\).
+This guide walks through the steps necessary to create an application using Provenance Blockchain and the [P8e Contract Execution Environment ](../../p8e/overview/)to load and fund digital assets on chain. In the example, digital loans are boarded to Provenance Blockchain, funded with stablecoin, and listed on the Figure Portfolio Manager \(PM\).
 
 ## Example Application
 
 The application exists in the `Interface` layer of the [Application Architecture](../../blockchain/introduction/application-architecture.md), and makes use of a [hybrid model ](../../blockchain/introduction/major-components.md)of on-chain and off-chain \(client-side\) data.
 
-In our example, the borrower applies \(and is approved\) for a loan through the Originator's own Loan Origination System \(LOS\). The loan is boarded to Provenance only when the loan is ready for immediate funding, at which point the application will:
+In our example, the borrower applies \(and is approved\) for a loan through the Originator's own Loan Origination System \(LOS\). The loan is boarded to Provenance Blockchain only when the loan is ready for immediate funding, at which point the application will:
 
 1. **Record the loan data** to the originator's private local Encrypted Object Store \(EOS\) through the execution of a [P8e Contract.](../../p8e/overview/#p-8-e-client-side-contracts) This establishes a record of the assets and its [ownership](../../modules/marker-module.md) \(the originator\) on the blockchain, while preserving the privacy and security of the data under the originator's control.
 2. **\(Optionally\) Fund the loan** using stablecoin issued by an Omnibus Bank.
@@ -38,11 +38,11 @@ The development process for creating this loan boarding application will include
    4. To update the loan tape for PM as needed
    5. To update \(or correct\) loan data \(optional\)
    6. To remove a loan from the system \(optional\)
-5. Developing an application to orchestrate the execution of the P8e contracts and upload loan documents \(e.g. PDF of the signing note\), and to use the Provenance SDK to manage the flow of stablecoin, asset ownership, and data sharing on the blockchain.
+5. Developing an application to orchestrate the execution of the P8e contracts and upload loan documents \(e.g. PDF of the signing note\), and to use the Provenance Blockchain SDK to manage the flow of stablecoin, asset ownership, and data sharing on the blockchain.
 
-A Provenance application has several options for interfacing with the blockchain during development and for production usage:
+A Provenance Blockchain application has several options for interfacing with the blockchain during development and for production usage:
 
 1. [Run a blockchain localnet](../../blockchain/using-provenance/) in situ for easy local development;
-2. Connect to the Provenance public [testnet](https://github.com/provenance-io/testnet);
-3. Connect to the public production Provenance [mainnet](https://github.com/provenance-io/mainnet).
+2. Connect to the Provenance Blockchain public [testnet](https://github.com/provenance-io/testnet);
+3. Connect to the public production Provenance Blockchain [mainnet](https://github.com/provenance-io/mainnet).
 

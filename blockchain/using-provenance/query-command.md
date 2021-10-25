@@ -5,12 +5,12 @@ See [Using Provenanced](./) for basic information about the `provenanced` comman
 {% endhint %}
 
 {% hint style="info" %}
-This section uses the `provenanced` application to connect to the Provenance testnet.  Follow the installation instructions in the [Installing Provenance section](../running-a-node/) before continuing with this section.
+This section uses the `provenanced` application to connect to the Provenance Blockchain testnet.  Follow the installation instructions in the [Installing Provenance Blockchain section](../running-a-node/) before continuing with this section.
 {% endhint %}
 
 ## Query Command
 
-Querying the Provenance blockchain is one of the simplest use cases for `provenanced`. 
+Querying the Provenance Blockchain is one of the simplest use cases for `provenanced`. 
 
 ```text
 ~$ provenanced query --help

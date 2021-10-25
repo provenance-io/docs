@@ -4,7 +4,7 @@ description: Install the `provenanced` executable for both client and server ope
 
 # Installing Provenanced
 
-Provenance is wrapped into a single executable named `provenanced`. All interaction \(whether creating a node, querying, or invoking actions\) with Provenance can be accomplished using the `provenanced` command. This document explains the basic installation of the command and verification that it has been installed correctly. 
+Provenance Blockchain is wrapped into a single executable named `provenanced`. All interaction \(whether creating a node, querying, or invoking actions\) with Provenance Blockchain can be accomplished using the `provenanced` command. This document explains the basic installation of the command and verification that it has been installed correctly. 
 
 ### Prerequisites 
 
@@ -18,15 +18,15 @@ On MacOS, LevelDB can be installed with `brew install leveldb`.
 
 ### `provenanced` Install
 
-All interaction \(whether creating a node, querying, or invoking actions\) with Provenance can be accomplished using the `provenanced` command. 
+All interaction \(whether creating a node, querying, or invoking actions\) with Provenance Blockchain can be accomplished using the `provenanced` command. 
 
 {% hint style="info" %}
-See the [Provenance testnet repository](https://github.com/provenance-io/testnet) for the latest "Software Version" information of `pio-testnet-1`
+See the [Provenance Blockchain testnet repository](https://github.com/provenance-io/testnet) for the latest "Software Version" information of `pio-testnet-1`
 {% endhint %}
 
 ### Installing
 
-Installing `provenanced` is done directly from the source code by cloning the version indicated for `pio-testnet-1` from the  [Provenance Github](https://github.com/provenance-io/provenance) repo, then `make install`:
+Installing `provenanced` is done directly from the source code by cloning the version indicated for `pio-testnet-1` from the  [Provenance Blockchain Github](https://github.com/provenance-io/provenance) repo, then `make install`:
 
 ```text
 git clone -b <version> https://github.com/provenance-io/provenance

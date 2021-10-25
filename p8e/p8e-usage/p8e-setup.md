@@ -15,7 +15,7 @@ The following are the services that make up a fully functional P8e environment:
 
 ## Local
 
-A [docker compose](https://github.com/provenance-io/p8e-docker-compose) environment is provided to quickly bring up a fully configured P8e environment. This includes a four node Provenance cluster. Having some familiarity with [docker](https://docs.docker.com/) and [docker-compose](https://docs.docker.com/compose/) will help.
+A [docker compose](https://github.com/provenance-io/p8e-docker-compose) environment is provided to quickly bring up a fully configured P8e environment. This includes a four node Provenance Blockchain cluster. Having some familiarity with [docker](https://docs.docker.com/) and [docker-compose](https://docs.docker.com/compose/) will help.
 
 The following steps will setup an environment and execute your first P8e contract.
 

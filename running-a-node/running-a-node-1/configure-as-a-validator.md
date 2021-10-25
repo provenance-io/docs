@@ -1,16 +1,16 @@
 # Configure a Validator
 
-Validators perform the critical function of proposing and validating transactions on the Provenance network. A strong network of validators ensures Provenance security is maintained. Validators stake Hash™ to become part of the active validators on the network and are a foundational element for Hash holders that want to delegate their stake and share in rewards produced by the network's fee distribution framework. 
+Validators perform the critical function of proposing and validating transactions on the Provenance Blockchain network. A strong network of validators ensures Provenance Blockchain security is maintained. Validators stake Hash™ to become part of the active validators on the network and are a foundational element for Hash holders that want to delegate their stake and share in rewards produced by the network's fee distribution framework. 
 
 ### Quick Start
 
-This quick start assumes that the necessary steps to join a full node to the Provenance network have already been completed and the node is ready to be designated as a validator. 
+This quick start assumes that the necessary steps to join a full node to the Provenance Blockchain network have already been completed and the node is ready to be designated as a validator. 
 
 {% hint style="warning" %}
 To configure a validator, Hash needs to grant the newly created validator voting power on the network. 
 {% endhint %}
 
-Each Tendermint node has a public key that identifies it to other participants on the network. To configure the full node created in [Join Provenance Testnet](join-provenance-testnet.md), find the public key that it identifies. Tendermint provides a simple way to display the key for use.
+Each Tendermint node has a public key that identifies it to other participants on the network. To configure the full node created in [Join Provenance Blockchain Testnet](join-provenance-testnet.md), find the public key that it identifies. Tendermint provides a simple way to display the key for use.
 
 #### Finding Node Public Key
 

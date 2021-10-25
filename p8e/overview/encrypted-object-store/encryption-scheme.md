@@ -1,6 +1,6 @@
 # EOS Encryption Scheme
 
-Provenance uses Elliptic Curve Integrated Encryption Scheme \(ECIES\) to encrypt asset before it is stored in the Encrypted Object Store.  As its name properly indicates, ECIES is an integrated encryption scheme which uses the following functions:
+Provenance Blockchain uses Elliptic Curve Integrated Encryption Scheme \(ECIES\) to encrypt asset before it is stored in the Encrypted Object Store.  As its name properly indicates, ECIES is an integrated encryption scheme which uses the following functions:
 
 * Key Agreement \(KA\): Function used for the generation of a shared secret by two parties.
 * Key Derivation Function \(KDF\): Mechanism that produces a set of keys from keying material and some optional parameters.
@@ -8,7 +8,7 @@ Provenance uses Elliptic Curve Integrated Encryption Scheme \(ECIES\) to encrypt
 * Message Authentication Code \(MAC\): Data used in order to authenticate messages.
 * Hash \(SHA-256\): Digest function, used within the KDF and the MAC functions.
 
-The Provenance ECIES scheme follows the ISO/IEC 18033-2 standard utilizing the following parameters:
+The Provenance Blockchain ECIES scheme follows the ISO/IEC 18033-2 standard utilizing the following parameters:
 
 <table>
   <thead>
@@ -56,13 +56,13 @@ The Provenance ECIES scheme follows the ISO/IEC 18033-2 standard utilizing the f
 
 ### Encrypting Messages <a id="EncryptionScheme-EncryptingMessages"></a>
 
-The following diagram demonstrates how the Provenance SDK encrypts asset data prior to saving to the Encrypted Object Store and invoking client contracts.
+The following diagram demonstrates how the Provenance Blockchain SDK encrypts asset data prior to saving to the Encrypted Object Store and invoking client contracts.
 
 ![](../../../.gitbook/assets/e2ee-ecies-1.png)
 
-1. The Affiliate uses the Provenance SDK to encrypt data prior to saving to the Encrypted Object Store before it is used in contract execution.
+1. The Affiliate uses the Provenance Blockchain SDK to encrypt data prior to saving to the Encrypted Object Store before it is used in contract execution.
 2. A random, symmetric Data Encryption Key \(**DEK**\) is generated for each Member message.  The DEK is used to encrypt the message using AES.
-3. The Audience is a set of Provenance member public keys \(**ApubK**\) that are allowed to decrypt the encrypted the message. There may be 1 or many ApubKs.
+3. The Audience is a set of Provenance Blockchain member public keys \(**ApubK**\) that are allowed to decrypt the encrypted the message. There may be 1 or many ApubKs.
 4. A shared secret must be generated to allow the Audience to decrypt the DEK to subsequently decrypt the message.
    1. An ephemeral key pair is generated where the public key \(**EpubK**\) is derived from the private key \(**EprivK**\).
    2. The Key Agreement \(**KA**\) function uses the EprivK and ApubK to generate a secret \(**Secret**\).
@@ -70,7 +70,7 @@ The following diagram demonstrates how the Provenance SDK encrypts asset data pr
 5. The DEK is encrypted with the ENC Key using AES GCM resulting in an **Encrypted DEK**.
 6. With the Encrypted DEK, the MAC Key, and the Member UUID as parameters a MAC function \(using AES GCM\) is used to produce a tag \(**Tag**\).
    1. The Tag is an AES-GCM authentication tag that is to be used during decryption validation.
-7. A Provenance Data Integrity & Message Encryption \(**DIME**\) packet is created that contains:
+7. A Provenance Blockchain Data Integrity & Message Encryption \(**DIME**\) packet is created that contains:
    1. A cryptogram \(Tag, EpubK, Encrypted DEK\) for each ApubK including a cryptogram for MpubK.
    2. A payload block with the Encrypted Message.
    3. Metadata about the DIME like asset ID, date, key value sets.
