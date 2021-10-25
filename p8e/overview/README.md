@@ -16,7 +16,7 @@ As the records evolve through subsequent contract execution, each execution reco
 
 ### Scopes
 
-The P8e contract environment leverages the [Provenance Metadata module](../../modules/metadata-module.md). Scopes are used as containers to represent the outputs produced from contract executions. Each contract execution on a scope generates a "session", which encapsulates one or more "records". Once memorialized, the session and records are immutably recorded to Provenance.
+The P8e contract environment leverages the [Provenance Metadata module](../../modules/metadata-module.md). Scopes are used as containers to represent the outputs produced from contract executions. Each contract execution on a scope generates a "session", which encapsulates one or more "records". Once memorialized, the session and records are immutably recorded to Provenance Blockchain.
 
 ### Scopes are NFTs
 

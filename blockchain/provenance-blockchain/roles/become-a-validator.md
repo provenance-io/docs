@@ -36,7 +36,7 @@ A validator node must only sign valid blocks and must not issue more than one si
 
 #### Penalties
 
-Active validators that fail to meet the minimum availability requirements or are otherwise flagged for inappropriate behavior are subject to having a portion of their bonded stake slashed/burned.  This penalty enforcement ranges from XX% to XX% and includes a permanent ban for the most severe behavior.  Delegators that pledge stake to the validator node will also be penalized which is additional incentive to validators to protect their networks to maintain the stability of Provenance.
+Active validators that fail to meet the minimum availability requirements or are otherwise flagged for inappropriate behavior are subject to having a portion of their bonded stake slashed/burned.  This penalty enforcement ranges from XX% to XX% and includes a permanent ban for the most severe behavior.  Delegators that pledge stake to the validator node will also be penalized which is additional incentive to validators to protect their networks to maintain the stability of Provenance Blockchain.
 
 ### Considerations
 

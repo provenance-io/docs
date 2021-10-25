@@ -1,7 +1,7 @@
 ---
 description: >-
   Before you are able to execute P8e contracts, you must first publish
-  specifications to Provenance. These specifications define the ruleset that
+  specifications to Provenance Blockchain. These specifications define the ruleset that
   govern contracts.
 ---
 

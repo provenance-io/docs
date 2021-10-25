@@ -10,7 +10,7 @@ description: >-
 
 Many intermediaries argue that their services are necessary for the market to function. Who else will safeguard investors if not a trusted third party?  But such an argument is a false dichotomy as it presumes trust is necessary.
 
-Provenance reduces third party intermediation and internal staffing costs, promotes greater transparency and liquidity and allows for new kinds of financial engineering and business opportunities. The goal is that any firm using Provenance benefits from the blockchain, and pays ⅓ of that benefit back in fiat currency back to Provenance.
+Provenance reduces third party intermediation and internal staffing costs, promotes greater transparency and liquidity and allows for new kinds of financial engineering and business opportunities. The goal is that any firm using Provenance benefits from the blockchain, and pays ⅓ of that benefit back in fiat currency back to Provenance Blockchain.
 
 ### Distributed Trust
 

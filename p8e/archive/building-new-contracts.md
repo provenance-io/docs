@@ -70,8 +70,8 @@ New contracts or changes to existing contracts should be made in a branch of p8e
 The following three dependencies are required for processes to execute contracts:
 
 1. p8e-sdk - contains the components required to submit contracts and communicate with the Provenance Protocol and underlying blockchain network.
-2. p8e-contract - contains the contracts available for use within Provenance. Historical versions of the contracts are kept and can be used by changing the version number.
-3. p8e-proto - Provenance uses Protobufs to define input and output to contracts. p8e-proto contains the Protobuf definitions supported by Provenance. Similar to contracts, historical versions are kept and can be used by changing the version number.
+2. p8e-contract - contains the contracts available for use within Provenance Blockchain. Historical versions of the contracts are kept and can be used by changing the version number.
+3. p8e-proto - Provenance uses Protobufs to define input and output to contracts. p8e-proto contains the Protobuf definitions supported by Provenance Blockchain. Similar to contracts, historical versions are kept and can be used by changing the version number.
 
 ## Contract Watchers
 

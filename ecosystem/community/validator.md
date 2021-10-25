@@ -32,7 +32,7 @@ Active validators are each given a turn to propose a block to be committed using
 
 #### Voting 
 
-Voting within the Provenance ecosystem allows staked-Hash holders to direct the development of the network. When governance proposals are being voted upon, validators will vote with the full weight of not only the validator's staked Hash, but the delegator's staked Hash as well, if those delegators haven't voted. Since delegators will not always vote for proposals on the network, this gives validator's more voting power to determine the direction of Provenance. 
+Voting within the Provenance ecosystem allows staked-Hash holders to direct the development of the network. When governance proposals are being voted upon, validators will vote with the full weight of not only the validator's staked Hash, but the delegator's staked Hash as well, if those delegators haven't voted. Since delegators will not always vote for proposals on the network, this gives validator's more voting power to determine the direction of Provenance Blockchain. 
 
 #### Gas Price
 
@@ -52,7 +52,7 @@ A validator node must only sign valid blocks and must not issue more than one si
 
 #### Penalties
 
-Active validators that fail to meet the minimum availability requirements or are otherwise flagged for inappropriate behavior are subject to having a portion of their bonded stake slashed/burned.  This penalty enforcement typically ranges from 1% to 20% based on configuration and includes a permanent ban for the most severe behavior.  Delegators that pledge stake to the validator node will also be penalized which is additional incentive to validators to protect their networks to maintain the stability of Provenance.
+Active validators that fail to meet the minimum availability requirements or are otherwise flagged for inappropriate behavior are subject to having a portion of their bonded stake slashed/burned.  This penalty enforcement typically ranges from 1% to 20% based on configuration and includes a permanent ban for the most severe behavior.  Delegators that pledge stake to the validator node will also be penalized which is additional incentive to validators to protect their networks to maintain the stability of Provenance Blockchain.
 
 ### Considerations
 

@@ -34,7 +34,7 @@ Being a delegator is not a passive task. Here are the main directives of a deleg
 
 ## Revenue
 
-Validators and delegators earn revenue in exchange for their services using transaction fees. Every transaction on Provenance incurs a transaction fee \(refer to [Gas and Fees section](../blockchain/basics/gas-and-fees.md)\). These fees can be paid in any currency that is whitelisted by Provenance's governance, with Hash being the current default currency. Collected transaction fees are pooled globally and distributed to bonded Hash holders in proportion to their stake.
+Validators and delegators earn revenue in exchange for their services using transaction fees. Every transaction on Provenance incurs a transaction fee \(refer to [Gas and Fees section](../blockchain/basics/gas-and-fees.md)\). These fees can be paid in any currency that is whitelisted by Provenance Blockchain's governance, with Hash being the current default currency. Collected transaction fees are pooled globally and distributed to bonded Hash holders in proportion to their stake.
 
 ## Validator Commission
 

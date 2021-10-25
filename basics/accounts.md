@@ -12,7 +12,7 @@ On Provenance an [account](https://docs.cosmos.network/v0.41/basics/accounts.htm
 
 `Addresses` and `PubKey`s are both public information that identifies actors on the blockchain. `Account` is used to store authentication information. 
 
-Each account is identified using an `address` which is a sequence of bytes derived from a public key. In Provenance, 3 types of addresses that specify a context where an account is used:
+Each account is identified using an `address` which is a sequence of bytes derived from a public key. In Provenance Blockchain, 3 types of addresses that specify a context where an account is used:
 
 * `AccAddress` identifies users \(the sender of a `message`\).
 * `ValAddress` identifies validator operators.
@@ -187,5 +187,5 @@ Addresses are numbered from index 0 in sequentially increasing manner. This numb
 
 Unhardened derivation is used at this level. However, keys that Provenance custodies on behalf of Provenance Identities \(i.e. Users\) are hardened at this level.
 
-In Provenance, the Address Index is used as the key for things of value like coins, markers, names and tags.
+In Provenance Blockchain, the Address Index is used as the key for things of value like coins, markers, names and tags.
 

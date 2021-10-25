@@ -13,7 +13,7 @@ Gas is a consumable that is used to power the Provenance blockchain. Each execut
 * How much gas do I need to process my transaction? 
 * What is the current price of gas?
 
-Before each transaction invoked on Provenance, an estimate of the amount of gas you need is made. The estimated gas needed is the maximum you'll pay for the given transaction. Over estimating will lead to purchasing more gas than needed and under estimating will cause the submitted transaction to fail due to running out of gas. 
+Before each transaction invoked on Provenance Blockchain, an estimate of the amount of gas you need is made. The estimated gas needed is the maximum you'll pay for the given transaction. Over estimating will lead to purchasing more gas than needed and under estimating will cause the submitted transaction to fail due to running out of gas. 
 
 ### Meter 
 
@@ -152,7 +152,7 @@ Note: gas prices are normally denoted in nHash \( 1Hash = 1,000,000,000 nHash\).
 
 ## Fees 
 
-Fees are the total amount of Hash collected for consumed gas during the processing and minting of a block on Provenance. **Community** and **Block Proposer** fees are set by governance proposals allowing Hash holders to vote to adjust these fee percentages as necessary. Delegators can choose validators that have a lower commission to optimize the amount of fees collected from the network. 
+Fees are the total amount of Hash collected for consumed gas during the processing and minting of a block on Provenance Blockchain. **Community** and **Block Proposer** fees are set by governance proposals allowing Hash holders to vote to adjust these fee percentages as necessary. Delegators can choose validators that have a lower commission to optimize the amount of fees collected from the network. 
 
 ## Distribution
 

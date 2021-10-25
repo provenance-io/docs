@@ -55,9 +55,9 @@ When this contract is executed, name is required to be supplied to fulfill the n
 
 ## Contract Bootstrapping
 
-Once contracts are defined like was shown above, there's a bootstrapping phase that's necessary before the contracts can be executed to record data to Provenance. A [gradle plugin](https://github.com/provenance-io/p8e-gradle-plugin) is provided that is capable of bootstrapping JVM based JARs that contain Java or Kotlin based P8eContract implementations.
+Once contracts are defined like was shown above, there's a bootstrapping phase that's necessary before the contracts can be executed to record data to Provenance Blockchain. A [gradle plugin](https://github.com/provenance-io/p8e-gradle-plugin) is provided that is capable of bootstrapping JVM based JARs that contain Java or Kotlin based P8eContract implementations.
 
-The plugin exposes mutiple tasks that can be used to check contract syntax, persist the contract specifications and JARs to Object Store, and memorializing the scope and contract specifications to Provenance. That uberjar \(fully packaged Java JAR, including all dependencies\) is saved to Object Store so that the exact uberjar has the ability to be loaded into the Java memory class loader and executed by all contract participants.
+The plugin exposes mutiple tasks that can be used to check contract syntax, persist the contract specifications and JARs to Object Store, and memorializing the scope and contract specifications to Provenance Blockchain. That uberjar \(fully packaged Java JAR, including all dependencies\) is saved to Object Store so that the exact uberjar has the ability to be loaded into the Java memory class loader and executed by all contract participants.
 
 This is the first point at which a Provenance account would be needed. Due to transaction sequencing, it is **highly** recommended that a separate, standalone, Provenance account is used strictly for use with the plugin for bootstrapping. Any participants that need to have access to the contract specifications or JARs can be included as participants in the plugin configuration.
 

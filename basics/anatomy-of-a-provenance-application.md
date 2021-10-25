@@ -45,7 +45,7 @@ Where the `gRPC` interface provides access to the Provenance blockchain modules,
 
 Multiple Figure applications leverage the `gRPC` and Event Manager interfaces including:
 
-* Figure Pay: a payment application that uses stable coin, ledgered on Provenance, for consumer-to-consumer and consumer-to-business payment transactions.  
+* Figure Pay: a payment application that uses stable coin, ledgered on Provenance Blockchain, for consumer-to-consumer and consumer-to-business payment transactions.  
 * Figure Lending: asset on-boarding and funding, pooling, and ownership exchange.
 * Figure Marketplace: an asset exchange and marketplace.
 

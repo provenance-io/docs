@@ -20,7 +20,7 @@ Fees are determined by the gas limits and gas prices transactions provide, where
 
 When adding transactions to the [mempool or gossipping transactions](transaction-lifecycle.md), nodes check if the transaction's gas prices, which are determined by the provided fees, meet the node's minimum gas prices.
 
-Thus, on Provenance, [`gas` is a special unit that is used to track the consumption of resources ](https://docs.cosmos.network/master/basics/gas-fees.html)during transaction execution to ensure:
+Thus, on Provenance Blockchain, [`gas` is a special unit that is used to track the consumption of resources ](https://docs.cosmos.network/master/basics/gas-fees.html)during transaction execution to ensure:
 
 * Blocks are not consuming too many resources and will be finalized.
 * No spam or abuse from end-users.
@@ -42,7 +42,7 @@ The Conceptual Gas Flow diagram illustrates the transaction request gas calculat
 * The Transaction Request is submitted to a node, which in turn may submit it to other nodes until it reaches a validator node.  Each node sets their own **Minimum Gas Price.** 
 * Provenance will validate that the requested **Gas Price** &gt;= **Minimum Gas Prices** for all selected nodes involved.
   * If the requested **Gas Price** is too low, the transaction is rejected and an error is sent back to the requestor.
-* Based on the transaction type and size, a **Gas Needed** amount is calculated by Provenance.
+* Based on the transaction type and size, a **Gas Needed** amount is calculated by Provenance Blockchain.
 * Provenance calculates a **Required Fee** as `Gas Needed * Minimum Gas Price`.
 * If the **Requested Fee** &gt;= **Required Fee** the **Requested Fee** is deducted from the requestor's account and the transaction is submitted.
 * If the **Requested Fee** &lt; **Required Fee** the **Requested Fee** is deducted from the requestor's account, the transaction is marked as error, and an error is returned to the requestor.

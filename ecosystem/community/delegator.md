@@ -44,5 +44,5 @@ Bonded Hash can't be immediately transacted due to the unbonding period. When Ha
 
 #### Slashing
 
-In order to keep validators accountable for running the blockchain securely the network will slash stake in certain scenarios. It is good to note that delegators share in this risk because they too have Hash staked on Provenance. 
+In order to keep validators accountable for running the blockchain securely the network will slash stake in certain scenarios. It is good to note that delegators share in this risk because they too have Hash staked on Provenance Blockchain. 
 

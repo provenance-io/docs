@@ -8,7 +8,7 @@ description: The evolution of the Provenance blockchain from 1.0 to 2.0
 
 Provenance is the leading production blockchain protocol for the financial services industry. It is a permissioned, proof of stake protocol that acts as a global ledger, registry and exchange across assets and markets.
 
-Provenance Platform builds on a strong core of open source including a diverse set of messaging, networking, systems orchestration and blockchain technology. The initial process of developing the platform included an in depth evaluation of many different open source projects for potential use in the core of Provenance.
+Provenance Platform builds on a strong core of open source including a diverse set of messaging, networking, systems orchestration and blockchain technology. The initial process of developing the platform included an in depth evaluation of many different open source projects for potential use in the core of Provenance Blockchain.
 
 Software projects were evaluated against several different criteria including:
 
@@ -214,7 +214,7 @@ The Ethereum blockchain remains the first and most successful programmable block
 
 The Ethereum Foundation has recognized the significant shortcomings of using a single ledger and a proof-of-work method for consensus, both of which are significant limits to the scalability of the current network. In response Ethereum is developing a 2.0 version that moves to a proof-of-stake solution along with sharding data between zones to facilitate increased transaction volume. The initial version of the Ethereum 2.0 network was successfully staked in December 2020 with the fully operational network planned for 2022\[1\].
 
-Ultimately Provenance requires proven solutions to these problems today and cannot afford to wait more than a year for a potential resolution. In addition the design of the public network itself means that governance and control of the underlying network is not intended to support Provenance's requirements directly and is by definition targeted at the lowest common denominator for all global uses.
+Ultimately Provenance requires proven solutions to these problems today and cannot afford to wait more than a year for a potential resolution. In addition the design of the public network itself means that governance and control of the underlying network is not intended to support Provenance Blockchain's requirements directly and is by definition targeted at the lowest common denominator for all global uses.
 
 ### Solana
 

@@ -1,6 +1,6 @@
 # Blockchain FAQ
 
-## What’s the difference between Provenance, the Cosmos Network, and the Cosmos Hub? <a id="whats-the-difference-between-provenance-the-cosmos-network-and-the-cosmos-hub"></a>
+## What’s the difference between Provenance Blockchain, the Cosmos Network, and the Cosmos Hub? <a id="whats-the-difference-between-provenance-the-cosmos-network-and-the-cosmos-hub"></a>
 
 The Cosmos Network is a network of heterogeneous blockchains connected via the Cosmos Hub \(i.e. a router\) and a standard communication layer called the Inter-Blockchain Communication protocol \(i.e. TCP/IP\).
 

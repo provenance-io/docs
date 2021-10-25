@@ -1,6 +1,6 @@
 # Data Retrieval
 
-When transacting on Provenance, contract hashed execution results are memorialized to the blockchain. Asset data is saved in an encrypted object store hosted by each participant involved in a transaction.
+When transacting on Provenance Blockchain, contract hashed execution results are memorialized to the blockchain. Asset data is saved in an encrypted object store hosted by each participant involved in a transaction.
 
 This section describes how data is retrieved from the blockchain and encrypted object store.
 

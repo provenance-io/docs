@@ -1,6 +1,6 @@
 # P8e Transition Flow
 
-The following diagram outlines the flow of data for typical transactions proposed to Provenance.
+The following diagram outlines the flow of data for typical transactions proposed to Provenance Blockchain.
 
 ![](../../.gitbook/assets/provenance-p8e-txn-flow%20%284%29.png)
 
@@ -9,7 +9,7 @@ The following diagram outlines the flow of data for typical transactions propose
 3. Each affiliate’s Encrypted Object Store is updated with the encrypted asset data resulting in each participating affiliate having a copy of the asset data.
 4. Using their copy of the asset data, each affiliate participating in the transaction executes the contracts.
 5. The hashed results of the contract executions are returned to the submitting affiliate’s execution environment.
-6. All hashed execution results are sent to Provenance.
+6. All hashed execution results are sent to Provenance Blockchain.
 7. The hashed results are validated by the validators. If the majority agree, the transaction is proposed to the blockchain.
 8. Provenance emits events notifying affiliates the contract has been committed on the blockchain.
 9. The index is updated with the new contract information. This information is used later for searching and querying the data.

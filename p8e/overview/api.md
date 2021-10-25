@@ -2,7 +2,7 @@
 
 ### Overview
 
-The P8e Contract Execution Software Development Kit \(SDK\) consists of a collection of JVM based libraries that help manage interactions with Provenance, or more specifically, "scopes" as defined by the Metadata module.
+The P8e Contract Execution Software Development Kit \(SDK\) consists of a collection of JVM based libraries that help manage interactions with Provenance Blockchain, or more specifically, "scopes" as defined by the Metadata module.
 
 The [SDK](https://github.com/provenance-io/p8e-scope-sdk) repository is the best source for more concrete descriptions and runnable examples. It also contains a docker-compose environment that allows for running a complete local stack.
 

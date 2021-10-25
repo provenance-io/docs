@@ -15,7 +15,7 @@ You will need a key pair stored in the local Keyring to run the transaction comm
 With a key pair and address we can submit transactions to the blockchain.
 
 {% hint style="info" %}
-Use `provenanced tx --help` to view the types of transactions supported by Provenance.
+Use `provenanced tx --help` to view the types of transactions supported by Provenance Blockchain.
 
 Transaction requests from the command-line follow the form:
 

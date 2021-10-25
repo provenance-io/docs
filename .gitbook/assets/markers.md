@@ -4,7 +4,7 @@ Wallets:
 
 Provenance uses Hierarchical Deterministic wallets (or \"HD Wallets\"). Each identity in Provenance will have a wallet with the following structure.
 
-Each identity will have a Master Node or root. This is the master extended key. Each child extended key is derived from the parent extended key. The next level is Purpose which is a constant set to 44\' indicating that the subtree of this node is used according to this specification. The next level is Coin Type which is also a constant set to 505\' signifying Provenance's registered coin type. The next level is Account which is equivalent to a Custodial Wallet. Accounts are generated from the root account. Scope is used to distinguish between internal and external addresses. The last node is where accounts are identified by addresses within a wallet. Addresses consist of the following four parts:
+Each identity will have a Master Node or root. This is the master extended key. Each child extended key is derived from the parent extended key. The next level is Purpose which is a constant set to 44\' indicating that the subtree of this node is used according to this specification. The next level is Coin Type which is also a constant set to 505\' signifying Provenance Blockchain's registered coin type. The next level is Account which is equivalent to a Custodial Wallet. Accounts are generated from the root account. Scope is used to distinguish between internal and external addresses. The last node is where accounts are identified by addresses within a wallet. Addresses consist of the following four parts:
 
 1.  human readable prefix
 

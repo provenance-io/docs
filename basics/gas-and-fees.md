@@ -6,7 +6,7 @@ description: Provenance transaction gas and fees.
 
 ## Gas Definition
 
-On Provenance, [`gas` is a special unit that is used to track the consumption of resources ](https://docs.cosmos.network/master/basics/gas-fees.html)during transaction execution. `gas` is typically consumed whenever read and writes are made to a Provenance state store, but it can also be consumed if expensive computation needs to be done. It serves two main purposes:
+On Provenance Blockchain, [`gas` is a special unit that is used to track the consumption of resources ](https://docs.cosmos.network/master/basics/gas-fees.html)during transaction execution. `gas` is typically consumed whenever read and writes are made to a Provenance state store, but it can also be consumed if expensive computation needs to be done. It serves two main purposes:
 
 * Make sure blocks are not consuming too many resources and will be finalized. This is implemented by default via the [block gas meter](https://docs.cosmos.network/master/basics/accounts.html#block-gas-meter).
 * Prevent spam and abuse from end-users. `gas` consumed during [`message`](https://docs.cosmos.network/master/building-modules/messages-and-queries.html#messages) execution is typically priced, resulting in a `fee` \(`fees = gas * gas-prices`\). `fees` generally have to be paid by the sender of the `message`.

@@ -102,7 +102,7 @@ Addresses are numbered from index 0 in sequentially increasing manner. This numb
 
 Unhardened derivation is used at this level. However, keys that Provenance custodies on behalf of Provenance Identities \(i.e. Users\) are hardened at this level.
 
-In Provenance, the Address Index is used as the key for things of value like coins, markers, names and tags.
+In Provenance Blockchain, the Address Index is used as the key for things of value like coins, markers, names and tags.
 
 ### Ideal <a id="Ideal"></a>
 

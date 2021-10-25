@@ -65,7 +65,7 @@ mkdir -p $PIO_HOME/config
 
 ### Download and Install Provenance
 
-Use `git` to download the `0.2.0` version of Provenance.
+Use `git` to download the `0.2.0` version of Provenance Blockchain.
 
 ```bash
 git clone -b v0.2.0 https://github.com/provenance-io/provenance.git

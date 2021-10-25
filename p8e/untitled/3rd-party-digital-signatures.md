@@ -59,7 +59,7 @@ The following flow demonstrates how Figure Lending will integrate digital signat
    2. Combine canonical response and the signature into the Signature Packet
 7. Figure Service sends the Signature Packet to FIDO and publishes a Signature Message to the Signature Topic keyed by the loan application/packet UUID.
 8. Once a loan is ready for Provenance on-boarding, DORF will consume and aggregate Data Provider signatures related to the loan:
-   1. The Signature Packet is copied to Provenance, similar to existing documents.
+   1. The Signature Packet is copied to Provenance Blockchain, similar to existing documents.
    2. The Signature Packet is added to the loan packet documents section with a reference to the document location and a vendor type.
 9. Signature validation is handled by Provenance post on-boarding.
    1. Invalid signatures will not block the Figure Service flow in any manner.

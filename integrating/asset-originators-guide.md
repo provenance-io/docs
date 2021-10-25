@@ -8,7 +8,7 @@ description: A suggested process for getting started with loading assets onto Pr
 This guide uses loans as the example digital asset, but the process can be applied to any type of asset.
 {% endhint %}
 
-This guide walks through the steps necessary to create an application using Provenance Blockchain and the [P8e Contract Execution Environment ](../p8e/overview/)to load and fund digital assets on chain. In the example, digital loans are boarded to Provenance, funded with stablecoin, and listed on the Figure Portfolio Manager \(PM\).
+This guide walks through the steps necessary to create an application using Provenance Blockchain and the [P8e Contract Execution Environment ](../p8e/overview/)to load and fund digital assets on chain. In the example, digital loans are boarded to Provenance Blockchain, funded with stablecoin, and listed on the Figure Portfolio Manager \(PM\).
 
 ## Example Application
 

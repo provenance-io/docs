@@ -6,13 +6,13 @@ description: Understanding the Provenance accounts system.
 
 ## Overview
 
-On Provenance, an [account](https://docs.cosmos.network/v0.41/basics/accounts.html) designates a pair of _public key_ `PubKey` and _private key_ `PrivKey`. The `PubKey` is used to generate an `address` that is used to identify users \(among other parties\) on the blockchain. `Addresses` are also associated with `messages` to identify the sender of the `message`. The `PrivKey` is used to generate [digital signatures](https://docs.cosmos.network/master/basics/query-lifecycle.html#signatures) to prove that an `address`associated with the `PrivKey` approved of a given `message`.
+On Provenance Blockchain, an [account](https://docs.cosmos.network/v0.41/basics/accounts.html) designates a pair of _public key_ `PubKey` and _private key_ `PrivKey`. The `PubKey` is used to generate an `address` that is used to identify users \(among other parties\) on the blockchain. `Addresses` are also associated with `messages` to identify the sender of the `message`. The `PrivKey` is used to generate [digital signatures](https://docs.cosmos.network/master/basics/query-lifecycle.html#signatures) to prove that an `address`associated with the `PrivKey` approved of a given `message`.
 
 ### Addresses <a id="addresses"></a>
 
 `Addresses` and `PubKey`s are both public information that identifies actors on the blockchain. `Account` is used to store authentication information. 
 
-Each account is identified using an `address` which is a sequence of bytes derived from a public key. In Provenance, 3 types of addresses specify a context where an account is used:
+Each account is identified using an `address` which is a sequence of bytes derived from a public key. In Provenance Blockchain, 3 types of addresses specify a context where an account is used:
 
 * `AccAddress` identifies users \(the sender of a `message`\).
 * `ValAddress` identifies validator operators.
@@ -101,7 +101,7 @@ HD Wallet addresses follow a "hierarchical" format:
 
 ![](../../.gitbook/assets/wallets.png)
 
-The wallet will have a **Master Node** or root. This is the master extended key. Each child extended key is derived from the parent extended key. The next level is **Purpose** which is a constant set to `44'` indicating that the subtree of this node is used according to this specification. The next level is **Coin Type** which is also a constant set to `505'` signifying [Provenance's registered coin type](https://github.com/satoshilabs/slips/blob/master/slip-0044.md). The next level is **Account** which is equivalent to a Custodial Wallet. Accounts are generated from the root account. **Scope** is used to distinguish between internal and external addresses. The last node is where **accounts** are identified by addresses within a wallet. Addresses consist of the following four parts:
+The wallet will have a **Master Node** or root. This is the master extended key. Each child extended key is derived from the parent extended key. The next level is **Purpose** which is a constant set to `44'` indicating that the subtree of this node is used according to this specification. The next level is **Coin Type** which is also a constant set to `505'` signifying [Provenance Blockchain's registered coin type](https://github.com/satoshilabs/slips/blob/master/slip-0044.md). The next level is **Account** which is equivalent to a Custodial Wallet. Accounts are generated from the root account. **Scope** is used to distinguish between internal and external addresses. The last node is where **accounts** are identified by addresses within a wallet. Addresses consist of the following four parts:
 
 1. human readable prefix
 2. separator
@@ -215,5 +215,5 @@ Addresses are numbered from index 0 in sequentially increasing manner. This numb
 
 Unhardened derivation is used at this level. However, keys that Provenance custodies on behalf of Provenance Identities \(i.e. Users\) are hardened at this level.
 
-In Provenance, the Address Index is used as the key for items of value like coins, markers, names and tags.
+In Provenance Blockchain, the Address Index is used as the key for items of value like coins, markers, names and tags.
 
