@@ -32,7 +32,7 @@ Bounty: 4\* $2500 = $10,000
 
 ### College-level DeFi course based on Provenance Blockchain ecosystem 
 
-Develop a one semester undergraduate/graduate course that teaches DeFi concepts using blockchain-based applications. The course will include Provenance Blockchain as an example, and will have students develop basic DeFi-apps that leverage the Provenance Blockchain blockchain ecosystem. Make course material freely available \(public domain\) to encourage adoption world-wide.   
+Develop a one semester undergraduate/graduate course that teaches DeFi concepts using blockchain-based applications. The course will include Provenance Blockchain as an example, and will have students develop basic DeFi-apps that leverage the Provenance Blockchain ecosystem. Make course material freely available \(public domain\) to encourage adoption world-wide.   
 Effort: 4w - prof/TA   
 Bounty: 4\* $3500 = $14,000
 

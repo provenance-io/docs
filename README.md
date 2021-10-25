@@ -8,21 +8,21 @@ description: >-
 
 ## Getting Started
 
-> The Provenance Blockchain blockchain is based on the [Cosmos SDK ](https://docs.cosmos.network/v0.42/)and the [Tendermint](https://docs.tendermint.com/master/) blockchain application platforms.  It is useful to have a basic understanding of both these technologies prior to reading the Provenance Blockchain documentation. Refer to the [Cosmos SDK basics documentation](https://docs.cosmos.network/v0.42/intro/overview.html) and the [Tendermint overview](https://docs.tendermint.com/master/introduction/what-is-tendermint.html#) for more information.
+> The Provenance Blockchain is based on the [Cosmos SDK ](https://docs.cosmos.network/v0.42/)and the [Tendermint](https://docs.tendermint.com/master/) blockchain application platforms.  It is useful to have a basic understanding of both these technologies prior to reading the Provenance Blockchain documentation. Refer to the [Cosmos SDK basics documentation](https://docs.cosmos.network/v0.42/intro/overview.html) and the [Tendermint overview](https://docs.tendermint.com/master/introduction/what-is-tendermint.html#) for more information.
 
-Read about the Provenance Blockchain blockchain and financial services:
+Read about the Provenance Blockchain and financial services:
 
 {% content-ref url="blockchain/introduction/" %}
 [introduction](blockchain/introduction/)
 {% endcontent-ref %}
 
-Start with the basics of the Provenance Blockchain blockchain network:
+Start with the basics of the Provenance Blockchain network:
 
 {% content-ref url="blockchain/basics/" %}
 [basics](blockchain/basics/)
 {% endcontent-ref %}
 
-Install the Provenance Blockchain blockchain application, and start running a node:
+Install the Provenance Blockchain application, and start running a node:
 
 {% content-ref url="blockchain/running-a-node/" %}
 [running-a-node](blockchain/running-a-node/)

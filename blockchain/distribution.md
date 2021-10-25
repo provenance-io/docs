@@ -8,7 +8,7 @@ description: >-
 
 ## What is gas? 
 
-Gas is a consumable that is used to power the Provenance Blockchain blockchain. Each execution of the blockchain requires enough gas to complete the requires reads, writes, and computation encompassed by the submitted transaction\(s\). When using gas you need to know two things:
+Gas is a consumable that is used to power the Provenance Blockchain. Each execution of the blockchain requires enough gas to complete the requires reads, writes, and computation encompassed by the submitted transaction\(s\). When using gas you need to know two things:
 
 * How much gas do I need to process my transaction? 
 * What is the current price of gas?

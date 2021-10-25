@@ -2,7 +2,7 @@
 
 ## Does Provenance Blockchain have a token?
 
-Yes, the Provenance Blockchain blockchain network has the Hash utility token that is used to pay for transactions \(gas fees\), staking, and grants.
+Yes, the Provenance Blockchain network has the Hash utility token that is used to pay for transactions \(gas fees\), staking, and grants.
 
 ## What is the initial allocation of Hash? <a id="what-is-the-initial-allocation-of-hash"></a>
 
@@ -16,7 +16,7 @@ The number of Hash utility-tokens that have been minted is 100,000,000,000. This
 
 Hash has three use cases: as a spam-prevention mechanism, as a staking token, and as a voting mechanism in governance.
 
-As a spam-prevention mechanism, Hash is used to pay fees for validating Provenance Blockchain blockchain transactions. Similar to Ethereum’s concept of “gas”, the fee may be proportional to the amount of computation required by the transaction.
+As a spam-prevention mechanism, Hash is used to pay fees for validating Provenance Blockchain transactions. Similar to Ethereum’s concept of “gas”, the fee may be proportional to the amount of computation required by the transaction.
 
 As staking tokens, Hash may be “bonded” to earn block rewards. The economic security of the Provenance Blockchain network is a function of the amount of Hash staked. The more Hash that is collateralized, the more “skin” there is at stake and the higher the cost of attacking the network. Thus, the more Hash there are bonded, the greater the economic security of the network.
 

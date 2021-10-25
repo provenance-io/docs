@@ -11,7 +11,7 @@ description: >-
 Provenance Blockchain is composed of these core concepts:
 
 * Modules that implement financial services business logic.  Modules are composed to realize complex financial services processes.
-* Smart Contracting engine to develop and deploy contracts directly to the Provenance Blockchain blockchain.
+* Smart Contracting engine to develop and deploy contracts directly to the Provenance Blockchain.
 * Off-chain client-side agreements using the Contract Execution Environment.
 
 Provenance Blockchain distinguishes three types of applications based on these core concepts:
@@ -30,7 +30,7 @@ Financial transactions often consist of on-chain and side-chain parts. For finan
 
 ## Provenance Blockchain Node
 
-A Provenance Blockchain Node is a daemon process \(`provenanced`\) [Full-Node Client](https://docs.cosmos.network/v0.41/core/node.html) implementation.  It is the core process that runs the Provenance Blockchain blockchain. It runs the state-machine, starting from a genesis file, and connects to peers on the network running the same client to receive and relay transactions, block proposals and signatures.  Participants in the network run this process to initialize their state-machine, connect with other full-nodes and update their state-machine as new blocks come in.  The blockchain full-node presents itself as the `provenanced` binary.
+A Provenance Blockchain Node is a daemon process \(`provenanced`\) [Full-Node Client](https://docs.cosmos.network/v0.41/core/node.html) implementation.  It is the core process that runs the Provenance Blockchain. It runs the state-machine, starting from a genesis file, and connects to peers on the network running the same client to receive and relay transactions, block proposals and signatures.  Participants in the network run this process to initialize their state-machine, connect with other full-nodes and update their state-machine as new blocks come in.  The blockchain full-node presents itself as the `provenanced` binary.
 
 Nodes in the network include:
 
@@ -46,7 +46,7 @@ Nodes in the network include:
 
 ### Modules
 
-[Modules](https://docs.cosmos.network/v0.41/building-modules/intro.html) define the Provenance Blockchain blockchain logic. Provenance Blockchain is composed of modules from the Cosmos SDK and custom modules to support value markers and the client-side Contract Execution Environment.  Modules provide core functionality blockchain applications needs like a [boilerplate implementation of the ABCI](https://docs.cosmos.network/v0.41/core/baseapp.html) to communicate with the underlying consensus engine, a [multistore](https://docs.cosmos.network/v0.41/core/store.html#multistore) to persist state, a [server](https://docs.cosmos.network/v0.41/core/node.html) to form a full-node and [interfaces](https://docs.cosmos.network/v0.41/interfaces/interfaces-intro.html) to handle queries.  Modules implement the bulk of the logic of financial service applications and  the core does the wiring and enables modules to be composed together. 
+[Modules](https://docs.cosmos.network/v0.41/building-modules/intro.html) define the Provenance Blockchain logic. Provenance Blockchain is composed of modules from the Cosmos SDK and custom modules to support value markers and the client-side Contract Execution Environment.  Modules provide core functionality blockchain applications needs like a [boilerplate implementation of the ABCI](https://docs.cosmos.network/v0.41/core/baseapp.html) to communicate with the underlying consensus engine, a [multistore](https://docs.cosmos.network/v0.41/core/store.html#multistore) to persist state, a [server](https://docs.cosmos.network/v0.41/core/node.html) to form a full-node and [interfaces](https://docs.cosmos.network/v0.41/interfaces/interfaces-intro.html) to handle queries.  Modules implement the bulk of the logic of financial service applications and  the core does the wiring and enables modules to be composed together. 
 
 Modules can be seen as little state-machines within the state-machine. They generally define a subset of the state using one or more key-value stores and message types.
 
@@ -92,7 +92,7 @@ Client side contracts differ from Smart Contracts in that they keep your data pr
 
 ### Transaction Flow
 
-Entities and organizations utilize the Contract Execution Environment to submit contracts to create single or multi-party agreements.  Entities use key pairs consisting of a public and private key.  Entities are known to each other using public keys and share data with each other using public keys.  Contracts and asset data are forwarded to all entities participating in the contract by public key identifier.  Entities provide an implementation of an Encrypted Object Store where encrypted data related to their public key is stored.  Contract execution uses data from the entity EOS and the results of the contract executions are returned to the submitting entity's execution environment.  The hash-ids of the Contract execution results, i.e. the cryptograph hash of its content, are submitted to the Provenance Blockchain blockchain \(via the Metadata module\) where they are validated and committed to the chain.  Provenance Blockchain emits events notifying entities the contract has been committed on the blockchain.  An index, local to the entity, is updated with the new contract information. This information is used later for searching and querying the data.
+Entities and organizations utilize the Contract Execution Environment to submit contracts to create single or multi-party agreements.  Entities use key pairs consisting of a public and private key.  Entities are known to each other using public keys and share data with each other using public keys.  Contracts and asset data are forwarded to all entities participating in the contract by public key identifier.  Entities provide an implementation of an Encrypted Object Store where encrypted data related to their public key is stored.  Contract execution uses data from the entity EOS and the results of the contract executions are returned to the submitting entity's execution environment.  The hash-ids of the Contract execution results, i.e. the cryptograph hash of its content, are submitted to the Provenance Blockchain \(via the Metadata module\) where they are validated and committed to the chain.  Provenance Blockchain emits events notifying entities the contract has been committed on the blockchain.  An index, local to the entity, is updated with the new contract information. This information is used later for searching and querying the data.
 
 Refer to the [Contract Execution Environment](../p8e/overview.md) for information and tutorials.
 

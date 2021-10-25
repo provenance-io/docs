@@ -4,7 +4,7 @@ description: Provenance Blockchain transaction gas and fees.
 
 # Gas and Fees
 
-Gas is a consumable that is used to power the Provenance Blockchain blockchain. Each execution of the blockchain requires enough gas to complete the requires reads, writes, and computation encompassed by the submitted transaction\(s\).  
+Gas is a consumable that is used to power the Provenance Blockchain. Each execution of the blockchain requires enough gas to complete the requires reads, writes, and computation encompassed by the submitted transaction\(s\).  
 
 {% hint style="info" %}
 Refer to the [Fees/Distribution section](../../ecosystem/financial-services-blockchain/distribution.md) for information on how the Provenance Blockchain fee economy operates.

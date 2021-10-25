@@ -69,7 +69,7 @@ A multi-tier network architecture is recommended to secure validators. Each tier
 | :--- | :--- |
 | Public Sentry | Public Sentry nodes are available to the world and provide a proxy for the network. |
 | Private Sentry | Private Sentry nodes provide an interconnect layer that can be used to provide more direct integration with large foundational Provenance Blockchain systems. |
-| Validator | The core of the Provenance Blockchain blockchain that should be isolated from all public-facing networks. |
+| Validator | The core of the Provenance Blockchain that should be isolated from all public-facing networks. |
 | KMS | Key Management Service - A remote signing platform that secures access to encryption keys. |
 
 ![Recommended Network Architecture](../../.gitbook/assets/securing-provenanced-validator-2-%20%281%29.png)

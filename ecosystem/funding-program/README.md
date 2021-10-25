@@ -2,7 +2,7 @@
 
 The Foundation is seeded with a generous fund to support the foundation's operation, the core infrastructure, and a grants program for Improvement Projects \(PIPs\). 
 
-Ongoing funding is provided by levying fees \(gas\) on the use of the Provenance Blockchain blockchain network services. 
+Ongoing funding is provided by levying fees \(gas\) on the use of the Provenance Blockchain network services. 
 
 The Provenance Blockchain native utility-token to pay for services is **Hash**, which can be freely bought and sold on publicly exchanges.
 

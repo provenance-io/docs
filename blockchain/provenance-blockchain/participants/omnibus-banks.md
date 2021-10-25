@@ -1,6 +1,6 @@
 # Omnibus Banks
 
-The omnibus bank plays a critical role in the Provenance Blockchain ecosystem, providing a bridge between Provenance Blockchain blockchain and fiat currency.  
+The omnibus bank plays a critical role in the Provenance Blockchain ecosystem, providing a bridge between Provenance Blockchain and fiat currency.  
 
 
 The primary role of the omnibus bank is to hold fiat deposits and correspondingly mint and burn stablecoin on Provenance Blockchain to match these fiat deposits.  Stablecoin is critical to support bilateral transactions on Provenance Blockchain that are absent of counterparty and settlement risk.  Banks take ownership of and use a Figure-built API to interface with Provenance Blockchain.  Banks earn float on the fiat deposits underlying the stablecoin for the performance of the minting and burning functions.

@@ -10,7 +10,7 @@ This section uses the `provenanced` application to connect to the Provenance Blo
 
 ## Query Command
 
-Querying the Provenance Blockchain blockchain is one of the simplest use cases for `provenanced`. 
+Querying the Provenance Blockchain is one of the simplest use cases for `provenanced`. 
 
 ```text
 ~$ provenanced query --help

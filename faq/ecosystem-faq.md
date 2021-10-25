@@ -18,7 +18,7 @@ The open source license for all the code is the [Apache 2.0 license](https://www
 
 > Cosmos is the blockchain pioneer of the Hub & Spoke architecture. Hubs act as routers for Zones. “Zones” are Cosmos-speak for “application-specific blockchains”. Each Zone is a spoke connected to a hub. Hubs can be connected with other hubs. Together, this ecosystem of connected Hubs and Zones makes up the Cosmos Network, or what is commonly referred to as the ‘Internet of the Blockchains’. Note that the Cosmos ecosystem is entirely permission-less, meaning that anyone can create a Hub or a Zone, and each blockchain is free to accept or refuse connections with other blockchains.
 
-Within this Cosmos Network, the Provenance Blockchain blockchain network is considered a “Zone”, i.e. an application-specific blockchain that can exchange tokens with other blockchains through the IBC protocol.
+Within this Cosmos Network, the Provenance Blockchain network is considered a “Zone”, i.e. an application-specific blockchain that can exchange tokens with other blockchains through the IBC protocol.
 
 ## Where can I get Developer support? <a href="where-can-i-get-developer-support" id="where-can-i-get-developer-support"></a>
 
@@ -30,7 +30,7 @@ Visit the Provenance Blockchain Tutorials website to learn how to build your own
 
 ## What is the Provenance Blockchain SDK? <a href="what-is-the-provenance-sdk" id="what-is-the-provenance-sdk"></a>
 
-The Provenance Blockchain SDK is a modular development framework that allows developers to build and connect DeFi applications to the Provenance Blockchain blockchain.
+The Provenance Blockchain SDK is a modular development framework that allows developers to build and connect DeFi applications to the Provenance Blockchain.
 
 Read more about the [Provenance Blockchain SDK modules](../modules/inherited-modules.md).
 

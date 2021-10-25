@@ -1,5 +1,5 @@
 ---
-description: The evolution of the Provenance Blockchain blockchain from 1.0 to 2.0
+description: The evolution of the Provenance Blockchain from 1.0 to 2.0
 ---
 
 # History
@@ -194,7 +194,7 @@ On complex, dedicated infrastructure with explicit configuration requirements ve
 
 On specialized structure versus general purpose approaches:
 
-* Provenance Blockchain heavily favors a general purpose approach. The ability for developers to implement features rapidly in environments they are comfortable with has been an important factor in the current success of the Provenance Blockchain blockchain both for migrating business processes to the blockchain as well as refreshing the blockchain as the platform evolves. While specialized approaches including custom domain specific languages \(DSLs\), restrictive APIs or execution environments, exotic languages, and more may be selected for certain specific benefits, each of these techniques have extensive external costs that can negate any perceived benefits.
+* Provenance Blockchain heavily favors a general purpose approach. The ability for developers to implement features rapidly in environments they are comfortable with has been an important factor in the current success of the Provenance Blockchain both for migrating business processes to the blockchain as well as refreshing the blockchain as the platform evolves. While specialized approaches including custom domain specific languages \(DSLs\), restrictive APIs or execution environments, exotic languages, and more may be selected for certain specific benefits, each of these techniques have extensive external costs that can negate any perceived benefits.
 
 On methods of integration and extensions of a blockchain node
 
@@ -206,7 +206,7 @@ On distributed control and ownership of a network versus centralized models
 
 On support for non-custodial identities
 
-* Provenance Blockchain prefers that clients maintain the ability to "bring their own keys" to the blockchain without requiring centralized control or approval. Approaches that rely on certificates issued by a certificate authority or global governance board to control access are incompatible with the intended direction of Provenance Blockchain blockchain towards a decentralized public network.
+* Provenance Blockchain prefers that clients maintain the ability to "bring their own keys" to the blockchain without requiring centralized control or approval. Approaches that rely on certificates issued by a certificate authority or global governance board to control access are incompatible with the intended direction of Provenance Blockchain towards a decentralized public network.
 
 ### Ethereum 
 
@@ -220,7 +220,7 @@ Ultimately Provenance Blockchain requires proven solutions to these problems tod
 
 The Solana blockchain is a proof-of-stake \[history\] network built around concepts supporting very small and high speed transactions of value between accounts using special on chain programs.\[2\] This relatively narrow definition of what a blockchain can use for communication allows the Solana to handle extremely high transaction volumes with low latency at the cost of general purpose program features and additional developer complexity for adapting to the unique design constraints of the system.
 
-Any distributed system with a high transaction rate will see large variations in volume based on bandwidth utilization. Developers implementing solutions on Solana must contend with 4 kilobyte stack pages, limits on cross program calls, and overall compute budgets that keep on chain programs small and fast to execute\[3\]. These design trade-offs create a network that is not intended for complex processing or larger datasets. As the Provenance Blockchain blockchain is focused on providing detailed digital asset provenance, the blockchain must support larger data volumes in order to represent the digital asset history as well as potentially time consuming validation processes to ensure a complete and correct asset.
+Any distributed system with a high transaction rate will see large variations in volume based on bandwidth utilization. Developers implementing solutions on Solana must contend with 4 kilobyte stack pages, limits on cross program calls, and overall compute budgets that keep on chain programs small and fast to execute\[3\]. These design trade-offs create a network that is not intended for complex processing or larger datasets. As the Provenance Blockchain is focused on providing detailed digital asset provenance, the blockchain must support larger data volumes in order to represent the digital asset history as well as potentially time consuming validation processes to ensure a complete and correct asset.
 
 Highly specialized approaches such as those used by the Solana blockchain do not provide the flexibility that Provenance Blockchain values for rapid delivery of features. If Provenance Blockchain were to adopt the Solana execution module the lessons learned would not be readily transferable to other future blockchain approaches. General interoperability with other blockchains would also be more complex due to the unique execution models employed.
 

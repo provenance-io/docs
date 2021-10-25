@@ -25,7 +25,7 @@ While Provenance Blockchain facilitates the establishment of an ecosystem that h
 Provenance Blockchain is composed of three core concepts.
 
 * Modules that implement financial services business logic.  Modules are composed to realize complex financial services processes.
-* A smart contracting engine to develop and deploy contracts directly to the Provenance Blockchain blockchain.
+* A smart contracting engine to develop and deploy contracts directly to the Provenance Blockchain.
 * Off-chain client-side agreements using the Contract Execution Environment.
 
 Each of these core concepts has its own set of strengths allowing complete control of the consumer's private and confidential data. This document describes these core concepts.

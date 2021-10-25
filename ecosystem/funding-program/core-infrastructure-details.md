@@ -1,6 +1,6 @@
 # Core Infrastructure Details
 
-The foundation funds/sponsors core infrastructure development directly. The Council approves budget proposals from the management to pay for the development, maintenance and operations of code and services that are essential to the basic operations of the Provenance Blockchain blockchain network. Note that core infrastructure funding does not use member voting mechanisms for approval. The reason to streamline the core infrastructure funding is to avoid situations where tasks like upgrades, maintenance, and release management, would have to compete for funding with sexy, shiny new research projects, which could jeopardize the quality and service level of the Provenance Blockchain network and operations.
+The foundation funds/sponsors core infrastructure development directly. The Council approves budget proposals from the management to pay for the development, maintenance and operations of code and services that are essential to the basic operations of the Provenance Blockchain network. Note that core infrastructure funding does not use member voting mechanisms for approval. The reason to streamline the core infrastructure funding is to avoid situations where tasks like upgrades, maintenance, and release management, would have to compete for funding with sexy, shiny new research projects, which could jeopardize the quality and service level of the Provenance Blockchain network and operations.
 
 {% hint style="info" %}
 Note: List of core infrastructure projects is work in progress...

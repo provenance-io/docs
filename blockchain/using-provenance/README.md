@@ -146,7 +146,7 @@ fancy solar describe long tag soul gold boost vacuum baby famous narrow drink fi
 
 ### Getting Hash
 
-Hash is the digital currency used to transact on the Provenance Blockchain blockchain. In order to execute any commands beyond basic queries against a node, you'll need Hash. On testnet receiving Hash is as easy as accessing the [Provenance Blockchain Faucet](https://faucet.test.provenance.io/) and supplying your address. This small distribution of Hash on testnet allows you to develop against the public testnet as well as quickly get a feel for how the Provenance Blockchain ecosystem operates.
+Hash is the digital currency used to transact on the Provenance Blockchain. In order to execute any commands beyond basic queries against a node, you'll need Hash. On testnet receiving Hash is as easy as accessing the [Provenance Blockchain Faucet](https://faucet.test.provenance.io/) and supplying your address. This small distribution of Hash on testnet allows you to develop against the public testnet as well as quickly get a feel for how the Provenance Blockchain ecosystem operates.
 
 {% hint style="info" %}
 The address associated to your key pair is a [Bech32](https://en.bitcoin.it/wiki/Bech32) address which is an encoded value of the public key portion of our key pair. Provenance Blockchain testnet Bech32 addresses begin with `tp` whereas mainnet addresses begin with `pb`.

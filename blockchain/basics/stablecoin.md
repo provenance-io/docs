@@ -273,7 +273,7 @@ The balances that are `0` above are shown for example purposes only and will not
 
 #### Executing the Withdraw
 
-As the address with permissions to withdraw from the marker, we can move coin that has been minted to any address on the Provenance Blockchain blockchain. 
+As the address with permissions to withdraw from the marker, we can move coin that has been minted to any address on the Provenance Blockchain. 
 
 ```text
  provenanced --testnet --chain-id pio-testnet-1 --fees 5000nhash --from <key_name> tx marker withdraw <denom> 500<denom> <recipient_address>

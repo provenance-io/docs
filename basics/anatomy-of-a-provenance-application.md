@@ -14,7 +14,7 @@ While the Cosmos SDK documentation does a good job explaining the concepts of an
 
 ### Core Application
 
-The Provenance Blockchain core application-specific blockchain is effectively encompassed by the `provenanced` binary - which is both a client and a daemon process.  It is the core process of the Provenance Blockchain blockchain.  Participants in the network run this process to host a node \(initialize their state-machine\), connect with other nodes, and update their state-machine as new blocks come in.  
+The Provenance Blockchain core application-specific blockchain is effectively encompassed by the `provenanced` binary - which is both a client and a daemon process.  It is the core process of the Provenance Blockchain.  Participants in the network run this process to host a node \(initialize their state-machine\), connect with other nodes, and update their state-machine as new blocks come in.  
 
 As shown in the Provenance Blockchain Node Components diagram, the Provenance Blockchain application-specific blockchain is composed of multiple components all running on a single binary \(`provenanced`\) on a machine \(node\):
 
@@ -41,7 +41,7 @@ The `provenanced` binary also communicates with and manages external \(to the bi
 
 External applications communicate with a `provenanced` node instance using `gRPC`.  The `gRPC` layer of the `provenanced` application exposes the Provenance Blockchain modules to external applications.  Thus, the core blockchain modules that implement the business logic of the blockchain, are available via the `gRPC` interface.
 
-Where the `gRPC` interface provides access to the Provenance Blockchain blockchain modules, the Event Manager dispatches blockchain transaction events.  External applications can subscribe to events like token or coin transfers, metadata updates, and governance proposals.
+Where the `gRPC` interface provides access to the Provenance Blockchain modules, the Event Manager dispatches blockchain transaction events.  External applications can subscribe to events like token or coin transfers, metadata updates, and governance proposals.
 
 Multiple Figure applications leverage the `gRPC` and Event Manager interfaces including:
 
