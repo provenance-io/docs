@@ -86,7 +86,7 @@ One of the more complex areas of the blockchain is the cycle for gas and fees th
 The calculation of the amount of gas required for a given transaction is based on a set of parameters that are configured in the parameters of the auth module. There is a fixed cost for the number of bytes in the transaction as well for each signature that is present.
 
 ```javascript
-// initial values for gas costs in the production provenance blockchain
+// initial values for gas costs in the production Provenance Blockchain
 {
     "sig_verify_cost_ed25519": "590",
     "sig_verify_cost_secp256k1": "1000",

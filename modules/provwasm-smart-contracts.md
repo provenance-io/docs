@@ -1,5 +1,5 @@
 ---
-description: Web assembly (Wasm) smart contracts for the provenance blockchain.
+description: Web assembly (Wasm) smart contracts for the Provenance Blockchain.
 ---
 
 # Smart Contracts \(ProvWasm\)
@@ -21,7 +21,7 @@ These extensions are compiled into the blockchain at build time.
 
 ## Rust Bindings
 
-In order to provide a high quality smart contract developer experience, a Rust [library](https://github.com/provenance-io/provwasm) was created to simplify calls to the provenance blockchain extensions.
+In order to provide a high quality smart contract developer experience, a Rust [library](https://github.com/provenance-io/provwasm) was created to simplify calls to the Provenance Blockchain extensions.
 
 The library can be broken down into the following components.
 
@@ -35,7 +35,7 @@ A number of high-level functions and types were added to on top of the core para
 
 ### Mocks
 
-One of the benefits of ProvWasm is that it allows for robust unit testing of smart contracts before deployment to the provenance blockchain. Using the types described above, a mock environment can be created so unit tests can run as if they are executing against a running blockchain. This allows developers to ensure their contracts are correct before having to pay fees to deploy to a network.
+One of the benefits of ProvWasm is that it allows for robust unit testing of smart contracts before deployment to the Provenance Blockchain. Using the types described above, a mock environment can be created so unit tests can run as if they are executing against a running blockchain. This allows developers to ensure their contracts are correct before having to pay fees to deploy to a network.
 
 ### Integrations
 

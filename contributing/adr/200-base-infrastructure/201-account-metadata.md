@@ -13,7 +13,7 @@ description: >-
 
 ## Context
 
-Accounts on the provenance blockchain are based around the concept of holding a collection of coins under an address derived from a public key. All transactions with the blockchain must be associated with an account.
+Accounts on the Provenance Blockchain are based around the concept of holding a collection of coins under an address derived from a public key. All transactions with the blockchain must be associated with an account.
 
 ## Decision
 
