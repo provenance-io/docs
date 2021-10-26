@@ -2,7 +2,7 @@
 
 ## Who is the team developing the Provenance Blockchain Network? <a href="who-is-the-team-developing-the-provenance-network" id="who-is-the-team-developing-the-provenance-network"></a>
 
-The Provenance Blockchain Network is a project that is supported by the Provenance Blockchain Foundation. Most of the initial software development was done by the team from Figure Technology Inc. Over time, in the spirit of community building, the development will become more decentralized. Please check out Provenance’s grants program or join the development community.
+The Provenance Blockchain Network is a project that is supported by the Provenance Blockchain Foundation. Most of the initial software development was done by the team from Figure Technology Inc. Over time, in the spirit of community building, the development will become more decentralized. Please check out Provenance Blockchain’s grants program or join the development community.
 
 ## Where is the code? <a href="where-is-the-code" id="where-is-the-code"></a>
 

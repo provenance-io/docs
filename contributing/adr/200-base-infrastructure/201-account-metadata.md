@@ -23,7 +23,7 @@ Accounts on the Provenance Blockchain are based around the concept of holding a 
 
 ```bash
 # Example of a query from the cli for information associated with an address
-%%> provenance query account-info provenance1zmfjfu84hxv6vtpr4v0glf6qudmct3y3fahwpz
+%%> provenanced query account-info provenance1zmfjfu84hxv6vtpr4v0glf6qudmct3y3fahwpz
 
   address: provenance1zmfjfu84hxv6vtpr4v0glf6qudmct3y3fahwpz
   attributes:
@@ -53,7 +53,7 @@ In the above example there are a few points to consider.
 
 ### Each of the keys is an owned name.
 
-The `id.sso.provenance.pio` identifier would be owned by an account that delegated control from `root > provenance > sso > id` such that at each level there is an address \(requiring the associated private key to sign a transaction creating the record\). The address may or may not be the same at each level as a parent may create a sub-key and assign its ownership to another address.
+The `id.sso.provenance.pio` identifier would be owned by an account that delegated control from `root > Provenance Blockchain > sso > id` such that at each level there is an address \(requiring the associated private key to sign a transaction creating the record\). The address may or may not be the same at each level as a parent may create a sub-key and assign its ownership to another address.
 
 ### There may be more than one instance of a key.
 

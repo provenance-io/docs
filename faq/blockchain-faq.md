@@ -6,7 +6,7 @@ The Cosmos Network is a network of heterogeneous blockchains connected via the C
 
 The Cosmos Hub was one of the first blockchains to be launched on the Cosmos Network. It acts as a router that facilitates token transactions between future Cosmos blockchains. To ensure security and to prevent double spending, the Cosmos Hub keeps track of the state of all connected blockchains. Its native utility-token is the ATOM.
 
-The Provenance Blockchain is built with the Cosmos SDK and is therefore an application-specific Cosmos blockchain. Provenance’s blockchain is constructed with specific modules that enable the Provenance Blockchain ecosystem to support sophisticated DeFi-applications. Provenance’s native utility token is called Hash.
+The Provenance Blockchain is built with the Cosmos SDK and is therefore an application-specific Cosmos blockchain. Provenance Blockchain’s blockchain is constructed with specific modules that enable the Provenance Blockchain ecosystem to support sophisticated DeFi-applications. Provenance Blockchain’s native utility token is called Hash.
 
 ## On what consensus algorithm does Provenance Blockchain run? <a id="on-what-consensus-algorithm-does-provenance-run"></a>
 

@@ -12,7 +12,7 @@ For a general overview of how digital assets \(such as all-digital loans\) are h
 
 ### Loan Origination System
 
-Before onboarding a loan to the Provenance Blockchain, a loan originator creates a digital loan packet plus digital source documents \(e.g., title, credit, income, etc\) for validation purposes. Where possible, data should be digitally signed by the provider. This loan packet is typically created through a loan origination system integrated with Provenance Blockchain. The originator requires the borrower to sign the loan agreement, delivers the required disclosures \(Truth-in-Lending Act, etc.\), and waits out the rescission period \(if relevant\).  The originator may define any schema for their loan data; however, a common data model must be used if the loans are to interact with other Provenance-powered applications, such as Figure’s [Portfolio Manager ]()or Marketplace.
+Before onboarding a loan to the Provenance Blockchain, a loan originator creates a digital loan packet plus digital source documents \(e.g., title, credit, income, etc\) for validation purposes. Where possible, data should be digitally signed by the provider. This loan packet is typically created through a loan origination system integrated with Provenance Blockchain. The originator requires the borrower to sign the loan agreement, delivers the required disclosures \(Truth-in-Lending Act, etc.\), and waits out the rescission period \(if relevant\).  The originator may define any schema for their loan data; however, a common data model must be used if the loans are to interact with other Provenance Blockchain-powered applications, such as Figure’s [Portfolio Manager ]()or Marketplace.
 
 ### Onboarding Loans to Provenance
 

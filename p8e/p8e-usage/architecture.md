@@ -29,7 +29,7 @@ Object store can run in a few different configurations based on the needs of you
 
 #### Provenance Blockchain Node
 
-A provenance node provides your P8e execution environment with a means to read events and send transactions to the distributed Provenance Blockchain network. See [here](../../blockchain/running-a-node/running-a-node-1/) for setup.
+A Provenance Blockchain node provides your P8e execution environment with a means to read events and send transactions to the distributed Provenance Blockchain network. See [here](../../blockchain/running-a-node/running-a-node-1/) for setup.
 
 #### Postgres 13
 

@@ -28,7 +28,7 @@ Validators can earn rewards for assuming partial responsibility for the network,
 
 #### Uptime requirements
 
-The provenance network requires that all active validators sign a minimum of XXXX blocks out of the last 10,000.  This requirement enforces a basic level of availability.  Active validators that are not available to sign blocks slow down the overall network response times.
+The Provenance Blockchain network requires that all active validators sign a minimum of XXXX blocks out of the last 10,000.  This requirement enforces a basic level of availability.  Active validators that are not available to sign blocks slow down the overall network response times.
 
 #### Proper signing and endorsement
 

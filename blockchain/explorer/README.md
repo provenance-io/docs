@@ -10,7 +10,7 @@ The Blockchain Explorer is a UI displaying blockchain information without having
 
 * [Docker](https://www.docker.com/get-started)
 * [Docker-compose](https://docs.docker.com/compose/)
-* local provenance node running with port `9090` open
+* local Provenance Blockchain node running with port `9090` open
 
 ## Installation
 

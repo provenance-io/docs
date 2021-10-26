@@ -8,7 +8,7 @@ The Provenance Blockchain native utility-token to pay for services is **Hash**, 
 
 ## **The** Provenance Blockchain **Utility-Token: Hash**
 
-Smart-contract and Validator services on the Provenance-blockchain network are paid for in Hash.  2% of that gas fee is levied to support the Provenance Blockchain foundation.
+Smart-contract and Validator services on the Provenance Blockchain network are paid for in Hash.  2% of that gas fee is levied to support the Provenance Blockchain foundation.
 
 See the [Hash utility-token section](../../faq/hash-utility-token-faq.md) for details. 
 

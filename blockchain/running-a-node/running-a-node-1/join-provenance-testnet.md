@@ -4,7 +4,7 @@ description: Join a locally installed Provenance Blockchain node to the testnet.
 
 # Joining Testnet
 
-Start a Provenance[ full node ](https://docs.tendermint.com/master/nodes/#node-types)to understand how nodes are used by applications that integrate with the Provenance Blockchain ecosystem.
+Start a Provenance Blockchain [full node](https://docs.tendermint.com/master/nodes/#node-types) to understand how nodes are used by applications that integrate with the Provenance Blockchain ecosystem.
 
 ## Quick Start
 
@@ -51,10 +51,10 @@ Once the node has synced it is joined to the Provenance Blockchain testnet.  Not
 
 Unlike the Quick Start instructions, this section describes setting up a new full node from scratch with [Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html) and better configuration options.  This section effectively configures and starts a Provenance Blockchain full node.
 
-Before starting this section, be sure the prerequisites have been installed as described in [Installing Provenance](../#prerequisites).
+Before starting this section, be sure the prerequisites have been installed as described in [Installing Provenance Blockchain](../#prerequisites).
 
 {% hint style="info" %}
-See the [testnet repo](https://github.com/provenance-io/testnet) for the latest genesis/config files and version information.  The node started in this section is chain id `pio-testnet-1` provenance release 0.2.0 \([https://github.com/provenance-io/provenance/releases/tag/v0.2.0](https://github.com/provenance-io/provenance/releases/tag/v0.2.0)\)
+See the [testnet repo](https://github.com/provenance-io/testnet) for the latest genesis/config files and version information.  The node started in this section is chain id `pio-testnet-1` Provenance Blockchain release 0.2.0 \([https://github.com/provenance-io/provenance/releases/tag/v0.2.0](https://github.com/provenance-io/provenance/releases/tag/v0.2.0)\)
 {% endhint %}
 
 ### Cleaning up Existing testnet Node

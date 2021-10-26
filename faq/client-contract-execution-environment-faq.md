@@ -8,7 +8,7 @@ In addition, the CCEE includes facilities to easily refer to documents by their 
 
 ## What does P8e stand for?
 
-P8e is the nickname for Provenance’s Client Contract Execution Environment. The abbreviation comes from the word "Provenance", which starts with a “P”, then skips 8 letters and ends with “e” - “P8e”.
+P8e is the nickname for Provenance Blockchain’s Client Contract Execution Environment. The abbreviation comes from the word "Provenance", which starts with a “P”, then skips 8 letters and ends with “e” - “P8e”.
 
 ## What is a hash-id <a id="what-does-p-8-e-stand-for"></a>
 

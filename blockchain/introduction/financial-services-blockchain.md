@@ -14,7 +14,7 @@ Provenance Blockchain reduces third-party intermediation and internal staffing c
 
 ### Distributed Trust
 
-Provenance Blockchain has three key attributes: **Distributed Information, Immutable History,** and **Trustless Data**.  Distributed content provides defense against hacking, eliminates agency problems that can lead to malfeasance, and helps support enforceable digital contracts. Data written on the ledger cannot be changed. Immutable information is critical in establishing asset provenance and the truth of the data. Having to rep and warranty data—analogous to “trust me”—undermines the system and introduces risk to those who provide these attestations.
+Provenance Blockchain has three key attributes: **Distributed Information, Immutable History,** and **Trustless Data**.  Distributed content provides defense against hacking, eliminates agency problems that can lead to malfeasance, and helps support enforceable digital contracts. Data written on the ledger cannot be changed. Immutable information is critical in establishing asset history and the truth of the data. Having to rep and warranty data—analogous to “trust me”—undermines the system and introduces risk to those who provide these attestations.
 
 These attributes are necessary, but not sufficient, to eliminate rent-seeking and bring incremental value to financial markets. To transform financial services, Provenance Blockchain performs three key functions: ledger, registry and exchange.
 

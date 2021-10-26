@@ -3,7 +3,7 @@
 {% hint style="info" %}
 Prerequisite
 
-[See Installing Provenance](running-a-node/)
+[See Installing Provenance Blockchain](running-a-node/)
 {% endhint %}
 
 

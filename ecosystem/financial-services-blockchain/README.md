@@ -4,7 +4,7 @@ description: >-
   buyers and sellers of digital assets.
 ---
 
-# Provenance: Financial Services Blockchain
+# Provenance Blockchain: Financial Services Blockchain
 
 ### Disintermediation
 
@@ -14,7 +14,7 @@ Provenance Blockchain reduces third-party intermediation and internal staffing c
 
 ### Distributed Trust
 
-Provenance Blockchain has three key attributes: **Distributed Information, Immutable History,** and **Trustless Data**.  Distributed content provides defense against hacking, eliminates agency problems that can lead to malfeasance, and helps support enforceable digital contracts. Data written on the ledger cannot be changed. Immutable information is critical in establishing asset provenance and the truth of the data. Having to rep and warranty data—analogous to “trust me”—undermines the system and introduces risk to those who provide these attestations.
+Provenance Blockchain has three key attributes: **Distributed Information, Immutable History,** and **Trustless Data**.  Distributed content provides defense against hacking, eliminates agency problems that can lead to malfeasance, and helps support enforceable digital contracts. Data written on the ledger cannot be changed. Immutable information is critical in establishing asset Provenance Blockchain and the truth of the data. Having to rep and warranty data—analogous to “trust me”—undermines the system and introduces risk to those who provide these attestations.
 
 These attributes are necessary, but not sufficient, to eliminate rent-seeking and bring incremental value to financial markets. To transform financial services, Provenance Blockchain performs three key functions: ledger, registry and exchange.
 
@@ -36,7 +36,7 @@ Provenance Blockchain is revolutionizing how private funds are digitally issued,
 
 ## Value Proposition
 
-The actions outlined herein create a perfectly immutable record of loan provenance on a distributed system that acts as a ledger, registry and ultimately, exchange. The warehouse, securitization and liquidity benefits alone represent up to $90 billion or more in reduced fees, technology and personnel costs and improved transparency and liquidity in the $3 trillion annual securitization space. These benefits primarily encompass: 
+The actions outlined herein create a perfectly immutable record of loan history on a distributed system that acts as a ledger, registry and ultimately, exchange. The warehouse, securitization and liquidity benefits alone represent up to $90 billion or more in reduced fees, technology and personnel costs and improved transparency and liquidity in the $3 trillion annual securitization space. These benefits primarily encompass: 
 
 * **Lower origination and aggregation costs** - Trustless and immutable origination results in the reduction of QC, compliance and upfront audit costs. Ability to pledge real time with complete chain of custody reduces custody, payee agent and administrative costs for the warehouse provider while providing significant capital efficiency to the originator.  Embedded servicing eliminates standalone servicing platform and personnel costs.  Estimated benefit of 50-125 bps annually \($15 to $37.5 billion\).
 * **Lower deal costs** - Smart contracts and immutable data provide certainty to assets, reducing audit scope from the loan level to the smart contract level. Blockchain acts as custodian and payee agent, and legal documents can come from a smart contract tied to the collateral and resulting loans, saving significant fees. Deals can be done instantaneously, rather than in weeks. Estimated benefit of 20-20 bps annually \($6 to $9 billion\).

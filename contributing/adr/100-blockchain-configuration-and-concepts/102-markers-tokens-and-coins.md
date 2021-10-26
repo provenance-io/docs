@@ -172,7 +172,7 @@ When a `marker` is created the address that submits the transaction is bound as 
 
 ```bash
 # Access grant 'mint' below is one of [mint,burn,deposit,withdraw,delete,grant]
-provenance tx marker grant tp1ev04582v67phlu4huw046fpaq94ppm3mks9eku cheesedog mint
+provenanced tx marker grant tp1ev04582v67phlu4huw046fpaq94ppm3mks9eku cheesedog mint
 ```
 
 Management functions are restricted to a specific address with a list of permissions, or subject to a **Governance proposal**. A governance proposal is a special construct handled by the `gov` module that takes a submitted configuration proposal and posts it for vote by stake holders. If the vote passes then the proposed changes are applied.
@@ -183,12 +183,12 @@ The `marker` module is responsible for creating instances of `markers`. The proc
 
 ```bash
 # create a new marker with the denomination of 'cheesedog' and a total supply of 1000
-provenance tx marker new 1000cheesedog
+provenanced tx marker new 1000cheesedog
 ```
 
 ```bash
 # change the status of the marker 'cheesedog' where 'activate' is one of [finalize,activate,cancel,destroy]
-provenance tx marker activate cheesedog
+provenanced tx marker activate cheesedog
 ```
 
 #### Structure of a Marker

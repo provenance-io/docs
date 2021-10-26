@@ -6,7 +6,7 @@ The following are the services that make up a fully functional P8e environment:
 
 * p8e-api
 * object-store
-* provenance node
+* Provenance Blockchain node
 * postgres 9.6
 * elasticsearch
 * p8e-webservice \(optional\)

@@ -20,7 +20,7 @@ The P8e contract environment leverages the [Provenance Blockchain Metadata modul
 
 ### Scopes are NFTs
 
-A scope consists of a unique set of records and the history of record evolution in the scope through contract executions. Each scope is globally unique. Value ownership of a scope is recorded on the Provenance Blockchain through a Marker established on-chain. The Marker may be tokenized, allowing for fractional ownership of the scope. In this way, Provenance Blockchain scopes are non-fungible tokens \(NFTs\) and may be traded on any Provenance-based trading platform.
+A scope consists of a unique set of records and the history of record evolution in the scope through contract executions. Each scope is globally unique. Value ownership of a scope is recorded on the Provenance Blockchain through a Marker established on-chain. The Marker may be tokenized, allowing for fractional ownership of the scope. In this way, Provenance Blockchain scopes are non-fungible tokens \(NFTs\) and may be traded on any Provenance Blockchain-based trading platform.
 
 ### P8e Client-Side Contracts
 
