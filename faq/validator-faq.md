@@ -8,15 +8,15 @@ description: Frequently asked questions about validators.
 
 ### What is a validator?
 
-The Provenance Blockchain is a distributed, proof-of-stake blockchain designed for the financial service industries and is based on the Cosmos SDK and [Tendermint \(opens new window\)](https://tendermint.com/docs/introduction/what-is-tendermint.html), which relies on a set of validators to secure the network. The role of a validator is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by its private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
+The Provenance Blockchain is a distributed, proof-of-stake blockchain designed for the financial service industries and is based on the Cosmos SDK and [Tendermint (opens new window)](https://tendermint.com/docs/introduction/what-is-tendermint.html), which relies on a set of validators to secure the network. The role of a validator is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by its private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
 ### What is 'staking'?
 
-Provenance Blockchain is a public Proof-Of-Stake \(PoS\) blockchain, meaning that the weight of validators is determined by the amount of staking tokens \(Hash\) bonded as collateral. These Hash-tokens can be self-delegated directly by the validator or delegated to them by other Hash holders.
+Provenance Blockchain is a public Proof-Of-Stake (PoS) blockchain, meaning that the weight of validators is determined by the amount of staking tokens (Hash) bonded as collateral. These Hash-tokens can be self-delegated directly by the validator or delegated to them by other Hash holders.
 
 Any user in the system can declare their intention to become a validator by sending a `create-validator` transaction. From there, they become validator candidates.
 
-The weight \(i.e. voting power\) of a validator determines whether or not they are an active validator. Initially, only the top 125 validators with the most voting power will be active validators.
+The weight (i.e. voting power) of a validator determines whether or not they are an active validator. Initially, only the top 125 validators with the most voting power will be active validators.
 
 ### What is a full-node?
 
@@ -26,11 +26,11 @@ Of course, it is possible and encouraged for users to run full-nodes even if the
 
 ### What is a delegator?
 
-Delegators are Hash holders who cannot, or do not want to run a validator themselves. Hash holders can delegate Hash to a validator and obtain a part of their revenue in exchange \(for more detail on how revenue is distributed, see [What is the incentive to stake?](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0aRTobUfao5rV4u9G/faq/validator-faq/@drafts#what-is-the-incentive-to-stake) and [What are validators commission?](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0aRTobUfao5rV4u9G/faq/validator-faq/@drafts#what-are-validators-commission) sections below\).
+Delegators are Hash holders who cannot, or do not want to run a validator themselves. Hash holders can delegate Hash to a validator and obtain a part of their revenue in exchange (for more detail on how revenue is distributed, see [What is the incentive to stake?](validator-faq.md) and [What are validators commission?](validator-faq.md) sections below).
 
 Because they share revenue with their validators, delegators also share risks. Should a validator misbehave, each of their delegators will be partially slashed in proportion to their delegated stake. This is why delegators should perform due diligence on validators before delegating, as well as spreading their stake over multiple validators.
 
-Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance. For more, read the [Delegator FAQ](https://app.gitbook.com/@provenance/s/provenance-docs/~/drafts/-MW0aRTobUfao5rV4u9G/faq/delegator-faq/@drafts) \(opens new window\).
+Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance. For more, read the [Delegator FAQ](delegator-faq.md) (opens new window).
 
 ## Becoming a Validator
 
@@ -40,9 +40,9 @@ Any participant in the network can signal that they want to become a validator b
 
 * **Validator's `PubKey`:** The private key associated with this Tendermint `PubKey` is used to sign _pre-votes_ and _pre-commits_.
 * **Validator's Address:** Application-level address. This is the address used to identify your validator publicly. The private key associated with this address is used to delegate, unbond, claim rewards, and participate in governance.
-* \*\*Validator's name \(moniker\)
-* \*\*Validator's website \(Optional\)
-* \*\*Validator's description \(Optional\)
+* \*\*Validator's name (moniker)
+* \*\*Validator's website (Optional)
+* \*\*Validator's description (Optional)
 * **Initial commission rate**: The commission rate on block rewards and fees charged to delegators.
 * **Maximum commission:** The maximum commission rate which this validator can charge. This parameter cannot be changed after `create-validator` is processed.
 * **Commission max change rate:** The maximum daily increase of the validator commission. This parameter cannot be changed after `create-validator` is processed.
@@ -65,7 +65,7 @@ We view testnet participation as a great way to signal to the community that you
 In short, there are two types of keys:
 
 * Tendermint Key: This is a unique key used to sign consensus votes.
-  * It is associated with a public key `cosmosvalconspub` \(Get this value with `gaiad tendermint show-validator`\)
+  * It is associated with a public key `cosmosvalconspub` (Get this value with `gaiad tendermint show-validator`)
   * It is generated when the node is created with gaiad init.
 * Application key: This key is created from `gaiad` and used to sign transactions. Application keys are associated with a public key prefixed by `cosmospub` and an address prefixed by `cosmos`. Both are derived from account keys generated by `gaiad keys add`.
 
@@ -83,7 +83,7 @@ After a validator is created with a `create-validator` transaction, they can be 
 
 Self-delegation is the delegation from a validator to himself. This amount can be increases by sending a `delegate` transaction from your validator's `application` application key.
 
-### Is there a minimum amount of Hash that must be delegated to be an active \(=bonded\) validator?
+### Is there a minimum amount of Hash that must be delegated to be an active (=bonded) validator?
 
 The minimum is `1` Hash.
 
@@ -115,7 +115,7 @@ Additionally, validators are expected to be active members of the community. The
 
 ### What does 'participate in governance' entail?
 
-Validators and delegators on the Provenance Blockchain can vote on proposals to change operational parameters \(such as the block gas limit\), coordinate upgrades, or make a decision on any given matter.
+Validators and delegators on the Provenance Blockchain can vote on proposals to change operational parameters (such as the block gas limit), coordinate upgrades, or make a decision on any given matter.
 
 Validators play a special role in the governance system. Being the pillars of the system, they are required to vote on every proposal. It is especially important since delegators who do not vote will inherit the vote of their validator.
 
@@ -133,7 +133,7 @@ Even though delegated funds cannot be stolen by their validators, delegators are
 
 ### How often will a validator be chosen to propose the next block? Does it go up with the quantity of bonded Hash?
 
-The validator that is selected to propose the next block is called the proposer. Each proposer is selected deterministically, and the frequency of being chosen is proportional to the voting power \(i.e. amount of bonded Hash\) of the validator. For example, if the total bonded stake across all validators is 100 Hash and a validator's total stake is 10 Hash, then this validator will proposer ~10% of the blocks.
+The validator that is selected to propose the next block is called the proposer. Each proposer is selected deterministically, and the frequency of being chosen is proportional to the voting power (i.e. amount of bonded Hash) of the validator. For example, if the total bonded stake across all validators is 100 Hash and a validator's total stake is 10 Hash, then this validator will proposer \~10% of the blocks.
 
 ### Will validators ever be required to validate other zones in the Provenance Blockchain ecosystem?
 
@@ -145,7 +145,7 @@ Yes, they will. If governance decides so, validators of Provenance Blockchain ma
 
 Each member of a validator's staking pool earns different types of revenue:
 
-* Block rewards: Native tokens of applications run by validators \(e.g. Hash on the Provenance Blockchain\) are inflated to produce block provisions. These provisions exist to incentivize Hash holders to bond their stake, as non-bonded Hash will be diluted over time.
+* Block rewards: Native tokens of applications run by validators (e.g. Hash on the Provenance Blockchain) are inflated to produce block provisions. These provisions exist to incentivize Hash holders to bond their stake, as non-bonded Hash will be diluted over time.
 * Transaction fees: The Provenance Blockchain maintains a whitelist of tokens that are accepted as fee payment. The initial fee token is the `hash`.
 
 This total revenue is divided among validators' staking pools according to each validator's weight. Then, within each validator's staking pool the revenue is divided among delegators in proportion to each delegator's stake. A commission on delegators' revenue is applied by the validator before it is distributed.
@@ -176,7 +176,7 @@ Then, each delegator can claim their part of the 79.2 Hash in proportion to thei
 
 Fees are similarly distributed with the exception that the block proposer can get a bonus on the fees of the block they propose if they include more than the strict minimum of required pre-commits.
 
-When a validator is selected to propose the next block, they must include at least 2/3 pre-commits of the previous block. However, there is an incentive to include more than 2/3 pre-commits in the form of a bonus. The bonus is linear: it ranges from 1% if the proposer includes 2/3rd pre-commits \(minimum for the block to be valid\) to 5% if the proposer includes 100% pre-commits. Of course, the proposer should not wait too long or other validators may timeout and move on to the next proposer. As such, validators have to find a balance between wait-time to get the most signatures and risk of losing out on proposing the next block. This mechanism aims to incentivize non-empty block proposals, better networking between validators as well as mitigate censorship.
+When a validator is selected to propose the next block, they must include at least 2/3 pre-commits of the previous block. However, there is an incentive to include more than 2/3 pre-commits in the form of a bonus. The bonus is linear: it ranges from 1% if the proposer includes 2/3rd pre-commits (minimum for the block to be valid) to 5% if the proposer includes 100% pre-commits. Of course, the proposer should not wait too long or other validators may timeout and move on to the next proposer. As such, validators have to find a balance between wait-time to get the most signatures and risk of losing out on proposing the next block. This mechanism aims to incentivize non-empty block proposals, better networking between validators as well as mitigate censorship.
 
 Let's take a concrete example to illustrate the aforementioned concept. In this example, there are 10 validators with equal stakes. Each of them applies a 1% commission rate and has 20% of self-delegated Hash. Now comes a successful block that collects a total of 1025.51020408 Hash in fees.
 
@@ -194,12 +194,12 @@ We have to solve this simple equation to find the reward R for each validator:
   * The pool obtains `R + R * 5%`: 105 Hash
   * Commission: `105 * 80% * 1%` = 0.84 Hash
   * Validator's reward: `105 * 20% + Commission` = 21.84 Hash
-  * Delegators' rewards: `105 * 80% - Commission` = 83.16 Hash \(each delegator will be able to claim its portion of these rewards in proportion to their stake\)
+  * Delegators' rewards: `105 * 80% - Commission` = 83.16 Hash (each delegator will be able to claim its portion of these rewards in proportion to their stake)
 * For each non-proposer validator:
   * The pool obtains R: 100 Hash
   * Commission: `100 * 80% * 1%` = 0.8 Hash
   * Validator's reward: `100 * 20% + Commission` = 20.8 Hash
-  * Delegators' rewards: `100 * 80% - Commission` = 79.2 Hash \(each delegator will be able to claim their portion of these rewards in proportion to their stake\)
+  * Delegators' rewards: `100 * 80% - Commission` = 79.2 Hash (each delegator will be able to claim their portion of these rewards in proportion to their stake)
 
 ### What are the slashing conditions?
 
@@ -277,4 +277,3 @@ Validator nodes should only connect to full-nodes they trust because they operat
 Sentry nodes can be quickly spun up or change their IP addresses. Because the links to the sentry nodes are in private IP space, an internet-based attack cannot disturb them directly. This will ensure validator block proposals and votes always make it to the rest of the network.
 
 It is expected that good operating procedures on the part of validators will completely mitigate these threats.
-
