@@ -26,7 +26,7 @@ Using the client-side [Contract Execution Environment](../p8e/overview.md), Prov
 
 #### Hybrid
 
-Financial transactions often consist of on-chain and side-chain parts. For financial transactions, for example, the confidential documents supporting the transaction can be referred to by reference in the on-chain transaction. Those references point at immutable and encrypted documents that are safely stored off-chain. As part of the transaction, those confidential documents can be securely and selectively shared between the business partners. Provenance Blockchain fully supports this hybrid model, which allows for more complex financial transactions to be conducted within the Provenance-ecosystem.
+Financial transactions often consist of on-chain and side-chain parts. For financial transactions, for example, the confidential documents supporting the transaction can be referred to by reference in the on-chain transaction. Those references point at immutable and encrypted documents that are safely stored off-chain. As part of the transaction, those confidential documents can be securely and selectively shared between the business partners. Provenance Blockchain fully supports this hybrid model, which allows for more complex financial transactions to be conducted within the Provenance Blockchain-ecosystem.
 
 ## Provenance Blockchain Node
 
@@ -82,7 +82,7 @@ Provenance Blockchain Smart Contract are able to leverage Provenance Blockchain 
 
 ## Contract Execution Environment
 
-The Provenance Blockchain client-side Contract Execution Environment \(p8e\) to directly integrate with the [Provenance Blockchain Metadata Module](../modules/metadata-module.md) to simplify generating signed records of an asset’s provenance as either a single party or in conjunction with multiple interacting parties. At its core, P8e is a gRPC API that is invoked using a Kotlin SDK. The API processes data through a deterministic client side process that can be shared with other parties to transform data into a hashable format.
+The Provenance Blockchain client-side Contract Execution Environment \(p8e\) to directly integrate with the [Provenance Blockchain Metadata Module](../modules/metadata-module.md) to simplify generating signed records of an asset’s Provenance Blockchain as either a single party or in conjunction with multiple interacting parties. At its core, P8e is a gRPC API that is invoked using a Kotlin SDK. The API processes data through a deterministic client side process that can be shared with other parties to transform data into a hashable format.
 
 Assets can be directly defined against the Metadata module, but the execution environment assists in the complex hashing of data, maintenance of immutable objects, and signature orchestration between multiple parties.
 

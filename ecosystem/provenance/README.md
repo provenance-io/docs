@@ -6,9 +6,9 @@ description: 'Provenance Blockchain is the world''s best, end-to-end, blockchain
 
 
 
-"**Provenance**" is our brand. 
+"**Provenance Blockchain**" is our brand. 
 
-The Provenance Blockchain name and its icon ![](https://lh3.googleusercontent.com/4PfoUGEiGWy4psIrXQ66shKmcBC5-cBJa_MsXueU1tDqKmgIXkZFYWRgYjQpBqk4dmHGIZDPElEQffcK-h1ISgQotuqrKsrf7L0QahDk5JdLaPiTLO9AWqvYMy9hY98eD8s5YWVK)are used to associate our foundation, user community, ecosystem, SDK, services, blockchain, apps, funding program, etc. with our brand, and clearly distinguish those from any non-provenance equivalent ones.
+The Provenance Blockchain name and its icon ![](https://lh3.googleusercontent.com/4PfoUGEiGWy4psIrXQ66shKmcBC5-cBJa_MsXueU1tDqKmgIXkZFYWRgYjQpBqk4dmHGIZDPElEQffcK-h1ISgQotuqrKsrf7L0QahDk5JdLaPiTLO9AWqvYMy9hY98eD8s5YWVK)are used to associate our foundation, user community, ecosystem, SDK, services, blockchain, apps, funding program, etc. with our brand, and clearly distinguish those from any non-Provenance Blockchain equivalent ones.
 
 This document explains how everything Provenance Blockchain is special, and how for example, our Provenance Blockchain ecosystem, or the ![](https://lh5.googleusercontent.com/Zu0fZTwzyKSuP2h4Lgfq47ohH-rLJ0VCGFSaP1JqiPVbYwb0zQywL3NslOcEyk8dv0zHAH6PIJ9Oh1IgyD3auhPIkcoFIsvivtNLk5z3ywGASpTWmXHy3b-sRYqtvS6KK0nSjWnS)-ecosystem, distinguishes itself from any other ecosystem that support the creation and operation of blockchain-based apps.
 

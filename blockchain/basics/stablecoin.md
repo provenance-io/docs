@@ -11,7 +11,7 @@ A Coin on Provenance Blockchain is implemented as a [Marker](../../modules/marke
 ## Creating a Coin
 
 {% hint style="info" %}
-To follow along with this section, refer to [Installing Provenance](../running-a-node/) to install the `provenanced` binary and have an [encryption key created](../using-provenance/#creating-a-key-s).
+To follow along with this section, refer to [Installing Provenance Blockchain](../running-a-node/) to install the `provenanced` binary and have an [encryption key created](../using-provenance/#creating-a-key-s).
 {% endhint %}
 
 There are multiple ways to configure a coin to suit a business use case. Here is an example that demonstrates how a coin is created, minted, burned, and transacted. 

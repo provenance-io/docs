@@ -63,7 +63,7 @@ The following table illustrates sample gas scenarios, whether the transaction is
 ## Demonstration of Gas and Fees
 
 {% hint style="info" %}
-To follow along with this section refer to [Installing Provenance](../running-a-node/) to install the `provenanced` binary.
+To follow along with this section refer to [Installing Provenance Blockchain](../running-a-node/) to install the `provenanced` binary.
 {% endhint %}
 
 Let's try this out.  First, let's create a local key pair and address:

@@ -4,11 +4,11 @@ description: 'Information on how to propose, vote, and track a software upgrade 
 
 # Software Upgrade Proposal
 
-Software upgrade proposals will occur when major upgrades are required on the provenance network. When this does occur a governance proposal will be made to request all validators vote on the new software upgrade. All software upgrades will be sourced from the [provenance-io/provenance](https://github.com/provenance-io/provenance) repository.
+Software upgrade proposals will occur when major upgrades are required on the Provenance Blockchain network. When this does occur a governance proposal will be made to request all validators vote on the new software upgrade. All software upgrades will be sourced from the [provenance-io/provenance](https://github.com/provenance-io/provenance) repository.
 
 ### Submit a software upgrade proposal
 
-Once a new release for the provenance binary has been created, a software upgrade proposal can be run. The proposal should have a name, title, a description of the changes, a url of the plan with the necessary binaries, upgrade block height, required deposit, and chain-id
+Once a new release for the Provenance Blockchain binary has been created, a software upgrade proposal can be run. The proposal should have a name, title, a description of the changes, a url of the plan with the necessary binaries, upgrade block height, required deposit, and chain-id
 
 | Parameter | Description |
 | :--- | :--- |
@@ -25,7 +25,7 @@ Once a new release for the provenance binary has been created, a software upgrad
 export PIO_HOME=~/.provenanced
 provenanced tx gov submit-proposal software-upgrade test1 \
 --title "test1" \
---description "upgrade provenance to version test1" \
+--description "upgrade Provenance Blockchain to version test1" \
 --upgrade-info  https://github.com/provenance-io/provenance/releases/download/test1/plan-test1.json\
 --from <name_of_key> \
 --upgrade-height 1000 \
@@ -45,7 +45,7 @@ provenanced query gov proposal 1 --testing
 ```text
 content:
   '@type': /cosmos.upgrade.v1beta1.SoftwareUpgradeProposal
-  description: upgrade provenance to version test1
+  description: upgrade Provenance Blockchain to version test1
   plan:
     height: "1000"
     info: https://github.com/provenance-io/provenance/releases/download/test1/plan-test1.json
@@ -73,7 +73,7 @@ This shows that the proposal is live on the chain and the voting period has begu
 
 ### Voting on the Proposal
 
-At this time the proposal is live on the provenance network and in order to pass will require a greater than 2/3 majority `yes` vote. Voting has 4 different parameters `abstain, no, no_with_veto, and yes`. To vote on the proposal you will run the following:
+At this time the proposal is live on the Provenance Blockchain network and in order to pass will require a greater than 2/3 majority `yes` vote. Voting has 4 different parameters `abstain, no, no_with_veto, and yes`. To vote on the proposal you will run the following:
 
 ```text
 provenanced tx gov vote 1 yes \
@@ -110,7 +110,7 @@ provenanced query gov proposal 1 --testing
 ```text
 content:
   '@type': /cosmos.upgrade.v1beta1.SoftwareUpgradeProposal
-  description: upgrade provenance to version test1
+  description: upgrade Provenance Blockchain to version test1
   plan:
     height: "1000"
     info: https://github.com/provenance-io/provenance/releases/download/test1/plan-test1.json

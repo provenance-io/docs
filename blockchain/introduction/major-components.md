@@ -26,7 +26,7 @@ Using the client-side [Contract Execution Environment](../../p8e/overview/), Pro
 
 #### Hybrid
 
-Financial transactions often consist of on-chain and client-side parts. For financial transactions, for example, the confidential documents supporting the transaction can be referred to by reference in the on-chain transaction. Those references point at immutable and encrypted documents that are safely stored off-chain. As part of the transaction, those confidential documents can be securely and selectively shared between the business partners. Provenance Blockchain fully supports this hybrid model, which allows for more complex financial transactions to be conducted within the Provenance-ecosystem.
+Financial transactions often consist of on-chain and client-side parts. For financial transactions, for example, the confidential documents supporting the transaction can be referred to by reference in the on-chain transaction. Those references point at immutable and encrypted documents that are safely stored off-chain. As part of the transaction, those confidential documents can be securely and selectively shared between the business partners. Provenance Blockchain fully supports this hybrid model, which allows for more complex financial transactions to be conducted within the Provenance Blockchain-ecosystem.
 
 ## Provenance Blockchain Node
 

@@ -10,7 +10,7 @@ ProvWasm contains extensions for a third party blockchain module. These extensio
 
 ### Blockchain Extensions
 
-The CosmWasm VM only integrates with the `banking` and `staking` modules by default. However, it allows for adding custom encoders and queriers. A package was added in the Provenance Blockchain that contain extensions for the following provenance modules:
+The CosmWasm VM only integrates with the `banking` and `staking` modules by default. However, it allows for adding custom encoders and queriers. A package was added in the Provenance Blockchain that contain extensions for the following Provenance Blockchain modules:
 
 * [Account](account.md)
 * [Marker](marker-module.md)
@@ -27,7 +27,7 @@ The library can be broken down into the following components.
 
 ### Parameters
 
-The core of the rust library contains types that are passed to and received from provenance encoders and queriers. Special care must be taken to ensure the Rust types are compatible with Go types in the queriers and encoders. To support this, a semantic data format version is passed through with each message. This enables backward compatability in the blockchain extensions.
+The core of the rust library contains types that are passed to and received from Provenance Blockchain encoders and queriers. Special care must be taken to ensure the Rust types are compatible with Go types in the queriers and encoders. To support this, a semantic data format version is passed through with each message. This enables backward compatability in the blockchain extensions.
 
 ### API
 

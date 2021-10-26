@@ -2,7 +2,7 @@
 
 To understand delegation it's important to understand the difference between Hash ownership and Hash staked on the Provenance Blockchain network.
 
-**Hash**™ - Utility token used by provenance for staking and transaction fee payment. 
+**Hash**™ - Utility token used by Provenance Blockchain for staking and transaction fee payment. 
 
 **Stake** - Hash that has been delegated to a validator to share in the risks and rewards of the network. 
 

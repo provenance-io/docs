@@ -7,7 +7,7 @@ description: Using the `provenanced` binary as a blockchain client.
 {% hint style="info" %}
 To get started with Provenance Blockchain you first need to install Provenance Blockchain and have access to a Provenance Blockchain node.
 
-[See Installing Provenance](../running-a-node/) if you have not installed`provenanced.`
+[See Installing Provenance Blockchain](../running-a-node/) if you have not installed`provenanced.`
 
 [See Running a Node ](../running-a-node/running-a-node-1/)if you do not have access to a node or do not want to connect to a publicly available node.
 {% endhint %}
@@ -32,7 +32,7 @@ Available Commands:
   export                Export state to JSON
   gentx                 Generate a genesis tx carrying a self delegation
   help                  Help about any command
-  init                  Initialize files for a provenance daemon node
+  init                  Initialize files for a Provenance Blockchain daemon node
   keys                  Manage your application's keys
   migrate               Migrate genesis to a specified target version
   query                 Querying subcommands
@@ -47,7 +47,7 @@ Available Commands:
 
 Flags:
   -h, --help                help for provenanced
-      --home string         directory for config and data (default "/Users/mconroy/Library/Application Support/Provenance")
+      --home string         directory for config and data (default "/Users/mconroy/Library/Application Support/Provenance Blockchain")
       --log_format string   The logging format (json|plain) (default "plain")
       --log_level string    The logging level (trace|debug|info|warn|error|fatal|panic) (default "info")
   -t, --testnet             Indicates this command should use the testnet configuration (default: false [mainnet])

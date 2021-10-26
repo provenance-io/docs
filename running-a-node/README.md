@@ -30,7 +30,7 @@ Installing `provenanced` is done directly from the source code by cloning the ve
 
 ```text
 git clone -b <version> https://github.com/provenance-io/provenance
-cd provenance && make install
+provenance && make install
 ```
 
 {% hint style="info" %}

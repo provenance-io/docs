@@ -50,13 +50,13 @@ Discover the benefits of the Provenance Blockchain client-side Contract Executio
 [overview](p8e/overview/)
 {% endcontent-ref %}
 
-Get started integrating with Provenance:
+Get started integrating with Provenance Blockchain:
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-Follow real-world use cases and applications built on Provenance:
+Follow real-world use cases and applications built on Provenance Blockchain:
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)

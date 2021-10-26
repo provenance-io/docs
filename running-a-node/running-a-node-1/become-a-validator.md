@@ -57,7 +57,7 @@ tx staking create-validator \
 
 ## Security
 
-Validators are the most important nodes in the network. They require a level of security that ensures they are highly available and protected at every level. The following reviews the recommended network architecture to ensure the provenance network validators are protected. This is patterned after the official [Tendermint Documentation](https://docs.tendermint.com/master/nodes/validators.html).
+Validators are the most important nodes in the network. They require a level of security that ensures they are highly available and protected at every level. The following reviews the recommended network architecture to ensure the Provenance Blockchain network validators are protected. This is patterned after the official [Tendermint Documentation](https://docs.tendermint.com/master/nodes/validators.html).
 
 ### Network Architecture
 
@@ -74,7 +74,7 @@ A multi-tier network architecture is recommended to secure validators. Each tier
 
 ![Recommended Network Architecture](../../.gitbook/assets/securing-provenanced-validator-2-%20%281%29.png)
 
-The Recommended Network Architecture diagram is the architecture to follow when building out provenance nodes and validators. This may be done in a cloud environment \(e.g. AWS, GCP, or Azure\), within an on-premise data center, or a combination of both. The idea of this infrastructure will be further detailed below but conceptually it is required to protect the validator by leveraging multiple layers of network security. 
+The Recommended Network Architecture diagram is the architecture to follow when building out Provenance Blockchain nodes and validators. This may be done in a cloud environment \(e.g. AWS, GCP, or Azure\), within an on-premise data center, or a combination of both. The idea of this infrastructure will be further detailed below but conceptually it is required to protect the validator by leveraging multiple layers of network security. 
 
 ### Network Security \(Firewall\)
 

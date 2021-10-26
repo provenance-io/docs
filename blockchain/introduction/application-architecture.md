@@ -18,7 +18,7 @@ As is typical with most application architectures there are 3 well-defined layer
 
 #### Interface Layer
 
-This layer provides the traditional user interface for interacting with Provenance-based applications.  Marketplaces and Exchanges are typical use cases where users buy, sell, and trade things of value.  These "things of value" include asset-backed securities, cryptocurrency, or tokenized assets.
+This layer provides the traditional user interface for interacting with Provenance Blockchain-based applications.  Marketplaces and Exchanges are typical use cases where users buy, sell, and trade things of value.  These "things of value" include asset-backed securities, cryptocurrency, or tokenized assets.
 
 An important component of the interface layer is the [Wallet](../../contributing/adr/100-blockchain-configuration-and-concepts/101-hd-wallets-key-pairs-addresses.md).  Entities \(organizations, systems, or users\) must have an _account_ to conduct business on the Provenance Blockchain. An account is represented by the public key portion of a public and private key-pair. Accounts contain a uniquely identified address, which simply a string value derived from the entity’s public key following the [Bech32](https://en.bitcoin.it/wiki/Bech32) format, thus providing standard blockchain pseudonymity.
 
