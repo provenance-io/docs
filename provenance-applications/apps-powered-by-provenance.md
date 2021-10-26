@@ -6,5 +6,5 @@
 * [Figure Pay](www.figurepay.com) - Payments using blockchain rails
 * Figure [eVault](evault.md)
 * Figure Passport - Digital Identity on-chain for entities and individuals
-* Figure Portfolio Manager - Manage and see the real-time performance of loans on Provenance
+* Figure Portfolio Manager - Manage and see the real-time performance of loans on Provenance Blockchain
 

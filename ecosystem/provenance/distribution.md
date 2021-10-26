@@ -74,7 +74,7 @@ Delegation of stake against a validator node is considered "at risk" meaning tha
 
 ### Fee Distribution Hierarchy
 
-* Community - pool of Hash that can be used to enhance and maintain Provenance
+* Community - pool of Hash that can be used to enhance and maintain Provenance Blockchain
 * Block Proposer - an additional bonus given to the validator that proposed the block
 * Validator Commission - percentage of the fee that is taken as commission by a validator
 * Delegators 

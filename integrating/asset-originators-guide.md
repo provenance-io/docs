@@ -1,5 +1,5 @@
 ---
-description: A suggested process for getting started with loading assets onto Provenance
+description: A suggested process for getting started with loading assets onto Provenance Blockchain
 ---
 
 # Asset Originator's Guide

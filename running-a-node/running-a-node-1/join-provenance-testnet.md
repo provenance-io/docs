@@ -63,7 +63,7 @@ export PIO_HOME=~/.provenanced
 mkdir -p $PIO_HOME/config
 ```
 
-### Download and Install Provenance
+### Download and Install Provenance Blockchain
 
 Use `git` to download the `0.2.0` version of Provenance Blockchain.
 
@@ -84,7 +84,7 @@ Confirm the `provenanced` version.
 ```bash
 provenanced version --long
 
-name: Provenance
+name: Provenance Blockchain
 server_name: provenanced
 version: 0.2.0
 commit: 75fef3a701af3787a56d4c8c6b40f67b95b79eb6

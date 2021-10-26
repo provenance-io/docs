@@ -182,7 +182,7 @@ Technical approaches that allow the blockchain to fork are unacceptable as the s
 
 Provide an ecosystem that can be leveraged, publicly, to develop use cases outside of the Provenance Blockchain 1.0 financial services domain.
 
-### The Provenance Balance Point 
+### The Provenance Blockchain Balance Point 
 
 Provenance Blockchain 2.0 strikes a careful balance between many different criteria among the varied approaches of blockchain software. Unlike many blockchains that are focused solely on payments, the Provenance Blockchain network is built around digital assets. This distinction shifts the system design firmly towards general purpose designs versus those that are highly optimized for small transactions.
 

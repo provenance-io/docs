@@ -2,7 +2,7 @@
 description: Install the `provenanced` executable for both client and server operations.
 ---
 
-# Installing Provenance
+# Installing Provenance Blockchain
 
 Provenance Blockchain is wrapped into a single executable named `provenanced`. All interaction \(whether creating a node, querying, or invoking actions\) with Provenance Blockchain can be accomplished using the `provenanced` command. This document explains the basic installation of the command and verification that it has been installed correctly. 
 
@@ -50,7 +50,7 @@ provenanced version --long
 ```
 
 ```text
-name: Provenance
+name: Provenance Blockchain
 server_name: provenanced
 version: 0.2.0
 commit: 75fef3a701af3787a56d4c8c6b40f67b95b79eb6

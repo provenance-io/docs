@@ -50,7 +50,7 @@ provenanced version --long
 ```
 
 ```text
-name: Provenance
+name: Provenance Blockchain
 server_name: provenanced
 version: 0.2.0
 commit: 75fef3a701af3787a56d4c8c6b40f67b95b79eb6

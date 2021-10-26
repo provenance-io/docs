@@ -11,8 +11,8 @@ As the main landing page for the Explorer, this provides a general, current over
 In the top section, you will find general statistics about Provenance Blockchain as a chain.
 
 * **Block Height**: the current height on Provenance Blockchain, including the block's proposer
-* **Transactions**: the current approximate number of total transactions written onto Provenance
-* **Voting Power**: the current total voting power that took part in the voting for the last block; includes the total validator count on Provenance
+* **Transactions**: the current approximate number of total transactions written onto Provenance Blockchain
+* **Voting Power**: the current total voting power that took part in the voting for the last block; includes the total validator count on Provenance Blockchain
 * **Avg Block Time**: across the last 100 blocks on Provenance Blockchain, on average how long it took to commit a block
 * **Bonded Tokens**: the percentage of tokens present on Provenance Blockchain that are bonded to a **staking validator**; includes approximate values for bonded to total tokens ratio
 

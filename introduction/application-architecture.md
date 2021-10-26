@@ -38,7 +38,7 @@ The middleware layer is the bridge between the Provenance Blockchain and the fin
 
 The middleware layer is also where entities leverage the Provenance Blockchain client-side [Contract Execution Environment](../p8e/overview.md) for the onboarding and management of private and sensitive information.  The Contract Execution Environment is a side-chain solution that provides the ability for entities to exchange private data yet still leverage the ownership, immutability and value benefits provides by the Provenance Blockchain.
 
-#### Provenance
+#### Provenance Blockchain
 
 The Provenance Blockchain layer is the Provenance Blockchain network and provides:
 

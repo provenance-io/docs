@@ -1,4 +1,4 @@
-# Using Provenance
+# Using Provenance Blockchain
 
 {% hint style="info" %}
 Prerequisite
