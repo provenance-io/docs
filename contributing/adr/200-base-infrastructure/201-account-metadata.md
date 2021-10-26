@@ -23,7 +23,7 @@ Accounts on the Provenance Blockchain are based around the concept of holding a 
 
 ```bash
 # Example of a query from the cli for information associated with an address
-%%> Provenance Blockchain query account-info provenance1zmfjfu84hxv6vtpr4v0glf6qudmct3y3fahwpz
+%%> provenanced query account-info provenance1zmfjfu84hxv6vtpr4v0glf6qudmct3y3fahwpz
 
   address: provenance1zmfjfu84hxv6vtpr4v0glf6qudmct3y3fahwpz
   attributes:

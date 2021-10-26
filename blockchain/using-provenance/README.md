@@ -47,7 +47,7 @@ Available Commands:
 
 Flags:
   -h, --help                help for provenanced
-      --home string         directory for config and data (default "/Users/mconroy/Library/Application Support/Provenance Blockchain")
+      --home string         directory for config and data (default "/Users/mconroy/Library/Application Support/Provenance")
       --log_format string   The logging format (json|plain) (default "plain")
       --log_level string    The logging level (trace|debug|info|warn|error|fatal|panic) (default "info")
   -t, --testnet             Indicates this command should use the testnet configuration (default: false [mainnet])
