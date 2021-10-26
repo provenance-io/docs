@@ -38,7 +38,7 @@ Improve fine-grained logging and instrumentation to the Provenance Blockchain SD
 Effort: 2w - Dev   
 Bounty: 2 \* $2500 = $5,000
 
-### Provenance Bug Bounty Program 
+### Provenance Blockchain Bug Bounty Program 
 
 Engage BugCrowd or HackerOne to set up a formal BugBounty program. Effort: discuss with BugCrowd/HackerOne what the best approach is for such an open source project...   
 Bounty: Probably $10-20k/year depending on number of found \(severe\) bugs.
