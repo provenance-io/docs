@@ -41,18 +41,23 @@
   * [Query Command](blockchain/using-provenance/query-command.md)
   * [Tx Command](blockchain/using-provenance/tx-command.md)
 * [Explorer](blockchain/explorer/README.md)
-  * [UI Walkthrough](blockchain/explorer/ui-walkthrough/README.md)
-    * [Dashboard](blockchain/explorer/ui-walkthrough/dashboard.md)
-    * [Staking \(Validators\)](blockchain/explorer/ui-walkthrough/staking-validators.md)
+  * [Walkthrough](blockchain/explorer/ui-walkthrough/README.md)
+    * [Dashboard](blockchain/explorer/ui-walkthrough/dashboard/README.md)
+      * [Blocks](blockchain/explorer/ui-walkthrough/dashboard/blocks.md)
+    * [Staking (Validators)](blockchain/explorer/ui-walkthrough/staking-validators/README.md)
+      * [Validator Details](blockchain/explorer/ui-walkthrough/staking-validators/validator-details.md)
     * [Transactions](blockchain/explorer/ui-walkthrough/transactions.md)
     * [Assets](blockchain/explorer/ui-walkthrough/assets.md)
-    * [Blocks](blockchain/explorer/ui-walkthrough/blocks.md)
-    * [Account \(Address\)](blockchain/explorer/ui-walkthrough/account-address.md)
+    * [Governance](blockchain/explorer/ui-walkthrough/governance.md)
+    * [Account (Address)](blockchain/explorer/ui-walkthrough/account-address.md)
     * [Forthcoming](blockchain/explorer/ui-walkthrough/forthcoming/README.md)
       * [Params](blockchain/explorer/ui-walkthrough/forthcoming/params.md)
-      * [NFTs](blockchain/explorer/ui-walkthrough/forthcoming/nfts.md)
       * [IBC](blockchain/explorer/ui-walkthrough/forthcoming/ibc.md)
-      * [Governance](blockchain/explorer/ui-walkthrough/forthcoming/governance.md)
+      * [NFTs](blockchain/explorer/ui-walkthrough/forthcoming/nfts.md)
+      * [Blockchain Statistics](blockchain/explorer/ui-walkthrough/forthcoming/blockchain-statistics.md)
+  * [Wallet](blockchain/explorer/wallet.md)
+  * [Explorer as a Service](blockchain/explorer/explorer-as-a-service/README.md)
+    * [Ingestion](blockchain/explorer/explorer-as-a-service/ingestion.md)
 
 ## Modules
 
@@ -61,21 +66,21 @@
 * [Marker](modules/marker-module.md)
 * [Attribute](modules/account.md)
 * [Name](modules/name-module.md)
-* [Smart Contracts \(ProvWasm\)](modules/provwasm-smart-contracts.md)
+* [Smart Contracts (ProvWasm)](modules/provwasm-smart-contracts.md)
 
-## Contract Execution Environment <a id="p8e"></a>
+## Contract Execution Environment <a href="p8e" id="p8e"></a>
 
 * [P8e Contract Execution Environment](p8e/overview/README.md)
   * [SDK](p8e/overview/api.md)
   * [Encrypted Object Store](p8e/overview/encrypted-object-store/README.md)
     * [EOS Encryption Scheme](p8e/overview/encrypted-object-store/encryption-scheme.md)
-    * [DIME \(Encryption Envelope Specification\)](p8e/overview/encrypted-object-store/dime-encryption-envelope-specification.md)
+    * [DIME (Encryption Envelope Specification)](p8e/overview/encrypted-object-store/dime-encryption-envelope-specification.md)
 * [P8e Usage](p8e/p8e-usage/README.md)
   * [Architecture](p8e/p8e-usage/architecture.md)
   * [Specifications](p8e/p8e-usage/specifications.md)
   * [Building New P8e Contracts](p8e/p8e-usage/building-new-contracts.md)
   * [Data Retrieval](p8e/p8e-usage/data-retrieval.md)
-  * [Cross Scope \(Update\) Contract](p8e/p8e-usage/cross-scope-contract-example.md)
+  * [Cross Scope (Update) Contract](p8e/p8e-usage/cross-scope-contract-example.md)
   * [Multi-Party Contract](p8e/p8e-usage/multi-contract-example.md)
   * [Multi-Step Contract](p8e/p8e-usage/multi-step-contract-example.md)
   * [Next Steps](p8e/p8e-usage/next-steps.md)
@@ -86,7 +91,7 @@
   * [Data Mapping](integrating/asset-originators-guide/data-mapping.md)
   * [Onboard Loan Contract](integrating/asset-originators-guide/example-loan-contracts.md)
 
-## Apps Built on Provenance Blockchain <a id="provenance-applications"></a>
+## Apps Built on Provenance Blockchain <a href="provenance-applications" id="provenance-applications"></a>
 
 * [Apps Overview](provenance-applications/apps-powered-by-provenance.md)
 * [Figure LOS](provenance-applications/loan-origination-system-los/README.md)
@@ -125,7 +130,7 @@
   * [700 Business Applications](contributing/adr/700-business-applications.md)
   * [800 System Migration](contributing/adr/800-system-migration.md)
 
-## Provenance Blockchain FAQ <a id="faq"></a>
+## Provenance Blockchain FAQ <a href="faq" id="faq"></a>
 
 * [Foundation FAQ](faq/foundation-faq.md)
 * [Grants Program FAQ](faq/grants-program-faq.md)
@@ -134,7 +139,7 @@
 * [Hash Utility Token FAQ](faq/hash-utility-token-faq.md)
 * [Validator FAQ](faq/validator-faq.md)
 * [Delegator FAQ](faq/delegator-faq.md)
-* [Client Contract Execution Environment \(P8e\) FAQ](faq/client-contract-execution-environment-faq.md)
+* [Client Contract Execution Environment (P8e) FAQ](faq/client-contract-execution-environment-faq.md)
 * [Smart Contract FAQ](faq/smart-contract-faq.md)
 
 ## Appendix
@@ -144,4 +149,3 @@
 ## License
 
 * [Apache 2.0](license/untitled.md)
-

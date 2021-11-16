@@ -6,153 +6,55 @@ description: >-
 
 # Fees/Distribution
 
-## What is gas? 
+## What is gas?
 
-Gas is a consumable that is used to power the Provenance Blockchain. Each execution of the blockchain requires enough gas to complete the required reads, writes, and computation encompassed by the submitted transaction\(s\). When using gas you need to know two things:
+Gas is a consumable that is used to power the Provenance Blockchain. Each execution of the blockchain requires enough gas to complete the required reads, writes, and computation encompassed by the submitted transaction(s). When using gas you need to know two things:
 
-* How much gas do I need to process my transaction? 
+* How much gas do I need to process my transaction?
 * What is the current price of gas?
 
-Before each transaction invoked on Provenance Blockchain, an estimate of the amount of gas you need is made. The estimated gas needed is the maximum you'll pay for the given transaction. Over estimating will lead to purchasing more gas than needed and under estimating will cause the submitted transaction to fail due to running out of gas. 
+Before each transaction invoked on Provenance Blockchain, an estimate of the amount of gas you need is made. The estimated gas needed is the maximum you'll pay for the given transaction. Over estimating will lead to purchasing more gas than needed and under estimating will cause the submitted transaction to fail due to running out of gas.
 
-### Meter 
+### Meter
 
 When a transaction starts processing, the meter is set at the estimated amount of gas and the measurement of usage decreases the amount of available gas for the transaction based on blockchain-network usage. If the transaction completes without running out the meter, it will be committed to the blockchain. If the meter arrives at zero before the transaction is complete, the blockchain will reject the transaction and the gas has been consumed. In this case it is beneficial to be slightly higher on gas estimates to avoid paying for a transaction that is rejected.
 
 ### Price
 
-Gas is purchased with Hash, the Provenance Blockchain utility token. 
+Gas is purchased with Hash, the Provenance Blockchain utility token.
 
-Note: gas prices are normally denoted in nHash \( 1Hash = 1,000,000,000 nHash\).
+Note: gas prices are normally denoted in nHash ( 1Hash = 1,000,000,000 nHash).
 
 ### Operation Gas Estimates
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Operation</th>
-      <th style="text-align:left">
-        <p>Low</p>
-        <p>[nHash]</p>
-      </th>
-      <th style="text-align:left">
-        <p>High</p>
-        <p>[nHash]</p>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">transfer coins</td>
-      <td style="text-align:left">70,000</td>
-      <td style="text-align:left">70,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">name_bound</td>
-      <td style="text-align:left">64,000</td>
-      <td style="text-align:left">64,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">account_attribute_added</td>
-      <td style="text-align:left">70,000</td>
-      <td style="text-align:left">70,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">account_attribute_deleted</td>
-      <td style="text-align:left">55,000</td>
-      <td style="text-align:left">55,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">contract spec loaded</td>
-      <td style="text-align:left">2,800,000</td>
-      <td style="text-align:left">3,600,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">scope created</td>
-      <td style="text-align:left">233,000</td>
-      <td style="text-align:left">1,000,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">scope updated</td>
-      <td style="text-align:left">90,000</td>
-      <td style="text-align:left">110,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">scope change owner</td>
-      <td style="text-align:left">75,000</td>
-      <td style="text-align:left">75,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">marker created</td>
-      <td style="text-align:left">75,000</td>
-      <td style="text-align:left">75,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">marker supply</td>
-      <td style="text-align:left">60,000</td>
-      <td style="text-align:left">60,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">marker permissions</td>
-      <td style="text-align:left">60,000</td>
-      <td style="text-align:left">60,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">marker finalize</td>
-      <td style="text-align:left">60,000</td>
-      <td style="text-align:left">60,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">marker activate</td>
-      <td style="text-align:left">100,000</td>
-      <td style="text-align:left">100,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">marker mint</td>
-      <td style="text-align:left">85,000</td>
-      <td style="text-align:left">90,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">marker burn</td>
-      <td style="text-align:left">85,000</td>
-      <td style="text-align:left">90,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">bilateral exchange</td>
-      <td style="text-align:left">105,000</td>
-      <td style="text-align:left">105,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">multilateral exchange</td>
-      <td style="text-align:left">105,000</td>
-      <td style="text-align:left">1,050,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">smart contract create (Require governance vote)</td>
-      <td style="text-align:left">6,320,000</td>
-      <td style="text-align:left">20,000,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">smart contract init</td>
-      <td style="text-align:left">1,000,000</td>
-      <td style="text-align:left">1,000,000</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">smart contract exec</td>
-      <td style="text-align:left">140,000</td>
-      <td style="text-align:left">140,000</td>
-    </tr>
-  </tbody>
-</table>
+|                                                 |                          |                           |
+| ----------------------------------------------- | ------------------------ | ------------------------- |
+| Operation                                       | <p>Low</p><p>[nHash]</p> | <p>High</p><p>[nHash]</p> |
+|                                                 |                          |                           |
+| transfer coins                                  | 70,000                   | 70,000                    |
+| name\_bound                                     | 64,000                   | 64,000                    |
+| account\_attribute\_added                       | 70,000                   | 70,000                    |
+| account\_attribute\_deleted                     | 55,000                   | 55,000                    |
+| contract spec loaded                            | 2,800,000                | 3,600,000                 |
+| scope created                                   | 233,000                  | 1,000,000                 |
+| scope updated                                   | 90,000                   | 110,000                   |
+| scope change owner                              | 75,000                   | 75,000                    |
+| marker created                                  | 75,000                   | 75,000                    |
+| marker supply                                   | 60,000                   | 60,000                    |
+| marker permissions                              | 60,000                   | 60,000                    |
+| marker finalize                                 | 60,000                   | 60,000                    |
+| marker activate                                 | 100,000                  | 100,000                   |
+| marker mint                                     | 85,000                   | 90,000                    |
+| marker burn                                     | 85,000                   | 90,000                    |
+| bilateral exchange                              | 105,000                  | 105,000                   |
+| multilateral exchange                           | 105,000                  | 1,050,000                 |
+| smart contract create (Require governance vote) | 6,320,000                | 20,000,000                |
+| smart contract init                             | 1,000,000                | 1,000,000                 |
+| smart contract exec                             | 140,000                  | 140,000                   |
 
-## Fees 
+## Fees
 
-Fees are the total amount of Hash collected for consumed gas during the processing and minting of a block on Provenance Blockchain. **Community** and **Block Proposer** fees are set by governance proposals allowing Hash holders to vote to adjust these fee percentages as necessary. Delegators can choose validators that have a lower commission to optimize the amount of fees collected from the network. 
+Fees are the total amount of Hash collected for consumed gas during the processing and minting of a block on Provenance Blockchain. **Community** and **Block Proposer** fees are set by governance proposals allowing Hash holders to vote to adjust these fee percentages as necessary. Delegators can choose validators that have a lower commission to optimize the amount of fees collected from the network.
 
 ## Distribution
 
@@ -164,35 +66,35 @@ All validators that vote on the proposed block are assigned a portion of the fee
 
 ### Proposing Validator Bonus
 
-A node that is part of the active validator set will eventually be selected to handle proposing a new block to the chain. During this process the validator is responsible for collecting transactions and cutting a proposed block for other validators to vote on. As a reward for performing these functions the proposing validator is allocated an additional share of the fees that is calculated based on the \[base\_reward + bonus\_amount\*validators\_overall\_percentage\_of\_voting\_power\].
+A node that is part of the active validator set will eventually be selected to handle proposing a new block to the chain. During this process the validator is responsible for collecting transactions and cutting a proposed block for other validators to vote on. As a reward for performing these functions the proposing validator is allocated an additional share of the fees that is calculated based on the \[base\_reward + bonus\_amount\*validators\_overall\_percentage\_of\_voting\_power].
 
 ### Delegates
 
-The validator's pool of fees is further broken down during distribution with a percentage reserved for the validator node operator \(the commission\), and the remaining amount distributed among all stakeholders according to their delegation percentage of the overall amount assigned to the validator. This means that if an account has delegated 25% of the total stake \(aka the voting power for the validator\) then they are entitled to 25% of the fees awarded to the validator for cutting a block \(less commission\).
+The validator's pool of fees is further broken down during distribution with a percentage reserved for the validator node operator (the commission), and the remaining amount distributed among all stakeholders according to their delegation percentage of the overall amount assigned to the validator. This means that if an account has delegated 25% of the total stake (aka the voting power for the validator) then they are entitled to 25% of the fees awarded to the validator for cutting a block (less commission).
 
 ### Stake At Risk
 
-Delegation of stake against a validator node is considered "at risk" meaning that if a validator performs a network fault the stake assigned to the validator node will be slashed \(meaning a percentage is forfeit\). This currently can happen in two ways. The first is if a validator node is a member of the active set of validators and the node fails to sign enough blocks within a given window \(for example of the server is offline\). This will result in a minor penalty and the removal of the validator node from the active set. A more serious error is the double signing infraction. This occurs if the validator submits more than one signature for a block. When this infraction is detected the validator is assessed a very serious penalty and banned from the network. This is because this behavior has very severe consequences for the network stability.
+Delegation of stake against a validator node is considered "at risk" meaning that if a validator performs a network fault the stake assigned to the validator node will be slashed (meaning a percentage is forfeit). This currently can happen in two ways. The first is if a validator node is a member of the active set of validators and the node fails to sign enough blocks within a given window (for example of the server is offline). This will result in a minor penalty and the removal of the validator node from the active set. A more serious error is the double signing infraction. This occurs if the validator submits more than one signature for a block. When this infraction is detected the validator is assessed a very serious penalty and banned from the network. This is because this behavior has very severe consequences for the network stability.
 
 ### Fee Distribution Hierarchy
 
 * Community - pool of Hash that can be used to enhance and maintain Provenance Blockchain
 * Block Proposer - an additional bonus given to the validator that proposed the block
 * Validator Commission - percentage of the fee that is taken as commission by a validator
-* Delegators 
+* Delegators
 
 ### Current Fees
 
-| Type | Percentage |
-| :--- | :--- |
-| Community | 2% |
-| Block Proposer | 1% to 6% |
+| Type                 | Percentage |
+| -------------------- | ---------- |
+| Community            | 2%         |
+| Block Proposer       | 1% to 6%   |
 | Validator Commission | 5% to 100% |
-| Delegators | Remaining |
+| Delegators           | Remaining  |
 
 ### **Example**
 
-Here is an example distribution of Hash collected during a transaction. 
+Here is an example distribution of Hash collected during a transaction.
 
 **Validators:**
 
@@ -200,13 +102,12 @@ Here is an example distribution of Hash collected during a transaction.
 * Validator B - 50% commission
 * Validator C - 1% commission
 
-A proposed transaction uses 1000 gas and each unit of gas costs 0.5 Hash. In this scenario we can expect the network to collect 500 Hash in fees that need to be distributed. When the distribution takes place it goes through the fee distribution process and allocates: 
+A proposed transaction uses 1000 gas and each unit of gas costs 0.5 Hash. In this scenario we can expect the network to collect 500 Hash in fees that need to be distributed. When the distribution takes place it goes through the fee distribution process and allocates:
 
-* **Community** would receive 5% of the total transaction fees \(500 x .05\) or 25 Hash.
-* **Validator A** proposed the block and receives a 6% bonus because all validator signatures were collected. The remaining Hash available after the community pool allocation was 475 Hash. **Validator A** would collect \(475 \* .06\) or 28.5 Hash.
-* Validators now receive the remaining 446.5 Hash split among them or 148.333 Hash each. 
-* **Validator A** charges a commission of 20% - \(148.333 \* .2\) or 29.6666 Hash 
-* **Validator B** charges a commission of 50% - \(148.333 \* .5\) or 74.1665 Hash 
-* **Validator C** charges a commission of 1% - \(148.333 \* .01\) or 1.48333 Hash 
+* **Community** would receive 5% of the total transaction fees (500 x .05) or 25 Hash.
+* **Validator A** proposed the block and receives a 6% bonus because all validator signatures were collected. The remaining Hash available after the community pool allocation was 475 Hash. **Validator A** would collect (475 \* .06) or 28.5 Hash.
+* Validators now receive the remaining 446.5 Hash split among them or 148.333 Hash each.
+* **Validator A** charges a commission of 20% - (148.333 \* .2) or 29.6666 Hash
+* **Validator B** charges a commission of 50% - (148.333 \* .5) or 74.1665 Hash
+* **Validator C** charges a commission of 1% - (148.333 \* .01) or 1.48333 Hash
 * **Delegators** receive the remaining portion of Hash after commission on the validator they have delegated to on a pro rata basis.
-

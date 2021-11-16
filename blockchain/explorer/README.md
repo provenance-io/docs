@@ -4,7 +4,11 @@ description: Overview of Explorer capabilities
 
 # Explorer
 
-The Blockchain Explorer is a UI displaying blockchain information without having to know how to query the blockchain. The **testnet** Explorer can be reached [here](https://explorer.test.provenance.io/dashboard). 
+The Blockchain Explorer is a UI displaying blockchain information without having to know how to query the blockchain.&#x20;
+
+The **testnet** Explorer can be reached [here](https://explorer.test.provenance.io/dashboard).
+
+The **mainnet** Explorer can be reached [here](https://explorer.provenance.io/dashboard).
 
 ## Prerequisites
 
@@ -50,6 +54,8 @@ services:
       - EXPLORER_MAINNET=false
       # Hits the locally running node
       - EXPLORER_PB_URL=http://host.docker.internal:9090
+      - EXPLORER_FIGMENT_APIKEY=45af964c1cc7292d06db51b5d9a523a4
+      - EXPLORER_FIGMENT_URL=https://pio-testnet-1--lcd.datahub.figment.io
     depends_on:
       - explorer-postgres
     links:
@@ -72,20 +78,20 @@ services:
 2. From the location of the above saved file, run \``docker-compose pull`. This pulls the latest versions of the dockers defined in the file.
 3. Once the pull is complete, run `docker-compose up`. This starts up the dockers as a single unit.
 
-Once it's up and running, you should be able to access the UI from [http://localhost:3000/dashboard](http://localhost:3000/dashboard). 
+Once it's up and running, you should be able to access the UI from [http://localhost:3000/dashboard](http://localhost:3000/dashboard).
 
 ### Using Github/IDE
 
 Additional prerequisites:
 
-* [Gradle](https://gradle.org/)
+* [Gradle](https://gradle.org)
 * [Java](https://www.java.com/en/)
-* [Kotlin](https://kotlinlang.org/)
+* [Kotlin](https://kotlinlang.org)
 
 1. Clone the repo: [https://github.com/provenance-io/explorer-service](https://github.com/provenance-io/explorer-service)
-2. From within your favorite IDE \(or CLI, you brute\), you'll need to get everything to build. This project uses Gradle as the build tool. Run the following series of commands from the root directory to get everything built:
+2. From within your favorite IDE (or CLI, you brute), you'll need to get everything to build. This project uses Gradle as the build tool. Run the following series of commands from the root directory to get everything built:
    1. `sh ./gradlew`
-   2. `./gradlew proto:build`
+   2. `./gradlew clean proto:generateProto`
    3. `./gradlew build`
 3. Start up the database
    1. Run `docker-compose -f docker/docker-compose-db.yml up -d` . This starts the database in a docker environment.
@@ -147,7 +153,4 @@ services:
 
 1. Run `docker-compose -f docker/docker-compose.yml up -d`
 
-Once it's up and running, you should be able to access the UI from [http://localhost:3000/dashboard](http://localhost:3000/dashboard). 
-
-
-
+Once it's up and running, you should be able to access the UI from [http://localhost:3000/dashboard](http://localhost:3000/dashboard).
