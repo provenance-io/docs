@@ -46,12 +46,6 @@ There are additional points of interest that do not have a direct navigation lin
 [account-address.md](account-address.md)
 {% endcontent-ref %}
 
-{% content-ref url="forthcoming/nfts.md" %}
-[nfts.md](forthcoming/nfts.md)
-{% endcontent-ref %}
-
-
-
 ## Search
 
 You can also search for a specific item via the search function in the navigation bar.
