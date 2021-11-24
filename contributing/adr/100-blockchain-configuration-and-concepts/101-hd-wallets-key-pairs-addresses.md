@@ -21,9 +21,9 @@ The Provenance Blockchain platform will require an address for each user or cont
 
 ## Decision
 
-Provenance Blockchain will use the HD wallet standards established and proven by the Bitcoin and Ethereum communities for the creation of all user keys. No secp256k1 key pairs will be created that are standalone outside of this process. Provenance Blockchain will use the 24 word mnemonic standard length \(256byte\) to generate seed values for deriving all secp256k1 keys. The specific industry standards used for this process will be outlined in the [wallet](../spec/wallets.md) and [address](../address.md) specification documents.
+Provenance Blockchain will use the HD wallet standards established and proven by the Bitcoin and Ethereum communities for the creation of all user keys. No secp256k1 key pairs will be created that are standalone outside of this process. Provenance Blockchain will use the 24 word mnemonic standard length (256byte) to generate seed values for deriving all secp256k1 keys.
 
-The default user/context level account will be the first \(`0`\) account in the heirarchy and the associated address for this user/context will be the first address level key pair \(`0`\) within the wallet. This address is addressable via \[`m/44'/505'/0'/0/0`\]. While the standards support the concept of external and internal \(or change\) address level keys for the Provenance Blockchain only the external address level keys will be used.
+The default user/context level account will be the first (`0`) account in the heirarchy and the associated address for this user/context will be the first address level key pair (`0`) within the wallet. This address is addressable via \[`m/44'/505'/0'/0/0`]. While the standards support the concept of external and internal (or change) address level keys for the Provenance Blockchain only the external address level keys will be used.
 
 With the standardization of key pairs and generation, each security/user context will be proved through the use of digital signatures.
 
@@ -54,4 +54,3 @@ External systems that work with the Provenance Blockchain will need to evolve to
 ### Neutral
 
 * Requires refactoring existing systems to rely on 'addresses' as the unique identifier pointing to a key pair context.
-
