@@ -68,7 +68,7 @@
 * [Name](modules/name-module.md)
 * [Smart Contracts (ProvWasm)](modules/provwasm-smart-contracts.md)
 
-## Contract Execution Environment <a href="p8e" id="p8e"></a>
+## Contract Execution Environment <a href="#p8e" id="p8e"></a>
 
 * [P8e Contract Execution Environment](p8e/overview/README.md)
   * [SDK](p8e/overview/api.md)
@@ -91,7 +91,7 @@
   * [Data Mapping](integrating/asset-originators-guide/data-mapping.md)
   * [Onboard Loan Contract](integrating/asset-originators-guide/example-loan-contracts.md)
 
-## Apps Built on Provenance Blockchain <a href="provenance-applications" id="provenance-applications"></a>
+## Apps Built on Provenance Blockchain <a href="#provenance-applications" id="provenance-applications"></a>
 
 * [Apps Overview](provenance-applications/apps-powered-by-provenance.md)
 * [Figure LOS](provenance-applications/loan-origination-system-los/README.md)
@@ -130,7 +130,15 @@
   * [700 Business Applications](contributing/adr/700-business-applications.md)
   * [800 System Migration](contributing/adr/800-system-migration.md)
 
-## Provenance Blockchain FAQ <a href="faq" id="faq"></a>
+## Whitepapers
+
+* [Loan Participation On Provenance](whitepapers/loan-participation-on-provenance.md)
+* [Securitization On Provenance](whitepapers/securitization-on-provenance.md)
+* [Blockchain Impact On Credit Ratings](whitepapers/blockchain-impact-on-credit-ratings.md)
+* [Investment Fund Services on Provenance](whitepapers/investment-fund-services-on-provenance.md)
+* [Supply Chain Finance on Provenance](whitepapers/supply-chain-finance-on-provenance.md)
+
+## Provenance Blockchain FAQ <a href="#faq" id="faq"></a>
 
 * [Foundation FAQ](faq/foundation-faq.md)
 * [Grants Program FAQ](faq/grants-program-faq.md)

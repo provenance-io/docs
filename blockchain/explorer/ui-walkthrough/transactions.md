@@ -12,7 +12,7 @@ Filters exist to make finding certain transactions easier.&#x20;
 
 * **Type**: this is the message type for a submitted transaction. They are grouped by generally accepted criteria. Select a single type to filter
 * **Status**: Success or Failed
-* **From **& **To**: specify a date range to filter transactions down to a time period. Can include one or both
+* **From** & **To**: specify a date range to filter transactions down to a time period. Can include one or both
 
 Information to note:
 

@@ -27,7 +27,7 @@ Information to note:
 Information to note:
 
 * **Asset Name**: the common name for the asset. This is determined by the asset's metadata, ie `nhash` is more commonly known as `hash`
-* **Min Unit **/** Decimal**: the minimum unit is the smallest unit of the asset. When you have a fraction of the asset, it is calculated in terms of the minimum unit. Decimal is how many decimal places from the minimum unit to the asset unit, ie from `nhash` to `hash`, its 9 decimal places, where `1000000000 nhash = 1 hash`
+* **Min Unit** / **Decimal**: the minimum unit is the smallest unit of the asset. When you have a fraction of the asset, it is calculated in terms of the minimum unit. Decimal is how many decimal places from the minimum unit to the asset unit, ie from `nhash` to `hash`, its 9 decimal places, where `1000000000 nhash = 1 hash`
 * **Holders**: how many addresses hold the asset
 * **Fungible Tokens**: how many distinct fungible tokens the asset holds
 * **Non-Fungible Tokens**: how many non-fungible tokens the asset holds

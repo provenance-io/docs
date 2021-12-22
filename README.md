@@ -1,14 +1,14 @@
 ---
 description: >-
-  Provenance Blockchain is a distributed, proof-of-stake blockchain designed for financial
-  service industries.
+  Provenance Blockchain is a distributed, proof-of-stake blockchain designed for
+  financial service industries.
 ---
 
 # Provenance Blockchain
 
 ## Getting Started
 
-> The Provenance Blockchain is based on the [Cosmos SDK ](https://docs.cosmos.network/v0.42/)and the [Tendermint](https://docs.tendermint.com/master/) blockchain application platforms.  It is useful to have a basic understanding of both these technologies prior to reading the Provenance Blockchain documentation. Refer to the [Cosmos SDK basics documentation](https://docs.cosmos.network/v0.42/intro/overview.html) and the [Tendermint overview](https://docs.tendermint.com/master/introduction/what-is-tendermint.html#) for more information.
+> The Provenance Blockchain is based on the [Cosmos SDK ](https://docs.cosmos.network/v0.42/)and the [Tendermint](https://docs.tendermint.com/master/) blockchain application platforms. It is useful to have a basic understanding of both these technologies prior to reading the Provenance Blockchain documentation. Refer to the [Cosmos SDK basics documentation](https://docs.cosmos.network/v0.42/intro/overview.html) and the [Tendermint overview](https://docs.tendermint.com/master/introduction/what-is-tendermint.html#) for more information.
 
 Read about the Provenance Blockchain and financial services:
 
@@ -62,9 +62,14 @@ Follow real-world use cases and applications built on Provenance Blockchain:
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-Frequently Asked Question... and Answers:
+Learn more about Provenance Blockchain 2.0
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
+Frequently Asked Question... and Answers:
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}

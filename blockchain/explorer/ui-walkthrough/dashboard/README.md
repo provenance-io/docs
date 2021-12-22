@@ -15,7 +15,7 @@ In the top section, you will find general statistics about Provenance Blockchain
 * **Voting Power**: the current total voting power that took part in the voting for the last block; includes the total validator count on Provenance Blockchain
 * **Avg Block Time**: across the last 100 blocks on Provenance Blockchain, on average how long it took to commit a block
 * **Bonded Tokens**: the percentage of tokens present on Provenance Blockchain that are bonded to a **staking validator**; includes approximate values for bonded to total tokens ratio
-* **24hr Volume: **the volume of Hash moved in the last 24 hours, in US Dollars
+* **24hr Volume:** the volume of Hash moved in the last 24 hours, in US Dollars
 * **Latest Price:** the latest trading price of 1 Hash, as shown by the [Dlob](https://www.dlob.io)
 * **Market Cap:**&#x20;
 

@@ -35,7 +35,7 @@ Information to note:
 * **Commission**: this is the percentage of a block's fees taken by the validator before the remaining is distributed to delegators. See[ ](../../../../ecosystem/financial-services-blockchain/distribution.md)[#distribution](../../../../ecosystem/financial-services-blockchain/distribution.md#distribution "mention") for more information. Ideally, the lower the Commission, the better for delegators
 * **Voting Power**: based on the percentage of total delegation on the blockchain, the higher the Voting Power, the more influence the validator will have on the blockchain
 * **Uptime**: the percentage of blocks the validator has be "up" since they were added to the validator set. 100% = the validator has missed a negligible amount of or no blocks
-* **Self Bonded: **the amount of Hash the validator's **Operator Account** has delegated to the validator. This shows the operator has skin in the game
+* **Self Bonded:** the amount of Hash the validator's **Operator Account** has delegated to the validator. This shows the operator has skin in the game
 
 ## Candidate and Jailed Validators
 
