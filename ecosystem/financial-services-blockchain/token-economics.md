@@ -19,6 +19,50 @@ Large financial institutions, investors, technical leaders, and individuals prov
 | Initial Active Set Size       | 20 Validators (can be changed by governance vote)                              |
 | Community pool                | 2% of fees                                                                     |
 
+### Who holds Hash?
+
+Hash is held by four majority holders.
+
+| Owner                            | Percentage |
+| -------------------------------- | ---------- |
+| Provenance Blockchain Foundation | 5.6%       |
+| Investors                        | 12.5%      |
+| Community (Users, Developers)    | 25.9%      |
+| Figure Technologies Inc.         | 56%        |
+
+#### Provenance Blockchain Foundation: Learn more [HERE](../foundation.md)
+
+#### Figure
+
+Figure Technologies designed and developed the Provenance Blockchain, which was initially released in July of 2018. In April of 2021, Figure released an evolved Provenance Blockchain implementation as an open source blockchain based on the Cosmos SDK and Tendermint Consensus Algorithm. This new version allows any developer to participate, and derive value by utilizing an efficient settlement rail for digitally native assets.
+
+Figure delegated 3.75 billion Hash to stabilize and secure the network. Figure has committed not to delegate beyond 50% control, effectively decentralizing the blockchain allowing the community to govern the future state of the protocol in conjunction with the Provenance Blockchain Foundation. Figure's delegations can be found [HERE](https://explorer.provenance.io/accounts/pb1jdhhd54zy6g3sg2agwuh503mdwm50e8es6d2l4) and [HERE](https://explorer.provenance.io/accounts/pb1e2fhljv44saqmewp6j6ra0y94e8vzfs9a9r4aq) as well as their voting on [past proposals](https://explorer.provenance.io/proposals) on the [Provenance Explorer](https://explorer.provenance.io).
+
+#### Strategic Partnerships
+
+Provenance Blockchain Foundation and Figure are driving Provenance adoption through the creation of strategic partnerships with major financial institutions. These partnerships reward the financial institutions with tokens based on the attainment of specific adoption milestones. The most public of these partnerships are the ones [entered into](https://www.apollo.com/media/press-releases/2021/07-14-2021) with Apollo Global Management (one of the largest asset managers) and with the USDF Consortium banks.
+
+While Figure currently holds about two thirds of the Hash token supply, it is actively divesting its Hash holdings into ecosystem through such partnerships driving use cases. This is an important differentiator for a blockchain, as it drives scale de-risked businesses and volumes to the Provenance Blockchain, rather than using inflation, airdrops, and other gimmicks to encourage participation. These use cases as well as upcoming arrangements with leading lending, payments, asset management and insurance companies will accrete long-term sustainable value to the Provenance Blockchain community and result in Figure holding less than one third of the token supply.
+
+**Press related to strategic partnerships**
+
+* USDF -[https://www.fintechfutures.com/2022/01/usdf-consortium-launches-to-develop-and-promote-bank-minted-stablecoin/](https://www.fintechfutures.com/2022/01/usdf-consortium-launches-to-develop-and-promote-bank-minted-stablecoin/)
+* ATS -[https://www.crypto-reporter.com/newsfeed/figure-unveils-first-solution-for-private-companies-to-raise-manage-trade-equity-from-single-platform-22234/](https://www.crypto-reporter.com/newsfeed/figure-unveils-first-solution-for-private-companies-to-raise-manage-trade-equity-from-single-platform-22234/)
+* Subscribe -[https://finance.yahoo.com/news/subscribe-figure-partner-offer-first-143000756.html](https://finance.yahoo.com/news/subscribe-figure-partner-offer-first-143000756.html)
+* Marqeta -[https://www.pymnts.com/buy-now-pay-later/2021/marqeta-figure-team-on-bnpl-pos-solution/](https://www.pymnts.com/buy-now-pay-later/2021/marqeta-figure-team-on-bnpl-pos-solution/)
+* Homebridge -[https://www.housingwire.com/articles/inside-figure-and-homebridges-massive-bet-on-blockchain/](https://www.housingwire.com/articles/inside-figure-and-homebridges-massive-bet-on-blockchain/)
+* Apollo -[https://www.coindesk.com/apollo-to-work-with-figure-on-blockchain-initiatives](https://www.coindesk.com/apollo-to-work-with-figure-on-blockchain-initiatives)
+
+#### USDF Consortium
+
+The USDF Consortium is a membership-based association of FDIC-insured banks. The consortium’s mission is to build a network of banks to further the adoption and interoperability of a bank-minted stablecoin (USDF), which will facilitate the compliant transfer of value on the blockchain, removing friction in the financial system and unlocking the financial opportunities that blockchain and digital transactions can provide to a greater network of users.
+
+USDF Consortium is making the market safer, cheaper and more reliable for consumers who want to transact on blockchain by ensuring banks continue to play an important role in the financial ecosystem as blockchain adoption accelerates.The USDF Consortium is committed to building the foundation and advancing responsible innovation that will allow banks to harness the benefits of this transformative technology.
+
+The Consortium’s founding bank members include New York Community Bank, NBH Bank, FirstBank, Sterling National Bank, and Synovus Bank. Figure Technologies, Inc. and JAM FINTOP are also founding members and will facilitate and promote the adoption of USDF.
+
+USDF runs on the Provenance Blockchain as its open-loop network enables instantaneous 24x7x365 settlement.
+
 ## Provenance Blockchain Consensus Method
 
 Provenance Blockchain uses the Tendermint consensus mechanism. This relies on a set of validators that are responsible for committing new blocks to the chain. These Validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key. Validators:
