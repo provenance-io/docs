@@ -6,20 +6,24 @@ description: An overview of validator rewards for the Provenance Blockchain
 
 Provenance Blockchain is a public **proof-of-stake blockchain** network designed and developed to support financial service industry needs by providing a **ledger**, **registry**, and **exchange** across multiple financial assets and markets. **Hash** is the Provenance Blockchain utility token to stake, govern, secure, and transact on the network.
 
-Large financial institutions, investors, technical leaders, and individuals provide the foundation of security and stability of the Provenance Blockchain network by staking Hash as a network validator or delegator for which they are rewarded with a fee. The amount of Hash staked towards a validator defines the frequency by which the validator may propose a new block and its weight in votes to commit a block (and thus earn fees). The n largest validators (by weight of stake) are defined as the Active Set of Validators where n is a number defined by the Hash community.
+Large financial institutions, investors, technical leaders, and individuals provide the foundation of security and stability of the Provenance Blockchain network by staking Hash as a network validator or delegator for which they are rewarded with a fee. The amount of Hash staked towards a validator defines the frequency by which the validator may propose a new block and its weight in votes to commit a block (and thus earn fees). The `n` largest validators (by weight of stake) are defined as the Active Set of Validators where `n` is a number defined by the Hash community.
 
-| Token Type                    | Hash                                                                           |
-| ----------------------------- | ------------------------------------------------------------------------------ |
-| Total Supply                  | 100 Billion                                                                    |
-| Total Planned Inflation       | None                                                                           |
-| Inflation Rate                | None                                                                           |
-| Maximum Stake                 | None though an individual node is capped at 33% of total network staked weight |
-| Minimum Stake                 | 1 Hash                                                                         |
-| Unbonding/Undelegating period | 21 days                                                                        |
-| Initial Active Set Size       | 20 Validators (can be changed by governance vote)                              |
-| Community pool                | 2% of fees                                                                     |
+| Token Type                    | Hash           |
+| ----------------------------- | -------------- |
+| Total Supply                  | 100 Billion    |
+| Total Planned Inflation       | None           |
+| Inflation Rate                | None           |
+| Maximum Stake                 | None           |
+| Minimum Stake                 | 1 Hash         |
+| Unbonding/Undelegating period | 21 days        |
+| Initial Active Set Size       | 100 validators |
+| Community pool                | 7%             |
 
-### Who holds Hash?
+## Inflation
+
+The number of minted Hash remains constant, and no new Hash is minted as reward for work. As a result, there is no inflation of the Hash value through the new influx of Hash.
+
+## Who holds Hash?
 
 Hash is held by four majority holders.
 
@@ -30,15 +34,26 @@ Hash is held by four majority holders.
 | Community (Users, Developers)    | 25.9%      |
 | Figure Technologies Inc.         | 56%        |
 
-#### Provenance Blockchain Foundation: Learn more [HERE](../foundation.md)
+### Provenance Blockchain Foundation
 
-#### Figure
+Learn more [HERE](../foundation.md)
+
+### Figure
 
 Figure Technologies designed and developed the Provenance Blockchain, which was initially released in July of 2018. In April of 2021, Figure released an evolved Provenance Blockchain implementation as an open source blockchain based on the Cosmos SDK and Tendermint Consensus Algorithm. This new version allows any developer to participate, and derive value by utilizing an efficient settlement rail for digitally native assets.
 
 Figure delegated 3.75 billion Hash to stabilize and secure the network. Figure has committed not to delegate beyond 50% control, effectively decentralizing the blockchain allowing the community to govern the future state of the protocol in conjunction with the Provenance Blockchain Foundation. Figure's delegations can be found [HERE](https://explorer.provenance.io/accounts/pb1jdhhd54zy6g3sg2agwuh503mdwm50e8es6d2l4) and [HERE](https://explorer.provenance.io/accounts/pb1e2fhljv44saqmewp6j6ra0y94e8vzfs9a9r4aq) as well as their voting on [past proposals](https://explorer.provenance.io/proposals) on the [Provenance Explorer](https://explorer.provenance.io).
 
-#### Strategic Partnerships
+**Figure utilizes Provenance Blockchain to improve efficiency and scalability of several business lines.**
+
+* Figure Lending - HELOC, Mortgage, and Personal Loans
+* Figure Pay - Direct to consumer banking on blockchain, bank in a box APIs
+* Figure Marketplace - Digital Fund Services, ATS
+* Figure Equity Solutions - Cap Sheet Management with Blockchain Native Securities
+* DART - Mortgage Registry
+* USDF Consortium - Bank-backed stablecoin
+
+## Strategic Partnerships
 
 Provenance Blockchain Foundation and Figure are driving Provenance adoption through the creation of strategic partnerships with major financial institutions. These partnerships reward the financial institutions with tokens based on the attainment of specific adoption milestones. The most public of these partnerships are the ones [entered into](https://www.apollo.com/media/press-releases/2021/07-14-2021) with Apollo Global Management (one of the largest asset managers) and with the USDF Consortium banks.
 
@@ -53,7 +68,7 @@ While Figure currently holds about two thirds of the Hash token supply, it is ac
 * Homebridge -[https://www.housingwire.com/articles/inside-figure-and-homebridges-massive-bet-on-blockchain/](https://www.housingwire.com/articles/inside-figure-and-homebridges-massive-bet-on-blockchain/)
 * Apollo -[https://www.coindesk.com/apollo-to-work-with-figure-on-blockchain-initiatives](https://www.coindesk.com/apollo-to-work-with-figure-on-blockchain-initiatives)
 
-#### USDF Consortium
+### USDF Consortium
 
 The USDF Consortium is a membership-based association of FDIC-insured banks. The consortium’s mission is to build a network of banks to further the adoption and interoperability of a bank-minted stablecoin (USDF), which will facilitate the compliant transfer of value on the blockchain, removing friction in the financial system and unlocking the financial opportunities that blockchain and digital transactions can provide to a greater network of users.
 
@@ -63,36 +78,23 @@ The Consortium’s founding bank members include New York Community Bank, NBH Ba
 
 USDF runs on the Provenance Blockchain as its open-loop network enables instantaneous 24x7x365 settlement.
 
-## Provenance Blockchain Consensus Method
+### Grants Program
 
-Provenance Blockchain uses the Tendermint consensus mechanism. This relies on a set of validators that are responsible for committing new blocks to the chain. These Validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key. Validators:
+The foundation funds a grants program where “Provenance Blockchain Improvement Proposals (PIPs)” are solicited from the community and possibly funded. Those proposals can address new functionality and features that enhance the appeal and acceptance of the Provenance Blockchain ecosystem. Proposals for more forward looking research projects and feasibility studies of applications leveraging the ecosystem in different economic settings and geographies, are also very welcome. Those PIPs are presented to the foundation council and members, who will vote on the funding of those projects.
 
-* Are full blockchain nodes
-* Vote on blockchain network governance proposals
-* Add blocks to the chain
+The Provenance Blockchain community consists of individuals and organizations that identify projects like: DeFi applications, tools to teach and educate students about the Provenance Blockchain network and its SDK. The Community identifies projects that bring diverse communities together.
 
-There are a known and limited number of validators in the Active Set,$$N_{V}$$. This set is viewable at [https://explorer.provenance.io](https://explorer.provenance.io/dashboard). The size of the active set is determined by community governance vote. The$$N_{V}$$largest validators by staked token weight are those included in the Active Set.
+Interested parties can submit Grants proposals [HERE](https://www.provenance.io/grants)
 
 ## Staking Hash
 
 The Provenance Blockchain network is a public Proof-Of-Stake (PoS) blockchain, meaning that the weight of validators is determined by the amount of staking tokens (Hash) bonded to them as collateral. These Hash can be self-delegated directly by the validator or delegated to them by other Hash holders. Hash holders can select any number of validators to delegate some or all of their Hash to stake. Any Hash holder can declare their intention to become a validator by sending a create-validator transaction to the network. From there, they become validator candidates.
 
-The weight (i.e. voting power) of a validator determines whether or not they are an active validator. Only the top $$N_{V}$$validators with the most voting power will be active validators - those in the Active Set. Only validators in the Active Set, and by association those who delegated to them, receive rewards and have the right to participate in governance.
+The weight (i.e. voting power) of a validator determines whether or not they are an active validator. Only the top $$N_v$$validators with the most voting power will be active validators - those in the Active Set. Only validators in the Active Set, and by association those who delegated to them, receive rewards and have the right to participate in governance.
 
 When a validator or a delegator wants to remove part or all of their deposit from the staking pool (i.e. no longer stake that Hash), they send an unbonding transaction to the Provenance Blockchain. Their Hash undergoes a three week unbonding period during which the owner of the Hash still earns transaction fees, can participate in governance votes and is still liable to being slashed for potential misbehaviors committed by the validator before the unbonding process started.
 
 If a delegator only wishes to move their stake between validators but not remove it from the staking pool they may issue a redelegation. A redelegation is an instant transfer in voting power from one validator to another that occurs at the submitted blockheight. Redelegations do not have any impact on the required 3 week unbonding period.
-
-### Provenance Blockchain slashing policy
-
-Staking Hash can be thought of as a security deposit on validation activities. If a validator misbehaves, their delegated stake will be partially slashed. This means that every delegator that bonded Hash to this validator gets penalized in proportion to their bonded stake. Delegators are therefore incentivized to delegate to validators that they anticipate will function safely.
-
-There are currently two faults that can result in slashing of funds for a validator and their delegators:
-
-* Double signing: If someone reports on chain A that a validator signed two blocks at the same height on chain A and chain B, and if chain A and chain B share a common ancestor, then this validator will get slashed by 5% on chain A.
-* Downtime: If a validator misses more than 99% of the last 10.000 blocks, they will get slashed by 1%.
-
-When a validator node is slashed for one of the above penalties it is immediately removed from the active validator set and placed in a "jailed" state. A node may remove itself from the "jailed" status after a minimum cooling off period elapses by submitting an unjail transaction. During the jailed status period any delegator may choose to redelegate their stake to another validator on the network with the exception of the validator operator who must maintain at least their minimum stake threshold in their node.
 
 ## Validator rewards
 
@@ -100,17 +102,17 @@ Validators are rewarded for their work. The validator that is selected to propos
 
 A validator earns transaction fees in Hash tokens. The total fee for each transaction is divided among validators' staking pools according to each validator's weight. Within each validator's staking pool, the revenue is further divided among delegators in proportion to each delegator's stake. A commission on delegators' revenue is applied by the validator before it is distributed.
 
-### Validator commission
+## Validator commission
 
 Revenue received by a validator's pool is split between the validator and their delegators. The validator can apply a commission on the part of the revenue that goes to their delegators. This commission is set as a percentage. Each validator is free to set their initial commission, maximum daily commission change rate and maximum commission. The Provenance Blockchain network enforces the parameters that each validator sets. Only the commission rate can change after the validator is established.
 
-The commission-rate value$$C_{i}$$:
+The commission-rate value $$C_i$$:
 
-* Must be between 0 and the validator's commission-max-rate$$C_{imax}$$
-* Must not exceed the validator's commission-max-change-rate$$C_{i,max-change}$$ which is maximum percent change rate **per day**. In other words, a validator can only change its commission once per day and within commission-max-change-rate bounds.
+* Must be between 0 and the validator's commission-max-rate $$C_i max$$
+* Must not exceed the validator's $$C_i max-change$$ which is maximum percent change rate **per day**. In other words, a validator can only change its commission once per day and within commission-max-change-rate bounds.
 * Can be 100%, which implies that that validator is not welcoming outside delegators since it pockets all rewards based on its bonded stake.
 
-### Validator earned fees
+## Validator earned fees
 
 Fees are similarly distributed with the exception that the block proposer can get a bonus on the fees of the block they propose if they include more than the strict minimum of required precommits.
 
@@ -123,7 +125,18 @@ To summarize earned fee rules:
 * **All validators in the Active Set receive a share of the fee proportional to their total stake**
 * **Validators takes commissions before distributing fees to their delegators**
 
-### Fee calculation example
+## Provenance Blockchain slashing policy
+
+Staking Hash can be thought of as a security deposit on validation activities. If a validator misbehaves, their delegated stake will be partially slashed. This means that every delegator that bonded Hash to this validator gets penalized in proportion to their bonded stake. Delegators are therefore incentivized to delegate to validators that they anticipate will function safely.
+
+There are currently two faults that can result in slashing of funds for a validator and their delegators:
+
+* Double signing: If someone reports on chain A that a validator signed two blocks at the same height on chain A and chain B, and if chain A and chain B share a common ancestor, then this validator will get slashed by 5% on chain A.
+* Downtime: If a validator misses more than 99% of the last 10.000 blocks, they will get slashed by 1%.
+
+When a validator node is slashed for one of the above penalties it is immediately removed from the active validator set and placed in a "jailed" state. A node may remove itself from the "jailed" status after a minimum cooling off period elapses by submitting an unjail transaction. During the jailed status period any delegator may choose to redelegate their stake to another validator on the network with the exception of the validator operator who must maintain at least their minimum stake threshold in their node.
+
+## Fee calculation example
 
 To better illustrate how validator rewards work, let us assume there are 10 validators in the Active Set and all have an equal stake. Each of the validators applies a 10% commission rate and has 20% of self-delegated Hash. Assume there is a successful block added to the chain and a total of 1025.51020408 Hash was collected in fees.
 
@@ -149,21 +162,13 @@ For each of the other 9 non-proposer validators:
 * Validator's reward: 100 \* 20% + Commission = 28 Hash
 * Delegators' rewards: 100 \* 80% - Commission = 72 Hash (each delegator will be able to claim their portion of these rewards in proportion to their stake)
 
-### Initial validator incentive
+## Initial validator incentive
 
 The network will provide an additional incentive for validators for the first six months after mainnet launch. This incentive will be 5% of the transaction fee - generally increasing validator returns by 50% assuming an average commission rate of 10%.
 
 The way this will be administered is the community pool charge in the first six months will be 7% rather than the normal 2%. This 5% will then be distributed to all validators in the Active Set.
 
-## Inflation (none)
-
-The number of minted Hash remains constant, and no new Hash is minted as reward for work. As a result, there is no inflation of the Hash value through the new influx of Hash.
-
 ## Gas and transaction fees
-
-Transactions on the Provenance Blockchain network need to include a transaction fee in order to be processed. This fee pays for the gas required to run the transaction. The formula is the following:
-
-* `fees = ceil(gas * gasPrices)`
 
 The amount of gas needed depends on the transaction as different types of transactions (e.g. making a payment or loading a loan) require different amounts of resources to process. The gas amount for a transaction is calculated as it is being processed, but there is a way to estimate it beforehand by using the auto value for the gas flag. Users can adjust this estimate with the flag --gas-adjustment (default 1.0) if they want to be sure to provide enough gas for the transaction.
 
