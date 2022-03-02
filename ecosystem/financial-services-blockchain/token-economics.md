@@ -25,14 +25,16 @@ The number of minted Hash remains constant, and no new Hash is minted as reward 
 
 ## Who holds Hash?
 
-Hash is held by four majority holders.
+Hash is held by four majority holders.&#x20;
 
-| Owner                            | Percentage |
-| -------------------------------- | ---------- |
-| Provenance Blockchain Foundation | 5.6%       |
-| Investors                        | 12.5%      |
-| Community (Users, Developers)    | 25.9%      |
-| Figure Technologies Inc.         | 56%        |
+| Owner                            | Percentage\*\* |
+| -------------------------------- | -------------- |
+| Provenance Blockchain Foundation | 5.6%           |
+| Investors                        | 12.5%          |
+| Community (Users, Developers)    | 25.9%          |
+| Figure Technologies Inc.         | 56%            |
+
+\*\*The numbers above are based on full dilution.
 
 ### Provenance Blockchain Foundation
 
@@ -140,9 +142,11 @@ When a validator node is slashed for one of the above penalties it is immediatel
 
 To better illustrate how validator rewards work, let us assume there are 10 validators in the Active Set and all have an equal stake. Each of the validators applies a 10% commission rate and has 20% of self-delegated Hash. Assume there is a successful block added to the chain and a total of 1025.51020408 Hash was collected in fees.
 
-First, 2% of the fee goes to the Provenance Blockchain Foundation’s community pool. The community pool is used to fund the foundation’s day-to-day operations as well as the grant program.
+For example, if 7% of the fee goes to the Provenance Blockchain Foundation's community pool (used to fund the foundation's day-to-day operations as well as the grant program) you can calculate the fees this way:
 
-* `2% * 1025.51020408 = 20.51020408` Hash goes to the community pool.
+* `7% * 1025.51020408 = 71.7857142856` Hash goes to the community pool.&#x20;
+
+note: the current rate can be found in the [Explorer](https://explorer.provenance.io/network/params).
 
 1005 Hash now remain. Assume that the proposer included 100% of the precommitters’ signatures in its block. The proposer thus obtains the full bonus of 5%. The reward R for each validator in the Active Set is determined by this simple equation:
 
