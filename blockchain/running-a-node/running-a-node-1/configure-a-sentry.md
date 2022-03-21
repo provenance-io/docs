@@ -32,8 +32,8 @@ The following configuration parameters are found in the config.toml file
 CPU/Memory/Storage is determined based on how you intend to use Provenance Blockchain and how the node is configured (type) and data retention periods. These are general use numbers and may be adjusted based on the desired performance.
 {% endhint %}
 
-| Node Type                    | CPU    | Memory | Storage |
-| ---------------------------- | ------ | ------ | ------- |
-| Public Sentry/Private Sentry | 4 vCPU | 16GB   | 500GB   |
+| Node Type                    | CPU   | Memory | Storage |
+| ---------------------------- | ----- | ------ | ------- |
+| Public Sentry/Private Sentry | 4 CPU | 32GB   | 500GB   |
 
 ##
