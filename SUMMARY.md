@@ -103,6 +103,9 @@
   * [Onboard to Servicing](provenance-applications/loan-origination-system-los/loan-servicing.md)
   * [Data Sharing with Portfolio Manager](provenance-applications/loan-origination-system-los/data-sharing-with-portfolio-manager.md)
 * [Figure eVault](provenance-applications/evault.md)
+* [Generic LOS](provenance-applications/generic-los/README.md)
+  * [API Specification](provenance-applications/generic-los/api-specification.md)
+  * [Permissioning Keys](provenance-applications/generic-los/permissioning-keys.md)
 
 ## Contributing
 
