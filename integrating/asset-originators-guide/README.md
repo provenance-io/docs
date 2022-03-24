@@ -1,48 +1,57 @@
 ---
-description: A suggested process for getting started with loading assets onto Provenance Blockchain
+description: >-
+  A suggested process for getting started with loading assets onto Provenance
+  Blockchain
 ---
 
 # Asset Originator's Guide
 
+This guide walks through some key concepts and practical steps to begin your journey originating and managing assets on Provenance Blockchain. We will learn how to use the [P8e Contract Execution Environment (p8e)](https://docs.provenance.io/p8e/overview) to manage private, sensitive data while maintaining a public record of changes, represented as hashes of the data stored in p8e. As we step through the guide, we will follow the journey of a digital mortgage as it gets boarded, funded with stablecoin, validated by third parties, and registered in multiple down stream applications that create visibility and allow users to take further actions with their digital assets, such as selling them to investors.
+
 {% hint style="info" %}
-This guide uses loans as the example digital asset, but the process can be applied to any type of asset.
+This guide uses a mortgage as the example digital asset, but the concepts and components can be applied to any type of asset.
 {% endhint %}
 
-This guide walks through the steps necessary to create an application using Provenance Blockchain and the [P8e Contract Execution Environment ](../../p8e/overview/)to load and fund digital assets on chain. In the example, digital loans are boarded to Provenance Blockchain, funded with stablecoin, and listed on the Figure Portfolio Manager \(PM\).
+## Asset Life Cycle
 
-## Example Application
+Like any digital asset, there are many paths a mortgage could take within the lending ecosystem. A non-exhaustive list actions a loan originator could take in the Provenance ecosystem includes:
 
-The application exists in the `Interface` layer of the [Application Architecture](../../blockchain/introduction/application-architecture.md), and makes use of a [hybrid model ](../../blockchain/introduction/major-components.md)of on-chain and off-chain \(client-side\) data.
+* **Onboard the eNote only** - A loan originator may simply want to take advantage of the [Digital Asset Registry Technologies (DART)](https://www.dartinc.io) asset registry. By boarding the data associated with an electronic promissory note (eNote) to Provenance, DART allows users to track and make changes to who controls the eNote, and can automatically reconcile changes in ownership and control of that asset when those changes are made in other applications that interact with the Provenance Blockchain such as Figure's Portfolio Manager.
+* **Pledge interest to Warehouse Lenders** - By boarding an eNote or funded loan to Provenance, loan originators can take advantage of Figure's Portfolio Manager to pledge loan payments to Warehouse Lenders in exchange for cash or stablecoin. If enabled, changes in control of the eNote are automatically picked up by DART, removing the need for reconciliation.
+* **Fund the loan with stablecoin** - When partnered with an Omnibus Bank and Warehouse Lender, lenders can fund loans using stablecoin. As lenders deposit funds with the Omnibus Bank, stablecoin is minted into a Marker account representing the originator's funding source. Loan interest can be pledged pre- or post-funding offering loan originators the chance to receive stablecoins from a Warehouse Lender in exchange for an eNote prior to disbursing funds to borrowers. When using stablecoin, settlement occurs bi-laterally, removing risk for both parties.
+* **Validation** - Loan validation may occur prior, during, or after close, and may be performed by the originator itself or third party validation service provider. As results become available, they can be pushed to Provenance to be combined with loan origination data and made available to investors in applications such as Portfolio Manager. Control over who can view validation results can be configured by the developer of the p8e contracts and down stream applications.
+* **Onboard the entire loan** - After loans have been closed and funded, a digital record can be created or updated (eNote/validation first approach). Originators have the choice to permission as many downstream services, such as DART and Portfolio Manager, as they desire.
+* **Pool loans and sell them** - Within Portfolio Manager, loan originators or current owners can pool loans and find investors ready to buy them. When combined with validation services connected to Provenance, owners and investors can share data with third party reviewers and see results grouped by loan pools. Loan sales funded by stablecoin use bi-lateral settlement, and any transfers of ownership are automatically reconciled by DART, assuming the asset originator chose to permission both Portfolio Manager and DART as they boarded the loan.
 
-In our example, the borrower applies \(and is approved\) for a loan through the Originator's own Loan Origination System \(LOS\). The loan is boarded to Provenance Blockchain only when the loan is ready for immediate funding, at which point the application will:
+## Participation Models
 
-1. **Record the loan data** to the originator's private local Encrypted Object Store \(EOS\) through the execution of a [P8e Contract.](../../p8e/overview/#p-8-e-client-side-contracts) This establishes a record of the assets and its [ownership](../../modules/marker-module.md) \(the originator\) on the blockchain, while preserving the privacy and security of the data under the originator's control.
-2. **\(Optionally\) Fund the loan** using stablecoin issued by an Omnibus Bank.
-3. **Run a validation P8e contract** over the loan to ensure the loan was issued according to the rules and underwriting guidelines that the originator set.
-4. **Permission** Figure's Portfolio Manager to read the loan data.
-5. **Provide loan tapes** to the Portfolio Manager over the lifecycle of the loan through P8e contract execution.
+There is more than one way to participate in the Provenance ecosystem as an asset originator. Some originators will want to simply send data to a technology service provider (such as Figure) and allow them to orchestrate the process of pushing data to the Encrypted Object Store and Provenance Blockchain ledger. In this model, the technology service provider likely also hosts and operates the P8e Contract Execution Environment and/or [Provenance Blockchain Nodes](https://docs.provenance.io/blockchain/introduction/major-components#provenance-blockchain-node) used to store loan data and submit transactions to the network, respectively.&#x20;
 
-The guide will also outline the optional further steps of querying the loan data, updating or correcting data, and removing a loan from the system.
+Other originators will want full control over their data, and choose to operate their own interfaces, middleware including their own P8e Contract Execution Environments, or even their own Provenance Blockchain Nodes. Ultimately, the originator can decide which components they are comfortable operating. Obviously the more control over the running applications and data stores, the more flexibility the originator has to build out new use cases with business partners within the ecosystem, defining their own data models as needed.
 
-## Development Process
+To support these choices, Figure has both deployed a white-label loan onboarding service, where orchestration including key management is completely handled on behalf of loan originators, and published an open source asset onboarding service that uses the open source Provenance SDK and can be extended by any asset originator. This guide will prioritize walking through the open source asset onboarding service in its examples, and touch on the white-label service when in comes to the data model.
 
-The development process for creating this loan boarding application will include:
+## Components
 
-1. [Mapping the originator's loan data](data-mapping.md) to the [Figure Loan Data Model](../../provenance-applications/loan-origination-system-los/assets.md).
-2. [Setting up the P8e environment](), including a local node of the blockchain \(see below\).
-3. If required, setting up an [Omnibus Bank application]() to mint and burn stablecoin, as well as manage the associated fiat cash movement into and out of the system.
-4. [Writing P8e contract](example-loan-contracts.md)s:
-   1. To record the initial loan data
-   2. To track funding information during the stablecoin funding process
-   3. To validate the loan data
-   4. To update the loan tape for PM as needed
-   5. To update \(or correct\) loan data \(optional\)
-   6. To remove a loan from the system \(optional\)
-5. Developing an application to orchestrate the execution of the P8e contracts and upload loan documents \(e.g. PDF of the signing note\), and to use the Provenance Blockchain SDK to manage the flow of stablecoin, asset ownership, and data sharing on the blockchain.
+As described in the Asset Life Cycle section above, there are many paths an asset can take after being boarded to the Provenance Blockchain and many applications that can be permissioned to read data from the Encrypted Object Store. The rest of this guide will focus on how to deploy, configure, and interact with the components required to onboard assets in such a way that they are consumable by applications down stream.
 
-A Provenance Blockchain application has several options for interfacing with the blockchain during development and for production usage:
+For sake of brevity, this guide will not describe how to deploy and configure a Provenance Blockchain Node. It will, however, guide users in how to spin up a local network for testing, and how to configure which node is used when submitting the transaction proposal message to the network.
 
-1. [Run a blockchain localnet](../../blockchain/using-provenance/) in situ for easy local development;
-2. Connect to the Provenance Blockchain public [testnet](https://github.com/provenance-io/testnet);
-3. Connect to the public production Provenance Blockchain [mainnet](https://github.com/provenance-io/mainnet).
+{% hint style="info" %}
+Figure Tech can provide Provenance Blockchain Nodes as a service for organizations that want to deploy, manage, and monitor their own nodes. Check out [figure.tech](https://www.figure.tech) for more information.
+{% endhint %}
 
+Components covered by this guide include:
+
+* the P8e Contract Execution Environment, including the  Encrypted Object Store,
+* a variation of the asset onboarding service called the loan onboarding service, which implements the p8e-scope-sdk and uses the open source loan data model and associated standards,
+* key managements solutions, and
+* smart contracts
+
+## Environments
+
+A Provenance Blockchain application has several options for interfacing with the blockchain during development and for production usage. This guide will touch on:
+
+1. Running a blockchain localnet for easy local development,
+2. Connecting to the Provenance Blockchain public [testnet](https://github.com/provenance-io/testnet),
+3. Connecting to the public production Provenance Blockchain [mainnet](https://github.com/provenance-io/mainnet).

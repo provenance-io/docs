@@ -1,14 +1,20 @@
+---
+description: Loan Onboarding Service API Spec
+---
+
 # API Specification
 
-The generic LOS exposes three REST API endpoints for interactions with Provenance.&#x20;
+The Loan Onboarding Service exposes three REST API endpoints for interactions with Provenance.&#x20;
 
-### Posting Specifications
+## Create Contract Specification
 
-`https://figure.com/service-loan-onboarding/secure/api/v1/specifications`
+Used to write p8e contract specifications to the Object Store and Provenance. See [Specifications](https://docs.provenance.io/p8e/p8e-usage/specifications) for additional information.&#x20;
 
-Used to write specifications to Provenance. See [Specifications](https://docs.provenance.io/p8e/p8e-usage/specifications) for additional information.&#x20;
+**URL**: `https://figure.com/service-loan-onboarding/secure/api/v1/specifications`
 
-#### Example Request
+**Method**: POST
+
+**Body**:
 
 ```
 {
@@ -24,15 +30,21 @@ Used to write specifications to Provenance. See [Specifications](https://docs.pr
 }
 ```
 
-### Posting Objects to Object-Store
+## Create Object in Object-Store
 
-Used to store objects in the object store. See [Encrypted Object Store ](https://docs.provenance.io/p8e/overview/encrypted-object-store)for additional information.&#x20;
+Used to store objects in the object store. See [Encrypted Object Store ](https://docs.provenance.io/p8e/overview/encrypted-object-store)for additional information.
 
-#### Example Request
+**URL**: `https://figure.com/service-loan-onboarding/secure/api/v1/store`
 
-`curl -X POST -F 'file=@path' -F 'config=<JsonConfig> https://figure.com/service-loan-onboarding/secure/api/v1/store`
+**Method**: POST
 
-`T`he configuration object is a JSON object with the following fields
+**Multipart/form-data**:
+
+file=@path
+
+config=\<JSONConfig>
+
+**Sample JSONConfig**:
 
 ```
 {
@@ -53,7 +65,7 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
 }
 ```
 
-#### Example Response
+**Response**:
 
 ```
 {
@@ -64,16 +76,18 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
 }
 ```
 
-### Posting Assets to Provenance
-
-`https://figure.com/service-loan-onboarding/secure/api/v1/onboard`
+## Create Asset on Provenance
 
 Used to onboard assets to Provenance.&#x20;
 
-#### Example Request
+**URL**: `https://figure.com/service-loan-onboarding/secure/api/v1/onboard`
+
+**Method**: POST
+
+**Sample Request**:
 
 ```
-curl -XPOST -H "Content-type: application/json" -d '{
+curl -X POST -H "Content-type: application/json" -d '{
     "asset": {
         "id": {
             "value": "d4f6c6aa-6eef-4070-8c5d-48e622c170eb"

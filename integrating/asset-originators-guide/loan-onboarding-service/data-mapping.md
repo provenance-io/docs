@@ -6,7 +6,7 @@ description: How to build data facts for the Figure Loan Model
 
 ## Data Format
 
-Each [Fact](../../p8e/overview/#facts) in a [Scope](../../p8e/overview/#scopes) is a key-value pair, where the key is a String name and the value is a protobuf object. [Google Protocol Buffers](https://developers.google.com/protocol-buffers) support code generation in many languages. The [Figure Loan Model ](../../provenance-applications/loan-origination-system-los/assets.md)lists the fact names and protobuf types used in Figure's loan scope. 
+Each [Fact](../../../p8e/overview/#facts) in a [Scope](../../../p8e/overview/#scopes) is a key-value pair, where the key is a String name and the value is a protobuf object. [Google Protocol Buffers](https://developers.google.com/protocol-buffers) support code generation in many languages. The [Figure Loan Model ](../../../provenance-applications/loan-origination-system-los/assets.md)lists the fact names and protobuf types used in Figure's loan scope.&#x20;
 
 {% hint style="info" %}
 Data type documentation, `.proto` files, and Java bindings for the loan model are available by request from Figure.
@@ -91,6 +91,4 @@ An example loan with minimal fields populated:
   }
 }
 ```
-
-
 

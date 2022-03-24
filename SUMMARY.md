@@ -88,8 +88,14 @@
 ## Integrating
 
 * [Asset Originator's Guide](integrating/asset-originators-guide/README.md)
-  * [Data Mapping](integrating/asset-originators-guide/data-mapping.md)
-  * [Onboard Loan Contract](integrating/asset-originators-guide/example-loan-contracts.md)
+  * [P8e Contract Execution Environment (p8e)](integrating/asset-originators-guide/p8e-contract-execution-environment-p8e.md)
+  * [Loan Onboarding Service](integrating/asset-originators-guide/loan-onboarding-service/README.md)
+    * [API Specification](integrating/asset-originators-guide/loan-onboarding-service/api-specification.md)
+    * [Permissioning Others](integrating/asset-originators-guide/loan-onboarding-service/permissioning-others.md)
+    * [Data Mapping](integrating/asset-originators-guide/loan-onboarding-service/data-mapping.md)
+  * [Key Management](integrating/asset-originators-guide/key-management.md)
+  * [Smart Contracts](integrating/asset-originators-guide/smart-contracts/README.md)
+    * [Onboard Loan Contract](integrating/asset-originators-guide/smart-contracts/example-loan-contracts.md)
 
 ## Apps Built on Provenance Blockchain <a href="#provenance-applications" id="provenance-applications"></a>
 
@@ -103,9 +109,6 @@
   * [Onboard to Servicing](provenance-applications/loan-origination-system-los/loan-servicing.md)
   * [Data Sharing with Portfolio Manager](provenance-applications/loan-origination-system-los/data-sharing-with-portfolio-manager.md)
 * [Figure eVault](provenance-applications/evault.md)
-* [Generic LOS](provenance-applications/generic-los/README.md)
-  * [API Specification](provenance-applications/generic-los/api-specification.md)
-  * [Permissioning Keys](provenance-applications/generic-los/permissioning-keys.md)
 
 ## Contributing
 
