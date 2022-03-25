@@ -22,13 +22,40 @@ Both #1 and #2 provide data isolation, while all three enable permissioned data 
 
 ### Local Deployment
 
-The encrypted object store is easily deployed locally in a Docker container. However, to enable testing of p8e contracts locally, you will also need to deploy a Provenance node. A simple, single node Provenance network is sufficient for local development and is well-suited for testing new contracts and integrations.
+The encrypted object store is easily deployed locally in a Docker container. However, to enable testing of p8e contracts locally, you will also need to deploy a Provenance node. A simple, single node Provenance network is sufficient for local development and is well-suited for testing new business logic for contracts and testing integrations with p8e.
 
-A Docker Compose environment that deploys the object store as a container alongside Postgres for data persistence and a single node instance of Provenance is available in the [p8e-scope-sdk GitHub repository](https://github.com/provenance-io/p8e-scope-sdk/tree/main/dev-tools/compose).
+#### Single Party Tests
 
-The startup call provides an option to specify a multi-party environment that spins up two separate Encrypted Object Stores for testing replication and multi-party p8e contracts.
+A Docker Compose environment that deploys the object store as a container alongside Postgres for data persistence and a single node instance of Provenance is available in the [p8e-scope-sdk GitHub repository](https://github.com/provenance-io/p8e-scope-sdk/tree/main/dev-tools/compose). You can spin up that docker environment and run the loan onboarding service described in the next section separately, or extend the Docker Compose environment to include it. Running the loan onboarding service in debug mode alongside the p8e environment would end up looking like this:
 
-No additional configuration is needed in this environment.
+![Single Object Store Local Testing Environment](<../../.gitbook/assets/Post Close - Local Env.png>)
+
+#### Multi-Party Tests
+
+The startup call provides an option to specify a multi-party environment that spins up two separate Encrypted Object Stores for testing replication and multi-party p8e contracts. In the setup provided, both Encrypted Object Stores create a separate database within the same instance of Postgres.&#x20;
+
+Depending on your testing needs, you may want to use the same service to transact in both Object Stores to simulate multiple parties. Alternatively, you may want to build separate applications that perform different functions within the multi-party contract. As a practical example, a Loan Originator may want to build one service dedicated to validating and onboarding loan data from several upstream product-specific services, and another service dedicated to managing updates to that asset throughout the loan life cycle. Other reasons to test these services separately would be to simulate partnerships where each party owns their own Object Store and p8e-enabled applications.
+
+{% tabs %}
+{% tab title="Single Service" %}
+![A single service transacting with unique object stores to execute either multi-party contracts or a series of contracts](<../../.gitbook/assets/Post Close - Local Env - MP1.png>)
+{% endtab %}
+
+{% tab title="Multiple Services" %}
+![Multiple services transacting with unique object stores to execute either multi-party contracts or a series of contracts](<../../.gitbook/assets/Post Close - Local Env - MP2 (1).png>)
+{% endtab %}
+{% endtabs %}
+
+#### Configuration
+
+No additional configuration is needed in this environment. By default, the components are listening on the following ports:
+
+| Component                  | Container Name  | Port(s)                                      |
+| -------------------------- | --------------- | -------------------------------------------- |
+| Provenance Blockchain Node | provenance      | <p>1317:1317<br>9090:9090<br>26657:26657</p> |
+| Postgres                   | postgres        | 5432:5432                                    |
+| Object Store 1             | object-store    | 5000:8080                                    |
+| Object Store 2             | object-store-mp | 5001:8080                                    |
 
 ### Test Deployment
 
