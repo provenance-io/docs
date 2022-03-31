@@ -52,16 +52,12 @@ config=\<JSONConfig>
   "audiences": [],
   "permissionDart": true,
   "permissionPortfolioManager": true,
-  "onboardUri": "",
-  "chainId": "pio-testnet-1",
-  "nodeEndpoint": "tcp://rpc-0.test.provenance.io:26657",
-  "keyMnemonic": "jealous bright oyster fluid guide talent crystal minor modify broken stove spoon pen thank action smart enemy chunk ladder soon focus recall elite pulp",
   "isTestNet": true,
-  "keyRingIndex": "0",
-  "keyIndex": "0",
-  "explorerUri": "https://explorer.test.provenance.io",
-  "contractSpecId": "f97ecc5d-c580-478d-be02-6c1b0c32235f",
-  "scopeSpecId": "551b5eca-921d-4ba7-aded-3966b224f44b"
+  "account": {
+    "originatorUuid": <uuid>,
+    "keyRingIndex": "0",
+    "keyIndex": "0",
+  },
 }
 ```
 
@@ -112,13 +108,18 @@ curl -X POST -H "Content-type: application/json" -d '{
     "info": {
         "chainId": "pio-testnet-1",
         "nodeEndpoint": "grpc://192.168.1.242:9090",
-        "keyMnemonic": "walnut bubble shoe neck broccoli elevator assume puzzle business baby gentle suffer equal duty nephew domain adjust spin cigar response what sniff clip garment",
+        "account": {
+            "originatorUuid": <uuid>,
+            "keyRingIndex": "0",
+            "keyIndex": "0",
+        },
         "isTestNet": true,
-        "keyRingIndex": "0",
-        "keyIndex": "0",
         "scopeSpecId": "551b5eca-921d-4ba7-aded-3966b224f44b",
         "contractSpecId": "f97ecc5d-c580-478d-be02-6c1b0c32235f",
         "hash": "hnxit65lhjoIKiERyjeQvQSL9Ia7l1duaO9GFiQubTM="
+        "audiences": [],
+        "permissionDart": true,
+        "permissionPortfolioManager": true,
     }
 }' 'https://figure.com/service-loan-onboarding/secure/api/v1/onboard'
 ```
