@@ -10,6 +10,8 @@ In this section, you'll learn about a practical implementation of the [p8e-scope
 
 Please view the full source of the Loan Onboarding Service [here](https://github.com/figuretechnologies/service-loan-onboarding). \[TODO: Link open source project] The Loan Onboarding Service is a Kotlin implementation of a Spring based web application. Please view the [API Specification](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification) to learn how to interact with the API.&#x20;
 
+The Loan Onboarding Service takes advantage of the Provenance Key Access Library. As such, any originator specified in the API call to the Loan Onboarding Service must exist in the key management system so private keys can be pulled and consumed within the service. By default, the service is configured to use [Hashicorp's Vault](https://www.vaultproject.io). To view the full source, please visit the Key Access Library [here](https://github.com/provenance-io/originator-key-access-lib).
+
 ### Local Deployment
 
 To run the service, we first need to start the relevant, dependent services managed as containers. While these can be started from the `dependencies.yaml` file, a helper script was written for easier startups.&#x20;
