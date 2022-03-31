@@ -12,7 +12,7 @@ To configure a validator you need to acquire Hash to grant the newly created val
 
 ### Finding Node Public Key
 
-Each node has a public key that identifies it to other participants on the network. To configure the full node created in [Join Provenance Blockchain Testnet](join-provenance-testnet/), find the public key that identifies the node. Tendermint, the underlying consensus algorithm, provides a simple way to display the key for use.
+Each node has a public key that identifies it to other participants on the network. To configure the full node created in [Join Provenance Blockchain Testnet](join-provenance-testnet.md), find the public key that identifies the node. Tendermint, the underlying consensus algorithm, provides a simple way to display the key for use.
 
 ```
 provenanced --testnet tendermint show-validator
@@ -22,20 +22,20 @@ provenanced --testnet tendermint show-validator
 
 The following command has a lot of detail that should be closely reviewed.
 
-| Parameter                  | Description                                                                                                                                         |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| chain-id                   | the name of the network you're connecting to                                                                                                        |
-| home                       | home directory containing the blockchain data for the node - this was set to `$PIO_HOME` in the [Joining Testnet](join-provenance-testnet/) section |
-| moniker                    | the name of your validator that should be shown to other participants on the network                                                                |
-| pubkey                     | Public key determined using the tendermint show-validator command                                                                                   |
-| amount                     | amount of Hash to delegate as voting power on the network                                                                                           |
-| from                       | account that holds the Hash to be delegated                                                                                                         |
-| fees                       | amount of nhash to pay in fees                                                                                                                      |
-| commission-rate            | commission rate charged by the validator                                                                                                            |
-| commission-max-rate        | max commission rate charged by the validator                                                                                                        |
-| commission-max-change-rate | max change in commission rate allowed                                                                                                               |
-| min-self-delegation        | minimum amount of Hash the validator will delegate while the node is operating                                                                      |
-| broadcast-mode             | wait until the block containing the transaction is committed                                                                                        |
+| Parameter                  | Description                                                                                                                                           |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| chain-id                   | the name of the network you're connecting to                                                                                                          |
+| home                       | home directory containing the blockchain data for the node - this was set to `$PIO_HOME` in the [Joining Testnet](join-provenance-testnet.md) section |
+| moniker                    | the name of your validator that should be shown to other participants on the network                                                                  |
+| pubkey                     | Public key determined using the tendermint show-validator command                                                                                     |
+| amount                     | amount of Hash to delegate as voting power on the network                                                                                             |
+| from                       | account that holds the Hash to be delegated                                                                                                           |
+| fees                       | amount of nhash to pay in fees                                                                                                                        |
+| commission-rate            | commission rate charged by the validator                                                                                                              |
+| commission-max-rate        | max commission rate charged by the validator                                                                                                          |
+| commission-max-change-rate | max change in commission rate allowed                                                                                                                 |
+| min-self-delegation        | minimum amount of Hash the validator will delegate while the node is operating                                                                        |
+| broadcast-mode             | wait until the block containing the transaction is committed                                                                                          |
 
 ```
 provenanced --testnet \

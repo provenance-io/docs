@@ -34,7 +34,7 @@
   * [Gas and Fees](blockchain/basics/gas-and-fees.md)
 * [Installing Provenanced](blockchain/running-a-node/README.md)
   * [Running a Node](blockchain/running-a-node/running-a-node-1/README.md)
-    * [Joining Testnet](blockchain/running-a-node/running-a-node-1/join-provenance-testnet/README.md)
+    * [Joining Testnet](blockchain/running-a-node/running-a-node-1/join-provenance-testnet.md)
       * [Running a mainnet node](blockchain/running-a-node/running-a-node-1/join-provenance-testnet/running-a-mainnet-node.md)
     * [Become a Validator](blockchain/running-a-node/running-a-node-1/become-a-validator.md)
     * [Configure a Sentry](blockchain/running-a-node/running-a-node-1/configure-a-sentry.md)
@@ -91,12 +91,13 @@
 * [Asset Originator's Guide](integrating/asset-originators-guide/README.md)
   * [P8e Contract Execution Environment (p8e)](integrating/asset-originators-guide/p8e-contract-execution-environment-p8e.md)
   * [Loan Onboarding Service](integrating/asset-originators-guide/loan-onboarding-service/README.md)
-    * [API Specification](integrating/asset-originators-guide/loan-onboarding-service/api-specification.md)
+    * [Data Modeling](integrating/asset-originators-guide/loan-onboarding-service/data-mapping.md)
+    * [P8e Contracts](integrating/asset-originators-guide/loan-onboarding-service/p8e-contracts/README.md)
+      * [Onboard Loan Contract](integrating/asset-originators-guide/loan-onboarding-service/p8e-contracts/example-loan-contracts.md)
+    * [Key Management](integrating/asset-originators-guide/loan-onboarding-service/key-management.md)
     * [Permissioning Others](integrating/asset-originators-guide/loan-onboarding-service/permissioning-others.md)
-    * [Data Mapping](integrating/asset-originators-guide/loan-onboarding-service/data-mapping.md)
-  * [Key Management](integrating/asset-originators-guide/key-management.md)
-  * [Smart Contracts](integrating/asset-originators-guide/smart-contracts/README.md)
-    * [Onboard Loan Contract](integrating/asset-originators-guide/smart-contracts/example-loan-contracts.md)
+    * [API Specification](integrating/asset-originators-guide/loan-onboarding-service/api-specification.md)
+    * [Deployment](integrating/asset-originators-guide/loan-onboarding-service/deployment.md)
 
 ## Apps Built on Provenance Blockchain <a href="#provenance-applications" id="provenance-applications"></a>
 

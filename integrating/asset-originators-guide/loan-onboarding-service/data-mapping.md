@@ -1,12 +1,39 @@
 ---
-description: How to build data facts for the Figure Loan Model
+description: Wait, that's an NFT?
 ---
 
-# Data Mapping
+# Data Modeling
+
+NFT stands for “Non-Fungible Token” and is used in blockchain ecosystems to represent a unique (non-fungible) digital asset (token) whose ownership is registered and tracked on a blockchain.
+
+Provenance NFTs are typically financial assets, such as loans or funds. However, the type of asset on Provenance is not restricted, allowing for innovation in the financial services industry. The [metadata-asset-model](https://github.com/provenance-io/metadata-asset-model) provides a highly extensible [Google Protocol Buffer](https://developers.google.com/protocol-buffers) representation of an [Asset](https://github.com/provenance-io/metadata-asset-model/blob/main/docs/asset.md) to contain whatever data model the asset originator wishes to use.
+
+## Facts and Scopes
+
+{% hint style="info" %}
+This section builds on the [Metadata Module](https://docs.provenance.io/modules/metadata-module) documentation. Revisit that page for definitions of the four core state objects in p8e: Contracts, Records, Sessions, and Scopes.
+{% endhint %}
+
+Asset originators must understand the structure of the scope they are going to onboard to Provenance Blockchain, also known as the Record Specification. We will stick to the mortgage as an example of an asset that we want to represent as an asset in Provenance. The loan Record Specification is one scope that includes the following facts:
+
+| Fact             | Description                                                                                                           | Nullable                                                 |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| Asset            | Core information about the loan that should not change throughout the life cycle of the loan after the loan is funded | No                                                       |
+| Servicing Rights | Identifies the servicer                                                                                               | No                                                       |
+| Documents        | List of loan document metadata with pointers to their location                                                        | Yes                                                      |
+| Loan States      | List of loan states from servicing                                                                                    | Yes                                                      |
+| Validation       | List of validation requests and validation results                                                                    | Yes                                                      |
+| eNote            | Metadata belonging to the authoritative copy of the eNote, as well as identifiers for the controller and custodian    | Yes (only used when eNote is to be registered with DART) |
+
+{% hint style="info" %}
+Open source Scope Specification can be found [here](https://github.com/provenance-io/asset-specifications).
+{% endhint %}
 
 ## Data Format
 
-Each [Fact](../../../p8e/overview/#facts) in a [Scope](../../../p8e/overview/#scopes) is a key-value pair, where the key is a String name and the value is a protobuf object. [Google Protocol Buffers](https://developers.google.com/protocol-buffers) support code generation in many languages. The [Figure Loan Model ](../../../provenance-applications/loan-origination-system-los/assets.md)lists the fact names and protobuf types used in Figure's loan scope.&#x20;
+Each [Fact](../../../p8e/overview/#facts) in a [Scope](../../../p8e/overview/#scopes) is a key-value pair, where the key is a String and the value is a Protocol Buffer object. [Google Protocol Buffers](https://developers.google.com/protocol-buffers) support code generation in many languages. The table below lists the fact names and Protocol Buffer types used in Figure's loan scope.&#x20;
+
+\[TODO: Document types]
 
 {% hint style="info" %}
 Data type documentation, `.proto` files, and Java bindings for the loan model are available by request from Figure.
@@ -14,81 +41,147 @@ Data type documentation, `.proto` files, and Java bindings for the loan model ar
 
 ## Examples
 
-Building the `"loan"` data fact from the `Loan` protobuf:
+{% hint style="info" %}
+Note: This example is subject to rapid change.
+{% endhint %}
 
-```kotlin
-import io.provenance.proto.loan.LoanProtos
-
-val loan = LoanProtos.Loan.newBuilder().apply {
-    uuid = randomProtoUuidProv()
-    originatorUuid = originatorUUID
-    monthlyPaymentAmount = "100".toProtoMoneyProv()
-    originatorName = "FIGURE EXAMPLE LENDER"
-    loanNumber = "LOAN_NUM-1234"
-    loanType = "FIGURE_HELOC"
-}.build()
-```
-
-Using the `loan` as an input to a P8e contract:
-
-```kotlin
-contract.addProposedFact("loan", loan)
-```
-
-An example loan with minimal fields populated:
+An example loan with eNote populated:
 
 ```kotlin
 {
-  "funding": {
-    "complete": true,
-    "completedDate": "2020-09-10T22:34:13.703547Z"
-  },
-  "loan": {
-    "uuid": {
-      "value": "b3df92bc-3d23-4970-b542-740647f6f896"
+    "asset" : {
+        "id": "c6978d46-3c3e-4175-a0d2-8f8ce47e8bb6",
+        "type": "LOAN",
+        "description": "MORTGAGE LOAN-1234",
+        "kv": {
+            "loan": {
+                "typeUrl": "/tech.figure.asset.loan.Loan",
+                "id": "c6978d46-3c3e-4175-a0d2-8f8ce47e8bb6",
+                "originatorName": "Figure Lending",
+                "originatorLoanId": "LOAN-1234",
+                "borrowers": {
+                    "primary": {
+                        "partyType": "PRIMARY_BORROWER",
+                        "name": {
+                            "firstName": "FirstName",
+                            "lastName": "LastName",
+                            "middleName": "MiddleName",
+                            "suffix": "NameSuffix"
+                        }
+                    }
+                },
+                "loanType": "MORTGAGE",
+                "terms": {
+                    "principalAmount": {
+                        "amount": 1000000,
+                        "currency": "USD"
+                    },
+                    "termInMonths": "360",
+                    "rateType": "FIXED",
+                    "interestRate": {
+                        "value": "0.045"
+                    },
+                    "interestRateCap": {
+                        "value": "0.045"
+                    },
+                    "payment": {
+                        "firstPaymentAmount": {
+                            "amount": 3000,
+                            "currency": "USD"
+                        },
+                        "monthlyPaymentAmount": {
+                            "amount": 3000,
+                            "currency": "USD"
+                        }
+                    },
+                    "dates": {
+                        "initialOfferDate": {
+                            "value": "2022-02-01"
+                        },
+                        "originationDate": {
+                            "value": "2022-02-07"
+                        },
+                        "signedDate": {
+                            "value": "2022-03-01"
+                        },
+                        "fundingDate": {
+                            "value": "2022-03-06"
+                        }
+                    }
+                },
+                "funding": {
+                    "status": "FUNDED",
+                    "started": "2022-03-05T11:30:15.01Z",
+                    "completed": "2022-03-06T04:30:15.01Z",
+                    "disbursements": {
+                        "id": {
+                            "value": "<UUID>"
+                        },
+                        "amount": {
+                            "amount": "1000000",
+                            "currency": "USD"
+                        },
+                        "account": {
+                            ...
+                        },
+                        "status": "COMPLETED",
+                        "started": "2022-03-05T11:30:15.01Z",
+                        "completed": "2022-03-06T04:30:15.01Z"
+                    }
+                },
+                "mortgage": {
+                    "lienProperty": {
+                        "address": {
+                            "street": "123 Main St",
+                            "city": "City",
+                            "state": "FL",
+                            "zip": "33000"
+                        }
+                    },
+                    "lienPosition": 1,
+                    ...
+                }
+            }
+        }
     },
-    "loanNumber": "LOAN_NUM-1234",
-    "loanType": "PERSONAL_LOAN",
-    "originatorUuid": {
-      "value": "deadbeef-face-479b-860c-facefaceface"
+    "servicingRights": {
+        "servicerUuid": "<Servicer ID>",
+        "servicerName": "Loan Servicing, Inc."
     },
-    "originatorName": "EXAMPLE LENDER",
-    "monthlyPaymentAmount": {
-      "amount": "100",
-      "currency": "USD"
+    "documents": [
+        {
+            "id": "<UUID>",
+            "uri": "EOS URI",
+            "fileName": "Electronic Promissory Note (eNote)",
+            "ContentType": "application/xml",
+            "documentType": "MISMO_ENOTE_SMART_DOC_XML",
+            "checksum": "<File sha512 Hash>"
+        },
+        ...
+    ],
+    "loanStates": null,
+    "validation": null,
+    "eNote": {
+        "controllerId": {
+            "controllerUuid": {
+                "value": "<Controller ID>"
+            },
+            "controllerName": "<Controller Name>"
+        },
+        "eNote": {
+            "id": "<UUID>",
+            "uri": "EOS URI",
+            "fileName": "Electronic Promissory Note (eNote)",
+            "ContentType": "application/xml",
+            "documentType": "MISMO_ENOTE_SMART_DOC_XML",
+            "checksum": "<File sha512 Hash>"
+        },
+        "signedDate": {
+            "value": "2022-03-01"
+        },
+        "valueName": "DART eVault"
     }
-  },
-  "primaryParty": {
-    "uuid": {
-      "value": "b071fd29-c49a-4950-9f9f-cd3447632a29"
-    },
-    "name": {
-      "firstName": "Jane",
-      "lastName": "Smith"
-    }
-  },
-  "servicing": {
-    "uuid": {
-      "value": "deadbeef-face-479b-860c-facefaceface"
-    }
-  },
-  "underwritingPacket": {
-    "selectedOffer": {
-      "amount": {
-        "amount": "25000",
-        "currency": "USD"
-      },
-      "termInYears": 5,
-      "intRate": {
-        "value": "0.075"
-      }
-    },
-    "propertyAttributes": {
-      "postLoanAdjCltv": {
-        "value": "0.05"
-      }
-    }
-  }
 }
+
 ```
 

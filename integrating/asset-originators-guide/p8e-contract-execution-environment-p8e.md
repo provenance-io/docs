@@ -10,9 +10,9 @@ While the components and key concepts of p8e and p8e contracts are covered in th
 
 Here lies the first major decision any asset originator needs to make: to deploy and host your own p8e Contract Execution Environment or not. That's sounds binary, but there are actually three choices:
 
-1. Host your own
-2. Find a tech services provider, such as [Figure Tech](https://www.figure.tech), to run one for you
-3. Find a partner you trust that runs their own and is willing to put your data alongside theirs
+1. Host your own,
+2. Find a tech services provider, such as [Figure Tech](https://www.figure.tech), to operate on for you as-a-service,
+3. Find a partner you trust that runs their own and is willing to put your data alongside theirs.
 
 This guide will focus on option #1, while the Figure white-label approach mentioned in the Participation Models section of the overview could implement either option #2 or #3.
 
@@ -26,13 +26,27 @@ The encrypted object store is easily deployed locally in a Docker container. How
 
 #### Single Party Tests
 
-A Docker Compose environment that deploys the object store as a container alongside Postgres for data persistence and a single node instance of Provenance is available in the [p8e-scope-sdk GitHub repository](https://github.com/provenance-io/p8e-scope-sdk/tree/main/dev-tools/compose). You can spin up that docker environment and run the loan onboarding service described in the next section separately, or extend the Docker Compose environment to include it. Running the loan onboarding service in debug mode alongside the p8e environment would end up looking like this:
+A Docker Compose environment that deploys the object store as a container alongside Postgres for data persistence and a single node instance of Provenance is available in the [p8e-scope-sdk GitHub repository](https://github.com/provenance-io/p8e-scope-sdk/tree/main/dev-tools/compose). Clone that repository and run the Docker Compose startup command from the `dev-tools/compose` directory.
+
+```
+git clone https://github.com/provenance-io/p8e-scope-sdk.git
+cd dev-tools/compose
+docker-compose up -d
+```
+
+You can spin up that docker environment and run the loan onboarding service described in the next section separately, or extend the Docker Compose environment to include it. Running the loan onboarding service in debug mode alongside the p8e environment would end up looking like this:
 
 ![Single Object Store Local Testing Environment](<../../.gitbook/assets/Post Close - Local Env.png>)
 
 #### Multi-Party Tests
 
-The startup call provides an option to specify a multi-party environment that spins up two separate Encrypted Object Stores for testing replication and multi-party p8e contracts. In the setup provided, both Encrypted Object Stores create a separate database within the same instance of Postgres.&#x20;
+A variation of the Docker Compose startup command provides an option to specify a multi-party environment that spins up two separate Encrypted Object Stores for testing replication and multi-party p8e contracts. In the setup provided, both Encrypted Object Stores create a separate database within the same instance of Postgres.
+
+```
+git clone https://github.com/provenance-io/p8e-scope-sdk.git
+cd dev-tools/compose
+docker compose --profile multi-party up -d
+```
 
 Depending on your testing needs, you may want to use the same service to transact in both Object Stores to simulate multiple parties. Alternatively, you may want to build separate applications that perform different functions within the multi-party contract. As a practical example, a Loan Originator may want to build one service dedicated to validating and onboarding loan data from several upstream product-specific services, and another service dedicated to managing updates to that asset throughout the loan life cycle. Other reasons to test these services separately would be to simulate partnerships where each party owns their own Object Store and p8e-enabled applications.
 
