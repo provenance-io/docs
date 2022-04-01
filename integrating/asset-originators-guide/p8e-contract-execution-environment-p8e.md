@@ -45,6 +45,7 @@ A variation of the Docker Compose startup command provides an option to specify 
 
 ```
 git clone https://github.com/provenance-io/p8e-scope-sdk.git
+cd p8e-scope-sdk
 cd dev-tools/compose
 docker compose --profile multi-party up -d
 ```
