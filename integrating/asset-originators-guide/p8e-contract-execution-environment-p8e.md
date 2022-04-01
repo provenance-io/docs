@@ -30,6 +30,7 @@ A Docker Compose environment that deploys the object store as a container alongs
 
 ```
 git clone https://github.com/provenance-io/p8e-scope-sdk.git
+cd p8e-scope-sdk
 cd dev-tools/compose
 docker-compose up -d
 ```
