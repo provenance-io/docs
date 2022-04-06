@@ -12,7 +12,7 @@ Before we deploy and start using the Loan Onboarding Service, it's worth revisit
 
 * ****[**Data modeling**](data-mapping.md) - How to use the [metadata-asset-model](https://github.com/provenance-io/metadata-asset-model) to your advantage while providing the right data to register loans in downstream applications such as DART and Portfolio Manager
 * ****[**P8e contracts**](p8e-contracts/) - Developing and publishing new contracts with a focus on a simple loan onboarding contract
-* ****[**Key management and permissioning**](key-management.md) - Some practical guidance on which keys to use and an overview of how data is stored, encrypted, decrypted, and shared within p8e
+* ****[**Key management**](key-management.md) **and** [**permissioning**](permissioning-others.md) - Some practical guidance on which keys to use and an overview of how data is stored, encrypted, decrypted, and shared within p8e
 
 After we brush up on those topics, we will cover the [API Specification](api-specification.md) and walk through the proper execution order:
 

@@ -31,15 +31,18 @@ Open source Scope Specification can be found [here](https://github.com/provenanc
 
 ## Data Format
 
-Each [Fact](../../../p8e/overview/#facts) in a [Scope](../../../p8e/overview/#scopes) is a key-value pair, where the key is a String and the value is a Protocol Buffer object. [Google Protocol Buffers](https://developers.google.com/protocol-buffers) support code generation in many languages. The table below lists the fact names and Protocol Buffer types used in Figure's loan scope.&#x20;
+Each [Fact](../../../p8e/overview/#facts) in a [Scope](../../../p8e/overview/#scopes) is a key-value pair, where the key is a String and the value is a Protocol Buffer object. [Google Protocol Buffers](https://developers.google.com/protocol-buffers) support code generation in many languages. The table below lists the fact names and links to the Protocol Buffer definitions and documentation for each proto used in the loan scope.&#x20;
 
-\[TODO: Document types]
+| Fact Name        | Proto Definition                                                                                                                                                                     | Proto Documentation                                                                               |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| Asset            | [asset.proto](https://github.com/provenance-io/metadata-asset-model/blob/main/src/main/proto/tech/figure/asset/v1beta1/asset.proto#L19)                                              | [asset.md](https://github.com/provenance-io/metadata-asset-model/blob/main/docs/asset.md)         |
+| Servicing Rights | [servicing\_rights.proto](https://github.com/provenance-io/metadata-asset-model/blob/dkneisly/loan-wrapper/src/main/proto/tech/figure/servicing/v1beta1/servicing\_rights.proto#L12) | [servicing.md](https://github.com/provenance-io/metadata-asset-model/blob/main/docs/servicing.md) |
+| Documents        | [document.proto](https://github.com/provenance-io/metadata-asset-model/blob/main/src/main/proto/tech/figure/util/v1beta1/document.proto#L27)                                         | [util.md](https://github.com/provenance-io/metadata-asset-model/blob/main/docs/util.md)           |
+| Loan States      | [loan\_state.proto](https://github.com/provenance-io/metadata-asset-model/blob/main/src/main/proto/tech/figure/servicing/v1beta1/loan\_state.proto#L23)                              | [servicing.md](https://github.com/provenance-io/metadata-asset-model/blob/main/docs/servicing.md) |
+| Validation       | [validation.proto](https://github.com/provenance-io/metadata-asset-model/blob/dkneisly/loan-wrapper/src/main/proto/tech/figure/validation/v1beta1/validation.proto#L13)              | validation.md \[TODO]                                                                             |
+| eNote            | [registry.proto](https://github.com/provenance-io/metadata-asset-model/blob/dkneisly/loan-wrapper/src/main/proto/io/dartinc/registry/v1beta1/registry.proto#L14)                     | registry.md \[TODO]                                                                               |
 
-{% hint style="info" %}
-Data type documentation, `.proto` files, and Java bindings for the loan model are available by request from Figure.
-{% endhint %}
-
-## Examples
+## Example
 
 {% hint style="info" %}
 Note: This example is subject to rapid change.
