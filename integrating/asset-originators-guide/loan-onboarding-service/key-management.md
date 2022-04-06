@@ -8,7 +8,7 @@ The Provenance Blockchain network relies on public key infrastructure on both th
 
 ## Keep your keys from falling into the wrong hands
 
-For security purposes, it is recommended that keys are stored in secure, access-controlled environments such as [Vault](https://www.vaultproject.io).
+The Loan Onboarding Service takes advantage of the Provenance Key Access Library. As such, any originator specified in the API call to the Loan Onboarding Service must exist in the key management system so private keys can be pulled and consumed within the service. By default, the service is configured to use [Hashicorp's Vault](https://www.vaultproject.io). The choice of Key Management solution is ultimately up to the asset originator. To view the full source, please visit the Key Access Library [here](https://github.com/provenance-io/originator-key-access-lib).
 
 \[TODO: practical guide to storing keys/mnemonic in Vault]
 

@@ -11,10 +11,14 @@ While the components and key concepts of p8e and p8e contracts are covered in th
 Here lies the first major decision any asset originator needs to make: to deploy and host your own p8e Contract Execution Environment or not. That's sounds binary, but there are actually three choices:
 
 1. Host your own,
-2. Find a tech services provider, such as [Figure Tech](https://www.figure.tech), to operate on for you as-a-service,
+2. Find a tech services provider, such as [Figure Tech](https://www.figure.tech), to operate one for you as-a-service,
 3. Find a partner you trust that runs their own and is willing to put your data alongside theirs.
 
 This guide will focus on option #1, while the Figure white-label approach mentioned in the Participation Models section of the overview could implement either option #2 or #3.
+
+{% hint style="info" %}
+If you are solely looking for information related to the white-label approach, feel free to skip down to the [Sandbox Environment](p8e-contract-execution-environment-p8e.md#sandbox-environment) section, then on to the [next section](loan-onboarding-service/).
+{% endhint %}
 
 Both #1 and #2 provide data isolation, while all three enable permissioned data replication with business partners.
 
@@ -64,7 +68,7 @@ Depending on your testing needs, you may want to use the same service to transac
 
 #### Configuration
 
-No additional configuration is needed in this environment. By default, the components are listening on the following ports:
+By default, the components are listening on the following ports:
 
 | Component                  | Container Name  | Port(s)                                      |
 | -------------------------- | --------------- | -------------------------------------------- |
@@ -72,6 +76,10 @@ No additional configuration is needed in this environment. By default, the compo
 | Postgres                   | postgres        | 5432:5432                                    |
 | Object Store 1             | object-store    | 5000:8080                                    |
 | Object Store 2             | object-store-mp | 5001:8080                                    |
+
+To enable replication between two Encrypted Object Stores...
+
+\[TODO: add steps to enable replication - environment settings + public key mapping]
 
 ### Test Deployment
 

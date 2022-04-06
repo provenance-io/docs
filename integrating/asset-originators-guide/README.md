@@ -6,7 +6,7 @@ description: >-
 
 # Asset Originator's Guide
 
-This guide walks through some key concepts and practical steps to begin your journey originating and managing assets on Provenance Blockchain. We will learn how to use the [P8e Contract Execution Environment (p8e)](https://docs.provenance.io/p8e/overview) to manage private, sensitive data while maintaining a public record of changes, comprised of hashes of the data stored in p8e. As we step through the guide, we will follow the journey of a digital mortgage as it gets boarded, funded with stablecoin, validated by third parties, and registered in multiple down stream applications that create visibility and allow users to take further actions with their digital assets, such as selling them to investors.
+This guide walks through some key concepts and practical steps to begin your journey originating and managing assets on Provenance Blockchain. You will learn how to use the [P8e Contract Execution Environment (p8e)](https://docs.provenance.io/p8e/overview) to manage private, sensitive data while maintaining a public record of changes, comprised of hashes of the data stored in p8e. As we step through the guide, we will follow the journey of a digital mortgage as it gets boarded, funded with stablecoin, validated by third parties, and registered in multiple down stream applications that create visibility and allow users to take further actions with their digital assets, such as selling them to investors.
 
 {% hint style="info" %}
 This guide uses a mortgage as the example digital asset, but the concepts and components can be applied to any type of asset.
