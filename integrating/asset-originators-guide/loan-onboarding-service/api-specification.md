@@ -289,7 +289,7 @@ Used to onboard to provenance.
 
 | Field                  | Description                                                                | Data Type |
 | ---------------------- | -------------------------------------------------------------------------- | --------- |
-| chainId                |                                                                            | String    |
+| chainId                | The blockchain identifier                                                  | String    |
 | nodeEndpoint           | The url to the provenance node to run against                              | String    |
 | tx                     | The tx body that should be broadcast to provenance                         | String    |
 | account/originatorUuid | The originator uuid that is stored in the associated key management system | String    |
