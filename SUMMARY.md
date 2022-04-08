@@ -91,7 +91,7 @@
 * [Asset Originator's Guide](integrating/asset-originators-guide/README.md)
   * [P8e Contract Execution Environment (p8e)](integrating/asset-originators-guide/p8e-contract-execution-environment-p8e.md)
   * [Loan Onboarding Service](integrating/asset-originators-guide/loan-onboarding-service/README.md)
-    * [Data Modeling](integrating/asset-originators-guide/loan-onboarding-service/data-mapping.md)
+    * [Data Mapping](integrating/asset-originators-guide/loan-onboarding-service/data-mapping.md)
     * [P8e Contracts](integrating/asset-originators-guide/loan-onboarding-service/p8e-contracts/README.md)
       * [Onboard Loan Contract](integrating/asset-originators-guide/loan-onboarding-service/p8e-contracts/example-loan-contracts.md)
     * [Key Management](integrating/asset-originators-guide/loan-onboarding-service/key-management.md)
