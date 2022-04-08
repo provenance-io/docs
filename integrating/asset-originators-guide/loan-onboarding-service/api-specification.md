@@ -4,7 +4,9 @@ description: Loan Onboarding Service API Spec
 
 # API Specification
 
-## Create Object in Object-Store
+## Working with Objects in EOS
+
+### Create Object in Object-Store
 
 Used to store objects in the object store. See [Encrypted Object Store ](https://docs.provenance.io/p8e/overview/encrypted-object-store)for additional information.
 
@@ -33,18 +35,18 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
 }
 ```
 
-| Field                                  | Description                                                                                    | Data Type                     |
-| -------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------- |
-| assetId                                | A unique UUID that identifies the asset                                                        | String                        |
-| asset                                  | The asset that is stored against the EOS. This can be a file, loan package, xml, etc           | Base 64 Encoded Byte Array    |
-| objectStoreAddress                     | The URL to the encrypted object store to run against                                           | String                        |
-| permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS  | List\<Base64EncodedPublicKey> |
-| permissions/permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                | Bool                          |
-| permissions/permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.   | Bool                          |
-| account/istestNet                      | If true, testnet shall be used, otherwise mainnet                                              | Bool                          |
-| account/originatorUuid                 | The originator uuid that is stored in the associated key management system                     | String                        |
-| account/keyRingIndex                   | The key ring index. Used to identify the provenance account.                                   | Int                           |
-| account/keyIndex                       | The key index. Used to identify the provenance account.                                        | Int                           |
+| Field                      | Description                                                                                    | Data Type                     |
+| -------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------- |
+| uli                        | The uli (universal loan identifier) that identifies a loan                                     | String                        |
+| asset                      | The asset that is stored against the EOS. This can be a file, loan package, xml, etc           | Base 64 Encoded Byte Array    |
+| objectStoreAddress         | The URL to the encrypted object store to run against                                           | String                        |
+| audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS  | List\<Base64EncodedPublicKey> |
+| permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                | Bool                          |
+| permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.   | Bool                          |
+| istestNet                  | If true, testnet shall be used, otherwise mainnet                                              | Bool                          |
+| account/originatorUuid     | The originator uuid that is stored in the associated key management system                     | String                        |
+| account/keyRingIndex       | The key ring index. Used to identify the provenance account.                                   | Int                           |
+| account/keyIndex           | The key index. Used to identify the provenance account.                                        | Int                           |
 
 **Response**:
 
