@@ -22,13 +22,14 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
   "permissions": {
     "audiences": [],
     "permissionDart": true,
-    "permissionPortfolioManager": true
+    "permissionPortfolioManager": true,
+    "isTestNet": true,
   },
-  "isTestNet": true,
   "account": {
     "originatorUuid": <uuid>,
     "keyRingIndex": "0",
     "keyIndex": "0",
+    "isTestNet": true,
   },
 }
 ```
@@ -41,7 +42,7 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
 | permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS  | List\<Base64EncodedPublicKey> |
 | permissions/permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                | Bool                          |
 | permissions/permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.   | Bool                          |
-| istestNet                              | If true, testnet shall be used, otherwise mainnet                                              | Bool                          |
+| account/istestNet                      | If true, testnet shall be used, otherwise mainnet                                              | Bool                          |
 | account/originatorUuid                 | The originator uuid that is stored in the associated key management system                     | String                        |
 | account/keyRingIndex                   | The key ring index. Used to identify the provenance account.                                   | Int                           |
 | account/keyIndex                       | The key index. Used to identify the provenance account.                                        | Int                           |
@@ -104,6 +105,7 @@ Used to create a snapshot of a stored object in the object store. See Encrypted 
         "originatorUuid": <uuid>,
         "keyRingIndex": "0",
         "keyIndex": "0",
+        "isTestNet": true,
     },
     "hash": <hash of stored object>,
     "objectStoreAddress": "grpc://object-store-v2.p8e:80",
@@ -125,6 +127,7 @@ Used to create a snapshot of a stored object in the object store. See Encrypted 
 | permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS  | List\<Base64EncodedPublicKey> |
 | permissions/permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                | Bool                          |
 | permissions/permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.   | Bool                          |
+| account/isTestNet                      | If true, testnet shall be used, otherwise mainnet                                              | Bool                          |
 
 **Response:**
 
@@ -164,6 +167,7 @@ Used to write p8e contract specifications to the Object Store and Provenance. Se
         "originatorUuid": <uuid>,
         "keyRingIndex": "0",
         "keyIndex": "0",
+        "isTestNet": true,
     },
     "scopeId": "4e554cb8-56dd-48df-b3fe-71f4c5b7d2cf",
     "scopeSpecId": "551b5eca-921d-4ba7-aded-3966b224f44b",
@@ -181,12 +185,13 @@ Used to write p8e contract specifications to the Object Store and Provenance. Se
 | scopeId                | The scope id that defines the set of records                                                                                                         | String    |
 | scopeSpecId            | The scope specification id. indicates a set of allowed Contract Specifications that are allowed to be used against a given scope to perform updates. | String    |
 | contractSpecId         | The contract specification id. denote the Contracts/Processes that will be used to manage the data within a scope.                                   | String    |
+| account/isTestNet      | If true, testnet shall be used, otherwise mainnet                                                                                                    | Bool      |
 
-## Create Tx and onboard on Provenance
+## Create Tx and Onboard to Provenance
 
 Used to create scope tx and onboard assets to Provenance.&#x20;
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e`
+**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/onboard`
 
 **Method**: POST
 
@@ -194,24 +199,25 @@ Used to create scope tx and onboard assets to Provenance.&#x20;
 
 ```
 {
-   "chainId": "pio-testnet-1",
-   "nodeEndpoint": "grpc://192.168.1.242:9090",
-   "txRequest": {
-    "account": {
-         "originatorUuid": <uuid>,
-         "keyRingIndex": "0",
-         "keyIndex": "0",
-     },
-     "permissions": {
-         "audiences": [],
-         "permissionDart": false,
-         "permissionPortfolioManager": false
-     },
-     "contractSpecId": "f97ecc5d-c580-478d-be02-6c1b0c32235f",
-     "scopeSpecId": "551b5eca-921d-4ba7-aded-3966b224f44b",
-     "scopeId": <scope uuid>,
-     "contractInput": <sting of contract input>
-   },
+    "chainId": "pio-testnet-1",
+    "nodeEndpoint": "grpc://192.168.1.242:9090",
+    "txRequest": {
+        "account": {
+            "originatorUuid": <uuid>,
+            "keyRingIndex": "0",
+            "keyIndex": "0",
+            "isTestNet": true,
+        },
+        "permissions": {
+            "audiences": [],
+            "permissionDart": false,
+            "permissionPortfolioManager": false
+        },
+        "contractSpecId": "f97ecc5d-c580-478d-be02-6c1b0c32235f",
+        "scopeSpecId": "551b5eca-921d-4ba7-aded-3966b224f44b",
+        "scopeId": <scope uuid>,
+        "contractInput": <sting of contract input>
+    },
 }
 ```
 
@@ -229,12 +235,13 @@ Used to create scope tx and onboard assets to Provenance.&#x20;
 | txRequest/scopeSpecId                            | The scope specification id. indicates a set of allowed Contract Specifications that are allowed to be used against a given scope to perform updates. | String                        |
 | txRequest/scopeId                                | The scope id that defines the set of records                                                                                                         | String                        |
 | txRequest/contractInput                          | The input to the contract                                                                                                                            | String                        |
+| account/isTestNet                                | If true, testnet shall be used, otherwise mainnet                                                                                                    | Bool                          |
 
 ## Create Scope Tx
 
 Used to create scope tx.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/scope`
+**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/generatetx`
 
 **Method**: POST
 
@@ -246,6 +253,7 @@ Used to create scope tx.
      "originatorUuid": <uuid>,
      "keyRingIndex": "0",
      "keyIndex": "0",
+     "isTestNet": true,
    },
    "permissions": {
      "audiences": [],
@@ -271,12 +279,13 @@ Used to create scope tx.
 | scopeSpecId                            | The scope specification id. indicates a set of allowed Contract Specifications that are allowed to be used against a given scope to perform updates. | String                        |
 | scopeId                                | The scope id that defines the set of records                                                                                                         | String                        |
 | contractInput                          | The string representation of the input to the contract to run                                                                                        | String                        |
+| account/isTestNet                      | If true, testnet shall be used, otherwise mainnet                                                                                                    | Bool                          |
 
 ## Onboard on Provenance
 
 Used to onboard to provenance.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/onboard`
+**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/executetx`
 
 **Method**: POST
 
@@ -291,6 +300,7 @@ Used to onboard to provenance.
       "originatorUuid": <uuid>,
       "keyRingIndex": "0",
       "keyIndex": "0",
+      "isTestNet": true,
     },
 }
 ```
@@ -303,3 +313,4 @@ Used to onboard to provenance.
 | account/originatorUuid | The originator uuid that is stored in the associated key management system | String    |
 | account/keyRingIndex   | The key ring index. Used to identify the provenance account.               | String    |
 | account/keyIndex       | The key index. Used to identify the provenance account.                    | String    |
+| account/isTestNet      | If true, testnet shall be used, otherwise mainnet                          | Bool      |
