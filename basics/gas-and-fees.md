@@ -61,7 +61,7 @@ And now, query our new Provenance Blockchain account's Hash balance:
 
 ```bash
 provenanced --testnet query bank balances tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6 \
-  --node=tcp://rpc-0.test.provenance.io:26657
+  --node=https://rpc.test.provenance.io:443
 ```
 
 ```bash

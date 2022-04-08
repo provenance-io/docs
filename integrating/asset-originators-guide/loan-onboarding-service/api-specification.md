@@ -122,7 +122,7 @@ Used to write p8e contract specifications to the Object Store and Provenance. Se
 ```
 {
     "chainId": "pio-testnet-1",
-    "nodeEndpoint": "tcp://rpc-0.test.provenance.io:26657",
+    "nodeEndpoint": "https://rpc.test.provenance.io:443",
     "keyMnemonic": "walnut bubble shoe neck broccoli elevator assume puzzle business baby gentle suffer equal duty nephew domain adjust spin cigar response what sniff clip garment",
     "isTestNet": true,
     "keyRingIndex": "0",

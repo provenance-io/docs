@@ -94,7 +94,7 @@ And now, query our new Provenance Blockchain account's Hash balance:
 
 ```bash
 provenanced --testnet query bank balances tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6 \
-  --node=tcp://rpc-0.test.provenance.io:26657
+  --node=https://rpc.test.provenance.io:443
 ```
 
 ```bash
@@ -111,7 +111,7 @@ Next, let's estimate the `gas` requirements for a `1nhash` Hash transfer transac
 
 ```bash
 provenanced --testnet tx bank send tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6 tp1qgjnuqnrqwhg2kfl0dk9rhkcga5lehns2hdycm 1nhash \
-  --node=tcp://rpc-0.test.provenance.io:26657
+  --node=https://rpc.test.provenance.io:443
   --chain-id pio-testnet-1 \
   --gas 65000 \
   --gas-prices 1nhash \
@@ -126,7 +126,7 @@ Let's set our `gas-price` too low and see the affect on our account `nhash` bala
 
 ```bash
 provenanced --testnet tx bank send tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6 tp1qgjnuqnrqwhg2kfl0dk9rhkcga5lehns2hdycm 1nhash \
-  --node=tcp://rpc-0.test.provenance.io:26657 \
+  --node=https://rpc.test.provenance.io:443 \
   --chain-id pio-testnet-1 \
   --gas 65000 \
   --gas-prices 0.0025nhash
@@ -153,7 +153,7 @@ This had no affect on our account balance:
 
 ```bash
 provenanced --testnet query bank balances tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6 \
-  --node=tcp://rpc-0.test.provenance.io:26657
+  --node=https://rpc.test.provenance.io:443
 ```
 
 ```bash
@@ -166,7 +166,7 @@ Now, let's set our `gas-price` to a value equal to the `min-gas-prices` for the 
 
 ```bash
 provenanced --testnet tx bank send tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6 tp1qgjnuqnrqwhg2kfl0dk9rhkcga5lehns2hdycm 1nhash \
-  --node=tcp://rpc-0.test.provenance.io:26657 \
+  --node=https://rpc.test.provenance.io:443 \
   --chain-id pio-testnet-1 \
   --gas 60000 \
   --gas-prices 0.025nhash  
@@ -195,7 +195,7 @@ Also notice that even though we received an error response, the transaction was 
 
 ```bash
 provenanced --testnet query bank balances tp1hn42260zk29s8kfqy55pfzv0e2frvykvl886p6 \                                          
-  --node=tcp://rpc-0.test.provenance.io:26657 
+  --node=https://rpc.test.provenance.io:443 
 ```
 
 ```bash
