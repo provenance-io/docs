@@ -31,6 +31,17 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
 }
 ```
 
+| Field                      | Definition                             | Data Type |
+| -------------------------- | -------------------------------------- | --------- |
+| assetId                    | Unique identifier for the asset        |           |
+| asset                      | Base64 encoded byte array of the asset |           |
+| objectStoreAddress         |                                        |           |
+| audiences                  |                                        |           |
+| permissionDart             |                                        |           |
+| permissionPortfolioManager |                                        |           |
+| isTestNet                  |                                        |           |
+|                            |                                        |           |
+
 **Response**:
 
 ```
