@@ -12,11 +12,11 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
 
 **Method**: POST
 
-**Body**:
+**Request Body**:
 
 ```
 {
-  "assetId": <Scope UUID of Loan>
+  "uli": <uli>
   "asset": <Base 64 encoded byte array of file>
   "objectStoreAddress": "grpc://object-store-v2.p8e:80",
   "audiences": [],
@@ -31,6 +31,19 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
 }
 ```
 
+| Field                      | Description                                                                                    | Data Type                     |
+| -------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------- |
+| uli                        | The uli (universal loan identifier) that identifies a loan                                     | String                        |
+| asset                      | The asset that is stored against the EOS. This can be a file, loan package, xml, etc           | Base 64 Encoded Byte Array    |
+| objectStoreAddress         | The URL to the encrypted object store to run against                                           | String                        |
+| audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS  | List\<Base64EncodedPublicKey> |
+| permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                | Bool                          |
+| permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.   | Bool                          |
+| istestNet                  | If true, testnet shall be used, otherwise mainnet                                              | Bool                          |
+| account/originatorUuid     | The originator uuid that is stored in the associated key management system                     | String                        |
+| account/keyRingIndex       | The key ring index. Used to identify the provenance account.                                   | Int                           |
+| account/keyIndex           | The key index. Used to identify the provenance account.                                        | Int                           |
+
 | Field                      | Definition                             | Data Type |
 | -------------------------- | -------------------------------------- | --------- |
 | assetId                    | Unique identifier for the asset        |           |
@@ -44,6 +57,8 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
 
 **Response**:
 
+**Response**:
+
 ```
 {
     "hash": "iUVSVy1QmyKSxWbxz2JEbCM2jxB9gOVta8KlbqloZsc=",
@@ -53,6 +68,13 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
 }
 ```
 
+| Field  | Description                                  | Data Type |
+| ------ | -------------------------------------------- | --------- |
+| hash   | The returned hash of the saved object in EOS | String    |
+| uri    | The location of the saved object             | String    |
+| bucket | The volume path of the saved data            | String    |
+| name   | The name of the saved data                   | String    |
+
 ## Get Object in Object-Store
 
 Used to retrieve objects in the object store. See Encrypted Object Store for additional information.
@@ -61,7 +83,7 @@ Used to retrieve objects in the object store. See Encrypted Object Store for add
 
 **Method:** GET
 
-&#x20;**Body:**
+&#x20;**Request Body:**
 
 ```
 {
@@ -71,6 +93,12 @@ Used to retrieve objects in the object store. See Encrypted Object Store for add
 }
 ```
 
+| Field              | Description                                                                | Data Type |
+| ------------------ | -------------------------------------------------------------------------- | --------- |
+| originatorUuid     | The originator uuid that is stored in the associated key management system | String    |
+| hash               | The hash of the saved object in EOS                                        | String    |
+| objectStoreAddress | The URL to the encrypted object store to run against                       | String    |
+
 ## Create Snapshot
 
 Used to create a snapshot of a stored object in the object store. See Encrypted Object Store for additional information.
@@ -79,7 +107,7 @@ Used to create a snapshot of a stored object in the object store. See Encrypted 
 
 **Method:** POST
 
-&#x20;**Body:**
+**Request Body:**
 
 ```
 {
@@ -96,6 +124,17 @@ Used to create a snapshot of a stored object in the object store. See Encrypted 
 }
 ```
 
+| Field                      | Description                                                                                    | Data Type                     |
+| -------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------- |
+| account/originatorUuid     | The originator uuid that is stored in the associated key management system                     | String                        |
+| account/keyRingIndex       | The key ring index. Used to identify the provenance account.                                   | Int                           |
+| account/keyIndex           | The key index. Used to identify the provenance account.                                        | Int                           |
+| hash                       | The hash of the object that is currently stored in EOS to create a snapshot against            | String                        |
+| objectStoreAddress         | The URL to the encrypted object store to run against                                           | String                        |
+| audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS  | List\<Base64EncodedPublicKey> |
+| permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                | Bool                          |
+| permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.   | Bool                          |
+
 **Response:**
 
 ```
@@ -107,6 +146,13 @@ Used to create a snapshot of a stored object in the object store. See Encrypted 
 }
 ```
 
+| Field  | Description                                  | Data Type |
+| ------ | -------------------------------------------- | --------- |
+| hash   | The returned hash of the saved object in EOS | String    |
+| uri    | The location of the saved object             | String    |
+| bucket | The volume path of the saved data            | String    |
+| name   | The name of the saved data                   | String    |
+
 ## Create Contract Specification
 
 The Loan Onboarding Service exposes three REST API endpoints for interactions with Provenance.&#x20;
@@ -117,7 +163,7 @@ Used to write p8e contract specifications to the Object Store and Provenance. Se
 
 **Method**: POST
 
-**Body**:
+**Request Body**:
 
 ```
 {
@@ -133,6 +179,18 @@ Used to write p8e contract specifications to the Object Store and Provenance. Se
 }
 ```
 
+| Field          | Description                                                                                                                                          | Data Type |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| chainId        | The blockchain identifier                                                                                                                            | String    |
+| nodeEndpoint   | The url to the provenance node to run against                                                                                                        | String    |
+| keyMnemonic    | The key mnemonic that belongs to the account to sign with                                                                                            | String    |
+| isTestNet      | If true, testnet shall be used, otherwise mainnet                                                                                                    | String    |
+| keyRingIndex   | The key ring index. Used to identify the provenance account.                                                                                         | String    |
+| keyIndex       | The key index. Used to identify the provenance account.                                                                                              | String    |
+| scopeId        | The scope id that defines the set of records                                                                                                         | String    |
+| scopeSpecId    | The scope specification id. indicates a set of allowed Contract Specifications that are allowed to be used against a given scope to perform updates. | String    |
+| contractSpecId | The contract specification id. denote the Contracts/Processes that will be used to manage the data within a scope.                                   | String    |
+
 ## Create Tx and onboard on Provenance
 
 Used to create scope tx and onboard assets to Provenance.&#x20;
@@ -141,7 +199,7 @@ Used to create scope tx and onboard assets to Provenance.&#x20;
 
 **Method**: POST
 
-**Body**:
+**Request Body**:
 
 ```
 {
@@ -164,7 +222,22 @@ Used to create scope tx and onboard assets to Provenance.&#x20;
 }
 ```
 
-## Create Scope Transmission
+| Field                                | Description                                                                                                                                          | Data Type                     |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| chainId                              | The blockchain identifier                                                                                                                            | String                        |
+| nodeEndpoint                         | The url to the provenance node to run against                                                                                                        | String                        |
+| txRequest/account/originatorUuid     | The originator uuid that is stored in the associated key management system                                                                           | String                        |
+| txRequest/account/keyRingIndex       | The key ring index. Used to identify the provenance account.                                                                                         | String                        |
+| txRequest/account/keyIndex           | The key index. Used to identify the provenance account.                                                                                              | String                        |
+| txRequest/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS                                                        | List\<Base64EncodedPublicKey> |
+| txRequest/permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                                                                      | Bool                          |
+| txRequest/permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.                                                         | Bool                          |
+| txRequest/contractSpecId             | The contract specification id. denote the Contracts/Processes that will be used to manage the data within a scope.                                   | String                        |
+| txRequest/scopeSpecId                | The scope specification id. indicates a set of allowed Contract Specifications that are allowed to be used against a given scope to perform updates. | String                        |
+| txRequest/scopeId                    | The scope id that defines the set of records                                                                                                         | String                        |
+| txRequest/hash                       | The hash of the saved object in EOS that shall be used to onboard to provenance.                                                                     | String                        |
+
+## Create Scope Tx
 
 Used to create scope tx.
 
@@ -172,7 +245,7 @@ Used to create scope tx.
 
 **Method**: POST
 
-**Body**:
+**Request Body**:
 
 ```
 {
@@ -191,6 +264,19 @@ Used to create scope tx.
 }
 ```
 
+| Field                      | Description                                                                                                                                          | Data Type                     |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| account/originatorUuid     | The originator uuid that is stored in the associated key management system                                                                           | String                        |
+| account/keyRingIndex       | The key ring index. Used to identify the provenance account.                                                                                         | String                        |
+| account/keyIndex           | The key index. Used to identify the provenance account.                                                                                              | String                        |
+| audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS                                                        | List\<Base64EncodedPublicKey> |
+| permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                                                                      | Bool                          |
+| permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.                                                         | Bool                          |
+| contractSpecId             | The contract specification id. denote the Contracts/Processes that will be used to manage the data within a scope.                                   | String                        |
+| scopeSpecId                | The scope specification id. indicates a set of allowed Contract Specifications that are allowed to be used against a given scope to perform updates. | String                        |
+| scopeId                    | The scope id that defines the set of records                                                                                                         | String                        |
+| hash                       | The hash of the saved object in EOS to create the tx for                                                                                             | String                        |
+
 ## Onboard on Provenance
 
 Used to onboard to provenance.
@@ -199,7 +285,7 @@ Used to onboard to provenance.
 
 **Method**: POST
 
-**Body:**
+**Request Body:**
 
 ```
 {
@@ -213,3 +299,12 @@ Used to onboard to provenance.
     },
 }
 ```
+
+| Field                  | Description                                                                | Data Type |
+| ---------------------- | -------------------------------------------------------------------------- | --------- |
+| chainId                |                                                                            | String    |
+| nodeEndpoint           | The url to the provenance node to run against                              | String    |
+| tx                     | The tx body that should be broadcast to provenance                         | String    |
+| account/originatorUuid | The originator uuid that is stored in the associated key management system | String    |
+| account/keyRingIndex   | The key ring index. Used to identify the provenance account.               | String    |
+| account/keyIndex       | The key index. Used to identify the provenance account.                    | String    |
