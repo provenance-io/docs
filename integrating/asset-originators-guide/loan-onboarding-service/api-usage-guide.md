@@ -21,8 +21,16 @@ Recall that in the [loan package data model](https://docs.provenance.io/integrat
 Therefore, step 1 of the loan onboarding process is to start inserting documents into the EOS as they come. The [Create Object](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification#create-object-in-object-store) endpoint handles creating individual objects in the object store without memorializing them as scopes on Provenance. The curl command below provides an example.
 
 ```
-// curl command to insert document(s)
-...
+curl --location --request POST 'http://test.figure.com/service-loan-onboarding/external/api/v1/eos' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "account": {
+        "originatorUuid": "deadbeef-face-479b-860c-facefaceface"
+    },
+    "uli": "deadbeef-face-479b-860c-facefacefac9",
+    "objectStoreAddress": "grpc://object-store-v2.p8e:80",
+    "asset": "aGVsbG8gd29ybGQ="
+}'
 ```
 
 The "asset" in this case is the loan document represented as a base 64 encoded byte array. It's important to consider whether or not to permission certain other participants at this stage. Figure Tech recommends permissioning the following:
@@ -50,8 +58,22 @@ Ultimately the stage at which an originator onboards a loan to Provenance is a p
 The curl command below will onboard a loan package to the EOS by executing the Record Loan p8e contract, and return a fully formed Provenance Blockchain transaction proposal containing the appropriate hashes of the inputs and outputs of that contract.
 
 ```
-// curl command to onboard loan scope
-...
+curl --location --request POST 'http://test.figure.com/service-loan-onboarding/external/api/v1/p8e/scope' \
+--header 'x-uuid: 072a6707-b888-45d3-acc4-53b564a01bba' \
+--header 'x-roles: {"service-loan-onboarding":["ROLE_ADMIN"]}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "chainId": "pio-testnet-1",
+    "nodeEndpoint": "grpc://192.168.1.242:9090",
+        "account": {
+            "originatorUuid": "deadbeef-face-479b-860c-facefaceface"
+        },
+        "contractSpecId": "f97ecc5d-c580-478d-be02-6c1b0c32235f",
+        "scopeSpecId": "551b5eca-921d-4ba7-aded-3966b224f44b",
+        "scopeId": "deadbeef-face-479b-860c-facefacefac9",
+        "hash": "dPm9lQzaeVFIp7l1W6Km4N6KKvTMSbGiiZI+1+zJY78=",
+        "uli": "deadbeef-face-479b-860c-facefacetime"
+}'
 ```
 
 {% hint style="info" %}
@@ -65,8 +87,105 @@ Now that the p8e scope has been created for the loan package, the loan originato
 Taking the fully formed transaction that was returned in the previous step, loan originators can hit the [Onboard](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification#onboard-on-provenance) endpoint to sign and send the transaction proposal to the memory pool. The curl command below provides and example.
 
 ```
-// curl command to send the transaction proposal
-...
+curl --location --request POST 'http://test.figure.com/service-loan-onboarding/external/api/v1/p8e/onboard' \
+--header 'x-uuid: 072a6707-b888-45d3-acc4-53b564a01bba' \
+--header 'x-roles: {"service-loan-onboarding":["ROLE_ADMIN"]}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "chainId": "pio-testnet-1",
+    "nodeEndpoint": "grpc://192.168.1.242:9090",
+    "tx": {
+        "json": {
+            "messages": [
+                {
+                    "@type": "/provenance.metadata.v1.MsgWriteScopeRequest",
+                    "scope": {
+                        "scopeId": "ADGzwLpEjzEsugB+d0xUlaA=",
+                        "specificationId": "BFUbXsqSHUunre05ZrIk9Es=",
+                        "owners": [
+                            {
+                                "address": "tp156pvc8f338504us55nwxujt29f7948mcgz8xm9",
+                                "role": "PARTY_TYPE_OWNER"
+                            }
+                        ],
+                        "dataAccess": [
+                            "tp156pvc8f338504us55nwxujt29f7948mcgz8xm9"
+                        ],
+                        "valueOwnerAddress": "tp156pvc8f338504us55nwxujt29f7948mcgz8xm9"
+                    },
+                    "signers": [
+                        "tp156pvc8f338504us55nwxujt29f7948mcgz8xm9"
+                    ],
+                    "scopeUuid": "31b3c0ba-448f-312c-ba00-7e774c5495a0",
+                    "specUuid": "551b5eca-921d-4ba7-aded-3966b224f44b"
+                },
+                {
+                    "@type": "/provenance.metadata.v1.MsgWriteSessionRequest",
+                    "session": {
+                        "sessionId": "ATGzwLpEjzEsugB+d0xUlaAmblbDFEtHT5q8DPb3Hs3i",
+                        "specificationId": "A/l+zF3FgEeNvgJsGwwyI18=",
+                        "parties": [
+                            {
+                                "address": "tp156pvc8f338504us55nwxujt29f7948mcgz8xm9",
+                                "role": "PARTY_TYPE_OWNER"
+                            }
+                        ],
+                        "audit": {
+                            "createdBy": "tp156pvc8f338504us55nwxujt29f7948mcgz8xm9",
+                            "updatedBy": "tp156pvc8f338504us55nwxujt29f7948mcgz8xm9"
+                        }
+                    },
+                    "signers": [
+                        "tp156pvc8f338504us55nwxujt29f7948mcgz8xm9"
+                    ],
+                    "sessionIdComponents": {
+                        "scopeUuid": "31b3c0ba-448f-312c-ba00-7e774c5495a0",
+                        "sessionUuid": "266e56c3-144b-474f-9abc-0cf6f71ecde2"
+                    }
+                },
+                {
+                    "@type": "/provenance.metadata.v1.MsgWriteRecordRequest",
+                    "record": {
+                        "name": "Asset",
+                        "sessionId": "ATGzwLpEjzEsugB+d0xUlaAmblbDFEtHT5q8DPb3Hs3i",
+                        "process": {
+                            "hash": "32D60974A2B2E9A9D9E93D9956E3A7D2BD226E1511D64D1EA39F86CBED62CE78",
+                            "name": "OnboardAssetProcess",
+                            "method": "OnboardAsset"
+                        },
+                        "inputs": [
+                            {
+                                "name": "AssetHash",
+                                "hash": "dPm9lQzaeVFIp7l1W6Km4N6KKvTMSbGiiZI+1+zJY78=",
+                                "typeName": "String",
+                                "status": "RECORD_INPUT_STATUS_PROPOSED"
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "hash": "dPm9lQzaeVFIp7l1W6Km4N6KKvTMSbGiiZI+1+zJY78=",
+                                "status": "RESULT_STATUS_PASS"
+                            }
+                        ],
+                        "specificationId": "Bfl+zF3FgEeNvgJsGwwyI1/Vk4bgrkNeKS++DrzblUt1"
+                    },
+                    "signers": [
+                        "tp156pvc8f338504us55nwxujt29f7948mcgz8xm9"
+                    ],
+                    "contractSpecUuid": "f97ecc5d-c580-478d-be02-6c1b0c32235f"
+                }
+            ]
+        },
+        "base64": [
+            "CiwvcHJvdmVuYW5jZS5tZXRhZGF0YS52MS5Nc2dXcml0ZVNjb3BlUmVxdWVzdBKlAgqrAQoRADGzwLpEjzEsugB+d0xUlaASEQRVG17Kkh1Lp63tOWayJPRLGi0KKXRwMTU2cHZjOGYzMzg1MDR1czU1bnd4dWp0MjlmNzk0OG1jZ3o4eG05EAUiKXRwMTU2cHZjOGYzMzg1MDR1czU1bnd4dWp0MjlmNzk0OG1jZ3o4eG05Kil0cDE1NnB2YzhmMzM4NTA0dXM1NW53eHVqdDI5Zjc5NDhtY2d6OHhtORIpdHAxNTZwdmM4ZjMzODUwNHVzNTVud3h1anQyOWY3OTQ4bWNnejh4bTkaJDMxYjNjMGJhLTQ0OGYtMzEyYy1iYTAwLTdlNzc0YzU0OTVhMCIkNTUxYjVlY2EtOTIxZC00YmE3LWFkZWQtMzk2NmIyMjRmNDRi",
+            "Ci4vcHJvdmVuYW5jZS5tZXRhZGF0YS52MS5Nc2dXcml0ZVNlc3Npb25SZXF1ZXN0EroCCr4BCiEBMbPAukSPMSy6AH53TFSVoCZuVsMUS0dPmrwM9vcezeISEQP5fsxdxYBHjb4CbBsMMiNfGi0KKXRwMTU2cHZjOGYzMzg1MDR1czU1bnd4dWp0MjlmNzk0OG1jZ3o4eG05EAWaBlYSKXRwMTU2cHZjOGYzMzg1MDR1czU1bnd4dWp0MjlmNzk0OG1jZ3o4eG05Iil0cDE1NnB2YzhmMzM4NTA0dXM1NW53eHVqdDI5Zjc5NDhtY2d6OHhtORIpdHAxNTZwdmM4ZjMzODUwNHVzNTVud3h1anQyOWY3OTQ4bWNnejh4bTkaTAokMzFiM2MwYmEtNDQ4Zi0zMTJjLWJhMDAtN2U3NzRjNTQ5NWEwGiQyNjZlNTZjMy0xNDRiLTQ3NGYtOWFiYy0wY2Y2ZjcxZWNkZTI=",
+            "Ci0vcHJvdmVuYW5jZS5tZXRhZGF0YS52MS5Nc2dXcml0ZVJlY29yZFJlcXVlc3QS/wIKqwIKBUFzc2V0EiEBMbPAukSPMSy6AH53TFSVoCZuVsMUS0dPmrwM9vcezeIaZRJAMzJENjA5NzRBMkIyRTlBOUQ5RTkzRDk5NTZFM0E3RDJCRDIyNkUxNTExRDY0RDFFQTM5Rjg2Q0JFRDYyQ0U3OBoTT25ib2FyZEFzc2V0UHJvY2VzcyIMT25ib2FyZEFzc2V0IkMKCUFzc2V0SGFzaBosZFBtOWxRemFlVkZJcDdsMVc2S200TjZLS3ZUTVNiR2lpWkkrMSt6Slk3OD0iBlN0cmluZygBKjAKLGRQbTlsUXphZVZGSXA3bDFXNkttNE42S0t2VE1TYkdpaVpJKzErekpZNzg9EAEyIQX5fsxdxYBHjb4CbBsMMiNf1ZOG4K5DXikvvg6825VLdRIpdHAxNTZwdmM4ZjMzODUwNHVzNTVud3h1anQyOWY3OTQ4bWNnejh4bTkiJGY5N2VjYzVkLWM1ODAtNDc4ZC1iZTAyLTZjMWIwYzMyMjM1Zg=="
+        ]
+    },
+    "account": {
+        "originatorUuid": "deadbeef-face-479b-860c-facefaceface"
+    }
+}'
 ```
 
 The API will automatically estimate gas fees associated with this transaction. For more information, see the [Gas and Fees](../../../blockchain/basics/gas-and-fees.md) documentation.
