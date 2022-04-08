@@ -240,7 +240,7 @@ Used to create scope tx and onboard assets to Provenance.&#x20;
 
 Used to create scope tx.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/generatetx`
+**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/tx/generate`
 
 **Method**: POST
 
@@ -284,7 +284,7 @@ Used to create scope tx.
 
 Used to onboard to provenance.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/executetx`
+**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/tx/execute`
 
 **Method**: POST
 
