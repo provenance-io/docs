@@ -23,7 +23,6 @@ Used to store objects in the object store. See [Encrypted Object Store ](https:/
     "audiences": [],
     "permissionDart": true,
     "permissionPortfolioManager": true,
-    "isTestNet": true,
   },
   "account": {
     "originatorUuid": <uuid>,
