@@ -98,7 +98,6 @@
     * [Permissioning Others](integrating/asset-originators-guide/loan-onboarding-service/permissioning-others.md)
     * [API Specification](integrating/asset-originators-guide/loan-onboarding-service/api-specification.md)
     * [API Usage Guide](integrating/asset-originators-guide/loan-onboarding-service/api-usage-guide.md)
-    * [Deployment](integrating/asset-originators-guide/loan-onboarding-service/deployment.md)
 
 ## Apps Built on Provenance Blockchain <a href="#provenance-applications" id="provenance-applications"></a>
 
