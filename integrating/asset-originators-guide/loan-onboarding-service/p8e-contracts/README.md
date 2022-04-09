@@ -21,14 +21,31 @@ In order to execute contracts with the [Provenance Scope SDK](https://github.com
 
 To make things easier, the Loan Onboarding Service exposes the p8e-gradle-plugin functionality in a RESTful endpoint, allowing users to publish their own p8e contracts or pre-defined contracts into their own p8e environment. See the [Create Contract Specification](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification#create-contract-specification) documentation on the API Specification page.
 
-### Local Environment
+The inputs that remain the same no matter which environment you're working in include:
 
-\[TODO: Configuration to publish contracts to the local environment]
+* account - the originator ID that will map to your key management solution
+* scopeId - UUID for the new scope created for this new contract specification
+* scopeSpecId - The ID of the Scope Specification associated with this contract
+* contractSpecId - UUID for the new contract specification
 
-### Test Environment
+The `chainId` and `nodeEndpoint` values depend on your environment.
 
-\[TODO: Configuration to publish contracts to the test environment]
+#### Local Environment
 
-### Production Environment
+These values depend on values set in the `docker-compose.yml` and `genesis.json` files, but they default to:
 
-\[TODO: Configuration to publish contracts to the production environment]
+`chainId` - chain-local
+
+`nodeEndpoint` - tcp://localhost:26657
+
+#### Test Environment
+
+`chainId` - pio-testnet-1
+
+`nodeEndpoint` - Ask for appropriate node endpoint
+
+#### Production Environment
+
+`chainId` - pio-mainnet-1
+
+`nodeEndpoint` - Ask for appropriate node endpoint
