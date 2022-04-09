@@ -77,17 +77,13 @@ By default, the components are listening on the following ports:
 | Object Store 1             | object-store    | 5000:8080                                    |
 | Object Store 2             | object-store-mp | 5001:8080                                    |
 
-To enable replication between two Encrypted Object Stores...
-
-\[TODO: add steps to enable replication - environment settings + public key mapping]
-
 ### Test Deployment
 
-\[TODO: special configuration for testnet, networking considerations]
+Coming soon!
 
 ### Production Deployment
 
-\[TODO: special configuration for mainnet, networking considerations]
+Coming soon!
 
 ## Sandbox Environment
 
