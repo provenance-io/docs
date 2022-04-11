@@ -27,7 +27,7 @@ provenanced tx [moduleName] [command] <arguments> --flag <flagArg>
 First find an existing Hash holder address that we can transfer some of our Hash to.  Using the `provenanced` query commands and the Marker module, we can list everyone holding Hash:
 
 ```bash
-provenanced --testnet q marker holding nhash --node=tcp://rpc-0.test.provenance.io:26657
+provenanced --testnet q marker holding nhash --node=https://rpc.test.provenance.io:443
 ```
 
 ```bash
@@ -57,7 +57,7 @@ Now, let's transfer 1`nhash` to the other address:
 
 ```bash
 provenanced --testnet tx bank send tp1cuknswnphchtkwe68t4nshcaj4l4azv9ml2qhs tp1qgjnuqnrqwhg2kfl0dk9rhkcga5lehns2hdycm 1nhash \
- --node=tcp://rpc-0.test.provenance.io:26657 \
+ --node=https://rpc.test.provenance.io:443 \
  --chain-id pio-testnet-1 \
  --gas 65000 
  --gas-prices 1nhash
@@ -142,6 +142,6 @@ Of note in the transaction response are:
 * A zero value `code` indicates the transaction was successful.
 
 {% hint style="info" %}
-The `--node=tcp://rpc-0.test.provenance.io:26657` flag is not necessary when running against a locally installed node.
+The `--node=https://rpc.test.provenance.io:443` flag is not necessary when running against a locally installed node.
 {% endhint %}
 

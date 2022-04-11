@@ -47,7 +47,7 @@ At this point, the `address` `tp1tkn2dwfkx7pmjr2rtgqhtrudsv7h8w2tj6eesv` is **no
 
 ```bash
 provenanced --testnet query auth account tp1tkn2dwfkx7pmjr2rtgqhtrudsv7h8w2tj6eesv \
-  --node=tcp://rpc-0.test.provenance.io:26657
+  --node=https://rpc.test.provenance.io:443
 ```
 
 ```bash
@@ -66,7 +66,7 @@ Then, try the `provenanced` account query again:
 
 ```bash
 provenanced --testnet query auth account tp1tkn2dwfkx7pmjr2rtgqhtrudsv7h8w2tj6eesv \                <<<
-  --node=tcp://rpc-0.test.provenance.io:26657
+  --node=https://rpc.test.provenance.io:443
 ```
 
 ```bash

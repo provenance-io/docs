@@ -63,7 +63,7 @@ Commands used throughout these examples will use some consistent flags that are 
 
 `--chain-id pio-testnet-1` assumes that we are connected to the Provenance Blockchain testnet
 
-`--node tcp://localhost:26657` this is the default node location and port. In the examples below, we'll connect to a remote node without starting a local node. The remote node is a public testnet node hosted at `rpc-0.test.provenance.io:26657.`
+`--node tcp://localhost:26657` this is the default node location and port. In the examples below, we'll connect to a remote node without starting a local node. The remote node is a public testnet node hosted at `https://rpc.test.provenance.io:443.`
 {% endhint %}
 
 The `provenanced` binary provides a command-line interface to create and query transactions. To create a transaction requires just a few items:
@@ -180,7 +180,7 @@ Your `address` will now have enough Hash to pay gas fees. Confirm your key `addr
 
 ```bash
 provenanced --testnet q bank balances tp1cuknswnphchtkwe68t4nshcaj4l4azv9ml2qhs \
- --node=tcp://rpc-0.test.provenance.io:26657
+ --node=https://rpc.test.provenance.io:443
 ```
 
 ```bash
@@ -193,7 +193,7 @@ pagination:
 ```
 
 {% hint style="info" %}
-The `--node` flag allows us to connect our `provenanced` client to a node running remotely. Thus, we're connecting to a public testnet node hosted at `rpc-0.test.provenance.io.`
+The `--node` flag allows us to connect our `provenanced` client to a node running remotely. Thus, we're connecting to a public testnet node hosted at `https://rpc.test.provenance.io:443.`
 {% endhint %}
 
 ### Using \`jq\` to Parse JSON Output

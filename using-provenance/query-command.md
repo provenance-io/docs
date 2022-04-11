@@ -54,7 +54,7 @@ Query the block height using a remote public node:
 
 ```text
 provenanced --testnet q block \
-    --node=tcp://rpc-0.test.provenance.io:26657 \
+    --node=https://rpc.test.provenance.io:443 \
 | jq ".block.last_commit.height"
 ```
 
@@ -64,10 +64,10 @@ Query account balance using a remote public node:
 
 ```text
 provenanced --testnet q bank balances tp19fn5mlntyxafugetc8lyzzre6nnyqsq95449gt \
- --node=tcp://rpc-0.test.provenance.io:26657
+ --node=https://rpc.test.provenance.io:443
 ```
 
 {% hint style="info" %}
-The `--node=tcp://rpc-0.test.provenance.io:26657` flag is not necessary when running against a locally installed i
+The `--node=https://rpc.test.provenance.io:443` flag is not necessary when running against a locally installed i
 {% endhint %}
 
