@@ -17,7 +17,7 @@ When storing objects against Object-Store, additional audiences can be specified
 }
 ```
 
-To make onboarding loan data in such a way that it is accessible to DART and/or Portfolio Manager, the Loan Onboarding Servicer add two additional param that turn those decisions into a binary decision.
+To make onboarding loan data in such a way that it is accessible to DART and/or Portfolio Manager, the Loan Onboarding Servicer has two additional parameters that turn those decisions into a binary decision.
 
 ```
 {
@@ -28,8 +28,4 @@ To make onboarding loan data in such a way that it is accessible to DART and/or 
 }
 ```
 
-Setting those two values to `true` will add the public keys for each service to the audiences list that gets submitted to p8e. Asset originators can decide for themselves which services they want to permission on an asset-by-asset basis.
-
-## Keep your keys from falling into the wrong hands
-
-For security purposes, it is recommended that keys are stored in secure, access-controlled environments such as [Vault](https://www.vaultproject.io).&#x20;
+Passing those two values as `true` will add the public keys for each service to the audiences list that gets submitted to p8e. Asset originators can decide for themselves which services they want to permission on an asset-by-asset basis.
