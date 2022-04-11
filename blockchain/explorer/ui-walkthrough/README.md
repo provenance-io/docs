@@ -12,7 +12,7 @@ Explorer URLs:
 
 ## Navigation
 
-![The navigation bar](<../../../.gitbook/assets/Screen Shot 2021-11-15 at 2.30.49 PM.png>)
+![The navigation bar](<../../../.gitbook/assets/Screen Shot 2021-11-15 at 2.30.49 PM (1).png>)
 
 The Explorer has five main areas:
 

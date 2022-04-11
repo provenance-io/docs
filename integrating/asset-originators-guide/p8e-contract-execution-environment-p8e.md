@@ -62,7 +62,7 @@ Depending on your testing needs, you may want to use the same service to transac
 {% endtab %}
 
 {% tab title="Multiple Services" %}
-![Multiple services transacting with unique object stores to execute either multi-party contracts or a series of contracts](<../../.gitbook/assets/Post Close - Local Env - MP2 (1).png>)
+![Multiple services transacting with unique object stores to execute either multi-party contracts or a series of contracts](<../../.gitbook/assets/Post Close - Local Env - MP2.png>)
 {% endtab %}
 {% endtabs %}
 
