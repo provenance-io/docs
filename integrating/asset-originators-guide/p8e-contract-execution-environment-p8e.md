@@ -26,64 +26,68 @@ Both #1 and #2 provide data isolation, while all three enable permissioned data 
 
 ### Local Deployment
 
-The encrypted object store is easily deployed locally in a Docker container. However, to enable testing of p8e contracts locally, you will also need to deploy a Provenance node. A simple, single node Provenance network is sufficient for local development and is well-suited for testing new business logic for contracts and testing integrations with p8e.
+Deploying a local environment in Docker with two object stores and a Provenance node is available in \<URL to playground repo here>. This stands up two object-stores backed by a Postgres data store along with a provenance node.  The object-stores and provenance node provide an environment to exercise the various operations needed to utilize the Provenance blockchain.  This repository also provides a web-server you can use to exercise and manipulate your environment to meet your needs.&#x20;
 
-#### Single Party Tests
+![Local Environment Setup](<../../.gitbook/assets/Post Close - Local Env Setup (6).png>)
 
-A Docker Compose environment that deploys the object store as a container alongside Postgres for data persistence and a single node instance of Provenance is available in the [p8e-scope-sdk GitHub repository](https://github.com/provenance-io/p8e-scope-sdk/tree/main/dev-tools/compose). Clone that repository and run the Docker Compose startup command from the `dev-tools/compose` directory.
-
-```
-git clone https://github.com/provenance-io/p8e-scope-sdk.git
-cd p8e-scope-sdk
-cd dev-tools/compose
-docker-compose up -d
-```
-
-You can spin up that docker environment and run the loan onboarding service described in the next section separately, or extend the Docker Compose environment to include it. Running the loan onboarding service in debug mode alongside the p8e environment would end up looking like this:
-
-![Single Object Store Local Testing Environment](<../../.gitbook/assets/Post Close - Local Env.png>)
-
-#### Multi-Party Tests
-
-A variation of the Docker Compose startup command provides an option to specify a multi-party environment that spins up two separate Encrypted Object Stores for testing replication and multi-party p8e contracts. In the setup provided, both Encrypted Object Stores create a separate database within the same instance of Postgres.
-
-```
-git clone https://github.com/provenance-io/p8e-scope-sdk.git
-cd p8e-scope-sdk
-cd dev-tools/compose
-docker compose --profile multi-party up -d
-```
-
-Depending on your testing needs, you may want to use the same service to transact in both Object Stores to simulate multiple parties. Alternatively, you may want to build separate applications that perform different functions within the multi-party contract. As a practical example, a Loan Originator may want to build one service dedicated to validating and onboarding loan data from several upstream product-specific services, and another service dedicated to managing updates to that asset throughout the loan life cycle. Other reasons to test these services separately would be to simulate partnerships where each party owns their own Object Store and p8e-enabled applications.
-
-{% tabs %}
-{% tab title="Single Service" %}
-![A single service transacting with unique object stores to execute either multi-party contracts or a series of contracts](<../../.gitbook/assets/Post Close - Local Env - MP1.png>)
-{% endtab %}
-
-{% tab title="Multiple Services" %}
-![Multiple services transacting with unique object stores to execute either multi-party contracts or a series of contracts](<../../.gitbook/assets/Post Close - Local Env - MP2.png>)
-{% endtab %}
-{% endtabs %}
+Depending on your testing needs, you may choose to just operate on one of the two Object Stores, but two have been provided to support simulating operations across two separate Object Stores.
 
 #### Configuration
 
 By default, the components are listening on the following ports:
 
-| Component                  | Container Name  | Port(s)                                      |
-| -------------------------- | --------------- | -------------------------------------------- |
-| Provenance Blockchain Node | provenance      | <p>1317:1317<br>9090:9090<br>26657:26657</p> |
-| Postgres                   | postgres        | 5432:5432                                    |
-| Object Store 1             | object-store    | 5000:8080                                    |
-| Object Store 2             | object-store-mp | 5001:8080                                    |
+| Component                  | Container Name | Port(s)                                      |
+| -------------------------- | -------------- | -------------------------------------------- |
+| Provenance Blockchain Node | provenance     | <p>1317:1317<br>9090:9090<br>26657:26657</p> |
+| Postgres                   | postgres       | 5432:5432                                    |
+| Vault                      | vault          | 8200:8200                                    |
+| Object Store 1             | object-store-1 | 5001:8081                                    |
+| Object Store 2             | object-store-2 | 5002:8082                                    |
 
-### Test Deployment
+#### Requirements
+
+The general system requirements to spin up this test environment locally are as follows, but do check out \<URL to README on TBD> for more details.
+
+1. Git command line
+2. Terminal that can run shell scripts (e.b. Mac Terminal, Bash)
+3. Docker and Docker Compose
+4. Gradle
+
+#### Setup
+
+Download the repo.
+
+```
+git clone https://github.com/provenance-io/<TBD>
+cd <path to root here>
+./gradlew clean build
+```
+
+Setup Docker containers as detailed in the image above using a script.&#x20;
+
+```
+./dc.sh up
+```
+
+Start the web server.
+
+```
+./gradlew bootRun  
+```
+
+## Available Local Object Store Operations
 
 Coming soon!
 
-### Production Deployment
+### Enable p8e Object Store Replication
 
 Coming soon!
+
+Some situations arise where you want the data written to one p8e Object Store to be replicated to another p8e Object Store.  This is commonly required to allow desired assets to be shared across parties with parties sharing only public information and not having to expose their private secrets.
+
+A success execution of the enable replication endpoint will result in all objects stored into the specified source object store into the target object store with the same object hash.  That allows both the source and target object store to retrieve that object using their own URI "object:\<Object Store URL>/\<hash>".  An example URI for a p8e Object Store 1 created asset is "object://localhost:8081/ztJjRfkG1Rn8ISOjWYIevVRWhxvcAA9Ou0FN+GLJiPc=".
+
+\<Put specs here>
 
 ## Sandbox Environment
 
