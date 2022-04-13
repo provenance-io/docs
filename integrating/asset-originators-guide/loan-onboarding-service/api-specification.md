@@ -10,7 +10,7 @@ description: Loan Onboarding Service API Spec
 
 Used to encrypt and store objects in the object store. See [Encrypted Object Store ](https://docs.provenance.io/p8e/overview/encrypted-object-store)for additional information.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/eos`
+**URL**: `https://{host}/api/v1/eos`
 
 **Method**: POST
 
@@ -35,18 +35,18 @@ Used to encrypt and store objects in the object store. See [Encrypted Object Sto
 }
 ```
 
-| Field                      | Description                                                                                    | Data Type                     |
-| -------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------- |
-| uli                        | The uli (universal loan identifier) that identifies a loan                                     | String                        |
-| asset                      | The asset that is stored against the EOS. This can be a file, loan package, xml, etc           | Base 64 Encoded Byte Array    |
-| objectStoreAddress         | The URL to the encrypted object store to run against                                           | String                        |
-| audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS  | List\<Base64EncodedPublicKey> |
-| permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                | Bool                          |
-| permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.   | Bool                          |
-| istestNet                  | If true, testnet shall be used, otherwise mainnet                                              | Bool                          |
-| account/originatorUuid     | The originator uuid that is stored in the associated key management system                     | String                        |
-| account/keyRingIndex       | The key ring index. Used to identify the provenance account.                                   | Int                           |
-| account/keyIndex           | The key index. Used to identify the provenance account.                                        | Int                           |
+| Field                      | Description                                                                                   | Data Type                     |
+| -------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------- |
+| uli                        | The uli (universal loan identifier) that identifies a loan                                    | String                        |
+| asset                      | The asset that is stored against the EOS. This can be a file, loan package, xml, etc          | Base 64 Encoded Byte Array    |
+| objectStoreAddress         | The URL to the encrypted object store to run against                                          | String                        |
+| audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS | List\<Base64EncodedPublicKey> |
+| permissionDart             | If the dart product should be allowed permission against the saved data in EOS.               | Bool                          |
+| permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.  | Bool                          |
+| istestNet                  | If true, testnet shall be used, otherwise mainnet                                             | Bool                          |
+| account/originatorUuid     | The originator uuid that is stored in the associated key management system                    | String                        |
+| account/keyRingIndex       | The key ring index. Used to identify the provenance account.                                  | Int                           |
+| account/keyIndex           | The key index. Used to identify the provenance account.                                       | Int                           |
 
 **Response**:
 
@@ -70,7 +70,7 @@ Used to encrypt and store objects in the object store. See [Encrypted Object Sto
 
 Used to retrieve objects in the object store. See Encrypted Object Store for additional information.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/eos`
+**URL**: `https://{host}/api/v1/eos`
 
 **Method:** GET
 
@@ -113,7 +113,7 @@ Used to retrieve objects in the object store. See Encrypted Object Store for add
 
 Used to create a snapshot of a stored object in the object store. See Encrypted Object Store for additional information.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/eos/snapshot`
+**URL**: `https://{host}/api/v1/eos/snapshot`
 
 **Method:** POST
 
@@ -137,17 +137,17 @@ Used to create a snapshot of a stored object in the object store. See Encrypted 
 }
 ```
 
-| Field                                  | Description                                                                                    | Data Type                     |
-| -------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------- |
-| account/originatorUuid                 | The originator uuid that is stored in the associated key management system                     | String                        |
-| account/keyRingIndex                   | The key ring index. Used to identify the provenance account.                                   | Int                           |
-| account/keyIndex                       | The key index. Used to identify the provenance account.                                        | Int                           |
-| hash                                   | The hash of the object that is currently stored in EOS to create a snapshot against            | String                        |
-| objectStoreAddress                     | The URL to the encrypted object store to run against                                           | String                        |
-| permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS  | List\<Base64EncodedPublicKey> |
-| permissions/permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                | Bool                          |
-| permissions/permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.   | Bool                          |
-| account/isTestNet                      | If true, testnet shall be used, otherwise mainnet                                              | Bool                          |
+| Field                                  | Description                                                                                   | Data Type                     |
+| -------------------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------- |
+| account/originatorUuid                 | The originator uuid that is stored in the associated key management system                    | String                        |
+| account/keyRingIndex                   | The key ring index. Used to identify the provenance account.                                  | Int                           |
+| account/keyIndex                       | The key index. Used to identify the provenance account.                                       | Int                           |
+| hash                                   | The hash of the object that is currently stored in EOS to create a snapshot against           | String                        |
+| objectStoreAddress                     | The URL to the encrypted object store to run against                                          | String                        |
+| permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS | List\<Base64EncodedPublicKey> |
+| permissions/permissionDart             | If the dart product should be allowed permission against the saved data in EOS.               | Bool                          |
+| permissions/permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.  | Bool                          |
+| account/isTestNet                      | If true, testnet shall be used, otherwise mainnet                                             | Bool                          |
 
 **Response:**
 
@@ -169,13 +169,13 @@ Used to create a snapshot of a stored object in the object store. See Encrypted 
 
 ## Working with Provenance
 
-The Loan Onboarding Service exposes RESTful API endpoints for interactions with Provenance.&#x20;
+The Loan Onboarding Service exposes RESTful API endpoints for interactions with Provenance.
 
 ### Create Contract Specification
 
 Used to write p8e contract specifications to the Object Store and Provenance. See [Specifications](https://docs.provenance.io/p8e/p8e-usage/specifications) for additional information.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/specifications`
+**URL**: `https://{host}/api/v1/p8e/specifications`
 
 **Method**: POST
 
@@ -217,9 +217,9 @@ Used to write p8e contract specifications to the Object Store and Provenance. Se
 
 ### Create Scope Transaction and Onboard to Provenance
 
-Used to create scope transaction and onboard assets to Provenance.&#x20;
+Used to create scope transaction and onboard assets to Provenance.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/onboard`
+**URL**: `https://{host}/api/v1/p8e/onboard`
 
 **Method**: POST
 
@@ -287,7 +287,7 @@ Used to create scope transaction and onboard assets to Provenance.&#x20;
 
 Used to generate a Provenance Blockchain scope transaction message without submitting it.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/tx/generate`
+**URL**: `https://{host}/api/v1/p8e/tx/generate`
 
 **Method**: POST
 
@@ -328,8 +328,6 @@ Used to generate a Provenance Blockchain scope transaction message without submi
 | account/isTestNet                      | If true, testnet shall be used, otherwise mainnet                                                                                                    | Bool                          |
 
 **Response**
-
-
 
 <details>
 
@@ -437,7 +435,7 @@ Used to generate a Provenance Blockchain scope transaction message without submi
 
 Used to send a transaction proposal message to be executed by the Provenance Blockchain network.
 
-**URL**: `https://figure.com/service-loan-onboarding/external/api/v1/p8e/tx/execute`
+**URL**: `https://{host}/api/v1/p8e/tx/execute`
 
 **Method**: POST
 
