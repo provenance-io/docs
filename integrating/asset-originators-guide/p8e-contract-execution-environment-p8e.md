@@ -46,7 +46,7 @@ By default, the components are listening on the following ports:
 
 #### Requirements
 
-The general system requirements to spin up this test environment locally are as follows, but do check out \<URL to README on TBD> for more details.
+The general system requirements to spin up this test environment locally are as follows, but do check out [README](https://github.com/provenance-io/p8e-cee-api) for more details.
 
 1. Git command line
 2. Terminal that can run shell scripts (e.b. Mac Terminal, Bash)
@@ -58,8 +58,8 @@ The general system requirements to spin up this test environment locally are as 
 Download the repo.
 
 ```
-git clone https://github.com/provenance-io/<TBD>
-cd <path to root here>
+git clone https://github.com/provenance-io/p8e-cee-api
+cd p8e-cee-api
 ./gradlew clean build
 ```
 
@@ -80,8 +80,6 @@ Start the web server.
 Coming soon!
 
 ### Enable p8e Object Store Replication
-
-Coming soon!
 
 Some situations arise where you want the data written to one p8e Object Store to be replicated to another p8e Object Store.  This is commonly required to allow desired assets to be shared across parties with parties sharing only public information and not having to expose their private secrets.
 
