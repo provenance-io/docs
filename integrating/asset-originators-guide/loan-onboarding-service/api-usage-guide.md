@@ -16,13 +16,13 @@ As a borrower moves throughout the application stage of the mortgage process, da
 
 ### Onboarding Loan Documents
 
-Recall that in the [Loan Package data model](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/data-mapping), loan document metadata is stored separately from the loan application and underwriting data - in a separate Fact. Also, rather than store every byte of every loan document within the loan scope, the scope will end up containing a list of loan document metadata, with each entry containing the URI to the actual object. Technically speaking, those documents could be stored anywhere, however, the Encrypted Object Store is a great way to store documents such that they can be shared with business partners and downstream applications. Both DART and Portfolio Manager are built to look for documents in the Encrypted Object Store. Storing documents as encrypted objects in the Objects Store allows for automated replication and less integration work between business partners.
+Recall that in the [Loan Package data model](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/data-mapping), loan document metadata is stored separately from the loan application and underwriting data - in a separate Fact. Also, rather than store every byte of every loan document within the loan scope, the `documents` Fact will contain a list of loan document metadata, with each entry containing the URI to the actual object. Technically speaking, those documents could be stored anywhere, however, the Encrypted Object Store is a great way to store documents such that they can be shared with business partners and downstream applications. Both DART and Portfolio Manager are built to look for documents in the Encrypted Object Store. Storing documents as encrypted objects in the Objects Store allows for automated replication and less integration work between business partners.
 
 Therefore, step 1 of the loan onboarding process is to start inserting documents into the EOS as they become available. The [Create Object](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification#create-object-in-object-store) endpoint handles creating individual objects in the object store without memorializing them as scopes on Provenance. The curl command below provides an example.
 
 ```
 curl --location \
---request POST '${HOST}/service-loan-onboarding/external/api/v1/eos' \
+--request POST '${HOST}/api/v1/eos' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "account": {
@@ -64,12 +64,12 @@ Once documents are stored in EOS, and the loan application process is in a stage
 Ultimately the stage at which an originator onboards a loan to Provenance is an internal business decision. Remember that there is a fee to write each update to the loan scope in the form of [gas](../../../blockchain/basics/gas-and-fees.md). A suggestion would be to onboard the loan either at the point in which you would no longer want to update the base loan data, or at the point you would want to share one common set of loan application data with a 3rd party, such as a validator.
 {% endhint %}
 
-The Onboard Scope endpoint requires the consumer to specify which:
+The Onboard Scope endpoint requires the consumer to specify:
 
-* network to execute the contract on (mainnet vs. testnet vs. local),
-* account will sign off on the transaction,
-* scope to execute the p8e contract on,
-* p8e contract to execute, and&#x20;
+* which network to execute the contract on (mainnet vs. testnet vs. local),
+* which account will sign off on the transaction,
+* which scope to execute the p8e contract on,
+* which p8e contract to execute, and&#x20;
 * inputs to the contract, in this case a Loan Package protocol buffer.
 
 Here is where the loan originator has some flexibility in regards to how they want to represent the loan on Provenance. As mentioned in [Data Mapping](data-mapping.md), you can either map the loan data from your LOS to the predefined Loan proto provided in the metadata-asset-model library, or encode the loan data from your LOS into one of the MISMO Reference Model XML formats.
@@ -91,7 +91,7 @@ As a best practice, include as many Facts as are available to you. That translat
 * **The** `eNote` **Fact** - if you have stored an eNote in either the DART eVault or other, eternal eVault, then you can specify the `eNote` Fact
 
 {% hint style="info" %}
-If you use a 3rd party document services provider that is directly integrated with Provenance to generate and send eNotes, then the `eNote` Fact will already be populated for you. Simply omit that fact in the input object.
+If you use a 3rd party document services provider that is directly integrated with Provenance to generate and send eNotes, then the `eNote` Fact may already be populated for you. Simply omit that fact in the input object.
 {% endhint %}
 
 An example of a fully formed Loan Package proto using the MISMO XML is provided below. In this example, the loan originator is providing the asset, servicing rights, document list, and initial loan state. They are leaving out the validation and eNote facts because they are not requesting validation at this time and are using a 3rd party document servicer provider that will send the eNote to Provenance separately. The p8e contract will automatically combine this loan data with an eNote once both are onboarded.
@@ -121,13 +121,13 @@ An example of a fully formed Loan Package proto using the MISMO XML is provided 
     "documents": [
         {
             "id": "<UUID>",
-            "uri": "EOS URI",
-            "fileName": "Electronic Promissory Note (eNote)",
-            "ContentType": "application/xml",
-            "documentType": "MISMO_ENOTE_SMART_DOC_XML",
+            "uri": "<EOS URI>",
+            "fileName": "<Document Name>",
+            "ContentType": "application/pdf",
+            "documentType": "<Document Type>",
             "checksum": "<File sha512 Hash>"
         },
-        ...remaining documents
+        ...entire list of loan documents
     ],
     "loanStates": {
         "loanId": "<uli>",
@@ -157,7 +157,7 @@ The curl command below will onboard a loan package to the Encrypted Object Store
 
 ```
 curl --location \
---request POST '${HOST}/service-loan-onboarding/external/api/v1/p8e/onboard' \
+--request POST '${HOST}/api/v1/p8e/onboard' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "chainId": "pio-testnet-1", // Swap with mainnet chain ID for prod
@@ -186,8 +186,12 @@ curl --location \
 Again, it is recommended that loan originators carefully consider which downstream services, such as Portfolio Manager and DART, they'd like to permission at this stage. It can save time and gas fees later to permission business partners like Figure Tech and/or 3rd Party Validators during the initial onboard.
 {% endhint %}
 
-During this process API will automatically estimate gas fees associated with this transaction. For more information, see the [Gas and Fees](../../../blockchain/basics/gas-and-fees.md) documentation.
+During this process the API will automatically estimate gas fees associated with this transaction. For more information, see the [Gas and Fees](../../../blockchain/basics/gas-and-fees.md) documentation.
 
 {% hint style="info" %}
-Executing a transaction on any blockchain network is an asynchronous process, and Provenance Blockchain is not different. There will be time between sending a transaction proposal to the memory pool and that transaction being picked up and inserted into a block that gets written to the Provenance Blockchain chain. Be sure to read on to learn how to handle common errors.
+Executing a transaction on any blockchain network is an asynchronous process, and Provenance Blockchain is no different. There will be time between sending a transaction proposal to the memory pool and that transaction being picked up and inserted into a block that gets written to the Provenance Blockchain chain. Be sure to read on to learn how to handle common errors.
 {% endhint %}
+
+## Error Handling
+
+Coming soon!
