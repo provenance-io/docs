@@ -52,6 +52,9 @@ The general system requirements to spin up this test environment locally are as 
 2. Terminal that can run shell scripts (e.b. Mac Terminal, Bash)
 3. Docker and Docker Compose
 4. Gradle
+5. [Vault](https://www.vaultproject.io/docs/install) installed on your local OS
+
+
 
 #### Setup
 
