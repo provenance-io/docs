@@ -78,18 +78,6 @@ Start the web server.
 ./gradlew bootRun  
 ```
 
-## Available Local Object Store Operations
-
-Coming soon!
-
-### Enable p8e Object Store Replication
-
-Some situations arise where you want the data written to one p8e Object Store to be replicated to another p8e Object Store.  This is commonly required to allow desired assets to be shared across parties with parties sharing only public information and not having to expose their private secrets.
-
-A success execution of the enable replication endpoint will result in all objects stored into the specified source object store into the target object store with the same object hash.  That allows both the source and target object store to retrieve that object using their own URI "object:\<Object Store URL>/\<hash>".  An example URI for a p8e Object Store 1 created asset is "object://localhost:8081/ztJjRfkG1Rn8ISOjWYIevVRWhxvcAA9Ou0FN+GLJiPc=".
-
-\<Put specs here>
-
 ## Sandbox Environment
 
 {% hint style="info" %}
