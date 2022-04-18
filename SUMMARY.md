@@ -88,16 +88,28 @@
 
 ## Integrating
 
-* [Asset Originator's Guide](integrating/asset-originators-guide/README.md)
-  * [P8e Contract Execution Environment (p8e)](integrating/asset-originators-guide/p8e-contract-execution-environment-p8e.md)
-  * [Loan Onboarding Service](integrating/asset-originators-guide/loan-onboarding-service/README.md)
-    * [Data Mapping](integrating/asset-originators-guide/loan-onboarding-service/data-mapping.md)
-    * [P8e Contracts](integrating/asset-originators-guide/loan-onboarding-service/p8e-contracts/README.md)
-      * [Onboard Loan Contract](integrating/asset-originators-guide/loan-onboarding-service/p8e-contracts/example-loan-contracts.md)
-    * [Key Management](integrating/asset-originators-guide/loan-onboarding-service/key-management.md)
-    * [Permissioning Others](integrating/asset-originators-guide/loan-onboarding-service/permissioning-others.md)
-    * [API Specification](integrating/asset-originators-guide/loan-onboarding-service/api-specification.md)
-    * [API Usage Guide](integrating/asset-originators-guide/loan-onboarding-service/api-usage-guide.md)
+* [Integrating with p8e](integrating/integrating-with-p8e/README.md)
+  * [Lending Ecosystem](integrating/integrating-with-p8e/lending-ecosystem/README.md)
+    * [Life Cycle of a Loan](integrating/integrating-with-p8e/lending-ecosystem/life-cycle-of-a-loan.md)
+    * [Data Mapping](integrating/integrating-with-p8e/lending-ecosystem/data-mapping.md)
+  * [P8e Contract Execution Environment (p8e)](integrating/integrating-with-p8e/p8e-contract-execution-environment-p8e/README.md)
+    * [Deploying the Encrypted Object Store](integrating/integrating-with-p8e/p8e-contract-execution-environment-p8e/deploying-the-encrypted-object-store/README.md)
+      * [Configuring Replication](integrating/integrating-with-p8e/p8e-contract-execution-environment-p8e/deploying-the-encrypted-object-store/configuring-replication.md)
+    * [P8e Contracts](integrating/integrating-with-p8e/p8e-contract-execution-environment-p8e/p8e-contracts/README.md)
+      * [Onboard Loan Contract](integrating/integrating-with-p8e/p8e-contract-execution-environment-p8e/p8e-contracts/example-loan-contracts.md)
+    * [Key Management](integrating/integrating-with-p8e/p8e-contract-execution-environment-p8e/key-management/README.md)
+      * [Permissioning Others](integrating/integrating-with-p8e/p8e-contract-execution-environment-p8e/key-management/permissioning-others.md)
+    * [Summary](integrating/integrating-with-p8e/p8e-contract-execution-environment-p8e/summary.md)
+  * [p8e CEE API](integrating/integrating-with-p8e/loan-onboarding-service/README.md)
+    * [API Usage Guide](integrating/integrating-with-p8e/loan-onboarding-service/api-usage-guide/README.md)
+      * [Loan Onboarding](integrating/integrating-with-p8e/loan-onboarding-service/api-usage-guide/loan-onboarding.md)
+      * [Validation Request](integrating/integrating-with-p8e/loan-onboarding-service/api-usage-guide/validation-request.md)
+      * [Validation Response](integrating/integrating-with-p8e/loan-onboarding-service/api-usage-guide/validation-response.md)
+      * [Error Handling](integrating/integrating-with-p8e/loan-onboarding-service/api-usage-guide/error-handling.md)
+    * [API Specification](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/README.md)
+      * [Configuration Endpoints](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/configuration-endpoints.md)
+      * [Object Store Endpoints](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/object-store-endpoints.md)
+      * [p8e Endpoints](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/p8e-endpoints.md)
 
 ## Apps Built on Provenance Blockchain <a href="#provenance-applications" id="provenance-applications"></a>
 

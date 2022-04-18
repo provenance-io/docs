@@ -1,15 +1,15 @@
 ---
-description: Wait, that's an NFT?
+description: Digital Loan NFT
 ---
 
 # Data Mapping
 
 NFT stands for “Non-Fungible Token” and is used in blockchain ecosystems to represent a unique (non-fungible) digital asset (token) whose ownership is registered and tracked on a blockchain.
 
-Provenance NFTs are typically financial assets, such as loans or funds. However, the type of asset on Provenance is not restricted, allowing for innovation in the financial services industry. The [metadata-asset-model](https://github.com/provenance-io/metadata-asset-model) provides a highly extensible [Google Protocol Buffer](https://developers.google.com/protocol-buffers) representation of an [Asset](https://github.com/provenance-io/metadata-asset-model/blob/main/docs/asset.md) to contain whatever data model the asset originator wishes to use.
+Provenance NFTs are typically financial assets, such as loans or funds. However, the type of asset on Provenance is not restricted, allowing for innovation in the financial services industry. Figure Tech has created the [metadata-asset-model](https://github.com/provenance-io/metadata-asset-model) to provide a highly extensible [Google Protocol Buffer](https://developers.google.com/protocol-buffers) representation of an [Asset](https://github.com/provenance-io/metadata-asset-model/blob/main/docs/asset.md). Using this model, groups of participants can model just about any use case, storing however much data they need to produce value.
 
 {% hint style="info" %}
-As you will see below, the Figure Tech team has put together a Loan Package data model that balances the needs of loan originators, validators, servicers, investors, and eNote controllers that we suggest you follow. The suggested data model remains highly extensible and allows mortgage originators to choose whether to map their own data model to the suggested layout, or simply onboard loan data in a MISMO XML format.
+As you will see below, the Figure Tech team has extended the base Asset data model to put together a Loan Package data model that balances the needs of loan originators, validators, servicers, investors, and eNote controllers. It is a model that has worked for Figure Lending as they record and sell loans to existing investors in the network. The model remains highly extensible and allows mortgage originators to choose whether to map their own data model to the suggested layout, or simply onboard loan data in a MISMO XML format.
 {% endhint %}
 
 ## Loan Package
@@ -18,18 +18,18 @@ As you will see below, the Figure Tech team has put together a Loan Package data
 This section builds on the [Metadata Module](https://docs.provenance.io/modules/metadata-module) documentation. Revisit that page for definitions of the four core state objects in p8e: Contracts, Records, Sessions, and Scopes.
 {% endhint %}
 
-Asset originators must understand the structure of the scope they are going to onboard to Provenance Blockchain, also known as the Record Specification. We will stick to the mortgage as an example of an asset that we want to represent as an asset in Provenance. The Loan Package Record Specification is one scope that includes the following facts:
+Asset originators must understand the structure of the scope they are going to onboard to Provenance Blockchain, also known as the Record Specification. We will stick to the mortgage as an example of an asset that we want to represent as an asset in Provenance. The Loan Package Record Specification is one scope that includes the following six facts:
 
 | Fact             | Description                                                                                                           | Nullable                                                 |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | Asset            | Core information about the loan that should not change throughout the life cycle of the loan after the loan is funded | No                                                       |
 | Servicing Rights | Identifies the servicer and optional sub-servicer                                                                     | No                                                       |
-| Documents        | List of loan documents (metadata with pointers to their location)                                                     | Yes                                                      |
+| Documents        | List of loan documents (metadata with pointers to their actual storage location)                                      | Yes                                                      |
 | Loan States      | List of loan states from servicing                                                                                    | Yes                                                      |
-| Validation       | List of validation requests and validation results                                                                    | Yes                                                      |
+| Validation       | List of validation requests and validation results (a.k.a. validation iterations in the model)                        | Yes                                                      |
 | eNote            | Metadata belonging to the authoritative copy of the eNote, as well as identifiers for the controller and custodian    | Yes (only used when eNote is to be registered with DART) |
 
-The Asset fact is quite loosely defined, however, the intention is for loan originators to choose from one of two options:
+To remain flexible the Asset fact is quite loosely defined, however, the intention is for loan originators to choose from one of two options:
 
 1. Map their own data model to the [Loan Proto](https://github.com/provenance-io/metadata-asset-model/blob/main/src/main/proto/tech/figure/loan/v1beta1/loan.proto#L29), which includes all of the fields needed to re-underwrite the loan and space to add custom fields in each section, or
 2. Use the [MISMOLoan Proto](https://github.com/provenance-io/metadata-asset-model/blob/dkneisly/mismo-xml-as-loan/src/main/proto/tech/figure/loan/v1beta1/mismo\_loan.proto#L18), which simply requires a Universal Loan Identifier (ULI) and MISMO XML file, while allowing loan originators to extend the model as needed
@@ -40,7 +40,7 @@ To help you choose, consider which format your business partners can handle. For
 Both DART and Portfolio Manager can work off of either format.
 {% endhint %}
 
-See the [API Usage Guide](api-usage-guide.md) for a detailed, practical description of how each fact can get generated and memorialized throughout the loan application, closing, and validation processes. It is also not uncommon for loan originators to work with document preparation vendors that may integrate directly with Figure Tech to onboard and register eNotes with DART on closing day. A separate guide is available for onboarding eNotes separately from the rest of the loan package, to ensure direct transfer between eVaults.
+See the [API Usage Guide](../loan-onboarding-service/api-usage-guide/) for a detailed, practical description of how each fact can get generated and memorialized throughout the loan application, closing, validation, and servicing processes. It is also not uncommon for loan originators to work with document preparation vendors that may integrate directly with Figure Tech to onboard and register eNotes with DART on closing day. A separate guide is available for onboarding eNotes separately from the rest of the loan package, to ensure direct transfer between eVaults.
 
 ### Proto Definitions
 
@@ -56,6 +56,8 @@ Each [Fact](../../../p8e/overview/#facts) in a [Scope](../../../p8e/overview/#sc
 | eNote            | [registry.proto](https://github.com/provenance-io/metadata-asset-model/blob/main/src/main/proto/io/dartinc/registry/v1beta1/registry.proto#L14)                     | [registry.md](https://github.com/provenance-io/metadata-asset-model/blob/main/docs/regis.md)        |
 
 ### Examples
+
+The following examples assume the loan being recorded is a mortgage and that at the time of recording, the originator has a list of documents and eNote metadata, but has not requested validation or started servicing the loan, yet.
 
 <details>
 

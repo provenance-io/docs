@@ -4,7 +4,7 @@ description: Establishing the loan in the Encrypted Object Store and Blockchain
 
 # Onboard Loan Contract
 
-In our example, "onboarding a loan" is the process to establish a scope for a loan and save the loan data to the Encrypted Object Store (EOS). Each function (annotated with `@Function`) establishes one of the facts in the scope. For each function, the originator should add input checks based on their own data model. For any check that does not pass, an `Exception` should be thrown, and the contract execution will fail. (Loan scope will not be established or recorded on-chain.) In the example below, only a few functions have examples of input checks.
+In our example, "onboarding a loan" is the process to establish a scope for a loan and save the loan data to the Encrypted Object Store (EOS). Each function (annotated with `@Function`) establishes one of the facts in the scope. For each function, the contract author should add input checks based on their own data model. For any check that does not pass, an `Exception` should be thrown, and the contract execution will fail. (Loan scope will not be established or recorded on-chain.) In the example below, only a few functions have examples of input checks.
 
 ### Sample Contract - Record Loan Contract
 

@@ -1,16 +1,8 @@
----
-description: How to onboard a loan
----
-
-# API Usage Guide
-
-At this point you've looked under the covers at the Loan Package data model, some p8e contract specifications, and the onboarding API specifications. Whether you're operating your own p8e Contract Execution Environment locally, playing around in the sandbox environment, or ready to onboard a loan to Provenance, this page will help connect the dots and point you in the right direction.
+# Loan Onboarding
 
 {% hint style="info" %}
-The intended audience for this page is a loan originator who is already operating their own Loan Origination System (LOS) to originate mortgages, but a similar process could be used for any asset being onboarded to Provenance.
+The intended audience for this page is a Loan Originator who is already operating their own Loan Origination System (LOS) to originate mortgages, but a similar process could be used for any asset being onboarded to Provenance.
 {% endhint %}
-
-## Loan Onboarding
 
 As a borrower moves throughout the application stage of the mortgage process, data and documents are collected by the loan originator in their LOS. Once the application reaches an appropriate milestone, such as closing, the loan originator can start onboarding the loan to Provenance.
 
@@ -61,7 +53,7 @@ Figure Tech is actively integrating with 3rd Party document preparation vendors 
 Once documents are stored in EOS, and the loan application process is in a stage where it is worth onboarding the loan data to Provenance, the loan originator should hit the [Onboard Scope](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification#create-scope-tx) endpoint. Instead of a document being passed as the "asset", you will use the Loan Package protocol buffer.
 
 {% hint style="info" %}
-Ultimately the stage at which an originator onboards a loan to Provenance is an internal business decision. Remember that there is a fee to write each update to the loan scope in the form of [gas](../../../blockchain/basics/gas-and-fees.md). A suggestion would be to onboard the loan either at the point in which you would no longer want to update the base loan data, or at the point you would want to share one common set of loan application data with a 3rd party, such as a validator.
+Ultimately the stage at which an originator onboards a loan to Provenance is an internal business decision. Remember that there is a fee to write each update to the loan scope in the form of [gas](../../../../blockchain/basics/gas-and-fees.md). A suggestion would be to onboard the loan either at the point in which you would no longer want to update the base loan data, or at the point you would want to share one common set of loan application data with a 3rd party, such as a validator.
 {% endhint %}
 
 The Onboard Scope endpoint requires the consumer to specify:
@@ -72,7 +64,7 @@ The Onboard Scope endpoint requires the consumer to specify:
 * which p8e contract to execute, and&#x20;
 * inputs to the contract, in this case a Loan Package protocol buffer.
 
-Here is where the loan originator has some flexibility in regards to how they want to represent the loan on Provenance. As mentioned in [Data Mapping](data-mapping.md), you can either map the loan data from your LOS to the predefined Loan proto provided in the metadata-asset-model library, or encode the loan data from your LOS into one of the MISMO Reference Model XML formats.
+Here is where the loan originator has some flexibility in regards to how they want to represent the loan on Provenance. As mentioned in [Data Mapping](../../lending-ecosystem/data-mapping.md), you can either map the loan data from your LOS to the predefined Loan proto provided in the metadata-asset-model library, or encode the loan data from your LOS into one of the MISMO Reference Model XML formats.
 
 {% hint style="info" %}
 Version 3.4 of the MISMO Reference Model is recommended.
@@ -186,12 +178,4 @@ curl --location \
 Again, it is recommended that loan originators carefully consider which downstream services, such as Portfolio Manager and DART, they'd like to permission at this stage. It can save time and gas fees later to permission business partners like Figure Tech and/or 3rd Party Validators during the initial onboard.
 {% endhint %}
 
-During this process the API will automatically estimate gas fees associated with this transaction. For more information, see the [Gas and Fees](../../../blockchain/basics/gas-and-fees.md) documentation.
-
-{% hint style="info" %}
-Executing a transaction on any blockchain network is an asynchronous process, and Provenance Blockchain is no different. There will be time between sending a transaction proposal to the memory pool and that transaction being picked up and inserted into a block that gets written to the Provenance Blockchain chain. Be sure to read on to learn how to handle common errors.
-{% endhint %}
-
-## Error Handling
-
-Coming soon!
+During this process the API will automatically estimate gas fees associated with this transaction. For more information, see the [Gas and Fees](../../../../blockchain/basics/gas-and-fees.md) documentation.

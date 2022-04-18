@@ -6,11 +6,11 @@ description: Solutions to keeping your keys safe and organized
 
 The Provenance Blockchain network relies on public key infrastructure on both the public and client-side layers. Like any blockchain network, the only thing stopping the value of assets stored on-chain from changing hands, or data from being decrypted in the Object Store is secure key management.
 
-## Provenance Key Access Lib
+## Provenance Key Access Library
 
-The Loan Onboarding Service takes advantage of the Provenance Key Access Library, which provides a layer of abstraction between the API and Key Management System (KMS). Rather than sending keys in an API request, consumers of the API will send a token authorizing them to pull the key from the KMS, and an identifier for the particular key they wish to use.
+The p8e CEE API takes advantage of the Provenance Key Access Library, which provides a layer of abstraction between the API and Key Management System (KMS). Rather than sending keys in an API request, consumers of the API will send a token authorizing them to pull the key from the KMS, and an identifier for the particular key they wish to use.
 
-There are many different KMS solutions on the market today, each providing their own methods for authentication and authorization. It is up to the entity hosting the Loan Onboarding Service to decide which KMS to use and how best to authenticate users. By default, the library is configured to use [Hashicorp Vault](https://www.vaultproject.io) as a KMS. This guide will describe the default implementation, which is designed to be used locally during testing, as well as a solution for accessing keys in a test or production environment. To view the full source, please visit the Key Access Library [here](https://github.com/provenance-io/originator-key-access-lib).
+There are many different KMS solutions on the market today, each providing their own methods for authentication and authorization. It is up to the entity hosting the API to decide which KMS to use and how best to authenticate users. By default, the library is configured to use [Hashicorp Vault](https://www.vaultproject.io) as a KMS. This guide will describe the default implementation, which is designed to be used locally during testing, as well as a solution for accessing keys in a test or production environment. To view the full source, please visit the Key Access Library [here](https://github.com/provenance-io/originator-key-access-lib).
 
 ## Storing Keys in Vault
 
@@ -42,7 +42,7 @@ Example path and naming convention:
 
 #### Vault Token - No Authentication by Default
 
-As Vault unseals itself, the script copies the root Vault token to a local file known to the Loan Onboarding Service as the default location of the vault token to use with each request. For this reason, the API does not require the user to authenticate with Vault before each request, and instead simply requires the user to supply the ID of the organization that correlates to the key in the Key-Value pair.
+As Vault unseals itself, the script copies the root Vault token to a local file known to the API as the default location of the vault token to use with each request. For this reason, the API does not require the user to authenticate with Vault before each request, and instead simply requires the user to supply the ID of the organization that correlates to the key in the Key-Value pair.
 
 {% hint style="info" %}
 This is not a secure solution and should not be used for anything other than local development.
@@ -50,7 +50,7 @@ This is not a secure solution and should not be used for anything other than loc
 
 ### Test and Production Environments
 
-In a test or production environment, authentication against the chosen KMS is a requirement. Ultimately it is up to the tech services provider that operates the Loan Onboarding Service to implement the authentication and authorization method of their choosing.
+In a test or production environment, authentication against the chosen KMS is a requirement. Ultimately it is up to the tech services provider that operates the API to implement the authentication and authorization method of their choosing.
 
 If they choose to implement Vault, a policy mapping an authenticated user to a specific path in a secrets engine would grant or forbid access to keys.
 

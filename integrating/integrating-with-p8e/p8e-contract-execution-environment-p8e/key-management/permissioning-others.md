@@ -29,3 +29,7 @@ To make onboarding loan data in such a way that it is accessible to DART and/or 
 ```
 
 Passing those two values as `true` will add the public keys for each service to the audiences list that gets submitted to p8e. Asset originators can decide for themselves which services they want to permission on an asset-by-asset basis.
+
+### Replication and Decryption
+
+If you haven't already, check out the section on Configuring Replication between two object stores. Replication is the primary method for sharing data with business partners. When configured correctly, encrypting data with your partner's public key will automatically trigger replication and allow that partner to decrypt your data. Conversely, failing to add a partner as an additional audience will prevent them from receiver and decrypting the data.
