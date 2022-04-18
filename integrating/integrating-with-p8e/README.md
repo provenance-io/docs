@@ -31,5 +31,5 @@ Not interested in lending? The guide will provide a wealth of practical knowledg
 But first, let's dive into lending as a perfect example of how Provenance Blockchain can bring massive value to wide variety of players in the space.
 
 {% hint style="info" %}
-Loan originators looking to take the white-label approach to onboard loans can skip ahead to the [API Usage Guide](loan-onboarding-service/api-usage-guide/), which when combined with the [API Specification](loan-onboarding-service/api-specification/) and [Data Mapping](lending-ecosystem/data-mapping.md) pages will tell you all you need to know to get started.
+Loan originators, or their Loan Origination System providers, looking to take the white-label approach to onboard loans can skip ahead to the [API Usage Guide](loan-onboarding-service/api-usage-guide/), which when combined with the [API Specification](loan-onboarding-service/api-specification/) and [Data Mapping](lending-ecosystem/data-mapping.md) pages will tell you all you need to know to get started.
 {% endhint %}
