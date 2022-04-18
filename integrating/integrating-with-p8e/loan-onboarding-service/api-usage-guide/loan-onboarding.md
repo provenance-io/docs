@@ -1,16 +1,22 @@
+---
+description: How to record a loan
+---
+
 # Loan Onboarding
 
 {% hint style="info" %}
-The intended audience for this page is a Loan Originator who is already operating their own Loan Origination System (LOS) to originate mortgages, but a similar process could be used for any asset being onboarded to Provenance.
+The intended audience for this page is a Loan Originator who is operating their own Loan Origination System (LOS) or their LOS provider, but a similar process could be used for any asset being onboarded to Provenance.
 {% endhint %}
 
 As a borrower moves throughout the application stage of the mortgage process, data and documents are collected by the loan originator in their LOS. Once the application reaches an appropriate milestone, such as closing, the loan originator can start onboarding the loan to Provenance.
 
 ### Onboarding Loan Documents
 
-Recall that in the [Loan Package data model](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/data-mapping), loan document metadata is stored separately from the loan application and underwriting data - in a separate Fact. Also, rather than store every byte of every loan document within the loan scope, the `documents` Fact will contain a list of loan document metadata, with each entry containing the URI to the actual object. Technically speaking, those documents could be stored anywhere, however, the Encrypted Object Store is a great way to store documents such that they can be shared with business partners and downstream applications. Both DART and Portfolio Manager are built to look for documents in the Encrypted Object Store. Storing documents as encrypted objects in the Objects Store allows for automated replication and less integration work between business partners.
+Recall that in the [Loan Package data model](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/data-mapping), loan document metadata is stored separately from the loan application and underwriting data - in a separate Fact. Also, rather than store every byte of every loan document within the loan scope, the `documents` Fact will contain a list of loan document metadata. Each entry contains the URI to the actual object and a checksum of the contents to provide evidence of tampering with that off-chain object.
 
-Therefore, step 1 of the loan onboarding process is to start inserting documents into the EOS as they become available. The [Create Object](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification#create-object-in-object-store) endpoint handles creating individual objects in the object store without memorializing them as scopes on Provenance. The curl command below provides an example.
+Technically speaking, those documents could be stored anywhere, however, the Encrypted Object Store is a great way to store documents such that they can be shared with business partners and downstream applications. Both DART and Portfolio Manager are built to look for documents in the Encrypted Object Store. Storing documents as encrypted objects in the Objects Store allows for automated replication and less integration work between business partners.
+
+Therefore, step one of the loan onboarding process is to start inserting documents into the EOS as they become available. The [Create Object](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification#create-object-in-object-store) endpoint handles creating individual objects in the object store without memorializing them as scopes on Provenance. The curl command below provides an example.
 
 ```
 curl --location \
@@ -41,7 +47,7 @@ The "asset" in this case would be the loan document represented as a base 64 enc
 * **3rd Party Validators** - Permission to 3rd party validators if you intend on requesting validation services for this loan.
 
 {% hint style="info" %}
-It is important for loan originators to keep track of the metadata returned by the object store when it creates a document. They will need to generate a list of documents when it comes time to create the loan scope in the next step.
+It is important for integrators to keep track of the metadata returned by the Object Store when it creates a document. They will need to generate a list of documents when it comes time to create the loan scope in the next step.
 {% endhint %}
 
 {% hint style="info" %}
@@ -53,14 +59,14 @@ Figure Tech is actively integrating with 3rd Party document preparation vendors 
 Once documents are stored in EOS, and the loan application process is in a stage where it is worth onboarding the loan data to Provenance, the loan originator should hit the [Onboard Scope](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification#create-scope-tx) endpoint. Instead of a document being passed as the "asset", you will use the Loan Package protocol buffer.
 
 {% hint style="info" %}
-Ultimately the stage at which an originator onboards a loan to Provenance is an internal business decision. Remember that there is a fee to write each update to the loan scope in the form of [gas](../../../../blockchain/basics/gas-and-fees.md). A suggestion would be to onboard the loan either at the point in which you would no longer want to update the base loan data, or at the point you would want to share one common set of loan application data with a 3rd party, such as a validator.
+Ultimately the stage at which an originator onboards a loan to Provenance is an internal business decision. Remember that there is a fee to write each update to the loan scope in the form of [gas](../../../../blockchain/basics/gas-and-fees.md). A suggestion would be to onboard the loan either at the point in which you would no longer want to update the base loan data, or at the point you would want to share one common set of loan application data with a 3rd party, such as a validator, servicer, warehouse lender, or investor.
 {% endhint %}
 
 The Onboard Scope endpoint requires the consumer to specify:
 
 * which network to execute the contract on (mainnet vs. testnet vs. local),
 * which account will sign off on the transaction,
-* which scope to execute the p8e contract on,
+* which scope (asset ID) to execute the p8e contract on,
 * which p8e contract to execute, and&#x20;
 * inputs to the contract, in this case a Loan Package protocol buffer.
 
@@ -76,14 +82,14 @@ Depending on what stage of the loan application process, you may be able to fill
 * **The** `servicingRights` **Fact** - Naming the servicer and sub-servicer, if applicable
 * **The** `documents` **Fact** - List of known documents (created in step one)
 
-As a best practice, include as many Facts as are available to you. That translates to including:
+As a best practice, include as many Facts as are available. That translates to including:
 
 * **The** `loanStates` **Fact** - Include the initial loan state if you want the loan to appear in Portfolio Manager (Portfolio Manager uses this Fact to determine the remaining value of any loan)
 * **The** `validation` **Fact** - If you already plan to request validation from a 3rd party service provider, include a `ValidationRequest` proto in the `validation` Fact
 * **The** `eNote` **Fact** - if you have stored an eNote in either the DART eVault or other, eternal eVault, then you can specify the `eNote` Fact
 
 {% hint style="info" %}
-If you use a 3rd party document services provider that is directly integrated with Provenance to generate and send eNotes, then the `eNote` Fact may already be populated for you. Simply omit that fact in the input object.
+If you use a 3rd party document services provider that is directly integrated with Provenance to generate and send eNotes, then the `eNote` Fact may already be populated for you. Simply omit that fact in the input object - it cannot be overwritten by executing the onboard contract. This is designed to prevent mistakes.
 {% endhint %}
 
 An example of a fully formed Loan Package proto using the MISMO XML is provided below. In this example, the loan originator is providing the asset, servicing rights, document list, and initial loan state. They are leaving out the validation and eNote facts because they are not requesting validation at this time and are using a 3rd party document servicer provider that will send the eNote to Provenance separately. The p8e contract will automatically combine this loan data with an eNote once both are onboarded.
