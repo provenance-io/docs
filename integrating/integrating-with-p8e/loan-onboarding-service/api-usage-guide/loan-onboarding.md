@@ -59,7 +59,7 @@ Figure Tech is actively integrating with 3rd Party document preparation vendors 
 Once documents are stored in EOS, and the loan application process is in a stage where it is worth onboarding the loan data to Provenance, the loan originator should hit the [Onboard Scope](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification#create-scope-tx) endpoint. Instead of a document being passed as the "asset", you will use the Loan Package protocol buffer.
 
 {% hint style="info" %}
-Ultimately the stage at which an originator onboards a loan to Provenance is an internal business decision. Remember that there is a fee to write each update to the loan scope in the form of [gas](../../../../blockchain/basics/gas-and-fees.md). A suggestion would be to onboard the loan either at the point in which you would no longer want to update the base loan data, or at the point you would want to share one common set of loan application data with a 3rd party, such as a validator, servicer, warehouse lender, or investor.
+Ultimately the stage at which an originator onboards a loan to Provenance is an internal business decision. A suggestion would be to onboard the loan either at the point in which you would no longer want to update the base loan data, or at the point you would want to share one common set of loan application data with a 3rd party, such as a validator, servicer, warehouse lender, or investor.
 {% endhint %}
 
 The Onboard Scope endpoint requires the consumer to specify:
