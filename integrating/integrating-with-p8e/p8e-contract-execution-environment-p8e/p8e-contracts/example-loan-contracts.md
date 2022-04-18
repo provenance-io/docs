@@ -4,18 +4,18 @@ description: Establishing the loan in the Encrypted Object Store and Blockchain
 
 # Onboard Loan Contract
 
-In our example, "onboarding a loan" is the process to establish a scope for a loan and save the loan data to the Encrypted Object Store (EOS). Each function (annotated with `@Function`) establishes one of the facts in the scope. For each function, the contract author should add input checks based on their own data model. For any check that does not pass, an `Exception` should be thrown, and the contract execution will fail. (Loan scope will not be established or recorded on-chain.) In the example below, only a few functions have examples of input checks.
+In our example, "onboarding a loan" is the process to establish a scope for a loan and save the loan data to the Encrypted Object Store (EOS). Each function (annotated with `@Function`) establishes one of the records in the scope. For each function, the contract author should add input checks based on their own data model. For any check that does not pass, an `Exception` should be thrown, and the contract execution will fail. (Loan scope will not be established or recorded on-chain.) In the example below, only a few functions have examples of input checks.
 
 ### Sample Contract - Record Loan Contract
 
 ```kotlin
 import io.dartinc.v1beta1.ENote
-import io.p8e.annotations.Fact
-import io.p8e.annotations.Function
-import io.p8e.annotations.Input
-import io.p8e.annotations.Participants
-import io.p8e.proto.ContractSpecs.PartyType.ORIGINATOR
-import io.p8e.spec.P8eContract
+import io.provenance.scope.contract.annotations.Record
+import io.provenance.scope.contract.annotations.Function
+import io.provenance.scope.contract.annotations.Input
+import io.provenance.scope.contract.annotations.Participants
+iimport io.provenance.scope.contract.proto.Specifications.PartyType.ORIGINATOR
+import io.provenance.scope.contract.spec.P8eContract
 import tech.figure.asset.v1beta1.Asset
 import tech.figure.loan.LoanScopeFacts
 import tech.figure.servicing.v1beta1.LoanStateList
@@ -91,14 +91,14 @@ open class RecordLoanContract(
 ```
 
 {% hint style="info" %}
-`Input` names are independent of (output)`Fact` names. In our example, it is merely convenient to use the same String label as the object input. In our example, the input is the same object we expect to store as a fact. In other contracts, one might calculate or construct the object in the body of the function instead, and inputs to the `Function` might be different types entirely.
+`Input` names are independent of (output)`Record` names. In our example, it is merely convenient to use the same String label as the object input. In our example, the input is the same object we expect to store as a record. In other contracts, one might calculate or construct the object in the body of the function instead, and inputs to the `Function` might be different types entirely.
 {% endhint %}
 
 ### Result
 
 Upon execution of this contract:
 
-* A [P8e Scope](https://github.com/provenance-io/p8e/blob/main/simple-client/src/main/proto/contract/scope.proto#L33) object is established in the EOS, containing the full record of the execution of this Contract and the head state of the facts (data output by this contract) in the scope.
+* A [P8e Scope](https://github.com/provenance-io/p8e/blob/main/simple-client/src/main/proto/contract/scope.proto#L33) object is established in the EOS, containing the full record of the execution of this Contract and the head state of the records (data output by this contract) in the scope.
 * A [Provenance Blockchain Scope](https://github.com/provenance-io/provenance/blob/main/proto/provenance/metadata/v1/scope.proto) object is established on the blockchain. The originator, who acts as OWNER in the contract, is designated as the value owner of the asset in the scope.
 * A [Provenance Blockchain MarkerAccount](https://github.com/provenance-io/provenance/blob/main/proto/provenance/marker/v1/marker.proto) object is established on the blockchain.
 
@@ -220,7 +220,7 @@ Upon execution of this contract:
             "resultName": "servicingRights",
             "resultHash": "7nWMRI8o5/7Q+8FhNVVxal4TMd+t12ra3KzIKAuFTdK+Se+ym8etviPCkpbI5I29KEnkhhfBjhwzrQEVChLYQA=="
           },
-          ... Other Facts ...
+          ... Other Records ...
         ],
         "classname": "tech.figure.contracts.RecordLoanContract",
         "audit": {

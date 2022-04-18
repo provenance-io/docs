@@ -14,7 +14,28 @@ We will cover the [API Specification](api-specification/) and walk through the p
 
 ### Deploying Locally
 
-Coming soon!
+To run this service locally, be sure to have [Docker](https://www.docker.com) and [Vault by Hashicorp](https://www.vaultproject.io) installed:
+
+```
+brew install docker
+```
+
+```
+brew tap hashicorp/tap
+brew install hashicorp/tap/vault
+```
+
+once installed, all you need to do is run the included docker setup script
+
+```
+./dc.sh up
+```
+
+and run the service - either via an Intellij run configuration or via the command line with the following command:
+
+```
+./gradlew bootRun
+```
 
 ### API Key for Test or Production Environments
 

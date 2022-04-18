@@ -12,7 +12,7 @@ As a borrower moves throughout the application stage of the mortgage process, da
 
 ### Onboarding Loan Documents
 
-Recall that in the [Loan Package data model](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/data-mapping), loan document metadata is stored separately from the loan application and underwriting data - in a separate Fact. Also, rather than store every byte of every loan document within the loan scope, the `documents` Fact will contain a list of loan document metadata. Each entry contains the URI to the actual object and a checksum of the contents to provide evidence of tampering with that off-chain object.
+Recall that in the [Loan Package data model](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/data-mapping), loan document metadata is stored separately from the loan application and underwriting data - in a separate Record. Also, rather than store every byte of every loan document within the loan scope, the `documents` Record will contain a list of loan document metadata. Each entry contains the URI to the actual object and a checksum of the contents to provide evidence of tampering with that off-chain object.
 
 Technically speaking, those documents could be stored anywhere, however, the Encrypted Object Store is a great way to store documents such that they can be shared with business partners and downstream applications. Both DART and Portfolio Manager are built to look for documents in the Encrypted Object Store. Storing documents as encrypted objects in the Objects Store allows for automated replication and less integration work between business partners.
 
@@ -28,10 +28,12 @@ curl --location \
     },
     "assetId": "74a764ba-3eeb-4271-8337-48a2d8434e1d", // Unique document UUID
     "objectStoreAddress": "grpc://object-store-v2.p8e:80",
-    "asset": "aGVsbG8gd29ybGQ=", // Base64 encoded object/file
-    "permissionDart": true,
-    "permissionPortfolioManager": true,
-    "audiences": [], // here is where you would list additional public keys belonging to business partners, allowing them to decrypt this object with their associated private keys
+    "asset": "aGVsbG8gd29ybGQ=", // Base64 encoded object/file,
+    "permissions": {
+        "permissionDart": true,
+        "permissionPortfolioManager": true,
+        "audiences": [], // here is where you would list additional public keys belonging to business partners, allowing them to decrypt this object with their associated private keys
+    },
     "isTestNet": true
 }'
 ```
@@ -76,23 +78,23 @@ Here is where the loan originator has some flexibility in regards to how they wa
 Version 3.4 of the MISMO Reference Model is recommended.
 {% endhint %}
 
-Depending on what stage of the loan application process, you may be able to fill in one or more of the Loan Package Facts. At a minimum, you are expected to provide:
+Depending on what stage of the loan application process, you may be able to fill in one or more of the Loan Package Records. At a minimum, you are expected to provide:
 
-* **The** `asset` **Fact** - Including either the Loan proto or MISMOLoan proto
-* **The** `servicingRights` **Fact** - Naming the servicer and sub-servicer, if applicable
-* **The** `documents` **Fact** - List of known documents (created in step one)
+* **The** `asset` **Record** - Including either the Loan proto or MISMOLoan proto
+* **The** `servicingRights` **Record** - Naming the servicer and sub-servicer, if applicable
+* **The** `documents` **Record** - List of known documents (created in step one)
 
-As a best practice, include as many Facts as are available. That translates to including:
+As a best practice, include as many Records as are available. That translates to including:
 
-* **The** `loanStates` **Fact** - Include the initial loan state if you want the loan to appear in Portfolio Manager (Portfolio Manager uses this Fact to determine the remaining value of any loan)
-* **The** `validation` **Fact** - If you already plan to request validation from a 3rd party service provider, include a `ValidationRequest` proto in the `validation` Fact
-* **The** `eNote` **Fact** - if you have stored an eNote in either the DART eVault or other, eternal eVault, then you can specify the `eNote` Fact
+* **The** `loanStates` **Record** - Include the initial loan state if you want the loan to appear in Portfolio Manager (Portfolio Manager uses this Record to determine the remaining value of any loan)
+* **The** `validation` **Record** - If you already plan to request validation from a 3rd party service provider, include a `ValidationRequest` proto in the `validation` Record
+* **The** `eNote` **Record** - if you have stored an eNote in either the DART eVault or other, eternal eVault, then you can specify the `eNote` Record
 
 {% hint style="info" %}
-If you use a 3rd party document services provider that is directly integrated with Provenance to generate and send eNotes, then the `eNote` Fact may already be populated for you. Simply omit that fact in the input object - it cannot be overwritten by executing the onboard contract. This is designed to prevent mistakes.
+If you use a 3rd party document services provider that is directly integrated with Provenance to generate and send eNotes, then the `eNote` Record may already be populated for you. Simply omit that record in the input object - it cannot be overwritten by executing the onboard contract. This is designed to prevent mistakes.
 {% endhint %}
 
-An example of a fully formed Loan Package proto using the MISMO XML is provided below. In this example, the loan originator is providing the asset, servicing rights, document list, and initial loan state. They are leaving out the validation and eNote facts because they are not requesting validation at this time and are using a 3rd party document servicer provider that will send the eNote to Provenance separately. The p8e contract will automatically combine this loan data with an eNote once both are onboarded.
+An example of a fully formed Loan Package proto using the MISMO XML is provided below. In this example, the loan originator is providing the asset, servicing rights, document list, and initial loan state. They are leaving out the validation and eNote records because they are not requesting validation at this time and are using a 3rd party document servicer provider that will send the eNote to Provenance separately. The p8e contract will automatically combine this loan data with an eNote once both are onboarded.
 
 <details>
 
