@@ -4,13 +4,19 @@ description: Digital Loan NFT
 
 # Data Mapping
 
-NFT stands for “Non-Fungible Token” and is used in blockchain ecosystems to represent a unique (non-fungible) digital asset (token) whose ownership is registered and tracked on a blockchain.
+NFT stands for “Non-Fungible Token” and is used in blockchain ecosystems to represent a unique (non-fungible) digital asset (token) whose ownership is registered and tracked on a blockchain. When it comes to the data model, an NFT can take any shape or form, as long as it provides value to the parties that own or share ownership of the asset throughout its life.
 
-Provenance NFTs are typically financial assets, such as loans or funds. However, the type of asset on Provenance is not restricted, allowing for innovation in the financial services industry. Figure Tech has created the [metadata-asset-model](https://github.com/provenance-io/metadata-asset-model) to provide a highly extensible [Google Protocol Buffer](https://developers.google.com/protocol-buffers) representation of an [Asset](https://github.com/provenance-io/metadata-asset-model/blob/main/docs/asset.md). Using this model, groups of participants can model just about any use case, storing however much data they need to produce value.
+It can be as simple as the metadata associated with a JPEG, as it is in the digital art world. It can be locked down to a few specific fields, or provide space for each unique asset to grow, as needed.
 
-{% hint style="info" %}
-As you will see below, the Figure Tech team has extended the base Asset data model to put together a Loan Package data model that balances the needs of loan originators, validators, servicers, investors, and eNote controllers. It is a model that has worked for Figure Lending as they record and sell loans to existing investors in the network. The model remains highly extensible and allows mortgage originators to choose whether to map their own data model to the suggested layout, or simply onboard loan data in a MISMO XML format.
-{% endhint %}
+Provenance NFTs are typically financial assets, such as loans or funds. However, the type of asset on Provenance is not restricted, allowing for innovation in the financial services industry.
+
+Figure Tech has created an open-source [metadata-asset-model](https://github.com/provenance-io/metadata-asset-model) to provide a highly extensible [Google Protocol Buffer](https://developers.google.com/protocol-buffers) representation of an [Asset](https://github.com/provenance-io/metadata-asset-model/blob/main/docs/asset.md). Using this model, groups of participants can model just about any use case, storing however much data they need to produce value.
+
+When approaching a use case, it's important to balance the needs of each participant type. The model should provide space to store information that is valuable to all parties, even when that value doesn't overlap.
+
+On the flip side, the model does not need to cover information that one single party finds useful. That information is better kept off-chain and combined with the shared asset client-side. On the same note, keeping size to a minimum is best because the object can be replicated across several Object Stores. Whenever files are involved, it can be best to store the files by themselves, and add a pointer to the file to the asset data model. You will see this pattern multiple times within the Loan Package data model.
+
+As you will see below, the Figure Tech team has extended the base Asset data model to put together a Loan Package data model that balances the needs of loan originators, validators, servicers, investors, and eNote controllers. It's a model that has worked for Figure Lending as they record and sell loans to existing investors in the network. The model remains highly extensible and allows mortgage originators to choose whether to map each field in their own data model to the [Loan Proto](https://github.com/provenance-io/metadata-asset-model/blob/main/src/main/proto/tech/figure/loan/v1beta1/loan.proto#L29), or simply onboard loan data in a MISMO XML format.
 
 ## Loan Package
 
