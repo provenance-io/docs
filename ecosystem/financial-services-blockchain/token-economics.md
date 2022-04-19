@@ -4,9 +4,84 @@ description: An overview of validator rewards for the Provenance Blockchain
 
 # Token Economics
 
-Provenance Blockchain is a public **proof-of-stake blockchain** network designed and developed to support financial service industry needs by providing a **ledger**, **registry**, and **exchange** across multiple financial assets and markets. **Hash** is the Provenance Blockchain utility token to stake, govern, secure, and transact on the network.
+Financial services is a multi-trillion dollar industry, built on intermediation. Blockchain can drive massive disruption in financial services by combining truth-vs-trust and riskless transactions, creating bilateral decentralized markets. Payments, exchanges, and lending can all benefit from this innovation, ultimately driving incumbent revenue and market capitalization to blockchain fees and utility token value. Provenance Blockchain is uniquely situated to drive this change. Provenance is the only public blockchain used by banks today, with billions of dollars in payments, asset trading and lending having been transacted across over 5,000+ wallet holders.
 
-Large financial institutions, investors, technical leaders, and individuals provide the foundation of security and stability of the Provenance Blockchain network by staking Hash as a network validator or delegator for which they are rewarded with a fee. The amount of Hash staked towards a validator defines the frequency by which the validator may propose a new block and its weight in votes to commit a block (and thus earn fees). The `n` largest validators (by weight of stake) are defined as the Active Set of Validators where `n` is a number defined by the Hash community.
+Provenance Blockchain uses HASH as both a utility token and governance engine. HASH is fixed in float - it can’t be created or destroyed. Fees on Provenance include gas fees, community fees and smart contract fees, enabling smart contract developers to assess fees commensurate with the value created by using blockchain versus traditional execution. Fees are quoted in fiat, but always paid in HASH. The Provenance Blockchain Foundation serves the HASH holders by growing adoption by financial institutions as well the developer ecosystem and is responsible for setting and distributing the community fees. Gas + community fees target 1/3 of the economic value created by using the blockchain. Smart contract owners are guided to charge an equivalent amount for use of the smart contract.
+
+The value of HASH is the present value of fees paid into the blockchain. Given the size of financial services, modest market capture results in billions of dollars of fees - and corresponding HASH market capitalization. Payments, exchanges and lending each represent trillions of dollars of fee opportunity.
+
+## Blockchain and Financial Services
+
+Financial services is the world’s largest industry, representing an estimated [20-25% of the world’s economy](https://www.investopedia.com/ask/answers/030515/what-percentage-global-economy-comprised-financial-services-sector.asp). In the US alone, financial services are estimated to have generated over [$4.8 trillion in revenue in 2021](https://www.statista.com/study/15822/banking-finance-and-insurance-in-the-us/).
+
+Intermediated financial markets, such as stock exchanges, interchange payment networks and lending custodians/escrow agents underpin financial services. These marketplaces involve multiple parties that introduce transactional friction and extract significant economic rent. For example, US public equities rely on DTCC as a registrar and introducing and clearing brokers on each side of a trade, using third-party marketplace like NASDAQ or NYSE. Interchange relies on Visa or Mastercard as the network owner and issuing and acquiring banks and processors to support payments. The economic rent these intermediaries generate represents trillions of dollars of revenue and corresponding market capitalization.
+
+Blockchain has two characteristics that allow it to disintermediate financial markets. First, blockchain displaces trust with truth. Native digital assets exist on-chain in immutable form, with certainty of ownership/perfection, composition, and history. Native digital assets could be a loan, equity in a private company, an investment interest in a fund, etc. and sit in the owner’s digital wallet. Second, blockchain allows for bilateral, riskless transactions between counterparties. If I want to sell you a loan, for example, I will have the loan in my digital wallet, and you will have stablecoin in yours. We notify the blockchain of our transaction, and the blockchain registers the loans to your wallet and the stable coin to my wallet. The transaction settles real time without counterparty or settlement risk - e.g., there is no risk one side doesn’t deliver.
+
+When we intersect these two things - displacing trust with truth and transacting without counterparty risk - we can create bilateral decentralized markets where we are agnostic to our counterparty. Let’s apply this to public equity markets to illustrate the benefit.
+
+If equities are native digital assets, there is no need for DTCC because the blockchain is the registrar, and the securities are controlled by owners by virtue of being in their wallet. There are no introducing brokers - no Schwab, Robinhood, etc. - as owners simply attach their wallets to a decentralized exchange operating a limit order book. Bids must be encumbered by stablecoin and offers encumbered by securities, eliminating trade fails and the need for clearing brokers and escrow. While each bid must be fully funded, real time settlement allows for real time netting. Lenders can provide credit by encumbering the digital asset, eliminating counterparty risk and radically expanding the function of prime brokerage to be asset specific, not customer specific. Billions of dollars in fees - and corresponding market cap - migrate from the incumbents to participants of the blockchain ecosystem (including validators, stakers, developers) while also conferring significant business value to participants.
+
+## Provenance Blockchain
+
+Provenance Blockchain is a public, open source, decentralized proof of stake blockchain. Figure launched Provenance Blockchain in 2018 and launched a completely rebuilt Provenance Blockchain as a public chain in 2021. Provenance Blockchain is built using the Cosmos SDK and Tendermint consensus module and is a sovereign level one chain with a native utility token, HASH. Provenance Blockchain has over [60 validators today](https://explorer.provenance.io/dashboard), with a mix of traditional financial services firms and crypto firms. Billions of dollars of financial transactions have been executed on Provenance Blockchain, with significant growth the past year across lending, payments and marketplaces. Provenance was built specifically for financial services with data control, near instant settlement finality and high throughput given proof of stake consensus.
+
+Unlike most blockchains, Provenance Blockchain does not function as a golden data set. The blockchain captures hashes of data for validation while tracking transactions and ownership. For example, when Figure puts a loan on Provenance Blockchain, the \~5GB of data that make up that loan is mapped to a unique 256-bit hash. That hash is stored on chain. When Figure goes to trade that loan, the buyer can validate that the loan file is authentic and accurate, along with ownership and transaction history. This is a necessary condition for financial services activity, as a lender cannot send customer information to 60+ independent validators. We believe this feature is unique among blockchains in production today.
+
+Provenance Blockchain has executed a series of blockchain “firsts” and “onlys” within financial services, establishing Provenance Blockchain as the leading platform for tradfi migrating to defi. These include:&#x20;
+
+First for HELOC and mortgage origination and custody on a public blockchain. To date over $8B of loans have traded on Provenance Blockchain.&#x20;
+
+* [First](https://www.figure.com/blog/industrys-fastest-home-equity-loan-now-available-online-from-figure/) (and only) to instantly settle mortgage loan sales on a public blockchain.&#x20;
+* [First](https://www.figure.com/blog/figure-unveils-industry-first-marketplace-that-facilitates-buying-and-selling-of-loans-all-on-blockchain/) (and only) to securitize consumer loans on a public blockchain.&#x20;
+* [First](https://www.coindesk.com/business/2020/03/11/figure-technologies-securitizes-150m-of-home-equity-loans-on-blockchain/) (and only) to utilize blockchain as a mortgage loan registry on a public blockchain.&#x20;
+* [First](https://www.prnewswire.com/news-releases/figure-and-apollo-execute-mortgage-transactions-using-blockchain-technology-to-transfer-ownership-301504772.html) (and only) public blockchain US regulated banks participate on.&#x20;
+* [First](https://www.coindesk.com/business/2022/01/19/fdic-backed-banks-send-stablecoins-in-usdf-first/) (and only) to support bank-minted tokenized deposit on a public blockchain.&#x20;
+* [First](https://www.finextra.com/pressarticle/89406/figure-ats-completes-first-blockchain-based-security-transactiond) (and only) to support blockchain security marketplaces on a public blockchain operated under a regulated broker dealer/ATS.&#x20;
+* [First](https://www.figure.com/figurepay/enterprise/) (and only) core banking system built on a public blockchain.&#x20;
+
+Provenance Blockchain has significant advantages as the leading blockchain for institutional financial services given the significant progress and development of key components of the ecosystem, including:&#x20;
+
+* Pioneering a range of diverse types of transactions to pave the path for broader adoption&#x20;
+* Operating at significant scale already with a range of types of financial assets already on chain&#x20;
+* Quality validators operating the network&#x20;
+* 8B in HASH staked to promote security of the chain&#x20;
+* $200MM in HASH to support developers through an active grant program&#x20;
+* USDF: bank-minted tokenized deposits for unlimited fiat on chain&#x20;
+* Smart money investors in HASH who believe that financial services infrastructure will be completely transformed by digital assets, digital money and blockchain&#x20;
+* Regulatory focus and engagement to support regulated financial services&#x20;
+* Built using Cosmos SDK with focus on interoperability, a key challenge in traditional financial services&#x20;
+* Adoption opportunities developed by participants who understand existing challenges in traditional financial services today to sustainably and knowledgeably lead the transformation&#x20;
+* Focus on talent behind the machines to engage and collaborate with a diverse and inclusive group of users and developers to build out the new decentralized version of financial services thoughtfully, with a wide stakeholder lens
+* Focus on leveraging AI dapps on chain for intelligent compliance, privacy, identity credentialing, customer UI/UX, etc
+
+## Provenance Fees and HASH
+
+HASH is the utility token for Provenance Blockchain. There are 100 billion HASH and HASH can not be created or destroyed (though it can be slashed to sit in limbo, subject to community direction). Every transaction on Provenance Blockchain incurs gas fees, community fees and smart contract fees, all quoted in fiat but paid in HASH (HASH fees). Participants can pay fees with HASH or pay in fiat and have a Provenance Blockchain Bot purchase HASH to distribute, but ultimately all distribution is in HASH. Gas fees go to validators and their delegates, community fees currently go to all delegated HASH holders, and smart contract fees go to smart contract owners.
+
+Provenance Blockchain has a foundation, currently run by [Morgan McKenney](https://www.prnewswire.com/news-releases/provenance-blockchain-foundation-announces-banking-executive-morgan-mckenney-as-ceo-301492872.html). The head of the foundation is elected by and serves for the benefit of the HASH holders to encourage and promote adoption of Provenance by financial institutions, fintechs and developers, growing usage, business benefits for participants and the number of quality value-added financial services dapps. The foundation is delegated with setting community fees and determining how those community fees are distributed. The current objective of the foundation is for gas + community fees to equal 1/3 of the benefit of using the blockchain. Further, the foundation encourages smart contract owners to set fees equal to roughly 1/3 of the benefit of using the blockchain. The ratios are intended to capture value while encouraging adoption. Community fees are currently distributed to all delegated HASH holders, incenting delegation and network participation.
+
+For example, most mortgages are traditionally registered using a service called MERS. [MERS charges $25/loan for registration](https://www.mersinc.org/products-services/mers-system/pricing-schedule). Figure created a registry service on Provenance Blockchain called DART. The foundation set the community fee for DART such that gas + community fees equal $8. Figure charges $9 in smart contract fees. The total cost to use DART is $17, or roughly a 1/3 savings versus MERS. Note that gas fees are set by the validators, but in this case are generally less than $1. Given gas fees can fluctuate slightly, the community fee is variable, but is usually at least $7.
+
+All fees are quoted in fiat but paid in HASH. As the price of HASH floats, the amount of HASH paid is a function of the prevailing price. This provides certainty of cost to those using Provenance Blockchain. This also doesn’t erode the value proposition of the blockchain as the price of HASH rises, nor fail to capture at least 1/3 of the economic benefit for the community when the price of HASH falls. HASH currently trades on a decentralized exchange on Provenance Blockchain ([www.dlob.io](https://dlob.io)) and is being listed on OKCoin in April 2022. The foundation plans to pursue listings on several more large centralized and decentralized exchanges throughout the year to increase HASH liquidity as well as enable additional investors to participate in this once-in-a-generation transformation of financial services.
+
+## Modest Assumptions = Big Outcomes
+
+The market capitalization of HASH - e.g., the price of HASH times the amount of HASH outstanding (100 billion) - should roughly equal the present value of fees expected to be paid on Provenance Blockchain, over the life of the blockchain. To understand this we’ll use a simple - albeit unrealistic - illustration.
+
+Assume there is one HASH holder, and that holder is the sole validator on the Provenance Blockchain and the owner of all smart contracts. When Figure transacts on Provenance, we pay gas fees, community fees and smart contract fees. Those collective HASH fees all go to the one HASH holder, who sells HASH for our ability to transact and then receives that HASH back in HASH fees. If we were paying $10M a year in fees, and the perpetual discount rate was 5.00%, then the value of HASH to the one HASH holder would be $1M/.05 or $200M. Given 100 billion HASH outstanding, the price of a single HASH is $0.0002 (200M/100B).
+
+As we introduce more HASH holders into our example, they will have different assumptions about how many fees will be paid in and what the appropriate discount rate is. They may also have non-rational reasons for buying or selling HASH. Assume there are one hundred equal holders of HASH, and one of those has a higher discount rate than the others. That person will sell their HASH and leave the ecosystem. The price will converge to the group consensus. At the limit, the price of HASH converges to the price corresponding to the highest assumed fees/lowest assumed discount rate.
+
+Fees drive the price of HASH. Disintermediating financial services can generate enormous fees. One such example is disintermediating interchange with bilateral stablecoin payments.
+
+In 2021, there were [$4.6T in credit and $3.9T in debit card payments](https://nilsonreport.com/publication\_chart\_and\_graphs\_archive.php?1=1\&year=2022), averaging 300 and 100 bps of fees, respectively. That’s nearly $180B in fees. Assume Provenance Blockchain displaced interchange at 2/3 of the cost. That’s $120B in fees. Using a 5% perpetual discount rate, that would imply a HASH market capitalization of $2.4T. What if Provenance Blockchain was only able to capture 10% of the interchange market? That’s still enough fees to translate to $240B in HASH market capitalization, which is 30 times its current \~$8B in market cap today and a price of $2.40/HASH.
+
+When we look at the major financial markets prone to blockchain disruption - payments, marketplaces, lending - there are trillions of dollars of fees to be had. Even very modest market capture rates translate to significant HASH market capitalization.
+
+## Conclusion
+
+HASH holders are able to earn HASH through validator incentives and through community distribution by delegating HASH. HASH holders also benefit from increased participation - and fees - on Provenance Blockchain. The foundation is working to expand access to HASH through multiple centralized and decentralized exchange listings, starting with [www.dlob.io](https://www.dlob.io) and OKCoin in April 2022. The foundation is also actively facilitating greater adoption of Provenance Blockchain across the multi-trillion dollar financial services industry.
 
 | Token Type                    | Hash           |
 | ----------------------------- | -------------- |
@@ -18,8 +93,6 @@ Large financial institutions, investors, technical leaders, and individuals prov
 | Unbonding/Undelegating period | 21 days        |
 | Initial Active Set Size       | 100 validators |
 | Community pool                | 7%             |
-
-## Inflation
 
 The number of minted Hash remains constant, and no new Hash is minted as reward for work. As a result, there is no inflation of the Hash value through the new influx of Hash.
 
@@ -35,66 +108,6 @@ Hash is held by four majority holders.&#x20;
 | Figure Technologies Inc.         | 56%            |
 
 \*\*The numbers above are based on full dilution.
-
-### Provenance Blockchain Foundation
-
-Our mandate is to provide the world’s best ecosystem for developing and deploying DeFi applications. We believe a community-driven, open-source model based on the best-in-class, eco-friendly Cosmos/Tendermint internet of blockchains is essential for the success and wide adoption of the next generation of decentralized financial applications.
-
-The Provenance Blockchain Foundation (PBF) is a non-profit organization dedicated to supporting the development of DeFi applications that leverage the Provenance Blockchain ecosystem.
-
-The Provenance Blockchain Foundation supports and sponsors the development, maintenance and operation**s** of a set of custom modules and infrastructure services to help with the creation of distributed applications that streamline management of financial instruments and transactions. Those modules are integrated within the Provenance Blockchain ecosystem and may therefore be readily adopted, integrated, and productized by clients.
-
-The PBF supports and funds a grants program for Provenance Blockchain Improvement Projects (PIP). This program is used to improve and enhance the ecosystem components and services, and to provide education for and outreach to the community and beyond about the why’s and how-to’s of leveraging the Provenance Blockchain network, its services, and its SDK.
-
-The PBF does not own the Provenance Blockchain network nor any of its applications. Its mission is to bring a community together with the common purpose of creating, supporting and leveraging the best of breed DeFi ecosystem. The only reason for the community to stay together under the umbrella of the PBF, is when the benefits of the ecosystem for the community members and the ROI for the members of investing in that ecosystem, are clear and worthwhile - the PBF must work to ensure those conditions are met. Note that although the PBF will own the Github accounts where the code of the infrastructure components is maintained, the Apache 2.0 license allows anyone to freely fork the effort and use the code anyway they see fit elsewhere.
-
-### Figure
-
-Figure Technologies designed and developed the Provenance Blockchain, which was initially released in July of 2018. In April of 2021, Figure released an evolved Provenance Blockchain implementation as an open source blockchain based on the Cosmos SDK and Tendermint Consensus Algorithm. This new version allows any developer to participate, and derive value by utilizing an efficient settlement rail for digitally native assets.
-
-Figure delegated 3.75 billion Hash to stabilize and secure the network. Figure has committed not to delegate beyond 50% control, effectively decentralizing the blockchain allowing the community to govern the future state of the protocol in conjunction with the Provenance Blockchain Foundation. Figure's delegations can be found [HERE](https://explorer.provenance.io/accounts/pb1jdhhd54zy6g3sg2agwuh503mdwm50e8es6d2l4) and [HERE](https://explorer.provenance.io/accounts/pb1e2fhljv44saqmewp6j6ra0y94e8vzfs9a9r4aq) as well as their voting on [past proposals](https://explorer.provenance.io/proposals) on the [Provenance Explorer](https://explorer.provenance.io).
-
-**Figure utilizes Provenance Blockchain to improve efficiency and scalability of several business lines.**
-
-* Figure Lending - HELOC, Mortgage, and Personal Loans
-* Figure Pay - Direct to consumer banking on blockchain, bank in a box APIs
-* Figure Marketplace - Digital Fund Services, ATS
-* Figure Equity Solutions - Cap Sheet Management with Blockchain Native Securities
-* DART - Mortgage Registry
-* USDF Consortium - Bank-backed stablecoin
-
-## Strategic Partnerships
-
-Provenance Blockchain Foundation and Figure are driving Provenance adoption through the creation of strategic partnerships with major financial institutions. These partnerships reward the financial institutions with tokens based on the attainment of specific adoption milestones. The most public of these partnerships are the ones [entered into](https://www.apollo.com/media/press-releases/2021/07-14-2021) with Apollo Global Management (one of the largest asset managers) and with the USDF Consortium banks.
-
-While Figure currently holds about two thirds of the Hash token supply, it is actively divesting its Hash holdings into ecosystem through such partnerships driving use cases. This is an important differentiator for a blockchain, as it drives scale de-risked businesses and volumes to the Provenance Blockchain, rather than using inflation, airdrops, and other gimmicks to encourage participation. These use cases as well as upcoming arrangements with leading lending, payments, asset management and insurance companies will accrete long-term sustainable value to the Provenance Blockchain community and result in Figure holding less than one third of the token supply.
-
-**Press related to strategic partnerships**
-
-* USDF -[https://www.fintechfutures.com/2022/01/usdf-consortium-launches-to-develop-and-promote-bank-minted-stablecoin/](https://www.fintechfutures.com/2022/01/usdf-consortium-launches-to-develop-and-promote-bank-minted-stablecoin/)
-* ATS -[https://www.crypto-reporter.com/newsfeed/figure-unveils-first-solution-for-private-companies-to-raise-manage-trade-equity-from-single-platform-22234/](https://www.crypto-reporter.com/newsfeed/figure-unveils-first-solution-for-private-companies-to-raise-manage-trade-equity-from-single-platform-22234/)
-* Subscribe -[https://finance.yahoo.com/news/subscribe-figure-partner-offer-first-143000756.html](https://finance.yahoo.com/news/subscribe-figure-partner-offer-first-143000756.html)
-* Marqeta -[https://www.pymnts.com/buy-now-pay-later/2021/marqeta-figure-team-on-bnpl-pos-solution/](https://www.pymnts.com/buy-now-pay-later/2021/marqeta-figure-team-on-bnpl-pos-solution/)
-* Homebridge -[https://www.housingwire.com/articles/inside-figure-and-homebridges-massive-bet-on-blockchain/](https://www.housingwire.com/articles/inside-figure-and-homebridges-massive-bet-on-blockchain/)
-* Apollo -[https://www.coindesk.com/apollo-to-work-with-figure-on-blockchain-initiatives](https://www.coindesk.com/apollo-to-work-with-figure-on-blockchain-initiatives)
-
-### USDF Consortium
-
-The USDF Consortium is a membership-based association of FDIC-insured banks. The consortium’s mission is to build a network of banks to further the adoption and interoperability of a bank-minted stablecoin (USDF), which will facilitate the compliant transfer of value on the blockchain, removing friction in the financial system and unlocking the financial opportunities that blockchain and digital transactions can provide to a greater network of users.
-
-USDF Consortium is making the market safer, cheaper and more reliable for consumers who want to transact on blockchain by ensuring banks continue to play an important role in the financial ecosystem as blockchain adoption accelerates.The USDF Consortium is committed to building the foundation and advancing responsible innovation that will allow banks to harness the benefits of this transformative technology.
-
-The Consortium’s founding bank members include New York Community Bank, NBH Bank, FirstBank, Sterling National Bank, and Synovus Bank. Figure Technologies, Inc. and JAM FINTOP are also founding members and will facilitate and promote the adoption of USDF.
-
-USDF runs on the Provenance Blockchain as its open-loop network enables instantaneous 24x7x365 settlement.
-
-### Grants Program
-
-The foundation funds a grants program where “Provenance Blockchain Improvement Proposals (PIPs)” are solicited from the community and possibly funded. Those proposals can address new functionality and features that enhance the appeal and acceptance of the Provenance Blockchain ecosystem. Proposals for more forward looking research projects and feasibility studies of applications leveraging the ecosystem in different economic settings and geographies, are also very welcome. Those PIPs are presented to the foundation council and members, who will vote on the funding of those projects.
-
-The Provenance Blockchain community consists of individuals and organizations that identify projects like: DeFi applications, tools to teach and educate students about the Provenance Blockchain network and its SDK. The Community identifies projects that bring diverse communities together.
-
-Interested parties can submit Grants proposals [HERE](https://www.provenance.io/grants)
 
 ## Staking Hash
 
