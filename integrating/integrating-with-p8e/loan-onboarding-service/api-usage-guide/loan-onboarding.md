@@ -88,7 +88,7 @@ As a best practice, include as many Records as are available. That translates to
 
 * **The** `loanStates` **Record** - Include the initial loan state if you want the loan to appear in Portfolio Manager (Portfolio Manager uses this Record to determine the remaining value of any loan)
 * **The** `validation` **Record** - If you already plan to request validation from a 3rd party service provider, include a `ValidationRequest` proto in the `validation` Record
-* **The** `eNote` **Record** - if you have stored an eNote in either the DART eVault or other, eternal eVault, then you can specify the `eNote` Record
+* **The** `eNote` **Record** - if you have stored an eNote in either the DART eVault or other, external eVault, then you can specify the `eNote` Record
 
 {% hint style="info" %}
 If you use a 3rd party document services provider that is directly integrated with Provenance to generate and send eNotes, then the `eNote` Record may already be populated for you. Simply omit that record in the input object - it cannot be overwritten by executing the onboard contract. This is designed to prevent mistakes.
@@ -153,7 +153,7 @@ An example of a fully formed Loan Package proto using the MISMO XML is provided 
 
 </details>
 
-The curl command below will onboard a loan package to the Encrypted Object Store by executing the Record Loan p8e contract, and broadcast a fully formed Provenance Blockchain transaction proposal containing the appropriate hashes of the inputs and outputs of that contract to the Provenance Blockchain memory pool. There, it will get picked up by validators and memorialized as a scope on the Provenance Blockchain ledger.
+The curl command below will onboard a loan package to the Encrypted Object Store by executing the `Record Loan` p8e contract, and broadcast a fully formed Provenance Blockchain transaction proposal containing the appropriate hashes of the inputs and outputs of that contract to the Provenance Blockchain memory pool. There, it will get picked up by validators and memorialized as a scope on the Provenance Blockchain ledger.
 
 ```
 curl --location \
