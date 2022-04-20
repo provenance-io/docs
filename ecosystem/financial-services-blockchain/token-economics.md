@@ -30,12 +30,11 @@ Unlike most blockchains, Provenance Blockchain does not function as a golden dat
 
 Provenance Blockchain has executed a series of blockchain “firsts” and “onlys” within financial services, establishing Provenance Blockchain as the leading platform for tradfi migrating to defi. These include:&#x20;
 
-First for HELOC and mortgage origination and custody on a public blockchain. To date over $8B of loans have traded on Provenance Blockchain.&#x20;
-
-* [First](https://www.figure.com/blog/industrys-fastest-home-equity-loan-now-available-online-from-figure/) (and only) to instantly settle mortgage loan sales on a public blockchain.&#x20;
-* [First](https://www.figure.com/blog/figure-unveils-industry-first-marketplace-that-facilitates-buying-and-selling-of-loans-all-on-blockchain/) (and only) to securitize consumer loans on a public blockchain.&#x20;
-* [First](https://www.coindesk.com/business/2020/03/11/figure-technologies-securitizes-150m-of-home-equity-loans-on-blockchain/) (and only) to utilize blockchain as a mortgage loan registry on a public blockchain.&#x20;
-* [First](https://www.prnewswire.com/news-releases/figure-and-apollo-execute-mortgage-transactions-using-blockchain-technology-to-transfer-ownership-301504772.html) (and only) public blockchain US regulated banks participate on.&#x20;
+* [First](https://www.figure.com/blog/industrys-fastest-home-equity-loan-now-available-online-from-figure/) for HELOC and mortgage origination and custody on a public blockchain. To date over $8B of loans have traded on Provenance Blockchain.&#x20;
+* [First](https://www.figure.com/blog/figure-unveils-industry-first-marketplace-that-facilitates-buying-and-selling-of-loans-all-on-blockchain/) (and only) to instantly settle mortgage loan sales on a public blockchain.&#x20;
+* [First](https://www.coindesk.com/business/2020/03/11/figure-technologies-securitizes-150m-of-home-equity-loans-on-blockchain/) (and only) to securitize consumer loans on a public blockchain.&#x20;
+* [First](https://www.prnewswire.com/news-releases/figure-and-apollo-execute-mortgage-transactions-using-blockchain-technology-to-transfer-ownership-301504772.html) (and only) to utilize blockchain as a mortgage loan registry on a public blockchain.&#x20;
+* [First](https://www.usdfconsortium.com) (and only) public blockchain US regulated banks participate on.&#x20;
 * [First](https://www.coindesk.com/business/2022/01/19/fdic-backed-banks-send-stablecoins-in-usdf-first/) (and only) to support bank-minted tokenized deposit on a public blockchain.&#x20;
 * [First](https://www.finextra.com/pressarticle/89406/figure-ats-completes-first-blockchain-based-security-transactiond) (and only) to support blockchain security marketplaces on a public blockchain operated under a regulated broker dealer/ATS.&#x20;
 * [First](https://www.figure.com/figurepay/enterprise/) (and only) core banking system built on a public blockchain.&#x20;
