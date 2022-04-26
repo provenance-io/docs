@@ -1,6 +1,6 @@
 # Apps Overview
 
-* [Adnales](www.adnales.com) - Cap table management leveraging immutable records and instant traceability
+* Figure [Equity Solutions](https://www.figure.com/equity-solutions/) - Cap table management leveraging immutable records and instant traceability
 * Figure [Marketplace](https://www.figure.com/digital-fund-services/) - Bilateral trading of digital assets, including loans, loan participation, and private equity
 * Figure Loan Origination System 
 * [Figure Pay](www.figurepay.com) - Payments using blockchain rails
