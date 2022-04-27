@@ -38,7 +38,7 @@ Asset originators must understand the structure of the scope they are going to o
 To remain flexible the Asset record is quite loosely defined, however, the intention is for loan originators to choose from one of two options:
 
 1. Map their own data model to the [Loan Proto](https://github.com/provenance-io/metadata-asset-model/blob/main/src/main/proto/tech/figure/loan/v1beta1/loan.proto#L29), which includes all of the fields needed to re-underwrite the loan and space to add custom fields in each section, or
-2. Use the [MISMOLoan Proto](https://github.com/provenance-io/metadata-asset-model/blob/dkneisly/mismo-xml-as-loan/src/main/proto/tech/figure/loan/v1beta1/mismo\_loan.proto#L18), which simply requires a Universal Loan Identifier (ULI) and MISMO XML file, while allowing loan originators to extend the model as needed
+2. Use the [MISMOLoan Proto](https://github.com/provenance-io/metadata-asset-model/blob/main/src/main/proto/tech/figure/loan/v1beta1/mismo\_loan.proto#L19) or [MISMOLoanMetadata Proto](https://github.com/provenance-io/metadata-asset-model/blob/main/src/main/proto/tech/figure/loan/v1beta1/mismo\_loan.proto#L30), which simply require a Universal Loan Identifier (ULI) and MISMO XML file (or pointer to that file) while allowing loan originators to extend the model as needed
 
 {% hint style="info" %}
 To help you choose, consider which format your business partners can handle. For example, if you intend to have your loan(s) validated by a third party that can handle version 3.4 of the MISMO Reference Model, then use the MISMOLoan Proto.
