@@ -207,8 +207,8 @@ We have to solve this simple equation to find the reward R for each validator:
 
 If a validator misbehaves, their delegated stake will be partially slashed. There are currently two faults that can result in slashing of funds for a validator and their delegators:
 
-* Double signing: If someone reports on chain A that a validator signed two blocks at the same height on chain A and chain B, and if chain A and chain B share a common ancestor, then this validator will get slashed by 5% on chain A.
-* Downtime: If a validator misses more than 95% of the last 10.000 blocks, they will get slashed by 0.01%.
+* Double signing: If someone reports on chain A that a validator signed two blocks at the same height, then this validator's delegation will be slashed by 5% and the validator will be permanently banned from participating in consensus.
+* Downtime: If a validator misses more than 95% of the last 10.000 blocks, their delegations will be slashed by 1%.  The validator may rejoin the active set after a short cooling off period (1 day).
 
 ### Do validators need to self-delegate Hash?
 
