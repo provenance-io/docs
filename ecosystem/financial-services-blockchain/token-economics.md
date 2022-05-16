@@ -34,7 +34,7 @@ Provenance Blockchain has executed a series of blockchain “firsts” and “on
 * [First](https://www.figure.com/blog/figure-unveils-industry-first-marketplace-that-facilitates-buying-and-selling-of-loans-all-on-blockchain/) (and only) to instantly settle mortgage loan sales on a public blockchain.&#x20;
 * [First](https://www.coindesk.com/business/2020/03/11/figure-technologies-securitizes-150m-of-home-equity-loans-on-blockchain/) (and only) to securitize consumer loans on a public blockchain.&#x20;
 * [First](https://www.prnewswire.com/news-releases/figure-and-apollo-execute-mortgage-transactions-using-blockchain-technology-to-transfer-ownership-301504772.html) (and only) to utilize blockchain as a mortgage loan registry on a public blockchain.&#x20;
-* [First](https://www.usdfconsortium.com) (and only) public blockchain US regulated banks participate on.&#x20;
+* [First](https://www.usdfconsortium.com/) (and only) public blockchain US regulated banks participate on.&#x20;
 * [First](https://www.coindesk.com/business/2022/01/19/fdic-backed-banks-send-stablecoins-in-usdf-first/) (and only) to support bank-minted tokenized deposit on a public blockchain.&#x20;
 * [First](https://www.finextra.com/pressarticle/89406/figure-ats-completes-first-blockchain-based-security-transactiond) (and only) to support blockchain security marketplaces on a public blockchain operated under a regulated broker dealer/ATS.&#x20;
 * [First](https://www.figure.com/figurepay/enterprise/) (and only) core banking system built on a public blockchain.&#x20;
@@ -158,13 +158,13 @@ When a validator node is slashed for one of the above penalties it is immediatel
 
 ## Fee calculation example
 
-To better illustrate how validator rewards work, let us assume there are 10 validators in the Active Set and all have an equal stake. Each of the validators applies a 10% commission rate and has 20% of self-delegated Hash. Assume there is a successful block added to the chain and a total of 1025.51020408 Hash was collected in fees.
+To better illustrate how validator rewards work, let us assume there are 10 validators in the Active Set and all have an equal stake. Each of the validators applies a 10% commission rate and has 20% of self-delegated Hash. Assume there is a successful block added to the chain and a total of 1080.6 Hash was collected in fees.
 
 For example, if 7% of the fee goes to the Provenance Blockchain Foundation's community pool (used to fund the foundation's day-to-day operations as well as the grant program) you can calculate the fees this way:
 
-* `7% * 1025.51020408 = 71.7857142856` Hash goes to the community pool.&#x20;
+* `7% * 1080.6 = 75.6` Hash goes to the community pool.&#x20;
 
-note: the current rate can be found in the [Explorer](https://explorer.provenance.io/network/params).
+Note: the current rate can be found in the [Explorer](https://explorer.provenance.io/network/params).
 
 1005 Hash now remain. Assume that the proposer included 100% of the precommitters’ signatures in its block. The proposer thus obtains the full bonus of 5%. The reward R for each validator in the Active Set is determined by this simple equation:
 
