@@ -53,7 +53,7 @@ The main interface for an application is the command-line interface. Users conne
 
 #### gRPC
 
-Users and applications can submit transactions using [gRPC](https://grpc.io) requests to a [gRPC server](https://docs.cosmos.network/master/core/grpc\_rest.html#grpc-server). The `provenanced` daemon process is bundled with gRPC endpoints by default. The endpoints are defined as [Protocol Buffers ](https://developers.google.com/protocol-buffers)service methods inside `.proto` files, written in Protobuf's own language-agnostic interface definition language (IDL). The Protobuf ecosystem developed tools for code-generation from `*.proto` files into various languages. These tools allow to build gRPC clients easily.
+Users and applications can submit transactions using [gRPC](https://grpc.io/) requests to a [gRPC server](https://docs.cosmos.network/master/core/grpc\_rest.html#grpc-server). The `provenanced` daemon process is bundled with gRPC endpoints by default. The endpoints are defined as [Protocol Buffers ](https://developers.google.com/protocol-buffers)service methods inside `.proto` files, written in Protobuf's own language-agnostic interface definition language (IDL). The Protobuf ecosystem developed tools for code-generation from `*.proto` files into various languages. These tools allow to build gRPC clients easily.
 
 [gRPCurl](https://github.com/fullstorydev/grpcurl) is an excellent command-line tool that can be used to interact with blockchain gRPC endpoints.
 

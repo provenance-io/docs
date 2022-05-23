@@ -10,7 +10,7 @@ The Provenance Blockchain network relies on public key infrastructure on both th
 
 The p8e CEE API takes advantage of the Provenance Key Access Library, which provides a layer of abstraction between the API and Key Management System (KMS). Rather than sending keys in an API request, consumers of the API will send a token authorizing them to pull the key from the KMS, and an identifier for the particular key they wish to use.
 
-There are many different KMS solutions on the market today, each providing their own methods for authentication and authorization. It is up to the entity hosting the API to decide which KMS to use and how best to authenticate users. By default, the library is configured to use [Hashicorp Vault](https://www.vaultproject.io) as a KMS. This guide will describe the default implementation, which is designed to be used locally during testing, as well as a solution for accessing keys in a test or production environment. To view the full source, please visit the Key Access Library [here](https://github.com/provenance-io/originator-key-access-lib).
+There are many different KMS solutions on the market today, each providing their own methods for authentication and authorization. It is up to the entity hosting the API to decide which KMS to use and how best to authenticate users. By default, the library is configured to use [Hashicorp Vault](https://www.vaultproject.io/) as a KMS. This guide will describe the default implementation, which is designed to be used locally during testing, as well as a solution for accessing keys in a test or production environment. To view the full source, please visit the Key Access Library [here](https://github.com/provenance-io/originator-key-access-lib).
 
 ## Storing Keys in Vault
 

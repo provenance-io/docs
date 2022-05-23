@@ -84,9 +84,9 @@ Once it's up and running, you should be able to access the UI from [http://local
 
 Additional prerequisites:
 
-* [Gradle](https://gradle.org)
+* [Gradle](https://gradle.org/)
 * [Java](https://www.java.com/en/)
-* [Kotlin](https://kotlinlang.org)
+* [Kotlin](https://kotlinlang.org/)
 
 1. Clone the repo: [https://github.com/provenance-io/explorer-service](https://github.com/provenance-io/explorer-service)
 2. From within your favorite IDE (or CLI, you brute), you'll need to get everything to build. This project uses Gradle as the build tool. Run the following series of commands from the root directory to get everything built:

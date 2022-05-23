@@ -19,7 +19,7 @@ For sake of brevity, this guide will not describe how to deploy and configure a 
 This guide will touch on the differences between connecting to a local network for development, the Provenance Blockchain public [testnet](https://github.com/provenance-io/testnet), and the public production Provenance Blockchain [mainnet](https://github.com/provenance-io/mainnet).
 
 {% hint style="info" %}
-Figure Tech can provide Provenance Blockchain Nodes as a service for organizations that want to deploy, manage, and monitor their own nodes. Check out the [Figure Tech](https://www.figure.tech) website for more information.
+Figure Tech can provide Provenance Blockchain Nodes as a service for organizations that want to deploy, manage, and monitor their own nodes. Check out the [Figure Tech](https://www.figure.tech/) website for more information.
 {% endhint %}
 
 The core concepts listed above apply no matter what type of asset you want to record and manage. That said, as we step through the guide we will follow a very real example of how Figure Technologies is leveraging the Provenance Blockchain network to build products for the lending ecosystem.

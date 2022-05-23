@@ -108,7 +108,11 @@
       * [Error Handling](integrating/integrating-with-p8e/loan-onboarding-service/api-usage-guide/error-handling.md)
     * [API Specification](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/README.md)
       * [Configuration Endpoints](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/configuration-endpoints.md)
-      * [Object Store Endpoints](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/object-store-endpoints.md)
+      * [Object Store Endpoints](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/object-store-endpoints/README.md)
+        * [Store Object](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/object-store-endpoints/store-object.md)
+        * [Retrieve Object](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/object-store-endpoints/retrieve-object.md)
+        * [Store File](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/object-store-endpoints/store-file.md)
+        * [Retrieve File](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/object-store-endpoints/retrieve-file.md)
       * [p8e Endpoints](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/p8e-endpoints.md)
 
 ## Apps Built on Provenance Blockchain <a href="#provenance-applications" id="provenance-applications"></a>
