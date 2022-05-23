@@ -18,11 +18,12 @@ Some situations arise where you want the data written to one p8e Object Store to
 }
 ```
 
-| Field                    | Description                                                                                                   | Data Type |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------- | --------- |
-| sourceObjectStoreAddress | The URL to the encrypted object store to that object will be replicated from.                                 | String    |
-| targetObjectStoreAddress | The URL to the encrypted object store to that object will be replicated to.                                   | String    |
-| targetPublicKey          | The public key that the source encrypted object store will use to write to the target encrypted object store. | String    |
+| Field                     | Description                                                                                                   | Data Type |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------- | --------- |
+| sourceObjectStoreAddress  | The URL to the encrypted object store to that object will be replicated from.                                 | String    |
+| targetObjectStoreAddress  | The URL to the encrypted object store to that object will be replicated to.                                   | String    |
+| targetSigningPublicKey    | The signing public key of the affiliate to register                                                           | String    |
+| targetEncryptionPublicKey | The public key that the source encrypted object store will use to write to the target encrypted object store. |           |
 
 **Response:**
 
