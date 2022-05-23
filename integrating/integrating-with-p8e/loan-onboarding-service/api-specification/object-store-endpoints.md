@@ -12,20 +12,14 @@ Used to encrypt and store objects in the object store. See [Encrypted Object Sto
 
 ```
 {
-  "assetId": <uuid of asset>
+  "type": <type of asset>
   "message": <Base 64 encoded byte array of file>
   "objectStoreAddress": "grpc://object-store-v2.p8e:80",
   "permissions": {
     "audiences": [],
     "permissionDart": true,
     "permissionPortfolioManager": true,
-  },
-  "account": {
-    "originatorUuid": <uuid>,
-    "keyRingIndex": "0",
-    "keyIndex": "0",
-    "isTestNet": true,
-  },
+  }
 }
 ```
 
@@ -140,8 +134,30 @@ Used to retrieve files in the object store. See Encrypted Object Store for addit
 
 **Request Params:**
 
-|   |   |   |
-| - | - | - |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+```
+https://{host}/api/v1/eos/file?objectStoreAddress=grpc://object-store-v2.p8e:80&hash=<stored hash to retrieve>,
+```
+
+| Field              | Description                                          | Data Type |
+| ------------------ | ---------------------------------------------------- | --------- |
+| hash               | The hash of the saved object in EOS                  | String    |
+| objectStoreAddress | The URL to the encrypted object store to run against | String    |
+
+**response:**
+
+```
+// Example Asset
+{
+    "id" : {
+        "value" : <Object UUID>
+    },
+    "type" : "FILE",
+    "description" : <description of the asset>,
+    "kv" : {
+        "bytes" : {
+            "typeUrl" : "type.googleapis.com/google.protobuf.BytesValue",
+            "value" : <file data>
+        }
+    }
+}
+```

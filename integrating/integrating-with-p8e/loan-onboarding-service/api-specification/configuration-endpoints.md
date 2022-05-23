@@ -14,7 +14,8 @@ Some situations arise where you want the data written to one p8e Object Store to
 {
     "sourceObjectStoreAddress": "grpc://object-store-v2.p8e:80",
     "targetObjectStoreAddress": "grpc://object-store-2-v2.p8e:80",
-    "targetPublicKey":"<target system public key>"
+    "targetSigningPublicKey": "<target signing public key>"
+    "targetEncryptionPublicKey": "<target encryption public key>"
 }
 ```
 

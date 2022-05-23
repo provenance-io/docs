@@ -1,117 +1,5 @@
 # p8e Endpoints
 
-## Create Contract Specification
-
-Used to write p8e contract specifications to the Object Store and Provenance. See [Specifications](https://docs.provenance.io/p8e/p8e-usage/specifications) for additional information.
-
-**URL**: `https://{host}/api/v1/p8e/specifications`
-
-**Method**: POST
-
-**Request Body**:
-
-```
-{
-    "chainId": "pio-testnet-1",
-    "nodeEndpoint": "https://rpc.test.provenance.io:443",
-    "account": {
-        "originatorUuid": <uuid>,
-        "keyRingIndex": "0",
-        "keyIndex": "0",
-        "isTestNet": true,
-    },
-    "scopeId": "4e554cb8-56dd-48df-b3fe-71f4c5b7d2cf",
-    "scopeSpecId": "551b5eca-921d-4ba7-aded-3966b224f44b",
-    "contractSpecId": "f97ecc5d-c580-478d-be02-6c1b0c32235f"
-}
-```
-
-| Field                  | Description                                                                                                                                          | Data Type |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| chainId                | The blockchain identifier                                                                                                                            | String    |
-| nodeEndpoint           | The url to the provenance node to run against                                                                                                        | String    |
-| account/originatorUuid | The originator uuid that is stored in the associated key management system                                                                           | String    |
-| account/keyRingIndex   | The key ring index. Used to identify the provenance account.                                                                                         | String    |
-| account/keyIndex       | The key index. Used to identify the provenance account.                                                                                              | String    |
-| scopeId                | The scope id that defines the set of records                                                                                                         | String    |
-| scopeSpecId            | The scope specification id. indicates a set of allowed Contract Specifications that are allowed to be used against a given scope to perform updates. | String    |
-| contractSpecId         | The contract specification id. denote the Contracts/Processes that will be used to manage the data within a scope.                                   | String    |
-| account/isTestNet      | If true, testnet shall be used, otherwise mainnet                                                                                                    | Bool      |
-
-**Response**
-
-```
-// Coming soon!
-```
-
-## Create Scope Transaction and Onboard to Provenance
-
-Used to create scope transaction and onboard assets to Provenance.
-
-**URL**: `https://{host}/api/v1/p8e/onboard`
-
-**Method**: POST
-
-**Request Body**:
-
-```
-{
-    "chainId": "pio-testnet-1",
-    "nodeEndpoint": "grpc://192.168.1.242:9090",
-    "txRequest": {
-        "account": {
-            "originatorUuid": <uuid>,
-            "keyRingIndex": "0",
-            "keyIndex": "0",
-            "isTestNet": true,
-        },
-        "permissions": {
-            "audiences": [],
-            "permissionDart": false,
-            "permissionPortfolioManager": false
-        },
-        "contractSpecId": "f97ecc5d-c580-478d-be02-6c1b0c32235f",
-        "scopeSpecId": "551b5eca-921d-4ba7-aded-3966b224f44b",
-        "scopeId": <scope uuid>,
-        "contractInput": <sting of contract input>
-    },
-}
-```
-
-| Field                                            | Description                                                                                                                                          | Data Type                     |
-| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| chainId                                          | The blockchain identifier                                                                                                                            | String                        |
-| nodeEndpoint                                     | The url to the provenance node to run against                                                                                                        | String                        |
-| txRequest/account/originatorUuid                 | The originator uuid that is stored in the associated key management system                                                                           | String                        |
-| txRequest/account/keyRingIndex                   | The key ring index. Used to identify the provenance account.                                                                                         | String                        |
-| txRequest/account/keyIndex                       | The key index. Used to identify the provenance account.                                                                                              | String                        |
-| txRequest/permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS                                                        | List\<Base64EncodedPublicKey> |
-| txRequest/permissions/permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                                                                      | Bool                          |
-| txRequest/permissions/permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.                                                         | Bool                          |
-| txRequest/contractSpecId                         | The contract specification id. denote the Contracts/Processes that will be used to manage the data within a scope.                                   | String                        |
-| txRequest/scopeSpecId                            | The scope specification id. indicates a set of allowed Contract Specifications that are allowed to be used against a given scope to perform updates. | String                        |
-| txRequest/scopeId                                | The scope id that defines the set of records                                                                                                         | String                        |
-| txRequest/contractInput                          | The input to the contract                                                                                                                            | String                        |
-| account/isTestNet                                | If true, testnet shall be used, otherwise mainnet                                                                                                    | Bool                          |
-
-**Response**
-
-```
-{
-    "hash": <result of the contract execution provided as a hash>,
-    "gasWanted": <nhash value>,
-    "gasUsed": <nhash value>,
-    "height": <block height>
-}
-```
-
-| Field     | Description                                                       | Data Type |
-| --------- | ----------------------------------------------------------------- | --------- |
-| hash      | The returned hash of the record stored on the Provenance ledger   | String    |
-| gasWanted | The gas estimated and supplied for contract execution             | String    |
-| gasUsed   | The gas used during contract execution                            | String    |
-| height    | The block height when the transaction was committed to the ledger | String    |
-
 ## Generate Scope Transaction
 
 Used to generate a Provenance Blockchain scope transaction message without submitting it.
@@ -125,10 +13,9 @@ Used to generate a Provenance Blockchain scope transaction message without submi
 ```
 {
    "account": {
-     "originatorUuid": <uuid>,
      "keyRingIndex": "0",
      "keyIndex": "0",
-     "isTestNet": true,
+     "partyType": "OWNER",
    },
    "permissions": {
      "audiences": [],
@@ -144,7 +31,6 @@ Used to generate a Provenance Blockchain scope transaction message without submi
 
 | Field                                  | Description                                                                                                                                          | Data Type                     |
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| account/originatorUuid                 | The originator uuid that is stored in the associated key management system                                                                           | String                        |
 | account/keyRingIndex                   | The key ring index. Used to identify the provenance account.                                                                                         | String                        |
 | account/keyIndex                       | The key index. Used to identify the provenance account.                                                                                              | String                        |
 | permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS                                                        | List\<Base64EncodedPublicKey> |
@@ -276,23 +162,21 @@ Used to send a transaction proposal message to be executed by the Provenance Blo
    "nodeEndpoint": "grpc://192.168.1.242:9090",
    "tx": <tx body>,
    "account": {
-      "originatorUuid": <uuid>,
       "keyRingIndex": "0",
       "keyIndex": "0",
-      "isTestNet": true,
+      "partyType": "OWNER",
     },
 }
 ```
 
-| Field                  | Description                                                                | Data Type |
-| ---------------------- | -------------------------------------------------------------------------- | --------- |
-| chainId                | The blockchain identifier                                                  | String    |
-| nodeEndpoint           | The url to the provenance node to run against                              | String    |
-| tx                     | The tx body that should be broadcast to provenance                         | String    |
-| account/originatorUuid | The originator uuid that is stored in the associated key management system | String    |
-| account/keyRingIndex   | The key ring index. Used to identify the provenance account.               | String    |
-| account/keyIndex       | The key index. Used to identify the provenance account.                    | String    |
-| account/isTestNet      | If true, testnet shall be used, otherwise mainnet                          | Bool      |
+| Field                | Description                                                  | Data Type |
+| -------------------- | ------------------------------------------------------------ | --------- |
+| chainId              | The blockchain identifier                                    | String    |
+| nodeEndpoint         | The url to the provenance node to run against                | String    |
+| tx                   | The tx body that should be broadcast to provenance           | String    |
+| account/keyRingIndex | The key ring index. Used to identify the provenance account. | String    |
+| account/keyIndex     | The key index. Used to identify the provenance account.      | String    |
+| account/isTestNet    | If true, testnet shall be used, otherwise mainnet            | Bool      |
 
 **Response**
 
