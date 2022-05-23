@@ -61,14 +61,14 @@ Supply one `apikey` header when running in test or production environments..
 }
 ```
 
-| Field                                  | Description                                                                                                                     | Data Type                     |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| objectStoreAddress                     | The URL to the encrypted object store to run against                                                                            | String                        |
-| permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS                                   | List\<Base64EncodedPublicKey> |
-| permissions/permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                                                 | Bool                          |
-| permissions/permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.                                    | Bool                          |
-| message                                | The asset that is stored against the EOS. This can be any Google Protocol Buffer that matches the type provided in this request | JSON                          |
-| type                                   | The type url matching the protobuf message provided                                                                             | String                        |
+| Field                                  | Description                                                                                                                                    | Data Type                     |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| objectStoreAddress                     | The URL to the encrypted object store to run against                                                                                           | String                        |
+| permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS                                                  | List\<Base64EncodedPublicKey> |
+| permissions/permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                                                                | Bool                          |
+| permissions/permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.                                                   | Bool                          |
+| message                                | The asset that is stored against the EOS. This can be any JSON formatted Google Protocol Buffer that matches the type provided in this request | JSON                          |
+| type                                   | The fully qualified type url matching the protobuf object provided                                                                             | String                        |
 
 **Response Status Codes**:
 
