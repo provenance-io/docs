@@ -16,28 +16,37 @@ Recall that in the [Loan Package data model](https://docs.provenance.io/integrat
 
 Technically speaking, those documents could be stored anywhere, however, the Encrypted Object Store is a great way to store documents such that they can be shared with business partners and downstream applications. Both DART and Portfolio Manager are built to look for documents in the Encrypted Object Store. Storing documents as encrypted objects in the Objects Store allows for automated replication and less integration work between business partners.
 
-Therefore, step one of the loan onboarding process is to start inserting documents into the EOS as they become available. The [Store File](../api-specification/object-store-endpoints/store-file.md) endpoint handles encrypting and storing individual files in the object store without memorializing them as scopes on Provenance. The curl command below provides an example.
+Therefore, step one of the loan onboarding process is to start inserting documents into the EOS as they become available. The [Create Object](https://docs.provenance.io/integrating/asset-originators-guide/loan-onboarding-service/api-specification#create-object-in-object-store) endpoint handles creating individual objects in the object store without memorializing them as scopes on Provenance. The curl command below provides an example.
 
 ```
 curl --location \
---request POST '<host>/api/v1/eos/file' \
---header 'apikey: <api_key>' \
---form 'objectStoreAddress="<object_store_address"' \
---form 'id="foo"' \
---form 'file=@"<path_to_file>"' \
---form 'permissions="{\"permissionDart\":true,\"permissionPortfolioManager\":true}"'
+--request POST '${HOST}/api/v1/eos' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "account": {
+        "originatorUuid": "<Originator's Provenance Member ID>"
+    },
+    "assetId": "74a764ba-3eeb-4271-8337-48a2d8434e1d", // Unique document UUID
+    "objectStoreAddress": "grpc://object-store-v2.p8e:80",
+    "asset": "aGVsbG8gd29ybGQ=", // Base64 encoded object/file,
+    "permissions": {
+        "permissionDart": true,
+        "permissionPortfolioManager": true,
+        "audiences": [], // here is where you would list additional public keys belonging to business partners, allowing them to decrypt this object with their associated private keys
+    },
+    "isTestNet": true
+}'
 ```
 
 {% hint style="info" %}
-If you are working with Figure Tech to integrate, they can provide an appropriate Host, API Key, and Object Store Address.
+If you are working with Figure Tech to integrate, they can provide your Provenance Member ID and appropriate Object Store Address.
 {% endhint %}
 
-It's important to consider whether or not to permission certain other participants at this stage. Figure Tech recommends permissioning the following:
+The "asset" in this case would be the loan document represented as a base 64 encoded byte array. It's important to consider whether or not to permission certain other participants at this stage. Figure Tech recommends permissioning the following:
 
 * **Portfolio Manager -** Permission if you intend on accessing, pledging, or selling this loan on Portfolio Manager.&#x20;
 * **DART** - Permission if you intend on registering this loan and the associated eNote with DART, which will automatically track life of loan updates.
 * **3rd Party Validators** - Permission to 3rd party validators if you intend on requesting validation services for this loan.
-* **3rd Party Servicers** - Permission to 3rd party servicers if you intend on allowing a Provenance Blockchain-enabled servicer to read loan data and post loan states for this loan.
 
 {% hint style="info" %}
 It is important for integrators to keep track of the metadata returned by the Object Store when it creates a document. They will need to generate a list of documents when it comes time to create the loan scope in the next step.

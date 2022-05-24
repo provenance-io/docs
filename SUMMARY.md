@@ -114,6 +114,8 @@
         * [Store File](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/object-store-endpoints/store-file.md)
         * [Retrieve File](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/object-store-endpoints/retrieve-file.md)
       * [p8e Endpoints](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/p8e-endpoints.md)
+      * [Contract Execution Endpoints](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/contract-execution-endpoints/README.md)
+        * [Execute Contract](integrating/integrating-with-p8e/loan-onboarding-service/api-specification/contract-execution-endpoints/execute-contract.md)
 
 ## Apps Built on Provenance Blockchain <a href="#provenance-applications" id="provenance-applications"></a>
 
