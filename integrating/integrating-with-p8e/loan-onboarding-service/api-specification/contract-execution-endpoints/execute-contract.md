@@ -72,7 +72,8 @@ Supply one `apikey` header when running in test or production environments..
         },
         "provenanceConfig": {
             "chainId": "",
-            "nodeEndpoint": ""
+            "nodeEndpoint": "",
+            "gasAdjustment": 1.5
         }
     },
     "participants": [
@@ -104,6 +105,7 @@ Supply one `apikey` header when running in test or production environments..
 | contract/parseConfig/desriptors        | List of fully qualified Protocol Buffer message names used as Any types in the inputs to contracts.                                        | List\<String>                 |
 | provenanceConfig/chainId               | Unique identifier (name) of the Provenance Blockchain network.                                                                             | String                        |
 | provenanceConfig/nodeEndpoint          | URL to the Provenance Blockchain node where the transaction will be submitted.                                                             | String                        |
+| provenanceConfig/gasAdjustment         | Multiplier applied to estimated gas prior to submitting the transaction.                                                                   | Double                        |
 | participants/uuid                      | Provenance Member ID for any additional contract participants.                                                                             | String (UUID)                 |
 | participants/partyType                 | Party type of the additional provenance member participating in the contract execution.                                                    | String                        |
 | permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS.                                             | List\<Base64EncodedPublicKey> |
