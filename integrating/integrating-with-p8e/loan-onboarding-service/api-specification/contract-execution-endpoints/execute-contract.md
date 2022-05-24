@@ -93,25 +93,23 @@ Supply one `apikey` header when running in test or production environments..
 }
 ```
 
-| Field                                  | Description                                                                                                                                | Data Type                     |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
-| account/partyType                      | Party type of the provenance member invoking the contract. This type should be associated with the UUID (or API Key) passed in the header. | String                        |
-| client/objectStoreUrl                  | URL to the encrypted object store to run against.                                                                                          | String                        |
-| contract/contractName                  | Fully qualified name of the p8e contract you wish to invoke.                                                                               | String                        |
-| contract/scopeUuid                     | Unique identifier for the scope being created/updated by the p8e contract.                                                                 | String (UUID)                 |
-| contract/scopeSpecificationName        | Fully qualified name of the scope specification.                                                                                           | String                        |
-| contract/parserConfig                  | Optional configuration for parsing Any types used as inputs to contracts.                                                                  | Object                        |
-| contract/parseConfig/name              | Fully qualified name of the parser                                                                                                         | String                        |
-| contract/parseConfig/desriptors        | List of fully qualified Protocol Buffer message names used as Any types in the inputs to contracts.                                        | List\<String>                 |
-| provenanceConfig/chainId               | Unique identifier (name) of the Provenance Blockchain network.                                                                             | String                        |
-| provenanceConfig/nodeEndpoint          | URL to the Provenance Blockchain node where the transaction will be submitted.                                                             | String                        |
-| provenanceConfig/gasAdjustment         | Multiplier applied to estimated gas prior to submitting the transaction.                                                                   | Double                        |
-| participants/uuid                      | Provenance Member ID for any additional contract participants.                                                                             | String (UUID)                 |
-| participants/partyType                 | Party type of the additional provenance member participating in the contract execution.                                                    | String                        |
-| permissions/audiences                  | Additional audiences that should be allowed permission to query against the saved data in EOS.                                             | List\<Base64EncodedPublicKey> |
-| permissions/permissionDart             | If the dart product should be allowed permission against the saved data in EOS.                                                            | Bool                          |
-| permissions/permissionPortfolioManager | If the portfolio manager product should be allowed permission against the saved data in EOS.                                               | Bool                          |
-| records                                | Object containing the inputs to the p8e contract as key-value pairs                                                                        | JSON                          |
+| Field                           | Description                                                                                                                                            | Data Type     |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| account/partyType               | Party type of the provenance member invoking the contract. This type should be associated with the UUID (or API Key) passed in the header.             | String        |
+| client/objectStoreUrl           | URL to the encrypted object store to run against.                                                                                                      | String        |
+| contract/contractName           | Fully qualified name of the p8e contract you wish to invoke.                                                                                           | String        |
+| contract/scopeUuid              | Unique identifier for the scope being created/updated by the p8e contract.                                                                             | String (UUID) |
+| contract/scopeSpecificationName | Fully qualified name of the scope specification.                                                                                                       | String        |
+| contract/parserConfig           | Optional configuration for parsing Any types used as inputs to contracts.                                                                              | Object        |
+| contract/parseConfig/name       | Fully qualified name of the parser                                                                                                                     | String        |
+| contract/parseConfig/desriptors | List of fully qualified Protocol Buffer message names used as Any types in the inputs to contracts.                                                    | List\<String> |
+| provenanceConfig/chainId        | Unique identifier (name) of the Provenance Blockchain network.                                                                                         | String        |
+| provenanceConfig/nodeEndpoint   | URL to the Provenance Blockchain node where the transaction will be submitted.                                                                         | String        |
+| provenanceConfig/gasAdjustment  | Multiplier applied to estimated gas prior to submitting the transaction.                                                                               | Double        |
+| participants/uuid               | Provenance Member ID for any additional contract participants.                                                                                         | String (UUID) |
+| participants/partyType          | Party type of the additional provenance member participating in the contract execution.                                                                | String        |
+| permissions                     | Object containing PermissionInfo. (See [Permissioning Others](../../../p8e-contract-execution-environment-p8e/key-management/permissioning-others.md)) | JSON          |
+| records                         | Object containing the inputs to the p8e contract as key-value pairs                                                                                    | JSON          |
 
 **Response Status Codes**:
 
