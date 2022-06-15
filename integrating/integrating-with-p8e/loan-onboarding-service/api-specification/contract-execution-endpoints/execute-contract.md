@@ -180,9 +180,6 @@ curl --location \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "config": {
-        "account": {
-            "partyType": "OWNER"
-        },
         "client": {
             "objectStoreUrl": "grpc://localhost:5001"
         },
@@ -191,7 +188,7 @@ curl --location \
             "scopeUuid": "91888240-669f-460c-917d-448302e93f2b",
             "scopeSpecificationName": "io.provenance.scope.loan.LoanScopeSpecification",
             "parserConfig": {
-                "name": "io.provenance.onboarding.frameworks.cee.parsers.JsonMessageParser",
+                "name": "io.provenance.api.frameworks.cee.parsers.JsonMessageParser",
                 "descriptors": [
                     "tech.figure.loan.v1beta1.MISMOLoanMetadata"
                 ]
@@ -203,7 +200,6 @@ curl --location \
         }
     },
     "permissions": {
-        "audiences": [],
         "permissionDart": true,
         "permissionPortfolioManager": true
     },
