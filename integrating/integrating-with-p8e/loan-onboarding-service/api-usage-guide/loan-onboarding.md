@@ -170,7 +170,7 @@ curl --location --request POST 'localhost:8080/p8e-cee-api/external/api/v1/cee/e
             "scopeUuid": "<UUID of Loan or ULI converted to UUID>",
             "scopeSpecificationName": "io.provenance.scope.loan.LoanScopeSpecification",
             "parserConfig": {
-                "name": "io.provenance.onboarding.frameworks.cee.parsers.JsonMessageParser",
+                "name": "io.provenance.api.frameworks.cee.parsers.JsonMessageParser",
                 "descriptors": [
                     "tech.figure.loan.v1beta1.MISMOLoanMetadata"
                 ]
