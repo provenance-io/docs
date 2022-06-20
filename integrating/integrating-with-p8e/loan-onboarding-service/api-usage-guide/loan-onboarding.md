@@ -159,6 +159,10 @@ curl --location --request POST 'localhost:8080/p8e-cee-api/external/api/v1/cee/e
 --header 'Content-Type: application/json' \
 --data-raw '{
     "config": {
+       "scope": {
+            "scopeUuid": "",
+            "sessionUuid": ""
+        },
         "account": {
             "partyType": "OWNER"
         },
@@ -167,7 +171,6 @@ curl --location --request POST 'localhost:8080/p8e-cee-api/external/api/v1/cee/e
         },
         "contract": {
             "contractName": "io.provenance.scope.loan.contracts.RecordLoanContract",
-            "scopeUuid": "<UUID of Loan or ULI converted to UUID>",
             "scopeSpecificationName": "io.provenance.scope.loan.LoanScopeSpecification",
             "parserConfig": {
                 "name": "io.provenance.api.frameworks.cee.parsers.JsonMessageParser",
