@@ -52,6 +52,10 @@ Supply one `apikey` header when running in test or production environments..
 
 ```
 {
+    "scope": {
+        "scopeUuid": "",
+        "sessionUuid": ""
+    },
     "config": {
         "account": {
             "partyType": ""
@@ -61,7 +65,6 @@ Supply one `apikey` header when running in test or production environments..
         },
         "contract": {
             "contractName": "",
-            "scopeUuid": "",
             "scopeSpecificationName": "",
             "parserConfig": {
                 "name": "",
@@ -98,7 +101,7 @@ Supply one `apikey` header when running in test or production environments..
 | account/partyType               | Party type of the provenance member invoking the contract. This type should be associated with the UUID (or API Key) passed in the header.             | String        |
 | client/objectStoreUrl           | URL to the encrypted object store to run against.                                                                                                      | String        |
 | contract/contractName           | Fully qualified name of the p8e contract you wish to invoke.                                                                                           | String        |
-| contract/scopeUuid              | Unique identifier for the scope being created/updated by the p8e contract.                                                                             | String (UUID) |
+| scope/scopeUuid                 | Unique identifier for the scope being created/updated by the p8e contract.                                                                             | String (UUID) |
 | contract/scopeSpecificationName | Fully qualified name of the scope specification.                                                                                                       | String        |
 | contract/parserConfig           | Optional configuration for parsing Any types used as inputs to contracts.                                                                              | Object        |
 | contract/parseConfig/name       | Fully qualified name of the parser                                                                                                                     | String        |
@@ -110,6 +113,7 @@ Supply one `apikey` header when running in test or production environments..
 | participants/partyType          | Party type of the additional provenance member participating in the contract execution.                                                                | String        |
 | permissions                     | Object containing PermissionInfo. (See [Permissioning Others](../../../p8e-contract-execution-environment-p8e/key-management/permissioning-others.md)) | JSON          |
 | records                         | Object containing the inputs to the p8e contract as key-value pairs                                                                                    | JSON          |
+| scope/sessionUuid               | The session uuid. Optional.                                                                                                                            | String (UUID) |
 
 **Response Status Codes**:
 
