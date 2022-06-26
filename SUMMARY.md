@@ -35,7 +35,7 @@
 * [Installing Provenanced](blockchain/running-a-node/README.md)
   * [Running a Node](blockchain/running-a-node/running-a-node-1/README.md)
     * [Joining Testnet](blockchain/running-a-node/running-a-node-1/join-provenance-testnet.md)
-      * [Running a mainnet node](blockchain/running-a-node/running-a-node-1/join-provenance-testnet/running-a-mainnet-node.md)
+      * [Running a mainnet node from quicksync](blockchain/running-a-node/running-a-node-1/join-provenance-testnet/running-a-mainnet-node.md)
     * [Become a Validator](blockchain/running-a-node/running-a-node-1/become-a-validator.md)
     * [Configure a Sentry](blockchain/running-a-node/running-a-node-1/configure-a-sentry.md)
 * [Using Provenanced](blockchain/using-provenance/README.md)
