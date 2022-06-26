@@ -2,7 +2,7 @@
 description: running a mainnet node for pio-mainnet-1
 ---
 
-# Running a mainnet node from quicksync
+# Running a mainnet node
 
 The steps for running mainnet are exactly the same as testnet except that the github repo is here [https://github.com/provenance-io/mainnet](https://github.com/provenance-io/mainnet) and the chain id is `pio-mainnet-1`
 
