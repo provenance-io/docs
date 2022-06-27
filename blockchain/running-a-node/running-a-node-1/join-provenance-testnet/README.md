@@ -51,7 +51,7 @@ Once the node has synced it is joined to the Provenance Blockchain testnet. Note
 
 Unlike the Quick Start instructions, this section describes setting up a new full node from scratch with [Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html) and better configuration options. This section effectively configures and starts a Provenance Blockchain full node.
 
-Before starting this section, be sure the prerequisites have been installed as described in [Installing Provenance Blockchain](../#prerequisites).
+Before starting this section, be sure the prerequisites have been installed as described in [Installing Provenance Blockchain](../../#prerequisites).
 
 {% hint style="info" %}
 See the [testnet repo](https://github.com/provenance-io/testnet) for the latest genesis/config files and version information. The node started in this section is chain id `pio-testnet-1` Provenance Blockchain release 0.2.0 ([https://github.com/provenance-io/provenance/releases/tag/v0.2.0](https://github.com/provenance-io/provenance/releases/tag/v0.2.0))
@@ -120,9 +120,9 @@ mv genesis.json $PIO_HOME/config
 
 ### Manually Configure config.toml Settings
 
-> Provenance Blockchain provides a base `config.toml` file that can be used instead of following these steps in this section. [Refer to the "Using Provenance Blockchain testnet config.toml" section for more information.](join-provenance-testnet.md#using-provenance-testnet-config-toml)
+> Provenance Blockchain provides a base `config.toml` file that can be used instead of following these steps in this section. [Refer to the "Using Provenance Blockchain testnet config.toml" section for more information.](./#using-provenance-testnet-config-toml)
 
-The `$PIO_HOME/config/config.toml` contains important node settings including [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend. This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node. The [Become a Validator](become-a-validator.md) section will describe [validator node](../../../ecosystem/community/validator.md)-specific settings.
+The `$PIO_HOME/config/config.toml` contains important node settings including [seed node](https://docs.tendermint.com/master/spec/p2p/node.html#seeds) locations, moniker, and database backend. This section describes the updates to the `$PIO_HOME/config/config.toml` file needed to start a new node. The [Become a Validator](../become-a-validator.md) section will describe [validator node](../../../../ecosystem/community/validator.md)-specific settings.
 
 #### Configure Seed Nodes
 
@@ -137,7 +137,7 @@ seeds = "2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d0
 
 #### Configure Database Backend
 
-As listed in the [prerequisites section](../#prerequisites), `leveldb` is the recommended node backend database.
+As listed in the [prerequisites section](../../#prerequisites), `leveldb` is the recommended node backend database.
 
 Open the `$PIO_HOME/config/config.toml` file and edit the `db_backend` configuration setting to use `leveldb`.
 
@@ -193,7 +193,7 @@ curl https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/
 mv config.toml $PIO_HOME/config
 ```
 
-Edit the `$PIO_HOME/config/config.toml` and update the `moniker` to use the moniker set in the [Initialize Provenance Blockchain Node](join-provenance-testnet.md#initialize-provenance-node) section.
+Edit the `$PIO_HOME/config/config.toml` and update the `moniker` to use the moniker set in the [Initialize Provenance Blockchain Node](./#initialize-provenance-node) section.
 
 ```bash
 # A custom human readable name for this node
