@@ -161,6 +161,7 @@
 ## Whitepapers
 
 - [Loan Participation On Provenance](whitepapers/loan-participation-on-provenance.md)
+- [Securitization On Provenance](whitepapers/securitization-on-provenance.md)
 - [Blockchain Impact On Credit Ratings](whitepapers/blockchain-impact-on-credit-ratings.md)
 - [Investment Fund Services on Provenance](whitepapers/investment-fund-services-on-provenance.md)
 - [Supply Chain Finance on Provenance](whitepapers/supply-chain-finance-on-provenance.md)
