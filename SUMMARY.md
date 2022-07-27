@@ -178,10 +178,6 @@
 * [Client Contract Execution Environment (P8e) FAQ](faq/client-contract-execution-environment-faq.md)
 * [Smart Contract FAQ](faq/smart-contract-faq.md)
 
-## Appendix
-
-* [History](appendix/blockchain-comparison.md)
-
 ## License
 
 * [Apache 2.0](license/untitled.md)
