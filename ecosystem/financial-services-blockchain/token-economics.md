@@ -1,5 +1,5 @@
 ---
-description: Provenance Blockchain: Foundationally transforming financial services
+description: Provenance Blockchain - Foundationally transforming financial services
 ---
 
 # Token Economics
