@@ -2,7 +2,7 @@
 
 ## Does Provenance Blockchain have a token?
 
-Yes, the Provenance Blockchain network has the Hash utility token that is used to pay for transactions \(gas fees\), staking, and grants.
+Yes, the Provenance Blockchain network has the Hash utility token that is used to pay for transactions \(gas fees\), staking, and governance.
 
 ## What is the initial allocation of Hash? <a id="what-is-the-initial-allocation-of-hash"></a>
 
@@ -24,5 +24,4 @@ Hash stakers may govern the Provenance Blockchain Foundation by voting on propos
 
 ## How do I get Hash? <a id="how-do-i-get-hash"></a>
 
-Hash is listed on multiple exchanges where it is publicly traded.
-
+Hash is available to purchase on multiple exchanges.
