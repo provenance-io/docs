@@ -10,6 +10,7 @@ The steps for running testnet are exactly the same as mainnet except that the gi
 
 ````markup
 Step 1:download the latest quickysync via https://test.provenance.io/quicksync.
+Also Also note there is much smaller download available here `https://tools.highstakes.ch/provenance_snapshot` which is [referable to use to get started and also works the same as quicksync download.
 Step 2:Note down the provenance version required for the quicksync file downloaded in step 1.
 Step 3:Download appropriate release from https://github.com/provenance-io/provenance/releases/ noted from step 2.
 Step 4:Untar data directory from the quicksync download and replacing the untarred data directory to $PIO_HOME/data
