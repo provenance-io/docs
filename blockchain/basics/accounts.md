@@ -6,7 +6,7 @@ description: Understanding the Provenance Blockchain accounts system.
 
 ## Overview
 
-On Provenance Blockchain, an [account](https://docs.cosmos.network/v0.41/basics/accounts.html) designates a pair of _public key_ `PubKey` and _private key_ `PrivKey`. The `PubKey` is used to generate an `address` that is used to identify users \(among other parties\) on the blockchain. `Addresses` are also associated with `messages` to identify the sender of the `message`. The `PrivKey` is used to generate [digital signatures](https://docs.cosmos.network/master/basics/query-lifecycle.html#signatures) to prove that an `address`associated with the `PrivKey` approved of a given `message`.
+On Provenance Blockchain, an [account](https://docs.cosmos.network/main/basics/accounts.html) designates a pair of _public key_ `PubKey` and _private key_ `PrivKey`. The `PubKey` is used to generate an `address` that is used to identify users \(among other parties\) on the blockchain. `Addresses` are also associated with `messages` to identify the sender of the `message`. The `PrivKey` is used to generate [digital signatures](https://docs.cosmos.network/main/basics/query-lifecycle.html#signatures) to prove that an `address`associated with the `PrivKey` approved of a given `message`.
 
 ### Addresses <a id="addresses"></a>
 
@@ -32,7 +32,7 @@ _**A key pair and it's corresponding Bec32 address that exist outside of Provena
 To follow along with this section refer to [Installing Provenance Blockchain](../running-a-node/) to install the `provenanced` binary.
 {% endhint %}
 
-For example, using `provenanced` we can generate a local key pair and store it in the default [Keyring](https://docs.cosmos.network/master/basics/accounts.html#keyring):
+For example, using `provenanced` we can generate a local key pair and store it in the default [Keyring](https://docs.cosmos.network/main/basics/accounts.html#keyring):
 
 ```bash
 provenanced --testnet keys add my_test_key  

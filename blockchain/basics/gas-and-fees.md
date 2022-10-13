@@ -20,7 +20,7 @@ Fees are determined by the gas limits and gas prices transactions provide, where
 
 When adding transactions to the [mempool or gossipping transactions](transaction-lifecycle.md), nodes check if the transaction's gas prices, which are determined by the provided fees, meet the node's minimum gas prices.
 
-Thus, on Provenance Blockchain, [`gas` is a special unit that is used to track the consumption of resources ](https://docs.cosmos.network/master/basics/gas-fees.html)during transaction execution to ensure:
+Thus, on Provenance Blockchain, [`gas` is a special unit that is used to track the consumption of resources ](https://docs.cosmos.network/main/basics/gas-fees.html)during transaction execution to ensure:
 
 * Blocks are not consuming too many resources and will be finalized.
 * No spam or abuse from end-users.
