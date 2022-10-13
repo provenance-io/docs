@@ -45,7 +45,7 @@ Once the node has synced it is joined to the Provenance Blockchain testnet.  Not
 
 ## Setting Up a New Node
 
-Unlike the Quick Start instructions, this section describes setting up a new full node from scratch with [Cosmovisor](https://docs.cosmos.network/master/run-node/cosmovisor.html) and better configuration options.  This section effectively configures and starts a Provenance Blockchain full node.
+Unlike the Quick Start instructions, this section describes setting up a new full node from scratch with [Cosmovisor](https://docs.cosmos.network/main/run-node/cosmovisor.html) and better configuration options.  This section effectively configures and starts a Provenance Blockchain full node.
 
 Before starting this section, be sure the prerequisites have been installed as described in [Installing Provenance Blockchain](../#prerequisites).
 
