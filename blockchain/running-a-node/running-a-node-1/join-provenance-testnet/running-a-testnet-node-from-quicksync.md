@@ -10,7 +10,7 @@ The steps for running testnet are exactly the same as mainnet except that the gi
 
 ````markup
 Step 1:download the latest quickysync via https://test.provenance.io/quicksync.
-Also Also note there is much smaller download available here `https://tools.highstakes.ch/provenance_snapshot` which is [referable to use to get started and also works the same as quicksync download.
+Also note there is much smaller download available here `https://tools.highstakes.ch/provenance_snapshot` which is [referable to use to get started and also works the same as quicksync download.
 Step 2:Note down the provenance version required for the quicksync file downloaded in step 1.
 Step 3:Download appropriate release from https://github.com/provenance-io/provenance/releases/ noted from step 2.
 Step 4:Untar data directory from the quicksync download and replacing the untarred data directory to $PIO_HOME/data
@@ -19,7 +19,7 @@ export PIO_HOME=~/.provenanced // or directory of your choosing.
 provenanced init choose-a-moniker --chain-id pio-testnet-1
 curl https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json> genesis.json
 mv genesis.json $PIO_HOME/config
-Step 4:Change config.toml to have the db-backend set to `cleveldb` 
+Step 4:Change config.toml to have the db-backend set to `cleveldb`
 ```# Database backend: goleveldb | cleveldb | boltdb | rocksdb | badgerdb
 # * goleveldb (github.com/syndtr/goleveldb - most popular implementation)
 #   - pure go
