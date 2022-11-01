@@ -24,4 +24,4 @@ Hash stakers may govern the Provenance Blockchain Foundation by voting on propos
 
 ## How do I get Hash? <a id="how-do-i-get-hash"></a>
 
-Hash is available to purchase on multiple exchanges.
+Hash is available to purchase on https://dlob.io/
