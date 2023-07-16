@@ -28,7 +28,7 @@ make install
 provenanced -t init choose-a-moniker --chain-id pio-testnet-1
 curl https://raw.githubusercontent.com/provenance-io/testnet/main/pio-testnet-1/genesis.json > genesis.json
 mv genesis.json $PIO_HOME/config
-provenanced start --testnet --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
+provenanced start --testnet --p2p.seeds c8818d411225372c66cccecc88dcc581ff7f2c03@104.198.181.197:26656,2105e36647e7007bfa7fdea8d45eb3b4d6a69f36@34.75.213.5:26656,08cf5b5fa2b80bf86a6370aec4c4473a0084195b@34.83.1.25:26656 --x-crisis-skip-assert-invariants
 ```
 
 > Note that initially, a Provenance Blockchain node may take about 1-2 hours to start up as it has to sync up with all the old transactions on the blockchain.  During startup, the `provenanced` daemon will output state sync information such as:
@@ -127,13 +127,13 @@ Nodes need to know how to find peers on testnet. This is done by setting seed no
 Open the `$PIO_HOME/config/config.toml` file and edit the `seeds` configuration setting using the [seed nodes from the Provenance Blockchain testnet repo](https://github.com/provenance-io/testnet#pio-testnet-1).
 
 ```bash
-# Comma separated list of seed nodes to connect to 
+# Comma separated list of seed nodes to connect to
 seeds = "2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51"
 ```
 
 #### Configure Database Backend
 
-As listed in the [prerequisites section](../#prerequisites), `leveldb` is the recommended node backend database.  
+As listed in the [prerequisites section](../#prerequisites), `leveldb` is the recommended node backend database.
 
 Open the `$PIO_HOME/config/config.toml` file and edit the `db_backend` configuration setting to use `leveldb`.
 
@@ -215,7 +215,7 @@ go get github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
 #### Build Cosmovisor from Source \(Optional\)
 
 {% hint style="info" %}
-Building `cosmovisor` from source is only necessary if the `go get` installation steps did not work.  
+Building `cosmovisor` from source is only necessary if the `go get` installation steps did not work.
 
 Skip this section if `cosmovisor` has been installed using `go get` in the previous section.
 {% endhint %}
@@ -260,15 +260,15 @@ cp cosmovisor $GOPATH/bin/cosmovisor
 
 `cosmovisor` reads its configuration from environment variables.
 
-* `DAEMON_HOME` is the location where upgrade binaries should be kept.  Use `$PIO_HOME.` 
+* `DAEMON_HOME` is the location where upgrade binaries should be kept.  Use `$PIO_HOME.`
 * `DAEMON_NAME` is the name of the Provenance Blockchain binary, or, `provenanced`.
 * `DAEMON_ALLOW_DOWNLOAD_BINARIES` \(_optional_\) if set to `true` will enable auto-downloading of new binaries.
-* `DAEMON_RESTART_AFTER_UPGRADE` \(_optional_\) if set to `true` will restart the sub-process with the same command line arguments and flags \(but new binary\) after a successful upgrade. 
+* `DAEMON_RESTART_AFTER_UPGRADE` \(_optional_\) if set to `true` will restart the sub-process with the same command line arguments and flags \(but new binary\) after a successful upgrade.
 
 ```bash
 export DAEMON_NAME="provenanced"
 export DAEMON_HOME="${PIO_HOME}"
-export DAEMON_ALLOW_DOWNLOAD_BINARIES="true" 
+export DAEMON_ALLOW_DOWNLOAD_BINARIES="true"
 export DAEMON_RESTART_AFTER_UPGRADE="true"
 ```
 
@@ -285,7 +285,7 @@ ln -sf $PIO_HOME/cosmovisor/genesis/bin $PIO_HOME/cosmovisor/genesis/current
 To create a symlink to the `provenanced` daemon in the `cosmovisor` genesis directory, use the following.
 
 ```bash
-cp $(which provenanced) $PIO_HOME/cosmovisor/genesis/bin 
+cp $(which provenanced) $PIO_HOME/cosmovisor/genesis/bin
 ln -sf $PIO_HOME/cosmovisor/genesis/bin/provenanced $(which provenanced)
 ```
 
@@ -294,7 +294,7 @@ ln -sf $PIO_HOME/cosmovisor/genesis/bin/provenanced $(which provenanced)
 Once `cosmovisor` has been installed and configured, it effectively wraps up the `provenanced` daemon process.  To start the Provenanced node, use the following `cosmovisor` process.
 
 ```bash
-cosmovisor start --testnet --home $PIO_HOME --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
+cosmovisor start --testnet --home $PIO_HOME --p2p.seeds c8818d411225372c66cccecc88dcc581ff7f2c03@104.198.181.197:26656,2105e36647e7007bfa7fdea8d45eb3b4d6a69f36@34.75.213.5:26656,08cf5b5fa2b80bf86a6370aec4c4473a0084195b@34.83.1.25:26656 --x-crisis-skip-assert-invariants
 ```
 
 A node process should now be running in the foreground.  It is an exercise for the reader to integrate the `provenanced` \(again, wrapped by `cosmovisor`\) with a service manager like `systemd` or `launchd`.
