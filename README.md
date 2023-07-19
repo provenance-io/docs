@@ -1,3 +1,5 @@
+**THESE DOCS HAVE BEEN DEPRECATED, USE [provenance-docs](https://github.com/provenance-io/provenance-docs) INSTEAD**
+
 ---
 description: >-
   Provenance Blockchain is a distributed, proof-of-stake blockchain designed for
