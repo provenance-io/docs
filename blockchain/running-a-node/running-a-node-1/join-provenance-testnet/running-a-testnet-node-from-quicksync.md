@@ -40,5 +40,5 @@ Step 4:Change config.toml to have the db-backend set to `cleveldb`
 #   - EXPERIMENTAL
 #   - use badgerdb build tag (go build -tags badgerdb)
 db_backend = "cleveldb```
-Step 6: provenanced start --testnet --p2p.seeds 2de841ce706e9b8cdff9af4f137e52a4de0a85b2@104.196.26.176:26656,add1d50d00c8ff79a6f7b9873cc0d9d20622614e@34.71.242.51:26656 --x-crisis-skip-assert-invariants
+Step 6: provenanced start --testnet --p2p.seeds c8818d411225372c66cccecc88dcc581ff7f2c03@104.198.181.197:26656,2105e36647e7007bfa7fdea8d45eb3b4d6a69f36@34.75.213.5:26656,08cf5b5fa2b80bf86a6370aec4c4473a0084195b@34.83.1.25:26656 --x-crisis-skip-assert-invariants
 ````
